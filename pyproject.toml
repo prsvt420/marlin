@@ -20,5 +20,6 @@ dev = [
     "isort>=6.0.1",
     "mypy>=1.18.1",
     "pep8-naming>=0.15.1",
+    "pre-commit>=4.3.0",
     "types-requests>=2.32.4.20250913",
 ]
