@@ -1,0 +1,10 @@
+[flake8]
+max-line-length = 79
+max-complexity = 10
+exclude = .venv
+docstring-convention = google
+inline-quotes = double
+multiline-quotes = double
+docstring-quotes = double
+select = E, W, F, C, B, D, N, Q, ERA, S,
+ignore = D100, D104,
