@@ -5,8 +5,12 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 
+[tool.black]
+line-length = 79
+
 [dependency-groups]
 dev = [
+    "black>=25.1.0",
     "flake8>=7.3.0",
     "flake8-bandit>=4.1.1",
     "flake8-bugbear>=24.12.12",
