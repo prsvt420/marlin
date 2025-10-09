@@ -107,8 +107,8 @@ class Product(models.Model):
     class Meta:  # noqa: D106
         db_table = "products"
         db_table_comment = "Таблица с информацией о продуктах"
-        verbose_name = "Продукт"
-        verbose_name_plural = "Продукты"
+        verbose_name = "продукт"
+        verbose_name_plural = "продукты"
         ordering = ("name",)
 
     def __str__(self) -> str:
@@ -186,8 +186,8 @@ class ProductNutrition(models.Model):
     class Meta:  # noqa: D106
         db_table = "product_nutritions"
         db_table_comment = "Таблица с информацией о пищевой ценности продуктов"
-        verbose_name = "Пищевая ценность"
-        verbose_name_plural = "Пищевая ценность"
+        verbose_name = "пищевая ценность"
+        verbose_name_plural = "пищевая ценность"
         ordering = ("product__name",)
 
     def __str__(self) -> str:
@@ -228,8 +228,8 @@ class Attribute(models.Model):
     class Meta:  # noqa: D106
         db_table = "attributes"
         db_table_comment = "Таблица с возможными атрибутами продуктов"
-        verbose_name = "Атрибут"
-        verbose_name_plural = "Атрибуты"
+        verbose_name = "атрибут"
+        verbose_name_plural = "атрибуты"
         ordering = ("name",)
 
     def __str__(self) -> str:
@@ -278,8 +278,8 @@ class ProductAttribute(models.Model):
     class Meta:  # noqa: D106
         db_table = "product_attributes"
         db_table_comment = "Таблица со значениями атрибутов продуктов"
-        verbose_name = "Атрибут продукта"
-        verbose_name_plural = "Атрибуты продуктов"
+        verbose_name = "атрибут продукта"
+        verbose_name_plural = "атрибуты продуктов"
         constraints = [
             models.UniqueConstraint(
                 fields=["product", "attribute"],
@@ -363,8 +363,8 @@ class Category(models.Model):
     class Meta:  # noqa: D106
         db_table = "categories"
         db_table_comment = "Таблица с категориями продуктов"
-        verbose_name = "Категория"
-        verbose_name_plural = "Категории"
+        verbose_name = "категория"
+        verbose_name_plural = "категории"
         ordering = ("sort_order", "name")
 
     def __str__(self) -> str:
@@ -416,8 +416,8 @@ class ProductImage(models.Model):
     class Meta:  # noqa: D106
         db_table = "product_images"
         db_table_comment = "Таблица с изображениями продуктов"
-        verbose_name = "Изображение продукта"
-        verbose_name_plural = "Изображения продукта"
+        verbose_name = "изображение продукта"
+        verbose_name_plural = "изображения продукта"
         ordering = ("product__name", "sort_order")
 
     def __str__(self) -> str:
