@@ -198,10 +198,10 @@ class ProductNutrition(models.Model):
         """
         return (
             f"{self.product.name} "
-            f"(Calories: {self.calories or '-'} kcal, "
-            f"Proteins: {self.proteins or '-'} g, "
-            f"Fats: {self.fats or '-'} g, "
-            f"Carbs: {self.carbs or '-'} g)"
+            f"(Калории: {self.calories or '—'} ккал, "
+            f"Белки: {self.proteins or '—'} г, "
+            f"Жиры: {self.fats or '—'} г, "
+            f"Углеводы: {self.carbs or '—'} г)"
         )
 
 
