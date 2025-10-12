@@ -1,0 +1,25 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Marlin — {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% include 'includes/header.html' %}
+        {% block content %}{% endblock %}
+        {% include 'includes/footer.html' %}
+    </div>
+</body>
+<script src="{% static 'js/theme.js' %}"></script>
+</html>

@@ -1,0 +1,33 @@
+{% load static %}
+
+<header class="header">
+    <div class="header__brand">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип Marlin" draggable="false" class="header__logo">
+        <div class="header__info">
+            <h1 class="header__title">Marlin</h1>
+            <p class="header__subtitle">Свежие продукты рядом с вами</p>
+        </div>
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__nav-item">
+                <a href="#" class="header__nav-link header__nav-link--active">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Акции</a>
+            </li>
+            <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Контакты</a>
+            </li>
+            <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Войти</a>
+            </li>
+            <li class="header__nav-item">
+                <button class="header__nav-link" id="header__nav-theme-toggle" title="Сменить тему">
+                    🌗
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
