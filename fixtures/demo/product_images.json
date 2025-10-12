@@ -1,0 +1,32 @@
+[
+{
+  "model": "catalog.productimage",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "image_path": "product_images/banany-ekvador-01-fru00001.png",
+    "alt_text": "Бананы Эквадор",
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "image_path": "product_images/yabloki-grenni-smit-01-fru00002.jpeg",
+    "alt_text": "Яблоки Грэнни Смит",
+    "sort_order": 1
+  }
+},
+{
+  "model": "catalog.productimage",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "image_path": "product_images/banany-ekvador-02-fru00001.jpg",
+    "alt_text": "Бананы Эквадор",
+    "sort_order": 2
+  }
+}
+]
