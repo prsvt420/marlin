@@ -1,0 +1,23 @@
+[
+{
+  "model": "catalog.attribute",
+  "pk": 1,
+  "fields": {
+    "name": "Вес"
+  }
+},
+{
+  "model": "catalog.attribute",
+  "pk": 2,
+  "fields": {
+    "name": "Срок хранения"
+  }
+},
+{
+  "model": "catalog.attribute",
+  "pk": 3,
+  "fields": {
+    "name": "Условия хранения"
+  }
+}
+]

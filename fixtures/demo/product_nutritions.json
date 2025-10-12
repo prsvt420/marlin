@@ -1,0 +1,24 @@
+[
+{
+  "model": "catalog.productnutrition",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "calories": "89.00",
+    "proteins": "1.10",
+    "fats": "0.30",
+    "carbs": "23.00"
+  }
+},
+{
+  "model": "catalog.productnutrition",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "calories": "52.00",
+    "proteins": "0.30",
+    "fats": "0.20",
+    "carbs": "14.00"
+  }
+}
+]
