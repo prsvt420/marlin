@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Список продуктов{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero__content">
+        <h2 class="hero__title">Свежее. Быстро. По-домашнему.</h2>
+        <p class="hero__subtitle">Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и
+            многое другое.</p>
+        <form method="get" action="{% url 'catalog:product_list' %}">
+            <input name="q" class="hero__search" autocomplete="off" placeholder="Найти товар, например — бананы">
+        </form>
+    </div>
+    <div class="hero__promo promo-card">
+        <div class="promo-card__header">
+            <p class="promo-card__label">Ежедневные предложения</p>
+            <p class="promo-card__title">Скидки до 30%</p>
+        </div>
+
+        <div class="promo-card__products">
+            <div class="promo-card__product product-badge">
+                <p class="product-badge__name">Бананы</p>
+                <p class="product-badge__price">89 ₽ / кг</p>
+            </div>
+            <div class="promo-card__product product-badge">
+                <p class="product-badge__name">Молоко</p>
+                <p class="product-badge__price">79 ₽</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="products">
+    <div class="products__list">
+        {% for product in products %}
+        <a href="#">
+            <article class="product-card">
+                <div class="product-card__image">
+                    {% if product.images.first %}
+                        <img src="{{ product.images.first.image_path.url }}"
+                            alt="{{ product.images.first.alt_text }}" draggable="false" class="product-image">
+                    {% else %}
+                        <img src="{% static 'catalog/img/default-product-image.jpg' %}"
+                            alt="Нет изображения" draggable="false" class="product-image">
+                    {% endif %}
+                    {% if product.discount %}
+                        <span class="product-discount">-{{ product.discount|floatformat:"-2u" }}%</span>
+                    {% endif %}
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-name">{{ product.name|truncatechars:15 }}</h3>
+                    <p class="product-description">{{ product.description|truncatechars:25 }}</p>
+                    <div class="product-price">
+                        {% if product.discount %}
+                            <span class="current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                            <span class="old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
+                        {% else %}
+                            <span class="current-price">{{ product.price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                        {% endif %}
+                    </div>
+                    <form action="#" method="post" class="product-card__form">
+                        {% csrf_token %}
+                        <button class="product-card__button">В корзину</button>
+                    </form>
+                </div>
+            </article>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
