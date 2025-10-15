@@ -37,6 +37,7 @@
     </div>
 </section>
 <section class="products">
+    {% if products %}
     <div class="products__list">
         {% for product in products %}
         <a href="#">
@@ -73,5 +74,11 @@
         </a>
         {% endfor %}
     </div>
+    {% else %}
+    <div class="no-products">
+        <p class="no-products__text">По запросу ничего не найдено</p>
+        <a class="no-products__button" href="{% url 'catalog:product_list' %}">В каталог</a>
+    </div>
+    {% endif %}
 </section>
 {% endblock %}
