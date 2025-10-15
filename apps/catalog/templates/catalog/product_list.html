@@ -15,7 +15,7 @@
         <p class="hero__subtitle">Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и
             многое другое.</p>
         <form method="get" action="{% url 'catalog:product_list' %}">
-            <input name="q" class="hero__search" autocomplete="off" placeholder="Найти товар, например — бананы">
+            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="Найти товар, например — бананы">
         </form>
     </div>
     <div class="hero__promo promo-card">
