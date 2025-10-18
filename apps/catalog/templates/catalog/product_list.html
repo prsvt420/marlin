@@ -40,7 +40,7 @@
     {% if products %}
     <div class="products__list">
         {% for product in products %}
-        <a href="#">
+        <a href="{{ product.get_absolute_url }}">
             <article class="product-card">
                 <div class="product-card__image">
                     {% if product.images.first %}
@@ -65,7 +65,7 @@
                             <span class="current-price">{{ product.price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
                         {% endif %}
                     </div>
-                    <form action="#" method="post" class="product-card__form">
+                    <form action="#" method="post">
                         {% csrf_token %}
                         <button class="product-card__button">В корзину</button>
                     </form>

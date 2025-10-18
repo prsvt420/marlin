@@ -50,3 +50,15 @@ class ProductListView(generic.ListView):
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["search_query"] = self.request.GET.get("q", "")
         return context
+
+
+class ProductDetailView(generic.DetailView):
+    """Displays detailed information about a specific product.
+
+    Uses the 'catalog/product_detail.html' template and provides
+    a context variable 'product' containing the selected Product object.
+    """
+
+    model = Product
+    template_name = "catalog/product_detail.html"
+    context_object_name = "product"

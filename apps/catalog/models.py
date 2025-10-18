@@ -1,6 +1,7 @@
 from decimal import Decimal
 
 from django.db import models
+from django.urls import reverse
 
 from apps.catalog.choices import UnitType
 
@@ -126,6 +127,17 @@ class Product(models.Model):
             Decimal: Final price.
         """
         return self.price * (1 - self.discount / Decimal("100"))
+
+    def get_absolute_url(self) -> str:
+        """Return the absolute URL for the product detail page.
+
+        Uses the product's slug to reverse the URL named
+        'catalog:product_detail'.
+
+        Returns:
+            str: The URL of the product detail page.
+        """
+        return reverse("catalog:product_detail", kwargs={"slug": self.slug})
 
 
 class ProductNutrition(models.Model):
