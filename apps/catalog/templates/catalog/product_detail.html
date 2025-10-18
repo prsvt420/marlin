@@ -19,7 +19,7 @@
 <section class="product">
     <div class="product__images swiper">
         <div class="swiper-wrapper">
-            {% for product_image in product.images.all %}
+            {% for product_image in product.product_images.all %}
               <div class="swiper-slide">
                 <img
                   src="{{ product_image.image_path.url }}"
@@ -40,7 +40,7 @@
             {% endfor %}
         </div>
 
-        {% if product.images.all|length > 1 %}
+        {% if product.product_images.all|length > 1 %}
             <div class="swiper-button-prev product__images-button product__images-button--prev"></div>
             <div class="swiper-button-next product__images-button product__images-button--next"></div>
 

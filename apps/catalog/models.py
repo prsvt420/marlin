@@ -404,7 +404,7 @@ class ProductImage(models.Model):
     product = models.ForeignKey(
         to="Product",
         on_delete=models.CASCADE,
-        related_name="images",
+        related_name="product_images",
         verbose_name="Продукт",
         help_text="Продукт, к которому относится изображение",
     )
