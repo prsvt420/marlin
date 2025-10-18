@@ -43,9 +43,9 @@
         <a href="{{ product.get_absolute_url }}">
             <article class="product-card">
                 <div class="product-card__image">
-                    {% if product.images.first %}
-                        <img src="{{ product.images.first.image_path.url }}"
-                            alt="{{ product.images.first.alt_text }}" draggable="false" class="product-image">
+                    {% if product.product_images.first %}
+                        <img src="{{ product.product_images.first.image_path.url }}"
+                            alt="{{ product.product_images.first.alt_text }}" draggable="false" class="product-image">
                     {% else %}
                         <img src="{% static 'catalog/img/default-product-image.jpg' %}"
                             alt="Нет изображения" draggable="false" class="product-image">
