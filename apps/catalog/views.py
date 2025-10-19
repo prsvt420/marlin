@@ -42,7 +42,7 @@ class ProductListView(generic.ListView):
         """Add additional context variables to the template.
 
         Adds the current search query (if any) to the context
-        under the key ``query`` to preserve the input in the search field.
+        under the key `search_query` to preserve the input in the search field.
 
         Args:
             **kwargs: Additional context passed to the base implementation.
