@@ -1,6 +1,6 @@
-from django.db.models import QuerySet
+from django.db.models import Prefetch, QuerySet
 
-from apps.catalog.models import Product
+from apps.catalog.models import Product, ProductAttribute
 
 
 class ProductRepository:
@@ -16,7 +16,19 @@ class ProductRepository:
             QuerySet[Product]: A Django QuerySet containing active Product
             objects.
         """
-        return Product.objects.filter(is_active=True)
+        return (
+            Product.objects.filter(is_active=True)
+            .select_related("category", "product_nutrition")
+            .prefetch_related(
+                "product_images",
+                Prefetch(
+                    "product_attributes",
+                    queryset=ProductAttribute.objects.select_related(
+                        "attribute"
+                    ),
+                ),
+            )
+        )
 
     @staticmethod
     def find_by_search_query(search_query: str) -> QuerySet[Product]:
