@@ -4,6 +4,7 @@ from django.db.models import QuerySet
 from django.views import generic
 
 from apps.catalog.models import Product
+from apps.catalog.repositories.product_repository import ProductRepository
 
 
 class ProductListView(generic.ListView):
@@ -31,9 +32,11 @@ class ProductListView(generic.ListView):
         search_query: str = self.request.GET.get("q", "").strip()
 
         if search_query:
-            return Product.objects.filter(name__icontains=search_query)
+            return ProductRepository.find_by_search_query(
+                search_query=search_query
+            )
 
-        return super().get_queryset()
+        return ProductRepository.find_active()
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template.
@@ -62,3 +65,11 @@ class ProductDetailView(generic.DetailView):
     model = Product
     template_name = "catalog/product_detail.html"
     context_object_name = "product"
+
+    def get_queryset(self) -> QuerySet[Product]:
+        """Return the queryset of products.
+
+        Returns:
+            QuerySet[Product]: A queryset of Product objects.
+        """
+        return ProductRepository.find_active()
