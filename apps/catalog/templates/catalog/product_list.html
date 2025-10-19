@@ -74,6 +74,27 @@
         </a>
         {% endfor %}
     </div>
+
+    <div class="products__pagination">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__prev">⭠</a>
+        {% else %}
+            <button class="pagination__prev" disabled>⭠</button>
+        {% endif %}
+
+        <ul class="pagination__pages">
+            {% for num in page_obj.paginator.page_range %}
+            <li><a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__page {% if num == page_obj.number %}active{% endif %}">{{ num }}</a></li>
+            {% endfor %}
+        </ul>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__next">⭢</a>
+        {% else %}
+            <button class="pagination__next" disabled>⭢</button>
+        {% endif %}
+    </div>
+
     {% else %}
     <div class="no-products">
         <p class="no-products__text">По запросу ничего не найдено</p>
