@@ -25,6 +25,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "apps.catalog",
+    "apps.pages",
 ]
 
 MIDDLEWARE: List[str] = [
