@@ -13,6 +13,11 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
         include("apps.catalog.urls", namespace="catalog"),
         name="catalog",
     ),
+    path(
+        "",
+        include("apps.pages.urls", namespace="pages"),
+        name="pages",
+    ),
 ]
 
 
