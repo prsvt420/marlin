@@ -37,6 +37,9 @@
     --muted-color-text: #737781;
 
     --image-filter: none;
+
+    --input-border: solid 1px var(--muted-color-text);
+    --input-background-color: var(--background-color);
 }
 
 .dark-theme {
