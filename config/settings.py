@@ -1,12 +1,13 @@
-import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
+
+from decouple import config
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
-SECRET_KEY: Optional[str] = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY: str = config("DJANGO_SECRET_KEY")
 
-DEBUG: bool = os.getenv("DJANGO_DEBUG") == "True"
+DEBUG: bool = config("DJANGO_DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS: List[str] = [
     "127.0.0.1",
@@ -110,6 +111,6 @@ FIXTURE_DIRS: List[str] = [
 EMAIL_HOST: str = "smtp.gmail.com"
 EMAIL_PORT: int = 587
 EMAIL_USE_TLS: bool = True
-EMAIL_HOST_USER: Optional[str] = os.getenv("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD: Optional[str] = os.getenv("EMAIL_HOST_PASSWORD")
-DEFAULT_FROM_EMAIL: Optional[str] = EMAIL_HOST_USER
+EMAIL_HOST_USER: str = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD: str = config("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL: str = EMAIL_HOST_USER
