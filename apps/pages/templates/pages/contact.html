@@ -27,23 +27,23 @@
         {% csrf_token %}
 
         <div class="contact__form-group">
-          <label class="contact__label" for="name">Ваше имя</label>
+          <label class="contact__label" for="name">Ваше имя {% if form.name.errors %}({{ form.name.errors.as_text|slice:"2:-1"|lower }}){% endif %}</label>
           <input class="contact__input" required value="{% if form.name.value %}{{ form.name.value }}{% endif %}" type="text" id="name" name="name" placeholder="Введите имя">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="email">Ваш email</label>
+          <label class="contact__label" for="email">Ваш email {% if form.email.errors %}({{ form.email.errors.as_text|slice:"2:-1"|lower }}){% endif %}</label>
           <input class="contact__input" required value="{% if form.email.value %}{{ form.email.value }}{% endif %}" type="email" id="email" name="email" placeholder="Введите email">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="phone">Телефон</label>
+          <label class="contact__label" for="phone">Телефон {% if form.phone.errors %}({{ form.phone.errors.as_text|slice:"2:-1"|lower }}){% endif %}</label>
           <input class="contact__input" required value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="subject">Тема</label>
+          <label class="contact__label" for="subject">Тема {% if form.subject.errors %}({{ form.subject.errors.as_text|slice:"2:-1"|lower }}){% endif %}</label>
           <input class="contact__input" required value="{% if form.subject.value %}{{ form.subject.value }}{% endif %}" type="text" id="subject" name="subject" placeholder="Введите тему сообщения">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="message">Сообщение</label>
+          <label class="contact__label" for="message">Сообщение {% if form.message.errors %}({{ form.message.errors.as_text|slice:"2:-1"|lower }}){% endif %}</label>
           <textarea class="contact__input" required id="message" name="message" rows="3" placeholder="Введите ваше сообщение">{% if form.message.value %}{{ form.message.value }}{% endif %}</textarea>
         </div>
         <button type="submit" class="contact__form-button">Отправить</button>
