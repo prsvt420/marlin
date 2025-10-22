@@ -106,3 +106,10 @@ DEFAULT_AUTO_FIELD: str = "django.db.models.BigAutoField"
 FIXTURE_DIRS: List[str] = [
     "fixtures",
 ]
+
+EMAIL_HOST: str = "smtp.gmail.com"
+EMAIL_PORT: int = 587
+EMAIL_USE_TLS: bool = True
+EMAIL_HOST_USER: Optional[str] = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD: Optional[str] = os.getenv("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL: Optional[str] = EMAIL_HOST_USER
