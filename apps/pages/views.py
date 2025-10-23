@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 
 from apps.pages.forms import ContactForm
 from apps.pages.services.email_service import EmailService
@@ -46,3 +46,33 @@ class ContactView(FormView):
         email_service.send_contact_reply(contact_context=contact_context)
 
         return super().form_valid(form)
+
+
+class PrivacyView(TemplateView):
+    """Displays the privacy policy page.
+
+    Uses the 'pages/privacy.html' template to render
+    the privacy policy and data handling information.
+    """
+
+    template_name = "pages/privacy.html"
+
+
+class TermsView(TemplateView):
+    """Displays the terms of service page.
+
+    Uses the 'pages/terms.html' template to render
+    the terms and conditions for using the service.
+    """
+
+    template_name = "pages/terms.html"
+
+
+class OfferView(TemplateView):
+    """Displays the public offer agreement page.
+
+    Uses the 'pages/offer.html' template to render
+    the public offer agreement and contract terms.
+    """
+
+    template_name = "pages/offer.html"
