@@ -84,7 +84,9 @@
 
         <ul class="pagination__pages">
             {% for num in page_obj.paginator.page_range %}
-            <li><a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__page {% if num == page_obj.number %}active{% endif %}">{{ num }}</a></li>
+                {% if num >= page_obj.number|add:-2 and num <= page_obj.number|add:2 %}
+                    <li><a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__page {% if num == page_obj.number %}active{% endif %}">{{ num }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
 
