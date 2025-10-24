@@ -38,6 +38,7 @@ MIDDLEWARE: List[str] = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "csp.middleware.CSPMiddleware",
 ]
 
 ROOT_URLCONF: str = "config.urls"
@@ -114,3 +115,21 @@ EMAIL_USE_TLS: bool = True
 EMAIL_HOST_USER: str = config("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD: str = config("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL: str = EMAIL_HOST_USER
+
+CONTENT_SECURITY_POLICY: Dict[str, Any] = {
+    "EXCLUDE_URL_PREFIXES": ["/admin"],
+    "DIRECTIVES": {
+        "default-src": ["'none'"],
+        "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
+        "img-src": ["'self'"],
+        "script-src": ["'self'"],
+        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "connect-src": ["'self'"],
+        "form-action": ["'self'"],
+        "frame-ancestors": ["'none'"],
+        "base-uri": ["'self'"],
+        "object-src": ["'none'"],
+        "frame-src": ["https://yandex.ru/map-widget/"],
+        "upgrade-insecure-requests": [],
+    },
+}
