@@ -1,0 +1,17 @@
+{% if messages %}
+<div class="messages">
+  {% for message in messages %}
+    <div class="message message--{{ message.tags }}">
+      <div class="message__content">
+        <p class="message__title">
+          {% if message.tags == 'success' %}Успех!{% endif %}
+          {% if message.tags == 'error' %}Ошибка!{% endif %}
+          {% if message.tags == 'warning' %}Внимание!{% endif %}
+          {% if message.tags == 'info' %}Информация{% endif %}
+        </p>
+        <p class="message__text">{{ message }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}

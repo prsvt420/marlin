@@ -1,0 +1,101 @@
+
+.messages {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+}
+
+.message {
+    position: relative;
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    transform: translateX(120%);
+    opacity: 0;
+    background-color: var(--block-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.message__content {
+    color: white;
+}
+
+.message__title {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 5px;
+}
+
+.message__title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.message__text {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.message--success {
+    background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+}
+
+.message--error {
+    background: linear-gradient(135deg, #f44336 0%, #e57373 100%);
+}
+
+.message--warning {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+}
+
+.message--info {
+    background: linear-gradient(135deg, #2196F3 0%, #64b5f6 100%);
+}
+
+.message--success .message__title::before {
+    background-color: #4fe855;
+}
+
+.message--error .message__title::before {
+    background-color: #c21616;
+}
+
+.message--warning .message__title::before {
+    background-color: #ffd267;
+}
+
+.message--info .message__title::before {
+    background-color: #117fd6;
+}
+
+.message.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.message.hide {
+    transform: translateX(120%);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .messages {
+        right: 20px;
+        left: 20px;
+        max-width: none;
+    }
+}
