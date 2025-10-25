@@ -11,16 +11,20 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/messages.css' %}">
     <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     {% block css %}{% endblock %}
 </head>
 <body>
     <div class="container">
         {% include 'includes/header.html' %}
+        {% include 'includes/messages.html' %}
         {% block content %}{% endblock %}
         {% include 'includes/footer.html' %}
     </div>
 </body>
 {% block js %}{% endblock %}
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
 <script src="{% static 'js/theme.js' %}"></script>
+<script src="{% static 'js/messages.js' %}"></script>
 </html>
