@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import FormView, TemplateView
@@ -41,11 +42,45 @@ class ContactView(FormView):
             "message": form.cleaned_data["message"],
         }
 
-        email_service: EmailService = EmailService()
-        email_service.send_contact_message(contact_context=contact_context)
-        email_service.send_contact_reply(contact_context=contact_context)
+        try:
+            email_service: EmailService = EmailService()
+            email_service.send_contact_message(contact_context=contact_context)
+            email_service.send_contact_reply(contact_context=contact_context)
 
-        return super().form_valid(form)
+            messages.success(
+                request=self.request,
+                message="Ваше сообщение успешно отправлено! "
+                "Мы свяжемся с вами в ближайшее время.",
+            )
+        except Exception:
+            messages.error(
+                self.request,
+                "Произошла ошибка при отправке сообщения. "
+                "Пожалуйста, попробуйте позже.",
+            )
+
+        return super().form_valid(form=form)
+
+    def form_invalid(self, form: ContactForm) -> HttpResponse:
+        """Handle invalid form submission.
+
+        Displays an error message to the user when the contact form
+        contains validation errors. The message informs the user to
+        correct the errors and try again.
+
+        Args:
+            form (ContactForm): The invalid contact form
+            instance with validation errors.
+
+        Returns:
+            HttpResponse: The HTTP response returned by the parent class's
+            form_invalid method, which re-renders the form with error messages.
+        """
+        messages.error(
+            self.request,
+            "Пожалуйста, исправьте ошибки в форме и попробуйте снова.",
+        )
+        return super().form_invalid(form=form)
 
 
 class PrivacyView(TemplateView):
