@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.http import HttpResponse
 from django.urls import reverse_lazy
-from django.views.generic import FormView, TemplateView
+from django.views.generic import FormView, RedirectView, TemplateView
 
 from apps.pages.forms import ContactForm
 from apps.pages.services.email_service import EmailService
@@ -111,3 +111,14 @@ class OfferView(TemplateView):
     """
 
     template_name = "pages/offer.html"
+
+
+class CatalogRedirectView(RedirectView):
+    """Permanent redirection to the product catalog page.
+
+    Redirects the user to the 'catalog:product_list'
+    page with HTTP code 301.
+    """
+
+    pattern_name = "catalog:product_list"
+    permanent = True
