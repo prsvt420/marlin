@@ -28,6 +28,7 @@ INSTALLED_APPS: List[str] = [
     "debug_toolbar",
     "apps.catalog",
     "apps.pages",
+    "apps.vacancies",
 ]
 
 MIDDLEWARE: List[str] = [

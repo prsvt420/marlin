@@ -7,7 +7,7 @@ class PagesConfig(AppConfig):
     This class defines the configuration for the `apps.pages` application.
     """
 
-    default_auto_field = "django.db.models.BigAutoField"
-    name = "apps.pages"
+    default_auto_field: str = "django.db.models.BigAutoField"
+    name: str = "apps.pages"
     verbose_name: str = "Страницы"
     label: str = "pages"
