@@ -102,7 +102,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True,
         verbose_name="Дата обновления",
-        help_text="Дата и время последнего обновления",
+        help_text="Дата и время последнего обновления продукта",
     )
 
     class Meta:  # noqa: D106
@@ -110,7 +110,10 @@ class Product(models.Model):
         db_table_comment = "Таблица с информацией о продуктах"
         verbose_name = "продукт"
         verbose_name_plural = "продукты"
-        ordering = ("name",)
+        ordering = (
+            "-created_at",
+            "name",
+        )
 
     def __str__(self) -> str:
         """Return a string representation of the product.
