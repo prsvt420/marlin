@@ -20,7 +20,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {
         "slug": ("name",),
     }
-    list_display = ("parent", "name", "is_active", "sort_order")
+    list_display = ("name", "parent", "is_active", "sort_order")
     list_editable = ("is_active", "sort_order")
     list_filter = ("name", "is_active")
     search_fields = (
