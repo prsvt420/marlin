@@ -18,7 +18,7 @@
 }
 
 .hero__subtitle {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     color: var(--muted-color-text);
 }
 
@@ -53,7 +53,7 @@
 }
 
 .contact__form-title {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
     margin-bottom: 15px;
     text-align: center;
     color: var(--color-text);
@@ -73,7 +73,7 @@
 }
 
 .contact__label {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     color: var(--color-text);
 }
 
@@ -82,7 +82,7 @@
     color: var(--color-text);
     border-radius: var(--radius-lg);
     background-color: var(--input-background-color);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     border: var(--input-border);
 }
 
@@ -135,14 +135,14 @@ textarea.contact__input {
 }
 
 .contact-card__title {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     color: var(--color-text);
 }
 
 .contact-card__text,
 .contact-card__link {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--muted-color-text);
 }
 
