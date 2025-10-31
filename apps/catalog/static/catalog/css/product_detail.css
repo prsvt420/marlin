@@ -1,5 +1,5 @@
 .breadcrumbs__link {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
 }
@@ -9,7 +9,7 @@
 }
 
 .breadcrumbs__current, .breadcrumbs__separator {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     color: var(--muted-color-text);
 }
@@ -117,7 +117,7 @@
 }
 
 .old-price {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     text-decoration: line-through;
     color: var(--muted-color-text);
 }
@@ -157,13 +157,13 @@
 }
 
 .product__subtitle {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
 }
 
 .product__text {
     color: var(--muted-color-text);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
 }
 
 .product__nutrition-list {
@@ -213,7 +213,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px dashed var(--muted-color-text);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     padding-bottom: 5px;
 }
 
