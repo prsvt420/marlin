@@ -45,30 +45,32 @@
                 <div class="product-card__image">
                     {% if product.product_images.first %}
                         <img src="{{ product.product_images.first.image_path.url }}"
-                            alt="{{ product.product_images.first.alt_text }}" draggable="false" class="product-image">
+                            alt="{{ product.product_images.first.alt_text }}" draggable="false">
                     {% else %}
                         <img src="{% static 'catalog/img/default-product-image.jpg' %}"
-                            alt="Нет изображения" draggable="false" class="product-image">
+                            alt="Нет изображения" draggable="false">
                     {% endif %}
                     {% if product.discount %}
-                        <span class="product-discount">-{{ product.discount|floatformat:"-2u" }}%</span>
+                        <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
                     {% endif %}
                 </div>
                 <div class="product-card__content">
-                    <h3 class="product-name">{{ product.name|truncatechars:20 }}</h3>
-                    <p class="product-description">{{ product.description|truncatechars:25 }}</p>
-                    <div class="product-price">
+                    <h3 class="product-card__name">{{ product.name|truncatechars:20 }}</h3>
+                    <p class="product-card__description">{{ product.description|truncatechars:25 }}</p>
+                    <div class="product-card__price">
                         {% if product.discount %}
-                            <span class="current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
-                            <span class="old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
+                            <span class="product-card__current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                            <span class="product-card__old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
                         {% else %}
-                            <span class="current-price">{{ product.price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                            <span class="product-card__current-price">{{ product.price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
                         {% endif %}
                     </div>
-                    <form action="#" method="post">
-                        {% csrf_token %}
-                        <button class="product-card__button">В корзину</button>
-                    </form>
+                    <div class="product-card__footer">
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <button class="product-card__button">В корзину</button>
+                        </form>
+                    </div>
                 </div>
             </article>
         </a>
