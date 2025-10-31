@@ -25,7 +25,7 @@ class ProductListView(generic.ListView):
         """Return the queryset of products.
 
         If the "q" GET parameter is provided, the queryset is filtered
-        by product names containing the query substring (case-insensitive).
+        based on the search query.
 
         Returns:
             QuerySet[Product]: A queryset of Product objects,

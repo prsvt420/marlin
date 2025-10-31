@@ -13,8 +13,7 @@ class ProductRepository:
         Only products with `is_active=True` are included in the queryset.
 
         Returns:
-            QuerySet[Product]: A Django QuerySet containing active Product
-            objects.
+            QuerySet[Product]: A queryset containing active Product objects.
         """
         return (
             Product.objects.filter(is_active=True)
@@ -32,15 +31,16 @@ class ProductRepository:
 
     @staticmethod
     def find_by_search_query(search_query: str) -> QuerySet[Product]:
-        """Return a queryset of products whose names contain the search query.
+        """Return a queryset of active products filtered by search query.
 
-        Only products with `is_active=True` are included in the queryset.
+        Search is performed in fields: name.
 
         Args:
-            search_query (str): The query to search for in product names.
+            search_query (str): The query to search.
 
         Returns:
-            QuerySet[Product]: A Django QuerySet of matching Product objects.
+            QuerySet[Product]: A queryset containing active Product objects
+            filtered by the search term.
         """
         return ProductRepository.find_active().filter(
             name__icontains=search_query
