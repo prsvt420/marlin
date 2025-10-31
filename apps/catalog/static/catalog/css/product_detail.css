@@ -1,5 +1,5 @@
 .breadcrumbs__link {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
 }
@@ -9,7 +9,7 @@
 }
 
 .breadcrumbs__current, .breadcrumbs__separator {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     font-weight: var(--font-weight-medium);
     color: var(--muted-color-text);
 }
@@ -90,7 +90,7 @@
     left: 10px;
     background: #ff4d4f;
     color: #fff;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     font-weight: var(--font-weight-bold);
     padding: 7px 10px;
     border-radius: var(--radius-md);
@@ -117,7 +117,7 @@
 }
 
 .old-price {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     text-decoration: line-through;
     color: var(--muted-color-text);
 }
@@ -146,7 +146,7 @@
 .product__unit {
     margin-bottom: 10px;
     color: var(--muted-color-text);
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
 }
 
 .product__block {
@@ -157,13 +157,13 @@
 }
 
 .product__subtitle {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
 }
 
 .product__text {
     color: var(--muted-color-text);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
 }
 
 .product__nutrition-list {
@@ -193,13 +193,13 @@
 }
 
 .product__nutrition-value {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
 }
 
 .product__nutrition-label {
     color: var(--muted-color-text);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
 }
 
 .characteristics__list {
@@ -213,7 +213,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px dashed var(--muted-color-text);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     padding-bottom: 5px;
 }
 
@@ -227,7 +227,7 @@
 
 .characteristics__empty, .nutrition__empty {
     color: var(--muted-color-text);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
 }
 
 @media (max-width: 900px) {

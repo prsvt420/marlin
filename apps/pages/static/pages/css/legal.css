@@ -18,7 +18,7 @@
 }
 
 .hero__subtitle {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     color: var(--muted-color-text);
 }
 
@@ -41,7 +41,7 @@
 
 .legal-section__title {
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
     margin-bottom: 10px;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .legal-section__content {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
     color: var(--muted-color-text);
 }
 
