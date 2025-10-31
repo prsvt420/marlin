@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Список вакансий{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'vacancies/css/vacancy_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero__content">
+        <h2 class="hero__title">Работа в Marlin.</h2>
+        <p class="hero__subtitle">Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты тысячам клиентов.</p>
+        <form method="get" action="{% url 'vacancies:vacancy_list' %}">
+            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="Найти вакансию, например — курьер">
+        </form>
+    </div>
+</section>
+<section class="vacancies">
+    {% if vacancies %}
+        <div class="vacancies__list">
+            {% for vacancy in vacancies %}
+                <a href="#">
+                    <article class="vacancy-card">
+                        <div class="vacancy-card__content">
+                            <h3 class="vacancy-card__title">{{ vacancy.title }}</h3>
+                            {% if vacancy.salary_to or vacancy.salary_from %}
+                                <p class="vacancy-card__salary">{{ vacancy.get_formatted_salary }} ₽ <span>до вычета налогов</span></p>
+                            {% endif %}
+
+                            <p class="vacancy-card__experience vacancy-card__experience--{{ vacancy.experience_level }}">
+                                {{ vacancy.get_experience_level_display }}
+                            </p>
+
+                            <div class="vacancy-card__location">
+                                <p class="vacancy-card__city">
+                                    <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg" class="location-icon"><path d="M8.023.386a7.66 7.66 0 0 0-5.498 2.348A8.152 8.152 0 0 0 .25 8.404c0 5.48 7.017 10.067 7.316 10.258l.457.297.458-.297c.3-.19 7.316-4.779 7.316-10.258a8.152 8.152 0 0 0-2.276-5.67A7.66 7.66 0 0 0 8.022.386Zm0 16.45c-1.483-1.064-6.047-4.65-6.047-8.432 0-2.228 1.153-4.286 3.023-5.4a5.889 5.889 0 0 1 6.047 0c1.87 1.114 3.023 3.172 3.023 5.4 0 3.78-4.564 7.368-6.046 8.432Z"></path><path d="M8.023 5.138c-1.281 0-2.436.796-2.926 2.016a3.34 3.34 0 0 0 .687 3.56 3.095 3.095 0 0 0 3.451.709c1.183-.506 1.955-1.697 1.955-3.019 0-1.803-1.418-3.266-3.167-3.266Zm0 4.751a1.442 1.442 0 0 1-1.33-.916 1.52 1.52 0 0 1 .312-1.618 1.408 1.408 0 0 1 1.569-.323c.538.231.889.772.889 1.372 0 .394-.152.772-.422 1.05-.27.279-.637.435-1.018.435Z"></path>
+                                    </svg> {{ vacancy.city }}</p>
+                                <p class="vacancy-card__company">
+                                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" class="location-icon"><path d="M8 2L8 6L4 6L4 48L15 48L15 39L19 39L19 48L30 48L30 6L26 6L26 2 Z M 10 10L12 10L12 12L10 12 Z M 14 10L16 10L16 12L14 12 Z M 18 10L20 10L20 12L18 12 Z M 22 10L24 10L24 12L22 12 Z M 32 14L32 18L34 18L34 20L32 20L32 22L34 22L34 24L32 24L32 26L34 26L34 28L32 28L32 30L34 30L34 32L32 32L32 34L34 34L34 36L32 36L32 38L34 38L34 40L32 40L32 42L34 42L34 44L32 44L32 48L46 48L46 14 Z M 10 15L12 15L12 19L10 19 Z M 14 15L16 15L16 19L14 19 Z M 18 15L20 15L20 19L18 19 Z M 22 15L24 15L24 19L22 19 Z M 36 18L38 18L38 20L36 20 Z M 40 18L42 18L42 20L40 20 Z M 10 21L12 21L12 25L10 25 Z M 14 21L16 21L16 25L14 25 Z M 18 21L20 21L20 25L18 25 Z M 22 21L24 21L24 25L22 25 Z M 36 22L38 22L38 24L36 24 Z M 40 22L42 22L42 24L40 24 Z M 36 26L38 26L38 28L36 28 Z M 40 26L42 26L42 28L40 28 Z M 10 27L12 27L12 31L10 31 Z M 14 27L16 27L16 31L14 31 Z M 18 27L20 27L20 31L18 31 Z M 22 27L24 27L24 31L22 31 Z M 36 30L38 30L38 32L36 32 Z M 40 30L42 30L42 32L40 32 Z M 10 33L12 33L12 37L10 37 Z M 14 33L16 33L16 37L14 37 Z M 18 33L20 33L20 37L18 37 Z M 22 33L24 33L24 37L22 37 Z M 36 34L38 34L38 36L36 36 Z M 40 34L42 34L42 36L40 36 Z M 36 38L38 38L38 40L36 40 Z M 40 38L42 38L42 40L40 40 Z M 10 39L12 39L12 44L10 44 Z M 22 39L24 39L24 44L22 44 Z M 36 42L38 42L38 44L36 44 Z M 40 42L42 42L42 44L40 44Z"/>
+                                    </svg> Marlin</p>
+                            </div>
+
+                            <p class="vacancy-card__short-description">{{ vacancy.short_description|truncatechars:250 }}</p>
+
+                            <div class="vacancy-card__footer">
+                                <form action="#">
+                                    <button type="submit" class="vacancy-card__link">Подробнее</button>
+                                </form>
+                                <span class="vacancy-card__date">{{ vacancy.updated_at.date }}</span>
+                            </div>
+
+                        </div>
+                    </article>
+                </a>
+            {% endfor %}
+        </div>
+
+        {% if page_obj.paginator.num_pages > 1 %}
+            <div class="vacancies__pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__prev">⭠</a>
+                {% else %}
+                    <button class="pagination__prev" disabled>⭠</button>
+                {% endif %}
+
+                <ul class="pagination__pages">
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if num >= page_obj.number|add:-2 and num <= page_obj.number|add:2 %}
+                            <li><a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__page {% if num == page_obj.number %}active{% endif %}">{{ num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__next">⭢</a>
+                {% else %}
+                    <button class="pagination__next" disabled>⭢</button>
+                {% endif %}
+            </div>
+        {% endif %}
+
+    {% else %}
+        {% if search_query %}
+            <div class="no-vacancies">
+                <p class="no-vacancies__text">По запросу ничего не найдено</p>
+            </div>
+        {% else %}
+            <div class="no-vacancies">
+                <p class="no-vacancies__text">На данный момент вакансий нет</p>
+            </div>
+        {% endif %}
+    {% endif %}
+</section>
+{% endblock %}
