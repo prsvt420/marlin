@@ -20,7 +20,7 @@
 }
 
 .error__text {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   color: var(--muted-color-text);
   max-width: 500px;
 }

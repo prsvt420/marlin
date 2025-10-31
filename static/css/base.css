@@ -3,12 +3,12 @@
 :root {
     --font-family: 'Montserrat', sans-serif;
 
-    --font-size-xs: 0.8rem;
-    --font-size-sm: 0.85rem;
-    --font-size-md: 1rem;
-    --font-size-lg: 1.05rem;
-    --font-size-xl: 1.1rem;
-    --font-size-xxl: 1.2rem;
+    --font-size-xs: 0.85rem;
+    --font-size-sm: 1rem;
+    --font-size-md: 1.05rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.2rem;
+    --font-size-xxl: 1.5rem;
     --font-size-xxxl: 2rem;
 
     --font-weight-normal: 400;
