@@ -177,6 +177,7 @@
 .no-vacancies__text {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
+    text-align: center;
 }
 
 .vacancies__pagination, .pagination__pages {
