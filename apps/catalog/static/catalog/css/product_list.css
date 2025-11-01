@@ -263,6 +263,7 @@
 .no-products__text {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
+    text-align: center;
 }
 
 .no-products__button {
