@@ -22,7 +22,7 @@
     {% if vacancies %}
         <div class="vacancies__list">
             {% for vacancy in vacancies %}
-                <a href="#">
+                <a href="{{ vacancy.get_absolute_url }}">
                     <article class="vacancy-card">
                         <div class="vacancy-card__content">
                             <h3 class="vacancy-card__title">{{ vacancy.title }}</h3>
@@ -46,9 +46,7 @@
                             <p class="vacancy-card__short-description">{{ vacancy.short_description|truncatechars:250 }}</p>
 
                             <div class="vacancy-card__footer">
-                                <form action="#">
-                                    <button type="submit" class="vacancy-card__link">Подробнее</button>
-                                </form>
+                                <button type="submit" class="vacancy-card__link">Подробнее</button>
                                 <span class="vacancy-card__date">{{ vacancy.updated_at.date }}</span>
                             </div>
 

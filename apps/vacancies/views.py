@@ -1,6 +1,7 @@
 from typing import Any, Dict
 
 from django.db.models import QuerySet
+from django.views import generic
 from django.views.generic import ListView
 
 from apps.vacancies.models import Vacancy
@@ -55,3 +56,23 @@ class VacancyListView(ListView):
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["search_query"] = self.request.GET.get("q", "")
         return context
+
+
+class VacancyDetailView(generic.DetailView):
+    """Displays detailed information about a specific vacancy.
+
+    Uses the 'vacancies/vacancy_detail.html' template and provides
+    a context variable 'vacancy' containing the selected Vacancy object.
+    """
+
+    model = Vacancy
+    template_name = "vacancies/vacancy_detail.html"
+    context_object_name = "vacancy"
+
+    def get_queryset(self) -> QuerySet[Vacancy]:
+        """Return the queryset of vacancies.
+
+        Returns:
+            QuerySet[Vacancy]: A queryset of Vacancy objects.
+        """
+        return VacancyRepository.find_active()

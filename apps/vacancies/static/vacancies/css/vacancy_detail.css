@@ -1,0 +1,103 @@
+.breadcrumbs__link {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+}
+
+.breadcrumbs__link:hover {
+    color: var(--button-bg-color-hover);
+}
+
+.breadcrumbs__current, .breadcrumbs__separator {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--muted-color-text);
+}
+
+.vacancy {
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+}
+
+.vacancy__info {
+    flex: 1;
+}
+
+.vacancy__title {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xxxl);
+    margin-bottom: 10px;
+}
+
+.vacancy__salary {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-xxl);
+    margin-bottom: 20px;
+}
+
+.vacancy__location {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--muted-color-text);
+    margin-bottom: 20px;
+}
+
+.vacancy__content {
+    display: flex;
+    gap: 40px;
+    line-height: 1.5;
+}
+
+.vacancy__details {
+    width: 200px;
+}
+
+.vacancy__detail-item {
+    margin-bottom: 20px;
+}
+
+.vacancy__detail-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 5px;
+}
+
+.vacancy__detail-value {
+    color: var(--muted-color-text);
+    font-size: var(--font-size-sm);
+}
+
+.vacancy__short-description {
+    font-size: var(--font-size-md);
+    margin-bottom: 40px;
+}
+
+.vacancy__description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.vacancy__description h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 5px;
+}
+
+.vacancy__description ul {
+    color: var(--muted-color-text);
+    font-size: var(--font-size-sm);
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .vacancy__content {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .vacancy__details { width: 100%; }
+}
