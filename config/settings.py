@@ -29,6 +29,7 @@ INSTALLED_APPS: List[str] = [
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
+    "apps.core",
 ]
 
 MIDDLEWARE: List[str] = [
