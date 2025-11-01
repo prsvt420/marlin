@@ -39,7 +39,8 @@ class Vacancy(models.Model):
     )
     description = models.TextField(
         verbose_name="Описание",
-        help_text="Подробное описание вакансии (HTML-разметка)",
+        help_text="Подробное описание вакансии "
+        "(HTML-разметка, используйте div, ul, h3, li)",
     )
     professional_area = models.ForeignKey(
         to="ProfessionalArea",
