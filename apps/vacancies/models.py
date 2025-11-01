@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 
 from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
@@ -140,6 +141,17 @@ class Vacancy(models.Model):
                         "должна быть больше нижней"
                     }
                 )
+
+    def get_absolute_url(self) -> str:
+        """Return the absolute URL for the vacancy detail page.
+
+        Uses the vacancy id to reverse the URL named
+        'vacancies:vacancy_detail'.
+
+        Returns:
+            str: The URL of the vacancy detail page.
+        """
+        return reverse("vacancies:vacancy_detail", kwargs={"pk": self.pk})
 
 
 class ProfessionalArea(models.Model):

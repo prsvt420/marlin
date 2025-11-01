@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ vacancy.title }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'vacancies/css/vacancy_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumbs">
+    <a href="{% url 'vacancies:vacancy_list' %}" class="breadcrumbs__link">Вакансии</a>
+    <span class="breadcrumbs__separator">•</span>
+
+    <span class="breadcrumbs__current">{{ vacancy.title }}</span>
+</div>
+
+<section class="vacancy">
+    <div class="vacancy__info">
+        <h2 class="vacancy__title">{{ vacancy.title }}</h2>
+        {% if vacancy.salary_to or vacancy.salary_from %}
+            <p class="vacancy__salary">{{ vacancy.get_formatted_salary }} ₽ <span>до вычета налогов</span></p>
+        {% endif %}
+        <p class="vacancy__location">{{ vacancy.city }} • Marlin • {{ vacancy.professional_area }} • {{ vacancy.updated_at.date }}</p>
+
+        <p class="vacancy__short-description">{{ vacancy.short_description }}</p>
+
+        <div class="vacancy__content">
+            <div class="vacancy__details">
+                <div class="vacancy__detail-item">
+                    <h3 class="vacancy__detail-title">График работы</h3>
+                    <p class="vacancy__detail-value">{{ vacancy.get_work_schedule_display }}</p>
+                </div>
+
+                <div class="vacancy__detail-item">
+                    <h3 class="vacancy__detail-title">Опыт работы</h3>
+                    <p class="vacancy__detail-value">{{ vacancy.get_experience_level_display }}</p>
+                </div>
+            </div>
+
+            <div class="vacancy__description">{{ vacancy.description|safe }}</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
