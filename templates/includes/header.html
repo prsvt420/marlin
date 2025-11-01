@@ -1,4 +1,5 @@
 {% load static %}
+{% load active_link %}
 
 <header class="header">
     <div class="header__brand">
@@ -12,13 +13,13 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{% url 'catalog:product_list' %}" class="header__nav-link header__nav-link--active">Каталог</a>
+                <a href="{% url 'catalog:product_list' %}" class="header__nav-link {% active_link request 'catalog:product_list' 'header__nav-link--active' %}">Каталог</a>
             </li>
             <li class="header__nav-item">
                 <a href="#" class="header__nav-link">Акции</a>
             </li>
             <li class="header__nav-item">
-                <a href="{% url 'pages:contact' %}" class="header__nav-link">Контакты</a>
+                <a href="{% url 'pages:contact' %}" class="header__nav-link {% active_link request 'pages:contact' 'header__nav-link--active' %}">Контакты</a>
             </li>
             <li class="header__nav-item">
                 <a href="#" class="header__nav-link">Войти</a>
