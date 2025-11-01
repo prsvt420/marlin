@@ -8,4 +8,5 @@ app_name: str = "vacancies"
 
 urlpatterns: List[URLPattern] = [
     path("", views.VacancyListView.as_view(), name="vacancy_list"),
+    path("<int:pk>", views.VacancyDetailView.as_view(), name="vacancy_detail"),
 ]
