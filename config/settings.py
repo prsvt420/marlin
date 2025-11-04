@@ -2,6 +2,8 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from decouple import config
+from django.urls import reverse_lazy
+from django.utils.functional import Promise
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
@@ -137,3 +139,7 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
         "upgrade-insecure-requests": [],
     },
 }
+
+LOGIN_URL: Promise = reverse_lazy("accounts:signin")
+LOGIN_REDIRECT_URL: Promise = reverse_lazy("catalog:product_list")
+LOGOUT_REDIRECT_URL: Promise = LOGIN_URL
