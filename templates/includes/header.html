@@ -22,7 +22,14 @@
                 <a href="{% url 'pages:contact' %}" class="header__nav-link {% active_link request 'pages:contact' 'header__nav-link--active' %}">Контакты</a>
             </li>
             <li class="header__nav-item">
-                <a href="#" class="header__nav-link">Войти</a>
+                {% if request.user.is_authenticated %}
+                <form action="{% url 'accounts:signout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="header__nav-link">Выйти</button>
+                </form>
+                {% else %}
+                    <a href="{% url 'accounts:signin' %}" class="header__nav-link {% active_link request 'accounts:signin' 'header__nav-link--active' %}">Войти</a>
+                {% endif %}
             </li>
             <li class="header__nav-item">
                 <button class="header__nav-link" id="header__nav-theme-toggle" title="Сменить тему">

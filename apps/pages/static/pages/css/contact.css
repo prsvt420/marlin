@@ -56,7 +56,7 @@
 
 .contact__form-title {
     font-size: var(--font-size-xl);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
     color: var(--color-text);
     font-weight: var(--font-weight-semibold);
@@ -99,7 +99,7 @@ textarea.contact__input {
 }
 
 .contact__form-button {
-    padding: 15px;
+    padding: 16px;
     background-color: var(--button-bg-color);
     color: var(--button-color-text);
     border-radius: var(--radius-lg);
