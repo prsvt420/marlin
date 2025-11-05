@@ -100,7 +100,7 @@ textarea.contact__input {
 
 .contact__form-button {
     padding: 16px;
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     border-radius: var(--radius-lg);
     font-weight: var(--font-weight-semibold);
@@ -108,7 +108,7 @@ textarea.contact__input {
 }
 
 .contact__form-button:hover {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .contact__form-group:hover,
@@ -157,7 +157,7 @@ textarea.contact__input {
 }
 
 .contact-card__link:hover {
-    color: var(--button-bg-color-hover);
+    color: var(--button-background-color-hover);
 }
 
 @media (max-width: 900px) {

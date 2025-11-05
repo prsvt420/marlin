@@ -37,8 +37,8 @@
     --shadow-active: 0 10px 30px rgba(0, 0, 0, 0.1);
 
     --button-color-text: #ffffff;
-    --button-bg-color: #000000;
-    --button-bg-color-hover: #3c3c3c;
+    --button-background-color: #000000;
+    --button-background-color-hover: #3c3c3c;
 
     --background-color: #f0f2f5;
     --block-background-color: #ffffff;
@@ -55,8 +55,8 @@
     --shadow: 0 6px 24px rgba(0, 0, 0, 0.24);
 
     --button-color-text: #424344;
-    --button-bg-color: #e1e1e1;
-    --button-bg-color-hover: #bbbaba;
+    --button-background-color: #e1e1e1;
+    --button-background-color-hover: #bbbaba;
 
     --background-color: #202020;
     --block-background-color: #424344;

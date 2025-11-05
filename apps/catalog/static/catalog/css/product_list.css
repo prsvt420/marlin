@@ -185,7 +185,7 @@
 .product-card__button {
     padding: 10px;
     border-radius: var(--radius-lg);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     margin-top: auto;
     font-weight: var(--font-weight-semibold);
@@ -194,7 +194,7 @@
 }
 
 .product-card__button:hover {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .products__pagination, .pagination__pages {
@@ -211,7 +211,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-xl);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
@@ -219,11 +219,11 @@
 
 .pagination__page:hover {
     transform: var(--transform);
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .pagination__page.active {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .pagination__prev,
@@ -234,7 +234,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-xl);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
@@ -250,7 +250,7 @@
 .pagination__next:hover:not(:disabled) {
     transform: var(--transform);
     box-shadow: var(--shadow-active);
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .no-products {
@@ -271,7 +271,7 @@
 .no-products__button {
     padding: 10px;
     border-radius: var(--radius-lg);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     font-weight: var(--font-weight-semibold);
     text-align: center;
@@ -279,7 +279,7 @@
 }
 
 .no-products__button:hover {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 @media (max-width: 900px) {
