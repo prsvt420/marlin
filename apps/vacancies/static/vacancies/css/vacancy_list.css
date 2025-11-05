@@ -150,7 +150,7 @@
 .vacancy-card__link {
     padding: 13px;
     border-radius: var(--radius-xl);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     margin-top: auto;
     font-weight: var(--font-weight-semibold);
@@ -159,7 +159,7 @@
 }
 
 .vacancy-card__link:hover {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .vacancy-card__date {
@@ -196,7 +196,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-xl);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
@@ -204,11 +204,11 @@
 
 .pagination__page:hover {
     transform: var(--transform);
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .pagination__page.active {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .pagination__prev,
@@ -219,7 +219,7 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-xl);
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
@@ -235,5 +235,5 @@
 .pagination__next:hover:not(:disabled) {
     transform: var(--transform);
     box-shadow: var(--shadow-active);
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }

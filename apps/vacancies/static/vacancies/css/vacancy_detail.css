@@ -9,7 +9,7 @@
 }
 
 .breadcrumbs__link:hover {
-    color: var(--button-bg-color-hover);
+    color: var(--button-background-color-hover);
 }
 
 .breadcrumbs__current, .breadcrumbs__separator {

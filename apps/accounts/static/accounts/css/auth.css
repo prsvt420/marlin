@@ -54,7 +54,7 @@
 
 .auth__form-button {
     padding: 16px;
-    background-color: var(--button-bg-color);
+    background-color: var(--button-background-color);
     color: var(--button-color-text);
     border-radius: var(--radius-lg);
     font-weight: var(--font-weight-semibold);
@@ -62,7 +62,7 @@
 }
 
 .auth__form-button:hover {
-    background-color: var(--button-bg-color-hover);
+    background-color: var(--button-background-color-hover);
 }
 
 .auth__form-group:hover,
@@ -88,7 +88,7 @@
 }
 
 .auth__link:hover {
-    color: var(--button-bg-color-hover);
+    color: var(--button-background-color-hover);
 }
 
 .auth__social-text {
