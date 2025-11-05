@@ -35,7 +35,7 @@
 .header__nav-list {
     display: flex;
     gap: 20px;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .header__nav-link {
@@ -72,8 +72,102 @@
   width: 100%;
 }
 
-#header__nav-theme-toggle {
-    font-size: var(--font-size-xl);
+.header__nav-button {
+    background-color: var(--block-background-color);
+    padding: 8px;
+    border-radius: var(--radius-sm);
+}
+
+.header__nav-button svg {
+    fill: var(--muted-color-text);
+    height: 20px;
+    width: 20px;
+}
+
+.header__nav-button:hover,
+.header__nav-button:focus {
+    box-shadow: var(--shadow-active);
+}
+
+.header__nav-button:hover svg,
+.header__nav-button:focus svg {
+    fill: var(--color-text);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: var(--block-background-color);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown__menu.show {
+    display: block;
+}
+
+.dropdown__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+}
+
+.dropdown__menu-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--muted-color-text);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+
+.switch__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--muted-color-text);
+    border-radius: var(--radius-xl);
+    transition: var(--transition);
+}
+
+.switch__slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.switch__input:checked + .switch__slider {
+    background-color: #4caf50;
+}
+
+.switch__input:checked + .switch__slider::before {
+    transform: translateX(20px);
 }
 
 @media (max-width: 550px) {
