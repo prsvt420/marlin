@@ -21,7 +21,7 @@
 
 .hero__subtitle {
     font-size: var(--font-size-sm);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .contact {
@@ -58,7 +58,7 @@
     font-size: var(--font-size-xl);
     margin-bottom: 20px;
     text-align: center;
-    color: var(--color-text);
+    color: var(--text-color);
     font-weight: var(--font-weight-semibold);
 }
 
@@ -76,16 +76,16 @@
 
 .contact__label {
     font-size: var(--font-size-sm);
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .contact__label sup {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .contact__input {
     padding: 15px;
-    color: var(--color-text);
+    color: var(--text-color);
     border-radius: var(--radius-lg);
     background-color: var(--input-background-color);
     font-size: var(--font-size-sm);
@@ -143,13 +143,13 @@ textarea.contact__input {
 .contact-card__title {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .contact-card__text,
 .contact-card__link {
     font-size: var(--font-size-xs);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .contact-card__link {

@@ -4,7 +4,7 @@
 
 .breadcrumbs__link {
     font-size: var(--font-size-sm);
-    color: var(--color-text);
+    color: var(--text-color);
     font-weight: var(--font-weight-medium);
 }
 
@@ -15,7 +15,7 @@
 .breadcrumbs__current, .breadcrumbs__separator {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .product {
@@ -48,7 +48,7 @@
 
 .product__images .swiper-button-next,
 .product__images .swiper-button-prev {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .product__images .swiper-button-next:hover,
@@ -117,13 +117,13 @@
 .current-price {
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-xxxl);
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .old-price {
     font-size: var(--font-size-sm);
     text-decoration: line-through;
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .product__button {
@@ -149,7 +149,7 @@
 
 .product__unit {
     margin-bottom: 10px;
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -166,7 +166,7 @@
 }
 
 .product__text {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -192,7 +192,7 @@
     transform: translateY(-50%);
     width: 1px;
     height: 40px;
-    background-color: var(--muted-color-text, #e0e0e0);
+    background-color: var(--text-color-muted, #e0e0e0);
     opacity: 0.3;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .product__nutrition-label {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-xs);
 }
 
@@ -216,13 +216,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px dashed var(--muted-color-text);
+    border-bottom: 1px dashed var(--text-color-muted);
     font-size: var(--font-size-sm);
     padding-bottom: 5px;
 }
 
 .characteristics__label {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .characteristics__value {
@@ -230,7 +230,7 @@
 }
 
 .characteristics__empty, .nutrition__empty {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-xs);
 }
 

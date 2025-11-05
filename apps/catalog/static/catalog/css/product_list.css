@@ -21,14 +21,14 @@
 
 .hero__subtitle {
     font-size: var(--font-size-sm);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .hero__search {
     margin-top: 10px;
     padding: 20px;
     box-shadow: var(--shadow);
-    color: var(--color-text);
+    color: var(--text-color);
     border-radius: var(--radius-xl);
     font-size: var(--font-size-sm);
     background-color: var(--block-background-color);
@@ -54,12 +54,12 @@
 }
 
 .promo-card__label {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-xs);
 }
 
 .promo-card__title {
-    color: var(--color-text);
+    color: var(--text-color);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-lg);
 }
@@ -79,13 +79,13 @@
 }
 
 .product-badge__name {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-xs);
     margin-bottom: 2px;
 }
 
 .product-badge__price {
-    color: var(--color-text);
+    color: var(--text-color);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-sm);
 }
@@ -156,12 +156,12 @@
 .product-card__name {
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .product-card__description {
     font-size: var(--font-size-xs);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .product-card__price {
@@ -173,13 +173,13 @@
 .product-card__current-price {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-sm);
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .product-card__old-price {
     font-size: var(--font-size-xs);
     text-decoration: line-through;
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .product-card__button {

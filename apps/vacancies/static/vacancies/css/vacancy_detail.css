@@ -4,7 +4,7 @@
 
 .breadcrumbs__link {
     font-size: var(--font-size-sm);
-    color: var(--color-text);
+    color: var(--text-color);
     font-weight: var(--font-weight-medium);
 }
 
@@ -15,7 +15,7 @@
 .breadcrumbs__current, .breadcrumbs__separator {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .vacancy {
@@ -43,7 +43,7 @@
 .vacancy__location {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     margin-bottom: 20px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .vacancy__detail-value {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-sm);
 }
 
@@ -91,7 +91,7 @@
 }
 
 .vacancy__description ul {
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-size: var(--font-size-sm);
     list-style-type: disc;
     margin-left: 20px;
