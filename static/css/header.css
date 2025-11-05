@@ -25,7 +25,7 @@
 
 .header__subtitle {
     font-size: var(--font-size-xs);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .header__nav {
@@ -40,13 +40,13 @@
 
 .header__nav-link {
     font-size: var(--font-size-sm);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
     font-weight: var(--font-weight-semibold);
     position: relative;
 }
 
 .header__nav-link:hover {
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
 .header__nav-link::after {
@@ -56,7 +56,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-text);
+    background-color: var(--text-color);
     transition: var(--transition);
 }
 
@@ -65,7 +65,7 @@
 }
 
 .header__nav-link--active {
-  color: var(--color-text);
+  color: var(--text-color);
 }
 
 .header__nav-link--active::after {
@@ -79,7 +79,7 @@
 }
 
 .header__nav-button svg {
-    fill: var(--muted-color-text);
+    fill: var(--text-color-muted);
     height: 20px;
     width: 20px;
 }
@@ -91,7 +91,7 @@
 
 .header__nav-button:hover svg,
 .header__nav-button:focus svg {
-    fill: var(--color-text);
+    fill: var(--text-color);
 }
 
 .dropdown {
@@ -125,7 +125,7 @@
 .dropdown__menu-label {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .switch {
@@ -145,7 +145,7 @@
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: var(--muted-color-text);
+    background-color: var(--text-color-muted);
     border-radius: var(--radius-xl);
     transition: var(--transition);
 }

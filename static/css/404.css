@@ -11,7 +11,7 @@
 .error__code {
   font-size: 5rem;
   font-weight: var(--font-weight-bold);
-  color: var(--muted-color-text);
+  color: var(--text-color-muted);
 }
 
 .error__title {
@@ -21,7 +21,7 @@
 
 .error__text {
   font-size: var(--font-size-sm);
-  color: var(--muted-color-text);
+  color: var(--text-color-muted);
   max-width: 500px;
 }
 

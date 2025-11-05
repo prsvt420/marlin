@@ -21,7 +21,7 @@
 
 .hero__subtitle {
     font-size: var(--font-size-sm);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .legal {
@@ -54,7 +54,7 @@
 
 .legal-section__content {
     font-size: var(--font-size-sm);
-    color: var(--muted-color-text);
+    color: var(--text-color-muted);
 }
 
 .legal-list {
