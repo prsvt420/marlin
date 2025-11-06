@@ -36,7 +36,7 @@
     --shadow: 0 6px 24px rgba(76, 75, 75, 0.08);
     --shadow-active: 0 10px 30px rgba(0, 0, 0, 0.1);
 
-    --button-color-text: #ffffff;
+    --button-text-color: #ffffff;
     --button-background-color: #000000;
     --button-background-color-hover: #3c3c3c;
 
@@ -54,7 +54,7 @@
 .dark-theme {
     --shadow: 0 6px 24px rgba(0, 0, 0, 0.24);
 
-    --button-color-text: #424344;
+    --button-text-color: #424344;
     --button-background-color: #e1e1e1;
     --button-background-color-hover: #bbbaba;
 

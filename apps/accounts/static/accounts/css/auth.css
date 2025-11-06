@@ -55,7 +55,7 @@
 .auth__form-button {
     padding: 16px;
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     border-radius: var(--radius-lg);
     font-weight: var(--font-weight-semibold);
     margin-top: 10px;

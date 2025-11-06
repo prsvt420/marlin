@@ -30,7 +30,7 @@
   padding: 15px;
   width: 220px;
   background-color: var(--button-background-color);
-  color: var(--button-color-text);
+  color: var(--button-text-color);
   border-radius: var(--radius-lg);
   font-weight: var(--font-weight-semibold);
   box-shadow: var(--shadow);
