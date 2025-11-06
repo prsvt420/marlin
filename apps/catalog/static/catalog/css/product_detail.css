@@ -130,7 +130,7 @@
     padding: 15px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     margin-top: auto;
     font-weight: var(--font-weight-semibold);
     width: 200px;

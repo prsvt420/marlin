@@ -186,7 +186,7 @@
     padding: 10px;
     border-radius: var(--radius-lg);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     margin-top: auto;
     font-weight: var(--font-weight-semibold);
     width: 100%;
@@ -212,7 +212,7 @@
     height: 40px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 }
@@ -235,7 +235,7 @@
     height: 40px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 }
@@ -272,7 +272,7 @@
     padding: 10px;
     border-radius: var(--radius-lg);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     font-weight: var(--font-weight-semibold);
     text-align: center;
     width: 200px;

@@ -151,7 +151,7 @@
     padding: 13px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     margin-top: auto;
     font-weight: var(--font-weight-semibold);
     width: 150px;
@@ -197,7 +197,7 @@
     height: 40px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 }
@@ -220,7 +220,7 @@
     height: 40px;
     border-radius: var(--radius-xl);
     background-color: var(--button-background-color);
-    color: var(--button-color-text);
+    color: var(--button-text-color);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 }
