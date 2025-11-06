@@ -34,12 +34,12 @@ class Product(models.Model):
 
     name = models.CharField(
         max_length=255,
-        verbose_name="Название",
-        help_text="Название продукта",
+        verbose_name="название",
+        help_text="Название продукта.",
     )
     description = models.TextField(
-        verbose_name="Описание",
-        help_text="Описание продукта",
+        verbose_name="описание",
+        help_text="Описание продукта.",
     )
     slug = models.SlugField(
         max_length=255,
@@ -48,61 +48,61 @@ class Product(models.Model):
         help_text="Уникальное имя для URL (латиница, дефисы)",
     )
     composition = models.TextField(
-        verbose_name="Состав",
-        help_text="Состав продукта",
+        verbose_name="состав",
+        help_text="Состав продукта.",
     )
     unit_type = models.CharField(
         max_length=10,
         choices=UnitType.choices,
         default=UnitType.PIECE,
-        verbose_name="Единица измерения",
-        help_text="Единица измерения продукта (например: кг, л, шт)",
+        verbose_name="единица измерения",
+        help_text="Единица измерения продукта (например: кг, л, шт).",
     )
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        verbose_name="Цена",
-        help_text="Цена продукта",
+        verbose_name="цена",
+        help_text="Цена продукта.",
     )
     discount = models.DecimalField(
         max_digits=5,
         decimal_places=2,
         default=0,
-        verbose_name="Скидка (%)",
-        help_text="Скидка на продукт в процентах",
+        verbose_name="скидка (%)",
+        help_text="Скидка на продукт в процентах.",
     )
     category = models.ForeignKey(
         to="Category",
         on_delete=models.CASCADE,
         related_name="products",
-        verbose_name="Категория",
-        help_text="Категория, к которой относится продукт",
+        verbose_name="категория",
+        help_text="Категория, к которой относится продукт.",
     )
     sku = models.CharField(
         max_length=100,
         unique=True,
         verbose_name="SKU",
-        help_text="Артикул (Stock Keeping Unit)",
+        help_text="Артикул (Stock Keeping Unit).",
     )
     stock = models.PositiveIntegerField(
         default=0,
-        verbose_name="Остаток",
-        help_text="Количество продуктов на складе",
+        verbose_name="остаток",
+        help_text="Количество продуктов на складе.",
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="Активен",
-        help_text="Определяет, показывается ли продукт в каталоге",
+        verbose_name="активен",
+        help_text="Определяет, показывается ли продукт в каталоге.",
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Дата создания",
-        help_text="Дата и время добавления продукта",
+        verbose_name="дата создания",
+        help_text="Дата и время добавления продукта.",
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="Дата обновления",
-        help_text="Дата и время последнего обновления продукта",
+        verbose_name="дата обновления",
+        help_text="Дата и время последнего обновления продукта.",
     )
 
     class Meta:  # noqa: D106
@@ -162,40 +162,40 @@ class ProductNutrition(models.Model):
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_nutrition",
-        verbose_name="Продукт",
-        help_text="Продукт, к которому относится данная пищевая ценность",
+        verbose_name="продукт",
+        help_text="Продукт, к которому относится данная пищевая ценность.",
     )
     calories = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="Калории",
-        help_text="Калории (ккал)",
+        verbose_name="калории",
+        help_text="Калории (ккал).",
     )
     proteins = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="Белки",
-        help_text="Белки (г)",
+        verbose_name="белки",
+        help_text="Белки (г).",
     )
     fats = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="Жиры",
-        help_text="Жиры (г)",
+        verbose_name="жиры",
+        help_text="Жиры (г).",
     )
     carbs = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="Углеводы",
-        help_text="Углеводы (г)",
+        verbose_name="углеводы",
+        help_text="Углеводы (г).",
     )
 
     class Meta:  # noqa: D106
@@ -233,10 +233,10 @@ class Attribute(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="Название",
+        verbose_name="название",
         help_text=(
             "Название атрибута (например: "
-            "вес, срок хранения, условия хранения)"
+            "вес, срок хранения, условия хранения)."
         ),
     )
 
@@ -272,22 +272,23 @@ class ProductAttribute(models.Model):
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_attributes",
-        verbose_name="Продукт",
-        help_text="Продукт, к которому относится атрибут",
+        verbose_name="продукт",
+        help_text="Продукт, к которому относится атрибут.",
     )
     attribute = models.ForeignKey(
         to="Attribute",
         on_delete=models.CASCADE,
         related_name="attribute_values",
-        verbose_name="Атрибут",
+        verbose_name="атрибут",
         help_text=(
-            "Атрибут продукта (например: вес, срок хранения, условия хранения)"
+            "Атрибут продукта (например: вес, срок хранения, "
+            "условия хранения)."
         ),
     )
     value = models.CharField(
         max_length=255,
-        verbose_name="Значение",
-        help_text="Значение атрибута (например: 500 г, 12 месяцев)",
+        verbose_name="значение",
+        help_text="Значение атрибута (например: 500 г, 12 месяцев).",
     )
 
     class Meta:  # noqa: D106
@@ -334,45 +335,45 @@ class Category(models.Model):
         related_name="subcategories",
         null=True,
         blank=True,
-        verbose_name="Родительская категория",
-        help_text="Родительская категория (если есть вложенность)",
+        verbose_name="родительская категория",
+        help_text="Родительская категория (если есть вложенность).",
     )
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="Название",
-        help_text="Название категории",
+        verbose_name="название",
+        help_text="Название категории.",
     )
     slug = models.SlugField(
         max_length=255,
         unique=True,
         verbose_name="URL-идентификатор",
-        help_text="Уникальное имя для URL (латиница, дефисы)",
+        help_text="Уникальное имя для URL (латиница, дефисы).",
     )
     description = models.TextField(
         blank=True,
-        verbose_name="Описание",
-        help_text="Описание категории",
+        verbose_name="описание",
+        help_text="Описание категории.",
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name="Порядок отображения",
-        help_text="Порядок сортировки категорий в списке",
+        verbose_name="порядок отображения",
+        help_text="Порядок сортировки категорий в списке.",
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="Активна",
-        help_text="Определяет, показывается ли категория в каталоге",
+        verbose_name="активна",
+        help_text="Определяет, показывается ли категория в каталоге.",
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Дата создания",
-        help_text="Дата и время добавления категории",
+        verbose_name="дата создания",
+        help_text="Дата и время добавления категории.",
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="Дата обновления",
-        help_text="Дата и время последнего обновления категории",
+        verbose_name="дата обновления",
+        help_text="Дата и время последнего обновления категории.",
     )
 
     class Meta:  # noqa: D106
@@ -408,24 +409,24 @@ class ProductImage(models.Model):
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_images",
-        verbose_name="Продукт",
-        help_text="Продукт, к которому относится изображение",
+        verbose_name="продукт",
+        help_text="Продукт, к которому относится изображение.",
     )
     image_path = models.ImageField(
         upload_to="product_images/",
-        verbose_name="Изображение",
-        help_text="Путь к изображению продукта",
+        verbose_name="изображение",
+        help_text="Путь к изображению продукта.",
     )
     alt_text = models.CharField(
         max_length=255,
         blank=True,
-        verbose_name="Альтернативный текст",
-        help_text="Описание изображения для SEO и доступности",
+        verbose_name="альтернативный текст",
+        help_text="Описание изображения для SEO и доступности.",
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name="Порядок отображения",
-        help_text="Порядок сортировки изображений продукта",
+        verbose_name="порядок отображения",
+        help_text="Порядок сортировки изображений продукта.",
     )
 
     class Meta:  # noqa: D106
