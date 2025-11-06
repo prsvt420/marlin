@@ -30,72 +30,72 @@ class Vacancy(models.Model):
 
     title = models.CharField(
         max_length=255,
-        verbose_name="Заголовок",
-        help_text="Заголовок вакансии",
+        verbose_name="заголовок",
+        help_text="Заголовок вакансии.",
     )
     short_description = models.TextField(
-        verbose_name="Краткое описание",
-        help_text="Вступительный текст о вакансии (обычный текст)",
+        verbose_name="краткое описание",
+        help_text="Вступительный текст о вакансии (обычный текст).",
     )
     description = models.TextField(
-        verbose_name="Описание",
+        verbose_name="описание",
         help_text="Подробное описание вакансии "
-        "(HTML-разметка, используйте div, ul, h3, li)",
+        "(HTML-разметка, используйте div, ul, h3, li).",
     )
     professional_area = models.ForeignKey(
         to="ProfessionalArea",
         on_delete=models.CASCADE,
         related_name="vacancies",
-        verbose_name="Профессиональная область",
-        help_text="Профессиональная область вакансии",
+        verbose_name="профессиональная область",
+        help_text="Профессиональная область вакансии.",
     )
     city = models.ForeignKey(
         to="City",
         on_delete=models.CASCADE,
         related_name="vacancies",
-        verbose_name="Город и регион",
-        help_text="Город и регион размещения вакансии",
+        verbose_name="город и регион",
+        help_text="Город и регион размещения вакансии.",
     )
     work_schedule = models.CharField(
         max_length=10,
         choices=WorkSchedule.choices,
         default=WorkSchedule.FULL_TIME,
-        verbose_name="График работы",
-        help_text="Предполагаемый режим работы",
+        verbose_name="график работы",
+        help_text="Предполагаемый режим работы.",
     )
     experience_level = models.CharField(
         max_length=10,
         choices=ExperienceLevel.choices,
         default=ExperienceLevel.NO_EXPERIENCE,
-        verbose_name="Опыт работы",
-        help_text="Требуемый для работы опыт",
+        verbose_name="опыт работы",
+        help_text="Требуемый для работы опыт.",
     )
     salary_from = models.PositiveIntegerField(
-        verbose_name="Зарплата от",
-        help_text="Минимальная зарплата",
+        verbose_name="зарплата от",
+        help_text="Минимальная зарплата.",
         null=True,
         blank=True,
     )
     salary_to = models.PositiveIntegerField(
-        verbose_name="Зарплата до",
-        help_text="Максимальная зарплата",
+        verbose_name="зарплата до",
+        help_text="Максимальная зарплата.",
         null=True,
         blank=True,
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="Активна",
-        help_text="Определяет, активна ли вакансия",
+        verbose_name="активна",
+        help_text="Определяет, активна ли вакансия.",
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Дата создания",
-        help_text="Дата и время добавления вакансии",
+        verbose_name="дата создания",
+        help_text="Дата и время добавления вакансии.",
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="Дата обновления",
-        help_text="Дата и время последнего обновления вакансии",
+        verbose_name="дата обновления",
+        help_text="Дата и время последнего обновления вакансии.",
     )
 
     class Meta:  # noqa: D106
@@ -167,8 +167,8 @@ class ProfessionalArea(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="Название",
-        help_text="Название профессиональной области",
+        verbose_name="название",
+        help_text="Название профессиональной области.",
     )
 
     class Meta:  # noqa: D106
@@ -200,15 +200,15 @@ class City(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="Название",
-        help_text="Название города",
+        verbose_name="название",
+        help_text="Название города.",
     )
     region = models.ForeignKey(
         to="Region",
         on_delete=models.CASCADE,
         related_name="cities",
-        verbose_name="Регион",
-        help_text="Регион, к которому относится город",
+        verbose_name="регион",
+        help_text="Регион, к которому относится город.",
         null=True,
         blank=True,
     )
@@ -244,8 +244,8 @@ class Region(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="Название",
-        help_text="Название региона",
+        verbose_name="название",
+        help_text="Название региона.",
     )
 
     class Meta:  # noqa: D106
