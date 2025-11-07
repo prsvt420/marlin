@@ -99,7 +99,7 @@ class Vacancy(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "vacancies"
+        db_table = "vacancies_vacancy"
         db_table_comment = "Таблица с информацией о вакансиях"
         verbose_name = "вакансия"
         verbose_name_plural = "вакансии"
@@ -172,7 +172,7 @@ class ProfessionalArea(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "professional_areas"
+        db_table = "vacancies_professional_area"
         db_table_comment = "Таблица с информацией о профессиональных областях"
         verbose_name = "профессиональная область"
         verbose_name_plural = "профессиональные области"
@@ -214,7 +214,7 @@ class City(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "cities"
+        db_table = "vacancies_city"
         db_table_comment = "Таблица с информацией о городах"
         verbose_name = "город"
         verbose_name_plural = "города"
@@ -249,7 +249,7 @@ class Region(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "regions"
+        db_table = "vacancies_region"
         db_table_comment = "Таблица с информацией о регионах"
         verbose_name = "регион"
         verbose_name_plural = "регионы"
