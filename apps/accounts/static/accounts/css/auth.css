@@ -36,7 +36,6 @@
 
 .auth__label {
     font-size: var(--font-size-sm);
-    color: var();
 }
 
 .auth__label sup {
