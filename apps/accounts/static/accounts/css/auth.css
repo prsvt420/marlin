@@ -34,6 +34,10 @@
     gap: 5px;
 }
 
+.auth__input-wrapper {
+    position: relative;
+}
+
 .auth__label {
     font-size: var(--font-size-sm);
 }
@@ -49,6 +53,31 @@
     background-color: var(--input-background-color);
     font-size: var(--font-size-sm);
     border: var(--input-border);
+    width: 100%;
+}
+
+.auth__input-wrapper .auth__input {
+    padding-right: 40px;
+}
+
+.auth__eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: var(--text-color-muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.auth__eye--closed {
+    display: none;
+}
+
+.auth__eye:hover {
+    fill: var(--button-background-color-hover);
 }
 
 .auth__form-button {
