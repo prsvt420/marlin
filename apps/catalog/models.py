@@ -106,7 +106,7 @@ class Product(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "products"
+        db_table = "catalog_product"
         db_table_comment = "Таблица с информацией о продуктах"
         verbose_name = "продукт"
         verbose_name_plural = "продукты"
@@ -199,7 +199,7 @@ class ProductNutrition(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "product_nutritions"
+        db_table = "catalog_product_nutrition"
         db_table_comment = "Таблица с информацией о пищевой ценности продуктов"
         verbose_name = "пищевая ценность"
         verbose_name_plural = "пищевая ценность"
@@ -241,7 +241,7 @@ class Attribute(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "attributes"
+        db_table = "catalog_attribute"
         db_table_comment = "Таблица с возможными атрибутами продуктов"
         verbose_name = "атрибут"
         verbose_name_plural = "атрибуты"
@@ -292,7 +292,7 @@ class ProductAttribute(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "product_attributes"
+        db_table = "catalog_product_attribute"
         db_table_comment = "Таблица со значениями атрибутов продуктов"
         verbose_name = "атрибут продукта"
         verbose_name_plural = "атрибуты продуктов"
@@ -377,7 +377,7 @@ class Category(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "categories"
+        db_table = "catalog_category"
         db_table_comment = "Таблица с категориями продуктов"
         verbose_name = "категория"
         verbose_name_plural = "категории"
@@ -430,7 +430,7 @@ class ProductImage(models.Model):
     )
 
     class Meta:  # noqa: D106
-        db_table = "product_images"
+        db_table = "catalog_product_image"
         db_table_comment = "Таблица с изображениями продуктов"
         verbose_name = "изображение продукта"
         verbose_name_plural = "изображения продукта"
