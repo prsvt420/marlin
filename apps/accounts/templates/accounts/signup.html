@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Вход в аккаунт{% endblock %}
+{% block title %}Регистрация аккаунта{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'accounts/css/auth.css' %}">
@@ -11,12 +11,12 @@
 {% block content %}
 <section class="auth">
     <div class="auth__form">
-        <h2 class="auth__form-title">Вход в аккаунт</h2>
+        <h2 class="auth__form-title">Регистрация аккаунта</h2>
 
-        <form action="{% url 'accounts:signin' %}" method="post" class="auth__form-body">
+        <form action="{% url 'accounts:signup' %}" method="post" class="auth__form-body">
             {% csrf_token %}
 
-           {% if form.non_field_errors %}
+            {% if form.non_field_errors %}
                 <div class="auth__errors">
                     {{ form.non_field_errors }}
                 </div>
@@ -27,13 +27,16 @@
                 <input type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="Введите имя пользователя" class="auth__input">
             </div>
             <div class="auth__form-group">
-                <label for="password" class="auth__label">Пароль {% if form.password.errors %}<sup>*{{ form.password.errors.0 }}</sup>{% endif %}</label>
-                <input type="password" name="password" id="password" placeholder="Введите пароль" class="auth__input">
+                <label for="password1" class="auth__label">Пароль {% if form.password1.errors %}<sup>*{{ form.password1.errors.0 }}</sup>{% endif %}</label>
+                <input type="password" name="password1" id="password1" placeholder="Введите пароль" class="auth__input">
             </div>
-            <button type="submit" class="auth__form-button">Войти</button>
+            <div class="auth__form-group">
+                <label for="password2" class="auth__label">Подтверждение пароля {% if form.password2.errors %}<sup>*{{ form.password2.errors.0 }}</sup>{% endif %}</label>
+                <input type="password" name="password2" id="password2" placeholder="Подтвердите пароль" class="auth__input">
+            </div>
+            <button type="submit" class="auth__form-button">Зарегистрироваться</button>
             <div class="auth__links">
-                <a href="#" class="auth__link">Забыли пароль?</a>
-                <a href="{% url 'accounts:signup' %}" class="auth__link">Зарегистрироваться</a>
+                <a href="{% url 'accounts:signin' %}" class="auth__link">Уже есть аккаунт? Войти</a>
             </div>
         </form>
 
