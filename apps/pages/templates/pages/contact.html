@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Контакты{% endblock %}
+{% block title %}{% trans "Contacts" %}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
@@ -11,8 +11,8 @@
 {% block content %}
 <section class="hero">
   <div class="hero__content">
-      <h2 class="hero__title">Свяжитесь с нами.</h2>
-      <p class="hero__subtitle">Мы всегда на связи и будем рады ответить на ваши вопросы.</p>
+      <h2 class="hero__title">{% trans "Get in touch with us." %}</h2>
+      <p class="hero__subtitle">{% trans "We are always available and happy to answer your questions." %}</p>
   </div>
 </section>
 <section class="contact">
@@ -21,52 +21,52 @@
   </div>
   <div class="contact__content">
     <div class="contact__form">
-      <h2 class="contact__form-title">Напишите нам сообщение</h2>
+      <h2 class="contact__form-title">{% trans "Send us a message" %}</h2>
 
       <form action="{% url 'pages:contact' %}" method="post" class="contact__form-body">
         {% csrf_token %}
 
         <div class="contact__form-group">
-          <label class="contact__label" for="name">Имя {% if form.name.errors %}<sup>*{{ form.name.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.name.value|default:'' }}" type="text" id="name" name="name" placeholder="Введите имя">
+          <label class="contact__label" for="name">{% trans "Name" %} {% if form.name.errors %}<sup>*{{ form.name.errors.0 }}</sup>{% endif %}</label>
+          <input class="contact__input" value="{{ form.name.value|default:'' }}" type="text" id="name" name="name" placeholder="{% trans 'Enter your name' %}">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="email">Email {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="Введите email">
+          <label class="contact__label" for="email">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
+          <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="{% trans 'Enter your email' %}">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="phone">Телефон {% if form.phone.errors %}<sup>*{{ form.phone.errors.0 }}</sup>{% endif %}</label>
+          <label class="contact__label" for="phone">{% trans "Phone" %} {% if form.phone.errors %}<sup>*{{ form.phone.errors.0 }}</sup>{% endif %}</label>
           <input class="contact__input" autocomplete="off" value="{{ form.phone.value|default:'' }}" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="subject">Тема {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="Введите тему сообщения">
+          <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
+          <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter the subject' %}">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="message">Сообщение {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
-          <textarea class="contact__input" id="message" name="message" rows="3" placeholder="Введите ваше сообщение">{{ form.message.value|default:'' }}</textarea>
+          <label class="contact__label" for="message">{% trans "Message" %} {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
+          <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter your message' %}">{{ form.message.value|default:'' }}</textarea>
         </div>
-        <button type="submit" class="contact__form-button">Отправить</button>
+        <button type="submit" class="contact__form-button">{% trans "Send" %}</button>
       </form>
 
     </div>
     <div class="contact__list">
       <article class="contact-card">
-        <h3 class="contact-card__title">Адрес</h3>
-        <p class="contact-card__text">г. Москва, ул. Примерная, д. 15</p>
+        <h3 class="contact-card__title">{% trans "Address" %}</h3>
+        <p class="contact-card__text">{% trans "Moscow, Example Street, 15" %}</p>
       </article>
       <article class="contact-card">
-        <h3 class="contact-card__title">Телефон</h3>
+        <h3 class="contact-card__title">{% trans "Phone" %}</h3>
         <p class="contact-card__text">+7 (495) 123-45-67</p>
       </article>
       <article class="contact-card">
-        <h3 class="contact-card__title">Электронная почта</h3>
+        <h3 class="contact-card__title">{% trans "Email" %}</h3>
         <p class="contact-card__text">
           <a class="contact-card__link" href="mailto:support@marlin.ru">support@marlin.ru</a>
         </p>
       </article>
       <article class="contact-card">
-        <h3 class="contact-card__title">Соцсети</h3>
+        <h3 class="contact-card__title">{% trans "Social networks" %}</h3>
         <p class="contact-card__text">
           <a class="contact-card__link" href="#">VK</a> ·
           <a class="contact-card__link" href="#">Telegram</a> ·
@@ -74,8 +74,8 @@
         </p>
       </article>
       <article class="contact-card">
-        <h3 class="contact-card__title">Часы работы</h3>
-        <p class="contact-card__text">ПН-ВС с 9:00 до 21:00</p>
+        <h3 class="contact-card__title">{% trans "Working hours" %}</h3>
+        <p class="contact-card__text">{% trans "Mon-Sun from 9:00 to 21:00" %}</p>
       </article>
     </div>
   </div>
