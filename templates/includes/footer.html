@@ -1,11 +1,13 @@
+{% load i18n %}
+
 <footer class="footer">
     <div class="footer__links">
-        <a href="{% url 'pages:privacy' %}" class="footer__links-link">Политика конфиденциальности</a>
-        <a href="{% url 'pages:offer' %}" class="footer__links-link">Публичная оферта</a>
-        <a href="{% url 'pages:terms' %}" class="footer__links-link">Пользовательское соглашение</a>
-        <a href="{% url 'pages:contact' %}" class="footer__links-link">Контакты</a>
-        <a href="#" class="footer__links-link">Новости</a>
-        <a href="{% url 'vacancies:vacancy_list' %}" class="footer__links-link">Вакансии</a>
+        <a href="{% url 'pages:privacy' %}" class="footer__links-link">{% trans "Privacy Policy" %}</a>
+        <a href="{% url 'pages:offer' %}" class="footer__links-link">{% trans "Public Offer" %}</a>
+        <a href="{% url 'pages:terms' %}" class="footer__links-link">{% trans "Terms of Service" %}</a>
+        <a href="{% url 'pages:contact' %}" class="footer__links-link">{% trans "Contacts" %}</a>
+        <a href="#" class="footer__links-link">{% trans "News" %}</a>
+        <a href="{% url 'vacancies:vacancy_list' %}" class="footer__links-link">{% trans "Vacancies" %}</a>
     </div>
-    <p class="footer__copyright">© 2025 Marlin — Все права защищены.</p>
+    <p class="footer__copyright">{% trans "© 2025 Marlin — All rights reserved." %}</p>
 </footer>
