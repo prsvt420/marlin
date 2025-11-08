@@ -9,6 +9,7 @@ from django.urls import URLPattern, URLResolver, include, path
 urlpatterns: List[Union[URLResolver, URLPattern]] = [
     path("admin/doc/", include("django.contrib.admindocs.urls")),
     path("admin/", admin.site.urls),
+    path("i18n/", include("django.conf.urls.i18n")),
     path(
         "catalog/",
         include("apps.catalog.urls", namespace="catalog"),
