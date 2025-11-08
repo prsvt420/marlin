@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-09 04:35+0800\n"
+"POT-Creation-Date: 2025-11-09 04:48+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -18,6 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\apps\pages\apps.py:13
+msgid "Pages"
+msgstr "Страницы"
 
 #: .\apps\pages\templates\pages\contact.html:5
 #: .\templates\includes\footer.html:8 .\templates\includes\header.html:21
@@ -97,6 +101,20 @@ msgstr "Часы работы"
 #: .\apps\pages\templates\pages\contact.html:78
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
+
+#: .\apps\pages\views.py:53
+msgid "Your message has been successfully sent! We will contact you shortly."
+msgstr ""
+"Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
+
+#: .\apps\pages\views.py:59
+msgid "An error occurred while sending your message. Please try again later."
+msgstr ""
+"Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
+
+#: .\apps\pages\views.py:82
+msgid "Please correct the errors in the form and try again."
+msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
 #: .\templates\404.html:14
 msgid "Oops! The page you are looking for was not found"

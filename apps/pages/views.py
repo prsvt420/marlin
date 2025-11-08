@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.http import HttpResponse
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import FormView, RedirectView, TemplateView
 
 from apps.pages.forms import ContactForm
@@ -49,14 +50,18 @@ class ContactView(FormView):
 
             messages.success(
                 request=self.request,
-                message="Ваше сообщение успешно отправлено! "
-                "Мы свяжемся с вами в ближайшее время.",
+                message=_(
+                    "Your message has been successfully sent! "
+                    "We will contact you shortly."
+                ),
             )
         except Exception:
             messages.error(
                 self.request,
-                "Произошла ошибка при отправке сообщения. "
-                "Пожалуйста, попробуйте позже.",
+                _(
+                    "An error occurred while sending your message. "
+                    "Please try again later."
+                ),
             )
 
         return super().form_valid(form=form)
@@ -78,7 +83,7 @@ class ContactView(FormView):
         """
         messages.error(
             self.request,
-            "Пожалуйста, исправьте ошибки в форме и попробуйте снова.",
+            _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form=form)
 
