@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
 {% block title %}404{% endblock %}
 
@@ -11,8 +11,8 @@
 {% block content %}
 <section class="error">
     <h1 class="error__code">404</h1>
-    <h2 class="error__title">Упс! Страница, которую вы ищете, не найдена</h2>
-    <p class="error__text">Возможно, страница была удалена или вы перешли по неверной ссылке.</p>
-    <a href="{% url 'catalog:product_list' %}" class="error__button">Вернуться в каталог</a>
+    <h2 class="error__title">{% trans "Oops! The page you are looking for was not found" %}</h2>
+    <p class="error__text">{% trans "The page may have been removed or you followed an incorrect link." %}</p>
+    <a href="{% url 'catalog:product_list' %}" class="error__button">{% trans "Return to catalog" %}</a>
 </section>
 {% endblock %}
