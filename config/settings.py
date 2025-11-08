@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
 from decouple import config
 from django.urls import reverse_lazy
@@ -38,6 +38,7 @@ INSTALLED_APPS: List[str] = [
 MIDDLEWARE: List[str] = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -92,13 +93,20 @@ AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
     },
 ]
 
-LANGUAGE_CODE: str = "ru-RU"
-
 TIME_ZONE: str = "Europe/Moscow"
-
 USE_I18N: bool = True
-
 USE_TZ: bool = True
+
+LANGUAGE_CODE: str = "ru-ru"
+LANGUAGES: List[Tuple[str, str]] = [
+    ("ru", "Русский"),
+    ("en", "English"),
+]
+LANGUAGE_COOKIE_NAME: str = "language"
+
+LOCALE_PATHS: List[Any] = [
+    BASE_DIR / "locale",
+]
 
 STATIC_URL: str = "static/"
 STATICFILES_DIRS: List[Any] = [
