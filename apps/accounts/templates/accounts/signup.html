@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Регистрация аккаунта{% endblock %}
+{% block title %}{% trans "Sign up" %}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'accounts/css/auth.css' %}">
@@ -11,7 +11,7 @@
 {% block content %}
 <section class="auth">
     <div class="auth__form">
-        <h2 class="auth__form-title">Регистрация аккаунта</h2>
+        <h2 class="auth__form-title">{% trans "Sign up" %}</h2>
 
         <form action="{% url 'accounts:signup' %}" method="post" class="auth__form-body">
             {% csrf_token %}
@@ -23,37 +23,37 @@
             {% endif %}
 
             <div class="auth__form-group">
-                <label for="username" class="auth__label">Имя пользователя {% if form.username.errors %}<sup>*{{ form.username.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="Введите имя пользователя" class="auth__input">
+                <label for="username" class="auth__label">{% trans "Username" %} {% if form.username.errors %}<sup>*{{ form.username.errors.0 }}</sup>{% endif %}</label>
+                <input type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="{% trans 'Enter username' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
-                <label for="password" class="auth__label">Пароль {% if form.password1.errors %}<sup>*{{ form.password1.errors.0 }}</sup>{% endif %}</label>
+                <label for="password" class="auth__label">{% trans "Password" %} {% if form.password1.errors %}<sup>*{{ form.password1.errors.0 }}</sup>{% endif %}</label>
                 <div class="auth__input-wrapper">
-                    <input type="password" name="password1" id="password" placeholder="Введите пароль" class="auth__input">
+                    <input type="password" name="password1" id="password" placeholder="{% trans 'Enter password' %}" class="auth__input">
                     <svg class="auth__eye auth__eye--open" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 13.078c4.418 0 8-5 8-5s-3.582-5-8-5-8 5-8 5 3.582 5 8 5zm0-2a3 3 0 100-6 3 3 0 000 6zm0-1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
                     <svg class="auth__eye auth__eye--closed" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.406 1.125l-3.229 3.229C14.47 5.834 16 7.969 16 7.969s-3.582 5-8 5c-1.244 0-2.422-.397-3.472-.966l-3.372 3.372-.707-.707 3.2-3.2C1.451 9.997 0 7.969 0 7.969s3.582-5 8-5c1.17 0 2.28.351 3.282.867L14.7.418l.707.707zM8 4.969c.61 0 1.179.182 1.653.496L8.546 6.57a1.5 1.5 0 00-1.943 1.943L5.495 9.622A3 3 0 018 4.968zm-.742 4.304l-1.08 1.08a3 3 0 004.205-4.205l-1.079 1.08a1.5 1.5 0 01-2.046 2.046z"></path></svg>
                 </div>
             </div>
             <div class="auth__form-group">
-                <label for="password2" class="auth__label">Подтверждение пароля {% if form.password2.errors %}<sup>*{{ form.password2.errors.0 }}</sup>{% endif %}</label>
-                <input type="password" name="password2" id="password2" placeholder="Подтвердите пароль" class="auth__input">
+                <label for="password2" class="auth__label">{% trans "Password confirmation" %} {% if form.password2.errors %}<sup>*{{ form.password2.errors.0 }}</sup>{% endif %}</label>
+                <input type="password" name="password2" id="password2" placeholder="{% trans 'Confirm password' %}" class="auth__input">
             </div>
-            <button type="submit" class="auth__form-button">Зарегистрироваться</button>
+            <button type="submit" class="auth__form-button">{% trans "Sign up" %}</button>
             <div class="auth__links">
-                <a href="{% url 'accounts:signin' %}" class="auth__link">Уже есть аккаунт? Войти</a>
+                <a href="{% url 'accounts:signin' %}" class="auth__link">{% trans "Already have an account? Sign in" %}</a>
             </div>
         </form>
 
         <div class="auth__social">
-            <p class="auth__social-text">или</p>
+            <p class="auth__social-text">{% trans "or" %}</p>
             <div class="auth__social-buttons">
                 <a href="#" class="auth__social-button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M0 23.04C0 12.1788 0 6.74826 3.37413 3.37413C6.74826 0 12.1788 0 23.04 0H24.96C35.8212 0 41.2517 0 44.6259 3.37413C48 6.74826 48 12.1788 48 23.04V24.96C48 35.8212 48 41.2517 44.6259 44.6259C41.2517 48 35.8212 48 24.96 48H23.04C12.1788 48 6.74826 48 3.37413 44.6259C0 41.2517 0 35.8212 0 24.96V23.04Z" fill="#0077FF"/><path d="M25.54 34.5801C14.6 34.5801 8.3601 27.0801 8.1001 14.6001H13.5801C13.7601 23.7601 17.8 27.6401 21 28.4401V14.6001H26.1602V22.5001C29.3202 22.1601 32.6398 18.5601 33.7598 14.6001H38.9199C38.0599 19.4801 34.4599 23.0801 31.8999 24.5601C34.4599 25.7601 38.5601 28.9001 40.1201 34.5801H34.4399C33.2199 30.7801 30.1802 27.8401 26.1602 27.4401V34.5801H25.54Z" fill="white"/>
-                </svg> Войти с VK ID
+                </svg> {% trans "Sign in with VK ID" %}
                 </a>
                 <a href="#" class="auth__social-button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/>
-                </svg> Войти с Google
+                </svg> {% trans "Sign in with Google" %}
                 </a>
             </div>
         </div>

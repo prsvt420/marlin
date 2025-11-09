@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-09 04:48+0800\n"
+"POT-Creation-Date: 2025-11-10 00:13+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -18,6 +18,71 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\apps\accounts\templates\accounts\signin.html:5
+#: .\apps\accounts\templates\accounts\signin.html:14
+#: .\apps\accounts\templates\accounts\signin.html:39
+#: .\templates\includes\header.html:30
+msgid "Sign in"
+msgstr "Войти"
+
+#: .\apps\accounts\templates\accounts\signin.html:26
+#: .\apps\accounts\templates\accounts\signup.html:26
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\apps\accounts\templates\accounts\signin.html:27
+#: .\apps\accounts\templates\accounts\signup.html:27
+msgid "Enter username"
+msgstr "Введите имя пользователя"
+
+#: .\apps\accounts\templates\accounts\signin.html:30
+#: .\apps\accounts\templates\accounts\signup.html:30
+msgid "Password"
+msgstr "Пароль"
+
+#: .\apps\accounts\templates\accounts\signin.html:32
+#: .\apps\accounts\templates\accounts\signup.html:32
+msgid "Enter password"
+msgstr "Введите пароль"
+
+#: .\apps\accounts\templates\accounts\signin.html:41
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: .\apps\accounts\templates\accounts\signin.html:42
+#: .\apps\accounts\templates\accounts\signup.html:5
+#: .\apps\accounts\templates\accounts\signup.html:14
+#: .\apps\accounts\templates\accounts\signup.html:41
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\apps\accounts\templates\accounts\signin.html:47
+#: .\apps\accounts\templates\accounts\signup.html:48
+msgid "or"
+msgstr "или"
+
+#: .\apps\accounts\templates\accounts\signin.html:51
+#: .\apps\accounts\templates\accounts\signup.html:52
+msgid "Sign in with VK ID"
+msgstr "Войти с VK ID"
+
+#: .\apps\accounts\templates\accounts\signin.html:55
+#: .\apps\accounts\templates\accounts\signup.html:56
+msgid "Sign in with Google"
+msgstr "Войти с Google"
+
+#: .\apps\accounts\templates\accounts\signup.html:38
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+#: .\apps\accounts\templates\accounts\signup.html:39
+msgid "Confirm password"
+msgstr "Подтвердите пароль"
+
+#: .\apps\accounts\templates\accounts\signup.html:43
+msgid "Already have an account? Sign in"
+msgstr "Уже есть аккаунт? Войти"
 
 #: .\apps\pages\apps.py:13
 msgid "Pages"
@@ -102,17 +167,17 @@ msgstr "Часы работы"
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
 
-#: .\apps\pages\views.py:53
+#: .\apps\pages\views.py:54
 msgid "Your message has been successfully sent! We will contact you shortly."
 msgstr ""
 "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
 
-#: .\apps\pages\views.py:59
+#: .\apps\pages\views.py:62
 msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
 
-#: .\apps\pages\views.py:82
+#: .\apps\pages\views.py:86
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
@@ -167,10 +232,6 @@ msgstr "Каталог"
 #: .\templates\includes\header.html:27
 msgid "Sign out"
 msgstr "Выйти"
-
-#: .\templates\includes\header.html:30
-msgid "Sign in"
-msgstr "Войти"
 
 #: .\templates\includes\header.html:34
 msgid "Settings"
