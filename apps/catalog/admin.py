@@ -1,6 +1,7 @@
 from decimal import Decimal
 
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 
 from .models import (
     Attribute,
@@ -38,7 +39,7 @@ class CategoryAdmin(admin.ModelAdmin):
         "is_active",
         ("created_at", "updated_at"),
     )
-    search_help_text = "Поиск по названию категории"
+    search_help_text = _("Search by category name")
     list_select_related = ("parent",)
 
 
@@ -49,7 +50,7 @@ class AttributeAdmin(admin.ModelAdmin):
     list_per_page = 25
     list_display = ("name",)
     search_fields = ("name",)
-    search_help_text = "Поиск по названию атрибута"
+    search_help_text = _("Search by attribute name")
     ordering = ("name",)
 
 
@@ -66,7 +67,7 @@ class ProductAttributeAdmin(admin.ModelAdmin):
     list_filter = ("attribute", "product__category")
     search_fields = ("product__name",)
     ordering = ("product__name",)
-    search_help_text = "Поиск по названию продукта"
+    search_help_text = _("Search by product name")
     list_editable = ("value",)
 
 
@@ -79,7 +80,7 @@ class ProductImageAdmin(admin.ModelAdmin):
     list_editable = ("sort_order",)
     search_fields = ("product__name",)
     ordering = ("product__name", "sort_order")
-    search_help_text = "Поиск по названию продукта"
+    search_help_text = _("Search by product name")
 
 
 @admin.register(ProductNutrition)
@@ -96,7 +97,7 @@ class ProductNutritionAdmin(admin.ModelAdmin):
     )
     search_fields = ("product__name",)
     ordering = ("product__name",)
-    search_help_text = "Поиск по названию продукта"
+    search_help_text = _("Search by product name")
 
 
 class ProductImageInline(admin.TabularInline):
@@ -145,7 +146,7 @@ class ProductAdmin(admin.ModelAdmin):
         "sku",
         "name",
     )
-    search_help_text = "Поиск по названию или артикулу (SKU)"
+    search_help_text = _("Search by name or article (SKU)")
     list_filter = ("category__name", "is_active", "unit_type")
     date_hierarchy = "created_at"
     readonly_fields = ("created_at", "updated_at")
@@ -169,7 +170,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
     autocomplete_fields = ("category",)
 
-    @admin.display(description="Финальная цена")
+    @admin.display(description=_("Final price"))
     def final_price(self, obj: Product) -> Decimal:
         """Return price with discount applied.
 

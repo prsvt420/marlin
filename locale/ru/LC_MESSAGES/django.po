@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 02:07+0800\n"
+"POT-Creation-Date: 2025-11-11 02:18+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -104,6 +104,27 @@ msgstr "Вы вышли из аккаунта. Хорошего дня!"
 #: .\apps\accounts\views.py:77
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
+
+#: .\apps\catalog\admin.py:42
+msgid "Search by category name"
+msgstr "Поиск по названию категории"
+
+#: .\apps\catalog\admin.py:53
+msgid "Search by attribute name"
+msgstr "Поиск по названию атрибута"
+
+#: .\apps\catalog\admin.py:70 .\apps\catalog\admin.py:83
+#: .\apps\catalog\admin.py:100
+msgid "Search by product name"
+msgstr "Поиск по названию продукта"
+
+#: .\apps\catalog\admin.py:149
+msgid "Search by name or article (SKU)"
+msgstr "Поиск по названию или артикулу (SKU)"
+
+#: .\apps\catalog\admin.py:173
+msgid "Final price"
+msgstr "Финальная цена"
 
 #: .\apps\catalog\apps.py:13
 #: .\apps\catalog\templates\catalog\product_detail.html:14
