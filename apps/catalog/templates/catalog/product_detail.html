@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
 {% block title %}{{ product.name }}{% endblock %}
 
@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="breadcrumbs">
-    <a href="{% url 'catalog:product_list' %}" class="breadcrumbs__link">Каталог</a>
+    <a href="{% url 'catalog:product_list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
     <span class="breadcrumbs__separator">•</span>
     <span class="breadcrumbs__current">{{ product.name }}</span>
 </div>
@@ -32,7 +32,7 @@
               <div class="swiper-slide">
                 <img
                   src="{% static 'catalog/img/default-product-image.jpg' %}"
-                  alt="Нет изображения"
+                  alt="{% trans 'No image available' %}"
                   draggable="false"
                   class="product__images-item"
                 >
@@ -55,8 +55,8 @@
     <div class="product__info">
         <h2 class="product__title">{{ product.name }}</h2>
 
-        {% if product.unit_type == 'kg' or product.unit_type == 'l' %}
-            <p class="product__unit">Цена за 1 {{ product.get_unit_type_display }}</p>
+        {% if product.unit_type in 'kg l' %}
+            <p class="product__unit">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
         {% endif %}
 
         <div class="product__price">
@@ -70,51 +70,51 @@
 
         <form action="#" method="post">
             {% csrf_token %}
-            <button class="product__button">В корзину</button>
+            <button class="product__button">{% trans "Add to Cart" %}</button>
         </form>
 
         <div class="product__block">
-            <h3 class="product__subtitle">Категория</h3>
+            <h3 class="product__subtitle">{% trans "Category" %}</h3>
             <p class="product__text">{{ product.category.name }}</p>
         </div>
 
         <div class="product__block">
-            <h3 class="product__subtitle">Описание</h3>
+            <h3 class="product__subtitle">{% trans "Description" %}</h3>
             <p class="product__text">{{ product.description }}</p>
         </div>
 
         <div class="product__block">
-            <h3 class="product__subtitle">Состав</h3>
+            <h3 class="product__subtitle">{% trans "Composition" %}</h3>
             <p class="product__text">{{ product.composition }}</p>
         </div>
 
         <div class="product__block">
-            <h3 class="product__subtitle">Пищевая ценность</h3>
+            <h3 class="product__subtitle">{% trans "Nutritional value" %}</h3>
             {% if product.product_nutrition %}
             <div class="product__nutrition-list">
                 <div class="product__nutrition-item">
                     <h4 class="product__nutrition-value">{{ product.product_nutrition.proteins|floatformat:"1u" }}</h4>
-                    <p class="product__nutrition-label">белки</p>
+                    <p class="product__nutrition-label">{% trans "proteins" %}</p>
                 </div>
                 <div class="product__nutrition-item">
                     <h4 class="product__nutrition-value">{{ product.product_nutrition.fats|floatformat:"1u" }}</h4>
-                    <p class="product__nutrition-label">жиры</p>
+                    <p class="product__nutrition-label">{% trans "fats" %}</p>
                 </div>
                 <div class="product__nutrition-item">
                     <h4 class="product__nutrition-value">{{ product.product_nutrition.carbs|floatformat:"1u" }}</h4>
-                    <p class="product__nutrition-label">углеводы</p>
+                    <p class="product__nutrition-label">{% trans "carbs" %}</p>
                 </div>
                 <div class="product__nutrition-item">
                     <h4 class="product__nutrition-value">{{ product.product_nutrition.calories|floatformat:"1u" }}</h4>
-                    <p class="product__nutrition-label">калории</p>
+                    <p class="product__nutrition-label">{% trans "calories" %}</p>
                 </div>
             </div>
             {% else %}
-                <p class="nutrition__empty">Информация отсутствует</p>
+                <p class="nutrition__empty">{% trans "No information available" %}</p>
             {% endif %}
         </div>
         <div class="product__block">
-            <h3 class="product__subtitle">Характеристики</h3>
+            <h3 class="product__subtitle">{% trans "Characteristics" %}</h3>
             <div class="characteristics__list">
                 {% for product_attribute in product.product_attributes.all %}
                     <div class="characteristics__item">
@@ -122,7 +122,7 @@
                         <span class="characteristics__value">{{ product_attribute.value|lower }}</span>
                     </div>
                 {% empty %}
-                    <p class="characteristics__empty">Характеристики отсутствуют</p>
+                    <p class="characteristics__empty">{% trans "No characteristics available" %}</p>
                 {% endfor %}
             </div>
         </div>
