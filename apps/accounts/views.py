@@ -4,6 +4,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
 
@@ -14,7 +15,7 @@ class SignInView(SuccessMessageMixin, LoginView):
     """
 
     template_name = "accounts/signin.html"
-    success_message = "Вы успешно авторизованы. Добро пожаловать!"
+    success_message = _("You have successfully signed in. Welcome!")
     redirect_authenticated_user = True
 
     def form_invalid(self, form: AuthenticationForm) -> HttpResponse:
@@ -34,7 +35,7 @@ class SignInView(SuccessMessageMixin, LoginView):
         """
         messages.error(
             self.request,
-            "Пожалуйста, исправьте ошибки в форме и попробуйте снова.",
+            _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form)
 
@@ -57,7 +58,9 @@ class SignOutView(LogoutView):
             get_redirect_url method, typically the homepage or
             login page.
         """
-        messages.success(self.request, "Вы вышли из аккаунта. Хорошего дня!")
+        messages.success(
+            self.request, _("You have been signed out. Have a nice day!")
+        )
         return super().get_redirect_url()
 
 
@@ -70,7 +73,9 @@ class SignUpView(SuccessMessageMixin, CreateView):
     template_name = "accounts/signup.html"
     form_class = UserCreationForm
     success_url = reverse_lazy("accounts:signin")
-    success_message = "Вы успешно зарегистрированы! Войдите в аккаунт."
+    success_message = _(
+        "You have successfully signed up! Sign in to your account."
+    )
 
     def form_invalid(self, form: UserCreationForm) -> HttpResponse:
         """Handle invalid form submission.
@@ -89,6 +94,6 @@ class SignUpView(SuccessMessageMixin, CreateView):
         """
         messages.error(
             self.request,
-            "Пожалуйста, исправьте ошибки в форме и попробуйте снова.",
+            _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form)
