@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 01:25+0800\n"
+"POT-Creation-Date: 2025-11-11 01:36+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -105,10 +105,23 @@ msgstr "Вы вышли из аккаунта. Хорошего дня!"
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
+#: .\apps\catalog\apps.py:13
 #: .\apps\catalog\templates\catalog\product_detail.html:14
 #: .\templates\includes\header.html:18
 msgid "Catalog"
 msgstr "Каталог"
+
+#: .\apps\catalog\choices.py:17
+msgid "kg"
+msgstr "кг"
+
+#: .\apps\catalog\choices.py:18
+msgid "L"
+msgstr "л"
+
+#: .\apps\catalog\choices.py:19
+msgid "pcs"
+msgstr "шт"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 msgid "No image available"

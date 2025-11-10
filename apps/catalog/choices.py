@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class UnitType(models.TextChoices):
@@ -13,6 +14,6 @@ class UnitType(models.TextChoices):
         PIECE (str): Piece/unit ("pcs").
     """
 
-    KILOGRAM = "kg", "кг"
-    LITER = "l", "л"
-    PIECE = "pcs", "шт"
+    KILOGRAM = "kg", _("kg")
+    LITER = "l", _("L")
+    PIECE = "pcs", _("pcs")
