@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-10 23:35+0800\n"
+"POT-Creation-Date: 2025-11-11 01:25+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -92,18 +92,79 @@ msgstr "Уже есть аккаунт? Войти"
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:38 .\apps\accounts\views.py:93
+#: .\apps\accounts\views.py:38 .\apps\accounts\views.py:97
 #: .\apps\pages\views.py:86
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:61
+#: .\apps\accounts\views.py:62
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:74
+#: .\apps\accounts\views.py:77
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
+
+#: .\apps\catalog\templates\catalog\product_detail.html:14
+#: .\templates\includes\header.html:18
+msgid "Catalog"
+msgstr "Каталог"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:35
+msgid "No image available"
+msgstr "Изображение отсутствует"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:59
+msgid "Price per 1"
+msgstr "Цена за 1"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:73
+msgid "Add to Cart"
+msgstr "В корзину"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:77
+msgid "Category"
+msgstr "Категория"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:82
+msgid "Description"
+msgstr "Описание"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:87
+msgid "Composition"
+msgstr "Состав"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:92
+msgid "Nutritional value"
+msgstr "Пищевая ценность"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:97
+msgid "proteins"
+msgstr "белки"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:101
+msgid "fats"
+msgstr "жиры"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:105
+msgid "carbs"
+msgstr "углеводы"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:109
+msgid "calories"
+msgstr "калории"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:113
+msgid "No information available"
+msgstr "Информация отсутствует"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:117
+msgid "Characteristics"
+msgstr "Характеристики"
+
+#: .\apps\catalog\templates\catalog\product_detail.html:125
+msgid "No characteristics available"
+msgstr "Характеристики отсутствуют"
 
 #: .\apps\pages\apps.py:13
 msgid "Pages"
@@ -241,10 +302,6 @@ msgstr "Логотип Marlin"
 #: .\templates\includes\header.html:10
 msgid "Fresh products near you"
 msgstr "Свежие продукты рядом с вами"
-
-#: .\templates\includes\header.html:18
-msgid "Catalog"
-msgstr "Каталог"
 
 #: .\templates\includes\header.html:27
 msgid "Sign out"
