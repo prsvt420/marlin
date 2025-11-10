@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Список продуктов{% endblock %}
+{% block title %}{% trans "Catalog" %}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
@@ -11,17 +11,16 @@
 {% block content %}
 <section class="hero">
     <div class="hero__content">
-        <h2 class="hero__title">Свежее. Быстро. По-домашнему.</h2>
-        <p class="hero__subtitle">Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и
-            многое другое.</p>
+        <h2 class="hero__title">{% trans "Fresh. Fast. Homemade." %}</h2>
+        <p class="hero__subtitle">{% trans "Delivery of fresh products straight to your door. Fruits, vegetables, dairy products, and more." %}</p>
         <form method="get" action="{% url 'catalog:product_list' %}">
-            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="Найти товар, например — бананы">
+            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
         </form>
     </div>
     <div class="hero__promo promo-card">
         <div class="promo-card__header">
-            <p class="promo-card__label">Ежедневные предложения</p>
-            <p class="promo-card__title">Скидки до 30%</p>
+            <p class="promo-card__label">{% trans "Daily Deals" %}</p>
+            <p class="promo-card__title">{% trans "Discounts up to 30%" %}</p>
         </div>
 
         <div class="promo-card__products">
@@ -48,7 +47,7 @@
                             alt="{{ product.product_images.first.alt_text }}" draggable="false">
                     {% else %}
                         <img src="{% static 'catalog/img/default-product-image.jpg' %}"
-                            alt="Нет изображения" draggable="false">
+                            alt="{% trans 'No image available' %}" draggable="false">
                     {% endif %}
                     {% if product.discount %}
                         <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
@@ -59,16 +58,16 @@
                     <p class="product-card__description">{{ product.description|truncatechars:25 }}</p>
                     <div class="product-card__price">
                         {% if product.discount %}
-                            <span class="product-card__current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                            <span class="product-card__current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
                             <span class="product-card__old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
                         {% else %}
-                            <span class="product-card__current-price">{{ product.price|floatformat:"-2u" }} ₽ / {{ product.get_unit_type_display }}</span>
+                            <span class="product-card__current-price">{{ product.price|floatformat:"-2u" }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
                         {% endif %}
                     </div>
                     <div class="product-card__footer">
                         <form action="#" method="post">
                             {% csrf_token %}
-                            <button class="product-card__button">В корзину</button>
+                            <button class="product-card__button">{% trans "Add to Cart" %}</button>
                         </form>
                     </div>
                 </div>
@@ -104,12 +103,11 @@
     {% else %}
     {% if search_query %}
         <div class="no-products">
-            <p class="no-products__text">По запросу ничего не найдено</p>
-            <a class="no-products__button" href="{% url 'catalog:product_list' %}">В каталог</a>
+            <p class="no-products__text">{% trans "No results found for your search" %}</p>
         </div>
     {% else %}
         <div class="no-products">
-            <p class="no-products__text">В каталоге ничего не найдено</p>
+            <p class="no-products__text">{% trans "No products found in the catalog" %}</p>
         </div>
     {% endif %}
     {% endif %}
