@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 01:36+0800\n"
+"POT-Creation-Date: 2025-11-11 02:07+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -107,6 +107,7 @@ msgstr "Вы успешно зарегистрированы! Войдите в 
 
 #: .\apps\catalog\apps.py:13
 #: .\apps\catalog\templates\catalog\product_detail.html:14
+#: .\apps\catalog\templates\catalog\product_list.html:5
 #: .\templates\includes\header.html:18
 msgid "Catalog"
 msgstr "Каталог"
@@ -124,6 +125,7 @@ msgid "pcs"
 msgstr "шт"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
+#: .\apps\catalog\templates\catalog\product_list.html:50
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
@@ -132,6 +134,7 @@ msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:73
+#: .\apps\catalog\templates\catalog\product_list.html:70
 msgid "Add to Cart"
 msgstr "В корзину"
 
@@ -178,6 +181,39 @@ msgstr "Характеристики"
 #: .\apps\catalog\templates\catalog\product_detail.html:125
 msgid "No characteristics available"
 msgstr "Характеристики отсутствуют"
+
+#: .\apps\catalog\templates\catalog\product_list.html:14
+msgid "Fresh. Fast. Homemade."
+msgstr "Свежее. Быстро. По-домашнему."
+
+#: .\apps\catalog\templates\catalog\product_list.html:15
+msgid ""
+"Delivery of fresh products straight to your door. Fruits, vegetables, dairy "
+"products, and more."
+msgstr ""
+"Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и "
+"многое другое."
+
+#: .\apps\catalog\templates\catalog\product_list.html:17
+msgid "Find a product, e.g. — bananas"
+msgstr "Найти товар, например — бананы"
+
+#: .\apps\catalog\templates\catalog\product_list.html:22
+msgid "Daily Deals"
+msgstr "Ежедневные предложения"
+
+#: .\apps\catalog\templates\catalog\product_list.html:23
+#, python-format
+msgid "Discounts up to 30%%"
+msgstr "Скидки до 30%"
+
+#: .\apps\catalog\templates\catalog\product_list.html:106
+msgid "No results found for your search"
+msgstr "По запросу ничего не найдено"
+
+#: .\apps\catalog\templates\catalog\product_list.html:110
+msgid "No products found in the catalog"
+msgstr "В каталоге ничего не найдено"
 
 #: .\apps\pages\apps.py:13
 msgid "Pages"
