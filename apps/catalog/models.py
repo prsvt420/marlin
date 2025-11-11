@@ -340,52 +340,54 @@ class Category(models.Model):
         related_name="subcategories",
         null=True,
         blank=True,
-        verbose_name="родительская категория",
-        help_text="Родительская категория (если есть вложенность).",
+        verbose_name=_("parent category"),
+        help_text=_("Parent category (if nesting is used)."),
     )
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="название",
-        help_text="Название категории.",
+        verbose_name=_("name"),
+        help_text=_("Category name."),
     )
     slug = models.SlugField(
         max_length=255,
         unique=True,
-        verbose_name="URL-идентификатор",
-        help_text="Уникальное имя для URL (латиница, дефисы).",
+        verbose_name=_("URL-identifier"),
+        help_text=_("Unique URL identifier (letters, numbers, hyphens)."),
     )
     description = models.TextField(
         blank=True,
-        verbose_name="описание",
-        help_text="Описание категории.",
+        verbose_name=_("description"),
+        help_text=_("Category description."),
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name="порядок отображения",
-        help_text="Порядок сортировки категорий в списке.",
+        verbose_name=_("display order"),
+        help_text=_("Order in which categories appear in lists."),
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="активна",
-        help_text="Определяет, показывается ли категория в каталоге.",
+        verbose_name=_("active"),
+        help_text=_(
+            "Determines whether the category is displayed in the catalog."
+        ),
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="дата создания",
-        help_text="Дата и время добавления категории.",
+        verbose_name=_("created date"),
+        help_text=_("Date and time the category was added."),
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="дата обновления",
-        help_text="Дата и время последнего обновления категории.",
+        verbose_name=_("updated date"),
+        help_text=_("Date and time when the category was last updated."),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_category"
-        db_table_comment = "Таблица с категориями продуктов"
-        verbose_name = "категория"
-        verbose_name_plural = "категории"
+        db_table_comment = "Table containing product categories."
+        verbose_name = _("category")
+        verbose_name_plural = _("categories")
         ordering = ("sort_order", "name")
 
     def __str__(self) -> str:

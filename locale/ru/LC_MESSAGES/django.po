@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 20:00+0800\n"
+"POT-Creation-Date: 2025-11-12 07:24+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -146,6 +146,7 @@ msgid "pcs"
 msgstr "шт"
 
 #: .\apps\catalog\models.py:38 .\apps\catalog\models.py:239
+#: .\apps\catalog\models.py:349
 msgid "name"
 msgstr "название"
 
@@ -153,7 +154,7 @@ msgstr "название"
 msgid "Product name."
 msgstr "Название продукта."
 
-#: .\apps\catalog\models.py:42
+#: .\apps\catalog\models.py:42 .\apps\catalog\models.py:360
 msgid "description"
 msgstr "описание"
 
@@ -161,11 +162,11 @@ msgstr "описание"
 msgid "Product description."
 msgstr "Описание продукта."
 
-#: .\apps\catalog\models.py:48
+#: .\apps\catalog\models.py:48 .\apps\catalog\models.py:355
 msgid "URL-identifier"
 msgstr "URL-идентификатор"
 
-#: .\apps\catalog\models.py:49
+#: .\apps\catalog\models.py:49 .\apps\catalog\models.py:356
 msgid "Unique URL identifier (letters, numbers, hyphens)."
 msgstr "Уникальный идентификатор URL (буквы, цифры, дефисы)."
 
@@ -201,7 +202,7 @@ msgstr "скидка"
 msgid "Product discount in percent."
 msgstr "Скидка на продукт в процентах."
 
-#: .\apps\catalog\models.py:79
+#: .\apps\catalog\models.py:79 .\apps\catalog\models.py:389
 msgid "category"
 msgstr "категория"
 
@@ -221,7 +222,7 @@ msgstr "наличие"
 msgid "Number of products in stock."
 msgstr "Количество товара на складе."
 
-#: .\apps\catalog\models.py:95
+#: .\apps\catalog\models.py:95 .\apps\catalog\models.py:370
 msgid "active"
 msgstr "активный"
 
@@ -229,7 +230,7 @@ msgstr "активный"
 msgid "Determines whether the product is displayed in the catalog."
 msgstr "Определяет, отображается ли товар в каталоге."
 
-#: .\apps\catalog\models.py:102
+#: .\apps\catalog\models.py:102 .\apps\catalog\models.py:377
 msgid "created date"
 msgstr "дата создания"
 
@@ -237,7 +238,7 @@ msgstr "дата создания"
 msgid "Date and time the product was added."
 msgstr "Дата и время добавления продукта."
 
-#: .\apps\catalog\models.py:107
+#: .\apps\catalog\models.py:107 .\apps\catalog\models.py:382
 msgid "updated date"
 msgstr "дата обновления"
 
@@ -362,6 +363,46 @@ msgstr "атрибут продукта"
 #: .\apps\catalog\models.py:303
 msgid "product attributes"
 msgstr "атрибуты продукта"
+
+#: .\apps\catalog\models.py:343
+msgid "parent category"
+msgstr "родительская категория"
+
+#: .\apps\catalog\models.py:344
+msgid "Parent category (if nesting is used)."
+msgstr "Родительская категория (если используется вложенность)."
+
+#: .\apps\catalog\models.py:350
+msgid "Category name."
+msgstr "Название категории."
+
+#: .\apps\catalog\models.py:361
+msgid "Category description."
+msgstr "Описание категории."
+
+#: .\apps\catalog\models.py:365
+msgid "display order"
+msgstr "порядок отображения"
+
+#: .\apps\catalog\models.py:366
+msgid "Order in which categories appear in lists."
+msgstr "Порядок, в котором категории появляются в списках."
+
+#: .\apps\catalog\models.py:372
+msgid "Determines whether the category is displayed in the catalog."
+msgstr "Определяет, отображается ли категория в каталоге."
+
+#: .\apps\catalog\models.py:378
+msgid "Date and time the category was added."
+msgstr "Дата и время добавления категории."
+
+#: .\apps\catalog\models.py:383
+msgid "Date and time when the category was last updated."
+msgstr "Дата и время последнего обновления категории."
+
+#: .\apps\catalog\models.py:390
+msgid "categories"
+msgstr "категории"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:50
