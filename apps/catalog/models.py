@@ -158,54 +158,54 @@ class ProductNutrition(models.Model):
         calories (DecimalField): Calories (kcal).
         proteins (DecimalField): Proteins (g).
         fats (DecimalField): Fats (g).
-        carbs (DecimalField): Carbohydrates (g).
+        carbs (DecimalField): Carbs (g).
     """
 
     product = models.OneToOneField(
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_nutrition",
-        verbose_name="продукт",
-        help_text="Продукт, к которому относится данная пищевая ценность.",
+        verbose_name=_("product"),
+        help_text=_("The product to which the nutritional value belongs."),
     )
     calories = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="калории",
-        help_text="Калории (ккал).",
+        verbose_name=_("calories"),
+        help_text=_("Calories (kcal)."),
     )
     proteins = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="белки",
-        help_text="Белки (г).",
+        verbose_name=_("proteins"),
+        help_text=_("Proteins (g)."),
     )
     fats = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="жиры",
-        help_text="Жиры (г).",
+        verbose_name=_("fats"),
+        help_text=_("Fats (g)."),
     )
     carbs = models.DecimalField(
         max_digits=6,
         decimal_places=2,
         null=True,
         blank=True,
-        verbose_name="углеводы",
-        help_text="Углеводы (г).",
+        verbose_name=_("carbs"),
+        help_text=_("Carbs (g)."),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_product_nutrition"
-        db_table_comment = "Таблица с информацией о пищевой ценности продуктов"
-        verbose_name = "пищевая ценность"
-        verbose_name_plural = "пищевая ценность"
+        db_table_comment = "Table containing nutritional values of products."
+        verbose_name = _("nutritional value")
+        verbose_name_plural = _("nutritional values")
         ordering = ("product__name",)
 
     def __str__(self) -> str:
@@ -216,10 +216,10 @@ class ProductNutrition(models.Model):
         """
         return (
             f"{self.product.name} "
-            f"(Калории: {self.calories or '—'} ккал, "
-            f"Белки: {self.proteins or '—'} г, "
-            f"Жиры: {self.fats or '—'} г, "
-            f"Углеводы: {self.carbs or '—'} г)"
+            f"({_('Calories')}: {self.calories or '—'} {_('kcal')}, "
+            f"{_('Proteins')}: {self.proteins or '—'} {_('g')}, "
+            f"{_('Fats')}: {self.fats or '—'} {_('g')}, "
+            f"{_('Carbs')}: {self.carbs or '—'} {_('g')})"
         )
 
 
