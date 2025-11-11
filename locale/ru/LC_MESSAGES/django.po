@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-12 07:24+0800\n"
+"POT-Creation-Date: 2025-11-12 07:35+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -247,7 +247,7 @@ msgid "Date and time when the product was last updated."
 msgstr "Дата и время последнего обновления продукта."
 
 #: .\apps\catalog\models.py:114 .\apps\catalog\models.py:168
-#: .\apps\catalog\models.py:278
+#: .\apps\catalog\models.py:278 .\apps\catalog\models.py:419
 msgid "product"
 msgstr "продукт"
 
@@ -380,7 +380,7 @@ msgstr "Название категории."
 msgid "Category description."
 msgstr "Описание категории."
 
-#: .\apps\catalog\models.py:365
+#: .\apps\catalog\models.py:365 .\apps\catalog\models.py:435
 msgid "display order"
 msgstr "порядок отображения"
 
@@ -403,6 +403,38 @@ msgstr "Дата и время последнего обновления кат�
 #: .\apps\catalog\models.py:390
 msgid "categories"
 msgstr "категории"
+
+#: .\apps\catalog\models.py:420
+msgid "The product to which the image belongs."
+msgstr "Продукт, к которому принадлежит изображение."
+
+#: .\apps\catalog\models.py:424
+msgid "image"
+msgstr "изображение"
+
+#: .\apps\catalog\models.py:425
+msgid "Path to the product image."
+msgstr "Путь к изображению товара."
+
+#: .\apps\catalog\models.py:430
+msgid "alternative text"
+msgstr "альтернативный текст"
+
+#: .\apps\catalog\models.py:431
+msgid "Description of the image for SEO and accessibility."
+msgstr "Описание изображения для SEO и доступности."
+
+#: .\apps\catalog\models.py:436
+msgid "Order in which product images appear in lists."
+msgstr "Порядок, в котором изображения продуктов появляются в списках."
+
+#: .\apps\catalog\models.py:442
+msgid "product image"
+msgstr "изображение продукта"
+
+#: .\apps\catalog\models.py:443
+msgid "product images"
+msgstr "изображения продукта"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:50

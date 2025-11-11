@@ -416,31 +416,31 @@ class ProductImage(models.Model):
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_images",
-        verbose_name="продукт",
-        help_text="Продукт, к которому относится изображение.",
+        verbose_name=_("product"),
+        help_text=_("The product to which the image belongs."),
     )
     image_path = models.ImageField(
         upload_to="product_images/",
-        verbose_name="изображение",
-        help_text="Путь к изображению продукта.",
+        verbose_name=_("image"),
+        help_text=_("Path to the product image."),
     )
     alt_text = models.CharField(
         max_length=255,
         blank=True,
-        verbose_name="альтернативный текст",
-        help_text="Описание изображения для SEO и доступности.",
+        verbose_name=_("alternative text"),
+        help_text=_("Description of the image for SEO and accessibility."),
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name="порядок отображения",
-        help_text="Порядок сортировки изображений продукта.",
+        verbose_name=_("display order"),
+        help_text=_("Order in which product images appear in lists."),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_product_image"
-        db_table_comment = "Таблица с изображениями продуктов"
-        verbose_name = "изображение продукта"
-        verbose_name_plural = "изображения продукта"
+        db_table_comment = "Table containing product images."
+        verbose_name = _("product image")
+        verbose_name_plural = _("product images")
         ordering = ("product__name", "sort_order")
 
     def __str__(self) -> str:
