@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 02:18+0800\n"
+"POT-Creation-Date: 2025-11-11 18:40+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -145,6 +145,114 @@ msgstr "л"
 msgid "pcs"
 msgstr "шт"
 
+#: .\apps\catalog\models.py:38
+msgid "name"
+msgstr "название"
+
+#: .\apps\catalog\models.py:39
+msgid "Product name."
+msgstr "Название продукта."
+
+#: .\apps\catalog\models.py:42
+msgid "description"
+msgstr "описание"
+
+#: .\apps\catalog\models.py:43
+msgid "Product description."
+msgstr "Описание продукта."
+
+#: .\apps\catalog\models.py:48
+msgid "URL-identifier"
+msgstr "URL-идентификатор"
+
+#: .\apps\catalog\models.py:49
+msgid "Unique URL identifier (letters, numbers, hyphens)."
+msgstr "Уникальный идентификатор URL (буквы, цифры, дефисы)."
+
+#: .\apps\catalog\models.py:52
+msgid "composition"
+msgstr "состав"
+
+#: .\apps\catalog\models.py:53
+msgid "Product composition."
+msgstr "Состав продукта."
+
+#: .\apps\catalog\models.py:59
+msgid "unit type"
+msgstr "тип единицы измерения"
+
+#: .\apps\catalog\models.py:60
+msgid "Unit of measurement of the product (e.g., kg, l, pcs)."
+msgstr "Единица измерения продукта (например, кг, л, шт.)."
+
+#: .\apps\catalog\models.py:65
+msgid "price"
+msgstr "цена"
+
+#: .\apps\catalog\models.py:66
+msgid "Product price."
+msgstr "Цена продукта."
+
+#: .\apps\catalog\models.py:72
+msgid "discount"
+msgstr "скидка"
+
+#: .\apps\catalog\models.py:73
+msgid "Product discount in percent."
+msgstr "Скидка на продукт в процентах."
+
+#: .\apps\catalog\models.py:79
+msgid "category"
+msgstr "категория"
+
+#: .\apps\catalog\models.py:80
+msgid "The category to which the product belongs."
+msgstr "Категория, к которой принадлежит продукт."
+
+#: .\apps\catalog\models.py:86
+msgid "Stock Keeping Unit (SKU)."
+msgstr "Единица складского учёта (SKU)."
+
+#: .\apps\catalog\models.py:90
+msgid "stock"
+msgstr "наличие"
+
+#: .\apps\catalog\models.py:91
+msgid "Number of products in stock."
+msgstr "Количество товара на складе."
+
+#: .\apps\catalog\models.py:95
+msgid "active"
+msgstr "активный"
+
+#: .\apps\catalog\models.py:96
+msgid "Determines whether the product is displayed in the catalog."
+msgstr "Определяет, отображается ли товар в каталоге."
+
+#: .\apps\catalog\models.py:100
+msgid "created date"
+msgstr "дата создания"
+
+#: .\apps\catalog\models.py:101
+msgid "Date and time the product was added."
+msgstr "Дата и время добавления продукта."
+
+#: .\apps\catalog\models.py:105
+msgid "updated date"
+msgstr "дата обновления"
+
+#: .\apps\catalog\models.py:106
+msgid "Date and time when the product was last updated."
+msgstr "Дата и время последнего обновления продукта."
+
+#: .\apps\catalog\models.py:112
+msgid "product"
+msgstr "продукт"
+
+#: .\apps\catalog\models.py:113
+msgid "products"
+msgstr "продукты"
+
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:50
 msgid "No image available"
@@ -217,7 +325,7 @@ msgstr ""
 
 #: .\apps\catalog\templates\catalog\product_list.html:17
 msgid "Find a product, e.g. — bananas"
-msgstr "Найти товар, например — бананы"
+msgstr "Найти продукт, например — бананы"
 
 #: .\apps\catalog\templates\catalog\product_list.html:22
 msgid "Daily Deals"
