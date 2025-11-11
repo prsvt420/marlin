@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 19:25+0800\n"
+"POT-Creation-Date: 2025-11-11 20:00+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -246,6 +246,7 @@ msgid "Date and time when the product was last updated."
 msgstr "Дата и время последнего обновления продукта."
 
 #: .\apps\catalog\models.py:114 .\apps\catalog\models.py:168
+#: .\apps\catalog\models.py:278
 msgid "product"
 msgstr "продукт"
 
@@ -330,13 +331,37 @@ msgstr "Углеводы"
 msgid "Name of the attribute (e.g., weight, shelf life, storage conditions)."
 msgstr "Название атрибута (например, вес, срок годности, условия хранения)."
 
-#: .\apps\catalog\models.py:249
+#: .\apps\catalog\models.py:249 .\apps\catalog\models.py:285
 msgid "attribute"
 msgstr "атрибут"
 
 #: .\apps\catalog\models.py:250
 msgid "attributes"
 msgstr "атрибуты"
+
+#: .\apps\catalog\models.py:279
+msgid "The product to which the attribute belongs."
+msgstr "Продукт, к которому принадлежит атрибут."
+
+#: .\apps\catalog\models.py:287
+msgid "The product attribute (e.g., weight, shelf life, storage conditions)."
+msgstr "Атрибут продукта (например, вес, срок годности, условия хранения)."
+
+#: .\apps\catalog\models.py:293
+msgid "value"
+msgstr "значение"
+
+#: .\apps\catalog\models.py:295
+msgid "The specific value of the attribute (e.g., 500 g, 12 months)."
+msgstr "Конкретное значение атрибута (например, 500 г, 12 месяцев)."
+
+#: .\apps\catalog\models.py:302
+msgid "product attribute"
+msgstr "атрибут продукта"
+
+#: .\apps\catalog\models.py:303
+msgid "product attributes"
+msgstr "атрибуты продукта"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:50

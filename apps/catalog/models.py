@@ -275,30 +275,32 @@ class ProductAttribute(models.Model):
         to="Product",
         on_delete=models.CASCADE,
         related_name="product_attributes",
-        verbose_name="продукт",
-        help_text="Продукт, к которому относится атрибут.",
+        verbose_name=_("product"),
+        help_text=_("The product to which the attribute belongs."),
     )
     attribute = models.ForeignKey(
         to="Attribute",
         on_delete=models.CASCADE,
         related_name="attribute_values",
-        verbose_name="атрибут",
-        help_text=(
-            "Атрибут продукта (например: вес, срок хранения, "
-            "условия хранения)."
+        verbose_name=_("attribute"),
+        help_text=_(
+            "The product attribute (e.g., weight, "
+            "shelf life, storage conditions)."
         ),
     )
     value = models.CharField(
         max_length=255,
-        verbose_name="значение",
-        help_text="Значение атрибута (например: 500 г, 12 месяцев).",
+        verbose_name=_("value"),
+        help_text=_(
+            "The specific value of the attribute (e.g., 500 g, 12 months)."
+        ),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_product_attribute"
-        db_table_comment = "Таблица со значениями атрибутов продуктов"
-        verbose_name = "атрибут продукта"
-        verbose_name_plural = "атрибуты продуктов"
+        db_table_comment = "Table containing product attribute values."
+        verbose_name = _("product attribute")
+        verbose_name_plural = _("product attributes")
         constraints = [
             models.UniqueConstraint(
                 fields=["product", "attribute"],
