@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.choices import UnitType
 
@@ -34,82 +35,84 @@ class Product(models.Model):
 
     name = models.CharField(
         max_length=255,
-        verbose_name="название",
-        help_text="Название продукта.",
+        verbose_name=_("name"),
+        help_text=_("Product name."),
     )
     description = models.TextField(
-        verbose_name="описание",
-        help_text="Описание продукта.",
+        verbose_name=_("description"),
+        help_text=_("Product description."),
     )
     slug = models.SlugField(
         max_length=255,
         unique=True,
-        verbose_name="URL-идентификатор",
-        help_text="Уникальное имя для URL (латиница, дефисы)",
+        verbose_name=_("URL-identifier"),
+        help_text=_("Unique URL identifier (letters, numbers, hyphens)."),
     )
     composition = models.TextField(
-        verbose_name="состав",
-        help_text="Состав продукта.",
+        verbose_name=_("composition"),
+        help_text=_("Product composition."),
     )
     unit_type = models.CharField(
         max_length=10,
         choices=UnitType.choices,
         default=UnitType.PIECE,
-        verbose_name="единица измерения",
-        help_text="Единица измерения продукта (например: кг, л, шт).",
+        verbose_name=_("unit type"),
+        help_text=_("Unit of measurement of the product (e.g., kg, l, pcs)."),
     )
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        verbose_name="цена",
-        help_text="Цена продукта.",
+        verbose_name=_("price"),
+        help_text=_("Product price."),
     )
     discount = models.DecimalField(
         max_digits=5,
         decimal_places=2,
         default=0,
-        verbose_name="скидка (%)",
-        help_text="Скидка на продукт в процентах.",
+        verbose_name=_("discount"),
+        help_text=_("Product discount in percent."),
     )
     category = models.ForeignKey(
         to="Category",
         on_delete=models.CASCADE,
         related_name="products",
-        verbose_name="категория",
-        help_text="Категория, к которой относится продукт.",
+        verbose_name=_("category"),
+        help_text=_("The category to which the product belongs."),
     )
     sku = models.CharField(
         max_length=100,
         unique=True,
         verbose_name="SKU",
-        help_text="Артикул (Stock Keeping Unit).",
+        help_text=_("Stock Keeping Unit (SKU)."),
     )
     stock = models.PositiveIntegerField(
         default=0,
-        verbose_name="остаток",
-        help_text="Количество продуктов на складе.",
+        verbose_name=_("stock"),
+        help_text=_("Number of products in stock."),
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="активен",
-        help_text="Определяет, показывается ли продукт в каталоге.",
+        verbose_name=_("active"),
+        help_text=_(
+            "Determines whether the product is displayed in the catalog."
+        ),
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="дата создания",
-        help_text="Дата и время добавления продукта.",
+        verbose_name=_("created date"),
+        help_text=_("Date and time the product was added."),
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="дата обновления",
-        help_text="Дата и время последнего обновления продукта.",
+        verbose_name=_("updated date"),
+        help_text=_("Date and time when the product was last updated."),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_product"
-        db_table_comment = "Таблица с информацией о продуктах"
-        verbose_name = "продукт"
-        verbose_name_plural = "продукты"
+        db_table_comment = "Table containing product information."
+        verbose_name = _("product")
+        verbose_name_plural = _("products")
         ordering = (
             "-created_at",
             "name",
