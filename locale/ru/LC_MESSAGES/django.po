@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-11 19:11+0800\n"
+"POT-Creation-Date: 2025-11-11 19:25+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -145,7 +145,7 @@ msgstr "л"
 msgid "pcs"
 msgstr "шт"
 
-#: .\apps\catalog\models.py:38
+#: .\apps\catalog\models.py:38 .\apps\catalog\models.py:239
 msgid "name"
 msgstr "название"
 
@@ -325,6 +325,18 @@ msgstr "Жиры"
 #: .\apps\catalog\models.py:222
 msgid "Carbs"
 msgstr "Углеводы"
+
+#: .\apps\catalog\models.py:241
+msgid "Name of the attribute (e.g., weight, shelf life, storage conditions)."
+msgstr "Название атрибута (например, вес, срок годности, условия хранения)."
+
+#: .\apps\catalog\models.py:249
+msgid "attribute"
+msgstr "атрибут"
+
+#: .\apps\catalog\models.py:250
+msgid "attributes"
+msgstr "атрибуты"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:50

@@ -236,18 +236,18 @@ class Attribute(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="название",
-        help_text=(
-            "Название атрибута (например: "
-            "вес, срок хранения, условия хранения)."
+        verbose_name=_("name"),
+        help_text=_(
+            "Name of the attribute (e.g., weight, "
+            "shelf life, storage conditions)."
         ),
     )
 
     class Meta:  # noqa: D106
         db_table = "catalog_attribute"
-        db_table_comment = "Таблица с возможными атрибутами продуктов"
-        verbose_name = "атрибут"
-        verbose_name_plural = "атрибуты"
+        db_table_comment = "Table containing possible product attributes."
+        verbose_name = _("attribute")
+        verbose_name_plural = _("attributes")
         ordering = ("name",)
 
     def __str__(self) -> str:
