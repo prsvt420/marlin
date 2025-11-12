@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationAdmin
 
 from .models import (
     Attribute,
@@ -14,7 +15,7 @@ from .models import (
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     """Admin configuration for Category model."""
 
     list_per_page = 25
@@ -44,7 +45,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Attribute)
-class AttributeAdmin(admin.ModelAdmin):
+class AttributeAdmin(TranslationAdmin):
     """Admin configuration for Attribute model."""
 
     list_per_page = 25
@@ -55,7 +56,7 @@ class AttributeAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProductAttribute)
-class ProductAttributeAdmin(admin.ModelAdmin):
+class ProductAttributeAdmin(TranslationAdmin):
     """Admin configuration for ProductAttribute model."""
 
     list_per_page = 25
@@ -72,7 +73,7 @@ class ProductAttributeAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProductImage)
-class ProductImageAdmin(admin.ModelAdmin):
+class ProductImageAdmin(TranslationAdmin):
     """Admin configuration for ProductImage model."""
 
     list_per_page = 25
@@ -123,7 +124,7 @@ class ProductAttributeInline(admin.TabularInline):
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslationAdmin):
     """Admin configuration for Product model."""
 
     list_per_page = 25

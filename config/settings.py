@@ -20,6 +20,7 @@ INTERNAL_IPS: List[str] = [
 ]
 
 INSTALLED_APPS: List[str] = [
+    "modeltranslation",
     "django.contrib.admin",
     "django.contrib.admindocs",
     "django.contrib.auth",
@@ -98,6 +99,7 @@ USE_I18N: bool = True
 USE_TZ: bool = True
 
 LANGUAGE_CODE: str = "ru-ru"
+MODELTRANSLATION_DEFAULT_LANGUAGE: str = "en"
 LANGUAGES: List[Tuple[str, str]] = [
     ("ru", "Русский"),
     ("en", "English"),
