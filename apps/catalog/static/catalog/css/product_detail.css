@@ -232,7 +232,7 @@
 
 .characteristics__empty, .nutrition__empty {
     color: var(--text-color-muted);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
 }
 
 @media (max-width: 900px) {
