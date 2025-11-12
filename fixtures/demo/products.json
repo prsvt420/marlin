@@ -4,9 +4,15 @@
   "pk": 1,
   "fields": {
     "name": "Бананы Эквадор",
+    "name_ru": "Бананы Эквадор",
+    "name_en": "Bananas Ecuador",
     "description": "Спелые бананы из Эквадора. Отличный источник калия.",
+    "description_ru": "Спелые бананы из Эквадора. Отличный источник калия.",
+    "description_en": "Ripe bananas from Ecuador. An excellent source of potassium.",
     "slug": "banany-ekvador",
-    "composition": "100% бананы",
+    "composition": "100% бананы.",
+    "composition_ru": "100% бананы.",
+    "composition_en": "100% bananas.",
     "unit_type": "kg",
     "price": "100.00",
     "discount": "15.00",
@@ -14,27 +20,8 @@
     "sku": "FRU00001",
     "stock": 120,
     "is_active": true,
-    "created_at": "2025-10-11T19:12:27.831Z",
-    "updated_at": "2025-10-11T19:38:43.066Z"
-  }
-},
-{
-  "model": "catalog.product",
-  "pk": 2,
-  "fields": {
-    "name": "Яблоки Грэнни Смит",
-    "description": "Сочные зелёные яблоки с кислинкой. Идеальны для свежих салатов и выпечки.",
-    "slug": "yabloki-grenni-smit",
-    "composition": "100% яблоки сорта Грэнни Смит",
-    "unit_type": "kg",
-    "price": "120.00",
-    "discount": "0.00",
-    "category": 1,
-    "sku": "FRU00002",
-    "stock": 95,
-    "is_active": true,
-    "created_at": "2025-10-13T19:45:00Z",
-    "updated_at": "2025-10-12T20:23:58.959Z"
+    "created_at": "2025-11-12T02:23:06.922Z",
+    "updated_at": "2025-11-12T02:23:06.922Z"
   }
 }
 ]

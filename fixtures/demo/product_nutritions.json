@@ -9,16 +9,5 @@
     "fats": "0.30",
     "carbs": "23.00"
   }
-},
-{
-  "model": "catalog.productnutrition",
-  "pk": 2,
-  "fields": {
-    "product": 2,
-    "calories": "52.00",
-    "proteins": "0.30",
-    "fats": "0.20",
-    "carbs": "14.00"
-  }
 }
 ]
