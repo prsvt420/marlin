@@ -5,7 +5,9 @@
   "fields": {
     "product": 1,
     "attribute": 1,
-    "value": "1 кг"
+    "value": "1 кг",
+    "value_ru": "1 кг",
+    "value_en": "1 kg"
   }
 },
 {
@@ -14,7 +16,9 @@
   "fields": {
     "product": 1,
     "attribute": 2,
-    "value": "4 дня"
+    "value": "4 дня",
+    "value_ru": "4 дня",
+    "value_en": "4 days"
   }
 },
 {
@@ -23,34 +27,9 @@
   "fields": {
     "product": 1,
     "attribute": 3,
-    "value": "При комнатной температуре"
-  }
-},
-{
-  "model": "catalog.productattribute",
-  "pk": 4,
-  "fields": {
-    "product": 2,
-    "attribute": 1,
-    "value": "1 кг"
-  }
-},
-{
-  "model": "catalog.productattribute",
-  "pk": 5,
-  "fields": {
-    "product": 2,
-    "attribute": 2,
-    "value": "10 дней"
-  }
-},
-{
-  "model": "catalog.productattribute",
-  "pk": 6,
-  "fields": {
-    "product": 2,
-    "attribute": 3,
-    "value": "Хранить в прохладном месте"
+    "value": "При комнатной температуре",
+    "value_ru": "При комнатной температуре",
+    "value_en": "At room temperature"
   }
 }
 ]

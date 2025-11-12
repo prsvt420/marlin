@@ -3,21 +3,27 @@
   "model": "catalog.attribute",
   "pk": 1,
   "fields": {
-    "name": "Вес"
+    "name": "Вес",
+    "name_ru": "Вес",
+    "name_en": "Weight"
   }
 },
 {
   "model": "catalog.attribute",
   "pk": 2,
   "fields": {
-    "name": "Срок хранения"
+    "name": "Срок хранения",
+    "name_ru": "Срок хранения",
+    "name_en": "Shelf life"
   }
 },
 {
   "model": "catalog.attribute",
   "pk": 3,
   "fields": {
-    "name": "Условия хранения"
+    "name": "Условия хранения",
+    "name_ru": "Условия хранения",
+    "name_en": "Storage conditions"
   }
 }
 ]
