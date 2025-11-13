@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
+from django.utils.functional import Promise
 from django.utils.translation import gettext_lazy as _
 
 from apps.vacancies.choices import ExperienceLevel, WorkSchedule
@@ -211,24 +212,24 @@ class City(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="название",
-        help_text="Название города.",
+        verbose_name=_("name"),
+        help_text=_("City name."),
     )
     region = models.ForeignKey(
         to="Region",
         on_delete=models.CASCADE,
         related_name="cities",
-        verbose_name="регион",
-        help_text="Регион, к которому относится город.",
+        verbose_name=_("region"),
+        help_text=_("Region to which the city belongs."),
         null=True,
         blank=True,
     )
 
     class Meta:  # noqa: D106
         db_table = "vacancies_city"
-        db_table_comment = "Таблица с информацией о городах"
-        verbose_name = "город"
-        verbose_name_plural = "города"
+        db_table_comment = "Table containing cities."
+        verbose_name = _("city")
+        verbose_name_plural = _("cities")
         ordering = ("name",)
 
     def __str__(self) -> str:
@@ -237,9 +238,11 @@ class City(models.Model):
         Returns:
             str: City name with region if available.
         """
+        prefix: Promise = _("city of")
+
         if self.region:
-            return f"г. {self.name}, {self.region.name}"
-        return f"г. {self.name}"
+            return f"{prefix} {self.name}, {self.region.name}"
+        return f"{prefix} {self.name}"
 
 
 class Region(models.Model):
