@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-14 05:07+0800\n"
+"POT-Creation-Date: 2025-11-14 05:11+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -147,7 +147,7 @@ msgstr "шт"
 
 #: .\apps\catalog\models.py:38 .\apps\catalog\models.py:239
 #: .\apps\catalog\models.py:349 .\apps\vacancies\models.py:182
-#: .\apps\vacancies\models.py:215
+#: .\apps\vacancies\models.py:215 .\apps\vacancies\models.py:261
 msgid "name"
 msgstr "название"
 
@@ -789,7 +789,7 @@ msgstr "профессиональные области"
 msgid "City name."
 msgstr "Название города."
 
-#: .\apps\vacancies\models.py:222
+#: .\apps\vacancies\models.py:222 .\apps\vacancies\models.py:268
 msgid "region"
 msgstr "регион"
 
@@ -808,6 +808,14 @@ msgstr "города"
 #: .\apps\vacancies\models.py:241
 msgid "city of"
 msgstr "г."
+
+#: .\apps\vacancies\models.py:262
+msgid "Region name."
+msgstr "Название региона."
+
+#: .\apps\vacancies\models.py:269
+msgid "regions"
+msgstr "регионы"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:23
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
