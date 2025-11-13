@@ -1,0 +1,11 @@
+[
+{
+  "model": "vacancies.region",
+  "pk": 1,
+  "fields": {
+    "name": "Новосибирская область",
+    "name_ru": "Новосибирская область",
+    "name_en": "Novosibirsk region"
+  }
+}
+]

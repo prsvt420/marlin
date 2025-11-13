@@ -1,0 +1,12 @@
+[
+{
+  "model": "vacancies.city",
+  "pk": 1,
+  "fields": {
+    "name": "Новосибирск",
+    "name_ru": "Новосибирск",
+    "name_en": "Novosibirsk",
+    "region": 1
+  }
+}
+]

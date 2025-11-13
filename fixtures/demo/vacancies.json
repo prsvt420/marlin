@@ -1,0 +1,26 @@
+[
+{
+  "model": "vacancies.vacancy",
+  "pk": 1,
+  "fields": {
+    "title": "Курьер",
+    "title_ru": "Курьер",
+    "title_en": "Courier",
+    "short_description": "Ищем активного и ответственного курьера для доставки заказов нашего онлайн-магазина Marlin. Гарантируем стабильную зарплату, дружный коллектив и удобный график работы.",
+    "short_description_ru": "Ищем активного и ответственного курьера для доставки заказов нашего онлайн-магазина Marlin. Гарантируем стабильную зарплату, дружный коллектив и удобный график работы.",
+    "short_description_en": "We're looking for a proactive and responsible courier to deliver orders for our online store, Marlin. We guarantee a stable salary, a friendly team, and flexible work schedules.",
+    "description": "<div>\r\n  <h3>Обязанности</h3>\r\n  <ul>\r\n    <li>Доставка заказов клиентам в оговоренные сроки</li>\r\n    <li>Своевременное уведомление клиентов о статусе доставки</li>\r\n    <li>Соблюдение правил дорожного движения и инструкций компании</li>\r\n    <li>Поддержание аккуратного внешнего вида и вежливое общение с клиентами</li>\r\n  </ul>\r\n\r\n  <h3>Требования</h3>\r\n  <ul>\r\n    <li>Наличие водительских прав категории B (для работы на автомобиле)</li>\r\n    <li>Опыт работы курьером или в доставке приветствуется, но не обязателен</li>\r\n    <li>Ответственность, пунктуальность и аккуратность</li>\r\n    <li>Знание города и умение пользоваться навигацией</li>\r\n  </ul>\r\n\r\n  <h3>Условия</h3>\r\n  <ul>\r\n    <li>Заработная плата: от 35 000 ₽ до 50 000 ₽</li>\r\n    <li>График работы: полный день, смены или гибкий график</li>\r\n    <li>Официальное трудоустройство и социальные гарантии</li>\r\n    <li>Корпоративное обучение и поддержка опытного наставника</li>\r\n    <li>Дружный коллектив и современный рабочий процесс</li>\r\n  </ul>\r\n\r\n  <h3>Как откликнуться</h3>\r\n  <ul>\r\n    <li>Если вы активны, ответственны и хотите работать в команде профессионалов, отправьте свое резюме на наш email hr@marlinio.ru</li>\r\n  </ul>\r\n</div>",
+    "description_ru": "<div>\r\n  <h3>Обязанности</h3>\r\n  <ul>\r\n    <li>Доставка заказов клиентам в оговоренные сроки</li>\r\n    <li>Своевременное уведомление клиентов о статусе доставки</li>\r\n    <li>Соблюдение правил дорожного движения и инструкций компании</li>\r\n    <li>Поддержание аккуратного внешнего вида и вежливое общение с клиентами</li>\r\n  </ul>\r\n\r\n  <h3>Требования</h3>\r\n  <ul>\r\n    <li>Наличие водительских прав категории B (для работы на автомобиле)</li>\r\n    <li>Опыт работы курьером или в доставке приветствуется, но не обязателен</li>\r\n    <li>Ответственность, пунктуальность и аккуратность</li>\r\n    <li>Знание города и умение пользоваться навигацией</li>\r\n  </ul>\r\n\r\n  <h3>Условия</h3>\r\n  <ul>\r\n    <li>Заработная плата: от 35 000 ₽ до 50 000 ₽</li>\r\n    <li>График работы: полный день, смены или гибкий график</li>\r\n    <li>Официальное трудоустройство и социальные гарантии</li>\r\n    <li>Корпоративное обучение и поддержка опытного наставника</li>\r\n    <li>Дружный коллектив и современный рабочий процесс</li>\r\n  </ul>\r\n\r\n  <h3>Как откликнуться</h3>\r\n  <ul>\r\n    <li>Если вы активны, ответственны и хотите работать в команде профессионалов, отправьте свое резюме на наш email hr@marlinio.ru</li>\r\n  </ul>\r\n</div>",
+    "description_en": "<div>\r\n  <h3>Responsibilities</h3>\r\n  <ul>\r\n    <li>Deliver orders to customers within the agreed timeframes</li>\r\n    <li>Notify customers promptly about the delivery status</li>\r\n    <li>Follow traffic rules and company instructions</li>\r\n    <li>Maintain a neat appearance and communicate politely with customers</li>\r\n  </ul>\r\n\r\n  <h3>Requirements</h3>\r\n  <ul>\r\n    <li>Possession of a category B driving license (for working with a car)</li>\r\n    <li>Experience as a courier or in delivery is welcome but not mandatory</li>\r\n    <li>Responsibility, punctuality, and attention to detail</li>\r\n    <li>Knowledge of the city and ability to use navigation tools</li>\r\n  </ul>\r\n\r\n  <h3>Conditions</h3>\r\n  <ul>\r\n    <li>Salary: from 35,000 ₽ to 50,000 ₽</li>\r\n    <li>Work schedule: full-time, shifts, or flexible hours</li>\r\n    <li>Official employment and social benefits</li>\r\n    <li>Corporate training and support from an experienced mentor</li>\r\n    <li>Friendly team and modern work process</li>\r\n  </ul>\r\n\r\n  <h3>How to Apply</h3>\r\n  <ul>\r\n    <li>If you are proactive, responsible, and want to work in a team of professionals, send your resume to our email hr@marlinio.ru</li>\r\n  </ul>\r\n</div>",
+    "professional_area": 1,
+    "city": 1,
+    "work_schedule": "full",
+    "experience_level": "no_exp",
+    "salary_from": 35000,
+    "salary_to": 50000,
+    "is_active": true,
+    "created_at": "2025-11-13T12:28:08.992Z",
+    "updated_at": "2025-11-13T21:23:04.751Z"
+  }
+}
+]
