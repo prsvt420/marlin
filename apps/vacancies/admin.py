@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationAdmin
 
 from .models import (
     City,
@@ -10,7 +11,7 @@ from .models import (
 
 
 @admin.register(ProfessionalArea)
-class ProfessionalAreaAdmin(admin.ModelAdmin):
+class ProfessionalAreaAdmin(TranslationAdmin):
     """Admin configuration for ProfessionalArea model."""
 
     list_per_page = 25
@@ -21,7 +22,7 @@ class ProfessionalAreaAdmin(admin.ModelAdmin):
 
 
 @admin.register(Region)
-class RegionAdmin(admin.ModelAdmin):
+class RegionAdmin(TranslationAdmin):
     """Admin configuration for Region model."""
 
     list_per_page = 25
@@ -32,7 +33,7 @@ class RegionAdmin(admin.ModelAdmin):
 
 
 @admin.register(City)
-class CityAdmin(admin.ModelAdmin):
+class CityAdmin(TranslationAdmin):
     """Admin configuration for City model."""
 
     list_per_page = 25
@@ -49,7 +50,7 @@ class CityAdmin(admin.ModelAdmin):
 
 
 @admin.register(Vacancy)
-class VacancyAdmin(admin.ModelAdmin):
+class VacancyAdmin(TranslationAdmin):
     """Admin configuration for Vacancy model."""
 
     list_per_page = 25
