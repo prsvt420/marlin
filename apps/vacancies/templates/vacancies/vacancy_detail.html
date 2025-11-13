@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
 {% block title %}{{ vacancy.title }}{% endblock %}
 
@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="breadcrumbs">
-    <a href="{% url 'vacancies:vacancy_list' %}" class="breadcrumbs__link">Вакансии</a>
+    <a href="{% url 'vacancies:vacancy_list' %}" class="breadcrumbs__link">{% trans "Vacancies" %}</a>
     <span class="breadcrumbs__separator">•</span>
 
     <span class="breadcrumbs__current">{{ vacancy.title }}</span>
@@ -20,7 +20,7 @@
     <div class="vacancy__info">
         <h2 class="vacancy__title">{{ vacancy.title }}</h2>
         {% if vacancy.salary_to or vacancy.salary_from %}
-            <p class="vacancy__salary">{{ vacancy.get_formatted_salary }} ₽ <span>до вычета налогов</span></p>
+            <p class="vacancy__salary">{{ vacancy.get_formatted_salary }} ₽ <span>{% trans "before taxes" %}</span></p>
         {% endif %}
         <p class="vacancy__location">{{ vacancy.city }} • Marlin • {{ vacancy.professional_area }} • {{ vacancy.updated_at.date }}</p>
 
@@ -29,12 +29,12 @@
         <div class="vacancy__content">
             <div class="vacancy__details">
                 <div class="vacancy__detail-item">
-                    <h3 class="vacancy__detail-title">График работы</h3>
+                    <h3 class="vacancy__detail-title">{% trans "Work schedule" %}</h3>
                     <p class="vacancy__detail-value">{{ vacancy.get_work_schedule_display }}</p>
                 </div>
 
                 <div class="vacancy__detail-item">
-                    <h3 class="vacancy__detail-title">Опыт работы</h3>
+                    <h3 class="vacancy__detail-title">{% trans "Work experience" %}</h3>
                     <p class="vacancy__detail-value">{{ vacancy.get_experience_level_display }}</p>
                 </div>
             </div>

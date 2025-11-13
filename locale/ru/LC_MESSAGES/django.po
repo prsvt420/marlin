@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-13 19:33+0800\n"
+"POT-Creation-Date: 2025-11-13 20:41+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -604,7 +604,9 @@ msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
 
-#: .\apps\vacancies\apps.py:13 .\templates\includes\footer.html:10
+#: .\apps\vacancies\apps.py:13
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:13
+#: .\templates\includes\footer.html:10
 msgid "Vacancies"
 msgstr "Вакансии"
 
@@ -639,6 +641,18 @@ msgstr "Гибкий график"
 #: .\apps\vacancies\choices.py:40
 msgid "Remote work"
 msgstr "Удалённая работа"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:23
+msgid "before taxes"
+msgstr "до вычета налогов"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:32
+msgid "Work schedule"
+msgstr "График работы"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:37
+msgid "Work experience"
+msgstr "Опыт работы"
 
 #: .\templates\404.html:14
 msgid "Oops! The page you are looking for was not found"
