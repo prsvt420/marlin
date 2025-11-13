@@ -1,4 +1,5 @@
 from django.apps import AppConfig
+from django.utils.translation import gettext_lazy as _
 
 
 class VacanciesConfig(AppConfig):
@@ -9,5 +10,5 @@ class VacanciesConfig(AppConfig):
 
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.vacancies"
-    verbose_name: str = "Вакансии"
+    verbose_name = _("Vacancies")
     label: str = "vacancies"
