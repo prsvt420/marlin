@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-13 20:59+0800\n"
+"POT-Creation-Date: 2025-11-14 04:34+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -155,6 +155,7 @@ msgid "Product name."
 msgstr "Название продукта."
 
 #: .\apps\catalog\models.py:42 .\apps\catalog\models.py:360
+#: .\apps\vacancies\models.py:42
 msgid "description"
 msgstr "описание"
 
@@ -223,6 +224,7 @@ msgid "Number of products in stock."
 msgstr "Количество товара на складе."
 
 #: .\apps\catalog\models.py:95 .\apps\catalog\models.py:370
+#: .\apps\vacancies\models.py:90
 msgid "active"
 msgstr "активный"
 
@@ -231,6 +233,7 @@ msgid "Determines whether the product is displayed in the catalog."
 msgstr "Определяет, отображается ли товар в каталоге."
 
 #: .\apps\catalog\models.py:102 .\apps\catalog\models.py:377
+#: .\apps\vacancies\models.py:95
 msgid "created date"
 msgstr "дата создания"
 
@@ -239,6 +242,7 @@ msgid "Date and time the product was added."
 msgstr "Дата и время добавления продукта."
 
 #: .\apps\catalog\models.py:107 .\apps\catalog\models.py:382
+#: .\apps\vacancies\models.py:100
 msgid "updated date"
 msgstr "дата обновления"
 
@@ -663,6 +667,114 @@ msgstr "Гибкий график"
 #: .\apps\vacancies\choices.py:40
 msgid "Remote work"
 msgstr "Удалённая работа"
+
+#: .\apps\vacancies\models.py:34
+msgid "title"
+msgstr "заголовок"
+
+#: .\apps\vacancies\models.py:35
+msgid "Vacancy title."
+msgstr "Заголовок вакансии."
+
+#: .\apps\vacancies\models.py:38
+msgid "short description"
+msgstr "краткое описание"
+
+#: .\apps\vacancies\models.py:39
+msgid "Brief introductory text about the vacancy."
+msgstr "Краткий вступительный текст о вакансии."
+
+#: .\apps\vacancies\models.py:44
+msgid "Detailed description of the vacancy (HTML markup, use div, ul, h3, li)."
+msgstr ""
+"Подробное описание вакансии (HTML-разметка, использование div, ul, h3, li)."
+
+#: .\apps\vacancies\models.py:52
+msgid "professional area"
+msgstr "профессиональная область"
+
+#: .\apps\vacancies\models.py:53
+msgid "Professional field of the vacancy."
+msgstr "Профессиональная область вакансии."
+
+#: .\apps\vacancies\models.py:59
+msgid "city and region"
+msgstr "город и регион"
+
+#: .\apps\vacancies\models.py:60
+msgid "City and region where the vacancy is posted."
+msgstr "Город и регион, где размещена вакансия."
+
+#: .\apps\vacancies\models.py:66
+msgid "work schedule"
+msgstr "график работы"
+
+#: .\apps\vacancies\models.py:67
+msgid "Expected work schedule."
+msgstr "Предполагаемый график работы."
+
+#: .\apps\vacancies\models.py:73
+msgid "experience level"
+msgstr "уровень опыта"
+
+#: .\apps\vacancies\models.py:74
+msgid "Required work experience level."
+msgstr "Требуемый уровень опыта работы."
+
+#: .\apps\vacancies\models.py:77
+msgid "salary from"
+msgstr "зарплата от"
+
+#: .\apps\vacancies\models.py:78
+msgid "Minimum salary."
+msgstr "Минимальная зарплата."
+
+#: .\apps\vacancies\models.py:83
+msgid "salary to"
+msgstr "зарплата до"
+
+#: .\apps\vacancies\models.py:84
+msgid "Maximum salary."
+msgstr "Максимальная зарплата."
+
+#: .\apps\vacancies\models.py:91
+msgid "Determines whether the vacancy is visible."
+msgstr "Определяет, видна ли вакансия."
+
+#: .\apps\vacancies\models.py:96
+msgid "Date and time when the vacancy was added."
+msgstr "Дата и время добавления вакансии."
+
+#: .\apps\vacancies\models.py:101
+msgid "Date and time when the vacancy was last updated."
+msgstr "Дата и время последнего обновления вакансии."
+
+#: .\apps\vacancies\models.py:107
+msgid "vacancy"
+msgstr "вакансия"
+
+#: .\apps\vacancies\models.py:108
+msgid "vacancies"
+msgstr "вакансии"
+
+#: .\apps\vacancies\models.py:130
+#, python-format
+msgid "%(from)s – %(to)s"
+msgstr "%(from)s – %(to)s"
+
+#: .\apps\vacancies\models.py:135
+#, python-format
+msgid "from %(from)s"
+msgstr "от %(from)s"
+
+#: .\apps\vacancies\models.py:137
+#, python-format
+msgid "to %(to)s"
+msgstr "до %(to)s"
+
+#: .\apps\vacancies\models.py:151
+msgid "Maximum salary must be greater than minimum salary."
+msgstr "Максимальная заработная плата должна быть больше минимальной."
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:23
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:30

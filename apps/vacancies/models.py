@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
@@ -30,79 +31,81 @@ class Vacancy(models.Model):
 
     title = models.CharField(
         max_length=255,
-        verbose_name="заголовок",
-        help_text="Заголовок вакансии.",
+        verbose_name=_("title"),
+        help_text=_("Vacancy title."),
     )
     short_description = models.TextField(
-        verbose_name="краткое описание",
-        help_text="Вступительный текст о вакансии (обычный текст).",
+        verbose_name=_("short description"),
+        help_text=_("Brief introductory text about the vacancy."),
     )
     description = models.TextField(
-        verbose_name="описание",
-        help_text="Подробное описание вакансии "
-        "(HTML-разметка, используйте div, ul, h3, li).",
+        verbose_name=_("description"),
+        help_text=_(
+            "Detailed description of the vacancy "
+            "(HTML markup, use div, ul, h3, li)."
+        ),
     )
     professional_area = models.ForeignKey(
         to="ProfessionalArea",
         on_delete=models.CASCADE,
         related_name="vacancies",
-        verbose_name="профессиональная область",
-        help_text="Профессиональная область вакансии.",
+        verbose_name=_("professional area"),
+        help_text=_("Professional field of the vacancy."),
     )
     city = models.ForeignKey(
         to="City",
         on_delete=models.CASCADE,
         related_name="vacancies",
-        verbose_name="город и регион",
-        help_text="Город и регион размещения вакансии.",
+        verbose_name=_("city and region"),
+        help_text=_("City and region where the vacancy is posted."),
     )
     work_schedule = models.CharField(
         max_length=10,
         choices=WorkSchedule.choices,
         default=WorkSchedule.FULL_TIME,
-        verbose_name="график работы",
-        help_text="Предполагаемый режим работы.",
+        verbose_name=_("work schedule"),
+        help_text=_("Expected work schedule."),
     )
     experience_level = models.CharField(
         max_length=10,
         choices=ExperienceLevel.choices,
         default=ExperienceLevel.NO_EXPERIENCE,
-        verbose_name="опыт работы",
-        help_text="Требуемый для работы опыт.",
+        verbose_name=_("experience level"),
+        help_text=_("Required work experience level."),
     )
     salary_from = models.PositiveIntegerField(
-        verbose_name="зарплата от",
-        help_text="Минимальная зарплата.",
+        verbose_name=_("salary from"),
+        help_text=_("Minimum salary."),
         null=True,
         blank=True,
     )
     salary_to = models.PositiveIntegerField(
-        verbose_name="зарплата до",
-        help_text="Максимальная зарплата.",
+        verbose_name=_("salary to"),
+        help_text=_("Maximum salary."),
         null=True,
         blank=True,
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name="активна",
-        help_text="Определяет, активна ли вакансия.",
+        verbose_name=_("active"),
+        help_text=_("Determines whether the vacancy is visible."),
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="дата создания",
-        help_text="Дата и время добавления вакансии.",
+        verbose_name=_("created date"),
+        help_text=_("Date and time when the vacancy was added."),
     )
     updated_at = models.DateTimeField(
         auto_now=True,
-        verbose_name="дата обновления",
-        help_text="Дата и время последнего обновления вакансии.",
+        verbose_name=_("updated date"),
+        help_text=_("Date and time when the vacancy was last updated."),
     )
 
     class Meta:  # noqa: D106
         db_table = "vacancies_vacancy"
-        db_table_comment = "Таблица с информацией о вакансиях"
-        verbose_name = "вакансия"
-        verbose_name_plural = "вакансии"
+        db_table_comment = "Table containing job vacancies."
+        verbose_name = _("vacancy")
+        verbose_name_plural = _("vacancies")
         ordering = (
             "-created_at",
             "title",
@@ -124,24 +127,32 @@ class Vacancy(models.Model):
             "до Y" or empty string if not specified.
         """
         if self.salary_from and self.salary_to:
-            return f"{self.salary_from} – {self.salary_to}"
+            return _("%(from)s – %(to)s") % {
+                "from": self.salary_from,
+                "to": self.salary_to,
+            }
         elif self.salary_from:
-            return f"от {self.salary_from}"
+            return _("from %(from)s") % {"from": self.salary_from}
         elif self.salary_to:
-            return f"до {self.salary_to}"
+            return _("to %(to)s") % {"to": self.salary_to}
         return ""
 
     def clean(self) -> None:
         """Validate vacancy data."""
         super().clean()
-        if self.salary_from and self.salary_to:
-            if self.salary_from >= self.salary_to:
-                raise ValidationError(
-                    {
-                        "salary_to": "Верхняя граница зарплаты "
-                        "должна быть больше нижней"
-                    }
-                )
+        if (
+            self.salary_from
+            and self.salary_to  # noqa: W503
+            and self.salary_from >= self.salary_to  # noqa: W503
+        ):
+            raise ValidationError(
+                {
+                    "salary_to": _(
+                        "Maximum salary must be greater "
+                        "than minimum salary."
+                    )
+                }
+            )
 
     def get_absolute_url(self) -> str:
         """Return the absolute URL for the vacancy detail page.
