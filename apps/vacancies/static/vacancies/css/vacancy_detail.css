@@ -97,6 +97,10 @@
     margin-left: 20px;
 }
 
+.vacancy__description ul:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
     .vacancy__content {
         flex-direction: column;
