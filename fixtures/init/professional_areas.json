@@ -1,0 +1,11 @@
+[
+{
+  "model": "vacancies.professionalarea",
+  "pk": 1,
+  "fields": {
+    "name": "Доставка",
+    "name_ru": "Доставка",
+    "name_en": "Delivery"
+  }
+}
+]
