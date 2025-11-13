@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-12 07:35+0800\n"
+"POT-Creation-Date: 2025-11-13 19:33+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -105,24 +105,24 @@ msgstr "Вы вышли из аккаунта. Хорошего дня!"
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\catalog\admin.py:42
+#: .\apps\catalog\admin.py:43
 msgid "Search by category name"
 msgstr "Поиск по названию категории"
 
-#: .\apps\catalog\admin.py:53
+#: .\apps\catalog\admin.py:54
 msgid "Search by attribute name"
 msgstr "Поиск по названию атрибута"
 
-#: .\apps\catalog\admin.py:70 .\apps\catalog\admin.py:83
-#: .\apps\catalog\admin.py:100
+#: .\apps\catalog\admin.py:71 .\apps\catalog\admin.py:84
+#: .\apps\catalog\admin.py:101
 msgid "Search by product name"
 msgstr "Поиск по названию продукта"
 
-#: .\apps\catalog\admin.py:149
+#: .\apps\catalog\admin.py:150
 msgid "Search by name or article (SKU)"
 msgstr "Поиск по названию или артикулу (SKU)"
 
-#: .\apps\catalog\admin.py:173
+#: .\apps\catalog\admin.py:174
 msgid "Final price"
 msgstr "Финальная цена"
 
@@ -604,6 +604,42 @@ msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
 
+#: .\apps\vacancies\apps.py:13 .\templates\includes\footer.html:10
+msgid "Vacancies"
+msgstr "Вакансии"
+
+#: .\apps\vacancies\choices.py:18
+msgid "No experience"
+msgstr "Без опыта"
+
+#: .\apps\vacancies\choices.py:19
+msgid "From 1 to 3 years"
+msgstr "От 1 года до 3 лет"
+
+#: .\apps\vacancies\choices.py:20
+msgid "From 3 to 6 years"
+msgstr "От 3 до 6 лет"
+
+#: .\apps\vacancies\choices.py:21
+msgid "More than 6 years"
+msgstr "Более 6 лет"
+
+#: .\apps\vacancies\choices.py:37
+msgid "Full-time"
+msgstr "Полный день"
+
+#: .\apps\vacancies\choices.py:38
+msgid "Shift schedule"
+msgstr "Сменный график"
+
+#: .\apps\vacancies\choices.py:39
+msgid "Flexible schedule"
+msgstr "Гибкий график"
+
+#: .\apps\vacancies\choices.py:40
+msgid "Remote work"
+msgstr "Удалённая работа"
+
 #: .\templates\404.html:14
 msgid "Oops! The page you are looking for was not found"
 msgstr "Упс! Страница, которую вы ищете, не найдена"
@@ -631,10 +667,6 @@ msgstr "Пользовательское соглашение"
 #: .\templates\includes\footer.html:9
 msgid "News"
 msgstr "Новости"
-
-#: .\templates\includes\footer.html:10
-msgid "Vacancies"
-msgstr "Вакансии"
 
 #: .\templates\includes\footer.html:12
 msgid "© 2025 Marlin — All rights reserved."
