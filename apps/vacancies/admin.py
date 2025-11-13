@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 
 from .models import (
     City,
@@ -15,7 +16,7 @@ class ProfessionalAreaAdmin(admin.ModelAdmin):
     list_per_page = 25
     list_display = ("name",)
     search_fields = ("name",)
-    search_help_text = "Поиск по названию профессиональной области"
+    search_help_text = _("Search by professional field name")
     ordering = ("name",)
 
 
@@ -26,7 +27,7 @@ class RegionAdmin(admin.ModelAdmin):
     list_per_page = 25
     list_display = ("name",)
     search_fields = ("name",)
-    search_help_text = "Поиск по названию региона"
+    search_help_text = _("Search by region name")
     ordering = ("name",)
 
 
@@ -42,7 +43,7 @@ class CityAdmin(admin.ModelAdmin):
     list_filter = ("region__name",)
     search_fields = ("name", "region__name")
     ordering = ("name",)
-    search_help_text = "Поиск по названию города и региона"
+    search_help_text = _("Search by city and region name")
     list_select_related = ("region",)
     empty_value_display = "—"
 
@@ -60,7 +61,7 @@ class VacancyAdmin(admin.ModelAdmin):
         "short_description",
         "description",
     )
-    search_help_text = "Поиск по заголовку и описанию вакансии"
+    search_help_text = _("Search by vacancy title and description")
     list_filter = (
         "professional_area__name",
         "is_active",
@@ -90,7 +91,7 @@ class VacancyAdmin(admin.ModelAdmin):
     )
     empty_value_display = "—"
 
-    @admin.display(description="Зарплата", ordering="salary_from")
+    @admin.display(description=_("Salary"), ordering="salary_from")
     def formatted_salary(self, obj: Vacancy) -> str:
         """Return formatted salary.
 
