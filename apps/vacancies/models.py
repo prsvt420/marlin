@@ -178,15 +178,15 @@ class ProfessionalArea(models.Model):
     name = models.CharField(
         max_length=255,
         unique=True,
-        verbose_name="название",
-        help_text="Название профессиональной области.",
+        verbose_name=_("name"),
+        help_text=_("Professional area name."),
     )
 
     class Meta:  # noqa: D106
         db_table = "vacancies_professional_area"
-        db_table_comment = "Таблица с информацией о профессиональных областях"
-        verbose_name = "профессиональная область"
-        verbose_name_plural = "профессиональные области"
+        db_table_comment = "Table containing professional areas."
+        verbose_name = _("professional area")
+        verbose_name_plural = _("professional areas")
         ordering = ("name",)
 
     def __str__(self) -> str:
