@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-14 04:34+0800\n"
+"POT-Creation-Date: 2025-11-14 04:43+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -146,7 +146,7 @@ msgid "pcs"
 msgstr "шт"
 
 #: .\apps\catalog\models.py:38 .\apps\catalog\models.py:239
-#: .\apps\catalog\models.py:349
+#: .\apps\catalog\models.py:349 .\apps\vacancies\models.py:181
 msgid "name"
 msgstr "название"
 
@@ -689,7 +689,7 @@ msgid "Detailed description of the vacancy (HTML markup, use div, ul, h3, li)."
 msgstr ""
 "Подробное описание вакансии (HTML-разметка, использование div, ul, h3, li)."
 
-#: .\apps\vacancies\models.py:52
+#: .\apps\vacancies\models.py:52 .\apps\vacancies\models.py:188
 msgid "professional area"
 msgstr "профессиональная область"
 
@@ -775,6 +775,14 @@ msgstr "до %(to)s"
 #: .\apps\vacancies\models.py:151
 msgid "Maximum salary must be greater than minimum salary."
 msgstr "Максимальная заработная плата должна быть больше минимальной."
+
+#: .\apps\vacancies\models.py:182
+msgid "Professional area name."
+msgstr "Название профессиональной области."
+
+#: .\apps\vacancies\models.py:189
+msgid "professional areas"
+msgstr "профессиональные области"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:23
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
