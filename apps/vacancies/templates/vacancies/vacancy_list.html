@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Список вакансий{% endblock %}
+{% block title %}{% trans "Vacancies" %}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'vacancies/css/vacancy_list.css' %}">
@@ -11,10 +11,10 @@
 {% block content %}
 <section class="hero">
     <div class="hero__content">
-        <h2 class="hero__title">Работа в Marlin.</h2>
-        <p class="hero__subtitle">Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты тысячам клиентов.</p>
+        <h2 class="hero__title">{% trans "Working in Marlin." %}</h2>
+        <p class="hero__subtitle">{% trans "Join our team and help deliver fresh produce to thousands of customers." %}</p>
         <form method="get" action="{% url 'vacancies:vacancy_list' %}">
-            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="Найти вакансию, например — курьер">
+            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a vacancy, e.g. — courier' %}">
         </form>
     </div>
 </section>
@@ -27,7 +27,7 @@
                         <div class="vacancy-card__content">
                             <h3 class="vacancy-card__title">{{ vacancy.title }}</h3>
                             {% if vacancy.salary_to or vacancy.salary_from %}
-                                <p class="vacancy-card__salary">{{ vacancy.get_formatted_salary }} ₽ <span>до вычета налогов</span></p>
+                                <p class="vacancy-card__salary">{{ vacancy.get_formatted_salary }} ₽ <span>{% trans "before taxes" %}</span></p>
                             {% endif %}
 
                             <p class="vacancy-card__experience vacancy-card__experience--{{ vacancy.experience_level }}">
@@ -46,7 +46,7 @@
                             <p class="vacancy-card__short-description">{{ vacancy.short_description|truncatechars:250 }}</p>
 
                             <div class="vacancy-card__footer">
-                                <button type="submit" class="vacancy-card__link">Подробнее</button>
+                                <button type="submit" class="vacancy-card__link">{% trans "More details" %}</button>
                                 <span class="vacancy-card__date">{{ vacancy.updated_at.date }}</span>
                             </div>
 
@@ -83,11 +83,11 @@
     {% else %}
         {% if search_query %}
             <div class="no-vacancies">
-                <p class="no-vacancies__text">По запросу ничего не найдено</p>
+                <p class="no-vacancies__text">{% trans "No results found for your search" %}</p>
             </div>
         {% else %}
             <div class="no-vacancies">
-                <p class="no-vacancies__text">На данный момент вакансий нет</p>
+                <p class="no-vacancies__text">{% trans "There are currently no vacancies" %}</p>
             </div>
         {% endif %}
     {% endif %}
