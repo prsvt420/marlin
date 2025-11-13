@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-13 20:50+0800\n"
+"POT-Creation-Date: 2025-11-13 20:59+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -605,6 +605,26 @@ msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
 
+#: .\apps\vacancies\admin.py:19
+msgid "Search by professional field name"
+msgstr "Поиск по названию профессиональной области"
+
+#: .\apps\vacancies\admin.py:30
+msgid "Search by region name"
+msgstr "Поиск по названию региона"
+
+#: .\apps\vacancies\admin.py:46
+msgid "Search by city and region name"
+msgstr "Поиск по названию города и региона"
+
+#: .\apps\vacancies\admin.py:64
+msgid "Search by vacancy title and description"
+msgstr "Поиск по заголовку и описанию вакансии"
+
+#: .\apps\vacancies\admin.py:94
+msgid "Salary"
+msgstr "Зарплата"
+
 #: .\apps\vacancies\apps.py:13
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:13
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:5
@@ -663,7 +683,9 @@ msgstr "Работа в Marlin."
 
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
 msgid "Join our team and help deliver fresh produce to thousands of customers."
-msgstr "Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты тысячам клиентов."
+msgstr ""
+"Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты "
+"тысячам клиентов."
 
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:17
 msgid "Find a vacancy, e.g. — courier"
