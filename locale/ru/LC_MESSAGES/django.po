@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-13 20:41+0800\n"
+"POT-Creation-Date: 2025-11-13 20:50+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -504,6 +504,7 @@ msgid "Discounts up to 30%%"
 msgstr "Скидки до 30%"
 
 #: .\apps\catalog\templates\catalog\product_list.html:106
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:86
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
@@ -606,6 +607,7 @@ msgstr ""
 
 #: .\apps\vacancies\apps.py:13
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:13
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:5
 #: .\templates\includes\footer.html:10
 msgid "Vacancies"
 msgstr "Вакансии"
@@ -643,6 +645,7 @@ msgid "Remote work"
 msgstr "Удалённая работа"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:23
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
 msgid "before taxes"
 msgstr "до вычета налогов"
 
@@ -653,6 +656,26 @@ msgstr "График работы"
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:37
 msgid "Work experience"
 msgstr "Опыт работы"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:14
+msgid "Working in Marlin."
+msgstr "Работа в Marlin."
+
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
+msgid "Join our team and help deliver fresh produce to thousands of customers."
+msgstr "Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты тысячам клиентов."
+
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:17
+msgid "Find a vacancy, e.g. — courier"
+msgstr "Найти вакансию, например — курьер"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:49
+msgid "More details"
+msgstr "Подробнее"
+
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:90
+msgid "There are currently no vacancies"
+msgstr "На данный момент вакансий нет"
 
 #: .\templates\404.html:14
 msgid "Oops! The page you are looking for was not found"
