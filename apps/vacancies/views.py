@@ -11,8 +11,8 @@ from apps.vacancies.repositories.vacancy_repository import VacancyRepository
 class VacancyListView(ListView):
     """Displays a list of vacancies.
 
-    Uses the 'vacancies/vacancy_list.html' template and provides
-    a context variable 'vacancies' containing all Vacancy objects.
+    Uses the `vacancies/vacancy_list.html` template and provides
+    a context variable `vacancies` containing all Vacancy objects.
     Optionally filtered by search query.
     """
 
@@ -25,7 +25,7 @@ class VacancyListView(ListView):
     def get_queryset(self) -> QuerySet[Vacancy]:
         """Return the queryset of vacancies.
 
-        If the "q" GET parameter is provided, the queryset is filtered
+        If the `q` GET parameter is provided, the queryset is filtered
         based on the search query.
 
         Returns:
@@ -61,8 +61,8 @@ class VacancyListView(ListView):
 class VacancyDetailView(generic.DetailView):
     """Displays detailed information about a specific vacancy.
 
-    Uses the 'vacancies/vacancy_detail.html' template and provides
-    a context variable 'vacancy' containing the selected Vacancy object.
+    Uses the `vacancies/vacancy_detail.html` template and provides
+    a context variable `vacancy` containing the selected Vacancy object.
     """
 
     model = Vacancy

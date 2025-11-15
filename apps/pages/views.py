@@ -12,9 +12,9 @@ from apps.pages.types import ContactContext
 class ContactView(FormView):
     """Handles displaying and processing the contact form.
 
-    Renders the 'pages/contact.html' template with a ContactForm.
+    Renders the `pages/contact.html` template with a ContactForm.
     On successful submission, redirects to the same contact page
-    or a success page defined by 'success_url'.
+    or a success page defined by `success_url`.
     """
 
     template_name = "pages/contact.html"
@@ -91,7 +91,7 @@ class ContactView(FormView):
 class PrivacyView(TemplateView):
     """Displays the privacy policy page.
 
-    Uses the 'pages/privacy.html' template to render
+    Uses the `pages/privacy.html` template to render
     the privacy policy and data handling information.
     """
 
@@ -101,7 +101,7 @@ class PrivacyView(TemplateView):
 class TermsView(TemplateView):
     """Displays the terms of service page.
 
-    Uses the 'pages/terms.html' template to render
+    Uses the `pages/terms.html` template to render
     the terms and conditions for using the service.
     """
 
@@ -111,7 +111,7 @@ class TermsView(TemplateView):
 class OfferView(TemplateView):
     """Displays the public offer agreement page.
 
-    Uses the 'pages/offer.html' template to render
+    Uses the `pages/offer.html` template to render
     the public offer agreement and contract terms.
     """
 
@@ -121,7 +121,7 @@ class OfferView(TemplateView):
 class CatalogRedirectView(RedirectView):
     """Permanent redirection to the product catalog page.
 
-    Redirects the user to the 'catalog:product_list'
+    Redirects the user to the `catalog:product_list`
     page with HTTP code 301.
     """
 

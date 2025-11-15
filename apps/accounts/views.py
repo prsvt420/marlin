@@ -11,7 +11,7 @@ from django.views.generic import CreateView
 class SignInView(SuccessMessageMixin, LoginView):
     """Displays the sign in page.
 
-    Renders the 'accounts/signin.html' template with a AuthenticationForm.
+    Renders the `accounts/signin.html` template with a AuthenticationForm.
     """
 
     template_name = "accounts/signin.html"
@@ -67,7 +67,7 @@ class SignOutView(LogoutView):
 class SignUpView(SuccessMessageMixin, CreateView):
     """Displays the sign up page.
 
-    Renders the 'accounts/signup.html' template with a UserCreationForm.
+    Renders the `accounts/signup.html` template with a UserCreationForm.
     """
 
     template_name = "accounts/signup.html"

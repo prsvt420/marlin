@@ -10,8 +10,8 @@ from apps.catalog.repositories.product_repository import ProductRepository
 class ProductListView(generic.ListView):
     """Displays a list of products in the catalog.
 
-    Uses the 'catalog/product_list.html' template and provides
-    a context variable 'products' containing all Product objects.
+    Uses the `catalog/product_list.html` template and provides
+    a context variable `products` containing all Product objects.
     Optionally filtered by search query.
     """
 
@@ -24,7 +24,7 @@ class ProductListView(generic.ListView):
     def get_queryset(self) -> QuerySet[Product]:
         """Return the queryset of products.
 
-        If the "q" GET parameter is provided, the queryset is filtered
+        If the `q` GET parameter is provided, the queryset is filtered
         based on the search query.
 
         Returns:
@@ -60,8 +60,8 @@ class ProductListView(generic.ListView):
 class ProductDetailView(generic.DetailView):
     """Displays detailed information about a specific product.
 
-    Uses the 'catalog/product_detail.html' template and provides
-    a context variable 'product' containing the selected Product object.
+    Uses the `catalog/product_detail.html` template and provides
+    a context variable `product` containing the selected Product object.
     """
 
     model = Product
