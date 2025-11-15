@@ -107,13 +107,18 @@
     background-color: var(--block-background-color);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow);
-    display: none;
     min-width: 200px;
+    pointer-events: none;
     z-index: 1000;
+
+    opacity: 0;
+    transform: translateY(-5px);
 }
 
 .dropdown__menu.show {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .dropdown__menu-item {
