@@ -124,8 +124,8 @@ class Vacancy(models.Model):
         """Return a formatted string representation of the salary range.
 
         Returns:
-            str: Formatted salary range in format "X – Y", "от X",
-            "до Y" or empty string if not specified.
+            str: Formatted salary range in format 'X – Y', 'от X',
+            'до Y' or empty string if not specified.
         """
         if self.salary_from and self.salary_to:
             return _("%(from)s – %(to)s") % {
@@ -159,7 +159,7 @@ class Vacancy(models.Model):
         """Return the absolute URL for the vacancy detail page.
 
         Uses the vacancy id to reverse the URL named
-        'vacancies:vacancy_detail'.
+        `vacancies:vacancy_detail`.
 
         Returns:
             str: The URL of the vacancy detail page.

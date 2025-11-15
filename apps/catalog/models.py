@@ -138,7 +138,7 @@ class Product(models.Model):
         """Return the absolute URL for the product detail page.
 
         Uses the product's slug to reverse the URL named
-        'catalog:product_detail'.
+        `catalog:product_detail`.
 
         Returns:
             str: The URL of the product detail page.
