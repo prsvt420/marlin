@@ -50,6 +50,18 @@
         {% if product.discount %}
             <span class="product__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
         {% endif %}
+
+        {% if product.stock <= 100 %}
+            {% if not product.stock %}
+                <span class="product__stock product__stock--very-few">{% trans "not available" %}</span>
+            {% elif product.stock <= 15 %}
+                <span class="product__stock product__stock--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+            {% elif product.stock <= 50 %}
+                <span class="product__stock product__stock--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+            {% else %}
+                <span class="product__stock product__stock--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+            {% endif %}
+        {% endif %}
     </div>
 
     <div class="product__info">
@@ -68,10 +80,14 @@
             {% endif %}
         </div>
 
-        <form action="#" method="post">
-            {% csrf_token %}
-            <button class="product__button">{% trans "Add to Cart" %}</button>
-        </form>
+        {% if product.stock %}
+            <form action="#" method="post">
+                {% csrf_token %}
+                <button class="product__button">{% trans "Add to Cart" %}</button>
+            </form>
+        {% else %}
+            <button class="product__button" disabled>{% trans "Not available" %}</button>
+        {% endif %}
 
         <div class="product__block">
             <h3 class="product__subtitle">{% trans "Category" %}</h3>

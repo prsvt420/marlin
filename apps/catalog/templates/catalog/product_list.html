@@ -49,8 +49,21 @@
                         <img src="{% static 'catalog/img/default-product-image.jpg' %}"
                             alt="{% trans 'No image available' %}" draggable="false">
                     {% endif %}
+
                     {% if product.discount %}
                         <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
+                    {% endif %}
+
+                    {% if product.stock <= 100 %}
+                        {% if not product.stock %}
+                            <span class="product-card__stock product-card__stock--very-few">{% trans "not available" %}</span>
+                        {% elif product.stock <= 15 %}
+                            <span class="product-card__stock product-card__stock--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                        {% elif product.stock <= 50 %}
+                            <span class="product-card__stock product-card__stock--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                        {% else %}
+                            <span class="product-card__stock product-card__stock--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                        {% endif %}
                     {% endif %}
                 </div>
                 <div class="product-card__content">
@@ -65,10 +78,14 @@
                         {% endif %}
                     </div>
                     <div class="product-card__footer">
-                        <form action="#" method="post">
-                            {% csrf_token %}
-                            <button class="product-card__button">{% trans "Add to Cart" %}</button>
-                        </form>
+                        {% if product.stock %}
+                            <form action="#" method="post">
+                                {% csrf_token %}
+                                <button class="product-card__button">{% trans "Add to Cart" %}</button>
+                            </form>
+                        {% else %}
+                            <button class="product-card__button" disabled>{% trans "Not available" %}</button>
+                        {% endif %}
                     </div>
                 </div>
             </article>
