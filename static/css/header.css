@@ -138,6 +138,15 @@
     transform: translateX(20px);
 }
 
+.language-icon {
+    height: 20px;
+}
+
+.flag-icon {
+    height: 17px;
+    border-radius: 3px;
+}
+
 @media (max-width: 550px) {
     .header {
         flex-direction: column;
