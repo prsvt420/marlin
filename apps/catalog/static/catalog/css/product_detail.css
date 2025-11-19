@@ -163,7 +163,6 @@
 
 .product__button:hover {
     background-color: var(--button-background-color-hover);
-    transform: var(--transform);
 }
 
 

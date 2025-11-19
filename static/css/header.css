@@ -86,11 +86,6 @@
     min-width: 20px;
 }
 
-.header__nav-button:hover,
-.header__nav-button:focus {
-    box-shadow: var(--shadow-active);
-}
-
 .header__nav-button:hover svg,
 .header__nav-button:focus svg {
     fill: var(--text-color);

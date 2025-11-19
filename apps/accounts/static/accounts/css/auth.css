@@ -93,18 +93,6 @@
     background-color: var(--button-background-color-hover);
 }
 
-.auth__form-group:hover,
-.auth__form-group:focus-within,
-.auth__form-button:hover {
-    transform: var(--transform);
-}
-
-.auth__input:hover,
-.auth__input:focus,
-.auth__form-button:hover {
-    box-shadow: var(--shadow-active);
-}
-
 .auth__links {
     display: flex;
     justify-content: space-around;
@@ -163,9 +151,7 @@
 }
 
 .auth__social-button:hover {
-    transform: var(--transform);
     filter: contrast(80%);
-    box-shadow: var(--shadow-active);
 }
 
 .auth__social-button svg {

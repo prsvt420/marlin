@@ -35,12 +35,6 @@
     width: 100%;
 }
 
-.hero__search:focus,
-.hero__search:hover {
-    transform: var(--transform);
-    box-shadow: var(--shadow-active);
-}
-
 .vacancies {
     margin-top: 20px;
     display: flex;
@@ -64,7 +58,6 @@
 
 .vacancy-card:hover {
     transform: var(--transform);
-    box-shadow: var(--shadow-active);
 }
 
 .vacancy-card__content {
@@ -203,7 +196,6 @@
 }
 
 .pagination__page:hover {
-    transform: var(--transform);
     background-color: var(--button-background-color-hover);
 }
 
@@ -233,7 +225,5 @@
 
 .pagination__prev:hover:not(:disabled),
 .pagination__next:hover:not(:disabled) {
-    transform: var(--transform);
-    box-shadow: var(--shadow-active);
     background-color: var(--button-background-color-hover);
 }
