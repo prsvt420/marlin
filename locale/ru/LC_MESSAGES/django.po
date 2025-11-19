@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-18 22:17+0800\n"
+"POT-Creation-Date: 2025-11-20 04:04+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -880,9 +880,18 @@ msgstr "Упс! Страница, которую вы ищете, не найд�
 msgid "The page may have been removed or you followed an incorrect link."
 msgstr "Возможно, страница была удалена или вы перешли по неверной ссылке."
 
-#: .\templates\404.html:16
+#: .\templates\404.html:16 .\templates\500.html:16
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
+
+#: .\templates\500.html:14
+msgid "Oops! Something went wrong"
+msgstr "Упс! Что-то пошло не так"
+
+#: .\templates\500.html:15
+msgid "An internal error occurred. Please refresh the page or try again later."
+msgstr ""
+"Произошла внутренняя ошибка. Обновите страницу или повторите попытку позже."
 
 #: .\templates\includes\footer.html:5
 msgid "Privacy Policy"
