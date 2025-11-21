@@ -33,12 +33,7 @@ class ProductListView(generic.ListView):
         """
         search_query: str = self.request.GET.get("q", "").strip()
 
-        if search_query:
-            return ProductRepository.find_by_search_query(
-                search_query=search_query
-            )
-
-        return ProductRepository.find_active()
+        return ProductRepository.filter(search_query=search_query)
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template.
@@ -74,4 +69,4 @@ class ProductDetailView(generic.DetailView):
         Returns:
             QuerySet[Product]: A queryset of Product objects.
         """
-        return ProductRepository.find_active()
+        return ProductRepository.filter()

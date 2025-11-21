@@ -1,3 +1,5 @@
+from typing import Optional
+
 from django.db.models import Prefetch, QuerySet
 
 from apps.catalog.models import Product, ProductAttribute
@@ -7,16 +9,15 @@ class ProductRepository:
     """Repository for Product model database operations."""
 
     @staticmethod
-    def find_active() -> QuerySet[Product]:
-        """Return a queryset of products marked as active.
-
-        Only products with `is_active=True` are included in the queryset.
+    def all() -> QuerySet[Product]:
+        """Return a queryset of all products with related data preloaded.
 
         Returns:
-            QuerySet[Product]: A queryset containing active Product objects.
+            QuerySet[Product]: A queryset containing all Product objects
+            with related data preloaded.
         """
         return (
-            Product.objects.filter(is_active=True)
+            Product.objects.all()
             .select_related("category", "product_nutrition")
             .prefetch_related(
                 "product_images",
@@ -30,18 +31,26 @@ class ProductRepository:
         )
 
     @staticmethod
-    def find_by_search_query(search_query: str) -> QuerySet[Product]:
-        """Return a queryset of active products filtered by search query.
-
-        Search is performed in fields: name.
+    def filter(
+        *, search_query: Optional[str] = None, only_active: bool = True
+    ) -> QuerySet[Product]:
+        """Return a filtered queryset of products.
 
         Args:
-            search_query (str): The query to search.
+            search_query (Optional[str]): The query to search.
+            only_active (bool): If True, returns only active products.
+            Default True.
 
         Returns:
-            QuerySet[Product]: A queryset containing active Product objects
-            filtered by the search term.
+            QuerySet[Product]: A queryset containing active Product
+            objects filtered according to the provided criteria.
         """
-        return ProductRepository.find_active().filter(
-            name__icontains=search_query
-        )
+        queryset: QuerySet[Product] = ProductRepository.all()
+
+        if only_active:
+            queryset = queryset.filter(is_active=True)
+
+        if search_query:
+            queryset = queryset.filter(name__icontains=search_query)
+
+        return queryset
