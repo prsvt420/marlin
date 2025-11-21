@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block title %}403{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/error.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="error">
+    <h1 class="error__code">403</h1>
+    <h2 class="error__title">{% trans "Oops! Access denied" %}</h2>
+    <p class="error__text">{% trans "You don't have permission to access this page." %}</p>
+    <a href="{% url 'catalog:product_list' %}" class="error__button">{% trans "Return to catalog" %}</a>
+</section>
+{% endblock %}

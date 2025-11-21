@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-20 04:04+0800\n"
+"POT-Creation-Date: 2025-11-21 17:43+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -872,6 +872,18 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
+#: .\templates\403.html:14
+msgid "Oops! Access denied"
+msgstr "Упс! Доступ запрещён"
+
+#: .\templates\403.html:15
+msgid "You don't have permission to access this page."
+msgstr "У вас нет разрешения на доступ к этой странице."
+
+#: .\templates\403.html:16 .\templates\404.html:16 .\templates\500.html:16
+msgid "Return to catalog"
+msgstr "Вернуться в каталог"
+
 #: .\templates\404.html:14
 msgid "Oops! The page you are looking for was not found"
 msgstr "Упс! Страница, которую вы ищете, не найдена"
@@ -879,10 +891,6 @@ msgstr "Упс! Страница, которую вы ищете, не найд�
 #: .\templates\404.html:15
 msgid "The page may have been removed or you followed an incorrect link."
 msgstr "Возможно, страница была удалена или вы перешли по неверной ссылке."
-
-#: .\templates\404.html:16 .\templates\500.html:16
-msgid "Return to catalog"
-msgstr "Вернуться в каталог"
 
 #: .\templates\500.html:14
 msgid "Oops! Something went wrong"
