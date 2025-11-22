@@ -37,6 +37,23 @@
 </section>
 <section class="products">
     {% if products %}
+
+    <div class="products__controls">
+        <div class="dropdown">
+            <button class="products__controls-button dropdown__toggle" type="button">
+                {% trans "Sorting" %}: {{ current_ordering_option.label }}
+            </button>
+
+            <ul class="dropdown__menu dropdown__menu--right">
+                {% for ordering_option_key, ordering_option in ordering_options.items %}
+                    <li class="dropdown__menu-item">
+                        <a href="?sort={{ ordering_option_key }}" class="dropdown__menu-button {% if ordering_option.label == current_ordering_option.label %}dropdown__menu-button--active{% endif %}">{{ ordering_option.label }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
     <div class="products__list">
         {% for product in products %}
         <a href="{{ product.get_absolute_url }}">

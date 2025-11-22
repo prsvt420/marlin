@@ -1,6 +1,12 @@
 from typing import Optional
 
-from django.db.models import Prefetch, QuerySet
+from django.db.models import (
+    DecimalField,
+    ExpressionWrapper,
+    F,
+    Prefetch,
+    QuerySet,
+)
 
 from apps.catalog.models import Product, ProductAttribute
 
@@ -32,7 +38,10 @@ class ProductRepository:
 
     @staticmethod
     def filter(
-        *, search_query: Optional[str] = None, only_active: bool = True
+        *,
+        search_query: Optional[str] = None,
+        only_active: bool = True,
+        order_field: Optional[str] = None,
     ) -> QuerySet[Product]:
         """Return a filtered queryset of products.
 
@@ -40,6 +49,7 @@ class ProductRepository:
             search_query (Optional[str]): The query to search.
             only_active (bool): If True, returns only active products.
             Default True.
+            order_field (Optional[str]): Field to order by.
 
         Returns:
             QuerySet[Product]: A queryset containing active Product
@@ -52,5 +62,16 @@ class ProductRepository:
 
         if search_query:
             queryset = queryset.filter(name__icontains=search_query)
+
+        if order_field in ("final_price", "-final_price"):
+            queryset = queryset.annotate(
+                final_price=ExpressionWrapper(
+                    expression=F("price") * (1 - F("discount") / 100.0),
+                    output_field=DecimalField(max_digits=10, decimal_places=2),
+                )
+            )
+
+        if order_field:
+            queryset = queryset.order_by(order_field)
 
         return queryset

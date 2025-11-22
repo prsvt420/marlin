@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-21 17:43+0800\n"
+"POT-Creation-Date: 2025-11-22 21:58+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -144,6 +144,22 @@ msgstr "л"
 #: .\apps\catalog\choices.py:18
 msgid "pcs"
 msgstr "шт"
+
+#: .\apps\catalog\constants.py:7
+msgid "Default"
+msgstr "По умолчанию"
+
+#: .\apps\catalog\constants.py:8
+msgid "Cheapest first"
+msgstr "Сначала дешевле"
+
+#: .\apps\catalog\constants.py:9
+msgid "Most expensive first"
+msgstr "Сначала дороже"
+
+#: .\apps\catalog\constants.py:10
+msgid "By discount amount"
+msgstr "По размеру скидки"
 
 #: .\apps\catalog\models.py:38 .\apps\catalog\models.py:239
 #: .\apps\catalog\models.py:349 .\apps\vacancies\models.py:182
@@ -442,21 +458,21 @@ msgid "product images"
 msgstr "изображения продукта"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:35
-#: .\apps\catalog\templates\catalog\product_list.html:50
+#: .\apps\catalog\templates\catalog\product_list.html:67
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:56
-#: .\apps\catalog\templates\catalog\product_list.html:59
+#: .\apps\catalog\templates\catalog\product_list.html:76
 msgid "not available"
 msgstr "нет в наличии"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:58
 #: .\apps\catalog\templates\catalog\product_detail.html:60
 #: .\apps\catalog\templates\catalog\product_detail.html:62
-#: .\apps\catalog\templates\catalog\product_list.html:61
-#: .\apps\catalog\templates\catalog\product_list.html:63
-#: .\apps\catalog\templates\catalog\product_list.html:65
+#: .\apps\catalog\templates\catalog\product_list.html:78
+#: .\apps\catalog\templates\catalog\product_list.html:80
+#: .\apps\catalog\templates\catalog\product_list.html:82
 #, python-format
 msgid "%(stock)s left"
 msgstr "осталось %(stock)s"
@@ -466,12 +482,12 @@ msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:86
-#: .\apps\catalog\templates\catalog\product_list.html:84
+#: .\apps\catalog\templates\catalog\product_list.html:101
 msgid "Add to Cart"
 msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:89
-#: .\apps\catalog\templates\catalog\product_list.html:87
+#: .\apps\catalog\templates\catalog\product_list.html:104
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -528,12 +544,16 @@ msgstr "Ежедневные предложения"
 msgid "Discounts up to 30%%"
 msgstr "Скидки до 30%"
 
-#: .\apps\catalog\templates\catalog\product_list.html:123
+#: .\apps\catalog\templates\catalog\product_list.html:44
+msgid "Sorting"
+msgstr "Сортировка"
+
+#: .\apps\catalog\templates\catalog\product_list.html:140
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:86
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
-#: .\apps\catalog\templates\catalog\product_list.html:127
+#: .\apps\catalog\templates\catalog\product_list.html:144
 msgid "No products found in the catalog"
 msgstr "В каталоге ничего не найдено"
 

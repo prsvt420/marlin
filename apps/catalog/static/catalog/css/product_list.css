@@ -86,8 +86,34 @@
 
 .products {
     display: grid;
-    gap: 30px;
+    gap: 15px;
     margin-top: 20px;
+}
+
+.products__controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.products__controls-button {
+    padding: 12px;
+    border-radius: var(--radius-lg);
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    margin-top: auto;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+
+.products__controls .dropdown__menu-label,
+.products__controls .dropdown__menu-button {
+    font-size: var(--font-size-xs);
+}
+
+.products__controls-button:hover,
+.products__controls-button:focus {
+    background-color: var(--button-background-color-hover);
 }
 
 .products__list {
