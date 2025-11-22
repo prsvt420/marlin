@@ -88,10 +88,10 @@
                     <p class="product-card__description">{{ product.description|truncatechars:25 }}</p>
                     <div class="product-card__price">
                         {% if product.discount %}
-                            <span class="product-card__current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-                            <span class="product-card__old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
+                            <span class="product-card__current-price">{{ product.get_final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+                            <span class="product-card__old-price">{{ product.price }} ₽</span>
                         {% else %}
-                            <span class="product-card__current-price">{{ product.price|floatformat:"-2u" }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+                            <span class="product-card__current-price">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
                         {% endif %}
                     </div>
                     <div class="product-card__footer">

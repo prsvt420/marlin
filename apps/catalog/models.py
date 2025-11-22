@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import ROUND_HALF_UP, Decimal
 
 from django.db import models
 from django.urls import reverse
@@ -132,7 +132,10 @@ class Product(models.Model):
         Returns:
             Decimal: Final price.
         """
-        return self.price * (1 - self.discount / Decimal("100"))
+        final_price: Decimal = self.price * (
+            1 - self.discount / Decimal("100")
+        )
+        return final_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
     def get_absolute_url(self) -> str:
         """Return the absolute URL for the product detail page.

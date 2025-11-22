@@ -73,10 +73,10 @@
 
         <div class="product__price">
             {% if product.discount %}
-                <span class="current-price">{{ product.get_final_price|floatformat:"-2u" }} ₽</span>
-                <span class="old-price">{{ product.price|floatformat:"-2u" }} ₽</span>
+                <span class="current-price">{{ product.get_final_price }} ₽</span>
+                <span class="old-price">{{ product.price }} ₽</span>
             {% else %}
-                <span class="current-price">{{ product.price|floatformat:"-2u" }} ₽</span>
+                <span class="current-price">{{ product.price }} ₽</span>
             {% endif %}
         </div>
 
