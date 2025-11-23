@@ -40,7 +40,7 @@
             {% endfor %}
         </div>
 
-        {% if product.product_images.all|length > 1 %}
+        {% if product.product_images.count %}
             <div class="swiper-button-prev product__images-button product__images-button--prev"></div>
             <div class="swiper-button-next product__images-button product__images-button--next"></div>
 
@@ -96,7 +96,8 @@
 
         <div class="product__block">
             <h3 class="product__subtitle">{% trans "Description" %}</h3>
-            <p class="product__text">{{ product.description }}</p>
+            <p class="product__text product__text--collapsed">{{ product.description }}</p>
+            <button class="product__text-expander" data-show="{% trans 'Show more' %}" data-hide="{% trans 'Hide' %}">{% trans "Show more" %}</button>
         </div>
 
         <div class="product__block">
@@ -135,7 +136,7 @@
                 {% for product_attribute in product.product_attributes.all %}
                     <div class="characteristics__item">
                         <span class="characteristics__label">{{ product_attribute.attribute.name }}</span>
-                        <span class="characteristics__value">{{ product_attribute.value|lower }}</span>
+                        <span class="characteristics__value">{{ product_attribute.value }}</span>
                     </div>
                 {% empty %}
                     <p class="characteristics__empty">{% trans "No characteristics available" %}</p>
@@ -150,4 +151,5 @@
 {% block js %}
 <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
 <script src="{% static 'catalog/js/product-swiper.js' %}"></script>
+<script src="{% static 'catalog/js/show-more.js' %}"></script>
 {% endblock %}

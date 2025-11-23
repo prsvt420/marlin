@@ -199,6 +199,22 @@
     font-size: var(--font-size-sm);
 }
 
+.product__text--collapsed {
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.product__text-expander {
+    font-size: var(--font-size-xs);
+    color: var(--text-color);
+    font-weight: var(--font-weight-medium);
+    width: fit-content;
+}
+
+.product__text-expander:hover {
+    color: var(--button-background-color-hover);
+}
+
 .product__nutrition-list {
     height: 80px;
     display: flex;
