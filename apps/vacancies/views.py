@@ -32,14 +32,9 @@ class VacancyListView(ListView):
             QuerySet[Vacancy]: A queryset of Vacancy objects,
             optionally filtered by the search term.
         """
-        search_query: str = self.request.GET.get("q", "").strip()
+        search_query: str = self.search_query
 
-        if search_query:
-            return VacancyRepository.find_by_search_query(
-                search_query=search_query
-            )
-
-        return VacancyRepository.find_active()
+        return VacancyRepository.filter(search_query=search_query)
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template.
@@ -54,8 +49,21 @@ class VacancyListView(ListView):
             Dict[str, Any]: The context dictionary for the template.
         """
         context: Dict[str, Any] = super().get_context_data(**kwargs)
-        context["search_query"] = self.request.GET.get("q", "")
+        context["search_query"] = self.search_query
         return context
+
+    @property
+    def search_query(self) -> str:
+        """Return the search query string from the request.
+
+        Fetches the 'q' GET parameter and strips whitespace from
+        the beginning and end. Used to filter the product queryset.
+
+        Returns:
+            str: The cleaned search query string. Returns an empty
+            string if no query parameter is provided.
+        """
+        return self.request.GET.get("q", "").strip()
 
 
 class VacancyDetailView(generic.DetailView):
@@ -75,4 +83,4 @@ class VacancyDetailView(generic.DetailView):
         Returns:
             QuerySet[Vacancy]: A queryset of Vacancy objects.
         """
-        return VacancyRepository.find_active()
+        return VacancyRepository.filter()

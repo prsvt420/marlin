@@ -1,3 +1,5 @@
+from typing import Optional
+
 from django.db.models import Q, QuerySet
 
 from apps.vacancies.models import Vacancy
@@ -7,32 +9,42 @@ class VacancyRepository:
     """Repository for Vacancy model database operations."""
 
     @staticmethod
-    def find_active() -> QuerySet[Vacancy]:
-        """Return a queryset of vacancies marked as active.
-
-        Only vacancies with `is_active=True` are included in the queryset.
+    def all() -> QuerySet[Vacancy]:
+        """Return a queryset of all vacancies with related data preloaded.
 
         Returns:
-            QuerySet[Vacancy]: A queryset containing active Vacancy objects.
+            QuerySet[Vacancy]: A queryset containing all Vacancy objects
+            with related data preloaded.
         """
-        return Vacancy.objects.filter(is_active=True).select_related("city")
+        return Vacancy.objects.all().select_related("city")
 
     @staticmethod
-    def find_by_search_query(search_query: str) -> QuerySet[Vacancy]:
-        """Return a queryset of active vacancies filtered by search query.
-
-        Search is performed in fields: title, description
-        and short_description.
+    def filter(
+        *,
+        search_query: Optional[str] = None,
+        only_active: bool = True,
+    ) -> QuerySet[Vacancy]:
+        """Return a filtered queryset of vacancies.
 
         Args:
-            search_query (str): The query to search.
+            search_query (Optional[str]): The query to search.
+            only_active (bool): If True, returns only active products.
+            Default True.
 
         Returns:
-            QuerySet[Vacancy]: A queryset containing active Vacancy objects
-            filtered by the search term.
+            QuerySet[Vacancy]: A queryset containing active Vacancy
+            objects filtered according to the provided criteria.
         """
-        return VacancyRepository.find_active().filter(
-            Q(title__icontains=search_query)
-            | Q(description__icontains=search_query)  # noqa: W503
-            | Q(short_description__icontains=search_query)  # noqa: W503
-        )
+        queryset: QuerySet[Vacancy] = VacancyRepository.all()
+
+        if only_active:
+            queryset = queryset.filter(is_active=True)
+
+        if search_query:
+            queryset = queryset.filter(
+                Q(title__icontains=search_query)
+                | Q(description__icontains=search_query)  # noqa: W503
+                | Q(short_description__icontains=search_query)  # noqa: W503
+            )
+
+        return queryset
