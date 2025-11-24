@@ -38,6 +38,8 @@ class CategoryAdmin(TranslationAdmin):
         "description",
         "sort_order",
         "is_active",
+        "image_path",
+        "alt_text",
         ("created_at", "updated_at"),
     )
     search_help_text = _("Search by category name")

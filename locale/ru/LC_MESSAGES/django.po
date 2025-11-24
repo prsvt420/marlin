@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-23 19:42+0800\n"
+"POT-Creation-Date: 2025-11-25 06:43+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -105,24 +105,24 @@ msgstr "Вы вышли из аккаунта. Хорошего дня!"
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\catalog\admin.py:43
+#: .\apps\catalog\admin.py:45
 msgid "Search by category name"
 msgstr "Поиск по названию категории"
 
-#: .\apps\catalog\admin.py:54
+#: .\apps\catalog\admin.py:56
 msgid "Search by attribute name"
 msgstr "Поиск по названию атрибута"
 
-#: .\apps\catalog\admin.py:71 .\apps\catalog\admin.py:84
-#: .\apps\catalog\admin.py:101
+#: .\apps\catalog\admin.py:73 .\apps\catalog\admin.py:86
+#: .\apps\catalog\admin.py:103
 msgid "Search by product name"
 msgstr "Поиск по названию продукта"
 
-#: .\apps\catalog\admin.py:150
+#: .\apps\catalog\admin.py:152
 msgid "Search by name or article (SKU)"
 msgstr "Поиск по названию или артикулу (SKU)"
 
-#: .\apps\catalog\admin.py:174
+#: .\apps\catalog\admin.py:176
 msgid "Final price"
 msgstr "Финальная цена"
 
@@ -162,7 +162,7 @@ msgid "By discount amount"
 msgstr "По размеру скидки"
 
 #: .\apps\catalog\models.py:38 .\apps\catalog\models.py:242
-#: .\apps\catalog\models.py:352 .\apps\vacancies\models.py:182
+#: .\apps\catalog\models.py:354 .\apps\vacancies\models.py:182
 #: .\apps\vacancies\models.py:215 .\apps\vacancies\models.py:261
 msgid "name"
 msgstr "название"
@@ -171,7 +171,7 @@ msgstr "название"
 msgid "Product name."
 msgstr "Название продукта."
 
-#: .\apps\catalog\models.py:42 .\apps\catalog\models.py:363
+#: .\apps\catalog\models.py:42 .\apps\catalog\models.py:365
 #: .\apps\vacancies\models.py:43
 msgid "description"
 msgstr "описание"
@@ -180,11 +180,11 @@ msgstr "описание"
 msgid "Product description."
 msgstr "Описание продукта."
 
-#: .\apps\catalog\models.py:48 .\apps\catalog\models.py:358
+#: .\apps\catalog\models.py:48 .\apps\catalog\models.py:360
 msgid "URL-identifier"
 msgstr "URL-идентификатор"
 
-#: .\apps\catalog\models.py:49 .\apps\catalog\models.py:359
+#: .\apps\catalog\models.py:49 .\apps\catalog\models.py:361
 msgid "Unique URL identifier (letters, numbers, hyphens)."
 msgstr "Уникальный идентификатор URL (буквы, цифры, дефисы)."
 
@@ -220,7 +220,7 @@ msgstr "скидка"
 msgid "Product discount in percent."
 msgstr "Скидка на продукт в процентах."
 
-#: .\apps\catalog\models.py:79 .\apps\catalog\models.py:392
+#: .\apps\catalog\models.py:79 .\apps\catalog\models.py:407
 msgid "category"
 msgstr "категория"
 
@@ -240,7 +240,7 @@ msgstr "наличие"
 msgid "Number of products in stock."
 msgstr "Количество товара на складе."
 
-#: .\apps\catalog\models.py:95 .\apps\catalog\models.py:373
+#: .\apps\catalog\models.py:95 .\apps\catalog\models.py:388
 #: .\apps\vacancies\models.py:91
 msgid "active"
 msgstr "активный"
@@ -249,7 +249,7 @@ msgstr "активный"
 msgid "Determines whether the product is displayed in the catalog."
 msgstr "Определяет, отображается ли товар в каталоге."
 
-#: .\apps\catalog\models.py:102 .\apps\catalog\models.py:380
+#: .\apps\catalog\models.py:102 .\apps\catalog\models.py:395
 #: .\apps\vacancies\models.py:96
 msgid "created date"
 msgstr "дата создания"
@@ -258,7 +258,7 @@ msgstr "дата создания"
 msgid "Date and time the product was added."
 msgstr "Дата и время добавления продукта."
 
-#: .\apps\catalog\models.py:107 .\apps\catalog\models.py:385
+#: .\apps\catalog\models.py:107 .\apps\catalog\models.py:400
 #: .\apps\vacancies\models.py:101
 msgid "updated date"
 msgstr "дата обновления"
@@ -268,7 +268,7 @@ msgid "Date and time when the product was last updated."
 msgstr "Дата и время последнего обновления продукта."
 
 #: .\apps\catalog\models.py:114 .\apps\catalog\models.py:171
-#: .\apps\catalog\models.py:281 .\apps\catalog\models.py:422
+#: .\apps\catalog\models.py:281 .\apps\catalog\models.py:437
 msgid "product"
 msgstr "продукт"
 
@@ -385,75 +385,79 @@ msgstr "атрибут продукта"
 msgid "product attributes"
 msgstr "атрибуты продукта"
 
-#: .\apps\catalog\models.py:346
+#: .\apps\catalog\models.py:348
 msgid "parent category"
 msgstr "родительская категория"
 
-#: .\apps\catalog\models.py:347
+#: .\apps\catalog\models.py:349
 msgid "Parent category (if nesting is used)."
 msgstr "Родительская категория (если используется вложенность)."
 
-#: .\apps\catalog\models.py:353
+#: .\apps\catalog\models.py:355
 msgid "Category name."
 msgstr "Название категории."
 
-#: .\apps\catalog\models.py:364
+#: .\apps\catalog\models.py:366
 msgid "Category description."
 msgstr "Описание категории."
 
-#: .\apps\catalog\models.py:368 .\apps\catalog\models.py:438
-msgid "display order"
-msgstr "порядок отображения"
-
-#: .\apps\catalog\models.py:369
-msgid "Order in which categories appear in lists."
-msgstr "Порядок, в котором категории появляются в списках."
-
-#: .\apps\catalog\models.py:375
-msgid "Determines whether the category is displayed in the catalog."
-msgstr "Определяет, отображается ли категория в каталоге."
-
-#: .\apps\catalog\models.py:381
-msgid "Date and time the category was added."
-msgstr "Дата и время добавления категории."
-
-#: .\apps\catalog\models.py:386
-msgid "Date and time when the category was last updated."
-msgstr "Дата и время последнего обновления категории."
-
-#: .\apps\catalog\models.py:393
-msgid "categories"
-msgstr "категории"
-
-#: .\apps\catalog\models.py:423
-msgid "The product to which the image belongs."
-msgstr "Продукт, к которому принадлежит изображение."
-
-#: .\apps\catalog\models.py:427
+#: .\apps\catalog\models.py:372 .\apps\catalog\models.py:442
 msgid "image"
 msgstr "изображение"
 
-#: .\apps\catalog\models.py:428
-msgid "Path to the product image."
-msgstr "Путь к изображению товара."
+#: .\apps\catalog\models.py:373
+msgid "Path to the category image."
+msgstr "Путь к изображению категории."
 
-#: .\apps\catalog\models.py:433
+#: .\apps\catalog\models.py:378 .\apps\catalog\models.py:448
 msgid "alternative text"
 msgstr "альтернативный текст"
 
-#: .\apps\catalog\models.py:434
+#: .\apps\catalog\models.py:379 .\apps\catalog\models.py:449
 msgid "Description of the image for SEO and accessibility."
 msgstr "Описание изображения для SEO и доступности."
 
-#: .\apps\catalog\models.py:439
+#: .\apps\catalog\models.py:383 .\apps\catalog\models.py:453
+msgid "display order"
+msgstr "порядок отображения"
+
+#: .\apps\catalog\models.py:384
+msgid "Order in which categories appear in lists."
+msgstr "Порядок, в котором категории появляются в списках."
+
+#: .\apps\catalog\models.py:390
+msgid "Determines whether the category is displayed in the catalog."
+msgstr "Определяет, отображается ли категория в каталоге."
+
+#: .\apps\catalog\models.py:396
+msgid "Date and time the category was added."
+msgstr "Дата и время добавления категории."
+
+#: .\apps\catalog\models.py:401
+msgid "Date and time when the category was last updated."
+msgstr "Дата и время последнего обновления категории."
+
+#: .\apps\catalog\models.py:408
+msgid "categories"
+msgstr "категории"
+
+#: .\apps\catalog\models.py:438
+msgid "The product to which the image belongs."
+msgstr "Продукт, к которому принадлежит изображение."
+
+#: .\apps\catalog\models.py:443
+msgid "Path to the product image."
+msgstr "Путь к изображению товара."
+
+#: .\apps\catalog\models.py:454
 msgid "Order in which product images appear in lists."
 msgstr "Порядок, в котором изображения продуктов появляются в списках."
 
-#: .\apps\catalog\models.py:445
+#: .\apps\catalog\models.py:460
 msgid "product image"
 msgstr "изображение продукта"
 
-#: .\apps\catalog\models.py:446
+#: .\apps\catalog\models.py:461
 msgid "product images"
 msgstr "изображения продукта"
 

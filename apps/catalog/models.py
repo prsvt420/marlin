@@ -331,6 +331,8 @@ class Category(models.Model):
         name (CharField): The name of the category.
         slug (SlugField): Unique slug for the category.
         description (TextField): Description of the category.
+        image_path (ImageField): Path to the image file.
+        alt_text (CharField): Alternative text for the image.
         sort_order (PositiveIntegerField): Order of appearance in lists.
         is_active (BooleanField): Whether the category is active.
         created_at (DateTimeField): When the category was created.
@@ -362,6 +364,19 @@ class Category(models.Model):
         blank=True,
         verbose_name=_("description"),
         help_text=_("Category description."),
+    )
+    image_path = models.ImageField(
+        upload_to="category_images/",
+        blank=True,
+        null=True,
+        verbose_name=_("image"),
+        help_text=_("Path to the category image."),
+    )
+    alt_text = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_("alternative text"),
+        help_text=_("Description of the image for SEO and accessibility."),
     )
     sort_order = models.PositiveIntegerField(
         default=0,

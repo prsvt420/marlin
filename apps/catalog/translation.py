@@ -45,5 +45,5 @@ class ProductImageTranslationOptions(translator.TranslationOptions):
 class CategoryTranslationOptions(translator.TranslationOptions):
     """Translation options for Category model."""
 
-    fields = ("name", "description")
+    fields = ("name", "description", "alt_text")
     required_languages = ("ru", "en")
