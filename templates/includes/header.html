@@ -15,7 +15,7 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{% url 'catalog:product_list' %}" class="header__nav-link {% active_link request 'catalog:product_list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
+                <a href="{% url 'catalog:category_list' %}" class="header__nav-link {% active_link request 'catalog:category_list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
             </li>
             <li class="header__nav-item">
                 <a href="{% url 'pages:contact' %}" class="header__nav-link {% active_link request 'pages:contact' 'header__nav-link--active' %}">{% trans "Contacts" %}</a>

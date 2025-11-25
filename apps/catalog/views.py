@@ -5,8 +5,29 @@ from django.views import generic
 
 from apps.catalog.constants import ORDERING_OPTIONS
 from apps.catalog.dataclasses import OrderingOption
-from apps.catalog.models import Product
+from apps.catalog.models import Category, Product
+from apps.catalog.repositories.category_repository import CategoryRepository
 from apps.catalog.repositories.product_repository import ProductRepository
+
+
+class CategoryListView(generic.ListView):
+    """Displays a list of products in the catalog.
+
+    Uses the `catalog/category_list.html` template and provides
+    a context variable `parent_categories` containing all Category objects.
+    """
+
+    model = Category
+    template_name = "catalog/category_list.html"
+    context_object_name = "parent_categories"
+
+    def get_queryset(self) -> QuerySet[Category]:
+        """Return the queryset of parent categories.
+
+        Returns:
+            QuerySet[Category]: A queryset of parent Category objects.
+        """
+        return CategoryRepository.get_parents()
 
 
 class ProductListView(generic.ListView):
@@ -14,7 +35,6 @@ class ProductListView(generic.ListView):
 
     Uses the `catalog/product_list.html` template and provides
     a context variable `products` containing all Product objects.
-    Optionally filtered by search query.
     """
 
     model = Product
@@ -27,27 +47,21 @@ class ProductListView(generic.ListView):
     def get_queryset(self) -> QuerySet[Product]:
         """Return the queryset of products.
 
-        If the `q` GET parameter is provided, the queryset is filtered
-        based on the search query.
-
         Returns:
-            QuerySet[Product]: A queryset of Product objects,
-            optionally filtered by the search term.
+            QuerySet[Product]: A queryset of Product objects.
         """
         search_query: str = self.search_query
-
         order_field: Optional[str] = self.ordering_option.field
+        category_slug: Optional[str] = self.category_slug
 
         return ProductRepository.filter(
             search_query=search_query,
             order_field=order_field,
+            category_slug=category_slug,
         )
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template.
-
-        Adds the current search query (if any) to the context
-        under the key `search_query` to preserve the input in the search field.
 
         Args:
             **kwargs: Additional context passed to the base implementation.
@@ -58,6 +72,9 @@ class ProductListView(generic.ListView):
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["search_query"] = self.search_query
         context["current_ordering_option"] = self.ordering_option
+        context["category"] = CategoryRepository.get_by_slug(
+            slug=self.category_slug
+        )
         return context
 
     @property
@@ -74,11 +91,23 @@ class ProductListView(generic.ListView):
         return ORDERING_OPTIONS.get(ordering_option_key, ORDERING_OPTIONS[""])
 
     @property
+    def category_slug(self) -> str:
+        """Return the category slug from URL keyword arguments.
+
+        Fetches the 'slug' parameter from `self.kwargs` and returns it.
+
+        Returns:
+            str: The category slug string. Returns an empty string if
+            no slug parameter is provided in the URL.
+        """
+        return self.kwargs.get("slug", "")
+
+    @property
     def search_query(self) -> str:
         """Return the search query string from the request.
 
         Fetches the 'q' GET parameter and strips whitespace from
-        the beginning and end. Used to filter the product queryset.
+        the beginning and end.
 
         Returns:
             str: The cleaned search query string. Returns an empty

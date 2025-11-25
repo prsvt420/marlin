@@ -5,6 +5,7 @@ from django.db.models import (
     ExpressionWrapper,
     F,
     Prefetch,
+    Q,
     QuerySet,
 )
 
@@ -42,6 +43,7 @@ class ProductRepository:
         search_query: Optional[str] = None,
         only_active: bool = True,
         order_field: Optional[str] = None,
+        category_slug: Optional[str] = None,
     ) -> QuerySet[Product]:
         """Return a filtered queryset of products.
 
@@ -50,6 +52,7 @@ class ProductRepository:
             only_active (bool): If True, returns only active products.
             Default True.
             order_field (Optional[str]): Field to order by.
+            category_slug (Optional[str]): Category slug for filtering.
 
         Returns:
             QuerySet[Product]: A queryset containing active Product
@@ -59,6 +62,12 @@ class ProductRepository:
 
         if only_active:
             queryset = queryset.filter(is_active=True)
+
+        if category_slug:
+            queryset = queryset.filter(
+                Q(category__slug=category_slug)
+                | Q(category__parent__slug=category_slug),  # noqa: W503
+            )
 
         if search_query:
             queryset = queryset.filter(name__icontains=search_query)

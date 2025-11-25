@@ -2,7 +2,7 @@
 
 {% load static i18n %}
 
-{% block title %}{% trans "Catalog" %}{% endblock %}
+{% block title %}{{ category.name }}{% endblock %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
@@ -11,9 +11,9 @@
 {% block content %}
 <section class="hero">
     <div class="hero__content">
-        <h2 class="hero__title">{% trans "Fresh. Fast. Homemade." %}</h2>
-        <p class="hero__subtitle">{% trans "Delivery of fresh products straight to your door. Fruits, vegetables, dairy products, and more." %}</p>
-        <form method="get" action="{% url 'catalog:product_list' %}">
+        <h2 class="hero__title">{{ category.name }}.</h2>
+        <p class="hero__subtitle">{{ category.description }}.</p>
+        <form method="get" action="{% url 'catalog:product_list' slug=category.slug %}">
             <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
         </form>
     </div>
@@ -44,7 +44,7 @@
                 {% trans "Sorting" %}: {{ current_ordering_option.label }}
             </button>
 
-            <ul class="dropdown__menu dropdown__menu--right">
+            <ul class="dropdown__menu dropdown__menu--left">
                 {% for ordering_option_key, ordering_option in ordering_options.items %}
                     <li class="dropdown__menu-item">
                         <a href="?sort={{ ordering_option_key }}" class="dropdown__menu-button {% if ordering_option.label == current_ordering_option.label %}dropdown__menu-button--active{% endif %}">{{ ordering_option.label }}</a>

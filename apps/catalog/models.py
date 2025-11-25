@@ -416,6 +416,17 @@ class Category(models.Model):
         """
         return f"{self.name}"
 
+    def get_absolute_url(self) -> str:
+        """Return the absolute URL for products in this category.
+
+        Uses the category's slug to reverse the URL named
+        `catalog:product_list`.
+
+        Returns:
+            str: The URL for products in this category.
+        """
+        return reverse("catalog:product_list", kwargs={"slug": self.slug})
+
 
 class ProductImage(models.Model):
     """Model representing images of a product.

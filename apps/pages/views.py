@@ -119,11 +119,11 @@ class OfferView(TemplateView):
 
 
 class CatalogRedirectView(RedirectView):
-    """Permanent redirection to the product catalog page.
+    """Permanent redirection to the catalog page.
 
-    Redirects the user to the `catalog:product_list`
+    Redirects the user to the `catalog:category_list`
     page with HTTP code 301.
     """
 
-    pattern_name = "catalog:product_list"
+    pattern_name = "catalog:category_list"
     permanent = True

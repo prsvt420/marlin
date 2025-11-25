@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="breadcrumbs">
-    <a href="{% url 'catalog:product_list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
+    <a href="{% url 'catalog:category_list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
     <span class="breadcrumbs__separator">•</span>
     <span class="breadcrumbs__current">{{ product.name }}</span>
 </div>

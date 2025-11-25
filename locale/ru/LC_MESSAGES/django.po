@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-11-25 06:43+0800\n"
+"POT-Creation-Date: 2025-11-26 00:45+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -127,8 +127,8 @@ msgid "Final price"
 msgstr "Финальная цена"
 
 #: .\apps\catalog\apps.py:13
+#: .\apps\catalog\templates\catalog\category_list.html:5
 #: .\apps\catalog\templates\catalog\product_detail.html:14
-#: .\apps\catalog\templates\catalog\product_list.html:5
 #: .\templates\includes\header.html:18
 msgid "Catalog"
 msgstr "Каталог"
@@ -268,7 +268,7 @@ msgid "Date and time when the product was last updated."
 msgstr "Дата и время последнего обновления продукта."
 
 #: .\apps\catalog\models.py:114 .\apps\catalog\models.py:171
-#: .\apps\catalog\models.py:281 .\apps\catalog\models.py:437
+#: .\apps\catalog\models.py:281 .\apps\catalog\models.py:448
 msgid "product"
 msgstr "продукт"
 
@@ -401,7 +401,7 @@ msgstr "Название категории."
 msgid "Category description."
 msgstr "Описание категории."
 
-#: .\apps\catalog\models.py:372 .\apps\catalog\models.py:442
+#: .\apps\catalog\models.py:372 .\apps\catalog\models.py:453
 msgid "image"
 msgstr "изображение"
 
@@ -409,15 +409,15 @@ msgstr "изображение"
 msgid "Path to the category image."
 msgstr "Путь к изображению категории."
 
-#: .\apps\catalog\models.py:378 .\apps\catalog\models.py:448
+#: .\apps\catalog\models.py:378 .\apps\catalog\models.py:459
 msgid "alternative text"
 msgstr "альтернативный текст"
 
-#: .\apps\catalog\models.py:379 .\apps\catalog\models.py:449
+#: .\apps\catalog\models.py:379 .\apps\catalog\models.py:460
 msgid "Description of the image for SEO and accessibility."
 msgstr "Описание изображения для SEO и доступности."
 
-#: .\apps\catalog\models.py:383 .\apps\catalog\models.py:453
+#: .\apps\catalog\models.py:383 .\apps\catalog\models.py:464
 msgid "display order"
 msgstr "порядок отображения"
 
@@ -441,26 +441,39 @@ msgstr "Дата и время последнего обновления кат�
 msgid "categories"
 msgstr "категории"
 
-#: .\apps\catalog\models.py:438
+#: .\apps\catalog\models.py:449
 msgid "The product to which the image belongs."
 msgstr "Продукт, к которому принадлежит изображение."
 
-#: .\apps\catalog\models.py:443
+#: .\apps\catalog\models.py:454
 msgid "Path to the product image."
 msgstr "Путь к изображению товара."
 
-#: .\apps\catalog\models.py:454
+#: .\apps\catalog\models.py:465
 msgid "Order in which product images appear in lists."
 msgstr "Порядок, в котором изображения продуктов появляются в списках."
 
-#: .\apps\catalog\models.py:460
+#: .\apps\catalog\models.py:471
 msgid "product image"
 msgstr "изображение продукта"
 
-#: .\apps\catalog\models.py:461
+#: .\apps\catalog\models.py:472
 msgid "product images"
 msgstr "изображения продукта"
 
+#: .\apps\catalog\templates\catalog\category_list.html:14
+msgid "Fresh. Fast. Homemade."
+msgstr "Свежее. Быстро. По-домашнему."
+
+#: .\apps\catalog\templates\catalog\category_list.html:15
+msgid ""
+"Delivery of fresh products straight to your door. Fruits, vegetables, dairy "
+"products, and more."
+msgstr ""
+"Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и "
+"многое другое."
+
+#: .\apps\catalog\templates\catalog\category_list.html:33
 #: .\apps\catalog\templates\catalog\product_detail.html:35
 #: .\apps\catalog\templates\catalog\product_list.html:67
 msgid "No image available"
@@ -530,18 +543,6 @@ msgstr "Характеристики"
 #: .\apps\catalog\templates\catalog\product_detail.html:142
 msgid "No characteristics available"
 msgstr "Характеристики отсутствуют"
-
-#: .\apps\catalog\templates\catalog\product_list.html:14
-msgid "Fresh. Fast. Homemade."
-msgstr "Свежее. Быстро. По-домашнему."
-
-#: .\apps\catalog\templates\catalog\product_list.html:15
-msgid ""
-"Delivery of fresh products straight to your door. Fruits, vegetables, dairy "
-"products, and more."
-msgstr ""
-"Доставка свежих продуктов прямо к двери. Фрукты, овощи, молочные продукты и "
-"многое другое."
 
 #: .\apps\catalog\templates\catalog\product_list.html:17
 msgid "Find a product, e.g. — bananas"
