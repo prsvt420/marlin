@@ -39,6 +39,15 @@
     font-size: var(--font-size-xxl);
     font-weight: var(--font-weight-bold);
     color: var(--text-color);
+    display: flex;
+    align-items: baseline;
+}
+
+.categories__title svg {
+    fill: var(--text-color);
+    width: 9px;
+    height: 14px;
+    margin-left: 5px;
 }
 
 .categories__list {

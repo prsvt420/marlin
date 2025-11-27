@@ -21,7 +21,7 @@
         {% if parent_category.subcategories.exists %}
             <div class="categories__group">
                 <a href="{{ parent_category.get_absolute_url }}">
-                    <h2 class="categories__title">{{ parent_category.name }}</h2>
+                    <h2 class="categories__title">{{ parent_category.name }} <svg viewBox="0 0 9 14"><path d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z" /></svg></h2>
                 </a>
                 <div class="categories__list">
                     {% for subcategory in parent_category.subcategories.all %}
