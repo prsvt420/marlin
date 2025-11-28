@@ -13,6 +13,10 @@
 <div class="breadcrumbs">
     <a href="{% url 'catalog:category_list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
     <span class="breadcrumbs__separator">•</span>
+    {% for ancestor in product.category.get_hierarchy %}
+        <a href="{{ ancestor.get_absolute_url }}" class="breadcrumbs__link">{{ ancestor.name }}</a>
+        <span class="breadcrumbs__separator">•</span>
+    {% endfor %}
     <span class="breadcrumbs__current">{{ product.name }}</span>
 </div>
 
@@ -96,8 +100,12 @@
 
         <div class="product__block">
             <h3 class="product__subtitle">{% trans "Description" %}</h3>
-            <p class="product__text product__text--collapsed">{{ product.description }}</p>
-            <button class="product__text-expander" data-show="{% trans 'Show more' %}" data-hide="{% trans 'Hide' %}">{% trans "Show more" %}</button>
+            {% if product.description|length > 200 %}
+                <p class="product__text product__text--collapsed">{{ product.description }}</p>
+                <button class="product__text-expander" data-show="{% trans 'Show more' %}" data-hide="{% trans 'Hide' %}">{% trans "Show more" %}</button>
+            {% else %}
+                <p class="product__text">{{ product.description }}</p>
+            {% endif %}
         </div>
 
         <div class="product__block">

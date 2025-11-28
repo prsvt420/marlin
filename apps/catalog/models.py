@@ -1,4 +1,5 @@
 from decimal import ROUND_HALF_UP, Decimal
+from typing import List, Optional
 
 from django.db import models
 from django.urls import reverse
@@ -407,6 +408,24 @@ class Category(models.Model):
         verbose_name = _("category")
         verbose_name_plural = _("categories")
         ordering = ("sort_order", "name")
+
+    def get_hierarchy(self) -> List["Category"]:
+        """Returns the hierarchy of categories.
+
+        Returns:
+            List[Category]: A list of Category objects
+            representing the full hierarchy.
+        """
+        hierarchy: List[Category] = []
+        category: Optional[Category] = self
+
+        while category is not None:
+            hierarchy.append(category)
+            category = category.parent
+
+        hierarchy.reverse()
+
+        return hierarchy
 
     def __str__(self) -> str:
         """Return the category name.
