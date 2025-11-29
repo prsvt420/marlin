@@ -13,7 +13,6 @@ class VacancyListView(ListView):
 
     Uses the `vacancies/vacancy_list.html` template and provides
     a context variable `vacancies` containing all Vacancy objects.
-    Optionally filtered by search query.
     """
 
     model = Vacancy
@@ -25,12 +24,8 @@ class VacancyListView(ListView):
     def get_queryset(self) -> QuerySet[Vacancy]:
         """Return the queryset of vacancies.
 
-        If the `q` GET parameter is provided, the queryset is filtered
-        based on the search query.
-
         Returns:
-            QuerySet[Vacancy]: A queryset of Vacancy objects,
-            optionally filtered by the search term.
+            QuerySet[Vacancy]: A queryset of Vacancy objects.
         """
         search_query: str = self.search_query
 
@@ -38,9 +33,6 @@ class VacancyListView(ListView):
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template.
-
-        Adds the current search query (if any) to the context
-        under the key `search_query` to preserve the input in the search field.
 
         Args:
             **kwargs: Additional context passed to the base implementation.
@@ -57,7 +49,7 @@ class VacancyListView(ListView):
         """Return the search query string from the request.
 
         Fetches the 'q' GET parameter and strips whitespace from
-        the beginning and end. Used to filter the product queryset.
+        the beginning and end.
 
         Returns:
             str: The cleaned search query string. Returns an empty
