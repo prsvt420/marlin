@@ -38,7 +38,7 @@ class ContactView(FormView):
         contact_context: ContactContext = {
             "name": form.cleaned_data["name"],
             "email": form.cleaned_data["email"],
-            "phone": form.cleaned_data["phone"],
+            "phone_number": form.cleaned_data["phone_number"],
             "subject": form.cleaned_data["subject"],
             "message": form.cleaned_data["message"],
         }

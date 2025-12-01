@@ -6,13 +6,13 @@ class ContactContext(TypedDict):
 
     name (str): Full name of the user.
     email (str): User's email address.
-    phone (str): User's phone number.
+    phone_number (str): User's phone number.
     subject (str): Subject or topic of the message.
     message (str): The main text body of the user's message.
     """
 
     name: str
     email: str
-    phone: str
+    phone_number: str
     subject: str
     message: str

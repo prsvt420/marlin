@@ -11,13 +11,13 @@ class ContactForm(forms.Form):
     Attributes:
         name (CharField): Full name of the user.
         email (EmailField): User's email address.
-        phone (CharField): User's phone number.
+        phone_number (CharField): User's phone number.
         subject (CharField): Subject or topic of the message.
         message (CharField): The main text body of the user's message.
     """
 
     name = forms.CharField()
     email = forms.EmailField()
-    phone = forms.CharField()
+    phone_number = forms.CharField()
     subject = forms.CharField()
     message = forms.CharField(widget=forms.Textarea)

@@ -35,8 +35,8 @@
           <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="{% trans 'Enter your email' %}">
         </div>
         <div class="contact__form-group">
-          <label class="contact__label" for="phone">{% trans "Phone" %} {% if form.phone.errors %}<sup>*{{ form.phone.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" autocomplete="off" value="{{ form.phone.value|default:'' }}" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+          <label class="contact__label" for="phone_number">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
+          <input class="contact__input" autocomplete="off" value="{{ form.phone_number.value|default:'' }}" type="tel" id="phone_number" name="phone_number" placeholder="+7 (___) ___-__-__">
         </div>
         <div class="contact__form-group">
           <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
@@ -56,7 +56,7 @@
         <p class="contact-card__text">{% trans "Moscow, Example Street, 15" %}</p>
       </article>
       <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Phone" %}</h3>
+        <h3 class="contact-card__title">{% trans "Phone number" %}</h3>
         <p class="contact-card__text">+7 (495) 123-45-67</p>
       </article>
       <article class="contact-card">
