@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-02 20:32+0800\n"
+"POT-Creation-Date: 2025-12-04 19:08+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -22,6 +22,122 @@ msgstr ""
 #: .\apps\accounts\apps.py:13
 msgid "Accounts"
 msgstr "Аккаунты"
+
+#: .\apps\accounts\forms.py:31
+msgid "The password is required."
+msgstr "Пароль обязателен."
+
+#: .\apps\accounts\forms.py:37
+msgid "The password confirmation is required."
+msgstr "Подтверждение пароля обязательно."
+
+#: .\apps\accounts\forms.py:54
+msgid "The username must not be longer than 255 characters."
+msgstr "Длина имени пользователя не должна превышать 255 символов."
+
+#: .\apps\accounts\forms.py:56
+msgid "This username is already in use."
+msgstr "Это имя пользователя уже используется."
+
+#: .\apps\accounts\forms.py:57
+msgid "The username is required."
+msgstr "Имя пользователя обязательно."
+
+#: .\apps\accounts\forms.py:61
+msgid "The email must not be longer than 255 characters."
+msgstr "Длина электронной почты не должна превышать 255 символов."
+
+#: .\apps\accounts\forms.py:64
+msgid "The email must be in the format user@example.com."
+msgstr "Электронная почта должена быть в формате user@example.com."
+
+#: .\apps\accounts\forms.py:66
+msgid "This email address is already registered."
+msgstr "Эта электронная почта уже зарегистрирована."
+
+#: .\apps\accounts\forms.py:67
+msgid "The email is required."
+msgstr "Электронная почта обязательна."
+
+#: .\apps\accounts\forms.py:71
+msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
+msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
+
+#: .\apps\accounts\forms.py:74
+msgid "This phone number is already registered."
+msgstr "Этот номер телефона уже зарегистрирован."
+
+#: .\apps\accounts\forms.py:75
+msgid "The phone number is required."
+msgstr "Номер телефона обязателен."
+
+#: .\apps\accounts\forms.py:79
+msgid "The first name must not be longer than 255 characters."
+msgstr "Длина имени не должна превышать 255 символов."
+
+#: .\apps\accounts\forms.py:81
+msgid "The first name is required."
+msgstr "Имя обязательно."
+
+#: .\apps\accounts\forms.py:85
+msgid "The last name must not be longer than 255 characters."
+msgstr "Длина фамилии не должна превышать 255 символов."
+
+#: .\apps\accounts\forms.py:87
+msgid "The last name is required."
+msgstr "Фамилия обязательна."
+
+#: .\apps\accounts\forms.py:91
+msgid "The middle name must not be longer than 255 characters."
+msgstr "Длина отчества не должна превышать 255 символов."
+
+#: .\apps\accounts\models.py:37
+msgid "email"
+msgstr "электронная почта"
+
+#: .\apps\accounts\models.py:38
+msgid "User email."
+msgstr "Электронная почта пользователя."
+
+#: .\apps\accounts\models.py:42
+msgid "phone number"
+msgstr "номер телефона"
+
+#: .\apps\accounts\models.py:43
+msgid "User phone number."
+msgstr "Номер телефона пользователя."
+
+#: .\apps\accounts\models.py:47
+msgid "first name"
+msgstr "имя"
+
+#: .\apps\accounts\models.py:49
+msgid "User first name."
+msgstr "Имя пользователя."
+
+#: .\apps\accounts\models.py:52
+msgid "last name"
+msgstr "фамилия"
+
+#: .\apps\accounts\models.py:54
+msgid "User last name."
+msgstr "Фамилия пользователя."
+
+#: .\apps\accounts\models.py:57
+msgid "middle name"
+msgstr "отчество"
+
+#: .\apps\accounts\models.py:59
+msgid "User middle name."
+msgstr "Отчество пользователя."
+
+#: .\apps\accounts\models.py:73
+msgid "user"
+msgstr "пользователь"
+
+#: .\apps\accounts\models.py:74
+msgid "users"
+msgstr "пользователи"
 
 #: .\apps\accounts\templates\accounts\signin.html:5
 #: .\apps\accounts\templates\accounts\signin.html:14
@@ -41,12 +157,12 @@ msgid "Enter username"
 msgstr "Введите имя пользователя"
 
 #: .\apps\accounts\templates\accounts\signin.html:30
-#: .\apps\accounts\templates\accounts\signup.html:30
+#: .\apps\accounts\templates\accounts\signup.html:50
 msgid "Password"
 msgstr "Пароль"
 
 #: .\apps\accounts\templates\accounts\signin.html:32
-#: .\apps\accounts\templates\accounts\signup.html:32
+#: .\apps\accounts\templates\accounts\signup.html:52
 msgid "Enter password"
 msgstr "Введите пароль"
 
@@ -57,51 +173,95 @@ msgstr "Забыли пароль?"
 #: .\apps\accounts\templates\accounts\signin.html:42
 #: .\apps\accounts\templates\accounts\signup.html:5
 #: .\apps\accounts\templates\accounts\signup.html:14
-#: .\apps\accounts\templates\accounts\signup.html:41
+#: .\apps\accounts\templates\accounts\signup.html:61
 msgid "Sign up"
 msgstr "Зарегистрироваться"
 
 #: .\apps\accounts\templates\accounts\signin.html:47
-#: .\apps\accounts\templates\accounts\signup.html:48
+#: .\apps\accounts\templates\accounts\signup.html:68
 msgid "or"
 msgstr "или"
 
 #: .\apps\accounts\templates\accounts\signin.html:51
-#: .\apps\accounts\templates\accounts\signup.html:52
+#: .\apps\accounts\templates\accounts\signup.html:72
 msgid "Sign in with VK ID"
 msgstr "Войти с VK ID"
 
 #: .\apps\accounts\templates\accounts\signin.html:55
-#: .\apps\accounts\templates\accounts\signup.html:56
+#: .\apps\accounts\templates\accounts\signup.html:76
 msgid "Sign in with Google"
 msgstr "Войти с Google"
 
+#: .\apps\accounts\templates\accounts\signup.html:30
+#: .\apps\pages\templates\pages\contact.html:34
+#: .\apps\pages\templates\pages\contact.html:63
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\apps\accounts\templates\accounts\signup.html:31
+msgid "Enter email"
+msgstr "Введите email"
+
+#: .\apps\accounts\templates\accounts\signup.html:34
+#: .\apps\pages\templates\pages\contact.html:38
+#: .\apps\pages\templates\pages\contact.html:59
+msgid "Phone number"
+msgstr "Номер телефона"
+
 #: .\apps\accounts\templates\accounts\signup.html:38
+msgid "First name"
+msgstr "Имя"
+
+#: .\apps\accounts\templates\accounts\signup.html:39
+msgid "Enter first name"
+msgstr "Введите имя"
+
+#: .\apps\accounts\templates\accounts\signup.html:42
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\apps\accounts\templates\accounts\signup.html:43
+msgid "Enter last name"
+msgstr "Введите фамилию"
+
+#: .\apps\accounts\templates\accounts\signup.html:46
+msgid "Middle name"
+msgstr "Отчество"
+
+#: .\apps\accounts\templates\accounts\signup.html:46
+msgid "if any"
+msgstr "если есть"
+
+#: .\apps\accounts\templates\accounts\signup.html:47
+msgid "Enter middle name"
+msgstr "Введите отчество"
+
+#: .\apps\accounts\templates\accounts\signup.html:58
 msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
-#: .\apps\accounts\templates\accounts\signup.html:39
+#: .\apps\accounts\templates\accounts\signup.html:59
 msgid "Confirm password"
 msgstr "Подтвердите пароль"
 
-#: .\apps\accounts\templates\accounts\signup.html:43
+#: .\apps\accounts\templates\accounts\signup.html:63
 msgid "Already have an account? Sign in"
 msgstr "Уже есть аккаунт? Войти"
 
-#: .\apps\accounts\views.py:18
+#: .\apps\accounts\views.py:20
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:38 .\apps\accounts\views.py:97
+#: .\apps\accounts\views.py:40 .\apps\accounts\views.py:99
 #: .\apps\pages\views.py:86
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:62
+#: .\apps\accounts\views.py:64
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:77
+#: .\apps\accounts\views.py:79
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
@@ -604,19 +764,9 @@ msgstr "Имя"
 msgid "Enter your name"
 msgstr "Введите ваше имя"
 
-#: .\apps\pages\templates\pages\contact.html:34
-#: .\apps\pages\templates\pages\contact.html:63
-msgid "Email"
-msgstr "Электронная почта"
-
 #: .\apps\pages\templates\pages\contact.html:35
 msgid "Enter your email"
 msgstr "Введите ваш email"
-
-#: .\apps\pages\templates\pages\contact.html:38
-#: .\apps\pages\templates\pages\contact.html:59
-msgid "Phone number"
-msgstr "Номер телефона"
 
 #: .\apps\pages\templates\pages\contact.html:42
 msgid "Subject"

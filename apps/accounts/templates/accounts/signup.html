@@ -27,6 +27,26 @@
                 <input type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="{% trans 'Enter username' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
+                <label for="email" class="auth__label">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
+                <input type="text" value="{{ form.email.value|default:'' }}" name="email" id="email" placeholder="{% trans 'Enter email' %}" class="auth__input">
+            </div>
+            <div class="auth__form-group">
+                <label for="phone_number" class="auth__label">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
+                <input type="tel" autocomplete="off" value="{{ form.phone_number.value|default:'' }}" name="phone_number" id="phone_number" placeholder="+7 (___) ___-__-__" class="auth__input">
+            </div>
+            <div class="auth__form-group">
+                <label for="first_name" class="auth__label">{% trans "First name" %} {% if form.first_name.errors %}<sup>*{{ form.first_name.errors.0 }}</sup>{% endif %}</label>
+                <input type="text" value="{{ form.first_name.value|default:'' }}" name="first_name" id="first_name" placeholder="{% trans 'Enter first name' %}" class="auth__input">
+            </div>
+            <div class="auth__form-group">
+                <label for="last_name" class="auth__label">{% trans "Last name" %} {% if form.last_name.errors %}<sup>*{{ form.last_name.errors.0 }}</sup>{% endif %}</label>
+                <input type="text" value="{{ form.last_name.value|default:'' }}" name="last_name" id="last_name" placeholder="{% trans 'Enter last name' %}" class="auth__input">
+            </div>
+             <div class="auth__form-group">
+                <label for="middle_name" class="auth__label">{% trans "Middle name" %} ({% trans "if any" %}) {% if form.middle_name.errors %}<sup>*{{ form.middle_name.errors.0 }}</sup>{% endif %}</label>
+                <input type="text" value="{{ form.middle_name.value|default:'' }}" name="middle_name" id="middle_name" placeholder="{% trans 'Enter middle name' %}" class="auth__input">
+            </div>
+            <div class="auth__form-group">
                 <label for="password" class="auth__label">{% trans "Password" %} {% if form.password1.errors %}<sup>*{{ form.password1.errors.0 }}</sup>{% endif %}</label>
                 <div class="auth__input-wrapper">
                     <input type="password" name="password1" id="password" placeholder="{% trans 'Enter password' %}" class="auth__input">
@@ -63,4 +83,6 @@
 
 {% block js %}
 <script src="{% static 'accounts/js/toggle-password.js' %}"></script>
+<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+<script src="{% static 'js/masks.js' %}"></script>
 {% endblock %}

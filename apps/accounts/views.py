@@ -1,11 +1,13 @@
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
+
+from apps.accounts.forms import SignUpForm
 
 
 class SignInView(SuccessMessageMixin, LoginView):
@@ -67,17 +69,17 @@ class SignOutView(LogoutView):
 class SignUpView(SuccessMessageMixin, CreateView):
     """Displays the sign up page.
 
-    Renders the `accounts/signup.html` template with a UserCreationForm.
+    Renders the `accounts/signup.html` template with a SignUpForm.
     """
 
     template_name = "accounts/signup.html"
-    form_class = UserCreationForm
+    form_class = SignUpForm
     success_url = reverse_lazy("accounts:signin")
     success_message = _(
         "You have successfully signed up! Sign in to your account."
     )
 
-    def form_invalid(self, form: UserCreationForm) -> HttpResponse:
+    def form_invalid(self, form: SignUpForm) -> HttpResponse:
         """Handle invalid form submission.
 
         Displays an error message to the user when the sign up form
@@ -85,7 +87,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
         correct the errors and try again.
 
         Args:
-            form (UserCreationForm): The invalid sign up form
+            form (SignUpForm): The invalid sign up form
             instance with validation errors.
 
         Returns:

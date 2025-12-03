@@ -29,6 +29,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "debug_toolbar",
+    "phonenumber_field",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
@@ -93,6 +94,8 @@ AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
         "NumericPasswordValidator",
     },
 ]
+
+AUTH_USER_MODEL: str = "accounts.User"
 
 TIME_ZONE: str = "Europe/Moscow"
 USE_I18N: bool = True
