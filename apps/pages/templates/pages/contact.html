@@ -27,12 +27,12 @@
         {% csrf_token %}
 
         <div class="contact__form-group">
-          <label class="contact__label" for="name">{% trans "Name" %} {% if form.name.errors %}<sup>*{{ form.name.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.name.value|default:'' }}" type="text" id="name" name="name" placeholder="{% trans 'Enter your name' %}">
+          <label class="contact__label" for="full_name">{% trans "Full name" %} {% if form.full_name.errors %}<sup>*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
+          <input class="contact__input" value="{{ form.full_name.value|default:'' }}" type="text" id="full_name" name="full_name" placeholder="{% trans 'Enter full name' %}">
         </div>
         <div class="contact__form-group">
           <label class="contact__label" for="email">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="{% trans 'Enter your email' %}">
+          <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="{% trans 'Enter email' %}">
         </div>
         <div class="contact__form-group">
           <label class="contact__label" for="phone_number">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
@@ -40,11 +40,11 @@
         </div>
         <div class="contact__form-group">
           <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter the subject' %}">
+          <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter subject' %}">
         </div>
         <div class="contact__form-group">
           <label class="contact__label" for="message">{% trans "Message" %} {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
-          <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter your message' %}">{{ form.message.value|default:'' }}</textarea>
+          <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
         </div>
         <button type="submit" class="contact__form-button">{% trans "Send" %}</button>
       </form>
@@ -62,7 +62,7 @@
       <article class="contact-card">
         <h3 class="contact-card__title">{% trans "Email" %}</h3>
         <p class="contact-card__text">
-          <a class="contact-card__link" href="mailto:support@marlin.ru">support@marlin.ru</a>
+          <a class="contact-card__link" href="mailto:support@marlinio.ru">support@marlinio.ru</a>
         </p>
       </article>
       <article class="contact-card">

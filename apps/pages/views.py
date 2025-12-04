@@ -36,7 +36,7 @@ class ContactView(FormView):
             form_valid method.
         """
         contact_context: ContactContext = {
-            "name": form.cleaned_data["name"],
+            "full_name": form.cleaned_data["full_name"],
             "email": form.cleaned_data["email"],
             "phone_number": form.cleaned_data["phone_number"],
             "subject": form.cleaned_data["subject"],
