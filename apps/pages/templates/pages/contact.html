@@ -25,27 +25,28 @@
 
       <form action="{% url 'pages:contact' %}" method="post" class="contact__form-body">
         {% csrf_token %}
-
-        <div class="contact__form-group">
-          <label class="contact__label" for="full_name">{% trans "Full name" %} {% if form.full_name.errors %}<sup>*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.full_name.value|default:'' }}" type="text" id="full_name" name="full_name" placeholder="{% trans 'Enter full name' %}">
-        </div>
-        <div class="contact__form-group">
-          <label class="contact__label" for="email">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.email.value|default:'' }}" type="text" id="email" name="email" placeholder="{% trans 'Enter email' %}">
-        </div>
-        <div class="contact__form-group">
-          <label class="contact__label" for="phone_number">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" autocomplete="off" value="{{ form.phone_number.value|default:'' }}" type="tel" id="phone_number" name="phone_number" placeholder="+7 (___) ___-__-__">
-        </div>
-        <div class="contact__form-group">
-          <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
-          <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter subject' %}">
-        </div>
-        <div class="contact__form-group">
-          <label class="contact__label" for="message">{% trans "Message" %} {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
-          <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
-        </div>
+        {% with full_name=request.user.get_full_name email=request.user.email phone_number=request.user.phone_number %}
+          <div class="contact__form-group">
+            <label class="contact__label" for="full_name">{% trans "Full name" %} {% if form.full_name.errors %}<sup>*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
+            <input autocomplete="name" class="contact__input" value="{{ form.full_name.value|default:full_name }}" type="text" id="full_name" name="full_name" placeholder="{% trans 'Enter full name' %}">
+          </div>
+          <div class="contact__form-group">
+            <label class="contact__label" for="email">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
+            <input autocomplete="email" class="contact__input" value="{{ form.email.value|default:email }}" type="text" id="email" name="email" placeholder="{% trans 'Enter email' %}">
+          </div>
+          <div class="contact__form-group">
+            <label class="contact__label" for="phone_number">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
+            <input autocomplete="tel" class="contact__input" value="{{ form.phone_number.value|default:phone_number }}" type="tel" id="phone_number" name="phone_number" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="contact__form-group">
+            <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
+            <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter subject' %}">
+          </div>
+          <div class="contact__form-group">
+            <label class="contact__label" for="message">{% trans "Message" %} {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
+            <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
+          </div>
+      {% endwith %}
         <button type="submit" class="contact__form-button">{% trans "Send" %}</button>
       </form>
 

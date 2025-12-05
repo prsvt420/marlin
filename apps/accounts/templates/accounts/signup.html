@@ -24,39 +24,39 @@
 
             <div class="auth__form-group">
                 <label for="username" class="auth__label">{% trans "Username" %} {% if form.username.errors %}<sup>*{{ form.username.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="{% trans 'Enter username' %}" class="auth__input">
+                <input autocomplete="username" type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="{% trans 'Enter username' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
                 <label for="email" class="auth__label">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.email.value|default:'' }}" name="email" id="email" placeholder="{% trans 'Enter email' %}" class="auth__input">
+                <input autocomplete="email" type="text" value="{{ form.email.value|default:'' }}" name="email" id="email" placeholder="{% trans 'Enter email' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
                 <label for="phone_number" class="auth__label">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
-                <input type="tel" autocomplete="off" value="{{ form.phone_number.value|default:'' }}" name="phone_number" id="phone_number" placeholder="+7 (___) ___-__-__" class="auth__input">
+                <input type="tel" autocomplete="tel" value="{{ form.phone_number.value|default:'' }}" name="phone_number" id="phone_number" placeholder="+7 (___) ___-__-__" class="auth__input">
             </div>
             <div class="auth__form-group">
                 <label for="first_name" class="auth__label">{% trans "First name" %} {% if form.first_name.errors %}<sup>*{{ form.first_name.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.first_name.value|default:'' }}" name="first_name" id="first_name" placeholder="{% trans 'Enter first name' %}" class="auth__input">
+                <input autocomplete="given-name" type="text" value="{{ form.first_name.value|default:'' }}" name="first_name" id="first_name" placeholder="{% trans 'Enter first name' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
                 <label for="last_name" class="auth__label">{% trans "Last name" %} {% if form.last_name.errors %}<sup>*{{ form.last_name.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.last_name.value|default:'' }}" name="last_name" id="last_name" placeholder="{% trans 'Enter last name' %}" class="auth__input">
+                <input autocomplete="family-name" type="text" value="{{ form.last_name.value|default:'' }}" name="last_name" id="last_name" placeholder="{% trans 'Enter last name' %}" class="auth__input">
             </div>
              <div class="auth__form-group">
                 <label for="middle_name" class="auth__label">{% trans "Middle name" %} ({% trans "if any" %}) {% if form.middle_name.errors %}<sup>*{{ form.middle_name.errors.0 }}</sup>{% endif %}</label>
-                <input type="text" value="{{ form.middle_name.value|default:'' }}" name="middle_name" id="middle_name" placeholder="{% trans 'Enter middle name' %}" class="auth__input">
+                <input autocomplete="additional-name" type="text" value="{{ form.middle_name.value|default:'' }}" name="middle_name" id="middle_name" placeholder="{% trans 'Enter middle name' %}" class="auth__input">
             </div>
             <div class="auth__form-group">
                 <label for="password" class="auth__label">{% trans "Password" %} {% if form.password1.errors %}<sup>*{{ form.password1.errors.0 }}</sup>{% endif %}</label>
                 <div class="auth__input-wrapper">
-                    <input type="password" name="password1" id="password" placeholder="{% trans 'Enter password' %}" class="auth__input">
+                    <input autocomplete="new-password" type="password" name="password1" id="password" placeholder="{% trans 'Enter password' %}" class="auth__input">
                     <svg class="auth__eye auth__eye--open" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 13.078c4.418 0 8-5 8-5s-3.582-5-8-5-8 5-8 5 3.582 5 8 5zm0-2a3 3 0 100-6 3 3 0 000 6zm0-1.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
                     <svg class="auth__eye auth__eye--closed" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.406 1.125l-3.229 3.229C14.47 5.834 16 7.969 16 7.969s-3.582 5-8 5c-1.244 0-2.422-.397-3.472-.966l-3.372 3.372-.707-.707 3.2-3.2C1.451 9.997 0 7.969 0 7.969s3.582-5 8-5c1.17 0 2.28.351 3.282.867L14.7.418l.707.707zM8 4.969c.61 0 1.179.182 1.653.496L8.546 6.57a1.5 1.5 0 00-1.943 1.943L5.495 9.622A3 3 0 018 4.968zm-.742 4.304l-1.08 1.08a3 3 0 004.205-4.205l-1.079 1.08a1.5 1.5 0 01-2.046 2.046z"></path></svg>
                 </div>
             </div>
             <div class="auth__form-group">
                 <label for="password2" class="auth__label">{% trans "Password confirmation" %} {% if form.password2.errors %}<sup>*{{ form.password2.errors.0 }}</sup>{% endif %}</label>
-                <input type="password" name="password2" id="password2" placeholder="{% trans 'Confirm password' %}" class="auth__input">
+                <input autocomplete="new-password" type="password" name="password2" id="password2" placeholder="{% trans 'Confirm password' %}" class="auth__input">
             </div>
             <button type="submit" class="auth__form-button">{% trans "Sign up" %}</button>
             <div class="auth__links">
