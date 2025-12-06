@@ -8,5 +8,5 @@
         <a href="{% url 'pages:contact' %}" class="footer__links-link">{% trans "Contacts" %}</a>
         <a href="{% url 'vacancies:vacancy_list' %}" class="footer__links-link">{% trans "Vacancies" %}</a>
     </div>
-    <p class="footer__copyright">{% trans "© 2025 Marlin — All rights reserved." %}</p>
+    <p class="footer__copyright">© {% now "Y" %} Marlin — {% trans "All rights reserved." %}</p>
 </footer>
