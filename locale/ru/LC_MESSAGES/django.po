@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-06 21:07+0800\n"
+"POT-Creation-Date: 2025-12-07 18:29+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -760,6 +760,91 @@ msgstr "Длина темы не должна превышать 255 симво�
 msgid "The message is required."
 msgstr "Сообщение обязательно."
 
+#: .\apps\pages\services\email_service.py:66
+#: .\apps\pages\templates\emails\contact_message.html:78
+msgid "New request!"
+msgstr "Новое обращение!"
+
+#: .\apps\pages\services\email_service.py:80
+#: .\apps\pages\templates\emails\contact_reply.html:78
+msgid "Thank for request!"
+msgstr "Спасибо за обращение!"
+
+#: .\apps\pages\templates\emails\contact_message.html:65
+#: .\apps\pages\templates\emails\contact_reply.html:65
+#: .\templates\includes\header.html:7
+msgid "Marlin logo"
+msgstr "Логотип Marlin"
+
+#: .\apps\pages\templates\emails\contact_message.html:70
+#: .\apps\pages\templates\emails\contact_reply.html:70
+#: .\templates\includes\header.html:10
+msgid "Fresh products near you"
+msgstr "Свежие продукты рядом с вами"
+
+#: .\apps\pages\templates\emails\contact_message.html:79
+msgid ""
+"A new request has been received. Please review it and contact the user. If "
+"necessary, you may request additional information from the user."
+msgstr ""
+"Поступило новое обращение. Пожалуйста, ознакомьтесь с ним и свяжитесь с "
+"пользователем. При необходимости вы можете запросить у пользователя "
+"дополнительную информацию."
+
+#: .\apps\pages\templates\emails\contact_message.html:100
+msgid ""
+"You received this email because a new request was submitted on the website "
+"through the feedback form. This message confirms that the user's request has "
+"been successfully received and requires further processing."
+msgstr ""
+"Вы получили это письмо, потому что на сайте было отправлено новое обращение "
+"через форму обратной связи. Это сообщение подтверждает, что обращение "
+"пользователя успешно получено и требует дальнейшей обработки."
+
+#: .\apps\pages\templates\emails\contact_message.html:106
+#: .\apps\pages\templates\emails\contact_reply.html:111
+#: .\templates\includes\footer.html:11
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+#: .\apps\pages\templates\emails\contact_reply.html:79
+msgid ""
+"We've received your request and will contact you shortly. If you have any "
+"further questions, please feel free to contact us again."
+msgstr ""
+"Мы получили ваше сообщение и свяжемся с вами в ближайшее время. Если у вас "
+"есть дополнительные вопросы, вы всегда можете написать нам снова."
+
+#: .\apps\pages\templates\emails\contact_reply.html:86
+msgid "Go to website"
+msgstr "Перейти на сайт"
+
+#: .\apps\pages\templates\emails\contact_reply.html:93
+msgid "What will happen next?"
+msgstr "Что будет дальше?"
+
+#: .\apps\pages\templates\emails\contact_reply.html:95
+msgid "We will process your request within 1-24 hours."
+msgstr "Мы обработаем ваше обращение в течение 1–24 часов."
+
+#: .\apps\pages\templates\emails\contact_reply.html:96
+msgid "The answer will come to this email."
+msgstr "Ответ придёт на эту электронную почту."
+
+#: .\apps\pages\templates\emails\contact_reply.html:97
+msgid "If we need to clarify any details, we will write to you additionally."
+msgstr "Если потребуется уточнить детали — мы напишем вам дополнительно."
+
+#: .\apps\pages\templates\emails\contact_reply.html:105
+msgid ""
+"You've received this email because you recently submitted a request through "
+"the contact form on our website. This message confirms that your request was "
+"successfully received."
+msgstr ""
+"Вы получили это письмо, потому что на сайте было отправлено новое обращение "
+"через форму обратной связи. Это сообщение подтверждает, что обращение "
+"пользователя успешно получено и требует дальнейшей обработки."
+
 #: .\apps\pages\templates\pages\contact.html:5
 #: .\templates\includes\footer.html:8 .\templates\includes\header.html:21
 msgid "Contacts"
@@ -1117,18 +1202,6 @@ msgstr "Публичная оферта"
 #: .\templates\includes\footer.html:7
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
-
-#: .\templates\includes\footer.html:11
-msgid "All rights reserved."
-msgstr "Все права защищены."
-
-#: .\templates\includes\header.html:7
-msgid "Marlin logo"
-msgstr "Логотип Marlin"
-
-#: .\templates\includes\header.html:10
-msgid "Fresh products near you"
-msgstr "Свежие продукты рядом с вами"
 
 #: .\templates\includes\header.html:27
 msgid "Sign out"

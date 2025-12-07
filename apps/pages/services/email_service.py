@@ -2,6 +2,7 @@ from typing import List
 
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
+from django.utils.translation import gettext_lazy as _
 
 from apps.pages.types import ContactContext
 from config import settings
@@ -21,7 +22,7 @@ class EmailService:
 
     def send_email(
         self,
-        subject: str,
+        subject,
         to: List[str],
         template_name: str,
         contact_context: ContactContext,
@@ -30,7 +31,7 @@ class EmailService:
         """Send an email with HTML content rendered from a template.
 
         Args:
-            subject (str): Subject of the email.
+            subject: Subject of the email.
             to (List[str]): List of recipient email addresses.
             template_name (str): Path to the email template.
             contact_context (ContactContext): Context data for rendering
@@ -61,7 +62,7 @@ class EmailService:
                 including sender info and message content.
         """
         self.send_email(
-            subject=f"Сообщение с сайта от {contact_context.get('name')}",
+            subject=_("New request!"),
             to=[settings.DEFAULT_FROM_EMAIL],
             template_name="emails/contact_message.html",
             contact_context=contact_context,
@@ -75,7 +76,7 @@ class EmailService:
                 including sender's email to reply to.
         """
         self.send_email(
-            subject="Спасибо за обращение!",
+            subject=_("Thank for request!"),
             to=[contact_context["email"]],
             template_name="emails/contact_reply.html",
             contact_context=contact_context,
