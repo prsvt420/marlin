@@ -8,9 +8,9 @@ class UnitType(models.TextChoices):
     Defines the available units of measurement for products.
 
     Attributes:
-        KILOGRAM (str): Kilogram unit ("kg").
-        LITER (str): Liter unit ("l").
-        PIECE (str): Piece/unit ("pcs").
+        KILOGRAM: Kilogram unit ("kg").
+        LITER: Liter unit ("l").
+        PIECE: Piece/unit ("pcs").
     """
 
     KILOGRAM = "kg", _("kg")

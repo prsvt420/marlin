@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from django_stubs_ext import StrOrPromise
 from modeltranslation.admin import TranslationAdmin
 
 from .models import (
@@ -93,10 +94,10 @@ class VacancyAdmin(TranslationAdmin):
     empty_value_display = "—"
 
     @admin.display(description=_("Salary"), ordering="salary_from")
-    def formatted_salary(self, obj: Vacancy) -> str:
+    def formatted_salary(self, obj: Vacancy) -> StrOrPromise:
         """Return formatted salary.
 
         Returns:
-            str: Formatted salary.
+            StrOrPromise: Formatted salary.
         """
         return obj.get_formatted_salary()

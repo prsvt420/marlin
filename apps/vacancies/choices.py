@@ -9,10 +9,10 @@ class ExperienceLevel(models.TextChoices):
     that can be associated with a job or candidate.
 
     Attributes:
-        NO_EXPERIENCE (str): No prior work experience.
-        ONE_TO_THREE (str): From 1 to 3 years of experience.
-        THREE_TO_SIX (str): From 3 to 6 years of experience.
-        MORE_THAN_SIX (str): More than 6 years of experience.
+        NO_EXPERIENCE: No prior work experience.
+        ONE_TO_THREE: From 1 to 3 years of experience.
+        THREE_TO_SIX: From 3 to 6 years of experience.
+        MORE_THAN_SIX: More than 6 years of experience.
     """
 
     NO_EXPERIENCE = "no_exp", _("No experience")

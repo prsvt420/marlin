@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Tuple
 
 from decouple import config
 from django.urls import reverse_lazy
-from django.utils.functional import Promise
+from django_stubs_ext import StrOrPromise
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
 
@@ -153,6 +153,6 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
     },
 }
 
-LOGIN_URL: Promise = reverse_lazy("accounts:signin")
-LOGIN_REDIRECT_URL: Promise = reverse_lazy("catalog:category_list")
-LOGOUT_REDIRECT_URL: Promise = LOGIN_URL
+LOGIN_URL: StrOrPromise = reverse_lazy("accounts:signin")
+LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy("catalog:category_list")
+LOGOUT_REDIRECT_URL: StrOrPromise = LOGIN_URL

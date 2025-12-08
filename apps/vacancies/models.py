@@ -1,8 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
-from django.utils.functional import Promise
 from django.utils.translation import gettext_lazy as _
+from django_stubs_ext import StrOrPromise
 
 from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
@@ -120,11 +120,11 @@ class Vacancy(models.Model):
         """
         return f"{self.title} / {self.city}"
 
-    def get_formatted_salary(self) -> str:
+    def get_formatted_salary(self) -> StrOrPromise:
         """Return a formatted string representation of the salary range.
 
         Returns:
-            str: Formatted salary range in format 'X – Y', 'от X',
+            StrOrPromise: Formatted salary range in format 'X – Y', 'от X',
             'до Y' or empty string if not specified.
         """
         if self.salary_from and self.salary_to:
@@ -238,7 +238,7 @@ class City(models.Model):
         Returns:
             str: City name with region if available.
         """
-        prefix: Promise = _("city of")
+        prefix: StrOrPromise = _("city of")
 
         if self.region:
             return f"{prefix} {self.name}, {self.region.name}"

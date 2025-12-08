@@ -1,10 +1,9 @@
 from decimal import Decimal
-from typing import Union
 
 from django.contrib import admin
-from django.utils.functional import Promise
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
+from django_stubs_ext import StrOrPromise
 from modeltranslation.admin import TranslationAdmin
 
 from .models import (
@@ -56,11 +55,11 @@ class CategoryAdmin(TranslationAdmin):
     list_select_related = ("parent",)
 
     @admin.display(description=_("Image preview"))
-    def image_preview(self, obj: Category) -> Union[str, Promise]:
+    def image_preview(self, obj: Category) -> StrOrPromise:
         """Return an HTML image preview for the category.
 
         Returns:
-            Union[str, Promise]: HTML <img> tag if the image exists,
+            StrOrPromise: HTML <img> tag if the image exists,
             otherwise a fallback message.
         """
         if obj.image_path:

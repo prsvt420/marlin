@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-07 18:29+0800\n"
+"POT-Creation-Date: 2025-12-08 19:12+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\apps\accounts\apps.py:13
+#: .\apps\accounts\apps.py:14
 msgid "Accounts"
 msgstr "Аккаунты"
 
@@ -266,39 +266,39 @@ msgstr "Вы вышли из аккаунта. Хорошего дня!"
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\catalog\admin.py:55
+#: .\apps\catalog\admin.py:54
 msgid "Search by category name"
 msgstr "Поиск по названию категории"
 
-#: .\apps\catalog\admin.py:58
+#: .\apps\catalog\admin.py:57
 msgid "Image preview"
 msgstr "Превью изображения"
 
-#: .\apps\catalog\admin.py:72
+#: .\apps\catalog\admin.py:71
 #: .\apps\catalog\templates\catalog\category_list.html:33
 #: .\apps\catalog\templates\catalog\product_detail.html:39
 #: .\apps\catalog\templates\catalog\product_list.html:67
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
-#: .\apps\catalog\admin.py:82
+#: .\apps\catalog\admin.py:81
 msgid "Search by attribute name"
 msgstr "Поиск по названию атрибута"
 
-#: .\apps\catalog\admin.py:99 .\apps\catalog\admin.py:112
-#: .\apps\catalog\admin.py:129
+#: .\apps\catalog\admin.py:98 .\apps\catalog\admin.py:111
+#: .\apps\catalog\admin.py:128
 msgid "Search by product name"
 msgstr "Поиск по названию продукта"
 
-#: .\apps\catalog\admin.py:178
+#: .\apps\catalog\admin.py:177
 msgid "Search by name or article (SKU)"
 msgstr "Поиск по названию или артикулу (SKU)"
 
-#: .\apps\catalog\admin.py:202
+#: .\apps\catalog\admin.py:201
 msgid "Final price"
 msgstr "Финальная цена"
 
-#: .\apps\catalog\apps.py:13
+#: .\apps\catalog\apps.py:14
 #: .\apps\catalog\templates\catalog\category_list.html:5
 #: .\apps\catalog\templates\catalog\product_detail.html:14
 #: .\templates\includes\header.html:18
@@ -736,7 +736,7 @@ msgstr "По запросу ничего не найдено"
 msgid "No products found in the catalog"
 msgstr "В каталоге ничего не найдено"
 
-#: .\apps\pages\apps.py:13
+#: .\apps\pages\apps.py:14
 msgid "Pages"
 msgstr "Страницы"
 
@@ -920,27 +920,27 @@ msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
 
-#: .\apps\vacancies\admin.py:20
+#: .\apps\vacancies\admin.py:21
 msgid "Search by professional field name"
 msgstr "Поиск по названию профессиональной области"
 
-#: .\apps\vacancies\admin.py:31
+#: .\apps\vacancies\admin.py:32
 msgid "Search by region name"
 msgstr "Поиск по названию региона"
 
-#: .\apps\vacancies\admin.py:47
+#: .\apps\vacancies\admin.py:48
 msgid "Search by city and region name"
 msgstr "Поиск по названию города и региона"
 
-#: .\apps\vacancies\admin.py:65
+#: .\apps\vacancies\admin.py:66
 msgid "Search by vacancy title and description"
 msgstr "Поиск по заголовку и описанию вакансии"
 
-#: .\apps\vacancies\admin.py:95
+#: .\apps\vacancies\admin.py:96
 msgid "Salary"
 msgstr "Зарплата"
 
-#: .\apps\vacancies\apps.py:13
+#: .\apps\vacancies\apps.py:14
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:13
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:5
 #: .\templates\includes\footer.html:9
