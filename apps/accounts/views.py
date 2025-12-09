@@ -1,13 +1,28 @@
+from typing import Union
+
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import (
+    LoginView,
+    LogoutView,
+)
+from django.contrib.auth.views import (
+    PasswordResetConfirmView as _PasswordResetConfirmView,
+)
+from django.contrib.auth.views import PasswordResetView as _PasswordResetView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.http import HttpResponse
+from django.http import (
+    HttpResponse,
+    HttpResponseBase,
+    HttpResponsePermanentRedirect,
+)
+from django.shortcuts import redirect
+from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
-from apps.accounts.forms import SignUpForm
+from apps.accounts.forms import PasswordResetForm, SetPasswordForm, SignUpForm
 
 
 class SignInView(SuccessMessageMixin, LoginView):
@@ -99,3 +114,62 @@ class SignUpView(SuccessMessageMixin, CreateView):
             _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form)
+
+
+class PasswordResetView(SuccessMessageMixin, _PasswordResetView):
+    """Displays the password reset request page.
+
+    Renders the `accounts/password_reset.html` template with
+    a PasswordResetForm.
+    """
+
+    template_name = "accounts/password_reset.html"
+    email_template_name = "emails/password_reset.txt"
+    subject_template_name = "emails/password_reset_subject.txt"
+    html_email_template_name = "emails/password_reset.html"
+    success_message = _("A password reset link has been sent to your email.")
+    success_url = reverse_lazy("accounts:signin")
+    form_class = PasswordResetForm
+
+
+class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
+    """Displays the password reset confirmation page.
+
+    Renders the `accounts/password_reset_confirm.html` template with
+    a SetPasswordForm.
+    """
+
+    form_class = SetPasswordForm
+    template_name = "accounts/password_reset_confirm.html"
+    success_message = _(
+        "Your password has been updated. You can now sign"
+        " in with your new credentials."
+    )
+    success_url = reverse_lazy("accounts:signin")
+
+    def dispatch(
+        self, request, *args, **kwargs
+    ) -> Union[HttpResponseBase, HttpResponsePermanentRedirect]:
+        """Validate password reset link before processing the request.
+
+        Checks whether the password reset link provided in the URL is valid.
+        If the link is invalid or expired, an error message is displayed
+        to the user and they are redirected to the sign-in page.
+        Otherwise, continues with the standard dispatch flow.
+
+        Returns:
+            Union[HttpResponseBase, HttpResponsePermanentRedirect]:
+                - A redirect response to the sign-in page if
+                the link is invalid.
+                - Otherwise, the standard dispatch response
+                from the parent class.
+        """
+        response: HttpResponseBase = super().dispatch(request, *args, **kwargs)
+
+        if isinstance(response, TemplateResponse) and not self.validlink:
+            messages.error(
+                request, _("The password reset link is invalid or expired.")
+            )
+            return redirect("accounts:signin")
+
+        return response

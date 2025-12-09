@@ -38,7 +38,7 @@
             </div>
             <button type="submit" class="auth__form-button">{% trans "Sign in" %}</button>
             <div class="auth__links">
-                <a href="#" class="auth__link">{% trans "Forgot password?" %}</a>
+                <a href="{% url 'accounts:password_reset' %}" class="auth__link">{% trans "Forgot password?" %}</a>
                 <a href="{% url 'accounts:signup' %}" class="auth__link">{% trans "Sign up" %}</a>
             </div>
         </form>
