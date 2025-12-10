@@ -11,12 +11,14 @@ from django.contrib.auth.views import (
 )
 from django.contrib.auth.views import PasswordResetView as _PasswordResetView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.core.mail import EmailMultiAlternatives
 from django.http import (
     HttpResponse,
     HttpResponseBase,
     HttpResponsePermanentRedirect,
 )
 from django.shortcuts import redirect
+from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -173,3 +175,34 @@ class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
             return redirect("accounts:signin")
 
         return response
+
+    def form_valid(self, form: SetPasswordForm) -> HttpResponse:
+        """Process password reset confirmation and send notification emails.
+
+        Args:
+            form (SetPasswordForm): The submitted set password form instance.
+
+        Returns:
+            HttpResponse: The HTTP response returned by the parent class's
+            form_valid method.
+        """
+        body: str = render_to_string(
+            "emails/password_reset_complete.txt",
+        )
+        content: str = render_to_string(
+            template_name="emails/password_reset_complete.html",
+        )
+        subject: str = render_to_string(
+            "emails/password_reset_complete_subject.txt",
+        ).strip()
+
+        email_message: EmailMultiAlternatives = EmailMultiAlternatives(
+            subject=subject,
+            body=body,
+            to=[self.user.email],
+        )
+        email_message.attach_alternative(content=content, mimetype="text/html")
+
+        email_message.send()
+
+        return super().form_valid(form=form)

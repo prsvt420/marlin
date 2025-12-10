@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-09 23:33+0800\n"
+"POT-Creation-Date: 2025-12-10 23:20+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -204,6 +204,8 @@ msgstr "Подтвердите новый пароль"
 #: .\apps\accounts\templates\accounts\signin.html:5
 #: .\apps\accounts\templates\accounts\signin.html:14
 #: .\apps\accounts\templates\accounts\signin.html:39
+#: .\apps\accounts\templates\emails\password_reset_complete.html:86
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:10
 #: .\templates\includes\header.html:30
 msgid "Sign in"
 msgstr "Войти"
@@ -301,6 +303,7 @@ msgid "Already have an account? Sign in"
 msgstr "Уже есть аккаунт? Войти"
 
 #: .\apps\accounts\templates\emails\password_reset.html:65
+#: .\apps\accounts\templates\emails\password_reset_complete.html:65
 #: .\apps\pages\templates\emails\contact_message.html:65
 #: .\apps\pages\templates\emails\contact_reply.html:65
 #: .\templates\includes\header.html:7
@@ -309,6 +312,8 @@ msgstr "Логотип Marlin"
 
 #: .\apps\accounts\templates\emails\password_reset.html:70
 #: .\apps\accounts\templates\emails\password_reset.txt:4
+#: .\apps\accounts\templates\emails\password_reset_complete.html:70
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:4
 #: .\apps\pages\templates\emails\contact_message.html:70
 #: .\apps\pages\templates\emails\contact_reply.html:70
 #: .\templates\includes\header.html:10
@@ -326,6 +331,7 @@ msgstr ""
 
 #: .\apps\accounts\templates\emails\password_reset.html:93
 #: .\apps\accounts\templates\emails\password_reset.txt:12
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:12
 msgid ""
 "You've received this email because you requested a password reset for your "
 "user account."
@@ -335,41 +341,65 @@ msgstr ""
 
 #: .\apps\accounts\templates\emails\password_reset.html:99
 #: .\apps\accounts\templates\emails\password_reset.txt:14
+#: .\apps\accounts\templates\emails\password_reset_complete.html:99
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:14
 #: .\apps\pages\templates\emails\contact_message.html:106
 #: .\apps\pages\templates\emails\contact_reply.html:111
 #: .\templates\includes\footer.html:11
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
-#: .\apps\accounts\views.py:35
+#: .\apps\accounts\templates\emails\password_reset_complete.html:78
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:6
+#: .\apps\accounts\templates\emails\password_reset_complete_subject.txt:3
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: .\apps\accounts\templates\emails\password_reset_complete.html:79
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:8
+msgid ""
+"We've successfully changed your password. If this was you, simply ignore "
+"this message. Otherwise, please take steps to protect your account."
+msgstr ""
+"Мы успешно изменили ваш пароль. Если это были вы, просто проигнорируйте это "
+"сообщение. В противном случае, пожалуйста, примите меры для защиты вашей "
+"учетной записи."
+
+#: .\apps\accounts\templates\emails\password_reset_complete.html:93
+msgid ""
+"You've have received this email because your password has been successfully "
+"changed."
+msgstr "Вы получили это письмо, потому что ваш пароль был успешно изменен."
+
+#: .\apps\accounts\views.py:37
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:55 .\apps\accounts\views.py:114
+#: .\apps\accounts\views.py:57 .\apps\accounts\views.py:116
 #: .\apps\pages\views.py:86
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:79
+#: .\apps\accounts\views.py:81
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:94
+#: .\apps\accounts\views.py:96
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\accounts\views.py:130
+#: .\apps\accounts\views.py:132
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views.py:145
+#: .\apps\accounts\views.py:147
 msgid ""
 "Your password has been updated. You can now sign in with your new "
 "credentials."
 msgstr ""
 "Ваш пароль обновлён. Теперь вы можете войти, используя новые учётные данные."
 
-#: .\apps\accounts\views.py:171
+#: .\apps\accounts\views.py:173
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 
