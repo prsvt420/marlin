@@ -1,122 +1,38 @@
-<!doctype html>
+{% extends 'email_base.html' %}
 
 {% load i18n %}
 
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
-    <style>
-        *,
-        *::before,
-        *::after {
-            padding: 0;
-            margin: 0;
-            border: 0;
-            box-sizing: border-box;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            font: inherit;
-            margin: 0;
-        }
-
-        img {
-            vertical-align: top;
-            max-width: 100%;
-            height: auto;
-        }
-
-        table {
-            border-collapse: collapse;
-        }
-
-        @media screen and (max-width: 480px) {
-            table.main-table {
-                width: 100% !important;
-            }
-        }
-    </style>
-</head>
-<body style="background-color:#ffffff; font-family: 'Montserrat', Arial, sans-serif; margin:0; padding:0 20px; font-weight: 500;">
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
-        <tr>
-            <td align="center" style="padding:20px 0;">
-                <table class="main-table" width="600" cellpadding="0" cellspacing="0" border="0"
-                    style="margin: 40px auto; background-color:#f0f2f5; border-radius:20px;">
-                    <tr>
-                        <td align="left" style="padding:20px;">
-                            <a href="https://marlinio.ru" style="color: #000000">
-                                <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
-                                    <tr>
-                                        <td valign="middle">
-                                            <img src="https://raw.githubusercontent.com/prsvt420/marlin/refs/heads/main/static/img/logo.png" alt="{% trans 'Marlin logo' %}" width="55" height="55" style="display:block; border:0; outline:none; text-decoration:none;">
-                                        </td>
-
-                                        <td valign="middle" style="padding-left:10px; line-height:normal;">
-                                            <h1 style="margin:0; font-size:19.2px; font-weight:bold;">Marlin</h1>
-                                            <p style="margin:0; font-size:13.6px; color:#737781;">{% trans "Fresh products near you" %}</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </a>
-                            <table cellpadding="0" cellspacing="0" border="0" style="margin: 20px auto;">
-                                <tr>
-                                    <td style="line-height:1.5;">
-                                        <h2 style="font-size:24px; font-weight:700;">{% trans "Thank for request!" %}</h2>
-                                        <p style="font-size:16px; color: #737781; text-align:justify;">{% trans "We've received your request and will contact you shortly. If you have any further questions, please feel free to contact us again." %}</p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" border="0" style="margin: 20px auto;">
-                                <tr>
-                                    <td align="center" bgcolor="#000000" style="border-radius: 25px;">
-                                        <a href="{{ protocol }}://{{ domain }}" target="_blank" style="display:inline-block; padding: 13px 20px; font-size:16px; color:#ffffff; text-decoration:none; font-weight:600;">{% trans "Go to website" %}</a>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" border="0" style="margin: 20px 0;">
-                                <tr>
-                                    <td style="font-size:16px; line-height:1.5;">
-                                        <h3 style="font-size:19.2px; font-weight:600;">{% trans "What will happen next?" %}</h3>
-                                        <p style="font-size:16px; color: #737781;">
-                                            • {% trans "We will process your request within 1-24 hours." %}<br>
-                                            • {% trans "The answer will come to this email." %}<br>
-                                            • {% trans "If we need to clarify any details, we will write to you additionally." %}
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" border="0"
-                                style="margin: 20px 0; background-color:#ffffff; border-radius:20px;">
-                                <tr>
-                                    <td style="padding:20px; font-size:13.6px; text-align:justify; line-height:1.5;">{% trans "You've received this email because you recently submitted a request through the contact form on our website. This message confirms that your request was successfully received." %}</td>
-                                </tr>
-                            </table>
-                            <table cellpadding="0" cellspacing="0" border="0" style="margin:20px auto 0px auto;">
-                                <tr>
-                                    <td align="center" style=" font-size:16px; color:#737781;">
-                                        © {% now "Y" %} Marlin — {% trans "All rights reserved." %}
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-</html>
+{% block content %}
+<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; margin: 20px auto;">
+    <tr>
+        <td style="line-height: 1.5;">
+            <h2 style="font-size: 24px; font-weight: 700;">{% trans "Thank for request!" %}</h2>
+            <p style="font-size: 16px; color: #737781; text-align: justify;">{% trans "We've received your request and will contact you shortly. If you have any further questions, please feel free to contact us again." %}</p>
+        </td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 20px auto;">
+    <tr>
+        <td align="center" bgcolor="#000000" style="border-radius: 25px;">
+            <a href="https://marlinio.ru" target="_blank" style="display: inline-block; padding: 13px 20px; font-size: 16px; color: #ffffff; text-decoration: none; font-weight: 600;">{% trans "Go to website" %}</a>
+        </td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; margin: 20px 0;">
+    <tr>
+        <td style="font-size: 16px; line-height: 1.5;">
+            <h3 style="font-size: 19.2px; font-weight: 600;">{% trans "What will happen next?" %}</h3>
+            <p style="font-size: 16px; color: #737781;">
+                • {% trans "We will process your request within 1-24 hours." %}<br>
+                • {% trans "The answer will come to this email." %}<br>
+                • {% trans "If we need to clarify any details, we will write to you additionally." %}
+            </p>
+        </td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; margin: 20px 0; background-color: #ffffff; border-radius: 20px;">
+    <tr>
+        <td style="padding: 20px; font-size: 13.6px; text-align: justify; line-height: 1.5;">{% trans "You've received this email because you recently submitted a request through the contact form on our website. This message confirms that your request was successfully received." %}</td>
+    </tr>
+</table>
+{% endblock %}

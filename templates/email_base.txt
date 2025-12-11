@@ -1,0 +1,8 @@
+{% load i18n %}
+
+Marlin
+{% trans "Fresh products near you" %}
+
+{% block content %}{% endblock %}
+
+© {% now "Y" %} Marlin — {% trans "All rights reserved." %}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-10 23:20+0800\n"
+"POT-Creation-Date: 2025-12-11 17:48+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -153,10 +153,10 @@ msgstr "пользователи"
 #: .\apps\accounts\templates\accounts\password_reset.html:5
 #: .\apps\accounts\templates\accounts\password_reset.html:14
 #: .\apps\accounts\templates\accounts\password_reset.html:29
-#: .\apps\accounts\templates\emails\password_reset.html:78
-#: .\apps\accounts\templates\emails\password_reset.html:86
-#: .\apps\accounts\templates\emails\password_reset.txt:6
-#: .\apps\accounts\templates\emails\password_reset.txt:10
+#: .\apps\accounts\templates\emails\password_reset.html:9
+#: .\apps\accounts\templates\emails\password_reset.html:17
+#: .\apps\accounts\templates\emails\password_reset.txt:7
+#: .\apps\accounts\templates\emails\password_reset.txt:11
 #: .\apps\accounts\templates\emails\password_reset_subject.txt:3
 msgid "Password reset"
 msgstr "Сброс пароля"
@@ -204,8 +204,8 @@ msgstr "Подтвердите новый пароль"
 #: .\apps\accounts\templates\accounts\signin.html:5
 #: .\apps\accounts\templates\accounts\signin.html:14
 #: .\apps\accounts\templates\accounts\signin.html:39
-#: .\apps\accounts\templates\emails\password_reset_complete.html:86
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:10
+#: .\apps\accounts\templates\emails\password_reset_complete.html:17
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:11
 #: .\templates\includes\header.html:30
 msgid "Sign in"
 msgstr "Войти"
@@ -302,26 +302,8 @@ msgstr "Подтвердите пароль"
 msgid "Already have an account? Sign in"
 msgstr "Уже есть аккаунт? Войти"
 
-#: .\apps\accounts\templates\emails\password_reset.html:65
-#: .\apps\accounts\templates\emails\password_reset_complete.html:65
-#: .\apps\pages\templates\emails\contact_message.html:65
-#: .\apps\pages\templates\emails\contact_reply.html:65
-#: .\templates\includes\header.html:7
-msgid "Marlin logo"
-msgstr "Логотип Marlin"
-
-#: .\apps\accounts\templates\emails\password_reset.html:70
-#: .\apps\accounts\templates\emails\password_reset.txt:4
-#: .\apps\accounts\templates\emails\password_reset_complete.html:70
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:4
-#: .\apps\pages\templates\emails\contact_message.html:70
-#: .\apps\pages\templates\emails\contact_reply.html:70
-#: .\templates\includes\header.html:10
-msgid "Fresh products near you"
-msgstr "Свежие продукты рядом с вами"
-
-#: .\apps\accounts\templates\emails\password_reset.html:79
-#: .\apps\accounts\templates\emails\password_reset.txt:8
+#: .\apps\accounts\templates\emails\password_reset.html:10
+#: .\apps\accounts\templates\emails\password_reset.txt:9
 msgid ""
 "We've received a request to reset your password. If this was you, please "
 "click the button below. Otherwise, simply ignore this message."
@@ -329,9 +311,8 @@ msgstr ""
 "Мы получили запрос на сброс вашего пароля. Если это были вы, нажмите кнопку "
 "ниже. В противном случае просто проигнорируйте это сообщение."
 
-#: .\apps\accounts\templates\emails\password_reset.html:93
-#: .\apps\accounts\templates\emails\password_reset.txt:12
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:12
+#: .\apps\accounts\templates\emails\password_reset.html:23
+#: .\apps\accounts\templates\emails\password_reset.txt:13
 msgid ""
 "You've received this email because you requested a password reset for your "
 "user account."
@@ -339,24 +320,14 @@ msgstr ""
 "Вы получили это письмо, потому что запросили сброс пароля для своей учетной "
 "записи."
 
-#: .\apps\accounts\templates\emails\password_reset.html:99
-#: .\apps\accounts\templates\emails\password_reset.txt:14
-#: .\apps\accounts\templates\emails\password_reset_complete.html:99
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:14
-#: .\apps\pages\templates\emails\contact_message.html:106
-#: .\apps\pages\templates\emails\contact_reply.html:111
-#: .\templates\includes\footer.html:11
-msgid "All rights reserved."
-msgstr "Все права защищены."
-
-#: .\apps\accounts\templates\emails\password_reset_complete.html:78
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:6
+#: .\apps\accounts\templates\emails\password_reset_complete.html:9
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:7
 #: .\apps\accounts\templates\emails\password_reset_complete_subject.txt:3
 msgid "Password changed"
 msgstr "Пароль изменен"
 
-#: .\apps\accounts\templates\emails\password_reset_complete.html:79
-#: .\apps\accounts\templates\emails\password_reset_complete.txt:8
+#: .\apps\accounts\templates\emails\password_reset_complete.html:10
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:9
 msgid ""
 "We've successfully changed your password. If this was you, simply ignore "
 "this message. Otherwise, please take steps to protect your account."
@@ -365,7 +336,8 @@ msgstr ""
 "сообщение. В противном случае, пожалуйста, примите меры для защиты вашей "
 "учетной записи."
 
-#: .\apps\accounts\templates\emails\password_reset_complete.html:93
+#: .\apps\accounts\templates\emails\password_reset_complete.html:23
+#: .\apps\accounts\templates\emails\password_reset_complete.txt:13
 msgid ""
 "You've have received this email because your password has been successfully "
 "changed."
@@ -898,16 +870,16 @@ msgid "The message is required."
 msgstr "Сообщение обязательно."
 
 #: .\apps\pages\services\email_service.py:66
-#: .\apps\pages\templates\emails\contact_message.html:78
+#: .\apps\pages\templates\emails\contact_message.html:9
 msgid "New request!"
 msgstr "Новое обращение!"
 
 #: .\apps\pages\services\email_service.py:80
-#: .\apps\pages\templates\emails\contact_reply.html:78
+#: .\apps\pages\templates\emails\contact_reply.html:9
 msgid "Thank for request!"
 msgstr "Спасибо за обращение!"
 
-#: .\apps\pages\templates\emails\contact_message.html:79
+#: .\apps\pages\templates\emails\contact_message.html:10
 msgid ""
 "A new request has been received. Please review it and contact the user. If "
 "necessary, you may request additional information from the user."
@@ -916,7 +888,7 @@ msgstr ""
 "пользователем. При необходимости вы можете запросить у пользователя "
 "дополнительную информацию."
 
-#: .\apps\pages\templates\emails\contact_message.html:100
+#: .\apps\pages\templates\emails\contact_message.html:31
 msgid ""
 "You received this email because a new request was submitted on the website "
 "through the feedback form. This message confirms that the user's request has "
@@ -926,7 +898,7 @@ msgstr ""
 "через форму обратной связи. Это сообщение подтверждает, что обращение "
 "пользователя успешно получено и требует дальнейшей обработки."
 
-#: .\apps\pages\templates\emails\contact_reply.html:79
+#: .\apps\pages\templates\emails\contact_reply.html:10
 msgid ""
 "We've received your request and will contact you shortly. If you have any "
 "further questions, please feel free to contact us again."
@@ -934,27 +906,27 @@ msgstr ""
 "Мы получили ваше сообщение и свяжемся с вами в ближайшее время. Если у вас "
 "есть дополнительные вопросы, вы всегда можете написать нам снова."
 
-#: .\apps\pages\templates\emails\contact_reply.html:86
+#: .\apps\pages\templates\emails\contact_reply.html:17
 msgid "Go to website"
 msgstr "Перейти на сайт"
 
-#: .\apps\pages\templates\emails\contact_reply.html:93
+#: .\apps\pages\templates\emails\contact_reply.html:24
 msgid "What will happen next?"
 msgstr "Что будет дальше?"
 
-#: .\apps\pages\templates\emails\contact_reply.html:95
+#: .\apps\pages\templates\emails\contact_reply.html:26
 msgid "We will process your request within 1-24 hours."
 msgstr "Мы обработаем ваше обращение в течение 1–24 часов."
 
-#: .\apps\pages\templates\emails\contact_reply.html:96
+#: .\apps\pages\templates\emails\contact_reply.html:27
 msgid "The answer will come to this email."
 msgstr "Ответ придёт на эту электронную почту."
 
-#: .\apps\pages\templates\emails\contact_reply.html:97
+#: .\apps\pages\templates\emails\contact_reply.html:28
 msgid "If we need to clarify any details, we will write to you additionally."
 msgstr "Если потребуется уточнить детали — мы напишем вам дополнительно."
 
-#: .\apps\pages\templates\emails\contact_reply.html:105
+#: .\apps\pages\templates\emails\contact_reply.html:35
 msgid ""
 "You've received this email because you recently submitted a request through "
 "the contact form on our website. This message confirms that your request was "
@@ -1309,6 +1281,20 @@ msgstr "Упс! Что-то пошло не так"
 msgid "An internal error occurred. Please refresh the page or try again later."
 msgstr ""
 "Произошла внутренняя ошибка. Обновите страницу или повторите попытку позже."
+
+#: .\templates\email_base.html:65 .\templates\includes\header.html:7
+msgid "Marlin logo"
+msgstr "Логотип Marlin"
+
+#: .\templates\email_base.html:70 .\templates\email_base.txt:4
+#: .\templates\includes\header.html:10
+msgid "Fresh products near you"
+msgstr "Свежие продукты рядом с вами"
+
+#: .\templates\email_base.html:79 .\templates\email_base.txt:8
+#: .\templates\includes\footer.html:11
+msgid "All rights reserved."
+msgstr "Все права защищены."
 
 #: .\templates\includes\footer.html:5
 msgid "Privacy Policy"
