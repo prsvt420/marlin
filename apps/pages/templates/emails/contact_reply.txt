@@ -1,0 +1,20 @@
+{% extends 'email_base.txt' %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% trans "Thank for request" %}!
+
+{% trans "We've received your request and will contact you shortly. If you have any further questions, please feel free to contact us again." %}
+
+{% trans "Go to website" %}: https://marlinio.ru
+
+{% trans "What will happen next?" %}
+• {% trans "We will process your request within 1-24 hours." %}
+• {% trans "The answer will come to this email." %}
+• {% trans "If we need to clarify any details, we will write to you additionally." %}
+
+{% trans "You've received this email because you recently submitted a request through the contact form on our website. This message confirms that your request was successfully received." %}
+
+{% endblock %}

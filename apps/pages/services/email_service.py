@@ -2,7 +2,6 @@ from typing import List
 
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
-from django.utils.translation import gettext_lazy as _
 from django_stubs_ext import StrOrPromise
 
 from apps.pages.types import ContactContext
@@ -62,11 +61,18 @@ class EmailService:
             contact_context (ContactContext): Data from the contact form,
                 including sender info and message content.
         """
+        body: str = render_to_string(
+            template_name="emails/contact_message.html"
+        )
+        subject: str = render_to_string(
+            template_name="emails/contact_message_subject.txt"
+        ).strip()
         self.send_email(
-            subject=_("New request!"),
+            subject=subject,
             to=[settings.DEFAULT_FROM_EMAIL],
             template_name="emails/contact_message.html",
             contact_context=contact_context,
+            body=body,
         )
 
     def send_contact_reply(self, contact_context: ContactContext) -> None:
@@ -76,9 +82,14 @@ class EmailService:
             contact_context (ContactContext): Data from the contact form,
                 including sender's email to reply to.
         """
+        body: str = render_to_string(template_name="emails/contact_reply.html")
+        subject: str = render_to_string(
+            template_name="emails/contact_reply_subject.txt"
+        ).strip()
         self.send_email(
-            subject=_("Thank for request!"),
+            subject=subject,
             to=[contact_context["email"]],
             template_name="emails/contact_reply.html",
             contact_context=contact_context,
+            body=body,
         )

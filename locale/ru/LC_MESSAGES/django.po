@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-11 17:48+0800\n"
+"POT-Creation-Date: 2025-12-11 22:35+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -869,17 +869,14 @@ msgstr "Длина темы не должна превышать 255 симво�
 msgid "The message is required."
 msgstr "Сообщение обязательно."
 
-#: .\apps\pages\services\email_service.py:66
 #: .\apps\pages\templates\emails\contact_message.html:9
-msgid "New request!"
-msgstr "Новое обращение!"
-
-#: .\apps\pages\services\email_service.py:80
-#: .\apps\pages\templates\emails\contact_reply.html:9
-msgid "Thank for request!"
-msgstr "Спасибо за обращение!"
+#: .\apps\pages\templates\emails\contact_message.txt:7
+#: .\apps\pages\templates\emails\contact_message_subject.txt:3
+msgid "New request"
+msgstr "Новое обращение"
 
 #: .\apps\pages\templates\emails\contact_message.html:10
+#: .\apps\pages\templates\emails\contact_message.txt:9
 msgid ""
 "A new request has been received. Please review it and contact the user. If "
 "necessary, you may request additional information from the user."
@@ -889,6 +886,7 @@ msgstr ""
 "дополнительную информацию."
 
 #: .\apps\pages\templates\emails\contact_message.html:31
+#: .\apps\pages\templates\emails\contact_message.txt:19
 msgid ""
 "You received this email because a new request was submitted on the website "
 "through the feedback form. This message confirms that the user's request has "
@@ -898,7 +896,14 @@ msgstr ""
 "через форму обратной связи. Это сообщение подтверждает, что обращение "
 "пользователя успешно получено и требует дальнейшей обработки."
 
+#: .\apps\pages\templates\emails\contact_reply.html:9
+#: .\apps\pages\templates\emails\contact_reply.txt:7
+#: .\apps\pages\templates\emails\contact_reply_subject.txt:3
+msgid "Thank for request"
+msgstr "Спасибо за обращение"
+
 #: .\apps\pages\templates\emails\contact_reply.html:10
+#: .\apps\pages\templates\emails\contact_reply.txt:9
 msgid ""
 "We've received your request and will contact you shortly. If you have any "
 "further questions, please feel free to contact us again."
@@ -907,26 +912,32 @@ msgstr ""
 "есть дополнительные вопросы, вы всегда можете написать нам снова."
 
 #: .\apps\pages\templates\emails\contact_reply.html:17
+#: .\apps\pages\templates\emails\contact_reply.txt:11
 msgid "Go to website"
 msgstr "Перейти на сайт"
 
 #: .\apps\pages\templates\emails\contact_reply.html:24
+#: .\apps\pages\templates\emails\contact_reply.txt:13
 msgid "What will happen next?"
 msgstr "Что будет дальше?"
 
 #: .\apps\pages\templates\emails\contact_reply.html:26
+#: .\apps\pages\templates\emails\contact_reply.txt:14
 msgid "We will process your request within 1-24 hours."
 msgstr "Мы обработаем ваше обращение в течение 1–24 часов."
 
 #: .\apps\pages\templates\emails\contact_reply.html:27
+#: .\apps\pages\templates\emails\contact_reply.txt:15
 msgid "The answer will come to this email."
 msgstr "Ответ придёт на эту электронную почту."
 
 #: .\apps\pages\templates\emails\contact_reply.html:28
+#: .\apps\pages\templates\emails\contact_reply.txt:16
 msgid "If we need to clarify any details, we will write to you additionally."
 msgstr "Если потребуется уточнить детали — мы напишем вам дополнительно."
 
 #: .\apps\pages\templates\emails\contact_reply.html:35
+#: .\apps\pages\templates\emails\contact_reply.txt:18
 msgid ""
 "You've received this email because you recently submitted a request through "
 "the contact form on our website. This message confirms that your request was "

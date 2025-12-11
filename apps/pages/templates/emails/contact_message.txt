@@ -1,0 +1,21 @@
+{% extends 'email_base.txt' %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% trans "New request" %}!
+
+{% trans "A new request has been received. Please review it and contact the user. If necessary, you may request additional information from the user." %}
+
+{{ subject }}
+
+{{ message|linebreaksbr }}
+
+{{ full_name }}
+{{ phone_number }}
+{{ email }}
+
+{% trans "You received this email because a new request was submitted on the website through the feedback form. This message confirms that the user's request has been successfully received and requires further processing." %}
+
+{% endblock %}
