@@ -24,18 +24,24 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
-from apps.accounts.forms import PasswordResetForm, SetPasswordForm, SignUpForm
+from apps.accounts.forms import (
+    PasswordResetForm,
+    SetPasswordForm,
+    SignInForm,
+    SignUpForm,
+)
 
 
 class SignInView(SuccessMessageMixin, LoginView):
     """Displays the sign in page.
 
-    Renders the `accounts/signin.html` template with a AuthenticationForm.
+    Renders the `accounts/signin.html` template with a SignInForm.
     """
 
     template_name = "accounts/signin.html"
     success_message = _("You have successfully signed in. Welcome!")
     redirect_authenticated_user = True
+    form_class = SignInForm
 
     def form_invalid(self, form: AuthenticationForm) -> HttpResponse:
         """Handle invalid form submission.

@@ -1,11 +1,44 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import (
+    AuthenticationForm,
+)
 from django.contrib.auth.forms import PasswordResetForm as _PasswordResetForm
 from django.contrib.auth.forms import SetPasswordForm as _SetPasswordForm
 from django.contrib.auth.forms import (
     UserCreationForm,
+    UsernameField,
 )
 from django.utils.translation import gettext_lazy as _
+
+
+class SignInForm(AuthenticationForm):
+    """Form for logging into the account.
+
+    This form extends Django's built-in AuthenticationForm.
+
+    This form is used to create a new user account, including
+    username, email, phone number, and full name details. It also
+    handles password creation and validation.
+
+    Attributes:
+        username (UsernameField): User's username.
+        password (CharField): User's password.
+    """
+
+    username = UsernameField(
+        required=True,
+        label=_("Username"),
+        error_messages={
+            "required": _("The username is required."),
+        },
+    )
+    password = forms.CharField(
+        required=True,
+        label=_("Password"),
+        strip=False,
+        error_messages={"required": _("The password is required.")},
+    )
 
 
 class SignUpForm(UserCreationForm):
@@ -13,10 +46,6 @@ class SignUpForm(UserCreationForm):
 
     This form extends Django's built-in UserCreationForm and adds additional
     fields.
-
-    This form is used to create a new user account, including
-    username, email, phone number, and full name details. It also
-    handles password creation and validation.
 
     Attributes:
         username (CharField): User's username.
