@@ -30,6 +30,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "phonenumber_field",
+    "django_user_agents",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
@@ -48,6 +49,7 @@ MIDDLEWARE: List[str] = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "csp.middleware.CSPMiddleware",
+    "django_user_agents.middleware.UserAgentMiddleware",
 ]
 
 ROOT_URLCONF: str = "config.urls"

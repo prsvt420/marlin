@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-12 15:45+0800\n"
+"POT-Creation-Date: 2025-12-13 21:50+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -345,35 +345,72 @@ msgid ""
 "changed."
 msgstr "Вы получили это письмо, потому что ваш пароль был успешно изменен."
 
-#: .\apps\accounts\views.py:42
+#: .\apps\accounts\templates\emails\signin_notification.html:9
+#: .\apps\accounts\templates\emails\signin_notification.txt:7
+#: .\apps\accounts\templates\emails\signin_notification_subject.txt:3
+msgid "Signed in"
+msgstr "Выполнен вход"
+
+#: .\apps\accounts\templates\emails\signin_notification.html:10
+#: .\apps\accounts\templates\emails\signin_notification.txt:9
+msgid ""
+"You've account has been signed in. If this was you, simply ignore this "
+"message. Otherwise, please take steps to protect your account."
+msgstr ""
+"В ваш аккаунт был выполнен вход. Если это были вы, просто проигнорируйте это "
+"сообщение. В противном случае, пожалуйста, примите меры для защиты вашей "
+"учетной записи."
+
+#: .\apps\accounts\templates\emails\signin_notification.html:16
+#: .\apps\accounts\templates\emails\signin_notification.txt:11
+msgid "Sign in date"
+msgstr "Дата входа"
+
+#: .\apps\accounts\templates\emails\signin_notification.html:19
+#: .\apps\accounts\templates\emails\signin_notification.txt:12
+msgid "Device"
+msgstr "Устройство"
+
+#: .\apps\accounts\templates\emails\signin_notification.html:22
+#: .\apps\accounts\templates\emails\signin_notification.txt:13
+msgid "Location"
+msgstr "Местоположение"
+
+#: .\apps\accounts\templates\emails\signin_notification.html:27
+#: .\apps\accounts\templates\emails\signin_notification.txt:15
+msgid ""
+"You've have received this email because your account has been signed in."
+msgstr "Вы получили это письмо, потому что в ваш аккаунт был выполнен вход."
+
+#: .\apps\accounts\views.py:44
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:63 .\apps\accounts\views.py:122
+#: .\apps\accounts\views.py:103 .\apps\accounts\views.py:162
 #: .\apps\pages\views.py:86
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:87
+#: .\apps\accounts\views.py:127
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:102
+#: .\apps\accounts\views.py:142
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\accounts\views.py:138
+#: .\apps\accounts\views.py:178
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views.py:153
+#: .\apps\accounts\views.py:193
 msgid ""
 "Your password has been updated. You can now sign in with your new "
 "credentials."
 msgstr ""
 "Ваш пароль обновлён. Теперь вы можете войти, используя новые учётные данные."
 
-#: .\apps\accounts\views.py:179
+#: .\apps\accounts\views.py:219
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 
@@ -887,7 +924,7 @@ msgstr ""
 "пользователем. При необходимости вы можете запросить у пользователя "
 "дополнительную информацию."
 
-#: .\apps\pages\templates\emails\contact_message.html:31
+#: .\apps\pages\templates\emails\contact_message.html:30
 #: .\apps\pages\templates\emails\contact_message.txt:19
 msgid ""
 "You received this email because a new request was submitted on the website "

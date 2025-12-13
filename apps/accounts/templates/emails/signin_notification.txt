@@ -1,0 +1,17 @@
+{% extends 'email_base.txt' %}
+
+{% load i18n %}
+
+{% block content %}
+
+{% trans "Signed in" %}!
+
+{% trans "You've account has been signed in. If this was you, simply ignore this message. Otherwise, please take steps to protect your account." %}
+
+{% trans "Sign in date" %}: {{ date }}.
+{% trans "Device" %}: {{ user_agent }}.
+{% trans "Location" %}: {{ client_ip }}.
+
+{% trans "You've have received this email because your account has been signed in." %}
+
+{% endblock %}

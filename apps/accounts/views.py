@@ -21,8 +21,10 @@ from django.shortcuts import redirect
 from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
+from ipware import get_client_ip
 
 from apps.accounts.forms import (
     PasswordResetForm,
@@ -42,6 +44,44 @@ class SignInView(SuccessMessageMixin, LoginView):
     success_message = _("You have successfully signed in. Welcome!")
     redirect_authenticated_user = True
     form_class = SignInForm
+
+    def form_valid(self, form: AuthenticationForm) -> HttpResponse:
+        """Process the authentication form and send notification email.
+
+        Args:
+            form (AuthenticationForm): The submitted authentication
+            form instance.
+
+        Returns:
+            HttpResponse: The HTTP response returned by the parent class's
+            form_valid method.
+        """
+        context = {
+            "date": timezone.localtime(timezone.now()),
+            "client_ip": get_client_ip(self.request)[0],
+            "user_agent": self.request.user_agent,  # type: ignore
+        }
+
+        body: str = render_to_string(
+            "emails/signin_notification.txt", context=context
+        )
+        content: str = render_to_string(
+            template_name="emails/signin_notification.html", context=context
+        )
+        subject: str = render_to_string(
+            "emails/signin_notification_subject.txt",
+        ).strip()
+
+        email_message: EmailMultiAlternatives = EmailMultiAlternatives(
+            subject=subject,
+            body=body,
+            to=[form.get_user().email],
+        )
+        email_message.attach_alternative(content=content, mimetype="text/html")
+
+        email_message.send()
+
+        return super().form_valid(form=form)
 
     def form_invalid(self, form: AuthenticationForm) -> HttpResponse:
         """Handle invalid form submission.
