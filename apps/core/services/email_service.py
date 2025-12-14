@@ -1,4 +1,4 @@
-from typing import Any, List, Mapping
+from typing import Any, List, Mapping, Optional
 
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
@@ -24,7 +24,7 @@ class EmailService:
         *,
         email_template: EmailTemplate,
         to: List[str],
-        context: Mapping[str, Any],
+        context: Optional[Mapping[str, Any]] = None,
     ) -> None:
         """Send an email with HTML content rendered from a template.
 

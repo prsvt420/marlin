@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-14 18:27+0800\n"
+"POT-Creation-Date: 2025-12-15 00:06+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -382,35 +382,35 @@ msgid ""
 "You've have received this email because your account has been signed in."
 msgstr "Вы получили это письмо, потому что в ваш аккаунт был выполнен вход."
 
-#: .\apps\accounts\views.py:44
+#: .\apps\accounts\views.py:47
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:103 .\apps\accounts\views.py:162
+#: .\apps\accounts\views.py:97 .\apps\accounts\views.py:156
 #: .\apps\pages\views.py:97
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:127
+#: .\apps\accounts\views.py:121
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:142
+#: .\apps\accounts\views.py:136
 msgid "You have successfully signed up! Sign in to your account."
 msgstr "Вы успешно зарегистрированы! Войдите в аккаунт."
 
-#: .\apps\accounts\views.py:178
+#: .\apps\accounts\views.py:172
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views.py:193
+#: .\apps\accounts\views.py:187
 msgid ""
 "Your password has been updated. You can now sign in with your new "
 "credentials."
 msgstr ""
 "Ваш пароль обновлён. Теперь вы можете войти, используя новые учётные данные."
 
-#: .\apps\accounts\views.py:219
+#: .\apps\accounts\views.py:213
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 

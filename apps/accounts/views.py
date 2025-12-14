@@ -11,14 +11,12 @@ from django.contrib.auth.views import (
 )
 from django.contrib.auth.views import PasswordResetView as _PasswordResetView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.core.mail import EmailMultiAlternatives
 from django.http import (
     HttpResponse,
     HttpResponseBase,
     HttpResponsePermanentRedirect,
 )
 from django.shortcuts import redirect
-from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
 from django.urls import reverse_lazy
 from django.utils import timezone
@@ -26,12 +24,17 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 from ipware import get_client_ip
 
+from apps.accounts.email_templates import (
+    PASSWORD_RESET_COMPLETE,
+    SIGNIN_NOTIFICATION,
+)
 from apps.accounts.forms import (
     PasswordResetForm,
     SetPasswordForm,
     SignInForm,
     SignUpForm,
 )
+from apps.core.services.email_service import EmailService
 
 
 class SignInView(SuccessMessageMixin, LoginView):
@@ -62,24 +65,15 @@ class SignInView(SuccessMessageMixin, LoginView):
             "user_agent": self.request.user_agent,  # type: ignore
         }
 
-        body: str = render_to_string(
-            "emails/signin_notification.txt", context=context
-        )
-        content: str = render_to_string(
-            template_name="emails/signin_notification.html", context=context
-        )
-        subject: str = render_to_string(
-            "emails/signin_notification_subject.txt",
-        ).strip()
-
-        email_message: EmailMultiAlternatives = EmailMultiAlternatives(
-            subject=subject,
-            body=body,
-            to=[form.get_user().email],
-        )
-        email_message.attach_alternative(content=content, mimetype="text/html")
-
-        email_message.send()
+        try:
+            email_service: EmailService = EmailService()
+            email_service.send_email(
+                email_template=SIGNIN_NOTIFICATION,
+                to=[form.get_user().email],  # type: ignore
+                context=context,
+            )
+        except Exception:  # noqa: S110
+            pass
 
         return super().form_valid(form=form)
 
@@ -232,23 +226,13 @@ class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
             HttpResponse: The HTTP response returned by the parent class's
             form_valid method.
         """
-        body: str = render_to_string(
-            "emails/password_reset_complete.txt",
-        )
-        content: str = render_to_string(
-            template_name="emails/password_reset_complete.html",
-        )
-        subject: str = render_to_string(
-            "emails/password_reset_complete_subject.txt",
-        ).strip()
-
-        email_message: EmailMultiAlternatives = EmailMultiAlternatives(
-            subject=subject,
-            body=body,
-            to=[self.user.email],
-        )
-        email_message.attach_alternative(content=content, mimetype="text/html")
-
-        email_message.send()
+        try:
+            email_service: EmailService = EmailService()
+            email_service.send_email(
+                email_template=PASSWORD_RESET_COMPLETE,
+                to=[self.user.email],
+            )
+        except Exception:  # noqa: S110
+            pass
 
         return super().form_valid(form=form)
