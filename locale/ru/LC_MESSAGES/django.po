@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-13 21:50+0800\n"
+"POT-Creation-Date: 2025-12-14 18:27+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -387,7 +387,7 @@ msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
 #: .\apps\accounts\views.py:103 .\apps\accounts\views.py:162
-#: .\apps\pages\views.py:86
+#: .\apps\pages\views.py:97
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
@@ -927,9 +927,9 @@ msgstr ""
 #: .\apps\pages\templates\emails\contact_message.html:30
 #: .\apps\pages\templates\emails\contact_message.txt:19
 msgid ""
-"You received this email because a new request was submitted on the website "
-"through the feedback form. This message confirms that the user's request has "
-"been successfully received and requires further processing."
+"You've received this email because a new request was submitted on the "
+"website through the feedback form. This message confirms that the user's "
+"request has been successfully received and requires further processing."
 msgstr ""
 "Вы получили это письмо, потому что на сайте было отправлено новое обращение "
 "через форму обратной связи. Это сообщение подтверждает, что обращение "
@@ -1051,12 +1051,12 @@ msgstr "Часы работы"
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
 
-#: .\apps\pages\views.py:54
+#: .\apps\pages\views.py:65
 msgid "Your message has been successfully sent! We will contact you shortly."
 msgstr ""
 "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
 
-#: .\apps\pages\views.py:62
+#: .\apps\pages\views.py:73
 msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."

@@ -16,6 +16,6 @@
 {{ phone_number }}
 {{ email }}
 
-{% trans "You received this email because a new request was submitted on the website through the feedback form. This message confirms that the user's request has been successfully received and requires further processing." %}
+{% trans "You've received this email because a new request was submitted on the website through the feedback form. This message confirms that the user's request has been successfully received and requires further processing." %}
 
 {% endblock %}

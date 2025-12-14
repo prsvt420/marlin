@@ -1,12 +1,15 @@
+from typing import Dict
+
 from django.contrib import messages
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import FormView, RedirectView, TemplateView
 
+from apps.core.services.email_service import EmailService
+from apps.pages.email_templates import CONTACT_MESSAGE, CONTACT_REPLY
 from apps.pages.forms import ContactForm
-from apps.pages.services.email_service import EmailService
-from apps.pages.types import ContactContext
+from config import settings
 
 
 class ContactView(FormView):
@@ -35,7 +38,7 @@ class ContactView(FormView):
             HttpResponse: The HTTP response returned by the parent class's
             form_valid method.
         """
-        contact_context: ContactContext = {
+        context: Dict[str, str] = {
             "full_name": form.cleaned_data["full_name"],
             "email": form.cleaned_data["email"],
             "phone_number": form.cleaned_data["phone_number"],
@@ -45,8 +48,16 @@ class ContactView(FormView):
 
         try:
             email_service: EmailService = EmailService()
-            email_service.send_contact_message(contact_context=contact_context)
-            email_service.send_contact_reply(contact_context=contact_context)
+            email_service.send_email(
+                email_template=CONTACT_MESSAGE,
+                to=[settings.DEFAULT_FROM_EMAIL],
+                context=context,
+            )
+            email_service.send_email(
+                email_template=CONTACT_REPLY,
+                to=[context["email"]],
+                context=context,
+            )
 
             messages.success(
                 request=self.request,
