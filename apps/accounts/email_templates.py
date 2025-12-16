@@ -10,3 +10,8 @@ PASSWORD_RESET_COMPLETE: EmailTemplate = EmailTemplate(
     body="emails/password_reset_complete.txt",
     content="emails/password_reset_complete.html",
 )
+ACCOUNT_ACTIVATION: EmailTemplate = EmailTemplate(
+    subject="emails/account_activation_subject.txt",
+    body="emails/account_activation.txt",
+    content="emails/account_activation.html",
+)

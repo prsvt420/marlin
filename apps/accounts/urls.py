@@ -20,4 +20,9 @@ urlpatterns: List[URLPattern] = [
         views.PasswordResetConfirmView.as_view(),
         name="password_reset_confirm",
     ),
+    path(
+        "account-activation/<uidb64>/<token>",
+        views.AccountActivationView.as_view(),
+        name="account_activation",
+    ),
 ]
