@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-16 18:54+0800\n"
+"POT-Creation-Date: 2025-12-17 18:21+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -479,6 +479,10 @@ msgstr "Активация прошла успешно! Войдите в акк
 #: .\apps\accounts\views.py:335
 msgid "The account activation link is invalid or expired."
 msgstr "Ссылка для активации аккаунта недействительна или устарела."
+
+#: .\apps\carts\apps.py:14
+msgid "Carts"
+msgstr "Корзины"
 
 #: .\apps\catalog\admin.py:54
 msgid "Search by category name"

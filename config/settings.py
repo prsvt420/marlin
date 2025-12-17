@@ -36,6 +36,7 @@ INSTALLED_APPS: List[str] = [
     "apps.vacancies",
     "apps.core",
     "apps.accounts",
+    "apps.carts",
 ]
 
 MIDDLEWARE: List[str] = [
