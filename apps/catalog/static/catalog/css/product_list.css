@@ -312,20 +312,6 @@
     text-align: center;
 }
 
-.no-products__button {
-    padding: 10px;
-    border-radius: var(--radius-lg);
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
-    font-weight: var(--font-weight-semibold);
-    text-align: center;
-    width: 200px;
-}
-
-.no-products__button:hover {
-    background-color: var(--button-background-color-hover);
-}
-
 @media (max-width: 900px) {
     .products {
         grid-template-columns: none;

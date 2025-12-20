@@ -85,3 +85,18 @@
     padding: 12px;
     hyphens: auto;
 }
+
+.no-categories {
+    height: 354.63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.no-categories__text {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+}
