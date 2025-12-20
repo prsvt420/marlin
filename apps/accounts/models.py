@@ -77,6 +77,7 @@ class User(AbstractUser):
     ]
 
     class Meta:  # noqa: D106
+        db_table = "accounts_user"
         db_table_comment = "Table containing users."
         verbose_name = _("user")
         verbose_name_plural = _("users")
