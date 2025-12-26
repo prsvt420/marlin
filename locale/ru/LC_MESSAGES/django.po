@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2025-12-25 10:10+0800\n"
+"POT-Creation-Date: 2025-12-26 16:40+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -1240,6 +1240,10 @@ msgstr ""
 msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
+
+#: .\apps\promotions\apps.py:14
+msgid "Promotions"
+msgstr "Акции"
 
 #: .\apps\vacancies\admin.py:21
 msgid "Search by professional field name"
