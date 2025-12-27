@@ -35,6 +35,11 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
         include("apps.carts.urls", namespace="carts"),
         name="carts",
     ),
+    path(
+        "promotions/",
+        include("apps.promotions.urls", namespace="promotions"),
+        name="promotions",
+    ),
 ]
 
 
