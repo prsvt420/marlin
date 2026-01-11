@@ -4,10 +4,7 @@ from django_stubs_ext import StrOrPromise
 
 
 class PromotionsConfig(AppConfig):
-    """Django application configuration for the Promotions app.
-
-    This class defines the configuration for the `apps.promotions` application.
-    """
+    """Configuration for the promotions application."""
 
     default_auto_field = "django.db.models.BigAutoField"
     name: str = "apps.promotions"
