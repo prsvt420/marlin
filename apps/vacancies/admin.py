@@ -13,7 +13,7 @@ from .models import (
 
 @admin.register(ProfessionalArea)
 class ProfessionalAreaAdmin(TranslationAdmin):
-    """Admin configuration for ProfessionalArea model."""
+    """Configuration for administration of the ProfessionalArea model."""
 
     list_per_page = 25
     list_display = ("name",)
@@ -24,7 +24,7 @@ class ProfessionalAreaAdmin(TranslationAdmin):
 
 @admin.register(Region)
 class RegionAdmin(TranslationAdmin):
-    """Admin configuration for Region model."""
+    """Configuration for administration of the Region model."""
 
     list_per_page = 25
     list_display = ("name",)
@@ -35,7 +35,7 @@ class RegionAdmin(TranslationAdmin):
 
 @admin.register(City)
 class CityAdmin(TranslationAdmin):
-    """Admin configuration for City model."""
+    """Configuration for administration of the City model."""
 
     list_per_page = 25
     list_display = (
@@ -52,7 +52,7 @@ class CityAdmin(TranslationAdmin):
 
 @admin.register(Vacancy)
 class VacancyAdmin(TranslationAdmin):
-    """Admin configuration for Vacancy model."""
+    """Configuration for administration of the Vacancy model."""
 
     list_per_page = 25
     list_display = ("title", "city", "formatted_salary", "is_active")
@@ -95,9 +95,5 @@ class VacancyAdmin(TranslationAdmin):
 
     @admin.display(description=_("Salary"), ordering="salary_from")
     def formatted_salary(self, obj: Vacancy) -> StrOrPromise:
-        """Return formatted salary.
-
-        Returns:
-            StrOrPromise: Formatted salary.
-        """
+        """Return the salary range formatted."""
         return obj.get_formatted_salary()

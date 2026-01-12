@@ -6,16 +6,11 @@ from apps.vacancies.models import Vacancy
 
 
 class VacancyRepository:
-    """Repository for Vacancy model database operations."""
+    """Repository for accessing Vacancy model."""
 
     @staticmethod
     def all() -> QuerySet[Vacancy]:
-        """Return a queryset of all vacancies with related data preloaded.
-
-        Returns:
-            QuerySet[Vacancy]: A queryset containing all Vacancy objects
-            with related data preloaded.
-        """
+        """Return all vacancies with related prefetched."""
         return Vacancy.objects.all().select_related("city")
 
     @staticmethod
@@ -24,17 +19,7 @@ class VacancyRepository:
         search_query: Optional[str] = None,
         only_active: bool = True,
     ) -> QuerySet[Vacancy]:
-        """Return a filtered queryset of vacancies.
-
-        Args:
-            search_query (Optional[str]): The query to search.
-            only_active (bool): If True, returns only active products.
-            Default True.
-
-        Returns:
-            QuerySet[Vacancy]: A queryset containing active Vacancy
-            objects filtered according to the provided criteria.
-        """
+        """Return filtered vacancies."""
         queryset: QuerySet[Vacancy] = VacancyRepository.all()
 
         if only_active:

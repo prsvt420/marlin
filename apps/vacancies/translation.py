@@ -5,7 +5,7 @@ from apps.vacancies.models import City, ProfessionalArea, Region, Vacancy
 
 @translator.register(ProfessionalArea)
 class ProfessionalAreaTranslationOptions(translator.TranslationOptions):
-    """Translation options for ProfessionalArea model."""
+    """Configuration for translating the ProfessionalArea model."""
 
     fields = ("name",)
     required_languages = ("ru", "en")
@@ -13,7 +13,7 @@ class ProfessionalAreaTranslationOptions(translator.TranslationOptions):
 
 @translator.register(Region)
 class RegionTranslationOptions(translator.TranslationOptions):
-    """Translation options for Region model."""
+    """Configuration for translating the Region model."""
 
     fields = ("name",)
     required_languages = ("ru", "en")
@@ -21,7 +21,7 @@ class RegionTranslationOptions(translator.TranslationOptions):
 
 @translator.register(City)
 class CityTranslationOptions(translator.TranslationOptions):
-    """Translation options for City model."""
+    """Configuration for translating the City model."""
 
     fields = ("name",)
     required_languages = ("ru", "en")
@@ -29,7 +29,7 @@ class CityTranslationOptions(translator.TranslationOptions):
 
 @translator.register(Vacancy)
 class VacancyTranslationOptions(translator.TranslationOptions):
-    """Translation options for Vacancy model."""
+    """Configuration for translating the Vacancy model."""
 
     fields = ("title", "short_description", "description")
     required_languages = ("ru", "en")

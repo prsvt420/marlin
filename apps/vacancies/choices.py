@@ -3,17 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class ExperienceLevel(models.TextChoices):
-    """Enumeration for work experience levels.
-
-    Defines the possible ranges of professional experience
-    that can be associated with a job or candidate.
-
-    Attributes:
-        NO_EXPERIENCE: No prior work experience.
-        ONE_TO_THREE: From 1 to 3 years of experience.
-        THREE_TO_SIX: From 3 to 6 years of experience.
-        MORE_THAN_SIX: More than 6 years of experience.
-    """
+    """Text choices for indicating the level of professional experience."""
 
     NO_EXPERIENCE = "no_exp", _("No experience")
     ONE_TO_THREE = "1_3", _("From 1 to 3 years")
@@ -22,17 +12,7 @@ class ExperienceLevel(models.TextChoices):
 
 
 class WorkSchedule(models.TextChoices):
-    """Enumeration for work schedule types.
-
-    Defines the available types of work schedules
-    that can be assigned to a job posting.
-
-    Attributes:
-        FULL_TIME (str): Full-time schedule.
-        SHIFT (str): Shift-based schedule.
-        FLEXIBLE (str): Flexible schedule.
-        REMOTE (str): Remote work.
-    """
+    """Text choices for specifying the type of work schedule."""
 
     FULL_TIME = "full", _("Full-time")
     SHIFT = "shift", _("Shift schedule")

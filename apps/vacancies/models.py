@@ -8,27 +8,7 @@ from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
 
 class Vacancy(models.Model):
-    """Model representing a job vacancy.
-
-    Each record stores information about a single job opening:
-    title, descriptions, professional area, location, work schedule,
-    experience requirements, salary range, and activity status.
-
-    Attributes:
-        title (CharField): Vacancy title.
-        short_description (TextField): Brief introduction about the vacancy.
-        description (TextField): Detailed vacancy description with HTML markup.
-        professional_area (ForeignKey): Professional field.
-        city (ForeignKey): City and region where the vacancy is located.
-        work_schedule (CharField): Work schedule (full-time, part-time, etc.).
-        experience_level (CharField): Required work experience level.
-        salary_from (PositiveIntegerField): Minimum salary.
-        salary_to (PositiveIntegerField): Maximum salary.
-        is_active (BooleanField): Whether the vacancy is active and visible.
-        created_at (DateTimeField): Date and time when the vacancy was created.
-        updated_at (DateTimeField): Date and time when the vacancy was last
-        updated.
-    """
+    """Model for vacancy."""
 
     title = models.CharField(
         max_length=255,
@@ -112,21 +92,11 @@ class Vacancy(models.Model):
             "title",
         )
 
-    def __str__(self) -> str:
-        """Return a string representation of the vacancy.
-
-        Returns:
-            str: Vacancy title with city.
-        """
+    def __str__(self) -> str:  # noqa: D105
         return f"{self.title} / {self.city}"
 
     def get_formatted_salary(self) -> StrOrPromise:
-        """Return a formatted string representation of the salary range.
-
-        Returns:
-            StrOrPromise: Formatted salary range in format 'X – Y', 'от X',
-            'до Y' or empty string if not specified.
-        """
+        """Return the salary range formatted."""
         if self.salary_from and self.salary_to:
             return _("%(from)s – %(to)s") % {
                 "from": self.salary_from,
@@ -156,25 +126,12 @@ class Vacancy(models.Model):
             )
 
     def get_absolute_url(self) -> str:
-        """Return the absolute URL for the vacancy detail page.
-
-        Uses the vacancy id to reverse the URL named
-        `vacancies:vacancy_detail`.
-
-        Returns:
-            str: The URL of the vacancy detail page.
-        """
+        """Return the URL to access the detail view of this vacancy."""
         return reverse("vacancies:vacancy_detail", kwargs={"pk": self.pk})
 
 
 class ProfessionalArea(models.Model):
-    """Model representing a professional field or industry.
-
-    Each record stores information about a specific professional area.
-
-    Attributes:
-        name (CharField): Name of the professional area.
-    """
+    """Model for professional area."""
 
     name = models.CharField(
         max_length=255,
@@ -190,24 +147,12 @@ class ProfessionalArea(models.Model):
         verbose_name_plural = _("professional areas")
         ordering = ("name",)
 
-    def __str__(self) -> str:
-        """Return a string representation of the professional area.
-
-        Returns:
-            str: Professional area name.
-        """
+    def __str__(self) -> str:  # noqa: D105
         return f"{self.name}"
 
 
 class City(models.Model):
-    """Model representing a city with optional regional affiliation.
-
-    Each record stores information about a city that can be linked to a region.
-
-    Attributes:
-        name (CharField): Name of the city.
-        region (ForeignKey): Region to which the city belongs (optional).
-    """
+    """Model for city."""
 
     name = models.CharField(
         max_length=255,
@@ -232,12 +177,7 @@ class City(models.Model):
         verbose_name_plural = _("cities")
         ordering = ("name",)
 
-    def __str__(self) -> str:
-        """Return a string representation of the city.
-
-        Returns:
-            str: City name with region if available.
-        """
+    def __str__(self) -> str:  # noqa: D105
         prefix: StrOrPromise = _("city of")
 
         if self.region:
@@ -246,14 +186,7 @@ class City(models.Model):
 
 
 class Region(models.Model):
-    """Model representing a geographical region.
-
-    Each record stores information about a region that can contain
-    multiple cities.
-
-    Attributes:
-        name (CharField): Name of the region.
-    """
+    """Model for region."""
 
     name = models.CharField(
         max_length=255,
@@ -269,10 +202,5 @@ class Region(models.Model):
         verbose_name_plural = _("regions")
         ordering = ("name",)
 
-    def __str__(self) -> str:
-        """Return a string representation of the region.
-
-        Returns:
-            str: Region name.
-        """
+    def __str__(self) -> str:  # noqa: D105
         return f"{self.name}"
