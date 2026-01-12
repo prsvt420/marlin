@@ -13,31 +13,14 @@ from config import settings
 
 
 class ContactView(FormView):
-    """Handles displaying and processing the contact form.
-
-    Renders the `pages/contact.html` template with a ContactForm.
-    On successful submission, redirects to the same contact page
-    or a success page defined by `success_url`.
-    """
+    """View for handling the contact form."""
 
     template_name = "pages/contact.html"
     form_class = ContactForm
     success_url = reverse_lazy("pages:contact")
 
     def form_valid(self, form: ContactForm) -> HttpResponse:
-        """Process the contact form and send emails.
-
-        Extracts cleaned data from the submitted form and constructs
-        a ContactContext dictionary. Sends the contact message to
-        the email service and sends a reply to the sender.
-
-        Args:
-            form (ContactForm): The submitted contact form instance.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_valid method.
-        """
+        """Handle a valid contact form and send notification emails."""
         context: Dict[str, str] = {
             "full_name": form.cleaned_data["full_name"],
             "email": form.cleaned_data["email"],
@@ -78,20 +61,7 @@ class ContactView(FormView):
         return super().form_valid(form=form)
 
     def form_invalid(self, form: ContactForm) -> HttpResponse:
-        """Handle invalid form submission.
-
-        Displays an error message to the user when the contact form
-        contains validation errors. The message informs the user to
-        correct the errors and try again.
-
-        Args:
-            form (ContactForm): The invalid contact form
-            instance with validation errors.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_invalid method, which re-renders the form with error messages.
-        """
+        """Handle an invalid contact form and display an error message."""
         messages.error(
             self.request,
             _("Please correct the errors in the form and try again."),
@@ -100,41 +70,25 @@ class ContactView(FormView):
 
 
 class PrivacyView(TemplateView):
-    """Displays the privacy policy page.
-
-    Uses the `pages/privacy.html` template to render
-    the privacy policy and data handling information.
-    """
+    """View for displaying the privacy policy."""
 
     template_name = "pages/privacy.html"
 
 
 class TermsView(TemplateView):
-    """Displays the terms of service page.
-
-    Uses the `pages/terms.html` template to render
-    the terms and conditions for using the service.
-    """
+    """View for displaying the terms and conditions."""
 
     template_name = "pages/terms.html"
 
 
 class OfferView(TemplateView):
-    """Displays the public offer agreement page.
-
-    Uses the `pages/offer.html` template to render
-    the public offer agreement and contract terms.
-    """
+    """View for displaying the public offer."""
 
     template_name = "pages/offer.html"
 
 
 class CatalogRedirectView(RedirectView):
-    """Permanent redirection to the catalog page.
-
-    Redirects the user to the `catalog:category_list`
-    page with HTTP code 301.
-    """
+    """View for redirecting to the category list."""
 
     pattern_name = "catalog:category_list"
     permanent = True

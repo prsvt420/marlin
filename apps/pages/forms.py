@@ -4,19 +4,7 @@ from phonenumber_field.formfields import PhoneNumberField
 
 
 class ContactForm(forms.Form):
-    """Form for collecting user contact information and message.
-
-    This form is used to gather details from users who want to
-    get in touch, including their name, email address, phone number,
-    subject of the inquiry, and message content.
-
-    Attributes:
-        full_name (CharField): Full name of the user.
-        email (EmailField): User's email address.
-        phone_number (CharField): User's phone number.
-        subject (CharField): Subject or topic of the message.
-        message (CharField): The main text body of the user's message.
-    """
+    """Form for collecting contact information."""
 
     full_name = forms.CharField(
         max_length=255,
