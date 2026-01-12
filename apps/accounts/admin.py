@@ -8,7 +8,7 @@ from .models import User
 
 @admin.register(User)
 class UserAdmin(_UserAdmin):
-    """Admin configuration for User model."""
+    """Configuration for administration of the User model."""
 
     list_per_page = 25
     list_display = (
@@ -66,12 +66,5 @@ class UserAdmin(_UserAdmin):
     )
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        """Determines whether a user can be added.
-
-        Args:
-            request (HttpRequest): Http request.
-
-        Returns:
-            bool: Flag that determines whether a user can be added.
-        """
+        """Disable adding new users via the admin interface."""
         return False

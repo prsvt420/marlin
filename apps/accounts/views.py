@@ -46,10 +46,7 @@ from apps.core.services.email_service import EmailService
 
 
 class SignInView(SuccessMessageMixin, LoginView):
-    """Displays the sign in page.
-
-    Renders the `accounts/signin.html` template with a SignInForm.
-    """
+    """View for handling the sign in form."""
 
     template_name = "accounts/signin.html"
     success_message = _("You have successfully signed in. Welcome!")
@@ -57,16 +54,7 @@ class SignInView(SuccessMessageMixin, LoginView):
     form_class = SignInForm
 
     def form_valid(self, form: AuthenticationForm) -> HttpResponse:
-        """Process the authentication form and send notification email.
-
-        Args:
-            form (AuthenticationForm): The submitted authentication
-            form instance.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_valid method.
-        """
+        """Handle a valid sign in form and send notification email."""
         context = {
             "date": timezone.localtime(timezone.now()),
             "client_ip": get_client_ip(self.request)[0],
@@ -86,20 +74,7 @@ class SignInView(SuccessMessageMixin, LoginView):
         return super().form_valid(form=form)
 
     def form_invalid(self, form: AuthenticationForm) -> HttpResponse:
-        """Handle invalid form submission.
-
-        Displays an error message to the user when the sign in form
-        contains validation errors. The message in forms the user to
-        correct the errors and try again.
-
-        Args:
-            form (AuthenticationForm): The invalid sign in form
-            instance with validation errors.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_invalid method, which re-renders the form with error messages.
-        """
+        """Handle an invalid sign in form and display an error message."""
         messages.error(
             self.request,
             _("Please correct the errors in the form and try again."),
@@ -108,23 +83,10 @@ class SignInView(SuccessMessageMixin, LoginView):
 
 
 class SignOutView(LogoutView):
-    """Handles user sign out functionality.
-
-    Extends Django's LogoutView to provide custom success message
-    feedback to users upon successful logout.
-    """
+    """View for handling the sign out."""
 
     def get_redirect_url(self) -> str:
-        """Process logout redirect with success message.
-
-        Displays a success message confirming the logout operation
-        before redirecting the user to the appropriate URL.
-
-        Returns:
-            str: The redirect URL returned by the parent class's
-            get_redirect_url method, typically the homepage or
-            login page.
-        """
+        """Add a success message and return the logout redirect URL."""
         messages.success(
             self.request, _("You have been signed out. Have a nice day!")
         )
@@ -132,10 +94,7 @@ class SignOutView(LogoutView):
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
-    """Displays the sign up page.
-
-    Renders the `accounts/signup.html` template with a SignUpForm.
-    """
+    """View for handling the sign up form."""
 
     template_name = "accounts/signup.html"
     form_class = SignUpForm
@@ -146,15 +105,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
     token_generator = default_token_generator
 
     def form_valid(self, form: SignUpForm) -> HttpResponse:
-        """Handle valid form submission.
-
-        Args:
-            form (SignUpForm): The valid sign up form.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_valid method.
-        """
+        """Handle a valid sign up form and send activation email."""
         response: HttpResponse = super().form_valid(form)
 
         try:
@@ -189,20 +140,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
         return response
 
     def form_invalid(self, form: SignUpForm) -> HttpResponse:
-        """Handle invalid form submission.
-
-        Displays an error message to the user when the sign up form
-        contains validation errors. The message in forms the user to
-        correct the errors and try again.
-
-        Args:
-            form (SignUpForm): The invalid sign up form
-            instance with validation errors.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_invalid method, which re-renders the form with error messages.
-        """
+        """Handle an invalid sign up form and display an error message."""
         messages.error(
             self.request,
             _("Please correct the errors in the form and try again."),
@@ -211,11 +149,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
 
 
 class PasswordResetView(SuccessMessageMixin, _PasswordResetView):
-    """Displays the password reset request page.
-
-    Renders the `accounts/password_reset.html` template with
-    a PasswordResetForm.
-    """
+    """View for handling the password reset form."""
 
     template_name = "accounts/password_reset.html"
     email_template_name = "emails/password_reset.txt"
@@ -227,11 +161,7 @@ class PasswordResetView(SuccessMessageMixin, _PasswordResetView):
 
 
 class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
-    """Displays the password reset confirmation page.
-
-    Renders the `accounts/password_reset_confirm.html` template with
-    a SetPasswordForm.
-    """
+    """View for handling the set password form."""
 
     form_class = SetPasswordForm
     template_name = "accounts/password_reset_confirm.html"
@@ -244,20 +174,7 @@ class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
     def dispatch(
         self, request, *args, **kwargs
     ) -> Union[HttpResponseBase, HttpResponsePermanentRedirect]:
-        """Validate password reset link before processing the request.
-
-        Checks whether the password reset link provided in the URL is valid.
-        If the link is invalid or expired, an error message is displayed
-        to the user and they are redirected to the sign-in page.
-        Otherwise, continues with the standard dispatch flow.
-
-        Returns:
-            Union[HttpResponseBase, HttpResponsePermanentRedirect]:
-                - A redirect response to the sign-in page if
-                the link is invalid.
-                - Otherwise, the standard dispatch response
-                from the parent class.
-        """
+        """Handle invalid or expired password reset links and redirect."""
         response: HttpResponseBase = super().dispatch(request, *args, **kwargs)
 
         if isinstance(response, TemplateResponse) and not self.validlink:
@@ -269,15 +186,7 @@ class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
         return response
 
     def form_valid(self, form: SetPasswordForm) -> HttpResponse:
-        """Process password reset confirmation and send notification emails.
-
-        Args:
-            form (SetPasswordForm): The submitted set password form instance.
-
-        Returns:
-            HttpResponse: The HTTP response returned by the parent class's
-            form_valid method.
-        """
+        """Handle a valid set password form and send notification email."""
         try:
             email_service: EmailService = EmailService()
             email_service.send_email(
@@ -291,30 +200,12 @@ class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
 
 
 class AccountActivationView(View):
-    """Handles user account activation via email confirmation link."""
+    """View for activating the user account."""
 
     token_generator = default_token_generator
 
     def get(self, request: HttpRequest, token: str, uidb64: str):
-        """Activate a user account using an email confirmation link.
-
-        Decodes the base64-encoded user ID from the URL and validates the
-        activation token. If the user exists and the token is valid, the
-        account is activated and a success message is displayed. If the
-        link is invalid, expired, or the user cannot be resolved, an error
-        message is shown instead.
-
-        After processing the activation attempt, the user is redirected
-        to the sign-in page.
-
-        Args:
-            request (HttpRequest): The incoming HTTP GET request.
-            token (str): The account activation token.
-            uidb64 (str): The base64-encoded user identifier.
-
-        Returns:
-            HttpResponse: A redirect response to the sign in page.
-        """
+        """Activate the user if the token is valid and redirect to sign in."""
         user: Optional[AbstractBaseUser]
 
         try:

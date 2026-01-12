@@ -13,18 +13,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SignInForm(AuthenticationForm):
-    """Form for logging into the account.
-
-    This form extends Django's built-in AuthenticationForm.
-
-    This form is used to create a new user account, including
-    username, email, phone number, and full name details. It also
-    handles password creation and validation.
-
-    Attributes:
-        username (UsernameField): User's username.
-        password (CharField): User's password.
-    """
+    """Form for signing in."""
 
     username = UsernameField(
         required=True,
@@ -42,21 +31,7 @@ class SignInForm(AuthenticationForm):
 
 
 class SignUpForm(UserCreationForm):
-    """Form for registering a new user with detailed personal information.
-
-    This form extends Django's built-in UserCreationForm and adds additional
-    fields.
-
-    Attributes:
-        username (CharField): User's username.
-        email (EmailField): User's email address.
-        phone_number (CharField): User's phone number.
-        first_name (CharField): User's first name.
-        last_name (CharField): User's last name.
-        middle_name (CharField): User's middle name.
-        password1 (CharField): Password for the new account.
-        password2 (CharField): Password confirmation to verify accuracy.
-    """
+    """Form for signing up."""
 
     password1 = forms.CharField(
         required=True,
@@ -128,13 +103,7 @@ class SignUpForm(UserCreationForm):
 
 
 class PasswordResetForm(_PasswordResetForm):
-    """Form for requesting a password reset by email.
-
-    This form extends Django's built-in PasswordResetForm.
-
-    Attributes:
-        email (EmailField): User's email address.
-    """
+    """Form for requesting a password reset."""
 
     email = forms.EmailField(
         max_length=255,
@@ -149,15 +118,7 @@ class PasswordResetForm(_PasswordResetForm):
 
 
 class SetPasswordForm(_SetPasswordForm):
-    """Form for setting a new password after a password reset request.
-
-    This form extends Django's built-in SetPasswordForm.
-
-    Attributes:
-        new_password1 (CharField): New password.
-        new_password2 (CharField): New password confirmation
-        to verify accuracy.
-    """
+    """Form for setting a new password."""
 
     new_password1 = forms.CharField(
         required=True,

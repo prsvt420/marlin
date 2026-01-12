@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-12 09:11+0800\n"
+"POT-Creation-Date: 2026-01-13 02:00+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -35,147 +35,147 @@ msgstr "Важные даты"
 msgid "Search by first name, last name, middle name, email and phone number"
 msgstr "Поиск по имени, фамилии, отчеству, электронной почты и номеру телефона"
 
-#: .\apps\accounts\apps.py:14
+#: .\apps\accounts\apps.py:11
 msgid "Accounts"
 msgstr "Аккаунты"
 
-#: .\apps\accounts\forms.py:31
+#: .\apps\accounts\forms.py:20
 #: .\apps\accounts\templates\accounts\signin.html:26
 #: .\apps\accounts\templates\accounts\signup.html:26
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: .\apps\accounts\forms.py:33 .\apps\accounts\forms.py:90
+#: .\apps\accounts\forms.py:22 .\apps\accounts\forms.py:65
 msgid "The username is required."
 msgstr "Имя пользователя обязательно."
 
-#: .\apps\accounts\forms.py:38
+#: .\apps\accounts\forms.py:27
 #: .\apps\accounts\templates\accounts\signin.html:30
 #: .\apps\accounts\templates\accounts\signup.html:50
 msgid "Password"
 msgstr "Пароль"
 
-#: .\apps\accounts\forms.py:40 .\apps\accounts\forms.py:64
+#: .\apps\accounts\forms.py:29 .\apps\accounts\forms.py:39
 msgid "The password is required."
 msgstr "Пароль обязателен."
 
-#: .\apps\accounts\forms.py:70
+#: .\apps\accounts\forms.py:45
 msgid "The password confirmation is required."
 msgstr "Подтверждение пароля обязательно."
 
-#: .\apps\accounts\forms.py:87
+#: .\apps\accounts\forms.py:62
 msgid "The username must not be longer than 255 characters."
 msgstr "Длина имени пользователя не должна превышать 255 символов."
 
-#: .\apps\accounts\forms.py:89
+#: .\apps\accounts\forms.py:64
 msgid "This username is already in use."
 msgstr "Это имя пользователя уже используется."
 
-#: .\apps\accounts\forms.py:94 .\apps\accounts\forms.py:145
+#: .\apps\accounts\forms.py:69 .\apps\accounts\forms.py:114
 #: .\apps\pages\forms.py:24
 msgid "The email must not be longer than 255 characters."
 msgstr "Длина электронной почты не должна превышать 255 символов."
 
-#: .\apps\accounts\forms.py:97 .\apps\accounts\forms.py:143
+#: .\apps\accounts\forms.py:72 .\apps\accounts\forms.py:112
 #: .\apps\pages\forms.py:22
 msgid "The email must be in the format user@example.com."
 msgstr "Электронная почта должена быть в формате user@example.com."
 
-#: .\apps\accounts\forms.py:99
+#: .\apps\accounts\forms.py:74
 msgid "This email address is already registered."
 msgstr "Эта электронная почта уже зарегистрирована."
 
-#: .\apps\accounts\forms.py:100 .\apps\accounts\forms.py:142
+#: .\apps\accounts\forms.py:75 .\apps\accounts\forms.py:111
 #: .\apps\pages\forms.py:21
 msgid "The email is required."
 msgstr "Электронная почта обязательна."
 
-#: .\apps\accounts\forms.py:104 .\apps\pages\forms.py:33
+#: .\apps\accounts\forms.py:79 .\apps\pages\forms.py:33
 msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
 msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
 
-#: .\apps\accounts\forms.py:107
+#: .\apps\accounts\forms.py:82
 msgid "This phone number is already registered."
 msgstr "Этот номер телефона уже зарегистрирован."
 
-#: .\apps\accounts\forms.py:108 .\apps\pages\forms.py:31
+#: .\apps\accounts\forms.py:83 .\apps\pages\forms.py:31
 msgid "The phone number is required."
 msgstr "Номер телефона обязателен."
 
-#: .\apps\accounts\forms.py:112
+#: .\apps\accounts\forms.py:87
 msgid "The first name must not be longer than 255 characters."
 msgstr "Длина имени не должна превышать 255 символов."
 
-#: .\apps\accounts\forms.py:114
+#: .\apps\accounts\forms.py:89
 msgid "The first name is required."
 msgstr "Имя обязательно."
 
-#: .\apps\accounts\forms.py:118
+#: .\apps\accounts\forms.py:93
 msgid "The last name must not be longer than 255 characters."
 msgstr "Длина фамилии не должна превышать 255 символов."
 
-#: .\apps\accounts\forms.py:120
+#: .\apps\accounts\forms.py:95
 msgid "The last name is required."
 msgstr "Фамилия обязательна."
 
-#: .\apps\accounts\forms.py:124
+#: .\apps\accounts\forms.py:99
 msgid "The middle name must not be longer than 255 characters."
 msgstr "Длина отчества не должна превышать 255 символов."
 
-#: .\apps\accounts\forms.py:165
+#: .\apps\accounts\forms.py:126
 msgid "The new password is required."
 msgstr "Новый пароль обязателен."
 
-#: .\apps\accounts\forms.py:171
+#: .\apps\accounts\forms.py:132
 msgid "The new password confirmation is required."
 msgstr "Подтверждение нового пароля обязательно."
 
-#: .\apps\accounts\models.py:37
+#: .\apps\accounts\models.py:13
 msgid "email"
 msgstr "электронная почта"
 
-#: .\apps\accounts\models.py:38
+#: .\apps\accounts\models.py:14
 msgid "User email."
 msgstr "Электронная почта пользователя."
 
-#: .\apps\accounts\models.py:42
+#: .\apps\accounts\models.py:18
 msgid "phone number"
 msgstr "номер телефона"
 
-#: .\apps\accounts\models.py:43
+#: .\apps\accounts\models.py:19
 msgid "User phone number."
 msgstr "Номер телефона пользователя."
 
-#: .\apps\accounts\models.py:47
+#: .\apps\accounts\models.py:23
 msgid "first name"
 msgstr "имя"
 
-#: .\apps\accounts\models.py:49
+#: .\apps\accounts\models.py:25
 msgid "User first name."
 msgstr "Имя пользователя."
 
-#: .\apps\accounts\models.py:52
+#: .\apps\accounts\models.py:28
 msgid "last name"
 msgstr "фамилия"
 
-#: .\apps\accounts\models.py:54
+#: .\apps\accounts\models.py:30
 msgid "User last name."
 msgstr "Фамилия пользователя."
 
-#: .\apps\accounts\models.py:57
+#: .\apps\accounts\models.py:33
 msgid "middle name"
 msgstr "отчество"
 
-#: .\apps\accounts\models.py:59
+#: .\apps\accounts\models.py:35
 msgid "User middle name."
 msgstr "Отчество пользователя."
 
-#: .\apps\accounts\models.py:63 .\apps\catalog\models.py:96
+#: .\apps\accounts\models.py:39 .\apps\catalog\models.py:96
 #: .\apps\catalog\models.py:389 .\apps\vacancies\models.py:91
 msgid "active"
 msgstr "активный"
 
-#: .\apps\accounts\models.py:66
+#: .\apps\accounts\models.py:42
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
@@ -183,11 +183,11 @@ msgstr ""
 "Отметьте, если пользователь должен считаться активным. Уберите эту отметку "
 "вместо удаления учётной записи."
 
-#: .\apps\accounts\models.py:82 .\apps\carts\models.py:27
+#: .\apps\accounts\models.py:58 .\apps\carts\models.py:27
 msgid "user"
 msgstr "пользователь"
 
-#: .\apps\accounts\models.py:83
+#: .\apps\accounts\models.py:59
 msgid "users"
 msgstr "пользователи"
 
@@ -444,28 +444,28 @@ msgid ""
 "You've have received this email because your account has been signed in."
 msgstr "Вы получили это письмо, потому что в ваш аккаунт был выполнен вход."
 
-#: .\apps\accounts\views.py:55
+#: .\apps\accounts\views.py:52
 msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
-#: .\apps\accounts\views.py:105 .\apps\accounts\views.py:208
+#: .\apps\accounts\views.py:80 .\apps\accounts\views.py:146
 #: .\apps\pages\views.py:67
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
-#: .\apps\accounts\views.py:129
+#: .\apps\accounts\views.py:91
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views.py:144
+#: .\apps\accounts\views.py:103
 msgid "You have successfully signed up! Activate your account."
 msgstr "Вы успешно зарегистрированы! Активируйте аккаунт."
 
-#: .\apps\accounts\views.py:178
+#: .\apps\accounts\views.py:129
 msgid "An account activation link has been sent to your email."
 msgstr "Ссылка для активации аккаунта отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views.py:184
+#: .\apps\accounts\views.py:135
 msgid ""
 "An error occurred while sending the account activation link. Please try "
 "again later."
@@ -473,26 +473,26 @@ msgstr ""
 "Произошла ошибка при отправке ссылки для активации аккаунта. Пожалуйста, "
 "попробуйте позже."
 
-#: .\apps\accounts\views.py:224
+#: .\apps\accounts\views.py:158
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views.py:239
+#: .\apps\accounts\views.py:169
 msgid ""
 "Your password has been updated. You can now sign in with your new "
 "credentials."
 msgstr ""
 "Ваш пароль обновлён. Теперь вы можете войти, используя новые учётные данные."
 
-#: .\apps\accounts\views.py:265
+#: .\apps\accounts\views.py:182
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 
-#: .\apps\accounts\views.py:330
+#: .\apps\accounts\views.py:221
 msgid "The activation was successful! Sign in to your account."
 msgstr "Активация прошла успешно! Войдите в аккаунт."
 
-#: .\apps\accounts\views.py:335
+#: .\apps\accounts\views.py:226
 msgid "The account activation link is invalid or expired."
 msgstr "Ссылка для активации аккаунта недействительна или устарела."
 
