@@ -10,13 +10,9 @@ from config import settings
 class EmailService:
     """Service for sending emails."""
 
-    def __init__(self, from_email: str = settings.DEFAULT_FROM_EMAIL) -> None:
-        """Initialize the email service with a sender email.
-
-        Args:
-            from_email (str): Email address to use as sender.
-                Defaults to settings.DEFAULT_FROM_EMAIL if not provided.
-        """
+    def __init__(  # noqa: D107
+        self, from_email: str = settings.DEFAULT_FROM_EMAIL
+    ) -> None:
         self._from_email: str = from_email
 
     def send_email(
@@ -26,15 +22,7 @@ class EmailService:
         to: List[str],
         context: Optional[Mapping[str, Any]] = None,
     ) -> None:
-        """Send an email with HTML content rendered from a template.
-
-        Args:
-            email_template (EmailTemplate): Email template containing
-            paths for subject, plain text body, and HTML content.
-            to (List[str]): List of recipient email addresses.
-            context (Mapping[str, Any]): Context data for rendering the
-            templates.
-        """
+        """Send an email rendered from the specified email template."""
         subject: str = render_to_string(
             template_name=email_template.subject, context=context
         ).strip()
