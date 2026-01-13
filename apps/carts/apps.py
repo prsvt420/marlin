@@ -4,10 +4,7 @@ from django_stubs_ext import StrOrPromise
 
 
 class CartsConfig(AppConfig):
-    """Django application configuration for the Carts app.
-
-    This class defines the configuration for the `apps.carts` application.
-    """
+    """Configuration for the carts application."""
 
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.carts"

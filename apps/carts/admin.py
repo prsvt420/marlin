@@ -7,7 +7,7 @@ from apps.carts.models import Cart, CartItem
 
 
 class CartItemInline(admin.TabularInline):
-    """Inline for cart item."""
+    """Configuration for inline administration of the CartItem model."""
 
     model = CartItem
     extra = 0
@@ -16,7 +16,7 @@ class CartItemInline(admin.TabularInline):
 
 @admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
-    """Admin configuration for Cart model."""
+    """Configuration for administration of the Cart model."""
 
     list_per_page = 25
     list_display = (
@@ -41,20 +41,12 @@ class CartAdmin(admin.ModelAdmin):
     )
     inlines = (CartItemInline,)
 
-    @admin.display(description=_("Total quantity"))
-    def total_quantity(self, obj: Cart) -> int:
-        """Return the total quantity of items in the cart.
-
-        Returns:
-            int: Total number of items in the cart.
-        """
-        return obj.get_total_quantity()
-
     @admin.display(description=_("Total price"))
     def total_price(self, obj: Cart) -> Decimal:
-        """Return the total price of all items in the cart.
-
-        Returns:
-            Decimal: Final cart price.
-        """
+        """Return the cart total price."""
         return obj.get_total_price()
+
+    @admin.display(description=_("Total quantity"))
+    def total_quantity(self, obj: Cart) -> int:
+        """Return the cart total quantity."""
+        return obj.get_total_quantity()

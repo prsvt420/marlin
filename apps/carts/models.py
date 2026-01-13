@@ -10,15 +10,7 @@ from apps.catalog.models import Product
 
 
 class Cart(models.Model):
-    """Model representing a cart.
-
-    Attributes:
-        user (ForeignKey): The user to whom the cart belongs.
-        cart_status (CharField): Cart status (active, ordered, abandoned).
-        created_at (DateTimeField): Date and time the cart was created.
-        updated_at (DateTimeField): Date and time when the cart was last
-            updated.
-    """
+    """Model for cart."""
 
     user = models.ForeignKey(
         to=get_user_model(),
@@ -61,12 +53,14 @@ class Cart(models.Model):
             ),
         ]
 
-    def get_total_price(self) -> Decimal:
-        """Return the cart total price.
+    def __str__(self) -> str:  # noqa: D105
+        return (
+            f"{_('Cart')} "
+            f"({self.user} - {self.get_cart_status_display().lower()})"
+        )
 
-        Returns:
-            Decimal: Cart total price.
-        """
+    def get_total_price(self) -> Decimal:
+        """Return the cart total price."""
         total_price: Decimal = self.cart_items.aggregate(
             total_price=models.Sum(
                 models.F("price_snapshot") * models.F("quantity"),
@@ -79,11 +73,7 @@ class Cart(models.Model):
         return total_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
     def get_total_quantity(self) -> int:
-        """Return the cart total quantity.
-
-        Returns:
-            Decimal: Cart total quantity.
-        """
+        """Return the cart total quantity."""
         return (
             self.cart_items.aggregate(total_quantity=models.Sum("quantity"))[
                 "total_quantity"
@@ -91,28 +81,9 @@ class Cart(models.Model):
             or 0  # noqa: W503
         )
 
-    def __str__(self) -> str:
-        """Return a string representation of the cart.
-
-        Returns:
-            str: Cart user.
-        """
-        return (
-            f"{_('Cart')} "
-            f"({self.user} - {self.get_cart_status_display().lower()})"
-        )
-
 
 class CartItem(models.Model):
-    """Model representing a cart item.
-
-    Attributes:
-        cart (ForeignKey): The cart to whom the cart item belongs.
-        product (ForeignKey): Product belonging to the cart item.
-        quantity (PositiveIntegerField): Number of products in cart item.
-        price_snapshot (DecimalField): Price of the product at the time
-            it was added to the cart.
-    """
+    """Model for cart item."""
 
     cart = models.ForeignKey(
         to="Cart",
@@ -158,20 +129,11 @@ class CartItem(models.Model):
             ),
         ]
 
-    def save(self, **kwargs: Any) -> None:
-        """Set price snapshot on creation if not already set.
+    def __str__(self) -> str:  # noqa: D105
+        return f"{self.cart}: {self.product} x {self.quantity}"
 
-        Args:
-            **kwargs: Additional context passed to the base implementation.
-        """
+    def save(self, **kwargs: Any) -> None:
+        """Save cart item data."""
         if not self.price_snapshot:
             self.price_snapshot = self.product.get_final_price()
         super().save(**kwargs)
-
-    def __str__(self) -> str:
-        """Return a string representation of the cart item.
-
-        Returns:
-            str: Cart item details.
-        """
-        return f"{self.cart}: {self.product} x {self.quantity}"
