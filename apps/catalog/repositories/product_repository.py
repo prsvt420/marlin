@@ -13,16 +13,11 @@ from apps.catalog.models import Product, ProductAttribute
 
 
 class ProductRepository:
-    """Repository for Product model database operations."""
+    """Repository for accessing Product model."""
 
     @staticmethod
     def all() -> QuerySet[Product]:
-        """Return a queryset of all products with related data preloaded.
-
-        Returns:
-            QuerySet[Product]: A queryset containing all Product objects
-            with related data preloaded.
-        """
+        """Return all products with related prefetched."""
         return (
             Product.objects.all()
             .select_related("category", "product_nutrition")
@@ -45,19 +40,7 @@ class ProductRepository:
         order_field: Optional[str] = None,
         category_slug: Optional[str] = None,
     ) -> QuerySet[Product]:
-        """Return a filtered queryset of products.
-
-        Args:
-            search_query (Optional[str]): The query to search.
-            only_active (bool): If True, returns only active products.
-            Default True.
-            order_field (Optional[str]): Field to order by.
-            category_slug (Optional[str]): Category slug for filtering.
-
-        Returns:
-            QuerySet[Product]: A queryset containing active Product
-            objects filtered according to the provided criteria.
-        """
+        """Return filtered products."""
         queryset: QuerySet[Product] = ProductRepository.all()
 
         if only_active:

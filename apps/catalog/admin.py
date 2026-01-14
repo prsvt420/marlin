@@ -18,7 +18,7 @@ from .models import (
 
 @admin.register(Category)
 class CategoryAdmin(TranslationAdmin):
-    """Admin configuration for Category model."""
+    """Configuration for administration of the Category model."""
 
     list_per_page = 25
     prepopulated_fields = {
@@ -56,12 +56,7 @@ class CategoryAdmin(TranslationAdmin):
 
     @admin.display(description=_("Image preview"))
     def image_preview(self, obj: Category) -> StrOrPromise:
-        """Return an HTML image preview for the category.
-
-        Returns:
-            StrOrPromise: HTML <img> tag if the image exists,
-            otherwise a fallback message.
-        """
+        """Return an HTML image preview for the category."""
         if obj.image_path:
             return format_html(
                 "<img src='{}' alt='{}' style='max-height: 100px;'/>",
@@ -73,7 +68,7 @@ class CategoryAdmin(TranslationAdmin):
 
 @admin.register(Attribute)
 class AttributeAdmin(TranslationAdmin):
-    """Admin configuration for Attribute model."""
+    """Configuration for administration of the Attribute model."""
 
     list_per_page = 25
     list_display = ("name",)
@@ -84,7 +79,7 @@ class AttributeAdmin(TranslationAdmin):
 
 @admin.register(ProductAttribute)
 class ProductAttributeAdmin(TranslationAdmin):
-    """Admin configuration for ProductAttribute model."""
+    """Configuration for administration of the ProductAttribute model."""
 
     list_per_page = 25
     list_display = (
@@ -101,7 +96,7 @@ class ProductAttributeAdmin(TranslationAdmin):
 
 @admin.register(ProductImage)
 class ProductImageAdmin(TranslationAdmin):
-    """Admin configuration for ProductImage model."""
+    """Configuration for administration of the ProductImage model."""
 
     list_per_page = 25
     list_display = ("product", "image_path", "sort_order")
@@ -113,7 +108,7 @@ class ProductImageAdmin(TranslationAdmin):
 
 @admin.register(ProductNutrition)
 class ProductNutritionAdmin(admin.ModelAdmin):
-    """Admin configuration for ProductNutrition model."""
+    """Configuration for administration of the ProductNutrition model."""
 
     list_per_page = 25
     list_display = (
@@ -129,14 +124,14 @@ class ProductNutritionAdmin(admin.ModelAdmin):
 
 
 class ProductImageInline(admin.TabularInline):
-    """Inline for product images."""
+    """Configuration for inline administration of the ProductImage model."""
 
     model = ProductImage
     extra = 1
 
 
 class ProductNutritionInline(admin.StackedInline):
-    """Inline for product attributes."""
+    """Configuration for inline administration of the ProductNutrition model."""  # noqa: E501
 
     model = ProductNutrition
     extra = 0
@@ -144,7 +139,7 @@ class ProductNutritionInline(admin.StackedInline):
 
 
 class ProductAttributeInline(admin.TabularInline):
-    """Inline for product nutritional information."""
+    """Configuration for inline administration of the ProductAttribute model."""  # noqa: E501
 
     model = ProductAttribute
     extra = 1
@@ -152,7 +147,7 @@ class ProductAttributeInline(admin.TabularInline):
 
 @admin.register(Product)
 class ProductAdmin(TranslationAdmin):
-    """Admin configuration for Product model."""
+    """Configuration for administration of the Product model."""
 
     list_per_page = 25
     prepopulated_fields = {
@@ -200,9 +195,5 @@ class ProductAdmin(TranslationAdmin):
 
     @admin.display(description=_("Final price"))
     def final_price(self, obj: Product) -> Decimal:
-        """Return price with discount applied.
-
-        Returns:
-            Decimal: Final price.
-        """
+        """Return the price with discount applied."""
         return obj.get_final_price()

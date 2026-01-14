@@ -11,31 +11,19 @@ from apps.catalog.repositories.product_repository import ProductRepository
 
 
 class CategoryListView(generic.ListView):
-    """Displays a list of products in the catalog.
-
-    Uses the `catalog/category_list.html` template and provides
-    a context variable `parent_categories` containing all Category objects.
-    """
+    """View for displaying the category list."""
 
     model = Category
     template_name = "catalog/category_list.html"
     context_object_name = "parent_categories"
 
     def get_queryset(self) -> QuerySet[Category]:
-        """Return the queryset of parent categories.
-
-        Returns:
-            QuerySet[Category]: A queryset of parent Category objects.
-        """
+        """Return all active categories with parents."""
         return CategoryRepository.get_parents()
 
 
 class ProductListView(generic.ListView):
-    """Displays a list of products in the catalog.
-
-    Uses the `catalog/product_list.html` template and provides
-    a context variable `products` containing all Product objects.
-    """
+    """View for displaying the product list."""
 
     model = Product
     template_name = "catalog/product_list.html"
@@ -45,11 +33,7 @@ class ProductListView(generic.ListView):
     extra_context = {"ordering_options": ORDERING_OPTIONS}
 
     def get_queryset(self) -> QuerySet[Product]:
-        """Return the queryset of products.
-
-        Returns:
-            QuerySet[Product]: A queryset of Product objects.
-        """
+        """Return filtered products."""
         search_query: str = self.search_query
         order_field: Optional[str] = self.ordering_option.field
         category_slug: Optional[str] = self.category_slug
@@ -61,14 +45,7 @@ class ProductListView(generic.ListView):
         )
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
-        """Add additional context variables to the template.
-
-        Args:
-            **kwargs: Additional context passed to the base implementation.
-
-        Returns:
-            Dict[str, Any]: The context dictionary for the template.
-        """
+        """Add additional context variables to the template."""
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["search_query"] = self.search_query
         context["current_ordering_option"] = self.ordering_option
@@ -79,58 +56,28 @@ class ProductListView(generic.ListView):
 
     @property
     def ordering_option(self) -> OrderingOption:
-        """Return the currently selected product ordering option.
-
-        Fetches the 'sort' GET parameter from the request and returns
-        the corresponding `OrderingOption` from `ORDERING_OPTIONS`.
-
-        Returns:
-            OrderingOption: The selected ordering option.
-        """
+        """Return the current ordering option from GET parameters."""
         ordering_option_key: str = self.request.GET.get("sort", "").strip()
         return ORDERING_OPTIONS.get(ordering_option_key, ORDERING_OPTIONS[""])
 
     @property
     def category_slug(self) -> str:
-        """Return the category slug from URL keyword arguments.
-
-        Fetches the 'slug' parameter from `self.kwargs` and returns it.
-
-        Returns:
-            str: The category slug string. Returns an empty string if
-            no slug parameter is provided in the URL.
-        """
+        """Return the current category slug from URL keyword arguments."""
         return self.kwargs.get("slug", "")
 
     @property
     def search_query(self) -> str:
-        """Return the search query string from the request.
-
-        Fetches the 'q' GET parameter and strips whitespace from
-        the beginning and end.
-
-        Returns:
-            str: The cleaned search query string. Returns an empty
-            string if no query parameter is provided.
-        """
+        """Return the current search query from GET parameters."""
         return self.request.GET.get("q", "").strip()
 
 
 class ProductDetailView(generic.DetailView):
-    """Displays detailed information about a specific product.
-
-    Uses the `catalog/product_detail.html` template and provides
-    a context variable `product` containing the selected Product object.
-    """
+    """View for displaying the product detail."""
 
     model = Product
     template_name = "catalog/product_detail.html"
     context_object_name = "product"
 
     def get_queryset(self) -> QuerySet[Product]:
-        """Return the queryset of products.
-
-        Returns:
-            QuerySet[Product]: A queryset of Product objects.
-        """
+        """Return all active products."""
         return ProductRepository.filter()

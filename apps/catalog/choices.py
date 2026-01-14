@@ -3,15 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class UnitType(models.TextChoices):
-    """Enumeration for product measurement units.
-
-    Defines the available units of measurement for products.
-
-    Attributes:
-        KILOGRAM: Kilogram unit ("kg").
-        LITER: Liter unit ("l").
-        PIECE: Piece/unit ("pcs").
-    """
+    """Text choices for specifying the unit of measurement."""
 
     KILOGRAM = "kg", _("kg")
     LITER = "l", _("L")
