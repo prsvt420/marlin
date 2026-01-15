@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import FormView, RedirectView, TemplateView
+from django.views.generic import FormView
 
 from apps.core.services.email_service import EmailService
 from apps.pages.email_templates import CONTACT_MESSAGE, CONTACT_REPLY
@@ -67,28 +67,3 @@ class ContactView(FormView):
             _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form=form)
-
-
-class PrivacyView(TemplateView):
-    """View for displaying the privacy policy."""
-
-    template_name = "pages/privacy.html"
-
-
-class TermsView(TemplateView):
-    """View for displaying the terms and conditions."""
-
-    template_name = "pages/terms.html"
-
-
-class OfferView(TemplateView):
-    """View for displaying the public offer."""
-
-    template_name = "pages/offer.html"
-
-
-class CatalogRedirectView(RedirectView):
-    """View for redirecting to the category list."""
-
-    pattern_name = "catalog:category_list"
-    permanent = True

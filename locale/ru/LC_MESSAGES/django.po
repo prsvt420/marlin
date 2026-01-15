@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-14 09:23+0800\n"
+"POT-Creation-Date: 2026-01-15 23:03+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -72,12 +72,12 @@ msgid "This username is already in use."
 msgstr "Это имя пользователя уже используется."
 
 #: .\apps\accounts\forms.py:69 .\apps\accounts\forms.py:114
-#: .\apps\pages\forms.py:24
+#: .\apps\pages\forms\contact_form.py:24
 msgid "The email must not be longer than 255 characters."
 msgstr "Длина электронной почты не должна превышать 255 символов."
 
 #: .\apps\accounts\forms.py:72 .\apps\accounts\forms.py:112
-#: .\apps\pages\forms.py:22
+#: .\apps\pages\forms\contact_form.py:22
 msgid "The email must be in the format user@example.com."
 msgstr "Электронная почта должена быть в формате user@example.com."
 
@@ -86,11 +86,11 @@ msgid "This email address is already registered."
 msgstr "Эта электронная почта уже зарегистрирована."
 
 #: .\apps\accounts\forms.py:75 .\apps\accounts\forms.py:111
-#: .\apps\pages\forms.py:21
+#: .\apps\pages\forms\contact_form.py:21
 msgid "The email is required."
 msgstr "Электронная почта обязательна."
 
-#: .\apps\accounts\forms.py:79 .\apps\pages\forms.py:33
+#: .\apps\accounts\forms.py:79 .\apps\pages\forms\contact_form.py:33
 msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
 msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
 
@@ -98,7 +98,7 @@ msgstr "Номер телефона должен быть в формате +7 (
 msgid "This phone number is already registered."
 msgstr "Этот номер телефона уже зарегистрирован."
 
-#: .\apps\accounts\forms.py:83 .\apps\pages\forms.py:31
+#: .\apps\accounts\forms.py:83 .\apps\pages\forms\contact_form.py:31
 msgid "The phone number is required."
 msgstr "Номер телефона обязателен."
 
@@ -449,7 +449,7 @@ msgid "You have successfully signed in. Welcome!"
 msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
 #: .\apps\accounts\views.py:80 .\apps\accounts\views.py:146
-#: .\apps\pages\views.py:67
+#: .\apps\pages\views\contact_view.py:67
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
@@ -1068,23 +1068,23 @@ msgstr "Продукты в каталоге не найдены"
 msgid "Pages"
 msgstr "Страницы"
 
-#: .\apps\pages\forms.py:12
+#: .\apps\pages\forms\contact_form.py:12
 msgid "The full name is required."
 msgstr "ФИО обязательно."
 
-#: .\apps\pages\forms.py:14
+#: .\apps\pages\forms\contact_form.py:14
 msgid "The full name must not be longer than 255 characters."
 msgstr "Длина ФИО не должна превышать 255 символов."
 
-#: .\apps\pages\forms.py:40
+#: .\apps\pages\forms\contact_form.py:40
 msgid "The subject is required."
 msgstr "Тема обязательна."
 
-#: .\apps\pages\forms.py:42
+#: .\apps\pages\forms\contact_form.py:42
 msgid "The subject must not be longer than 255 characters."
 msgstr "Длина темы не должна превышать 255 символов."
 
-#: .\apps\pages\forms.py:49
+#: .\apps\pages\forms\contact_form.py:49
 msgid "The message is required."
 msgstr "Сообщение обязательно."
 
@@ -1231,12 +1231,12 @@ msgstr "Часы работы"
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
 
-#: .\apps\pages\views.py:48
+#: .\apps\pages\views\contact_view.py:48
 msgid "Your message has been successfully sent! We will contact you shortly."
 msgstr ""
 "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
 
-#: .\apps\pages\views.py:56
+#: .\apps\pages\views\contact_view.py:56
 msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
