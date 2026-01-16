@@ -1,33 +1,9 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import (
-    AuthenticationForm,
-)
-from django.contrib.auth.forms import PasswordResetForm as _PasswordResetForm
-from django.contrib.auth.forms import SetPasswordForm as _SetPasswordForm
-from django.contrib.auth.forms import (
     UserCreationForm,
-    UsernameField,
 )
 from django.utils.translation import gettext_lazy as _
-
-
-class SignInForm(AuthenticationForm):
-    """Form for signing in."""
-
-    username = UsernameField(
-        required=True,
-        label=_("Username"),
-        error_messages={
-            "required": _("The username is required."),
-        },
-    )
-    password = forms.CharField(
-        required=True,
-        label=_("Password"),
-        strip=False,
-        error_messages={"required": _("The password is required.")},
-    )
 
 
 class SignUpForm(UserCreationForm):
@@ -100,35 +76,3 @@ class SignUpForm(UserCreationForm):
                 )
             },
         }
-
-
-class PasswordResetForm(_PasswordResetForm):
-    """Form for requesting a password reset."""
-
-    email = forms.EmailField(
-        max_length=255,
-        error_messages={
-            "required": _("The email is required."),
-            "invalid": _("The email must be in the format user@example.com."),
-            "max_length": _(
-                "The email must not be longer than 255 characters."
-            ),
-        },
-    )
-
-
-class SetPasswordForm(_SetPasswordForm):
-    """Form for setting a new password."""
-
-    new_password1 = forms.CharField(
-        required=True,
-        strip=False,
-        error_messages={"required": _("The new password is required.")},
-    )
-    new_password2 = forms.CharField(
-        required=True,
-        strip=False,
-        error_messages={
-            "required": _("The new password confirmation is required.")
-        },
-    )
