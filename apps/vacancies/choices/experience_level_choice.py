@@ -9,12 +9,3 @@ class ExperienceLevel(models.TextChoices):
     ONE_TO_THREE = "1_3", _("From 1 to 3 years")
     THREE_TO_SIX = "3_6", _("From 3 to 6 years")
     MORE_THAN_SIX = "6_plus", _("More than 6 years")
-
-
-class WorkSchedule(models.TextChoices):
-    """Text choices for specifying the type of work schedule."""
-
-    FULL_TIME = "full", _("Full-time")
-    SHIFT = "shift", _("Shift schedule")
-    FLEXIBLE = "flex", _("Flexible schedule")
-    REMOTE = "remote", _("Remote work")

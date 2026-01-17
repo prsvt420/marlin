@@ -1,11 +1,10 @@
 from typing import Any, Dict
 
 from django.db.models import QuerySet
-from django.views import generic
 from django.views.generic import ListView
 
 from apps.vacancies.models import Vacancy
-from apps.vacancies.repositories.vacancy_repository import VacancyRepository
+from apps.vacancies.repositories import VacancyRepository
 
 
 class VacancyListView(ListView):
@@ -33,15 +32,3 @@ class VacancyListView(ListView):
     def search_query(self) -> str:
         """Return the current search query from GET parameters."""
         return self.request.GET.get("q", "").strip()
-
-
-class VacancyDetailView(generic.DetailView):
-    """View for displaying the vacancy detail."""
-
-    model = Vacancy
-    template_name = "vacancies/vacancy_detail.html"
-    context_object_name = "vacancy"
-
-    def get_queryset(self) -> QuerySet[Vacancy]:
-        """Return all active vacancies."""
-        return VacancyRepository.filter()

@@ -1,0 +1,16 @@
+from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationAdmin
+
+from apps.vacancies.models import ProfessionalArea
+
+
+@admin.register(ProfessionalArea)
+class ProfessionalAreaAdmin(TranslationAdmin):
+    """Configuration for administration of the ProfessionalArea model."""
+
+    list_per_page = 25
+    list_display = ("name",)
+    search_fields = ("name",)
+    search_help_text = _("Search by professional field name")
+    ordering = ("name",)

@@ -1,99 +1,12 @@
-from django.contrib import admin
-from django.utils.translation import gettext_lazy as _
-from django_stubs_ext import StrOrPromise
-from modeltranslation.admin import TranslationAdmin
+"""Module required by Django to register administration configurations."""
 
-from .models import (
-    City,
-    ProfessionalArea,
-    Region,
-    Vacancy,
+from .translations import CityTranslationOptions  # noqa: F401 isort: skip
+from .translations import (  # noqa: F401 isort: skip
+    ProfessionalAreaTranslationOptions,
 )
-
-
-@admin.register(ProfessionalArea)
-class ProfessionalAreaAdmin(TranslationAdmin):
-    """Configuration for administration of the ProfessionalArea model."""
-
-    list_per_page = 25
-    list_display = ("name",)
-    search_fields = ("name",)
-    search_help_text = _("Search by professional field name")
-    ordering = ("name",)
-
-
-@admin.register(Region)
-class RegionAdmin(TranslationAdmin):
-    """Configuration for administration of the Region model."""
-
-    list_per_page = 25
-    list_display = ("name",)
-    search_fields = ("name",)
-    search_help_text = _("Search by region name")
-    ordering = ("name",)
-
-
-@admin.register(City)
-class CityAdmin(TranslationAdmin):
-    """Configuration for administration of the City model."""
-
-    list_per_page = 25
-    list_display = (
-        "name",
-        "region",
-    )
-    list_filter = ("region__name",)
-    search_fields = ("name", "region__name")
-    ordering = ("name",)
-    search_help_text = _("Search by city and region name")
-    list_select_related = ("region",)
-    empty_value_display = "—"
-
-
-@admin.register(Vacancy)
-class VacancyAdmin(TranslationAdmin):
-    """Configuration for administration of the Vacancy model."""
-
-    list_per_page = 25
-    list_display = ("title", "city", "formatted_salary", "is_active")
-    list_display_links = ("title",)
-    list_editable = ("is_active",)
-    search_fields = (
-        "title",
-        "short_description",
-        "description",
-    )
-    search_help_text = _("Search by vacancy title and description")
-    list_filter = (
-        "professional_area__name",
-        "is_active",
-        "experience_level",
-        "work_schedule",
-        "city",
-    )
-    date_hierarchy = "created_at"
-    readonly_fields = ("created_at", "updated_at")
-    fields = (
-        ("title",),
-        "short_description",
-        "description",
-        "professional_area",
-        "city",
-        "salary_from",
-        "salary_to",
-        "experience_level",
-        "work_schedule",
-        "is_active",
-        ("created_at", "updated_at"),
-    )
-    list_select_related = (
-        "city",
-        "city__region",
-        "professional_area",
-    )
-    empty_value_display = "—"
-
-    @admin.display(description=_("Salary"), ordering="salary_from")
-    def formatted_salary(self, obj: Vacancy) -> StrOrPromise:
-        """Return the salary range formatted."""
-        return obj.get_formatted_salary()
+from .translations import RegionTranslationOptions  # noqa: F401 isort: skip
+from .translations import VacancyTranslationOptions  # noqa: F401 isort: skip
+from .admins import CityAdmin  # noqa: F401 isort: skip
+from .admins import ProfessionalAreaAdmin  # noqa: F401 isort: skip
+from .admins import RegionAdmin  # noqa: F401 isort: skip
+from .admins import VacancyAdmin  # noqa: F401 isort: skip
