@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import FormView
 
-from apps.core.services.email_service import EmailService
+from apps.core.services import EmailService
 from apps.pages.email_templates import CONTACT_MESSAGE, CONTACT_REPLY
 from apps.pages.forms import ContactForm
 from config import settings

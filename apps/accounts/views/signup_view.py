@@ -17,7 +17,7 @@ from apps.accounts.email_templates import (
     ACCOUNT_ACTIVATION,
 )
 from apps.accounts.forms import SignUpForm
-from apps.core.services.email_service import EmailService
+from apps.core.services import EmailService
 
 
 class SignUpView(SuccessMessageMixin, CreateView):

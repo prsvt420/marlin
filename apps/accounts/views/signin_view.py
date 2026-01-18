@@ -15,7 +15,7 @@ from apps.accounts.email_templates import (
     SIGNIN_NOTIFICATION,
 )
 from apps.accounts.forms import SignInForm
-from apps.core.services.email_service import EmailService
+from apps.core.services import EmailService
 
 
 class SignInView(SuccessMessageMixin, LoginView):

@@ -19,7 +19,7 @@ from apps.accounts.email_templates import (
     PASSWORD_RESET_COMPLETE,
 )
 from apps.accounts.forms import SetPasswordForm
-from apps.core.services.email_service import EmailService
+from apps.core.services import EmailService
 
 
 class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
