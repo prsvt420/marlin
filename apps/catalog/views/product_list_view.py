@@ -5,21 +5,8 @@ from django.views import generic
 
 from apps.catalog.constants import ORDERING_OPTIONS
 from apps.catalog.dataclasses import OrderingOption
-from apps.catalog.models import Category, Product
-from apps.catalog.repositories.category_repository import CategoryRepository
-from apps.catalog.repositories.product_repository import ProductRepository
-
-
-class CategoryListView(generic.ListView):
-    """View for displaying the category list."""
-
-    model = Category
-    template_name = "catalog/category_list.html"
-    context_object_name = "parent_categories"
-
-    def get_queryset(self) -> QuerySet[Category]:
-        """Return all active categories with parents."""
-        return CategoryRepository.get_parents()
+from apps.catalog.models import Product
+from apps.catalog.repositories import CategoryRepository, ProductRepository
 
 
 class ProductListView(generic.ListView):
@@ -69,15 +56,3 @@ class ProductListView(generic.ListView):
     def search_query(self) -> str:
         """Return the current search query from GET parameters."""
         return self.request.GET.get("q", "").strip()
-
-
-class ProductDetailView(generic.DetailView):
-    """View for displaying the product detail."""
-
-    model = Product
-    template_name = "catalog/product_detail.html"
-    context_object_name = "product"
-
-    def get_queryset(self) -> QuerySet[Product]:
-        """Return all active products."""
-        return ProductRepository.filter()

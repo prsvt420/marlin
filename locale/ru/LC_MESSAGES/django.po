@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-17 11:29+0800\n"
+"POT-Creation-Date: 2026-01-20 18:43+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -177,8 +177,10 @@ msgstr "отчество"
 msgid "User middle name."
 msgstr "Отчество пользователя."
 
-#: .\apps\accounts\models\user_model.py:39 .\apps\catalog\models.py:73
-#: .\apps\catalog\models.py:291 .\apps\vacancies\models\vacancy_model.py:71
+#: .\apps\accounts\models\user_model.py:39
+#: .\apps\catalog\models\category_model.py:57
+#: .\apps\catalog\models\product_model.py:72
+#: .\apps\vacancies\models\vacancy_model.py:71
 msgid "active"
 msgstr "активный"
 
@@ -543,9 +545,11 @@ msgstr "корзина"
 msgid "The cart to which the cart item belongs."
 msgstr "Корзина, к которой относится элемент."
 
-#: .\apps\carts\models\cart_item_model.py:23 .\apps\catalog\models.py:92
-#: .\apps\catalog\models.py:121 .\apps\catalog\models.py:205
-#: .\apps\catalog\models.py:342
+#: .\apps\carts\models\cart_item_model.py:23
+#: .\apps\catalog\models\product_attribute_model.py:12
+#: .\apps\catalog\models\product_image_model.py:12
+#: .\apps\catalog\models\product_model.py:91
+#: .\apps\catalog\models\product_nutrition_model.py:12
 msgid "product"
 msgstr "продукт"
 
@@ -589,8 +593,10 @@ msgstr "статус корзины"
 msgid "Current cart status (active, converted, abandoned)."
 msgstr "Текущий статус корзины (активна, конвертирована, заброшена)."
 
-#: .\apps\carts\models\cart_model.py:29 .\apps\catalog\models.py:80
-#: .\apps\catalog\models.py:298 .\apps\vacancies\models\vacancy_model.py:76
+#: .\apps\carts\models\cart_model.py:29
+#: .\apps\catalog\models\category_model.py:64
+#: .\apps\catalog\models\product_model.py:79
+#: .\apps\vacancies\models\vacancy_model.py:76
 msgid "created date"
 msgstr "дата создания"
 
@@ -598,8 +604,10 @@ msgstr "дата создания"
 msgid "Date and time the cart was created."
 msgstr "Дата и время добавления корзины."
 
-#: .\apps\carts\models\cart_model.py:34 .\apps\catalog\models.py:85
-#: .\apps\catalog\models.py:303 .\apps\vacancies\models\vacancy_model.py:81
+#: .\apps\carts\models\cart_model.py:34
+#: .\apps\catalog\models\category_model.py:69
+#: .\apps\catalog\models\product_model.py:84
+#: .\apps\vacancies\models\vacancy_model.py:81
 msgid "updated date"
 msgstr "дата обновления"
 
@@ -619,37 +627,38 @@ msgstr "У пользователя может быть только одна а
 msgid "Cart"
 msgstr "Корзина"
 
-#: .\apps\catalog\admin.py:54
+#: .\apps\catalog\admins\attribute_admin.py:15
+msgid "Search by attribute name"
+msgstr "Поиск по названию атрибута"
+
+#: .\apps\catalog\admins\category_admin.py:45
 msgid "Search by category name"
 msgstr "Поиск по названию категории"
 
-#: .\apps\catalog\admin.py:57
+#: .\apps\catalog\admins\category_admin.py:48
 msgid "Image preview"
 msgstr "Превью изображения"
 
-#: .\apps\catalog\admin.py:66
+#: .\apps\catalog\admins\category_admin.py:57
 #: .\apps\catalog\templates\catalog\category_list.html:34
 #: .\apps\catalog\templates\catalog\product_detail.html:39
 #: .\apps\catalog\templates\catalog\product_list.html:67
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
-#: .\apps\catalog\admin.py:76
-msgid "Search by attribute name"
-msgstr "Поиск по названию атрибута"
-
-#: .\apps\catalog\admin.py:93 .\apps\catalog\admin.py:106
-#: .\apps\catalog\admin.py:123
-msgid "Search by product name"
-msgstr "Поиск по названию продукта"
-
-#: .\apps\catalog\admin.py:172
+#: .\apps\catalog\admins\product_admin.py:39
 msgid "Search by name or article (SKU)"
 msgstr "Поиск по названию или артикулу (SKU)"
 
-#: .\apps\catalog\admin.py:196
+#: .\apps\catalog\admins\product_admin.py:63
 msgid "Final price"
 msgstr "Финальная цена"
+
+#: .\apps\catalog\admins\product_attribute_admin.py:21
+#: .\apps\catalog\admins\product_image_admin.py:17
+#: .\apps\catalog\admins\product_nutrition_admin.py:21
+msgid "Search by product name"
+msgstr "Поиск по названию продукта"
 
 #: .\apps\catalog\apps.py:11
 #: .\apps\catalog\templates\catalog\category_list.html:5
@@ -658,15 +667,15 @@ msgstr "Финальная цена"
 msgid "Catalog"
 msgstr "Каталог"
 
-#: .\apps\catalog\choices.py:8
+#: .\apps\catalog\choices\unit_type_choice.py:8
 msgid "kg"
 msgstr "кг"
 
-#: .\apps\catalog\choices.py:9
+#: .\apps\catalog\choices\unit_type_choice.py:9
 msgid "L"
 msgstr "л"
 
-#: .\apps\catalog\choices.py:10
+#: .\apps\catalog\choices\unit_type_choice.py:10
 msgid "pcs"
 msgstr "шт"
 
@@ -686,286 +695,298 @@ msgstr "Сначала дороже"
 msgid "By discount amount"
 msgstr "По размеру скидки"
 
-#: .\apps\catalog\models.py:16 .\apps\catalog\models.py:180
-#: .\apps\catalog\models.py:257 .\apps\vacancies\models\city_model.py:12
+#: .\apps\catalog\models\attribute_model.py:11
+#: .\apps\catalog\models\category_model.py:23
+#: .\apps\catalog\models\product_model.py:15
+#: .\apps\vacancies\models\city_model.py:12
 #: .\apps\vacancies\models\professional_area_model.py:11
 #: .\apps\vacancies\models\region_model.py:11
 msgid "name"
 msgstr "название"
 
-#: .\apps\catalog\models.py:17
-msgid "Product name."
-msgstr "Название продукта."
+#: .\apps\catalog\models\attribute_model.py:13
+msgid "Name of the attribute (e.g., weight, shelf life, storage conditions)."
+msgstr "Название атрибута (например, вес, срок годности, условия хранения)."
 
-#: .\apps\catalog\models.py:20 .\apps\catalog\models.py:268
+#: .\apps\catalog\models\attribute_model.py:21
+#: .\apps\catalog\models\product_attribute_model.py:19
+msgid "attribute"
+msgstr "атрибут"
+
+#: .\apps\catalog\models\attribute_model.py:22
+msgid "attributes"
+msgstr "атрибуты"
+
+#: .\apps\catalog\models\category_model.py:17
+msgid "parent category"
+msgstr "родительская категория"
+
+#: .\apps\catalog\models\category_model.py:18
+msgid "Parent category (if nesting is used)."
+msgstr "Родительская категория (если используется вложенность)."
+
+#: .\apps\catalog\models\category_model.py:24
+msgid "Category name."
+msgstr "Название категории."
+
+#: .\apps\catalog\models\category_model.py:29
+#: .\apps\catalog\models\product_model.py:25
+msgid "URL-identifier"
+msgstr "URL-идентификатор"
+
+#: .\apps\catalog\models\category_model.py:30
+#: .\apps\catalog\models\product_model.py:26
+msgid "Unique URL identifier (letters, numbers, hyphens)."
+msgstr "Уникальный идентификатор URL (буквы, цифры, дефисы)."
+
+#: .\apps\catalog\models\category_model.py:34
+#: .\apps\catalog\models\product_model.py:19
 #: .\apps\vacancies\models\vacancy_model.py:23
 msgid "description"
 msgstr "описание"
 
-#: .\apps\catalog\models.py:21
-msgid "Product description."
-msgstr "Описание продукта."
+#: .\apps\catalog\models\category_model.py:35
+msgid "Category description."
+msgstr "Описание категории."
 
-#: .\apps\catalog\models.py:26 .\apps\catalog\models.py:263
-msgid "URL-identifier"
-msgstr "URL-идентификатор"
+#: .\apps\catalog\models\category_model.py:41
+#: .\apps\catalog\models\product_image_model.py:17
+msgid "image"
+msgstr "изображение"
 
-#: .\apps\catalog\models.py:27 .\apps\catalog\models.py:264
-msgid "Unique URL identifier (letters, numbers, hyphens)."
-msgstr "Уникальный идентификатор URL (буквы, цифры, дефисы)."
+#: .\apps\catalog\models\category_model.py:42
+msgid "Path to the category image."
+msgstr "Путь к изображению категории."
 
-#: .\apps\catalog\models.py:30
-msgid "composition"
-msgstr "состав"
+#: .\apps\catalog\models\category_model.py:47
+#: .\apps\catalog\models\product_image_model.py:23
+msgid "alternative text"
+msgstr "альтернативный текст"
 
-#: .\apps\catalog\models.py:31
-msgid "Product composition."
-msgstr "Состав продукта."
+#: .\apps\catalog\models\category_model.py:48
+#: .\apps\catalog\models\product_image_model.py:24
+msgid "Description of the image for SEO and accessibility."
+msgstr "Описание изображения для SEO и доступности."
 
-#: .\apps\catalog\models.py:37
-msgid "unit type"
-msgstr "тип единицы измерения"
+#: .\apps\catalog\models\category_model.py:52
+#: .\apps\catalog\models\product_image_model.py:28
+msgid "display order"
+msgstr "порядок отображения"
 
-#: .\apps\catalog\models.py:38
-msgid "Unit of measurement of the product (e.g., kg, l, pcs)."
-msgstr "Единица измерения продукта (например, кг, л, шт.)."
+#: .\apps\catalog\models\category_model.py:53
+msgid "Order in which categories appear in lists."
+msgstr "Порядок, в котором категории появляются в списках."
 
-#: .\apps\catalog\models.py:43
-msgid "price"
-msgstr "цена"
+#: .\apps\catalog\models\category_model.py:59
+msgid "Determines whether the category is displayed in the catalog."
+msgstr "Определяет, отображается ли категория в каталоге."
 
-#: .\apps\catalog\models.py:44
-msgid "Product price."
-msgstr "Цена продукта."
+#: .\apps\catalog\models\category_model.py:65
+msgid "Date and time the category was added."
+msgstr "Дата и время добавления категории."
 
-#: .\apps\catalog\models.py:50
-msgid "discount"
-msgstr "скидка"
+#: .\apps\catalog\models\category_model.py:70
+msgid "Date and time when the category was last updated."
+msgstr "Дата и время последнего обновления категории."
 
-#: .\apps\catalog\models.py:51
-msgid "Product discount in percent."
-msgstr "Скидка на продукт в процентах."
-
-#: .\apps\catalog\models.py:57 .\apps\catalog\models.py:310
+#: .\apps\catalog\models\category_model.py:76
+#: .\apps\catalog\models\product_model.py:56
 msgid "category"
 msgstr "категория"
 
-#: .\apps\catalog\models.py:58
+#: .\apps\catalog\models\category_model.py:77
+msgid "categories"
+msgstr "категории"
+
+#: .\apps\catalog\models\product_attribute_model.py:13
+msgid "The product to which the attribute belongs."
+msgstr "Продукт, к которому принадлежит атрибут."
+
+#: .\apps\catalog\models\product_attribute_model.py:21
+msgid "The product attribute (e.g., weight, shelf life, storage conditions)."
+msgstr "Атрибут продукта (например, вес, срок годности, условия хранения)."
+
+#: .\apps\catalog\models\product_attribute_model.py:27
+msgid "value"
+msgstr "значение"
+
+#: .\apps\catalog\models\product_attribute_model.py:29
+msgid "The specific value of the attribute (e.g., 500 g, 12 months)."
+msgstr "Конкретное значение атрибута (например, 500 г, 12 месяцев)."
+
+#: .\apps\catalog\models\product_attribute_model.py:36
+msgid "product attribute"
+msgstr "атрибут продукта"
+
+#: .\apps\catalog\models\product_attribute_model.py:37
+msgid "product attributes"
+msgstr "атрибуты продукта"
+
+#: .\apps\catalog\models\product_image_model.py:13
+msgid "The product to which the image belongs."
+msgstr "Продукт, к которому принадлежит изображение."
+
+#: .\apps\catalog\models\product_image_model.py:18
+msgid "Path to the product image."
+msgstr "Путь к изображению продукта."
+
+#: .\apps\catalog\models\product_image_model.py:29
+msgid "Order in which product images appear in lists."
+msgstr "Порядок, в котором изображения продуктов появляются в списках."
+
+#: .\apps\catalog\models\product_image_model.py:35
+msgid "product image"
+msgstr "изображение продукта"
+
+#: .\apps\catalog\models\product_image_model.py:36
+msgid "product images"
+msgstr "изображения продукта"
+
+#: .\apps\catalog\models\product_model.py:16
+msgid "Product name."
+msgstr "Название продукта."
+
+#: .\apps\catalog\models\product_model.py:20
+msgid "Product description."
+msgstr "Описание продукта."
+
+#: .\apps\catalog\models\product_model.py:29
+msgid "composition"
+msgstr "состав"
+
+#: .\apps\catalog\models\product_model.py:30
+msgid "Product composition."
+msgstr "Состав продукта."
+
+#: .\apps\catalog\models\product_model.py:36
+msgid "unit type"
+msgstr "тип единицы измерения"
+
+#: .\apps\catalog\models\product_model.py:37
+msgid "Unit of measurement of the product (e.g., kg, l, pcs)."
+msgstr "Единица измерения продукта (например, кг, л, шт.)."
+
+#: .\apps\catalog\models\product_model.py:42
+msgid "price"
+msgstr "цена"
+
+#: .\apps\catalog\models\product_model.py:43
+msgid "Product price."
+msgstr "Цена продукта."
+
+#: .\apps\catalog\models\product_model.py:49
+msgid "discount"
+msgstr "скидка"
+
+#: .\apps\catalog\models\product_model.py:50
+msgid "Product discount in percent."
+msgstr "Скидка на продукт в процентах."
+
+#: .\apps\catalog\models\product_model.py:57
 msgid "The category to which the product belongs."
 msgstr "Категория, к которой принадлежит продукт."
 
-#: .\apps\catalog\models.py:64
+#: .\apps\catalog\models\product_model.py:63
 msgid "Stock Keeping Unit (SKU)."
 msgstr "Единица складского учёта (SKU)."
 
-#: .\apps\catalog\models.py:68
+#: .\apps\catalog\models\product_model.py:67
 msgid "stock"
 msgstr "наличие"
 
-#: .\apps\catalog\models.py:69
+#: .\apps\catalog\models\product_model.py:68
 msgid "Number of products in stock."
 msgstr "Количество продукта на складе."
 
-#: .\apps\catalog\models.py:75
+#: .\apps\catalog\models\product_model.py:74
 msgid "Determines whether the product is displayed in the catalog."
 msgstr "Определяет, отображается ли продукт в каталоге."
 
-#: .\apps\catalog\models.py:81
+#: .\apps\catalog\models\product_model.py:80
 msgid "Date and time the product was added."
 msgstr "Дата и время добавления продукта."
 
-#: .\apps\catalog\models.py:86
+#: .\apps\catalog\models\product_model.py:85
 msgid "Date and time when the product was last updated."
 msgstr "Дата и время последнего обновления продукта."
 
-#: .\apps\catalog\models.py:93
+#: .\apps\catalog\models\product_model.py:92
 msgid "products"
 msgstr "продукты"
 
-#: .\apps\catalog\models.py:122
+#: .\apps\catalog\models\product_nutrition_model.py:13
 msgid "The product to which the nutritional value belongs."
 msgstr "Продукт, которому принадлежит пищевая ценность."
 
-#: .\apps\catalog\models.py:129
+#: .\apps\catalog\models\product_nutrition_model.py:20
 #: .\apps\catalog\templates\catalog\product_detail.html:134
 msgid "calories"
 msgstr "калории"
 
-#: .\apps\catalog\models.py:130
+#: .\apps\catalog\models\product_nutrition_model.py:21
 msgid "Calories (kcal)."
 msgstr "Калории (ккал)."
 
-#: .\apps\catalog\models.py:137
+#: .\apps\catalog\models\product_nutrition_model.py:28
 #: .\apps\catalog\templates\catalog\product_detail.html:122
 msgid "proteins"
 msgstr "белки"
 
-#: .\apps\catalog\models.py:138
+#: .\apps\catalog\models\product_nutrition_model.py:29
 msgid "Proteins (g)."
 msgstr "Белки (г)."
 
-#: .\apps\catalog\models.py:145
+#: .\apps\catalog\models\product_nutrition_model.py:36
 #: .\apps\catalog\templates\catalog\product_detail.html:126
 msgid "fats"
 msgstr "жиры"
 
-#: .\apps\catalog\models.py:146
+#: .\apps\catalog\models\product_nutrition_model.py:37
 msgid "Fats (g)."
 msgstr "Жиры (г)."
 
-#: .\apps\catalog\models.py:153
+#: .\apps\catalog\models\product_nutrition_model.py:44
 #: .\apps\catalog\templates\catalog\product_detail.html:130
 msgid "carbs"
 msgstr "углеводы"
 
-#: .\apps\catalog\models.py:154
+#: .\apps\catalog\models\product_nutrition_model.py:45
 msgid "Carbs (g)."
 msgstr "Углеводы (г)."
 
-#: .\apps\catalog\models.py:160
+#: .\apps\catalog\models\product_nutrition_model.py:51
 msgid "nutritional value"
 msgstr "пищевая ценность"
 
-#: .\apps\catalog\models.py:161
+#: .\apps\catalog\models\product_nutrition_model.py:52
 msgid "nutritional values"
 msgstr "пищевые ценности"
 
-#: .\apps\catalog\models.py:167
+#: .\apps\catalog\models\product_nutrition_model.py:58
 msgid "Calories"
 msgstr "Калории"
 
-#: .\apps\catalog\models.py:167
+#: .\apps\catalog\models\product_nutrition_model.py:58
 msgid "kcal"
 msgstr "ккал"
 
-#: .\apps\catalog\models.py:168
+#: .\apps\catalog\models\product_nutrition_model.py:59
 msgid "Proteins"
 msgstr "Белки"
 
-#: .\apps\catalog\models.py:168 .\apps\catalog\models.py:169
-#: .\apps\catalog\models.py:170
+#: .\apps\catalog\models\product_nutrition_model.py:59
+#: .\apps\catalog\models\product_nutrition_model.py:60
+#: .\apps\catalog\models\product_nutrition_model.py:61
 msgid "g"
 msgstr "г"
 
-#: .\apps\catalog\models.py:169
+#: .\apps\catalog\models\product_nutrition_model.py:60
 msgid "Fats"
 msgstr "Жиры"
 
-#: .\apps\catalog\models.py:170
+#: .\apps\catalog\models\product_nutrition_model.py:61
 msgid "Carbs"
 msgstr "Углеводы"
-
-#: .\apps\catalog\models.py:182
-msgid "Name of the attribute (e.g., weight, shelf life, storage conditions)."
-msgstr "Название атрибута (например, вес, срок годности, условия хранения)."
-
-#: .\apps\catalog\models.py:190 .\apps\catalog\models.py:212
-msgid "attribute"
-msgstr "атрибут"
-
-#: .\apps\catalog\models.py:191
-msgid "attributes"
-msgstr "атрибуты"
-
-#: .\apps\catalog\models.py:206
-msgid "The product to which the attribute belongs."
-msgstr "Продукт, к которому принадлежит атрибут."
-
-#: .\apps\catalog\models.py:214
-msgid "The product attribute (e.g., weight, shelf life, storage conditions)."
-msgstr "Атрибут продукта (например, вес, срок годности, условия хранения)."
-
-#: .\apps\catalog\models.py:220
-msgid "value"
-msgstr "значение"
-
-#: .\apps\catalog\models.py:222
-msgid "The specific value of the attribute (e.g., 500 g, 12 months)."
-msgstr "Конкретное значение атрибута (например, 500 г, 12 месяцев)."
-
-#: .\apps\catalog\models.py:229
-msgid "product attribute"
-msgstr "атрибут продукта"
-
-#: .\apps\catalog\models.py:230
-msgid "product attributes"
-msgstr "атрибуты продукта"
-
-#: .\apps\catalog\models.py:251
-msgid "parent category"
-msgstr "родительская категория"
-
-#: .\apps\catalog\models.py:252
-msgid "Parent category (if nesting is used)."
-msgstr "Родительская категория (если используется вложенность)."
-
-#: .\apps\catalog\models.py:258
-msgid "Category name."
-msgstr "Название категории."
-
-#: .\apps\catalog\models.py:269
-msgid "Category description."
-msgstr "Описание категории."
-
-#: .\apps\catalog\models.py:275 .\apps\catalog\models.py:347
-msgid "image"
-msgstr "изображение"
-
-#: .\apps\catalog\models.py:276
-msgid "Path to the category image."
-msgstr "Путь к изображению категории."
-
-#: .\apps\catalog\models.py:281 .\apps\catalog\models.py:353
-msgid "alternative text"
-msgstr "альтернативный текст"
-
-#: .\apps\catalog\models.py:282 .\apps\catalog\models.py:354
-msgid "Description of the image for SEO and accessibility."
-msgstr "Описание изображения для SEO и доступности."
-
-#: .\apps\catalog\models.py:286 .\apps\catalog\models.py:358
-msgid "display order"
-msgstr "порядок отображения"
-
-#: .\apps\catalog\models.py:287
-msgid "Order in which categories appear in lists."
-msgstr "Порядок, в котором категории появляются в списках."
-
-#: .\apps\catalog\models.py:293
-msgid "Determines whether the category is displayed in the catalog."
-msgstr "Определяет, отображается ли категория в каталоге."
-
-#: .\apps\catalog\models.py:299
-msgid "Date and time the category was added."
-msgstr "Дата и время добавления категории."
-
-#: .\apps\catalog\models.py:304
-msgid "Date and time when the category was last updated."
-msgstr "Дата и время последнего обновления категории."
-
-#: .\apps\catalog\models.py:311
-msgid "categories"
-msgstr "категории"
-
-#: .\apps\catalog\models.py:343
-msgid "The product to which the image belongs."
-msgstr "Продукт, к которому принадлежит изображение."
-
-#: .\apps\catalog\models.py:348
-msgid "Path to the product image."
-msgstr "Путь к изображению продукта."
-
-#: .\apps\catalog\models.py:359
-msgid "Order in which product images appear in lists."
-msgstr "Порядок, в котором изображения продуктов появляются в списках."
-
-#: .\apps\catalog\models.py:365
-msgid "product image"
-msgstr "изображение продукта"
-
-#: .\apps\catalog\models.py:366
-msgid "product images"
-msgstr "изображения продукта"
 
 #: .\apps\catalog\templates\catalog\category_list.html:14
 msgid "Fresh. Fast. Homemade."
