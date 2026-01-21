@@ -1,8 +1,8 @@
-from .catalog_redirect_view import CatalogRedirectView
-from .contact_view import ContactView
-from .offer_view import OfferView
-from .privacy_view import PrivacyView
-from .terms_view import TermsView
+from apps.pages.views.catalog_redirect_view import CatalogRedirectView
+from apps.pages.views.contact_view import ContactView
+from apps.pages.views.offer_view import OfferView
+from apps.pages.views.privacy_view import PrivacyView
+from apps.pages.views.terms_view import TermsView
 
 __all__ = [
     "CatalogRedirectView",
