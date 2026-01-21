@@ -1,7 +1,13 @@
-from .city_translation import CityTranslationOptions
-from .professional_area_translation import ProfessionalAreaTranslationOptions
-from .region_translation import RegionTranslationOptions
-from .vacancy_translation import VacancyTranslationOptions
+from apps.vacancies.translations.city_translation import CityTranslationOptions
+from apps.vacancies.translations.professional_area_translation import (
+    ProfessionalAreaTranslationOptions,
+)
+from apps.vacancies.translations.region_translation import (
+    RegionTranslationOptions,
+)
+from apps.vacancies.translations.vacancy_translation import (
+    VacancyTranslationOptions,
+)
 
 __all__ = [
     "CityTranslationOptions",

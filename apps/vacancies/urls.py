@@ -2,7 +2,7 @@ from typing import List
 
 from django.urls import URLPattern, path
 
-from . import views
+from apps.vacancies import views
 
 app_name: str = "vacancies"
 
