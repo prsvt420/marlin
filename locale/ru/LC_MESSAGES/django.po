@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-20 18:43+0800\n"
+"POT-Creation-Date: 2026-01-23 14:57+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -524,15 +524,15 @@ msgstr "Общее количество"
 msgid "Carts"
 msgstr "Корзины"
 
-#: .\apps\carts\choices\cart_status_choice.py:8
+#: .\apps\carts\choices\cart_status_choices.py:8
 msgid "Active"
 msgstr "Активна"
 
-#: .\apps\carts\choices\cart_status_choice.py:9
+#: .\apps\carts\choices\cart_status_choices.py:9
 msgid "Сonverted"
 msgstr "Конвертирована"
 
-#: .\apps\carts\choices\cart_status_choice.py:10
+#: .\apps\carts\choices\cart_status_choices.py:10
 msgid "Abandoned"
 msgstr "Заброшена"
 
@@ -667,15 +667,15 @@ msgstr "Поиск по названию продукта"
 msgid "Catalog"
 msgstr "Каталог"
 
-#: .\apps\catalog\choices\unit_type_choice.py:8
+#: .\apps\catalog\choices\unit_type_choices.py:8
 msgid "kg"
 msgstr "кг"
 
-#: .\apps\catalog\choices\unit_type_choice.py:9
+#: .\apps\catalog\choices\unit_type_choices.py:9
 msgid "L"
 msgstr "л"
 
-#: .\apps\catalog\choices\unit_type_choice.py:10
+#: .\apps\catalog\choices\unit_type_choices.py:10
 msgid "pcs"
 msgstr "шт"
 
@@ -1303,35 +1303,35 @@ msgstr "Зарплата"
 msgid "Vacancies"
 msgstr "Вакансии"
 
-#: .\apps\vacancies\choices\experience_level_choice.py:8
+#: .\apps\vacancies\choices\experience_level_choices.py:8
 msgid "No experience"
 msgstr "Без опыта"
 
-#: .\apps\vacancies\choices\experience_level_choice.py:9
+#: .\apps\vacancies\choices\experience_level_choices.py:9
 msgid "From 1 to 3 years"
 msgstr "От 1 года до 3 лет"
 
-#: .\apps\vacancies\choices\experience_level_choice.py:10
+#: .\apps\vacancies\choices\experience_level_choices.py:10
 msgid "From 3 to 6 years"
 msgstr "От 3 до 6 лет"
 
-#: .\apps\vacancies\choices\experience_level_choice.py:11
+#: .\apps\vacancies\choices\experience_level_choices.py:11
 msgid "More than 6 years"
 msgstr "Более 6 лет"
 
-#: .\apps\vacancies\choices\work_schedule_choice.py:8
+#: .\apps\vacancies\choices\work_schedule_choices.py:8
 msgid "Full-time"
 msgstr "Полный день"
 
-#: .\apps\vacancies\choices\work_schedule_choice.py:9
+#: .\apps\vacancies\choices\work_schedule_choices.py:9
 msgid "Shift schedule"
 msgstr "Сменный график"
 
-#: .\apps\vacancies\choices\work_schedule_choice.py:10
+#: .\apps\vacancies\choices\work_schedule_choices.py:10
 msgid "Flexible schedule"
 msgstr "Гибкий график"
 
-#: .\apps\vacancies\choices\work_schedule_choice.py:11
+#: .\apps\vacancies\choices\work_schedule_choices.py:11
 msgid "Remote work"
 msgstr "Удалённая работа"
 
