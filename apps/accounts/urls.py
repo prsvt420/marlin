@@ -25,4 +25,9 @@ urlpatterns: List[URLPattern] = [
         views.AccountActivationView.as_view(),
         name="account_activation",
     ),
+    path(
+        "profile",
+        views.ProfileView.as_view(),
+        name="profile",
+    ),
 ]

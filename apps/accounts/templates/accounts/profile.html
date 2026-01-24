@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Profile" %}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'accounts/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero__content">
+        <h2 class="hero__title">{% trans "Profile" %}.</h2>
+        <p class="hero__subtitle">{% trans "Personal information and account settings." %}</p>
+    </div>
+</section>
+
+<section class="profile">
+
+    <div class="profile__form">
+        <h2 class="profile__form-title">{% trans "Personal information" %}</h2>
+
+        <form action="{% url 'accounts:profile' %}" method="post" class="profile__form-body">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="profile__errors">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+
+            <div class="profile__form-group">
+                <label for="username" class="profile__label">{% trans "Username" %} {% if form.username.errors %}<sup>*{{ form.username.errors.0 }}</sup>{% endif %}</label>
+                <input autocomplete="username" type="text" value="{{ form.username.value|default:'' }}" name="username" id="username" placeholder="{% trans 'Enter username' %}" class="profile__input">
+            </div>
+            <div class="profile__form-group">
+                <label for="email" class="profile__label">{% trans "Email" %}</label>
+                <input disabled autocomplete="email" type="text" value="{{ request.user.email }}" name="email" id="email" placeholder="{% trans 'Enter email' %}" class="profile__input profile__input--readonly">
+            </div>
+            <div class="profile__form-group">
+                <label for="phone_number" class="profile__label">{% trans "Phone number" %}</label>
+                <input disabled type="tel" autocomplete="tel" value="{{ request.user.phone_number }}" name="phone_number" id="phone_number" placeholder="+7 (___) ___-__-__" class="profile__input profile__input--readonly">
+            </div>
+            <div class="profile__form-group">
+                <label for="first_name" class="profile__label">{% trans "First name" %} {% if form.first_name.errors %}<sup>*{{ form.first_name.errors.0 }}</sup>{% endif %}</label>
+                <input autocomplete="given-name" type="text" value="{{ form.first_name.value|default:'' }}" name="first_name" id="first_name" placeholder="{% trans 'Enter first name' %}" class="profile__input">
+            </div>
+            <div class="profile__form-group">
+                <label for="last_name" class="profile__label">{% trans "Last name" %} {% if form.last_name.errors %}<sup>*{{ form.last_name.errors.0 }}</sup>{% endif %}</label>
+                <input autocomplete="family-name" type="text" value="{{ form.last_name.value|default:'' }}" name="last_name" id="last_name" placeholder="{% trans 'Enter last name' %}" class="profile__input">
+            </div>
+            <div class="profile__form-group">
+                <label for="middle_name" class="profile__label">{% trans "Middle name" %} ({% trans "if any" %}) {% if form.middle_name.errors %}<sup>*{{ form.middle_name.errors.0 }}</sup>{% endif %}</label>
+                <input autocomplete="additional-name" type="text" value="{{ form.middle_name.value|default:'' }}" name="middle_name" id="middle_name" placeholder="{% trans 'Enter middle name' %}" class="profile__input">
+            </div>
+            <button type="submit" class="profile__form-button">{% trans "Save" %}</button>
+        </form>
+        <form action="{% url 'accounts:signout' %}" method="post" class="profile__form-body">
+            {% csrf_token %}
+            <button type="submit" class="profile__form-button">{% trans "Sign out" %}</button>
+        </form>
+        <form action="" method="post" class="profile__form-body">
+            {% csrf_token %}
+            <button type="submit" class="profile__form-button profile__form-button--delete-account">{% trans "Delete account" %}</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+<script src="{% static 'js/masks.js' %}"></script>
+{% endblock %}

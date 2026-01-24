@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-23 14:57+0800\n"
+"POT-Creation-Date: 2026-01-24 23:24+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -66,6 +66,7 @@ msgid "The new password confirmation is required."
 msgstr "Подтверждение нового пароля обязательно."
 
 #: .\apps\accounts\forms\signin_form.py:14
+#: .\apps\accounts\templates\accounts\profile.html:34
 #: .\apps\accounts\templates\accounts\signin.html:26
 #: .\apps\accounts\templates\accounts\signup.html:26
 msgid "Username"
@@ -210,6 +211,7 @@ msgid "Password reset"
 msgstr "Сброс пароля"
 
 #: .\apps\accounts\templates\accounts\password_reset.html:26
+#: .\apps\accounts\templates\accounts\profile.html:38
 #: .\apps\accounts\templates\accounts\signup.html:30
 #: .\apps\pages\templates\pages\contact.html:34
 #: .\apps\pages\templates\pages\contact.html:64
@@ -217,6 +219,7 @@ msgid "Email"
 msgstr "Электронная почта"
 
 #: .\apps\accounts\templates\accounts\password_reset.html:27
+#: .\apps\accounts\templates\accounts\profile.html:39
 #: .\apps\accounts\templates\accounts\signup.html:31
 #: .\apps\pages\templates\pages\contact.html:35
 msgid "Enter email"
@@ -249,19 +252,89 @@ msgstr "Подтверждение нового пароля"
 msgid "Confirm new password"
 msgstr "Подтвердите новый пароль"
 
+#: .\apps\accounts\templates\accounts\profile.html:5
+#: .\apps\accounts\templates\accounts\profile.html:14
+#: .\templates\includes\header.html:25
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\apps\accounts\templates\accounts\profile.html:15
+msgid "Personal information and account settings."
+msgstr "Личная информация и настройки аккаунта."
+
+#: .\apps\accounts\templates\accounts\profile.html:22
+msgid "Personal information"
+msgstr "Личная информация"
+
+#: .\apps\accounts\templates\accounts\profile.html:35
+#: .\apps\accounts\templates\accounts\signin.html:27
+#: .\apps\accounts\templates\accounts\signup.html:27
+msgid "Enter username"
+msgstr "Введите имя пользователя"
+
+#: .\apps\accounts\templates\accounts\profile.html:42
+#: .\apps\accounts\templates\accounts\signup.html:34
+#: .\apps\pages\templates\pages\contact.html:38
+#: .\apps\pages\templates\pages\contact.html:60
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: .\apps\accounts\templates\accounts\profile.html:46
+#: .\apps\accounts\templates\accounts\signup.html:38
+msgid "First name"
+msgstr "Имя"
+
+#: .\apps\accounts\templates\accounts\profile.html:47
+#: .\apps\accounts\templates\accounts\signup.html:39
+msgid "Enter first name"
+msgstr "Введите имя"
+
+#: .\apps\accounts\templates\accounts\profile.html:50
+#: .\apps\accounts\templates\accounts\signup.html:42
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\apps\accounts\templates\accounts\profile.html:51
+#: .\apps\accounts\templates\accounts\signup.html:43
+msgid "Enter last name"
+msgstr "Введите фамилию"
+
+#: .\apps\accounts\templates\accounts\profile.html:54
+#: .\apps\accounts\templates\accounts\signup.html:46
+msgid "Middle name"
+msgstr "Отчество"
+
+#: .\apps\accounts\templates\accounts\profile.html:54
+#: .\apps\accounts\templates\accounts\signup.html:46
+msgid "if any"
+msgstr "если есть"
+
+#: .\apps\accounts\templates\accounts\profile.html:55
+#: .\apps\accounts\templates\accounts\signup.html:47
+msgid "Enter middle name"
+msgstr "Введите отчество"
+
+#: .\apps\accounts\templates\accounts\profile.html:57
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\apps\accounts\templates\accounts\profile.html:61
+#: .\templates\includes\header.html:30
+msgid "Sign out"
+msgstr "Выйти"
+
+#: .\apps\accounts\templates\accounts\profile.html:65
+msgid "Delete account"
+msgstr "Удалить аккаунт"
+
 #: .\apps\accounts\templates\accounts\signin.html:5
 #: .\apps\accounts\templates\accounts\signin.html:14
 #: .\apps\accounts\templates\accounts\signin.html:39
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
-#: .\templates\includes\header.html:30
+#: .\templates\includes\header.html:35
 msgid "Sign in"
 msgstr "Войти"
-
-#: .\apps\accounts\templates\accounts\signin.html:27
-#: .\apps\accounts\templates\accounts\signup.html:27
-msgid "Enter username"
-msgstr "Введите имя пользователя"
 
 #: .\apps\accounts\templates\accounts\signin.html:32
 #: .\apps\accounts\templates\accounts\signup.html:52
@@ -293,40 +366,6 @@ msgstr "Войти с VK ID"
 #: .\apps\accounts\templates\accounts\signup.html:76
 msgid "Sign in with Google"
 msgstr "Войти с Google"
-
-#: .\apps\accounts\templates\accounts\signup.html:34
-#: .\apps\pages\templates\pages\contact.html:38
-#: .\apps\pages\templates\pages\contact.html:60
-msgid "Phone number"
-msgstr "Номер телефона"
-
-#: .\apps\accounts\templates\accounts\signup.html:38
-msgid "First name"
-msgstr "Имя"
-
-#: .\apps\accounts\templates\accounts\signup.html:39
-msgid "Enter first name"
-msgstr "Введите имя"
-
-#: .\apps\accounts\templates\accounts\signup.html:42
-msgid "Last name"
-msgstr "Фамилия"
-
-#: .\apps\accounts\templates\accounts\signup.html:43
-msgid "Enter last name"
-msgstr "Введите фамилию"
-
-#: .\apps\accounts\templates\accounts\signup.html:46
-msgid "Middle name"
-msgstr "Отчество"
-
-#: .\apps\accounts\templates\accounts\signup.html:46
-msgid "if any"
-msgstr "если есть"
-
-#: .\apps\accounts\templates\accounts\signup.html:47
-msgid "Enter middle name"
-msgstr "Введите отчество"
 
 #: .\apps\accounts\templates\accounts\signup.html:58
 msgid "Password confirmation"
@@ -476,15 +515,20 @@ msgstr "Ссылка для сброса пароля недействитель
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views\signin_view.py:25
-msgid "You have successfully signed in. Welcome!"
-msgstr "Вы успешно авторизованы. Добро пожаловать!"
+#: .\apps\accounts\views\profile_view.py:21
+msgid "Your profile information has been successfully updated."
+msgstr "Информация в вашем профиле успешно обновлена."
 
+#: .\apps\accounts\views\profile_view.py:36
 #: .\apps\accounts\views\signin_view.py:53
 #: .\apps\accounts\views\signup_view.py:73
 #: .\apps\pages\views\contact_view.py:67
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
+
+#: .\apps\accounts\views\signin_view.py:25
+msgid "You have successfully signed in. Welcome!"
+msgstr "Вы успешно авторизованы. Добро пожаловать!"
 
 #: .\apps\accounts\views\signout_view.py:14
 msgid "You have been signed out. Have a nice day!"
@@ -1575,19 +1619,15 @@ msgstr "Публичная оферта"
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
-#: .\templates\includes\header.html:27
-msgid "Sign out"
-msgstr "Выйти"
-
-#: .\templates\includes\header.html:34
+#: .\templates\includes\header.html:39
 msgid "Settings"
 msgstr "Настройки"
 
-#: .\templates\includes\header.html:42
+#: .\templates\includes\header.html:47
 msgid "Dark theme"
 msgstr "Тёмная тема"
 
-#: .\templates\includes\header.html:50
+#: .\templates\includes\header.html:55
 msgid "Language"
 msgstr "Язык"
 

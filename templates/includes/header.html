@@ -20,16 +20,21 @@
             <li class="header__nav-item">
                 <a href="{% url 'pages:contact' %}" class="header__nav-link {% active_link request 'pages:contact' 'header__nav-link--active' %}">{% trans "Contacts" %}</a>
             </li>
-            <li class="header__nav-item">
-                {% if request.user.is_authenticated %}
-                <form action="{% url 'accounts:signout' %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit" class="header__nav-link">{% trans "Sign out" %}</button>
-                </form>
-                {% else %}
+            {% if request.user.is_authenticated %}
+                <li class="header__nav-item">
+                    <a href="{% url 'accounts:profile' %}" class="header__nav-link {% active_link request 'accounts:profile' 'header__nav-link--active' %}">{% trans "Profile" %}</a>
+                </li>
+                <li class="header__nav-item">
+                    <form action="{% url 'accounts:signout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="header__nav-link">{% trans "Sign out" %}</button>
+                    </form>
+                </li>
+            {% else %}
+                <li class="header__nav-item">
                     <a href="{% url 'accounts:signin' %}" class="header__nav-link {% active_link request 'accounts:signin' 'header__nav-link--active' %}">{% trans "Sign in" %}</a>
-                {% endif %}
-            </li>
+                </li>
+            {% endif %}
             <li class="header__nav-item dropdown">
                 <button class="header__nav-button dropdown__toggle" title="{% trans 'Settings' %}">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
