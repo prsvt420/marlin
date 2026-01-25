@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-24 23:24+0800\n"
+"POT-Creation-Date: 2026-01-25 22:54+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -499,6 +499,10 @@ msgstr "Активация прошла успешно! Войдите в акк
 #: .\apps\accounts\views\account_activation_view.py:42
 msgid "The account activation link is invalid or expired."
 msgstr "Ссылка для активации аккаунта недействительна или устарела."
+
+#: .\apps\accounts\views\account_delete_view.py:16
+msgid "Your account has been successfully deleted. Have a nice day!"
+msgstr "Ваш аккаунт успешно удалён. Хорошего дня!"
 
 #: .\apps\accounts\views\password_reset_confirm_view.py:31
 msgid ""

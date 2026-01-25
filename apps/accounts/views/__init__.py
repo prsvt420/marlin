@@ -1,4 +1,5 @@
 from apps.accounts.views.account_activation_view import AccountActivationView
+from apps.accounts.views.account_delete_view import AccountDeleteView
 from apps.accounts.views.password_reset_confirm_view import (
     PasswordResetConfirmView,
 )
@@ -16,4 +17,5 @@ __all__ = [
     "SignOutView",
     "SignUpView",
     "ProfileView",
+    "AccountDeleteView",
 ]
