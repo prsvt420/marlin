@@ -58,3 +58,12 @@ class User(AbstractUser):
         verbose_name = _("user")
         verbose_name_plural = _("users")
         ordering = ("-date_joined",)
+
+    def get_full_name(self) -> str:
+        """Return the user full name."""
+        full_name: str = "%s %s %s" % (
+            self.last_name,
+            self.first_name,
+            self.middle_name,
+        )
+        return full_name.strip()
