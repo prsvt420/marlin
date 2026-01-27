@@ -1,11 +1,11 @@
 from django.db.models import QuerySet
-from django.views import generic
+from django.views.generic import ListView
 
 from apps.catalog.models import Category
 from apps.catalog.repositories import CategoryRepository
 
 
-class CategoryListView(generic.ListView):
+class CategoryListView(ListView):
     """View for displaying the category list."""
 
     model = Category

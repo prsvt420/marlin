@@ -1,11 +1,11 @@
 from django.db.models import QuerySet
-from django.views import generic
+from django.views.generic import DetailView
 
 from apps.catalog.models import Product
 from apps.catalog.repositories import ProductRepository
 
 
-class ProductDetailView(generic.DetailView):
+class ProductDetailView(DetailView):
     """View for displaying the product detail."""
 
     model = Product

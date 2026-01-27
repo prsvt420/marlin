@@ -1,7 +1,7 @@
 from typing import Any, Dict, Optional
 
 from django.db.models import QuerySet
-from django.views import generic
+from django.views.generic import ListView
 
 from apps.catalog.constants import ORDERING_OPTIONS
 from apps.catalog.dataclasses import OrderingOption
@@ -9,7 +9,7 @@ from apps.catalog.models import Product
 from apps.catalog.repositories import CategoryRepository, ProductRepository
 
 
-class ProductListView(generic.ListView):
+class ProductListView(ListView):
     """View for displaying the product list."""
 
     model = Product

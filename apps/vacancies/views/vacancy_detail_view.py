@@ -1,11 +1,11 @@
 from django.db.models import QuerySet
-from django.views import generic
+from django.views.generic import DetailView
 
 from apps.vacancies.models import Vacancy
 from apps.vacancies.repositories import VacancyRepository
 
 
-class VacancyDetailView(generic.DetailView):
+class VacancyDetailView(DetailView):
     """View for displaying the vacancy detail."""
 
     model = Vacancy
