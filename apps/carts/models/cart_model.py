@@ -72,9 +72,4 @@ class Cart(models.Model):
 
     def get_total_quantity(self) -> int:
         """Return the cart total quantity."""
-        return (
-            self.cart_items.aggregate(total_quantity=models.Sum("quantity"))[
-                "total_quantity"
-            ]
-            or 0  # noqa: W503
-        )
+        return self.cart_items.count()
