@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-25 22:54+0800\n"
+"POT-Creation-Date: 2026-01-29 22:10+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -559,8 +559,7 @@ msgid "Search by email and username"
 msgstr "Поиск по электронной почте и имени пользователя"
 
 #: .\apps\carts\admins\cart_admin.py:37
-#, fuzzy
-#| msgid "Final price"
+#: .\apps\carts\admins\cart_item_inline_admin.py:15
 msgid "Total price"
 msgstr "Общая цена"
 
@@ -584,16 +583,16 @@ msgstr "Конвертирована"
 msgid "Abandoned"
 msgstr "Заброшена"
 
-#: .\apps\carts\models\cart_item_model.py:16
+#: .\apps\carts\models\cart_item_model.py:17
 #: .\apps\carts\models\cart_model.py:41
 msgid "cart"
 msgstr "корзина"
 
-#: .\apps\carts\models\cart_item_model.py:17
+#: .\apps\carts\models\cart_item_model.py:18
 msgid "The cart to which the cart item belongs."
 msgstr "Корзина, к которой относится элемент."
 
-#: .\apps\carts\models\cart_item_model.py:23
+#: .\apps\carts\models\cart_item_model.py:24
 #: .\apps\catalog\models\product_attribute_model.py:12
 #: .\apps\catalog\models\product_image_model.py:12
 #: .\apps\catalog\models\product_model.py:91
@@ -601,31 +600,31 @@ msgstr "Корзина, к которой относится элемент."
 msgid "product"
 msgstr "продукт"
 
-#: .\apps\carts\models\cart_item_model.py:24
+#: .\apps\carts\models\cart_item_model.py:25
 msgid "Product belonging to the cart item."
 msgstr "Продукт, добавленный в элемент корзины."
 
-#: .\apps\carts\models\cart_item_model.py:28
+#: .\apps\carts\models\cart_item_model.py:29
 msgid "quantity"
 msgstr "количество"
 
-#: .\apps\carts\models\cart_item_model.py:29
+#: .\apps\carts\models\cart_item_model.py:30
 msgid "Number of products in cart item."
 msgstr "Количество продуктов в элементе корзины."
 
-#: .\apps\carts\models\cart_item_model.py:34
+#: .\apps\carts\models\cart_item_model.py:35
 msgid "price snapshot"
 msgstr "ценовой снимок"
 
-#: .\apps\carts\models\cart_item_model.py:36
+#: .\apps\carts\models\cart_item_model.py:37
 msgid "Price of the product at the time it was added to the cart."
 msgstr "Цена товара на момент его добавления в корзину."
 
-#: .\apps\carts\models\cart_item_model.py:43
+#: .\apps\carts\models\cart_item_model.py:44
 msgid "cart item"
 msgstr "элемент корзины"
 
-#: .\apps\carts\models\cart_item_model.py:44
+#: .\apps\carts\models\cart_item_model.py:45
 msgid "cart items"
 msgstr "элементы корзины"
 

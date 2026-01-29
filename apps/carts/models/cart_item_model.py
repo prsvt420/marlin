@@ -1,3 +1,4 @@
+from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
 from django.db import models
@@ -55,6 +56,14 @@ class CartItem(models.Model):
 
     def __str__(self) -> str:  # noqa: D105
         return f"{self.cart}: {self.product} x {self.quantity}"
+
+    def get_total_price(self) -> Decimal:
+        """Return the cart item total price."""
+        total_price: Decimal = (
+            self.price_snapshot or Decimal("0.00")
+        ) * self.quantity
+
+        return total_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
     def save(self, **kwargs: Any) -> None:
         """Save cart item data."""
