@@ -18,7 +18,7 @@
                 <a href="{% url 'catalog:category_list' %}" class="header__nav-link {% active_link request 'catalog:category_list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
             </li>
             <li class="header__nav-item">
-                <a href="{% url 'pages:contact' %}" class="header__nav-link {% active_link request 'pages:contact' 'header__nav-link--active' %}">{% trans "Contacts" %}</a>
+                <a href="{% url 'carts:cart_detail' %}" class="header__nav-link {% active_link request 'carts:cart_detail' 'header__nav-link--active' %}">{% trans "Cart" %}</a>
             </li>
             {% if request.user.is_authenticated %}
                 <li class="header__nav-item">

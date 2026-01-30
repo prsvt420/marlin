@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-29 22:10+0800\n"
+"POT-Creation-Date: 2026-01-30 23:26+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -193,7 +193,7 @@ msgstr ""
 "Отметьте, если пользователь должен считаться активным. Уберите эту отметку "
 "вместо удаления учётной записи."
 
-#: .\apps\accounts\models\user_model.py:58 .\apps\carts\models\cart_model.py:17
+#: .\apps\accounts\models\user_model.py:58 .\apps\carts\models\cart_model.py:19
 msgid "user"
 msgstr "пользователь"
 
@@ -584,7 +584,7 @@ msgid "Abandoned"
 msgstr "Заброшена"
 
 #: .\apps\carts\models\cart_item_model.py:17
-#: .\apps\carts\models\cart_model.py:41
+#: .\apps\carts\models\cart_model.py:43
 msgid "cart"
 msgstr "корзина"
 
@@ -618,7 +618,7 @@ msgstr "ценовой снимок"
 
 #: .\apps\carts\models\cart_item_model.py:37
 msgid "Price of the product at the time it was added to the cart."
-msgstr "Цена товара на момент его добавления в корзину."
+msgstr "Цена продукта на момент его добавления в корзину."
 
 #: .\apps\carts\models\cart_item_model.py:44
 msgid "cart item"
@@ -628,51 +628,129 @@ msgstr "элемент корзины"
 msgid "cart items"
 msgstr "элементы корзины"
 
-#: .\apps\carts\models\cart_model.py:18
+#: .\apps\carts\models\cart_model.py:20
 msgid "The user to which the cart belongs."
 msgstr "Пользователь, к которому принадлежит корзина."
 
-#: .\apps\carts\models\cart_model.py:24
+#: .\apps\carts\models\cart_model.py:26
 msgid "cart status"
 msgstr "статус корзины"
 
-#: .\apps\carts\models\cart_model.py:25
+#: .\apps\carts\models\cart_model.py:27
 msgid "Current cart status (active, converted, abandoned)."
 msgstr "Текущий статус корзины (активна, конвертирована, заброшена)."
 
-#: .\apps\carts\models\cart_model.py:29
+#: .\apps\carts\models\cart_model.py:31
 #: .\apps\catalog\models\category_model.py:64
 #: .\apps\catalog\models\product_model.py:79
 #: .\apps\vacancies\models\vacancy_model.py:76
 msgid "created date"
 msgstr "дата создания"
 
-#: .\apps\carts\models\cart_model.py:30
+#: .\apps\carts\models\cart_model.py:32
 msgid "Date and time the cart was created."
 msgstr "Дата и время добавления корзины."
 
-#: .\apps\carts\models\cart_model.py:34
+#: .\apps\carts\models\cart_model.py:36
 #: .\apps\catalog\models\category_model.py:69
 #: .\apps\catalog\models\product_model.py:84
 #: .\apps\vacancies\models\vacancy_model.py:81
 msgid "updated date"
 msgstr "дата обновления"
 
-#: .\apps\carts\models\cart_model.py:35
+#: .\apps\carts\models\cart_model.py:37
 msgid "Date and time when the cart was last updated."
 msgstr "Дата и время последнего обновления корзины."
 
-#: .\apps\carts\models\cart_model.py:42
+#: .\apps\carts\models\cart_model.py:44
 msgid "carts"
 msgstr "корзины"
 
-#: .\apps\carts\models\cart_model.py:49
+#: .\apps\carts\models\cart_model.py:51
 msgid "A user can have only one active cart."
 msgstr "У пользователя может быть только одна активная корзина."
 
-#: .\apps\carts\models\cart_model.py:56
+#: .\apps\carts\models\cart_model.py:58
+#: .\apps\carts\templates\carts\cart_detail.html:5
+#: .\apps\carts\templates\carts\cart_detail.html:14
+#: .\templates\includes\header.html:21
 msgid "Cart"
 msgstr "Корзина"
+
+#: .\apps\carts\models\cart_model.py:83
+#, python-format
+msgid "%(total_quantity)s product"
+msgid_plural "%(total_quantity)s products"
+msgstr[0] "%(total_quantity)s продукт"
+msgstr[1] "%(total_quantity)s продукта"
+msgstr[2] "%(total_quantity)s продуктов"
+
+#: .\apps\carts\templates\carts\cart_detail.html:15
+msgid "All selected products are collected in one place."
+msgstr "Все выбранные продукты собраны в одном месте."
+
+#: .\apps\carts\templates\carts\cart_detail.html:22
+msgid "In cart"
+msgstr "В корзине"
+
+#: .\apps\carts\templates\carts\cart_detail.html:32
+#: .\apps\catalog\admins\category_admin.py:57
+#: .\apps\catalog\templates\catalog\category_list.html:34
+#: .\apps\catalog\templates\catalog\product_detail.html:39
+#: .\apps\catalog\templates\catalog\product_list.html:67
+msgid "No image available"
+msgstr "Изображение отсутствует"
+
+#: .\apps\carts\templates\carts\cart_detail.html:42
+#: .\apps\catalog\templates\catalog\product_detail.html:60
+#: .\apps\catalog\templates\catalog\product_list.html:76
+msgid "not available"
+msgstr "нет в наличии"
+
+#: .\apps\carts\templates\carts\cart_detail.html:44
+#: .\apps\carts\templates\carts\cart_detail.html:46
+#: .\apps\carts\templates\carts\cart_detail.html:48
+#: .\apps\catalog\templates\catalog\product_detail.html:62
+#: .\apps\catalog\templates\catalog\product_detail.html:64
+#: .\apps\catalog\templates\catalog\product_detail.html:66
+#: .\apps\catalog\templates\catalog\product_list.html:78
+#: .\apps\catalog\templates\catalog\product_list.html:80
+#: .\apps\catalog\templates\catalog\product_list.html:82
+#, python-format
+msgid "%(stock)s left"
+msgstr "осталось %(stock)s"
+
+#: .\apps\carts\templates\carts\cart_detail.html:60
+msgid "up to"
+msgstr "до"
+
+#: .\apps\carts\templates\carts\cart_detail.html:66
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\apps\carts\templates\carts\cart_detail.html:71
+msgid "Clear"
+msgstr "Очистить"
+
+#: .\apps\carts\templates\carts\cart_detail.html:75
+msgid "Total"
+msgstr "Итого"
+
+#: .\apps\carts\templates\carts\cart_detail.html:79
+msgid "Products"
+msgstr "Продукты"
+
+#: .\apps\carts\templates\carts\cart_detail.html:83
+msgid "Delivery"
+msgstr "Доставка"
+
+#: .\apps\carts\templates\carts\cart_detail.html:84
+msgid "Free"
+msgstr "Бесплатно"
+
+#: .\apps\carts\templates\carts\cart_detail.html:95
+msgid "Your cart is empty"
+msgstr "Ваша корзина пуста"
 
 #: .\apps\catalog\admins\attribute_admin.py:15
 msgid "Search by attribute name"
@@ -685,13 +763,6 @@ msgstr "Поиск по названию категории"
 #: .\apps\catalog\admins\category_admin.py:48
 msgid "Image preview"
 msgstr "Превью изображения"
-
-#: .\apps\catalog\admins\category_admin.py:57
-#: .\apps\catalog\templates\catalog\category_list.html:34
-#: .\apps\catalog\templates\catalog\product_detail.html:39
-#: .\apps\catalog\templates\catalog\product_list.html:67
-msgid "No image available"
-msgstr "Изображение отсутствует"
 
 #: .\apps\catalog\admins\product_admin.py:39
 msgid "Search by name or article (SKU)"
@@ -1051,21 +1122,6 @@ msgstr ""
 msgid "No categories found in the catalog"
 msgstr "Категории в каталоге не найдены"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:60
-#: .\apps\catalog\templates\catalog\product_list.html:76
-msgid "not available"
-msgstr "нет в наличии"
-
-#: .\apps\catalog\templates\catalog\product_detail.html:62
-#: .\apps\catalog\templates\catalog\product_detail.html:64
-#: .\apps\catalog\templates\catalog\product_detail.html:66
-#: .\apps\catalog\templates\catalog\product_list.html:78
-#: .\apps\catalog\templates\catalog\product_list.html:80
-#: .\apps\catalog\templates\catalog\product_list.html:82
-#, python-format
-msgid "%(stock)s left"
-msgstr "осталось %(stock)s"
-
 #: .\apps\catalog\templates\catalog\product_detail.html:75
 msgid "Price per 1"
 msgstr "Цена за 1"
@@ -1245,7 +1301,7 @@ msgstr ""
 "пользователя успешно получено и требует дальнейшей обработки."
 
 #: .\apps\pages\templates\pages\contact.html:5
-#: .\templates\includes\footer.html:8 .\templates\includes\header.html:21
+#: .\templates\includes\footer.html:8
 msgid "Contacts"
 msgstr "Контакты"
 

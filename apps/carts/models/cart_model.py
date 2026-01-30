@@ -3,6 +3,8 @@ from decimal import ROUND_HALF_UP, Decimal
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ngettext
+from django_stubs_ext import StrOrPromise
 
 from apps.carts.choices import CartStatus
 
@@ -73,3 +75,14 @@ class Cart(models.Model):
     def get_total_quantity(self) -> int:
         """Return the cart total quantity."""
         return self.cart_items.count()
+
+    def get_formatted_total_quantity(self) -> StrOrPromise:
+        """Return the cart formatted total quantity."""
+        total_quantity: int = self.get_total_quantity()
+        formatted_total_quantity: StrOrPromise = ngettext(
+            "%(total_quantity)s product",
+            "%(total_quantity)s products",
+            total_quantity,
+        )
+
+        return formatted_total_quantity % {"total_quantity": total_quantity}
