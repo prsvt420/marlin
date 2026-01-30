@@ -31,7 +31,7 @@ class AccountActivationView(View):
             user = None
 
         if user is not None and self.token_generator.check_token(user, token):
-            UserRepository.activate(user=user)
+            UserRepository.activate_user(user=user)
             messages.success(
                 request,
                 _("The activation was successful! Sign in to your account."),

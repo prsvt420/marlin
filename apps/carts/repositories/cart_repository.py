@@ -37,3 +37,9 @@ class CartRepository:
             )
 
         return cart
+
+    @staticmethod
+    def clear_cart(user: AbstractBaseUser) -> None:
+        """Remove all items from the user active cart."""
+        cart: Cart = CartRepository.get_user_active_cart(user)
+        cart.cart_items.all().delete()

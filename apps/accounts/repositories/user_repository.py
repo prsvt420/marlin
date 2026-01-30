@@ -14,7 +14,7 @@ class UserRepository:
         return get_object_or_404(User, pk=pk)
 
     @staticmethod
-    def activate(user: AbstractBaseUser) -> None:
+    def activate_user(user: AbstractBaseUser) -> None:
         """Activate the given user account."""
         user.is_active = True
         user.save(update_fields=["is_active"])

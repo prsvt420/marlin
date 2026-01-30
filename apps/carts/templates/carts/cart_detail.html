@@ -17,7 +17,7 @@
 </section>
 
 <section class="cart">
-    {% if cart.cart_items %}
+    {% if cart.cart_items.exists %}
         <div class="cart__items">
             <p class="cart__count">{% trans "In cart" %} {{ cart.get_formatted_total_quantity }}.</p>
             {% for cart_item in cart.cart_items.all %}
@@ -68,7 +68,10 @@
                     </article>
                 </a>
             {% endfor %}
-            <button class="cart__button">{% trans "Clear" %}</button>
+            <form action="{% url 'carts:cart_clear' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="cart__button">{% trans "Clear" %}</button>
+            </form>
         </div>
         <div class="cart__summary">
             <p class="cart__summary-row cart__summary-row--total-price">
