@@ -8,6 +8,7 @@ from django.db.models import (
     Q,
     QuerySet,
 )
+from django.shortcuts import get_object_or_404
 
 from apps.catalog.models import Product, ProductAttribute
 
@@ -67,3 +68,8 @@ class ProductRepository:
             queryset = queryset.order_by(order_field)
 
         return queryset
+
+    @staticmethod
+    def get_by_slug(slug: str) -> Product:
+        """Retrieve a product by slug or raise 404 if not found."""
+        return get_object_or_404(Product, slug=slug)
