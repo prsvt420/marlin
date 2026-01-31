@@ -2,8 +2,8 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.db.models import Prefetch, QuerySet
 
 from apps.carts.choices import CartStatus
-from apps.carts.models import Cart, CartItem
-from apps.catalog.repositories import ProductRepository
+from apps.carts.models import Cart
+from apps.carts.repositories import CartItemRepository
 
 
 class CartRepository:
@@ -15,12 +15,7 @@ class CartRepository:
         return Cart.objects.all().prefetch_related(
             Prefetch(
                 "cart_items",
-                queryset=CartItem.objects.prefetch_related(
-                    Prefetch(
-                        "product",
-                        ProductRepository.all(),
-                    )
-                ),
+                queryset=CartItemRepository.all(),
             ),
         )
 
@@ -40,6 +35,6 @@ class CartRepository:
 
     @staticmethod
     def clear_cart(user: AbstractBaseUser) -> None:
-        """Remove all items from the user active cart."""
+        """Clear all cart items from the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        cart.cart_items.all().delete()
+        CartItemRepository.clear_cart(cart)

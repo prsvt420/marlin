@@ -9,7 +9,7 @@ from apps.carts.repositories import CartRepository
 
 
 class CartClearView(LoginRequiredMixin, View):
-    """View for clearing the cart."""
+    """View for clearing the user active cart."""
 
     def post(self, request: HttpRequest) -> HttpResponse:
         """Clear the user active cart and redirect to cart detail."""
