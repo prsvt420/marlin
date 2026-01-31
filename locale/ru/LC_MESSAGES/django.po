@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-01-31 01:11+0800\n"
+"POT-Creation-Date: 2026-02-01 03:52+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -724,37 +724,43 @@ msgstr "осталось %(stock)s"
 msgid "up to"
 msgstr "до"
 
-#: .\apps\carts\templates\carts\cart_detail.html:66
+#: .\apps\carts\templates\carts\cart_detail.html:68
 msgid "Delete"
 msgstr "Удалить"
 
-#: .\apps\carts\templates\carts\cart_detail.html:73
+#: .\apps\carts\templates\carts\cart_detail.html:76
 msgid "Clear"
 msgstr "Очистить"
 
-#: .\apps\carts\templates\carts\cart_detail.html:78
+#: .\apps\carts\templates\carts\cart_detail.html:81
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:82
+#: .\apps\carts\templates\carts\cart_detail.html:85
 msgid "Products"
 msgstr "Продукты"
 
-#: .\apps\carts\templates\carts\cart_detail.html:86
+#: .\apps\carts\templates\carts\cart_detail.html:89
 msgid "Delivery"
 msgstr "Доставка"
 
-#: .\apps\carts\templates\carts\cart_detail.html:87
+#: .\apps\carts\templates\carts\cart_detail.html:90
 msgid "Free"
 msgstr "Бесплатно"
 
-#: .\apps\carts\templates\carts\cart_detail.html:98
+#: .\apps\carts\templates\carts\cart_detail.html:101
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
 
 #: .\apps\carts\views\cart_clear_view.py:19
 msgid "Your cart has been successfully cleared."
 msgstr "Ваша корзина успешно очищена."
+
+#: .\apps\carts\views\cart_item_delete_view.py:22
+msgid ""
+"The product has been successfully removed from the cart. The price has been "
+"updated."
+msgstr "Продукт успешно удален из корзины. Цена была обновлена."
 
 #: .\apps\catalog\admins\attribute_admin.py:15
 msgid "Search by attribute name"

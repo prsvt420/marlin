@@ -38,3 +38,11 @@ class CartRepository:
         """Clear all cart items from the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
         CartItemRepository.clear_cart(cart)
+
+    @staticmethod
+    def delete_cart_item(user: AbstractBaseUser, product_slug: str) -> None:
+        """Delete a cart item from the user active cart."""
+        cart: Cart = CartRepository.get_user_active_cart(user)
+        CartItemRepository.delete_cart_item(
+            cart=cart, product_slug=product_slug
+        )

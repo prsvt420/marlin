@@ -63,7 +63,10 @@
                                 <p class="cart-item-card__current-price">{{ cart_item.get_total_price }} ₽</p>
                                 <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
                             </div>
-                            <button class="cart__button">{% trans "Delete" %}</button>
+                            <form action="{% url 'carts:cart_item_delete' product_slug=cart_item.product.slug %}" method="post">
+                                {% csrf_token %}
+                                <button class="cart__button">{% trans "Delete" %}</button>
+                            </form>
                         </div>
                     </article>
                 </a>

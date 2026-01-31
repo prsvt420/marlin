@@ -21,3 +21,8 @@ class CartItemRepository:
     def clear_cart(cart: Cart) -> None:
         """Clear all cart items from the cart."""
         cart.cart_items.all().delete()
+
+    @staticmethod
+    def delete_cart_item(cart: Cart, product_slug: str) -> None:
+        """Delete a cart item from the cart."""
+        cart.cart_items.filter(product__slug=product_slug).delete()
