@@ -14,4 +14,9 @@ urlpatterns: List[URLPattern] = [
         views.CartItemDeleteView.as_view(),
         name="cart_item_delete",
     ),
+    path(
+        "item/create/<slug:product_slug>",
+        views.CartItemCreateView.as_view(),
+        name="cart_item_create",
+    ),
 ]

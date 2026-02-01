@@ -1,3 +1,5 @@
+from typing import Set
+
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.db.models import Prefetch, QuerySet
 
@@ -46,3 +48,17 @@ class CartRepository:
         CartItemRepository.delete_cart_item(
             cart=cart, product_slug=product_slug
         )
+
+    @staticmethod
+    def create_cart_item(user: AbstractBaseUser, product_slug: str) -> None:
+        """Create a cart item in the user active cart."""
+        cart: Cart = CartRepository.get_user_active_cart(user)
+        CartItemRepository.create_cart_item(
+            cart=cart, product_slug=product_slug
+        )
+
+    @staticmethod
+    def get_existing_products(user: AbstractBaseUser) -> Set[int]:
+        """Return a set of products that exists in the user active cart."""
+        cart: Cart = CartRepository.get_user_active_cart(user)
+        return CartItemRepository.get_existing_products(cart=cart)

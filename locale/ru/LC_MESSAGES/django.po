@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-02-01 03:52+0800\n"
+"POT-Creation-Date: 2026-02-01 14:56+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -690,6 +690,8 @@ msgid "All selected products are collected in one place."
 msgstr "Все выбранные продукты собраны в одном месте."
 
 #: .\apps\carts\templates\carts\cart_detail.html:22
+#: .\apps\catalog\templates\catalog\product_detail.html:94
+#: .\apps\catalog\templates\catalog\product_list.html:105
 msgid "In cart"
 msgstr "В корзине"
 
@@ -755,6 +757,12 @@ msgstr "Ваша корзина пуста"
 #: .\apps\carts\views\cart_clear_view.py:19
 msgid "Your cart has been successfully cleared."
 msgstr "Ваша корзина успешно очищена."
+
+#: .\apps\carts\views\cart_item_create_view.py:22
+msgid ""
+"The product has been successfully added to your cart. The price has been "
+"updated."
+msgstr "Товар успешно добавлен в вашу корзину. Цена была обновлена."
 
 #: .\apps\carts\views\cart_item_delete_view.py:22
 msgid ""
@@ -1047,7 +1055,7 @@ msgid "The product to which the nutritional value belongs."
 msgstr "Продукт, которому принадлежит пищевая ценность."
 
 #: .\apps\catalog\models\product_nutrition_model.py:20
-#: .\apps\catalog\templates\catalog\product_detail.html:134
+#: .\apps\catalog\templates\catalog\product_detail.html:138
 msgid "calories"
 msgstr "калории"
 
@@ -1056,7 +1064,7 @@ msgid "Calories (kcal)."
 msgstr "Калории (ккал)."
 
 #: .\apps\catalog\models\product_nutrition_model.py:28
-#: .\apps\catalog\templates\catalog\product_detail.html:122
+#: .\apps\catalog\templates\catalog\product_detail.html:126
 msgid "proteins"
 msgstr "белки"
 
@@ -1065,7 +1073,7 @@ msgid "Proteins (g)."
 msgstr "Белки (г)."
 
 #: .\apps\catalog\models\product_nutrition_model.py:36
-#: .\apps\catalog\templates\catalog\product_detail.html:126
+#: .\apps\catalog\templates\catalog\product_detail.html:130
 msgid "fats"
 msgstr "жиры"
 
@@ -1074,7 +1082,7 @@ msgid "Fats (g)."
 msgstr "Жиры (г)."
 
 #: .\apps\catalog\models\product_nutrition_model.py:44
-#: .\apps\catalog\templates\catalog\product_detail.html:130
+#: .\apps\catalog\templates\catalog\product_detail.html:134
 msgid "carbs"
 msgstr "углеводы"
 
@@ -1136,49 +1144,49 @@ msgstr "Категории в каталоге не найдены"
 msgid "Price per 1"
 msgstr "Цена за 1"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:90
-#: .\apps\catalog\templates\catalog\product_list.html:101
+#: .\apps\catalog\templates\catalog\product_detail.html:91
+#: .\apps\catalog\templates\catalog\product_list.html:102
 msgid "Add to Cart"
 msgstr "В корзину"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:93
-#: .\apps\catalog\templates\catalog\product_list.html:104
+#: .\apps\catalog\templates\catalog\product_detail.html:97
+#: .\apps\catalog\templates\catalog\product_list.html:108
 msgid "Not available"
 msgstr "Нет в наличии"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:97
+#: .\apps\catalog\templates\catalog\product_detail.html:101
 msgid "Category"
 msgstr "Категория"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:102
+#: .\apps\catalog\templates\catalog\product_detail.html:106
 msgid "Description"
 msgstr "Описание"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:105
+#: .\apps\catalog\templates\catalog\product_detail.html:109
 msgid "Show more"
 msgstr "Показать полностью"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:105
+#: .\apps\catalog\templates\catalog\product_detail.html:109
 msgid "Hide"
 msgstr "Скрыть"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:112
+#: .\apps\catalog\templates\catalog\product_detail.html:116
 msgid "Composition"
 msgstr "Состав"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:117
+#: .\apps\catalog\templates\catalog\product_detail.html:121
 msgid "Nutritional value"
 msgstr "Пищевая ценность"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:138
+#: .\apps\catalog\templates\catalog\product_detail.html:142
 msgid "No information available"
 msgstr "Информация отсутствует"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:142
+#: .\apps\catalog\templates\catalog\product_detail.html:146
 msgid "Characteristics"
 msgstr "Характеристики"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:150
+#: .\apps\catalog\templates\catalog\product_detail.html:154
 msgid "No characteristics available"
 msgstr "Характеристики отсутствуют"
 
@@ -1199,12 +1207,12 @@ msgstr "Скидки до 30%"
 msgid "Sorting"
 msgstr "Сортировка"
 
-#: .\apps\catalog\templates\catalog\product_list.html:140
+#: .\apps\catalog\templates\catalog\product_list.html:144
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:86
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
-#: .\apps\catalog\templates\catalog\product_list.html:144
+#: .\apps\catalog\templates\catalog\product_list.html:148
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
 

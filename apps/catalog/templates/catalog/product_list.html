@@ -96,10 +96,14 @@
                     </div>
                     <div class="product-card__footer">
                         {% if product.stock %}
-                            <form action="#" method="post">
-                                {% csrf_token %}
-                                <button class="product-card__button">{% trans "Add to Cart" %}</button>
-                            </form>
+                            {% if not product.pk in existing_products %}
+                                <form action="{% url 'carts:cart_item_create' product_slug=product.slug %}" method="post">
+                                    {% csrf_token %}
+                                    <button class="product-card__button">{% trans "Add to Cart" %}</button>
+                                </form>
+                            {% else %}
+                                <button class="product-card__button" disabled>{% trans "In cart" %}</button>
+                            {% endif %}
                         {% else %}
                             <button class="product-card__button" disabled>{% trans "Not available" %}</button>
                         {% endif %}
