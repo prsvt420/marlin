@@ -1,5 +1,6 @@
-from typing import Set
+from typing import Optional, Set
 
+from django.db import transaction
 from django.db.models import Prefetch, QuerySet
 
 from apps.carts.models import Cart, CartItem
@@ -35,6 +36,40 @@ class CartItemRepository:
         """Create a cart item in the cart."""
         product: Product = ProductRepository.get_by_slug(slug=product_slug)
         cart.cart_items.get_or_create(cart=cart, product=product)
+
+    @staticmethod
+    @transaction.atomic
+    def decrement_item_quantity(cart: Cart, product_slug: str) -> None:
+        """Decrease the quantity of a cart item in the cart."""
+        cart_item: Optional[CartItem] = (
+            cart.cart_items.select_for_update()
+            .filter(product__slug=product_slug)
+            .first()
+        )
+
+        if not cart_item:
+            return
+
+        if cart_item.quantity > 1:
+            cart_item.quantity -= 1
+            cart_item.save(update_fields=["quantity"])
+
+    @staticmethod
+    @transaction.atomic
+    def increment_item_quantity(cart: Cart, product_slug: str) -> None:
+        """Increase the quantity of a cart item in the cart."""
+        cart_item: Optional[CartItem] = (
+            cart.cart_items.select_for_update()
+            .filter(product__slug=product_slug)
+            .first()
+        )
+
+        if not cart_item:
+            return
+
+        if cart_item.quantity < cart_item.product.stock:
+            cart_item.quantity += 1
+            cart_item.save(update_fields=["quantity"])
 
     @staticmethod
     def get_existing_products(cart: Cart) -> Set[int]:

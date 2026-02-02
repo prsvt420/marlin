@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-02-01 14:56+0800\n"
+"POT-Creation-Date: 2026-02-02 23:37+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -722,35 +722,35 @@ msgstr "нет в наличии"
 msgid "%(stock)s left"
 msgstr "осталось %(stock)s"
 
-#: .\apps\carts\templates\carts\cart_detail.html:60
+#: .\apps\carts\templates\carts\cart_detail.html:76
 msgid "up to"
 msgstr "до"
 
-#: .\apps\carts\templates\carts\cart_detail.html:68
+#: .\apps\carts\templates\carts\cart_detail.html:84
 msgid "Delete"
 msgstr "Удалить"
 
-#: .\apps\carts\templates\carts\cart_detail.html:76
+#: .\apps\carts\templates\carts\cart_detail.html:92
 msgid "Clear"
 msgstr "Очистить"
 
-#: .\apps\carts\templates\carts\cart_detail.html:81
+#: .\apps\carts\templates\carts\cart_detail.html:97
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:85
+#: .\apps\carts\templates\carts\cart_detail.html:101
 msgid "Products"
 msgstr "Продукты"
 
-#: .\apps\carts\templates\carts\cart_detail.html:89
+#: .\apps\carts\templates\carts\cart_detail.html:105
 msgid "Delivery"
 msgstr "Доставка"
 
-#: .\apps\carts\templates\carts\cart_detail.html:90
+#: .\apps\carts\templates\carts\cart_detail.html:106
 msgid "Free"
 msgstr "Бесплатно"
 
-#: .\apps\carts\templates\carts\cart_detail.html:101
+#: .\apps\carts\templates\carts\cart_detail.html:117
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
 
@@ -769,6 +769,20 @@ msgid ""
 "The product has been successfully removed from the cart. The price has been "
 "updated."
 msgstr "Продукт успешно удален из корзины. Цена была обновлена."
+
+#: .\apps\carts\views\cart_item_quantity_decrement.py:22
+msgid ""
+"The product quantity has been successfully decreased in your cart. The price "
+"has been updated."
+msgstr ""
+"Количество товара в вашей корзине успешно уменьшено. Цена была обновлена."
+
+#: .\apps\carts\views\cart_item_quantity_increment.py:22
+msgid ""
+"The product quantity has been successfully increased in your cart. The price "
+"has been updated."
+msgstr ""
+"Количество товара в вашей корзине успешно увеличено. Цена была обновлена."
 
 #: .\apps\catalog\admins\attribute_admin.py:15
 msgid "Search by attribute name"

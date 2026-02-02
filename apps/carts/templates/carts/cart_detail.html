@@ -53,9 +53,25 @@
                             <h3 class="cart-item-card__title">{{ cart_item.product.name }}</h3>
                             <div class="cart-item-card__quantity">
                                 <div class="cart-item-card__quantity-controls">
-                                    <button class="cart-item-card__quantity-button">−</button>
+                                    {% if cart_item.quantity > 1 %}
+                                        <form action="{% url 'carts:cart_item_decrement' product_slug=cart_item.product.slug %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="cart-item-card__quantity-button">−</button>
+                                        </form>
+                                    {% else %}
+                                        <button class="cart-item-card__quantity-button" disabled>−</button>
+                                    {% endif %}
+
                                     <span class="cart-item-card__quantity-value">{{ cart_item.quantity }}</span>
-                                    <button class="cart-item-card__quantity-button">+</button>
+
+                                    {% if cart_item.quantity < cart_item.product.stock %}
+                                        <form action="{% url 'carts:cart_item_increment' product_slug=cart_item.product.slug %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="cart-item-card__quantity-button">+</button>
+                                        </form>
+                                    {% else %}
+                                        <button class="cart-item-card__quantity-button" disabled>+</button>
+                                    {% endif %}
                                 </div>
                                 <p class="cart-item-card__stock-limit">{% trans "up to" %} {{ cart_item.product.stock }} {{ cart_item.product.get_unit_type_display }}</p>
                             </div>
@@ -65,7 +81,7 @@
                             </div>
                             <form action="{% url 'carts:cart_item_delete' product_slug=cart_item.product.slug %}" method="post">
                                 {% csrf_token %}
-                                <button class="cart__button">{% trans "Delete" %}</button>
+                                <button type="submit" class="cart__button">{% trans "Delete" %}</button>
                             </form>
                         </div>
                     </article>

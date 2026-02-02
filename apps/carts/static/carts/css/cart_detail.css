@@ -67,10 +67,12 @@
     background-color: var(--button-background-color-hover);
 }
 
+
+
 .cart-item-card__image {
     position: relative;
-    min-width: 180px;
-    width: 180px;
+    min-width: 200px;
+    width: 200px;
     height: 140px;
     overflow: hidden;
 }
@@ -205,6 +207,12 @@
 
 .cart-item-card__quantity-button:hover {
     background-color: var(--button-background-color-hover);
+}
+
+.cart-item-card__quantity-button:disabled,
+.cart__button:disabled {
+    background-color: var(--button-background-color-hover);
+    cursor: not-allowed;
 }
 
 .cart-item-card__quantity-value {
