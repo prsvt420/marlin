@@ -26,7 +26,7 @@ class ProductListView(ListView):
         order_field: Optional[str] = self.ordering_option.field
         category_slug: Optional[str] = self.category_slug
 
-        return ProductRepository.filter(
+        return ProductRepository().get_filtered(
             search_query=search_query,
             order_field=order_field,
             category_slug=category_slug,

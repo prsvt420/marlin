@@ -17,7 +17,7 @@ class CartItemRepository:
         return CartItem.objects.prefetch_related(
             Prefetch(
                 "product",
-                ProductRepository.all(),
+                ProductRepository().get_all(),
             )
         )
 
@@ -34,7 +34,7 @@ class CartItemRepository:
     @staticmethod
     def create_cart_item(cart: Cart, product_slug: str) -> None:
         """Create a cart item in the cart."""
-        product: Product = ProductRepository.get_by_slug(slug=product_slug)
+        product: Product = ProductRepository().get_by_slug(slug=product_slug)
         cart.cart_items.get_or_create(cart=cart, product=product)
 
     @staticmethod

@@ -16,8 +16,7 @@ from apps.catalog.models import Product, ProductAttribute
 class ProductRepository:
     """Repository for accessing Product model."""
 
-    @staticmethod
-    def all() -> QuerySet[Product]:
+    def get_all(self) -> QuerySet[Product]:
         """Return all products with related prefetched."""
         return (
             Product.objects.all()
@@ -33,8 +32,8 @@ class ProductRepository:
             )
         )
 
-    @staticmethod
-    def filter(
+    def get_filtered(
+        self,
         *,
         search_query: Optional[str] = None,
         only_active: bool = True,
@@ -42,7 +41,7 @@ class ProductRepository:
         category_slug: Optional[str] = None,
     ) -> QuerySet[Product]:
         """Return filtered products."""
-        queryset: QuerySet[Product] = ProductRepository.all()
+        queryset: QuerySet[Product] = self.get_all()
 
         if only_active:
             queryset = queryset.filter(is_active=True)
@@ -69,7 +68,6 @@ class ProductRepository:
 
         return queryset
 
-    @staticmethod
-    def get_by_slug(slug: str) -> Product:
+    def get_by_slug(self, slug: str) -> Product:
         """Retrieve a product by slug or raise 404 if not found."""
         return get_object_or_404(Product, slug=slug)

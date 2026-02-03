@@ -17,7 +17,7 @@ class ProductDetailView(DetailView):
 
     def get_queryset(self) -> QuerySet[Product]:
         """Return all active products."""
-        return ProductRepository.filter()
+        return ProductRepository().get_filtered()
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template."""
