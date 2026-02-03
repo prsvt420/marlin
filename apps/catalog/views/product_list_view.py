@@ -37,7 +37,7 @@ class ProductListView(ListView):
         context_data: Dict[str, Any] = super().get_context_data(**kwargs)
         context_data["search_query"] = self.search_query
         context_data["current_ordering_option"] = self.ordering_option
-        context_data["category"] = CategoryRepository.get_by_slug(
+        context_data["category"] = CategoryRepository().get_by_slug(
             slug=self.category_slug
         )
 

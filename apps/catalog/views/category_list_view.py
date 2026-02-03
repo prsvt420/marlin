@@ -14,4 +14,4 @@ class CategoryListView(ListView):
 
     def get_queryset(self) -> QuerySet[Category]:
         """Return all active categories with parents."""
-        return CategoryRepository.get_parents()
+        return CategoryRepository().get_parents()
