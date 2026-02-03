@@ -14,4 +14,4 @@ class VacancyDetailView(DetailView):
 
     def get_queryset(self) -> QuerySet[Vacancy]:
         """Return all active vacancies."""
-        return VacancyRepository.filter()
+        return VacancyRepository().get_filtered()

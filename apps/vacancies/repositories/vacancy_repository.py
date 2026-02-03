@@ -8,19 +8,18 @@ from apps.vacancies.models import Vacancy
 class VacancyRepository:
     """Repository for accessing Vacancy model."""
 
-    @staticmethod
-    def all() -> QuerySet[Vacancy]:
+    def get_all(self) -> QuerySet[Vacancy]:
         """Return all vacancies with related prefetched."""
         return Vacancy.objects.all().select_related("city")
 
-    @staticmethod
-    def filter(
+    def get_filtered(
+        self,
         *,
         search_query: Optional[str] = None,
         only_active: bool = True,
     ) -> QuerySet[Vacancy]:
         """Return filtered vacancies."""
-        queryset: QuerySet[Vacancy] = VacancyRepository.all()
+        queryset: QuerySet[Vacancy] = self.get_all()
 
         if only_active:
             queryset = queryset.filter(is_active=True)

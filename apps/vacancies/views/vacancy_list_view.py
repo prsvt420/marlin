@@ -20,7 +20,7 @@ class VacancyListView(ListView):
         """Return filtered vacancies."""
         search_query: str = self.search_query
 
-        return VacancyRepository.filter(search_query=search_query)
+        return VacancyRepository().get_filtered(search_query=search_query)
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         """Add additional context variables to the template."""
