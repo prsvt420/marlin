@@ -8,13 +8,11 @@ User: type[AbstractBaseUser] = get_user_model()
 class UserRepository:
     """Repository for accessing User model."""
 
-    @staticmethod
-    def get_by_pk(pk: str) -> AbstractBaseUser:
+    def get_by_pk(self, pk: str) -> AbstractBaseUser:
         """Retrieve a user by primary key or raise 404 if not found."""
         return get_object_or_404(User, pk=pk)
 
-    @staticmethod
-    def activate_user(user: AbstractBaseUser) -> None:
+    def activate(self, user: AbstractBaseUser) -> None:
         """Activate the given user account."""
         user.is_active = True
         user.save(update_fields=["is_active"])

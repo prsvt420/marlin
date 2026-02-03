@@ -26,12 +26,12 @@ class AccountActivationView(View):
 
         try:
             user_pk: str = force_str(urlsafe_base64_decode(uidb64))
-            user = UserRepository.get_by_pk(pk=user_pk)
+            user = UserRepository().get_by_pk(pk=user_pk)
         except Exception:  # noqa: S110
             user = None
 
         if user is not None and self.token_generator.check_token(user, token):
-            UserRepository.activate_user(user=user)
+            UserRepository().activate(user=user)
             messages.success(
                 request,
                 _("The activation was successful! Sign in to your account."),
