@@ -11,8 +11,7 @@ from apps.catalog.repositories import ProductRepository
 class CartItemRepository:
     """Repository for accessing CartItem model."""
 
-    @staticmethod
-    def all() -> QuerySet[CartItem]:
+    def get_all(self) -> QuerySet[CartItem]:
         """Return all cart items with related prefetched."""
         return CartItem.objects.prefetch_related(
             Prefetch(
@@ -21,26 +20,22 @@ class CartItemRepository:
             )
         )
 
-    @staticmethod
-    def clear_cart(cart: Cart) -> None:
-        """Clear all cart items from the cart."""
+    def delete_all(self, cart: Cart) -> None:
+        """Delete all cart items from the given cart."""
         cart.cart_items.all().delete()
 
-    @staticmethod
-    def delete_cart_item(cart: Cart, product_slug: str) -> None:
-        """Delete a cart item from the cart."""
+    def delete(self, cart: Cart, product_slug: str) -> None:
+        """Delete a cart item by product slug from the given cart."""
         cart.cart_items.filter(product__slug=product_slug).delete()
 
-    @staticmethod
-    def create_cart_item(cart: Cart, product_slug: str) -> None:
-        """Create a cart item in the cart."""
+    def create(self, cart: Cart, product_slug: str) -> None:
+        """Create a cart item in the given cart."""
         product: Product = ProductRepository().get_by_slug(slug=product_slug)
         cart.cart_items.get_or_create(cart=cart, product=product)
 
-    @staticmethod
     @transaction.atomic
-    def decrement_item_quantity(cart: Cart, product_slug: str) -> None:
-        """Decrease the quantity of a cart item in the cart."""
+    def decrement_quantity(self, cart: Cart, product_slug: str) -> None:
+        """Decrease the quantity of a cart item in the given cart."""
         cart_item: Optional[CartItem] = (
             cart.cart_items.select_for_update()
             .filter(product__slug=product_slug)
@@ -54,10 +49,9 @@ class CartItemRepository:
             cart_item.quantity -= 1
             cart_item.save(update_fields=["quantity"])
 
-    @staticmethod
     @transaction.atomic
-    def increment_item_quantity(cart: Cart, product_slug: str) -> None:
-        """Increase the quantity of a cart item in the cart."""
+    def increment_quantity(self, cart: Cart, product_slug: str) -> None:
+        """Increase the quantity of a cart item in the given cart."""
         cart_item: Optional[CartItem] = (
             cart.cart_items.select_for_update()
             .filter(product__slug=product_slug)
@@ -71,10 +65,9 @@ class CartItemRepository:
             cart_item.quantity += 1
             cart_item.save(update_fields=["quantity"])
 
-    @staticmethod
-    def get_existing_products(cart: Cart) -> Set[int]:
-        """Return a set of products that exists in the cart."""
-        existing_products: Set[int] = set(
+    def get_product_ids(self, cart: Cart) -> Set[int]:
+        """Return the set of all product IDs in the given cart."""
+        product_ids: Set[int] = set(
             cart.cart_items.values_list("product__pk", flat=True)
         )
-        return existing_products
+        return product_ids

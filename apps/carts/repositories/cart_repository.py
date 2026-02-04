@@ -17,7 +17,7 @@ class CartRepository:
         return Cart.objects.all().prefetch_related(
             Prefetch(
                 "cart_items",
-                queryset=CartItemRepository.all(),
+                queryset=CartItemRepository().get_all(),
             ),
         )
 
@@ -39,23 +39,19 @@ class CartRepository:
     def clear_cart(user: AbstractBaseUser) -> None:
         """Clear all cart items from the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        CartItemRepository.clear_cart(cart)
+        CartItemRepository().clear(cart)
 
     @staticmethod
     def delete_cart_item(user: AbstractBaseUser, product_slug: str) -> None:
         """Delete a cart item from the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        CartItemRepository.delete_cart_item(
-            cart=cart, product_slug=product_slug
-        )
+        CartItemRepository().delete(cart=cart, product_slug=product_slug)
 
     @staticmethod
     def create_cart_item(user: AbstractBaseUser, product_slug: str) -> None:
         """Create a cart item in the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        CartItemRepository.create_cart_item(
-            cart=cart, product_slug=product_slug
-        )
+        CartItemRepository().create(cart=cart, product_slug=product_slug)
 
     @staticmethod
     def decrement_item_quantity(
@@ -63,7 +59,7 @@ class CartRepository:
     ) -> None:
         """Decrease the quantity of a cart item in the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        CartItemRepository.decrement_item_quantity(
+        CartItemRepository().decrement_quantity(
             cart=cart, product_slug=product_slug
         )
 
@@ -73,7 +69,7 @@ class CartRepository:
     ) -> None:
         """Increase the quantity of a cart item in the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        CartItemRepository.increment_item_quantity(
+        CartItemRepository().increment_quantity(
             cart=cart, product_slug=product_slug
         )
 
@@ -81,4 +77,4 @@ class CartRepository:
     def get_existing_products(user: AbstractBaseUser) -> Set[int]:
         """Return a set of products that exists in the user active cart."""
         cart: Cart = CartRepository.get_user_active_cart(user)
-        return CartItemRepository.get_existing_products(cart=cart)
+        return CartItemRepository().get_product_ids(cart=cart)
