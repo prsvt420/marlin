@@ -13,7 +13,7 @@ class CartItemCreateView(LoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, product_slug: str) -> HttpResponse:
         """Create a cart item and redirect to HTTP Referer."""
-        CartRepository.create_cart_item(
+        CartRepository().create_item(
             user=request.user, product_slug=product_slug  # type: ignore
         )
         messages.success(

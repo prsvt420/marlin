@@ -17,6 +17,6 @@ class CartDetailView(LoginRequiredMixin, DetailView):
 
     def get_object(self, queryset: Optional[QuerySet] = None) -> Cart:
         """Return the user active cart."""
-        return CartRepository.get_user_active_cart(
+        return CartRepository().get_user_active(
             user=self.request.user  # type: ignore
         )

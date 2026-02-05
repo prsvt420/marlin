@@ -13,7 +13,7 @@ class CartItemDeleteView(LoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, product_slug: str) -> HttpResponse:
         """Delete a cart item and redirect to cart detail."""
-        CartRepository.delete_cart_item(
+        CartRepository().delete_item(
             user=request.user, product_slug=product_slug  # type: ignore
         )
         messages.success(

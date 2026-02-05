@@ -43,7 +43,7 @@ class ProductListView(ListView):
 
         if self.request.user.is_authenticated:
             context_data["existing_products"] = (
-                CartRepository.get_existing_products(self.request.user)
+                CartRepository().get_product_ids(self.request.user)
             )
 
         return context_data

@@ -13,7 +13,7 @@ class CartClearView(LoginRequiredMixin, View):
 
     def post(self, request: HttpRequest) -> HttpResponse:
         """Clear the user active cart and redirect to cart detail."""
-        CartRepository.clear_cart(request.user)  # type: ignore
+        CartRepository().clear(user=request.user)  # type: ignore
         messages.success(
             request,
             _("Your cart has been successfully cleared."),

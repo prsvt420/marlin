@@ -13,7 +13,7 @@ class CartItemQuantityIncrementView(LoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, product_slug: str) -> HttpResponse:
         """Increase cart item quantity and redirect to cart detail."""
-        CartRepository.increment_item_quantity(
+        CartRepository().increment_item_quantity(
             user=request.user, product_slug=product_slug  # type: ignore
         )
         messages.success(
