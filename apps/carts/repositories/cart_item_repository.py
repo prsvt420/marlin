@@ -20,6 +20,18 @@ class CartItemRepository:
             )
         )
 
+    def get_available(self, cart: Cart) -> QuerySet[CartItem]:
+        """Return available cart items from the given cart."""
+        return cart.cart_items.filter(
+            product__is_active=True, product__stock__gt=0
+        )
+
+    def get_unavailable(self, cart: Cart) -> QuerySet[CartItem]:
+        """Return unavailable cart items from the given cart."""
+        return cart.cart_items.exclude(
+            product__is_active=True, product__stock__gt=0
+        )
+
     def delete_all(self, cart: Cart) -> None:
         """Delete all cart items from the given cart."""
         cart.cart_items.all().delete()
