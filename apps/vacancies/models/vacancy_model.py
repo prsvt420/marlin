@@ -7,8 +7,7 @@ from django_stubs_ext import StrOrPromise
 from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
 
-class Vacancy(models.Model):
-    """Model for vacancy."""
+class Vacancy(models.Model):  # type: ignore
 
     title = models.CharField(
         max_length=255,
@@ -82,7 +81,7 @@ class Vacancy(models.Model):
         help_text=_("Date and time when the vacancy was last updated."),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "vacancies_vacancy"
         db_table_comment = "Table containing job vacancies."
         verbose_name = _("vacancy")
@@ -92,29 +91,30 @@ class Vacancy(models.Model):
             "title",
         )
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.title} / {self.city}"
 
-    def get_formatted_salary(self) -> StrOrPromise:
-        """Return the salary range formatted."""
+    @property
+    def formatted_salary(self) -> StrOrPromise:
         if self.salary_from and self.salary_to:
-            return _("%(from)s – %(to)s") % {
-                "from": self.salary_from,
-                "to": self.salary_to,
+            return _("%(salary_from)s – %(salary_to)s") % {
+                "salary_from": self.salary_from,
+                "salary_to": self.salary_to,
             }
         elif self.salary_from:
-            return _("from %(from)s") % {"from": self.salary_from}
+            return _("from %(salary_from)s") % {
+                "salary_from": self.salary_from
+            }
         elif self.salary_to:
-            return _("to %(to)s") % {"to": self.salary_to}
+            return _("to %(salary_to)s") % {"salary_to": self.salary_to}
         return ""
 
     def clean(self) -> None:
-        """Validate vacancy data."""
         super().clean()
         if (
             self.salary_from
-            and self.salary_to  # noqa: W503
-            and self.salary_from >= self.salary_to  # noqa: W503
+            and self.salary_to
+            and self.salary_from >= self.salary_to
         ):
             raise ValidationError(
                 {
@@ -126,5 +126,6 @@ class Vacancy(models.Model):
             )
 
     def get_absolute_url(self) -> str:
-        """Return the URL to access the detail view of this vacancy."""
-        return reverse("vacancies:vacancy_detail", kwargs={"pk": self.pk})
+        return reverse(
+            viewname="vacancies:detail", kwargs={"vacancy_pk": self.pk}
+        )

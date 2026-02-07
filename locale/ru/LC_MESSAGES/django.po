@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-02-02 23:37+0800\n"
+"POT-Creation-Date: 2026-02-09 13:17+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -181,7 +181,7 @@ msgstr "Отчество пользователя."
 #: .\apps\accounts\models\user_model.py:39
 #: .\apps\catalog\models\category_model.py:57
 #: .\apps\catalog\models\product_model.py:72
-#: .\apps\vacancies\models\vacancy_model.py:71
+#: .\apps\vacancies\models\vacancy_model.py:70
 msgid "active"
 msgstr "активный"
 
@@ -643,7 +643,7 @@ msgstr "Текущий статус корзины (активна, конвер
 #: .\apps\carts\models\cart_model.py:31
 #: .\apps\catalog\models\category_model.py:64
 #: .\apps\catalog\models\product_model.py:79
-#: .\apps\vacancies\models\vacancy_model.py:76
+#: .\apps\vacancies\models\vacancy_model.py:75
 msgid "created date"
 msgstr "дата создания"
 
@@ -654,7 +654,7 @@ msgstr "Дата и время добавления корзины."
 #: .\apps\carts\models\cart_model.py:36
 #: .\apps\catalog\models\category_model.py:69
 #: .\apps\catalog\models\product_model.py:84
-#: .\apps\vacancies\models\vacancy_model.py:81
+#: .\apps\vacancies\models\vacancy_model.py:80
 msgid "updated date"
 msgstr "дата обновления"
 
@@ -770,14 +770,14 @@ msgid ""
 "updated."
 msgstr "Продукт успешно удален из корзины. Цена была обновлена."
 
-#: .\apps\carts\views\cart_item_quantity_decrement.py:22
+#: .\apps\carts\views\cart_item_quantity_decrement_view.py:22
 msgid ""
 "The product quantity has been successfully decreased in your cart. The price "
 "has been updated."
 msgstr ""
 "Количество товара в вашей корзине успешно уменьшено. Цена была обновлена."
 
-#: .\apps\carts\views\cart_item_quantity_increment.py:22
+#: .\apps\carts\views\cart_item_quantity_increment_view.py:22
 msgid ""
 "The product quantity has been successfully increased in your cart. The price "
 "has been updated."
@@ -848,9 +848,9 @@ msgstr "По размеру скидки"
 #: .\apps\catalog\models\attribute_model.py:11
 #: .\apps\catalog\models\category_model.py:23
 #: .\apps\catalog\models\product_model.py:15
-#: .\apps\vacancies\models\city_model.py:12
-#: .\apps\vacancies\models\professional_area_model.py:11
-#: .\apps\vacancies\models\region_model.py:11
+#: .\apps\vacancies\models\city_model.py:11
+#: .\apps\vacancies\models\professional_area_model.py:10
+#: .\apps\vacancies\models\region_model.py:10
 msgid "name"
 msgstr "название"
 
@@ -891,7 +891,7 @@ msgstr "Уникальный идентификатор URL (буквы, циф�
 
 #: .\apps\catalog\models\category_model.py:34
 #: .\apps\catalog\models\product_model.py:19
-#: .\apps\vacancies\models\vacancy_model.py:23
+#: .\apps\vacancies\models\vacancy_model.py:22
 msgid "description"
 msgstr "описание"
 
@@ -1411,210 +1411,210 @@ msgstr ""
 msgid "Promotions"
 msgstr "Акции"
 
-#: .\apps\vacancies\admins\city_admin.py:20
+#: .\apps\vacancies\admins\city_admin.py:19
 msgid "Search by city and region name"
 msgstr "Поиск по названию города и региона"
 
-#: .\apps\vacancies\admins\professional_area_admin.py:15
+#: .\apps\vacancies\admins\professional_area_admin.py:14
 msgid "Search by professional field name"
 msgstr "Поиск по названию профессиональной области"
 
-#: .\apps\vacancies\admins\region_admin.py:15
+#: .\apps\vacancies\admins\region_admin.py:14
 msgid "Search by region name"
 msgstr "Поиск по названию региона"
 
-#: .\apps\vacancies\admins\vacancy_admin.py:22
+#: .\apps\vacancies\admins\vacancy_admin.py:21
 msgid "Search by vacancy title and description"
 msgstr "Поиск по заголовку и описанию вакансии"
 
-#: .\apps\vacancies\admins\vacancy_admin.py:52
+#: .\apps\vacancies\admins\vacancy_admin.py:51
 msgid "Salary"
 msgstr "Зарплата"
 
-#: .\apps\vacancies\apps.py:11
+#: .\apps\vacancies\apps.py:10
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:13
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:5
 #: .\templates\includes\footer.html:9
 msgid "Vacancies"
 msgstr "Вакансии"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:8
+#: .\apps\vacancies\choices\experience_level_choices.py:7
 msgid "No experience"
 msgstr "Без опыта"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:9
+#: .\apps\vacancies\choices\experience_level_choices.py:8
 msgid "From 1 to 3 years"
 msgstr "От 1 года до 3 лет"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:10
+#: .\apps\vacancies\choices\experience_level_choices.py:9
 msgid "From 3 to 6 years"
 msgstr "От 3 до 6 лет"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:11
+#: .\apps\vacancies\choices\experience_level_choices.py:10
 msgid "More than 6 years"
 msgstr "Более 6 лет"
 
-#: .\apps\vacancies\choices\work_schedule_choices.py:8
+#: .\apps\vacancies\choices\work_schedule_choices.py:7
 msgid "Full-time"
 msgstr "Полный день"
 
-#: .\apps\vacancies\choices\work_schedule_choices.py:9
+#: .\apps\vacancies\choices\work_schedule_choices.py:8
 msgid "Shift schedule"
 msgstr "Сменный график"
 
-#: .\apps\vacancies\choices\work_schedule_choices.py:10
+#: .\apps\vacancies\choices\work_schedule_choices.py:9
 msgid "Flexible schedule"
 msgstr "Гибкий график"
 
-#: .\apps\vacancies\choices\work_schedule_choices.py:11
+#: .\apps\vacancies\choices\work_schedule_choices.py:10
 msgid "Remote work"
 msgstr "Удалённая работа"
 
-#: .\apps\vacancies\models\city_model.py:13
+#: .\apps\vacancies\models\city_model.py:12
 msgid "City name."
 msgstr "Название города."
 
-#: .\apps\vacancies\models\city_model.py:19
-#: .\apps\vacancies\models\region_model.py:18
+#: .\apps\vacancies\models\city_model.py:18
+#: .\apps\vacancies\models\region_model.py:17
 msgid "region"
 msgstr "регион"
 
-#: .\apps\vacancies\models\city_model.py:20
+#: .\apps\vacancies\models\city_model.py:19
 msgid "Region to which the city belongs."
 msgstr "Регион, к которому относится город."
 
-#: .\apps\vacancies\models\city_model.py:28
+#: .\apps\vacancies\models\city_model.py:27
 msgid "city"
 msgstr "город"
 
-#: .\apps\vacancies\models\city_model.py:29
+#: .\apps\vacancies\models\city_model.py:28
 msgid "cities"
 msgstr "города"
 
-#: .\apps\vacancies\models\city_model.py:33
+#: .\apps\vacancies\models\city_model.py:32
 msgid "city of"
 msgstr "г."
 
-#: .\apps\vacancies\models\professional_area_model.py:12
+#: .\apps\vacancies\models\professional_area_model.py:11
 msgid "Professional area name."
 msgstr "Название профессиональной области."
 
-#: .\apps\vacancies\models\professional_area_model.py:18
-#: .\apps\vacancies\models\vacancy_model.py:33
+#: .\apps\vacancies\models\professional_area_model.py:17
+#: .\apps\vacancies\models\vacancy_model.py:32
 msgid "professional area"
 msgstr "профессиональная область"
 
-#: .\apps\vacancies\models\professional_area_model.py:19
+#: .\apps\vacancies\models\professional_area_model.py:18
 msgid "professional areas"
 msgstr "профессиональные области"
 
-#: .\apps\vacancies\models\region_model.py:12
+#: .\apps\vacancies\models\region_model.py:11
 msgid "Region name."
 msgstr "Название региона."
 
-#: .\apps\vacancies\models\region_model.py:19
+#: .\apps\vacancies\models\region_model.py:18
 msgid "regions"
 msgstr "регионы"
 
-#: .\apps\vacancies\models\vacancy_model.py:15
+#: .\apps\vacancies\models\vacancy_model.py:14
 msgid "title"
 msgstr "заголовок"
 
-#: .\apps\vacancies\models\vacancy_model.py:16
+#: .\apps\vacancies\models\vacancy_model.py:15
 msgid "Vacancy title."
 msgstr "Заголовок вакансии."
 
-#: .\apps\vacancies\models\vacancy_model.py:19
+#: .\apps\vacancies\models\vacancy_model.py:18
 msgid "short description"
 msgstr "краткое описание"
 
-#: .\apps\vacancies\models\vacancy_model.py:20
+#: .\apps\vacancies\models\vacancy_model.py:19
 msgid "Brief introductory text about the vacancy."
 msgstr "Краткий вступительный текст о вакансии."
 
-#: .\apps\vacancies\models\vacancy_model.py:25
+#: .\apps\vacancies\models\vacancy_model.py:24
 msgid "Detailed description of the vacancy (HTML markup, use div, ul, h3, li)."
 msgstr ""
 "Подробное описание вакансии (HTML-разметка, использование div, ul, h3, li)."
 
-#: .\apps\vacancies\models\vacancy_model.py:34
+#: .\apps\vacancies\models\vacancy_model.py:33
 msgid "Professional field of the vacancy."
 msgstr "Профессиональная область вакансии."
 
-#: .\apps\vacancies\models\vacancy_model.py:40
+#: .\apps\vacancies\models\vacancy_model.py:39
 msgid "city and region"
 msgstr "город и регион"
 
-#: .\apps\vacancies\models\vacancy_model.py:41
+#: .\apps\vacancies\models\vacancy_model.py:40
 msgid "City and region where the vacancy is posted."
 msgstr "Город и регион, где размещена вакансия."
 
-#: .\apps\vacancies\models\vacancy_model.py:47
+#: .\apps\vacancies\models\vacancy_model.py:46
 msgid "work schedule"
 msgstr "график работы"
 
-#: .\apps\vacancies\models\vacancy_model.py:48
+#: .\apps\vacancies\models\vacancy_model.py:47
 msgid "Expected work schedule."
 msgstr "Предполагаемый график работы."
 
-#: .\apps\vacancies\models\vacancy_model.py:54
+#: .\apps\vacancies\models\vacancy_model.py:53
 msgid "experience level"
 msgstr "уровень опыта"
 
-#: .\apps\vacancies\models\vacancy_model.py:55
+#: .\apps\vacancies\models\vacancy_model.py:54
 msgid "Required work experience level."
 msgstr "Требуемый уровень опыта работы."
 
-#: .\apps\vacancies\models\vacancy_model.py:58
+#: .\apps\vacancies\models\vacancy_model.py:57
 msgid "salary from"
 msgstr "зарплата от"
 
-#: .\apps\vacancies\models\vacancy_model.py:59
+#: .\apps\vacancies\models\vacancy_model.py:58
 msgid "Minimum salary."
 msgstr "Минимальная зарплата."
 
-#: .\apps\vacancies\models\vacancy_model.py:64
+#: .\apps\vacancies\models\vacancy_model.py:63
 msgid "salary to"
 msgstr "зарплата до"
 
-#: .\apps\vacancies\models\vacancy_model.py:65
+#: .\apps\vacancies\models\vacancy_model.py:64
 msgid "Maximum salary."
 msgstr "Максимальная зарплата."
 
-#: .\apps\vacancies\models\vacancy_model.py:72
+#: .\apps\vacancies\models\vacancy_model.py:71
 msgid "Determines whether the vacancy is visible."
 msgstr "Определяет, видна ли вакансия."
 
-#: .\apps\vacancies\models\vacancy_model.py:77
+#: .\apps\vacancies\models\vacancy_model.py:76
 msgid "Date and time when the vacancy was added."
 msgstr "Дата и время добавления вакансии."
 
-#: .\apps\vacancies\models\vacancy_model.py:82
+#: .\apps\vacancies\models\vacancy_model.py:81
 msgid "Date and time when the vacancy was last updated."
 msgstr "Дата и время последнего обновления вакансии."
 
-#: .\apps\vacancies\models\vacancy_model.py:88
+#: .\apps\vacancies\models\vacancy_model.py:87
 msgid "vacancy"
 msgstr "вакансия"
 
-#: .\apps\vacancies\models\vacancy_model.py:89
+#: .\apps\vacancies\models\vacancy_model.py:88
 msgid "vacancies"
 msgstr "вакансии"
 
-#: .\apps\vacancies\models\vacancy_model.py:101
+#: .\apps\vacancies\models\vacancy_model.py:100
 #, python-format
-msgid "%(from)s – %(to)s"
-msgstr "%(from)s – %(to)s"
+msgid "%(salary_from)s – %(salary_to)s"
+msgstr "%(salary_from)s – %(salary_to)s"
 
-#: .\apps\vacancies\models\vacancy_model.py:106
+#: .\apps\vacancies\models\vacancy_model.py:105
 #, python-format
-msgid "from %(from)s"
-msgstr "от %(from)s"
+msgid "from %(salary_from)s"
+msgstr "от %(salary_from)s"
 
-#: .\apps\vacancies\models\vacancy_model.py:108
+#: .\apps\vacancies\models\vacancy_model.py:109
 #, python-format
-msgid "to %(to)s"
-msgstr "до %(to)s"
+msgid "to %(salary_to)s"
+msgstr "до %(salary_to)s"
 
 #: .\apps\vacancies\models\vacancy_model.py:122
 msgid "Maximum salary must be greater than minimum salary."

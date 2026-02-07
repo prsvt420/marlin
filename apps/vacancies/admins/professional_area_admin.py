@@ -7,7 +7,6 @@ from apps.vacancies.models import ProfessionalArea
 
 @admin.register(ProfessionalArea)
 class ProfessionalAreaAdmin(TranslationAdmin):
-    """Configuration for administration of the ProfessionalArea model."""
 
     list_per_page = 25
     list_display = ("name",)

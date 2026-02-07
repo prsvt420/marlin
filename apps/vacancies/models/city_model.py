@@ -3,8 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from django_stubs_ext import StrOrPromise
 
 
-class City(models.Model):
-    """Model for city."""
+class City(models.Model):  # type: ignore
 
     name = models.CharField(
         max_length=255,
@@ -22,14 +21,14 @@ class City(models.Model):
         blank=True,
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "vacancies_city"
         db_table_comment = "Table containing cities."
         verbose_name = _("city")
         verbose_name_plural = _("cities")
         ordering = ("name",)
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         prefix: StrOrPromise = _("city of")
 
         if self.region:

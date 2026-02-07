@@ -8,7 +8,6 @@ from apps.vacancies.models import Vacancy
 
 @admin.register(Vacancy)
 class VacancyAdmin(TranslationAdmin):
-    """Configuration for administration of the Vacancy model."""
 
     list_per_page = 25
     list_display = ("title", "city", "formatted_salary", "is_active")
@@ -51,5 +50,4 @@ class VacancyAdmin(TranslationAdmin):
 
     @admin.display(description=_("Salary"), ordering="salary_from")
     def formatted_salary(self, obj: Vacancy) -> StrOrPromise:
-        """Return the salary range formatted."""
-        return obj.get_formatted_salary()
+        return obj.formatted_salary

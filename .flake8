@@ -7,4 +7,4 @@ inline-quotes = double
 multiline-quotes = double
 docstring-quotes = double
 select = E, W, F, C, B, D, N, Q, ERA, S,
-ignore = D100, D104,
+ignore = D, W503

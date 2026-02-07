@@ -4,7 +4,6 @@ from django_stubs_ext import StrOrPromise
 
 
 class VacanciesConfig(AppConfig):
-    """Configuration for the vacancies application."""
 
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.vacancies"

@@ -13,8 +13,8 @@
     <div class="hero__content">
         <h2 class="hero__title">{% trans "Working in Marlin." %}</h2>
         <p class="hero__subtitle">{% trans "Join our team and help deliver fresh produce to thousands of customers." %}</p>
-        <form method="get" action="{% url 'vacancies:vacancy_list' %}">
-            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a vacancy, e.g. — courier' %}">
+        <form method="get" action="{% url 'vacancies:list' %}">
+            <input name="q" value="{{ search_query|default_if_none:'' }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a vacancy, e.g. — courier' %}">
         </form>
     </div>
 </section>
@@ -26,8 +26,8 @@
                     <article class="vacancy-card">
                         <div class="vacancy-card__content">
                             <h3 class="vacancy-card__title">{{ vacancy.title }}</h3>
-                            {% if vacancy.salary_to or vacancy.salary_from %}
-                                <p class="vacancy-card__salary">{{ vacancy.get_formatted_salary }} ₽ <span>{% trans "before taxes" %}</span></p>
+                            {% if vacancy.formatted_salary %}
+                                <p class="vacancy-card__salary">{{ vacancy.formatted_salary }} ₽ <span>{% trans "before taxes" %}</span></p>
                             {% endif %}
 
                             <p class="vacancy-card__experience vacancy-card__experience--{{ vacancy.experience_level }}">

@@ -7,6 +7,10 @@ from apps.vacancies import views
 app_name: str = "vacancies"
 
 urlpatterns: List[URLPattern] = [
-    path("", views.VacancyListView.as_view(), name="vacancy_list"),
-    path("<int:pk>", views.VacancyDetailView.as_view(), name="vacancy_detail"),
+    path(route="", view=views.VacancyListView.as_view(), name="list"),
+    path(
+        route="<int:vacancy_pk>/",
+        view=views.VacancyDetailView.as_view(),
+        name="detail",
+    ),
 ]
