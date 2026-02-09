@@ -1,14 +1,12 @@
-from decimal import ROUND_HALF_UP, Decimal
-
 from django.db import models
+from django.db.models import ExpressionWrapper, F
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.choices import UnitType
 
 
-class Product(models.Model):
-    """Model for product."""
+class Product(models.Model):  # type: ignore
 
     name = models.CharField(
         max_length=255,
@@ -49,6 +47,16 @@ class Product(models.Model):
         verbose_name=_("discount"),
         help_text=_("Product discount in percent."),
     )
+    final_price = models.GeneratedField(
+        expression=ExpressionWrapper(
+            expression=F("price") * (1 - F("discount") / 100.0),
+            output_field=models.DecimalField(max_digits=10, decimal_places=2),
+        ),
+        output_field=models.DecimalField(max_digits=10, decimal_places=2),
+        db_persist=True,
+        verbose_name=_("final price"),
+        help_text=_("Product final price (autocalculated)."),
+    )
     category = models.ForeignKey(
         to="Category",
         on_delete=models.CASCADE,
@@ -85,7 +93,7 @@ class Product(models.Model):
         help_text=_("Date and time when the product was last updated."),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "catalog_product"
         db_table_comment = "Table containing product information."
         verbose_name = _("product")
@@ -95,16 +103,14 @@ class Product(models.Model):
             "name",
         )
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.name} ({self.sku})"
 
-    def get_final_price(self) -> Decimal:
-        """Return the price with discount applied."""
-        final_price: Decimal = self.price * (
-            1 - self.discount / Decimal("100")
-        )
-        return final_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-
     def get_absolute_url(self) -> str:
-        """Return the URL to access the detail view of this product."""
-        return reverse("catalog:product_detail", kwargs={"slug": self.slug})
+        return reverse(
+            viewname="catalog:product-detail",
+            kwargs={
+                "category_slug": self.category.slug,
+                "product_slug": self.slug,
+            },
+        )

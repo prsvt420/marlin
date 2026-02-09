@@ -11,9 +11,9 @@
 
 {% block content %}
 <div class="breadcrumbs">
-    <a href="{% url 'catalog:category_list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
+    <a href="{% url 'catalog:category-list' %}" class="breadcrumbs__link">{% trans "Catalog" %}</a>
     <span class="breadcrumbs__separator">•</span>
-    {% for ancestor in product.category.get_hierarchy %}
+    {% for ancestor in hierarchy_categories %}
         <a href="{{ ancestor.get_absolute_url }}" class="breadcrumbs__link">{{ ancestor.name }}</a>
         <span class="breadcrumbs__separator">•</span>
     {% endfor %}
@@ -77,7 +77,7 @@
 
         <div class="product__price">
             {% if product.discount %}
-                <span class="current-price">{{ product.get_final_price }} ₽</span>
+                <span class="current-price">{{ product.final_price }} ₽</span>
                 <span class="old-price">{{ product.price }} ₽</span>
             {% else %}
                 <span class="current-price">{{ product.price }} ₽</span>
@@ -85,7 +85,7 @@
         </div>
 
         {% if product.stock %}
-            {% if not product.pk in existing_products %}
+            {% if not product.pk in cart_product_pks %}
                 <form action="{% url 'carts:cart_item_create' product_slug=product.slug %}" method="post">
                     {% csrf_token %}
                     <button class="product__button">{% trans "Add to Cart" %}</button>

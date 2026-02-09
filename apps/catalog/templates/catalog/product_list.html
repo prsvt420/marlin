@@ -13,8 +13,8 @@
     <div class="hero__content">
         <h2 class="hero__title">{{ category.name }}.</h2>
         <p class="hero__subtitle">{{ category.description }}.</p>
-        <form method="get" action="{% url 'catalog:product_list' slug=category.slug %}">
-            <input name="q" value="{{ search_query }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
+        <form method="get" action="{% url 'catalog:product-list' category_slug=category.slug %}">
+            <input name="q" value="{{ search_query|default_if_none:'' }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
         </form>
     </div>
     <div class="hero__promo promo-card">
@@ -88,7 +88,7 @@
                     <p class="product-card__description">{{ product.description|truncatechars:25 }}</p>
                     <div class="product-card__price">
                         {% if product.discount %}
-                            <span class="product-card__current-price">{{ product.get_final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+                            <span class="product-card__current-price">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
                             <span class="product-card__old-price">{{ product.price }} ₽</span>
                         {% else %}
                             <span class="product-card__current-price">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
@@ -96,7 +96,7 @@
                     </div>
                     <div class="product-card__footer">
                         {% if product.stock %}
-                            {% if not product.pk in existing_products %}
+                            {% if not product.pk in cart_product_pks %}
                                 <form action="{% url 'carts:cart_item_create' product_slug=product.slug %}" method="post">
                                     {% csrf_token %}
                                     <button class="product-card__button">{% trans "Add to Cart" %}</button>

@@ -68,5 +68,5 @@ class CartItem(models.Model):
     def save(self, **kwargs: Any) -> None:
         """Save cart item data."""
         if not self.price_snapshot:
-            self.price_snapshot = self.product.get_final_price()
+            self.price_snapshot = self.product.final_price
         super().save(**kwargs)

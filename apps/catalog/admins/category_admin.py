@@ -9,7 +9,6 @@ from apps.catalog.models import Category
 
 @admin.register(Category)
 class CategoryAdmin(TranslationAdmin):
-    """Configuration for administration of the Category model."""
 
     list_per_page = 25
     prepopulated_fields = {
@@ -47,7 +46,7 @@ class CategoryAdmin(TranslationAdmin):
 
     @admin.display(description=_("Image preview"))
     def image_preview(self, obj: Category) -> StrOrPromise:
-        """Return an HTML image preview for the category."""
+
         if obj.image_path:
             return format_html(
                 "<img src='{}' alt='{}' style='max-height: 100px;'/>",

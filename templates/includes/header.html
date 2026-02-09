@@ -2,7 +2,7 @@
 {% load active_link %}
 
 <header class="header">
-    <a href="{% url 'catalog:category_list' %}">
+    <a href="{% url 'catalog:category-list' %}">
         <div class="header__brand">
             <img src="{% static 'img/logo.png' %}" alt="{% trans 'Marlin logo' %}" draggable="false" class="header__logo">
             <div class="header__info">
@@ -15,7 +15,7 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{% url 'catalog:category_list' %}" class="header__nav-link {% active_link request 'catalog:category_list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
+                <a href="{% url 'catalog:category-list' %}" class="header__nav-link {% active_link request 'catalog:category-list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
             </li>
             <li class="header__nav-item">
                 <a href="{% url 'carts:cart_detail' %}" class="header__nav-link {% active_link request 'carts:cart_detail' 'header__nav-link--active' %}">{% trans "Cart" %}</a>

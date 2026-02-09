@@ -7,11 +7,17 @@ from apps.catalog import views
 app_name: str = "catalog"
 
 urlpatterns: List[URLPattern] = [
-    path("", views.CategoryListView.as_view(), name="category_list"),
-    path("<slug:slug>", views.ProductListView.as_view(), name="product_list"),
     path(
-        "product/<slug:slug>",
-        views.ProductDetailView.as_view(),
-        name="product_detail",
+        route="", view=views.CategoryListView.as_view(), name="category-list"
+    ),
+    path(
+        route="<slug:category_slug>/",
+        view=views.ProductListView.as_view(),
+        name="product-list",
+    ),
+    path(
+        route="<slug:category_slug>/p/<slug:product_slug>/",
+        view=views.ProductDetailView.as_view(),
+        name="product-detail",
     ),
 ]

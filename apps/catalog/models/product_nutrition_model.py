@@ -2,8 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class ProductNutrition(models.Model):
-    """Model for product nutrition."""
+class ProductNutrition(models.Model):  # type: ignore
 
     product = models.OneToOneField(
         to="Product",
@@ -45,14 +44,14 @@ class ProductNutrition(models.Model):
         help_text=_("Carbs (g)."),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "catalog_product_nutrition"
         db_table_comment = "Table containing nutritional values of products."
         verbose_name = _("nutritional value")
         verbose_name_plural = _("nutritional values")
         ordering = ("product__name",)
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return (
             f"{self.product.name} "
             f"({_('Calories')}: {self.calories or '—'} {_('kcal')}, "

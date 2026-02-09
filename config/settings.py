@@ -158,5 +158,5 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
 }
 
 LOGIN_URL: StrOrPromise = reverse_lazy("accounts:signin")
-LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy("catalog:category_list")
+LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy("catalog:category-list")
 LOGOUT_REDIRECT_URL: StrOrPromise = LOGIN_URL

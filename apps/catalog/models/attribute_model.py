@@ -2,8 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class Attribute(models.Model):
-    """Model for attribute."""
+class Attribute(models.Model):  # type: ignore
 
     name = models.CharField(
         max_length=255,
@@ -15,12 +14,12 @@ class Attribute(models.Model):
         ),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "catalog_attribute"
         db_table_comment = "Table containing possible product attributes."
         verbose_name = _("attribute")
         verbose_name_plural = _("attributes")
         ordering = ("name",)
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.name}"

@@ -5,27 +5,28 @@ from django.views.generic import DetailView
 
 from apps.carts.repositories import CartRepository
 from apps.catalog.models import Product
-from apps.catalog.repositories import ProductRepository
+from apps.catalog.selectors import CategorySelector, ProductSelector
 
 
 class ProductDetailView(DetailView):
-    """View for displaying the product detail."""
 
-    model = Product
     template_name = "catalog/product_detail.html"
     context_object_name = "product"
+    slug_url_kwarg = "product_slug"
 
     def get_queryset(self) -> QuerySet[Product]:
-        """Return all active products."""
-        return ProductRepository().get_filtered()
+        category_slug: str = self.kwargs["category_slug"]
+        return ProductSelector().get_products(category_slug=category_slug)
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
-        """Add additional context variables to the template."""
-        context_data: Dict[str, Any] = super().get_context_data(**kwargs)
+        context: Dict[str, Any] = super().get_context_data(**kwargs)
+        context["hierarchy_categories"] = CategorySelector().get_hierarchy(
+            category=self.object.category
+        )
 
         if self.request.user.is_authenticated:
-            context_data["existing_products"] = (
-                CartRepository().get_product_ids(self.request.user)
+            context["cart_product_pks"] = CartRepository().get_product_ids(
+                self.request.user
             )
 
-        return context_data
+        return context

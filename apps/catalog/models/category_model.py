@@ -1,12 +1,9 @@
-from typing import List, Optional
-
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
 
-class Category(models.Model):
-    """Model for category."""
+class Category(models.Model):  # type: ignore
 
     parent = models.ForeignKey(
         to="self",
@@ -70,29 +67,18 @@ class Category(models.Model):
         help_text=_("Date and time when the category was last updated."),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "catalog_category"
         db_table_comment = "Table containing product categories."
         verbose_name = _("category")
         verbose_name_plural = _("categories")
         ordering = ("sort_order", "name")
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.name}"
 
-    def get_hierarchy(self) -> List["Category"]:
-        """Return the category hierarchy."""
-        hierarchy: List[Category] = []
-        category: Optional[Category] = self
-
-        while category is not None:
-            hierarchy.append(category)
-            category = category.parent
-
-        hierarchy.reverse()
-
-        return hierarchy
-
     def get_absolute_url(self) -> str:
-        """Return the URL to access the product list view of this category."""
-        return reverse("catalog:product_list", kwargs={"slug": self.slug})
+        return reverse(
+            viewname="catalog:product-list",
+            kwargs={"category_slug": self.slug},
+        )

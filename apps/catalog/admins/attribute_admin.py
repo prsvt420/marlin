@@ -7,7 +7,6 @@ from apps.catalog.models import Attribute
 
 @admin.register(Attribute)
 class AttributeAdmin(TranslationAdmin):
-    """Configuration for administration of the Attribute model."""
 
     list_per_page = 25
     list_display = ("name",)

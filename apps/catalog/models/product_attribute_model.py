@@ -2,8 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class ProductAttribute(models.Model):
-    """Model for product attribute."""
+class ProductAttribute(models.Model):  # type: ignore
 
     product = models.ForeignKey(
         to="Product",
@@ -30,7 +29,7 @@ class ProductAttribute(models.Model):
         ),
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "catalog_product_attribute"
         db_table_comment = "Table containing product attribute values."
         verbose_name = _("product attribute")
@@ -42,5 +41,5 @@ class ProductAttribute(models.Model):
             )
         ]
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.product.name} - {self.attribute.name}: {self.value}"

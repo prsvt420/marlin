@@ -15,7 +15,7 @@ class AccountDeleteView(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
     success_message = _(
         "Your account has been successfully deleted. Have a nice day!"
     )
-    success_url = reverse_lazy("catalog:category_list")
+    success_url = reverse_lazy("catalog:category-list")
 
     def get_object(
         self, queryset: Optional[QuerySet] = None

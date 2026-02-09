@@ -7,7 +7,6 @@ from apps.catalog.models import ProductImage
 
 @admin.register(ProductImage)
 class ProductImageAdmin(TranslationAdmin):
-    """Configuration for administration of the ProductImage model."""
 
     list_per_page = 25
     list_display = ("product", "image_path", "sort_order")

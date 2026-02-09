@@ -1,5 +1,3 @@
-"""Module required by Django to register administration configurations."""
-
 from apps.catalog.translations import (  # noqa: F401 isort: skip
     AttributeTranslationOptions,
 )

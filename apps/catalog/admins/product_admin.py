@@ -1,5 +1,3 @@
-from decimal import Decimal
-
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from modeltranslation.admin import TranslationAdmin
@@ -14,7 +12,6 @@ from apps.catalog.models import Product
 
 @admin.register(Product)
 class ProductAdmin(TranslationAdmin):
-    """Configuration for administration of the Product model."""
 
     list_per_page = 25
     prepopulated_fields = {
@@ -39,7 +36,11 @@ class ProductAdmin(TranslationAdmin):
     search_help_text = _("Search by name or article (SKU)")
     list_filter = ("category__name", "is_active", "unit_type")
     date_hierarchy = "created_at"
-    readonly_fields = ("created_at", "updated_at")
+    readonly_fields = (
+        "created_at",
+        "updated_at",
+        "final_price",
+    )
     inlines = (
         ProductImageInline,
         ProductNutritionInline,
@@ -52,6 +53,7 @@ class ProductAdmin(TranslationAdmin):
         "unit_type",
         "price",
         "discount",
+        "final_price",
         "category",
         "sku",
         "stock",
@@ -59,8 +61,3 @@ class ProductAdmin(TranslationAdmin):
         ("created_at", "updated_at"),
     )
     autocomplete_fields = ("category",)
-
-    @admin.display(description=_("Final price"))
-    def final_price(self, obj: Product) -> Decimal:
-        """Return the price with discount applied."""
-        return obj.get_final_price()
