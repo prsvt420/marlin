@@ -7,38 +7,34 @@ from django.contrib import admin
 from django.urls import URLPattern, URLResolver, include, path
 
 urlpatterns: List[Union[URLResolver, URLPattern]] = [
-    path("admin/doc/", include("django.contrib.admindocs.urls")),
-    path("admin/", admin.site.urls),
-    path("i18n/", include("django.conf.urls.i18n")),
     path(
-        "catalog/",
-        include("apps.catalog.urls", namespace="catalog"),
-        name="catalog",
+        route="admin/doc/", view=include(arg="django.contrib.admindocs.urls")
+    ),
+    path(route="admin/", view=admin.site.urls),
+    path(route="i18n/", view=include(arg="django.conf.urls.i18n")),
+    path(
+        route="catalog/",
+        view=include(arg="apps.catalog.urls", namespace="catalog"),
     ),
     path(
-        "",
-        include("apps.pages.urls", namespace="pages"),
-        name="pages",
+        route="",
+        view=include(arg="apps.pages.urls", namespace="pages"),
     ),
     path(
-        "vacancies/",
-        include("apps.vacancies.urls", namespace="vacancies"),
-        name="vacancies",
+        route="vacancies/",
+        view=include(arg="apps.vacancies.urls", namespace="vacancies"),
     ),
     path(
-        "accounts/",
-        include("apps.accounts.urls", namespace="accounts"),
-        name="accounts",
+        route="accounts/",
+        view=include(arg="apps.accounts.urls", namespace="accounts"),
     ),
     path(
-        "carts/",
-        include("apps.carts.urls", namespace="carts"),
-        name="carts",
+        route="carts/",
+        view=include(arg="apps.carts.urls", namespace="carts"),
     ),
     path(
-        "promotions/",
-        include("apps.promotions.urls", namespace="promotions"),
-        name="promotions",
+        route="promotions/",
+        view=include(arg="apps.promotions.urls", namespace="promotions"),
     ),
 ]
 
@@ -46,5 +42,5 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
 if settings.DEBUG:
     urlpatterns += debug_toolbar_urls()
     urlpatterns += static(
-        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+        prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
     )
