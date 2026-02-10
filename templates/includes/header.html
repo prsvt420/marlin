@@ -15,14 +15,14 @@
     <nav class="header__nav">
         <ul class="header__nav-list">
             <li class="header__nav-item">
-                <a href="{% url 'catalog:category-list' %}" class="header__nav-link {% active_link request 'catalog:category-list' 'header__nav-link--active' %}">{% trans "Catalog" %}</a>
+                <a href="{% url 'catalog:category-list' %}" class="header__nav-link {% active_link request=request url_name='catalog:category-list' class_name='header__nav-link--active' %}">{% trans "Catalog" %}</a>
             </li>
             <li class="header__nav-item">
-                <a href="{% url 'carts:cart_detail' %}" class="header__nav-link {% active_link request 'carts:cart_detail' 'header__nav-link--active' %}">{% trans "Cart" %}</a>
+                <a href="{% url 'carts:cart_detail' %}" class="header__nav-link {% active_link request=request url_name='carts:cart_detail' class_name='header__nav-link--active' %}">{% trans "Cart" %}</a>
             </li>
             {% if request.user.is_authenticated %}
                 <li class="header__nav-item">
-                    <a href="{% url 'accounts:profile' %}" class="header__nav-link {% active_link request 'accounts:profile' 'header__nav-link--active' %}">{% trans "Profile" %}</a>
+                    <a href="{% url 'accounts:profile' %}" class="header__nav-link {% active_link request=request url_name='accounts:profile' class_name='header__nav-link--active' %}">{% trans "Profile" %}</a>
                 </li>
                 <li class="header__nav-item">
                     <form action="{% url 'accounts:signout' %}" method="post">
@@ -32,7 +32,7 @@
                 </li>
             {% else %}
                 <li class="header__nav-item">
-                    <a href="{% url 'accounts:signin' %}" class="header__nav-link {% active_link request 'accounts:signin' 'header__nav-link--active' %}">{% trans "Sign in" %}</a>
+                    <a href="{% url 'accounts:signin' %}" class="header__nav-link {% active_link request=request url_name='accounts:signin' class_name='header__nav-link--active' %}">{% trans "Sign in" %}</a>
                 </li>
             {% endif %}
             <li class="header__nav-item dropdown">

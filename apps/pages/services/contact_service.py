@@ -1,5 +1,6 @@
 from typing import Any, Mapping
 
+from apps.core.exceptions import EmailSendError
 from apps.core.services import EmailService
 from apps.pages.email_templates import (
     CONTACT_INBOUND_EMAIL,
@@ -26,7 +27,7 @@ class ContactService:
                 to=[settings.DEFAULT_FROM_EMAIL],
                 context=context,
             )
-        except Exception as error:
+        except EmailSendError as error:
             raise ContactInboundEmailSendError(
                 "Couldn't send a contact inbound email"
             ) from error
@@ -40,5 +41,5 @@ class ContactService:
                 to=[context["email"]],
                 context=context,
             )
-        except Exception:  # noqa: S110
+        except EmailSendError:  # noqa: S110
             pass

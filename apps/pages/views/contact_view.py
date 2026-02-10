@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import FormView
 
-from apps.pages.exceptions import ContactEmailSendError
+from apps.pages.exceptions import ContactInboundEmailSendError
 from apps.pages.forms import ContactForm
 from apps.pages.services import ContactService
 
@@ -25,7 +25,7 @@ class ContactView(FormView):
                     "We will contact you shortly."
                 ),
             )
-        except ContactEmailSendError:
+        except ContactInboundEmailSendError:
             messages.error(
                 self.request,
                 _(

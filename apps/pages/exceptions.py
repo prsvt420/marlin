@@ -1,4 +1,8 @@
-class ContactEmailSendError(Exception):
+class ContactEmailError(Exception):
+    pass
+
+
+class ContactEmailSendError(ContactEmailError):
     pass
 
 
