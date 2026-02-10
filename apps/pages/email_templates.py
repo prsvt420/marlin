@@ -1,12 +1,13 @@
 from apps.core.dataclasses import EmailTemplate
 
-CONTACT_MESSAGE: EmailTemplate = EmailTemplate(
-    subject="emails/contact_message_subject.txt",
-    body="emails/contact_message.txt",
-    content="emails/contact_message.html",
+CONTACT_INBOUND_EMAIL: EmailTemplate = EmailTemplate(
+    subject="emails/contact_inbound_subject.txt",
+    body="emails/contact_inbound.txt",
+    content="emails/contact_inbound.html",
 )
-CONTACT_REPLY: EmailTemplate = EmailTemplate(
-    subject="emails/contact_reply_subject.txt",
-    body="emails/contact_reply.txt",
-    content="emails/contact_reply.html",
+
+CONTACT_OUTBOUND_EMAIL: EmailTemplate = EmailTemplate(
+    subject="emails/contact_outbound_subject.txt",
+    body="emails/contact_outbound.txt",
+    content="emails/contact_outbound.html",
 )

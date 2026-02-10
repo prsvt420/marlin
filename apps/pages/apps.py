@@ -4,7 +4,6 @@ from django_stubs_ext import StrOrPromise
 
 
 class PagesConfig(AppConfig):
-    """Configuration for the pages application."""
 
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.pages"

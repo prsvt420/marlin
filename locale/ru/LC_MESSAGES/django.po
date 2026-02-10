@@ -41,19 +41,19 @@ msgstr "Аккаунты"
 
 #: .\apps\accounts\forms\password_reset_form.py:12
 #: .\apps\accounts\forms\signup_form.py:51
-#: .\apps\pages\forms\contact_form.py:21
+#: .\apps\pages\forms\contact_form.py:20
 msgid "The email is required."
 msgstr "Электронная почта обязательна."
 
 #: .\apps\accounts\forms\password_reset_form.py:13
 #: .\apps\accounts\forms\signup_form.py:48
-#: .\apps\pages\forms\contact_form.py:22
+#: .\apps\pages\forms\contact_form.py:21
 msgid "The email must be in the format user@example.com."
 msgstr "Электронная почта должена быть в формате user@example.com."
 
 #: .\apps\accounts\forms\password_reset_form.py:15
 #: .\apps\accounts\forms\signup_form.py:45
-#: .\apps\pages\forms\contact_form.py:24
+#: .\apps\pages\forms\contact_form.py:23
 msgid "The email must not be longer than 255 characters."
 msgstr "Длина электронной почты не должна превышать 255 символов."
 
@@ -105,7 +105,7 @@ msgid "This email address is already registered."
 msgstr "Эта электронная почта уже зарегистрирована."
 
 #: .\apps\accounts\forms\signup_form.py:55
-#: .\apps\pages\forms\contact_form.py:33
+#: .\apps\pages\forms\contact_form.py:32
 msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
 msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
 
@@ -114,7 +114,7 @@ msgid "This phone number is already registered."
 msgstr "Этот номер телефона уже зарегистрирован."
 
 #: .\apps\accounts\forms\signup_form.py:59
-#: .\apps\pages\forms\contact_form.py:31
+#: .\apps\pages\forms\contact_form.py:30
 msgid "The phone number is required."
 msgstr "Номер телефона обязателен."
 
@@ -526,7 +526,7 @@ msgstr "Информация в вашем профиле успешно обн�
 #: .\apps\accounts\views\profile_view.py:36
 #: .\apps\accounts\views\signin_view.py:53
 #: .\apps\accounts\views\signup_view.py:73
-#: .\apps\pages\views\contact_view.py:67
+#: .\apps\pages\views\contact_view.py:41
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
@@ -1234,38 +1234,38 @@ msgstr "По запросу ничего не найдено"
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
 
-#: .\apps\pages\apps.py:11
+#: .\apps\pages\apps.py:10
 msgid "Pages"
 msgstr "Страницы"
 
-#: .\apps\pages\forms\contact_form.py:12
+#: .\apps\pages\forms\contact_form.py:11
 msgid "The full name is required."
 msgstr "ФИО обязательно."
 
-#: .\apps\pages\forms\contact_form.py:14
+#: .\apps\pages\forms\contact_form.py:13
 msgid "The full name must not be longer than 255 characters."
 msgstr "Длина ФИО не должна превышать 255 символов."
 
-#: .\apps\pages\forms\contact_form.py:40
+#: .\apps\pages\forms\contact_form.py:39
 msgid "The subject is required."
 msgstr "Тема обязательна."
 
-#: .\apps\pages\forms\contact_form.py:42
+#: .\apps\pages\forms\contact_form.py:41
 msgid "The subject must not be longer than 255 characters."
 msgstr "Длина темы не должна превышать 255 символов."
 
-#: .\apps\pages\forms\contact_form.py:49
+#: .\apps\pages\forms\contact_form.py:48
 msgid "The message is required."
 msgstr "Сообщение обязательно."
 
-#: .\apps\pages\templates\emails\contact_message.html:9
-#: .\apps\pages\templates\emails\contact_message.txt:7
-#: .\apps\pages\templates\emails\contact_message_subject.txt:3
+#: .\apps\pages\templates\emails\contact_inbound.html:9
+#: .\apps\pages\templates\emails\contact_inbound.txt:7
+#: .\apps\pages\templates\emails\contact_inbound_subject.txt:3
 msgid "New request"
 msgstr "Новое обращение"
 
-#: .\apps\pages\templates\emails\contact_message.html:10
-#: .\apps\pages\templates\emails\contact_message.txt:9
+#: .\apps\pages\templates\emails\contact_inbound.html:10
+#: .\apps\pages\templates\emails\contact_inbound.txt:9
 msgid ""
 "A new request has been received. Please review it and contact the user. If "
 "necessary, you may request additional information from the user."
@@ -1274,8 +1274,8 @@ msgstr ""
 "пользователем. При необходимости вы можете запросить у пользователя "
 "дополнительную информацию."
 
-#: .\apps\pages\templates\emails\contact_message.html:30
-#: .\apps\pages\templates\emails\contact_message.txt:19
+#: .\apps\pages\templates\emails\contact_inbound.html:30
+#: .\apps\pages\templates\emails\contact_inbound.txt:19
 msgid ""
 "You've received this email because a new request was submitted on the "
 "website through the feedback form. This message confirms that the user's "
@@ -1285,14 +1285,14 @@ msgstr ""
 "через форму обратной связи. Это сообщение подтверждает, что обращение "
 "пользователя успешно получено и требует дальнейшей обработки."
 
-#: .\apps\pages\templates\emails\contact_reply.html:9
-#: .\apps\pages\templates\emails\contact_reply.txt:7
-#: .\apps\pages\templates\emails\contact_reply_subject.txt:3
+#: .\apps\pages\templates\emails\contact_outbound.html:9
+#: .\apps\pages\templates\emails\contact_outbound.txt:7
+#: .\apps\pages\templates\emails\contact_outbound_subject.txt:3
 msgid "Thank for request"
 msgstr "Спасибо за обращение"
 
-#: .\apps\pages\templates\emails\contact_reply.html:10
-#: .\apps\pages\templates\emails\contact_reply.txt:9
+#: .\apps\pages\templates\emails\contact_outbound.html:10
+#: .\apps\pages\templates\emails\contact_outbound.txt:9
 msgid ""
 "We've received your request and will contact you shortly. If you have any "
 "further questions, please feel free to contact us again."
@@ -1300,33 +1300,33 @@ msgstr ""
 "Мы получили ваше сообщение и свяжемся с вами в ближайшее время. Если у вас "
 "есть дополнительные вопросы, вы всегда можете написать нам снова."
 
-#: .\apps\pages\templates\emails\contact_reply.html:17
-#: .\apps\pages\templates\emails\contact_reply.txt:11
+#: .\apps\pages\templates\emails\contact_outbound.html:17
+#: .\apps\pages\templates\emails\contact_outbound.txt:11
 msgid "Go to website"
 msgstr "Перейти на сайт"
 
-#: .\apps\pages\templates\emails\contact_reply.html:24
-#: .\apps\pages\templates\emails\contact_reply.txt:13
+#: .\apps\pages\templates\emails\contact_outbound.html:24
+#: .\apps\pages\templates\emails\contact_outbound.txt:13
 msgid "What will happen next?"
 msgstr "Что будет дальше?"
 
-#: .\apps\pages\templates\emails\contact_reply.html:26
-#: .\apps\pages\templates\emails\contact_reply.txt:14
+#: .\apps\pages\templates\emails\contact_outbound.html:26
+#: .\apps\pages\templates\emails\contact_outbound.txt:14
 msgid "We will process your request within 1-24 hours."
 msgstr "Мы обработаем ваше обращение в течение 1–24 часов."
 
-#: .\apps\pages\templates\emails\contact_reply.html:27
-#: .\apps\pages\templates\emails\contact_reply.txt:15
+#: .\apps\pages\templates\emails\contact_outbound.html:27
+#: .\apps\pages\templates\emails\contact_outbound.txt:15
 msgid "The answer will come to this email."
 msgstr "Ответ придёт на эту электронную почту."
 
-#: .\apps\pages\templates\emails\contact_reply.html:28
-#: .\apps\pages\templates\emails\contact_reply.txt:16
+#: .\apps\pages\templates\emails\contact_outbound.html:28
+#: .\apps\pages\templates\emails\contact_outbound.txt:16
 msgid "If we need to clarify any details, we will write to you additionally."
 msgstr "Если потребуется уточнить детали — мы напишем вам дополнительно."
 
-#: .\apps\pages\templates\emails\contact_reply.html:35
-#: .\apps\pages\templates\emails\contact_reply.txt:18
+#: .\apps\pages\templates\emails\contact_outbound.html:35
+#: .\apps\pages\templates\emails\contact_outbound.txt:18
 msgid ""
 "You've received this email because you recently submitted a request through "
 "the contact form on our website. This message confirms that your request was "
@@ -1401,12 +1401,12 @@ msgstr "Часы работы"
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
 
-#: .\apps\pages\views\contact_view.py:48
+#: .\apps\pages\views\contact_view.py:24
 msgid "Your message has been successfully sent! We will contact you shortly."
 msgstr ""
 "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
 
-#: .\apps\pages\views\contact_view.py:56
+#: .\apps\pages\views\contact_view.py:32
 msgid "An error occurred while sending your message. Please try again later."
 msgstr ""
 "Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте позже."
