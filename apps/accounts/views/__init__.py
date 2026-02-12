@@ -1,4 +1,4 @@
-from apps.accounts.views.account_activation_view import AccountActivationView
+from apps.accounts.views.account_activate_view import AccountActivateView
 from apps.accounts.views.account_delete_view import AccountDeleteView
 from apps.accounts.views.password_reset_confirm_view import (
     PasswordResetConfirmView,
@@ -10,7 +10,7 @@ from apps.accounts.views.signout_view import SignOutView
 from apps.accounts.views.signup_view import SignUpView
 
 __all__ = [
-    "AccountActivationView",
+    "AccountActivateView",
     "PasswordResetView",
     "PasswordResetConfirmView",
     "SignInView",

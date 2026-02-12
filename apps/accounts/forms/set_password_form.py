@@ -4,8 +4,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SetPasswordForm(_SetPasswordForm):
-    """Form for setting a new password."""
-
     new_password1 = forms.CharField(
         required=True,
         strip=False,

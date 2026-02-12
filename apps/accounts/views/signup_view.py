@@ -1,61 +1,37 @@
-from typing import Any, Dict
-
 from django.contrib import messages
-from django.contrib.auth.base_user import AbstractBaseUser
-from django.contrib.auth.tokens import default_token_generator
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import (
     HttpResponse,
 )
 from django.urls import reverse_lazy
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
-from apps.accounts.email_templates import (
-    ACCOUNT_ACTIVATION,
-)
+from apps.accounts.exceptions import AccountActivationEmailSendError
 from apps.accounts.forms import SignUpForm
-from apps.core.services import EmailService
+from apps.accounts.services import UserService
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
-    """View for handling the sign up form."""
-
     template_name = "accounts/signup.html"
     form_class = SignUpForm
-    success_url = reverse_lazy("accounts:signin")
+    success_url = reverse_lazy(viewname="accounts:signin")
     success_message = _(
         "You have successfully signed up! Activate your account."
     )
-    token_generator = default_token_generator
 
     def form_valid(self, form: SignUpForm) -> HttpResponse:
-        """Handle a valid sign up form and send activation email."""
-        response: HttpResponse = super().form_valid(form)
+        response: HttpResponse = super().form_valid(form=form)
 
         try:
-            user: AbstractBaseUser = self.object  # type: ignore
-            token: str = self.token_generator.make_token(user)
-            uid: str = urlsafe_base64_encode(force_bytes(user.pk))
-
-            context: Dict[str, Any] = {
-                "token": token,
-                "uid": uid,
-            }
-
-            email_service: EmailService = EmailService()
-            email_service.send_email(
-                email_template=ACCOUNT_ACTIVATION,
-                to=[user.email],  # type: ignore
-                context=context,
+            UserService().send_account_activation_email(
+                user=self.object  # type: ignore
             )
             messages.info(
                 self.request,
                 _("An account activation link has been sent to your email."),
             )
-        except Exception:
+        except AccountActivationEmailSendError:
             messages.error(
                 self.request,
                 _(
@@ -67,9 +43,8 @@ class SignUpView(SuccessMessageMixin, CreateView):
         return response
 
     def form_invalid(self, form: SignUpForm) -> HttpResponse:
-        """Handle an invalid sign up form and display an error message."""
         messages.error(
             self.request,
             _("Please correct the errors in the form and try again."),
         )
-        return super().form_invalid(form)
+        return super().form_invalid(form=form)

@@ -8,7 +8,6 @@ from apps.accounts.models import User
 
 @admin.register(User)
 class UserAdmin(_UserAdmin):
-    """Configuration for administration of the User model."""
 
     list_per_page = 25
     list_display = (
@@ -66,5 +65,4 @@ class UserAdmin(_UserAdmin):
     )
 
     def has_add_permission(self, request: HttpRequest) -> bool:
-        """Disable adding new users via the admin interface."""
         return False

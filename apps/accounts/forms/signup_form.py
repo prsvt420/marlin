@@ -7,8 +7,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SignUpForm(UserCreationForm):
-    """Form for signing up."""
-
     password1 = forms.CharField(
         required=True,
         strip=False,
@@ -22,7 +20,7 @@ class SignUpForm(UserCreationForm):
         },
     )
 
-    class Meta:  # noqa: D106
+    class Meta:
         model = get_user_model()
         fields = (
             "username",

@@ -7,8 +7,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class SignInForm(AuthenticationForm):
-    """Form for signing in."""
-
     username = UsernameField(
         required=True,
         label=_("Username"),

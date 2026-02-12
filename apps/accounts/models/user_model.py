@@ -5,8 +5,6 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class User(AbstractUser):
-    """Model for user."""
-
     email = models.EmailField(
         max_length=255,
         unique=True,
@@ -52,15 +50,15 @@ class User(AbstractUser):
         "middle_name",
     ]
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "accounts_user"
         db_table_comment = "Table containing users."
         verbose_name = _("user")
         verbose_name_plural = _("users")
         ordering = ("-date_joined",)
 
-    def get_full_name(self) -> str:
-        """Return the user full name."""
+    @property
+    def full_name(self) -> str:
         full_name: str = "%s %s %s" % (
             self.last_name,
             self.first_name,

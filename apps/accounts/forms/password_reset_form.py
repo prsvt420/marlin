@@ -4,8 +4,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class PasswordResetForm(_PasswordResetForm):
-    """Form for requesting a password reset."""
-
     email = forms.EmailField(
         max_length=255,
         error_messages={

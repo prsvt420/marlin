@@ -60,7 +60,7 @@
             {% csrf_token %}
             <button type="submit" class="profile__form-button">{% trans "Sign out" %}</button>
         </form>
-        <form action="{% url 'accounts:account_delete' %}" method="post" class="profile__form-body">
+        <form action="{% url 'accounts:delete' %}" method="post" class="profile__form-body">
             {% csrf_token %}
             <button type="submit" class="profile__form-button profile__form-button--delete-account">{% trans "Delete account" %}</button>
         </form>

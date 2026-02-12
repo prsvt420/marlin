@@ -25,7 +25,7 @@
 
       <form action="{% url 'pages:contact' %}" method="post" class="contact__form-body">
         {% csrf_token %}
-        {% with full_name=request.user.get_full_name email=request.user.email phone_number=request.user.phone_number %}
+        {% with full_name=request.user.full_name email=request.user.email phone_number=request.user.phone_number %}
           <div class="contact__form-group">
             <label class="contact__label" for="full_name">{% trans "Full name" %} {% if form.full_name.errors %}<sup>*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
             <input autocomplete="name" class="contact__input" value="{{ form.full_name.value|default:full_name }}" type="text" id="full_name" name="full_name" placeholder="{% trans 'Enter full name' %}">
