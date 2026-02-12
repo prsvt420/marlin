@@ -11,6 +11,7 @@ from config import settings
 
 
 class ContactService:
+
     def __init__(self) -> None:
         self._email_service: EmailService = EmailService()
 

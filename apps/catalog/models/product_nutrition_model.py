@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class ProductNutrition(models.Model):  # type: ignore
-
     product = models.OneToOneField(
         to="Product",
         on_delete=models.CASCADE,

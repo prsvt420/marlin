@@ -9,7 +9,6 @@ from apps.catalog.selectors import CategorySelector, ProductSelector
 
 
 class ProductDetailView(DetailView):
-
     template_name = "catalog/product_detail.html"
     context_object_name = "product"
     slug_url_kwarg = "product_slug"

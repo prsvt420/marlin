@@ -4,7 +4,6 @@ from django_stubs_ext import StrOrPromise
 
 
 class City(models.Model):  # type: ignore
-
     name = models.CharField(
         max_length=255,
         unique=True,

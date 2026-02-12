@@ -9,7 +9,6 @@ from apps.catalog.models import Category
 
 @admin.register(Category)
 class CategoryAdmin(TranslationAdmin):
-
     list_per_page = 25
     prepopulated_fields = {
         "slug": ("name",),

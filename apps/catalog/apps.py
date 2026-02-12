@@ -4,7 +4,6 @@ from django_stubs_ext import StrOrPromise
 
 
 class CatalogConfig(AppConfig):
-
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.catalog"
     verbose_name: StrOrPromise = _("Catalog")

@@ -10,6 +10,7 @@ from config import settings
 
 
 class EmailService:
+
     def send_email(
         self,
         *,

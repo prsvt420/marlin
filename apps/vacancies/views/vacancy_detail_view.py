@@ -6,7 +6,6 @@ from apps.vacancies.selectors import VacancySelector
 
 
 class VacancyDetailView(DetailView):
-
     template_name = "vacancies/vacancy_detail.html"
     context_object_name = "vacancy"
     pk_url_kwarg = "vacancy_pk"

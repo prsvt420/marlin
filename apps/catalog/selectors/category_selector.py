@@ -6,6 +6,7 @@ from apps.catalog.models import Category
 
 
 class CategorySelector:
+
     def get_categories(
         self, *, only_active: bool = True
     ) -> QuerySet[Category]:

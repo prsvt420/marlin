@@ -10,7 +10,6 @@ from apps.pages.services import ContactService
 
 
 class ContactView(FormView):
-
     template_name = "pages/contact.html"
     form_class = ContactForm
     success_url = reverse_lazy(viewname="pages:contact")
@@ -33,6 +32,7 @@ class ContactView(FormView):
                     "Please try again later."
                 ),
             )
+
         return super().form_valid(form=form)
 
     def form_invalid(self, form: ContactForm) -> HttpResponse:

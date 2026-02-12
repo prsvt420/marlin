@@ -12,7 +12,6 @@ from apps.catalog.selectors import CategorySelector, ProductSelector
 
 
 class ProductListView(ListView):
-
     template_name = "catalog/product_list.html"
     context_object_name = "products"
     paginate_by = 12
@@ -24,6 +23,7 @@ class ProductListView(ListView):
         ordering_option_key: str = self.request.GET.get(
             key="sort", default="default"
         ).strip()
+
         return ORDERING_OPTIONS.get(
             ordering_option_key, ORDERING_OPTIONS["default"]
         )

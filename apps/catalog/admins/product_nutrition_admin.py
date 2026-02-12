@@ -6,7 +6,6 @@ from apps.catalog.models import ProductNutrition
 
 @admin.register(ProductNutrition)
 class ProductNutritionAdmin(admin.ModelAdmin):
-
     list_per_page = 25
     list_display = (
         "product",

@@ -8,7 +8,6 @@ from apps.vacancies.models import Vacancy
 
 @admin.register(Vacancy)
 class VacancyAdmin(TranslationAdmin):
-
     list_per_page = 25
     list_display = ("title", "city", "formatted_salary", "is_active")
     list_display_links = ("title",)

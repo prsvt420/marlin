@@ -4,7 +4,6 @@ from phonenumber_field.formfields import PhoneNumberField
 
 
 class ContactForm(forms.Form):
-
     full_name = forms.CharField(
         max_length=255,
         error_messages={

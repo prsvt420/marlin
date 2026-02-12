@@ -7,7 +7,6 @@ from apps.catalog.models import Attribute
 
 @admin.register(Attribute)
 class AttributeAdmin(TranslationAdmin):
-
     list_per_page = 25
     list_display = ("name",)
     search_fields = ("name",)

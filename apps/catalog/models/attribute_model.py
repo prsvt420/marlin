@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Attribute(models.Model):  # type: ignore
-
     name = models.CharField(
         max_length=255,
         unique=True,

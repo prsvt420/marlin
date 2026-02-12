@@ -7,7 +7,6 @@ from apps.vacancies.models import Region
 
 @admin.register(Region)
 class RegionAdmin(TranslationAdmin):
-
     list_per_page = 25
     list_display = ("name",)
     search_fields = ("name",)

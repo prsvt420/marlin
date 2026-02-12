@@ -7,7 +7,6 @@ from apps.vacancies.models import City
 
 @admin.register(City)
 class CityAdmin(TranslationAdmin):
-
     list_per_page = 25
     list_display = (
         "name",

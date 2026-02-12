@@ -12,7 +12,6 @@ from apps.catalog.models import Product
 
 @admin.register(Product)
 class ProductAdmin(TranslationAdmin):
-
     list_per_page = 25
     prepopulated_fields = {
         "slug": ("name",),

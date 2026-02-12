@@ -8,7 +8,6 @@ from apps.vacancies.choices import ExperienceLevel, WorkSchedule
 
 
 class Vacancy(models.Model):  # type: ignore
-
     title = models.CharField(
         max_length=255,
         verbose_name=_("title"),

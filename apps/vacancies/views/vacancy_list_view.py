@@ -8,7 +8,6 @@ from apps.vacancies.selectors import VacancySelector
 
 
 class VacancyListView(ListView):
-
     template_name = "vacancies/vacancy_list.html"
     context_object_name = "vacancies"
     paginate_by = 12

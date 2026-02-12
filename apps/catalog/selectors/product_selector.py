@@ -14,6 +14,7 @@ from apps.catalog.selectors import (
 
 
 class ProductSelector:
+
     def get_products(
         self,
         *,

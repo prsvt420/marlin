@@ -7,7 +7,6 @@ from apps.catalog.choices import UnitType
 
 
 class Product(models.Model):  # type: ignore
-
     name = models.CharField(
         max_length=255,
         verbose_name=_("name"),

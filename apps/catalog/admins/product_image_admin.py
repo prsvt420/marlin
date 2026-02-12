@@ -7,7 +7,6 @@ from apps.catalog.models import ProductImage
 
 @admin.register(ProductImage)
 class ProductImageAdmin(TranslationAdmin):
-
     list_per_page = 25
     list_display = ("product", "image_path", "sort_order")
     list_editable = ("sort_order",)

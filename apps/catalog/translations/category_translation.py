@@ -7,6 +7,5 @@ from apps.catalog.models import (
 
 @translator.register(Category)
 class CategoryTranslationOptions(translator.TranslationOptions):
-
     fields = ("name", "description", "alt_text")
     required_languages = ("ru", "en")

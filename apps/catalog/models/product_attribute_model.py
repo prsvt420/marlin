@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 class ProductAttribute(models.Model):  # type: ignore
-
     product = models.ForeignKey(
         to="Product",
         on_delete=models.CASCADE,
