@@ -31,6 +31,7 @@ INSTALLED_APPS: List[str] = [
     "debug_toolbar",
     "phonenumber_field",
     "django_user_agents",
+    "health_check",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
