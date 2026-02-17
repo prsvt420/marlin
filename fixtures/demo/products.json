@@ -16,7 +16,7 @@
     "unit_type": "kg",
     "price": "100.00",
     "discount": "15.00",
-    "category": 1,
+    "category": 3,
     "sku": "FRU00001",
     "stock": 120,
     "is_active": true,

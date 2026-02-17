@@ -17,6 +17,7 @@ dependencies = [
     "ua-parser>=1.0.1",
     "user-agents>=2.2.0",
     "django-user-agents>=0.4.0",
+    "psycopg2>=2.9.11",
 ]
 
 [tool.black]
