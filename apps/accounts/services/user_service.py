@@ -14,12 +14,10 @@ from apps.accounts.email_templates import (
     SIGNIN_NOTIFICATION_EMAIL,
 )
 from apps.accounts.exceptions import (
-    AccountActivationEmailSendError,
     AccountActivationLinkError,
 )
 from apps.accounts.models import User
 from apps.accounts.selectors import UserSelector
-from apps.core.exceptions import EmailSendError
 from apps.core.services import EmailService
 
 
@@ -56,16 +54,11 @@ class UserService:
             "uid": urlsafe_base64_encode(s=force_bytes(s=user.pk)),
         }
 
-        try:
-            self._email_service.send_email(
-                email_template=ACCOUNT_ACTIVATION_EMAIL,
-                to=[user.email],  # type: ignore
-                context=context,
-            )
-        except EmailSendError as error:
-            raise AccountActivationEmailSendError(
-                "Couldn't send a account activation email"
-            ) from error
+        self._email_service.send_email(
+            email_template=ACCOUNT_ACTIVATION_EMAIL,
+            to=[user.email],  # type: ignore
+            context=context,
+        )
 
     def send_signin_notification_email(
         self, *, request: HttpRequest, user: User
@@ -80,20 +73,14 @@ class UserService:
             ),
         }
 
-        try:
-            self._email_service.send_email(
-                email_template=SIGNIN_NOTIFICATION_EMAIL,
-                to=[user.email],
-                context=context,
-            )
-        except EmailSendError:  # noqa: S110
-            pass
+        self._email_service.send_email(
+            email_template=SIGNIN_NOTIFICATION_EMAIL,
+            to=[user.email],
+            context=context,
+        )
 
     def send_password_reset_complete_email(self, *, user: User) -> None:
-        try:
-            self._email_service.send_email(
-                email_template=PASSWORD_RESET_COMPLETE_EMAIL,
-                to=[user.email],
-            )
-        except EmailSendError:  # noqa: S110
-            pass
+        self._email_service.send_email(
+            email_template=PASSWORD_RESET_COMPLETE_EMAIL,
+            to=[user.email],
+        )

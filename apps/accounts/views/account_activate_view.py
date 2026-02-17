@@ -7,7 +7,7 @@ from django.shortcuts import redirect
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
-from apps.accounts.exceptions import AccountActivationError
+from apps.accounts.exceptions import AccountActivationLinkError
 from apps.accounts.services import UserService
 
 
@@ -22,7 +22,7 @@ class AccountActivateView(View):
                 request,
                 _("The activation was successful! Sign in to your account."),
             )
-        except AccountActivationError:
+        except AccountActivationLinkError:
             messages.error(
                 request,
                 _("The account activation link is invalid or expired."),

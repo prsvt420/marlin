@@ -1,15 +1,31 @@
-from smtplib import SMTPException
-from typing import Any, List, Mapping, Optional
+from typing import Any, List, Mapping, Optional, Tuple
 
-from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 from apps.core.dataclasses import EmailTemplate
-from apps.core.exceptions import EmailSendError
+from apps.core.tasks import send_email_task
 from config import settings
 
 
 class EmailService:
+
+    def _render_email_parts(
+        self,
+        *,
+        email_template: EmailTemplate,
+        context: Optional[Mapping[str, Any]],
+    ) -> Tuple[str, ...]:
+        subject: str = render_to_string(
+            template_name=email_template.subject, context=context
+        ).strip()
+        body: str = render_to_string(
+            template_name=email_template.body, context=context
+        )
+        content: str = render_to_string(
+            template_name=email_template.content, context=context
+        )
+
+        return subject, body, content
 
     def send_email(
         self,
@@ -19,26 +35,15 @@ class EmailService:
         to: List[str],
         context: Optional[Mapping[str, Any]] = None,
     ) -> None:
-        try:
-            subject: str = render_to_string(
-                template_name=email_template.subject, context=context
-            ).strip()
-            body: str = render_to_string(
-                template_name=email_template.body, context=context
-            )
-            content: str = render_to_string(
-                template_name=email_template.content, context=context
-            )
 
-            email_message: EmailMultiAlternatives = EmailMultiAlternatives(
-                subject=subject,
-                body=body,
-                from_email=from_email,
-                to=to,
-            )
-            email_message.attach_alternative(
-                content=content, mimetype="text/html"
-            )
-            email_message.send()
-        except (SMTPException, OSError) as error:
-            raise EmailSendError("Couldn't send a email") from error
+        subject, body, content = self._render_email_parts(
+            email_template=email_template, context=context
+        )
+
+        send_email_task.delay(
+            subject=subject,
+            body=body,
+            content=content,
+            from_email=from_email,
+            to=to,
+        )

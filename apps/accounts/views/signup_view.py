@@ -7,7 +7,6 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
-from apps.accounts.exceptions import AccountActivationEmailSendError
 from apps.accounts.forms import SignUpForm
 from apps.accounts.services import UserService
 
@@ -23,22 +22,13 @@ class SignUpView(SuccessMessageMixin, CreateView):
     def form_valid(self, form: SignUpForm) -> HttpResponse:
         response: HttpResponse = super().form_valid(form=form)
 
-        try:
-            UserService().send_account_activation_email(
-                user=self.object  # type: ignore
-            )
-            messages.info(
-                self.request,
-                _("An account activation link has been sent to your email."),
-            )
-        except AccountActivationEmailSendError:
-            messages.error(
-                self.request,
-                _(
-                    "An error occurred while sending the account "
-                    "activation link. Please try again later."
-                ),
-            )
+        UserService().send_account_activation_email(
+            user=self.object  # type: ignore
+        )
+        messages.info(
+            self.request,
+            _("An account activation link has been sent to your email."),
+        )
 
         return response
 
