@@ -87,7 +87,9 @@ DATABASES: Dict[str, Any] = {
 CACHES: Dict[str, Any] = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": config("CACHE_LOCATION", default="redis://127.0.0.1:6379"),
+        "LOCATION": config(
+            "CACHE_LOCATION", default="redis://127.0.0.1:6379/0"
+        ),
     }
 }
 
@@ -115,6 +117,21 @@ AUTH_USER_MODEL: str = "accounts.User"
 TIME_ZONE: str = "Europe/Moscow"
 USE_I18N: bool = True
 USE_TZ: bool = True
+
+CELERY_BROKER_URL = config("CELERY_URL", default="redis://127.0.0.1:6379/1")
+CELERY_RESULT_BACKEND = config(
+    "CELERY_URL", default="redis://127.0.0.1:6379/1"
+)
+CELERY_TIMEZONE: str = TIME_ZONE
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+CELERY_TASK_SOFT_TIME_LIMIT: int = 60
+CELERY_TASK_TIME_LIMIT: int = 120
+CELERY_TASK_ACKS_LATE: bool = True
+CELERY_TASK_REJECT_ON_WORKER_LOST: bool = True
+CELERY_WORKER_MAX_TASKS_PER_CHILD: int = 1000
+CELERY_WORKER_MAX_MEMORY_PER_CHILD: int = 400_000
 
 LANGUAGE_CODE: str = "ru-ru"
 MODELTRANSLATION_DEFAULT_LANGUAGE: str = "en"
@@ -168,6 +185,6 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
     },
 }
 
-LOGIN_URL: StrOrPromise = reverse_lazy("accounts:signin")
-LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy("pages:home")
+LOGIN_URL: StrOrPromise = reverse_lazy(viewname="accounts:signin")
+LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy(viewname="pages:home")
 LOGOUT_REDIRECT_URL: StrOrPromise = LOGIN_URL
