@@ -86,7 +86,7 @@
 
         {% if product.stock %}
             {% if not product.pk in cart_product_pks %}
-                <form action="{% url 'carts:cart_item_create' product_slug=product.slug %}" method="post">
+                <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post">
                     {% csrf_token %}
                     <button class="product__button">{% trans "Add to Cart" %}</button>
                 </form>

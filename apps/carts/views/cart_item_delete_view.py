@@ -5,22 +5,44 @@ from django.shortcuts import redirect
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
-from apps.carts.repositories import CartRepository
+from apps.carts.exceptions import CartItemNotFoundError
+from apps.carts.models import Cart
+from apps.carts.services import CartService
 
 
 class CartItemDeleteView(LoginRequiredMixin, View):
-    """View for deleting the cart item from user active cart."""
 
-    def post(self, request: HttpRequest, product_slug: str) -> HttpResponse:
-        """Delete a cart item and redirect to cart detail."""
-        CartRepository().delete_item(
-            user=request.user, product_slug=product_slug  # type: ignore
+    def post(self, request: HttpRequest, cart_item_pk: int) -> HttpResponse:
+        cart: Cart = CartService().get_or_create_active_cart_for_user(
+            user=self.request.user  # type: ignore
         )
-        messages.success(
-            request,
-            _(
-                "The product has been successfully removed from the cart. "
-                "The price has been updated."
-            ),
-        )
-        return redirect("carts:cart_detail")
+
+        try:
+            CartService().delete_cart_item(
+                cart=cart, cart_item_pk=cart_item_pk
+            )
+        except CartItemNotFoundError:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while deleting the "
+                    "product to the cart. The product is not in the cart."
+                ),
+            )
+        except Exception:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while deleting the "
+                    "product to the cart. Please try again."
+                ),
+            )
+        else:
+            messages.success(
+                request,
+                _(
+                    "The product has been successfully deleted from the cart. "
+                    "The price has been updated."
+                ),
+            )
+        return redirect(to="carts:detail")

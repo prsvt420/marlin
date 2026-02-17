@@ -54,10 +54,20 @@ class ProductSelector:
         return products
 
     def get_product(
-        self, *, product_slug: str, only_active: bool = True
+        self, *, product_pk: int, only_active: bool = True
     ) -> Optional[Product]:
         return (
             self.get_products(only_active=only_active)
-            .filter(slug=product_slug)
+            .filter(pk=product_pk)
+            .first()
+        )
+
+    def get_product_for_update(
+        self, *, product_pk: int, only_active: bool = True
+    ) -> Optional[Product]:
+        return (
+            self.get_products(only_active=only_active)
+            .filter(pk=product_pk)
+            .select_for_update()
             .first()
         )

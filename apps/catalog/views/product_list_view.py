@@ -4,7 +4,7 @@ from django.db.models import QuerySet
 from django.http import Http404
 from django.views.generic import ListView
 
-from apps.carts.repositories import CartRepository
+from apps.carts.selectors import CartSelector
 from apps.catalog.constants import ORDERING_OPTIONS
 from apps.catalog.dataclasses import OrderingOption
 from apps.catalog.models import Category, Product
@@ -66,8 +66,10 @@ class ProductListView(ListView):
         context["category"] = self.category
 
         if self.request.user.is_authenticated:
-            context["cart_product_pks"] = CartRepository().get_product_ids(
-                self.request.user
+            context[
+                "cart_product_pks"
+            ] = CartSelector().get_user_active_cart_product_pks(
+                user=self.request.user  # type: ignore
             )
 
         return context

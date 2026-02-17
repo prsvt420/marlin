@@ -5,12 +5,11 @@ from django.utils.translation import gettext_lazy as _
 
 from apps.carts.admins import CartItemInline
 from apps.carts.models import Cart
+from apps.carts.selectors import CartSelector
 
 
 @admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
-    """Configuration for administration of the Cart model."""
-
     list_per_page = 25
     list_display = (
         "user",
@@ -36,10 +35,8 @@ class CartAdmin(admin.ModelAdmin):
 
     @admin.display(description=_("Total price"))
     def total_price(self, obj: Cart) -> Decimal:
-        """Return the cart total price."""
-        return obj.get_total_price()
+        return CartSelector().get_cart_prices(cart=obj)["total_price"]
 
     @admin.display(description=_("Total quantity"))
     def total_quantity(self, obj: Cart) -> int:
-        """Return the cart total quantity."""
-        return obj.get_total_quantity()
+        return obj.total_quantity

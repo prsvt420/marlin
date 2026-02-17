@@ -4,8 +4,6 @@ from django_stubs_ext import StrOrPromise
 
 
 class CartsConfig(AppConfig):
-    """Configuration for the carts application."""
-
     default_auto_field: str = "django.db.models.BigAutoField"
     name: str = "apps.carts"
     verbose_name: StrOrPromise = _("Carts")

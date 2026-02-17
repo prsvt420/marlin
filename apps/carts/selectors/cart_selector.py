@@ -1,0 +1,78 @@
+from decimal import ROUND_HALF_UP, Decimal
+from typing import Dict, Optional, Set
+
+from django.db.models import Prefetch, Q, QuerySet, Sum
+
+from apps.accounts.models import User
+from apps.carts.choices import CartStatus
+from apps.carts.models import Cart, CartItem
+from apps.catalog.selectors import ProductSelector
+
+
+class CartSelector:
+
+    def get_cart_items(self) -> QuerySet[CartItem]:
+        return CartItem.objects.prefetch_related(
+            Prefetch(
+                lookup="product",
+                queryset=ProductSelector().get_products(only_active=False),
+            )
+        )
+
+    def get_carts(self) -> QuerySet[Cart]:
+        return Cart.objects.prefetch_related(
+            Prefetch(lookup="cart_items", queryset=self.get_cart_items())
+        )
+
+    def get_cart_items_for_cart(self, *, cart: Cart) -> QuerySet[CartItem]:
+        return cart.cart_items.all()
+
+    def get_cart_item_for_cart(
+        self, *, cart: Cart, cart_item_pk: int
+    ) -> Optional[CartItem]:
+        return cart.cart_items.filter(pk=cart_item_pk).first()
+
+    def get_active_cart_for_user(self, *, user: User) -> Optional[Cart]:
+        return (
+            self.get_carts()
+            .filter(user=user, cart_status=CartStatus.ACTIVE)
+            .first()
+        )
+
+    def get_user_active_cart_product_pks(self, *, user: User) -> Set[int]:
+        return set(
+            CartItem.objects.filter(
+                cart__user=user, cart__cart_status=CartStatus.ACTIVE
+            ).values_list("product_id", flat=True)
+        )
+
+    def get_cart_products_total_price(self, *, cart: Cart) -> Decimal:
+        cart_items: QuerySet[CartItem] = self.get_cart_items_for_cart(
+            cart=cart
+        ).filter(product__is_active=True, product__stock__gt=0)
+
+        total_price: Decimal = cart_items.aggregate(
+            total_price=Sum(
+                "total_price",
+            )
+        )["total_price"] or Decimal("0.00")
+
+        return total_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+    def get_cart_prices(self, *, cart: Cart) -> Dict[str, Decimal]:
+        cart_products_total_price: Decimal = (
+            self.get_cart_products_total_price(cart=cart)
+        )
+        cart_total_price: Decimal = cart_products_total_price
+
+        cart_prices: Dict[str, Decimal] = {
+            "products_total_price": cart_products_total_price,
+            "total_price": cart_total_price,
+        }
+
+        return cart_prices
+
+    def has_unavailable_cart_items(self, *, cart: Cart) -> bool:
+        return cart.cart_items.filter(
+            Q(product__is_active=False) | Q(product__stock__lte=0)
+        ).exists()

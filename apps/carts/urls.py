@@ -7,26 +7,21 @@ from apps.carts import views
 app_name: str = "carts"
 
 urlpatterns: List[URLPattern] = [
-    path("", views.CartDetailView.as_view(), name="cart_detail"),
-    path("clear", views.CartClearView.as_view(), name="cart_clear"),
+    path("", views.CartDetailView.as_view(), name="detail"),
+    path("clear/", views.CartClearView.as_view(), name="clear"),
     path(
-        "items/<slug:product_slug>/delete",
+        "items/<int:cart_item_pk>/delete/",
         views.CartItemDeleteView.as_view(),
-        name="cart_item_delete",
+        name="cart-item-delete",
     ),
     path(
-        "items/<slug:product_slug>/create",
+        "items/<int:product_pk>/create/",
         views.CartItemCreateView.as_view(),
-        name="cart_item_create",
+        name="cart-item-create",
     ),
     path(
-        "items/<slug:product_slug>/decrement",
-        views.CartItemQuantityDecrementView.as_view(),
-        name="cart_item_decrement",
-    ),
-    path(
-        "items/<slug:product_slug>/increment",
-        views.CartItemQuantityIncrementView.as_view(),
-        name="cart_item_increment",
+        "items/<int:cart_item_pk>/update-quantity/",
+        views.CartItemUpdateQuantityView.as_view(),
+        name="cart-item-update-quantity",
     ),
 ]

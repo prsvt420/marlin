@@ -1,15 +1,13 @@
-from decimal import ROUND_HALF_UP, Decimal
 from typing import Any
 
 from django.db import models
+from django.db.models import ExpressionWrapper, F
 from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.models import Product
 
 
-class CartItem(models.Model):
-    """Model for cart item."""
-
+class CartItem(models.Model):  # type: ignore
     cart = models.ForeignKey(
         to="Cart",
         on_delete=models.CASCADE,
@@ -37,8 +35,18 @@ class CartItem(models.Model):
             "Price of the product at the time it was added to the cart."
         ),
     )
+    total_price = models.GeneratedField(
+        expression=ExpressionWrapper(
+            expression=F("price_snapshot") * F("quantity"),
+            output_field=models.DecimalField(max_digits=10, decimal_places=2),
+        ),
+        output_field=models.DecimalField(max_digits=10, decimal_places=2),
+        db_persist=True,
+        verbose_name=_("total price"),
+        help_text=_("Cart item total price (autocalculated)."),
+    )
 
-    class Meta:  # noqa: D106
+    class Meta:
         db_table = "carts_cart_item"
         db_table_comment = "Table containing cart items."
         verbose_name = _("cart item")
@@ -54,19 +62,10 @@ class CartItem(models.Model):
             ),
         ]
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return f"{self.cart}: {self.product} x {self.quantity}"
 
-    def get_total_price(self) -> Decimal:
-        """Return the cart item total price."""
-        total_price: Decimal = (
-            self.price_snapshot or Decimal("0.00")
-        ) * self.quantity
-
-        return total_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-
     def save(self, **kwargs: Any) -> None:
-        """Save cart item data."""
         if not self.price_snapshot:
             self.price_snapshot = self.product.final_price
         super().save(**kwargs)

@@ -5,22 +5,74 @@ from django.shortcuts import redirect
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
-from apps.carts.repositories import CartRepository
+from apps.carts.exceptions import (
+    CartItemAlreadyExistsError,
+    InsufficientStockError,
+    InvalidCartItemQuantityError,
+    ProductUnavailableError,
+)
+from apps.carts.models import Cart
+from apps.carts.services import CartService
 
 
 class CartItemCreateView(LoginRequiredMixin, View):
-    """View for creating the cart item in user active cart."""
 
-    def post(self, request: HttpRequest, product_slug: str) -> HttpResponse:
-        """Create a cart item and redirect to HTTP Referer."""
-        CartRepository().create_item(
-            user=request.user, product_slug=product_slug  # type: ignore
+    def post(self, request: HttpRequest, product_pk: int) -> HttpResponse:
+        cart: Cart = CartService().get_or_create_active_cart_for_user(
+            user=self.request.user  # type: ignore
         )
-        messages.success(
-            request,
-            _(
-                "The product has been successfully added to your cart. "
-                "The price has been updated."
-            ),
-        )
-        return redirect(request.META.get("HTTP_REFERER", "/"))
+
+        try:
+            CartService().create_cart_item(
+                cart=cart,
+                product_pk=product_pk,
+            )
+        except InvalidCartItemQuantityError:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while adding the product to the cart. "
+                    "The quantity specified is incorrect."
+                ),
+            )
+        except ProductUnavailableError:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while adding the product to the cart. "
+                    "Product is unavailable."
+                ),
+            )
+        except InsufficientStockError:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while adding the product to the cart. "
+                    "The requested quantity is out of stock."
+                ),
+            )
+        except CartItemAlreadyExistsError:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while adding the product to the cart. "
+                    "The product is already in the cart."
+                ),
+            )
+        except Exception:
+            messages.error(
+                request,
+                _(
+                    "An error occurred while adding the product to the cart. "
+                    "Please try again."
+                ),
+            )
+        else:
+            messages.success(
+                request,
+                _(
+                    "The product has been successfully added to your cart. "
+                    "The price has been updated."
+                ),
+            )
+        return redirect(to=request.META.get("HTTP_REFERER", "pages:home"))

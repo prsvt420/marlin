@@ -1,5 +1,3 @@
-from decimal import ROUND_HALF_UP, Decimal
-
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -9,9 +7,7 @@ from django_stubs_ext import StrOrPromise
 from apps.carts.choices import CartStatus
 
 
-class Cart(models.Model):
-    """Model for cart."""
-
+class Cart(models.Model):  # type: ignore
     user = models.ForeignKey(
         to=get_user_model(),
         on_delete=models.CASCADE,
@@ -53,32 +49,19 @@ class Cart(models.Model):
             ),
         ]
 
-    def __str__(self) -> str:  # noqa: D105
+    def __str__(self) -> str:
         return (
             f"{_('Cart')} "
             f"({self.user} - {self.get_cart_status_display().lower()})"
         )
 
-    def get_total_price(self) -> Decimal:
-        """Return the cart total price."""
-        total_price: Decimal = self.cart_items.aggregate(
-            total_price=models.Sum(
-                models.F("price_snapshot") * models.F("quantity"),
-                output_field=models.DecimalField(
-                    max_digits=10, decimal_places=2
-                ),
-            )
-        )["total_price"] or Decimal("0.00")
-
-        return total_price.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-
-    def get_total_quantity(self) -> int:
-        """Return the cart total quantity."""
+    @property
+    def total_quantity(self) -> int:
         return self.cart_items.count()
 
-    def get_formatted_total_quantity(self) -> StrOrPromise:
-        """Return the cart formatted total quantity."""
-        total_quantity: int = self.get_total_quantity()
+    @property
+    def formatted_total_quantity(self) -> StrOrPromise:
+        total_quantity: int = self.total_quantity
         formatted_total_quantity: StrOrPromise = ngettext(
             "%(total_quantity)s product",
             "%(total_quantity)s products",

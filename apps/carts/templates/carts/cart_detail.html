@@ -19,75 +19,96 @@
 <section class="cart">
     {% if cart.cart_items.exists %}
         <div class="cart__items">
-            <p class="cart__count">{% trans "In cart" %} {{ cart.get_formatted_total_quantity }}.</p>
+            <p class="cart__count">{% trans "In cart" %} {{ cart.formatted_total_quantity }}.</p>
             {% for cart_item in cart.cart_items.all %}
-                <a href="{{ cart_item.product.get_absolute_url }}">
+                {% if cart_item.product.is_active and cart_item.product.stock > 0 %}
+                    <a href="{{ cart_item.product.get_absolute_url }}">
+                        <article class="cart-item-card">
+                            <div class="cart-item-card__image">
+                                {% if cart_item.product.product_images.first %}
+                                    <img src="{{ cart_item.product.product_images.first.image_path.url }}"
+                                        alt="{{ cart_item.product.product_images.first.alt_text }}" draggable="false">
+                                {% else %}
+                                    <img src="{% static 'catalog/img/default-product-image.jpg' %}"
+                                        alt="{% trans 'No image available' %}" draggable="false">
+                                {% endif %}
+
+
+                                {% if cart_item.product.discount %}
+                                    <span class="cart-item-card__discount">-{{ cart_item.product.discount|floatformat:"-2u" }}%</span>
+                                {% endif %}
+
+                                {% if cart_item.product.stock <= 100 %}
+                                    {% if not cart_item.product.stock %}
+                                        <span class="cart-item-card__stock cart-item-card__stock--very-few">{% trans "not available" %}</span>
+                                    {% elif cart_item.product.stock <= 15 %}
+                                        <span class="cart-item-card__stock cart-item-card__stock--few">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                                    {% elif cart_item.product.stock <= 50 %}
+                                        <span class="cart-item-card__stock cart-item-card__stock--enough">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                                    {% else %}
+                                        <span class="cart-item-card__stock cart-item-card__stock--many">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                            <div class="cart-item-card__content">
+                                <h3 class="cart-item-card__title">{{ cart_item.product.name }}</h3>
+                                <div class="cart-item-card__quantity">
+                                    <div class="cart-item-card__quantity-controls">
+                                        {% if cart_item.quantity > 1 %}
+                                            <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" name="action" value="decrement" class="cart-item-card__quantity-button">−</button>
+                                            </form>
+                                        {% else %}
+                                            <button class="cart-item-card__quantity-button" disabled>−</button>
+                                        {% endif %}
+
+                                        <span class="cart-item-card__quantity-value">{{ cart_item.quantity }}</span>
+
+                                        {% if cart_item.quantity < cart_item.product.stock %}
+                                            <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post">
+                                                {% csrf_token %}
+                                                <button type="submit" name="action" value="increment" class="cart-item-card__quantity-button">+</button>
+                                            </form>
+                                        {% else %}
+                                            <button class="cart-item-card__quantity-button" disabled>+</button>
+                                        {% endif %}
+                                    </div>
+                                    <p class="cart-item-card__stock-limit">{% trans "up to" %} {{ cart_item.product.stock }} {{ cart_item.product.get_unit_type_display }}</p>
+                                </div>
+                                <div class="cart-item-card__price">
+                                    <p class="cart-item-card__current-price">{{ cart_item.total_price }} ₽</p>
+                                    <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
+                                </div>
+                                <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="cart__button">{% trans "Delete" %}</button>
+                                </form>
+                            </div>
+                        </article>
+                    </a>
+                {% else %}
                     <article class="cart-item-card">
                         <div class="cart-item-card__image">
                             {% if cart_item.product.product_images.first %}
-                        <img src="{{ cart_item.product.product_images.first.image_path.url }}"
-                             alt="{{ cart_item.product.product_images.first.alt_text }}" draggable="false">
+                                <img src="{{ cart_item.product.product_images.first.image_path.url }}"
+                                    alt="{{ cart_item.product.product_images.first.alt_text }}" draggable="false">
                             {% else %}
                                 <img src="{% static 'catalog/img/default-product-image.jpg' %}"
                                     alt="{% trans 'No image available' %}" draggable="false">
                             {% endif %}
-
-
-                            {% if cart_item.product.discount %}
-                                <span class="cart-item-card__discount">-{{ cart_item.product.discount|floatformat:"-2u" }}%</span>
-                            {% endif %}
-
-                            {% if cart_item.product.stock <= 100 %}
-                                {% if not cart_item.product.stock %}
-                                    <span class="cart-item-card__stock cart-item-card__stock--very-few">{% trans "not available" %}</span>
-                                {% elif cart_item.product.stock <= 15 %}
-                                    <span class="cart-item-card__stock cart-item-card__stock--few">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                {% elif cart_item.product.stock <= 50 %}
-                                    <span class="cart-item-card__stock cart-item-card__stock--enough">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                {% else %}
-                                    <span class="cart-item-card__stock cart-item-card__stock--many">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                {% endif %}
-                            {% endif %}
                         </div>
                         <div class="cart-item-card__content">
                             <h3 class="cart-item-card__title">{{ cart_item.product.name }}</h3>
-                            <div class="cart-item-card__quantity">
-                                <div class="cart-item-card__quantity-controls">
-                                    {% if cart_item.quantity > 1 %}
-                                        <form action="{% url 'carts:cart_item_decrement' product_slug=cart_item.product.slug %}" method="post">
-                                            {% csrf_token %}
-                                            <button type="submit" class="cart-item-card__quantity-button">−</button>
-                                        </form>
-                                    {% else %}
-                                        <button class="cart-item-card__quantity-button" disabled>−</button>
-                                    {% endif %}
-
-                                    <span class="cart-item-card__quantity-value">{{ cart_item.quantity }}</span>
-
-                                    {% if cart_item.quantity < cart_item.product.stock %}
-                                        <form action="{% url 'carts:cart_item_increment' product_slug=cart_item.product.slug %}" method="post">
-                                            {% csrf_token %}
-                                            <button type="submit" class="cart-item-card__quantity-button">+</button>
-                                        </form>
-                                    {% else %}
-                                        <button class="cart-item-card__quantity-button" disabled>+</button>
-                                    {% endif %}
-                                </div>
-                                <p class="cart-item-card__stock-limit">{% trans "up to" %} {{ cart_item.product.stock }} {{ cart_item.product.get_unit_type_display }}</p>
-                            </div>
-                            <div class="cart-item-card__price">
-                                <p class="cart-item-card__current-price">{{ cart_item.get_total_price }} ₽</p>
-                                <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
-                            </div>
-                            <form action="{% url 'carts:cart_item_delete' product_slug=cart_item.product.slug %}" method="post">
+                            <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post">
                                 {% csrf_token %}
                                 <button type="submit" class="cart__button">{% trans "Delete" %}</button>
                             </form>
                         </div>
                     </article>
-                </a>
+                {% endif %}
             {% endfor %}
-            <form action="{% url 'carts:cart_clear' %}" method="post">
+            <form action="{% url 'carts:clear' %}" method="post">
                 {% csrf_token %}
                 <button type="submit" class="cart__button">{% trans "Clear" %}</button>
             </form>
@@ -95,11 +116,11 @@
         <div class="cart__summary">
             <p class="cart__summary-row cart__summary-row--total-price">
                 <span>{% trans "Total" %}</span>
-                <span>{{ cart.get_total_price }} ₽</span>
+                <span>{{ cart_prices.total_price }} ₽</span>
             </p>
             <p class="cart__summary-row">
                 <span>{% trans "Products" %}</span>
-                <span>{{ cart.get_total_price }} ₽</span>
+                <span>{{ cart_prices.products_total_price }} ₽</span>
             </p>
             <p class="cart__summary-row">
                 <span>{% trans "Delivery" %}</span>
