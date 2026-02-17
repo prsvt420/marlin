@@ -84,6 +84,13 @@ DATABASES: Dict[str, Any] = {
     }
 }
 
+CACHES: Dict[str, Any] = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": config("CACHE_LOCATION", default="redis://127.0.0.1:6379"),
+    }
+}
+
 AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
     {
         "NAME": "django.contrib.auth.password_validation."
