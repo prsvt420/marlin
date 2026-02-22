@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import URLPattern, URLResolver, include, path
+from django.views.generic import TemplateView
 from health_check.views import HealthCheckView
 from redis.asyncio import Redis as RedisClient
 
@@ -64,4 +65,18 @@ if settings.DEBUG:
     urlpatterns += debug_toolbar_urls()
     urlpatterns += static(
         prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
+    urlpatterns += (
+        path(
+            route="404/",
+            view=TemplateView.as_view(template_name="404.html"),
+        ),
+        path(
+            route="403/",
+            view=TemplateView.as_view(template_name="403.html"),
+        ),
+        path(
+            route="500/",
+            view=TemplateView.as_view(template_name="500.html"),
+        ),
     )
