@@ -1,0 +1,10 @@
+.link {
+  color: var(--link-text-color);
+  font-size: var(--font-size-md);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--link-text-color-hover);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Marlin — {% block title %}{% endblock %}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vars.css' %}">
+		<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/list.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/link.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/input.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+		<link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
+		<link rel="stylesheet" href="{% static 'css/legacy/messages.css' %}">
+		<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+		{% block css %}{% endblock %}
+	</head>
+	<body class="page">
+		{% include "includes/header.html" with mix="page__header" %}
+		{% include "legacy/includes/messages.html" %}
+		<main class="main {% block main_modifier %}{% endblock %}">
+			{% block content %}{% endblock %}
+		</main>
+		{% include "includes/footer.html" with mix="page__footer" %}
+		<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+		<script src="{% static 'js/messages.js' %}"></script>
+		{% block js %}{% endblock %}
+	</body>
+</html>

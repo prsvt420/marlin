@@ -11,26 +11,26 @@
 
 	{% with request.resolver_match.view_name as current_view_name %}
 		<nav class="header__nav" aria-label="{% trans 'Main' %}">
-			<ul class="header__list">
+			<ul class="header__list list">
 				<li class="header__item">
-					<a class="header__link {% if current_view_name == 'catalog:category-list' %}header__link--active{% endif %}" href="{% url 'catalog:category-list' %}" {% if current_view_name == 'catalog:category-list' %}aria-current="page"{% endif %}>{% trans "Catalog" %}</a>
+					<a class="header__link link {% if current_view_name == 'catalog:category-list' %}header__link--active{% endif %}" href="{% url 'catalog:category-list' %}" {% if current_view_name == 'catalog:category-list' %}aria-current="page"{% endif %}>{% trans "Catalog" %}</a>
 				</li>
 				<li class="header__item">
-          <a class="header__link {% if current_view_name == 'carts:detail' %}header__link--active{% endif %}" href="{% url 'carts:detail' %}" {% if current_view_name == 'carts:detail' %}aria-current="page"{% endif %}>{% trans "Cart" %}</a>
+          <a class="header__link link {% if current_view_name == 'carts:detail' %}header__link--active{% endif %}" href="{% url 'carts:detail' %}" {% if current_view_name == 'carts:detail' %}aria-current="page"{% endif %}>{% trans "Cart" %}</a>
 				</li>
 				{% if request.user.is_authenticated %}
 					<li class="header__item">
-						<a class="header__link {% if current_view_name == 'accounts:profile' %}header__link--active{% endif %}" href="{% url 'accounts:profile' %}" {% if current_view_name == 'accounts:profile' %}aria-current="page"{% endif %}>{% trans "Profile" %}</a>
+						<a class="header__link link {% if current_view_name == 'accounts:profile' %}header__link--active{% endif %}" href="{% url 'accounts:profile' %}" {% if current_view_name == 'accounts:profile' %}aria-current="page"{% endif %}>{% trans "Profile" %}</a>
 					</li>
 					<li class="header__item">
 						<form action="{% url 'accounts:signout' %}" method="post">
 							{% csrf_token %}
-		          <button class="header__link" type="submit">{% trans "Sign out" %}</button>
+		          <button class="header__link link" type="submit">{% trans "Sign out" %}</button>
 						</form>
 					</li>
 				{% else %}
 					<li class="header__item">
-            <a class="header__link {% if current_view_name == 'accounts:signin' %}header__link--active{% endif %}" href="{% url 'accounts:signin' %}" {% if current_view_name == 'accounts:signin' %}aria-current="page"{% endif %}>{% trans "Sign in" %}</a>
+            <a class="header__link link {% if current_view_name == 'accounts:signin' %}header__link--active{% endif %}" href="{% url 'accounts:signin' %}" {% if current_view_name == 'accounts:signin' %}aria-current="page"{% endif %}>{% trans "Sign in" %}</a>
           </li>
 				{% endif %}
 			</ul>

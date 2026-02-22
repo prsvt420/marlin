@@ -1,0 +1,27 @@
+.button {
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  box-shadow: var(--box-shadow);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  line-height: var(--line-height-none);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--button-background-color-hover);
+}
+
+.button--light {
+  background-color: var(--light-button-background-color);
+  color: var(--light-button-text-color);
+  box-shadow: var(--box-shadow-none);
+}
+
+.button--light:hover,
+.button--light:focus-visible {
+  background-color: var(--light-button-background-color-hover);
+}
