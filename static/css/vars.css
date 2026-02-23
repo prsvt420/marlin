@@ -60,6 +60,14 @@
   --input-border-color: #737781;
   --link-text-color: #737781;
   --link-text-color-hover: #000000;
+  --success-message-gradient: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+  --error-message-gradient: linear-gradient(135deg, #f44336 0%, #e57373 100%);
+  --warning-message-gradient: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+  --info-message-gradient: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
+  --success-message-dot-color: #4fe855;
+  --error-message-dot-color: #c21616;
+  --warning-message-dot-color: #ffd267;
+  --info-message-dot-color: #117fd6;
 
   --box-shadow-none: none;
   --box-shadow: 0 6px 24px rgba(76, 75, 75, 0.08);
