@@ -1,10 +1,10 @@
-const input = document.getElementById('password');
-const eyeOpen = document.querySelector('.auth__eye--open');
-const eyeClosed = document.querySelector('.auth__eye--closed');
+const passwordInput = document.getElementById('password');
+const openEyeIcon = document.querySelector('.form__eye--open');
+const closedEyeIcon = document.querySelector('.form__eye--closed');
 
-eyeOpen.onclick = eyeClosed.onclick = () => {
-    const show = input.type === 'password';
-    input.type = show ? 'text' : 'password';
-    eyeOpen.style.display = show ? 'none' : 'block';
-    eyeClosed.style.display = show ? 'block' : 'none';
+openEyeIcon.onclick = closedEyeIcon.onclick = () => {
+  const isPasswordHidden = passwordInput.type === 'password';
+  passwordInput.type = isPasswordHidden ? 'text' : 'password';
+  openEyeIcon.style.display = isPasswordHidden ? 'none' : 'block';
+  closedEyeIcon.style.display = isPasswordHidden ? 'block' : 'none';
 };

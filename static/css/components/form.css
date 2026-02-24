@@ -1,0 +1,118 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-sm);
+}
+
+.form--card {
+  background-color: var(--surface-background-color);
+  border-radius: var(--radius-xxl);
+  padding: var(--space-md);
+  box-shadow: var(--box-shadow);
+  max-width: 400px;
+}
+
+.form__title {
+  font-size: var(--font-size-lg);
+  color: var(--text-color);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.form__link {
+  font-size: var(--font-size-sm);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.form__label {
+  font-size: var(--font-size-md);
+  color: var(--text-color);
+}
+
+.form__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__input-wrapper .form__input {
+  width: 100%;
+}
+
+.form__toggle-password {
+  position: absolute;
+  right: var(--space-sm);
+}
+
+.form__eye {
+  display: block;
+  fill: var(--button-background-color);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+  width: 20px;
+  height: 20px;
+}
+
+.form__toggle-password:hover .form__eye,
+.form__toggle-password:focus-visible .form__eye {
+  fill: var(--button-background-color-hover);
+}
+
+.form__eye--closed {
+    display: none;
+}
+
+.form__error {
+  color: var(--text-color-muted);
+}
+
+.form__errors {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-muted);
+  hyphens: auto;
+}
+
+.form__button {
+  margin-top: var(--space-xs);
+}
+
+.form__divider {
+  position: relative;
+  color: var(--text-color-muted);
+  line-height: var(--line-height-none);
+  width: max-content;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  margin: 0 auto;
+}
+
+.form__divider::before,
+.form__divider::after {
+  content: "";
+  position: absolute;
+  top: 52.5%;
+  width: 100px;
+  height: 1px;
+  background-color: var(--text-color-muted);
+}
+
+.form__divider::before {
+  left: -120px;
+}
+
+.form__divider::after {
+  right: -120px;
+}
+
+@media (max-width: 575px) {
+  .form--card {
+    max-width: 100%;
+  }
+}
