@@ -36,6 +36,10 @@ body {
   align-items: center;
 }
 
+.main--spaced {
+  gap: var(--space-lg);
+}
+
 .page__footer {
   margin-top: auto;
   padding-top: var(--space-md);

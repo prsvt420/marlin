@@ -94,9 +94,9 @@
 
 @media (max-width: 575px) {
   .messages {
-      top: var(--space-lg);
-      right: var(--space-sm);
-      left: var(--space-sm);
-      max-width: 100%;
+    top: var(--space-lg);
+    right: var(--space-sm);
+    left: var(--space-sm);
+    max-width: 100%;
   }
 }

@@ -9,7 +9,11 @@
   line-height: var(--line-height-none);
 }
 
+.input--readonly {
+  color: var(--text-color-muted);
+}
+
 .input::placeholder {
-    color: var(--input-placeholder-color);
-    opacity: 1
+  color: var(--input-placeholder-color);
+  opacity: 1
 }
