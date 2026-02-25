@@ -5,16 +5,8 @@
   gap: var(--space-sm);
 }
 
-.form--card {
-  background-color: var(--surface-background-color);
-  border-radius: var(--radius-xxl);
-  padding: var(--space-md);
-  box-shadow: var(--box-shadow);
+.form--short {
   max-width: 400px;
-}
-
-.form--wide {
-  max-width: 100%;
   width: 100%;
 }
 
@@ -129,7 +121,7 @@
 }
 
 @media (max-width: 575px) {
-  .form--card {
+  .form--short {
     max-width: 100%;
   }
 

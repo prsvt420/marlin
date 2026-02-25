@@ -14,7 +14,7 @@
 	{% include "includes/hero.html" with title=_("Profile.") description=_("Personal information and account settings.") %}
 
 	<section class="profile">
-		<form class="form form--card form--wide" method="post" novalidate>
+		<form class="form surface" method="post" novalidate>
 			{% csrf_token %}
 
 			<h2 class="form__title">{% trans "Personal information" %}</h2>
