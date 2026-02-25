@@ -26,7 +26,7 @@
 	</head>
 	<body class="page">
 		{% include "includes/header.html" with mix="page__header" %}
-		<main class="main {% block main_modifier %}{% endblock %}">
+		<main class="main {% block mix %}{% endblock %}">
 			{% include "includes/messages.html" %}
 			{% block content %}{% endblock %}
 		</main>
