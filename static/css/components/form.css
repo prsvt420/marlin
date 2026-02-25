@@ -116,6 +116,12 @@
   right: -120px;
 }
 
+.form__list {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
 .form__action-buttons {
   margin-top: var(--space-xs);
   display: flex;

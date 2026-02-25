@@ -27,8 +27,11 @@
   color: var(--text-color-muted);
 }
 
-.header__link {
-  position: relative;
+.header__list {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header__link--active {

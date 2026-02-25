@@ -11,7 +11,7 @@
 
 	{% with request.resolver_match.view_name as current_view_name %}
 		<nav class="header__nav" aria-label="{% trans 'Main' %}">
-			<ul class="header__list list">
+			<ul class="header__list">
 				<li class="header__item">
 					<a class="header__link link {% if current_view_name == 'catalog:category-list' %}header__link--active{% endif %}" href="{% url 'catalog:category-list' %}" {% if current_view_name == 'catalog:category-list' %}aria-current="page"{% endif %}>{% trans "Catalog" %}</a>
 				</li>

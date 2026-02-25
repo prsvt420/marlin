@@ -7,6 +7,13 @@
   gap: var(--space-sm);
 }
 
+.footer__list {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .footer__copyright {
   font-size: var(--font-size-md);
 }
