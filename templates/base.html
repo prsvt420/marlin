@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static i18n %}
+{% load static i18n compress %}
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
 	<head>
@@ -9,20 +9,23 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/vars.css' %}">
-		<link rel="stylesheet" href="{% static 'css/layout.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/surface.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/link.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/input.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/form.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/messages.css' %}">
-		<link rel="stylesheet" href="{% static 'css/components/hero.css' %}">
+
+		{% compress css %}
+			<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+	    <link rel="stylesheet" href="{% static 'css/vars.css' %}">
+			<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/surface.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/button.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/link.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/input.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/form.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/header.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/footer.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/messages.css' %}">
+			<link rel="stylesheet" href="{% static 'css/components/hero.css' %}">
+			{% block css %}{% endblock %}
+		{% endcompress %}
 		<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-		{% block css %}{% endblock %}
 	</head>
 	<body class="page">
 		{% include "includes/header.html" with mix="page__header" %}

@@ -32,6 +32,7 @@ INSTALLED_APPS: List[str] = [
     "phonenumber_field",
     "django_user_agents",
     "health_check",
+    "compressor",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
@@ -146,11 +147,22 @@ LOCALE_PATHS: List[Any] = [
     BASE_DIR / "locale",
 ]
 
-STATIC_URL: str = "static/"
+STATIC_URL: str = "/static/"
 STATICFILES_DIRS: List[Any] = [
     BASE_DIR / "static",
 ]
 STATIC_ROOT: Path = BASE_DIR / "staticfiles"
+
+STATICFILES_FINDERS: Tuple[str, ...] = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "compressor.finders.CompressorFinder",
+)
+COMPRESS_OFFLINE: bool = not DEBUG
+COMPRESS_ENABLED: bool = True
+COMPRESS_CSS_FILTERS: List[str] = [
+    "compressor.filters.cssmin.CSSMinFilter",
+]
 
 MEDIA_URL: str = "media/"
 MEDIA_ROOT: Path = BASE_DIR / "media"
