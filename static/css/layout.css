@@ -37,7 +37,7 @@ body {
 }
 
 .main--spaced {
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
 .page__footer {

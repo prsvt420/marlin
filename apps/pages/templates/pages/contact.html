@@ -1,89 +1,109 @@
-{% extends 'legacy/base.html' %}
-
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{% trans "Contacts" %}{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
+	<link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
 {% endblock %}
 
+{% block mix %}main--spaced{% endblock %}
+
 {% block content %}
-<section class="hero">
-  <div class="hero__content">
-      <h2 class="hero__title">{% trans "Get in touch with us." %}</h2>
-      <p class="hero__subtitle">{% trans "We are always available and happy to answer your questions." %}</p>
-  </div>
-</section>
-<section class="contact">
-  <div class="contact__map">
-    <iframe src="https://yandex.ru/map-widget/v1/-/CLQzZPjV" width="100%" height="400" frameborder="0" allowfullscreen=""></iframe>
-  </div>
-  <div class="contact__content">
-    <div class="contact__form">
-      <h2 class="contact__form-title">{% trans "Send us a message" %}</h2>
+	{% include "includes/hero.html" with title=_("Get in touch with us.") description=_("We are always available and happy to answer your questions.") %}
 
-      <form action="{% url 'pages:contact' %}" method="post" class="contact__form-body">
+	<section class="contact">
+	  <div class="contact__map">
+	    <iframe class="contact__map-frame" src="https://yandex.ru/map-widget/v1/-/CLQzZPjV?lang={{ LANGUAGE_CODE }}" loading="lazy" frameborder="0" allowfullscreen></iframe>
+	  </div>
+
+	  <div class="contact__content">
+		  <form class="form surface" action="{% url 'pages:contact' %}" method="post" novalidate>
         {% csrf_token %}
-        {% with full_name=request.user.full_name email=request.user.email phone_number=request.user.phone_number %}
-          <div class="contact__form-group">
-            <label class="contact__label" for="full_name">{% trans "Full name" %} {% if form.full_name.errors %}<sup>*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
-            <input autocomplete="name" class="contact__input" value="{{ form.full_name.value|default:full_name }}" type="text" id="full_name" name="full_name" placeholder="{% trans 'Enter full name' %}">
-          </div>
-          <div class="contact__form-group">
-            <label class="contact__label" for="email">{% trans "Email" %} {% if form.email.errors %}<sup>*{{ form.email.errors.0 }}</sup>{% endif %}</label>
-            <input autocomplete="email" class="contact__input" value="{{ form.email.value|default:email }}" type="text" id="email" name="email" placeholder="{% trans 'Enter email' %}">
-          </div>
-          <div class="contact__form-group">
-            <label class="contact__label" for="phone_number">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup>*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
-            <input autocomplete="tel" class="contact__input" value="{{ form.phone_number.value|default:phone_number }}" type="tel" id="phone_number" name="phone_number" placeholder="+7 (___) ___-__-__">
-          </div>
-          <div class="contact__form-group">
-            <label class="contact__label" for="subject">{% trans "Subject" %} {% if form.subject.errors %}<sup>*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
-            <input class="contact__input" value="{{ form.subject.value|default:'' }}" type="text" id="subject" name="subject" placeholder="{% trans 'Enter subject' %}">
-          </div>
-          <div class="contact__form-group">
-            <label class="contact__label" for="message">{% trans "Message" %} {% if form.message.errors %}<sup>*{{ form.message.errors.0 }}</sup>{% endif %}</label>
-            <textarea class="contact__input" id="message" name="message" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
-          </div>
-      {% endwith %}
-        <button type="submit" class="contact__form-button">{% trans "Send" %}</button>
-      </form>
 
-    </div>
-    <div class="contact__list">
-      <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Address" %}</h3>
-        <p class="contact-card__text">{% trans "Moscow, Example Street, 15" %}</p>
-      </article>
-      <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Phone number" %}</h3>
-        <p class="contact-card__text"><a class="contact-card__link" href="tel:+74951234567">+7 (495) 123-45-67</a></p>
-      </article>
-      <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Email" %}</h3>
-        <p class="contact-card__text">
-          <a class="contact-card__link" href="mailto:support@marlinio.ru">support@marlinio.ru</a>
-        </p>
-      </article>
-      <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Social networks" %}</h3>
-        <p class="contact-card__text">
-          <a class="contact-card__link" href="#">VK</a> ·
-          <a class="contact-card__link" href="#">Telegram</a> ·
-          <a class="contact-card__link" href="#">OK</a>
-        </p>
-      </article>
-      <article class="contact-card">
-        <h3 class="contact-card__title">{% trans "Working hours" %}</h3>
-        <p class="contact-card__text">{% trans "Mon-Sun from 9:00 to 21:00" %}</p>
-      </article>
-    </div>
-  </div>
-</section>
+	      <h2 class="form__title">{% trans "Send us a message" %}</h2>
+
+			  {% if form.non_field_errors %}
+					<div class="form__errors">
+						{{ form.non_field_errors }}
+					</div>
+				{% endif %}
+
+			  {% with full_name=request.user.full_name email=request.user.email phone_number=request.user.phone_number %}
+				  <div class="form__group">
+					  <label for="full_name" class="form__label">{% trans "Full name" %} {% if form.full_name.errors %}<sup class="form__error">*{{ form.full_name.errors.0 }}</sup>{% endif %}</label>
+					  <input class="form__input input" id="full_name" name="full_name" type="text" autocomplete="name" value="{{ form.full_name.value|default:full_name }}" placeholder="{% trans 'Enter full name' %}">
+				  </div>
+				  <div class="form__group">
+					  <label for="email" class="form__label">{% trans "Email" %} {% if form.email.errors %}<sup class="form__error">*{{ form.email.errors.0 }}</sup>{% endif %}</label>
+					  <input class="form__input input" id="email" name="email" type="email" autocomplete="email" value="{{ form.email.value|default:email }}" placeholder="{% trans 'Enter email' %}">
+				  </div>
+				  <div class="form__group">
+					  <label for="phone_number" class="form__label">{% trans "Phone number" %} {% if form.phone_number.errors %}<sup class="form__error">*{{ form.phone_number.errors.0 }}</sup>{% endif %}</label>
+					  <input class="form__input input" id="phone_number" name="phone_number" type="tel" autocomplete="tel" value="{{ form.phone_number.value|default:phone_number }}" placeholder="+7 (___) ___-__-__">
+				  </div>
+				  <div class="form__group">
+					  <label for="subject" class="form__label">{% trans "Subject" %} {% if form.subject.errors %}<sup class="form__error">*{{ form.subject.errors.0 }}</sup>{% endif %}</label>
+					  <input class="form__input input" id="subject" name="subject" type="text" value="{{ form.subject.value|default:'' }}" placeholder="{% trans 'Enter subject' %}">
+				  </div>
+				  <div class="form__group">
+					  <label for="message" class="form__label">{% trans "Message" %} {% if form.message.errors %}<sup class="form__error">*{{ form.message.errors.0 }}</sup>{% endif %}</label>
+					  <textarea class="form__input input input--textarea" id="message" name="message" type="text" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
+				  </div>
+			  {% endwith %}
+
+			  <button class="form__button button" type="submit">{% trans "Send" %}</button>
+		  </form>
+
+		  <aside class="contact__sidebar" aria-label="{% trans 'Contact information' %}">
+			  <ul class="contact__list">
+				  <li class="contact__item">
+					  <article class="contact__card contact-card surface">
+						  <h3 class="contact-card__title">{% trans "Address" %}</h3>
+							<p class="contact-card__text">{% trans "Moscow, Example Street, 15" %}</p>
+					  </article>
+				  </li>
+				  <li class="contact__item">
+					  <article class="contact__card contact-card surface">
+						  <h3 class="contact-card__title">{% trans "Phone number" %}</h3>
+						  <a class="contact-card__link link" href="tel:+74951234567">+7 (495) 123-45-67</a>
+					  </article>
+				  </li>
+				  <li class="contact__item">
+					  <article class="contact__card contact-card surface">
+              <h3 class="contact-card__title">{% trans "Social networks" %}</h3>
+						  <ul class="contact-card__social-list">
+							  <li class="contact-card__social-item">
+								  <a class="contact-card__link link" href="#">VK</a>
+							  </li>
+							  <li class="contact-card__social-item">
+								  <a class="contact-card__link link" href="#">OK</a>
+							  </li>
+							  <li class="contact-card__social-item">
+								  <a class="contact-card__link link" href="#">Telegram</a>
+							  </li>
+						  </ul>
+					  </article>
+				  </li>
+				  <li class="contact__item">
+					  <article class="contact__card contact-card surface">
+							<h3 class="contact-card__title">{% trans "Working hours" %}</h3>
+							<p class="contact-card__text">{% trans "Mon-Sun from 9:00 to 21:00" %}</p>
+					  </article>
+				  </li>
+          <li class="contact__item">
+            <article class="contact__card contact-card surface">
+						  <h3 class="contact-card__title">{% trans "Email" %}</h3>
+						  <a class="contact-card__link link" href="mailto:support@marlinio.ru">support@marlinio.ru</a>
+					  </article>
+				  </li>
+			  </ul>
+		  </aside>
+	  </div>
+	</section>
 {% endblock %}
 
 {% block js %}
-<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
-<script src="{% static 'js/masks.js' %}"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/masks.js' %}"></script>
 {% endblock %}
