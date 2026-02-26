@@ -61,6 +61,19 @@
       <input class="form__input input" name="password2" id="password2" type="password" autocomplete="new-password" placeholder="{% trans 'Confirm password' %}">
     </div>
 
+    <div class="form__group">
+      {% url 'pages:terms' as terms_url %}
+      {% url 'pages:privacy' as privacy_url %}
+	    <label class="form__label form__label-small">
+		    <input class="input--checkbox" name="agreement" id="agreement" type="checkbox">
+        <span class="input--span-checkbox"></span>
+		    {% blocktrans %}
+          Я согласен с <a class="form__link link" href="{{ terms_url }}">Пользовательским соглашением</a> и <a class="form__link link" href="{{ privacy_url }}">Политикой конфиденциальности</a>
+	      {% endblocktrans %}
+		    {% if form.agreement.errors %}<sup class="form__error">*{{ form.agreement.errors.0 }}</sup>{% endif %}
+	    </label>
+    </div>
+
 		<button class="form__button button" type="submit">{% trans "Sign up" %}</button>
 
 	  <ul class="form__list">

@@ -77,6 +77,8 @@
 
   --translate-y: -1px;
 
+  --z-index-deep: -100;
+  --z-index-back: -1;
   --z-index-dropdown: 1000;
   --z-index-modal: 1100;
   --z-index-toast: 1200;

@@ -19,6 +19,10 @@ class SignUpForm(UserCreationForm):
             "required": _("The password confirmation is required.")
         },
     )
+    agreement = forms.BooleanField(
+        required=True,
+        error_messages={"required": _("Consent required.")},
+    )
 
     class Meta:
         model = get_user_model()
