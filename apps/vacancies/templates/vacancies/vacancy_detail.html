@@ -1,47 +1,40 @@
-{% extends 'legacy/base.html' %}
-
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{{ vacancy.title }}{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'vacancies/css/vacancy_detail.css' %}">
+	<link rel="stylesheet" href="{% static 'vacancies/css/vacancy_detail.css' %}">
 {% endblock %}
 
+{% block mix %}main--spaced{% endblock %}
+
 {% block content %}
-<div class="breadcrumbs">
-    <a href="{% url 'vacancies:list' %}" class="breadcrumbs__link">{% trans "Vacancies" %}</a>
-    <span class="breadcrumbs__separator">•</span>
+	{% include "includes/breadcrumbs.html" with breadcrumbs=breadcrumbs %}
 
-    <span class="breadcrumbs__current">{{ vacancy.title }}</span>
-</div>
+	<section class="vacancy">
+		<header class="vacancy__header">
+			<h1 class="vacancy__title">{{ vacancy.title }}</h1>
+      {% if vacancy.formatted_salary %}
+				<p class="vacancy__salary" aria-label="{% trans 'Salary before taxes' %}">{{ vacancy.formatted_salary }} ₽ {% trans "before taxes" %}</p>
+      {% endif %}
+		</header>
+		<p class="vacancy__meta"><time datetime="{{ vacancy.updated_at.date }}">{{ vacancy.updated_at.date }}</time> • {{ vacancy.city }} • Marlin • {{ vacancy.professional_area }}</p>
+		<h2 class="vacancy__short-description">{{ vacancy.short_description }}</h2>
 
-<section class="vacancy">
-    <div class="vacancy__info">
-        <h2 class="vacancy__title">{{ vacancy.title }}</h2>
-        {% if vacancy.formatted_salary %}
-            <p class="vacancy__salary">{{ vacancy.formatted_salary }} ₽ <span>{% trans "before taxes" %}</span></p>
-        {% endif %}
-        <p class="vacancy__location">{{ vacancy.city }} • Marlin • {{ vacancy.professional_area }} • {{ vacancy.updated_at.date }}</p>
+		<div class="vacancy__content">
+			<div class="vacancy-attributes">
+				<div class="vacancy-attributes__item">
+					<h3 class="vacancy-attributes__name">{% trans "Work schedule" %}</h3>
+          <p class="vacancy-attributes__value">{{ vacancy.get_work_schedule_display }}</p>
+				</div>
+				<div class="vacancy-attributes__item">
+					<h3 class="vacancy-attributes__name">{% trans "Work experience" %}</h3>
+          <p class="vacancy-attributes__value">{{ vacancy.get_experience_level_display }}</p>
+				</div>
+			</div>
 
-        <p class="vacancy__short-description">{{ vacancy.short_description }}</p>
-
-        <div class="vacancy__content">
-            <div class="vacancy__details">
-                <div class="vacancy__detail-item">
-                    <h3 class="vacancy__detail-title">{% trans "Work schedule" %}</h3>
-                    <p class="vacancy__detail-value">{{ vacancy.get_work_schedule_display }}</p>
-                </div>
-
-                <div class="vacancy__detail-item">
-                    <h3 class="vacancy__detail-title">{% trans "Work experience" %}</h3>
-                    <p class="vacancy__detail-value">{{ vacancy.get_experience_level_display }}</p>
-                </div>
-            </div>
-
-            <div class="vacancy__description">{{ vacancy.description|safe }}</div>
-        </div>
-    </div>
-</section>
-
+			<div class="vacancy__description">{{ vacancy.description|safe }}</div>
+		</div>
+	</section>
 {% endblock %}

@@ -8,6 +8,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-snug);
+  color: var(--text-color);
 }
 
 .hero__description {

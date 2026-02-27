@@ -1,0 +1,23 @@
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  line-height: var(--line-height-none);
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-md);
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "•";
+  color: var(--text-color-muted);
+  margin-left: var(--space-xs);
+}
+
+.breadcrumbs__current {
+  color: var(--text-color);
+}
