@@ -1,50 +1,42 @@
-{% extends 'legacy/base.html' %}
-
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{% trans "Catalog" %}{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'catalog/css/category_list.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/category_list.css' %}">
 {% endblock %}
 
-{% block content %}
-<section class="hero">
-    <div class="hero__content">
-        <h2 class="hero__title">{% trans "Fresh. Fast. Homemade." %}</h2>
-        <p class="hero__subtitle">{% trans "Delivery of fresh products straight to your door. Fruits, vegetables, dairy products, and more." %}</p>
-    </div>
-</section>
+{% block mix %}main--spaced{% endblock %}
 
-<section class="categories">
-    {% if parent_categories %}
-        {% for parent_category in parent_categories %}
-            {% if parent_category.subcategories.exists %}
-                <div class="categories__group">
-                    <a href="{{ parent_category.get_absolute_url }}">
-                        <h2 class="categories__title">{{ parent_category.name }} <svg viewBox="0 0 9 14"><path d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z" /></svg></h2>
-                    </a>
-                    <div class="categories__list">
-                        {% for subcategory in parent_category.subcategories.all %}
-                            <a href="{{ subcategory.get_absolute_url }}">
-                                <article class="category-card">
-                                    {% if subcategory.image_path %}
-                                        <img src="{{ subcategory.image_path.url }}" alt="{{ subcategory.alt_text }}" class="category-card__img" draggable="false">
-                                    {% else %}
-                                        <img src="{% static 'catalog/img/default-category-image.jpg' %}" alt="{% trans 'No image available' %}" class="category-card__img" draggable="false">
-                                    {% endif %}
-                                    <h3 class="category-card__title">{{ subcategory.name }}</h3>
-                                </article>
-                            </a>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    {% else %}
-        <div class="no-categories">
-            <p class="no-categories__text">{% trans "No categories found in the catalog" %}</p>
+{% block content %}
+	{% include "includes/hero.html" with title=_("Fresh. Fast. Homemade.") description=_("Delivery of fresh products straight to your door. Fruits, vegetables, dairy products, and more.") %}
+
+	<section class="categories">
+	  {% for parent_category in parent_categories %}
+      {% if parent_category.subcategories %}
+        <div class="categories__group">
+          <a class="categories__group-link" href="{{ parent_category.get_absolute_url }}" aria-label="Marlin — {{ parent_category.name }}">
+            <h2 class="categories__title" aria-hidden="true">{{ parent_category.name }} <svg viewBox="0 0 9 14"><path d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z"/></svg></h2>
+          </a>
+          <ul class="categories__list">
+            {% for subcategory in parent_category.subcategories.all %}
+		          <li class="categories__item">
+			          <a href="{{ subcategory.get_absolute_url }}" aria-label="Marlin — {{ subcategory.name }}">
+	                <article class="category-card" aria-hidden="true">
+	                  {% if subcategory.image_path %}
+	                    <img class="category-card__image" src="{{ subcategory.image_path.url }}" alt="" draggable="false">
+	                  {% else %}
+	                    <img class="category-card__image" src="{% static 'catalog/img/default-category-image.jpg' %}" alt="" draggable="false">
+	                  {% endif %}
+	                    <h3 class="category-card__title">{{ subcategory.name }}</h3>
+	                </article>
+	              </a>
+		          </li>
+            {% endfor %}
+          </ul>
         </div>
-    {% endif %}
-</section>
+      {% endif %}
+		{% endfor %}
+	</section>
 {% endblock %}
