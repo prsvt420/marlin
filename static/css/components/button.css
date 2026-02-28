@@ -25,3 +25,7 @@
 .button--light:focus-visible {
   background-color: var(--light-button-background-color-hover);
 }
+
+.button--disabled {
+  background-color: var(--button-background-color-hover);
+}

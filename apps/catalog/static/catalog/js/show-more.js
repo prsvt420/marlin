@@ -1,17 +1,17 @@
-$(document).ready(function () {
-    $('.product__text-expander').on('click', function () {
-        const textBlock = $(this).siblings('.product__text');
-        const isCollapsed = textBlock.hasClass('product__text--collapsed');
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".product__value-expander");
+  if (!button) return;
 
-        const showText = $(this).data('show');
-        const hideText = $(this).data('hide');
+  const targetId = button.getAttribute("aria-controls");
+  const textBlock = document.getElementById(targetId);
+  if (!textBlock) return;
 
-        if (isCollapsed) {
-            textBlock.removeClass('product__text--collapsed');
-            $(this).text(hideText);
-        } else {
-            textBlock.addClass('product__text--collapsed');
-            $(this).text(showText);
-        }
-    });
+  const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+  button.setAttribute("aria-expanded", String(!isExpanded));
+  textBlock.classList.toggle("product__value--collapsed");
+
+  button.textContent = isExpanded
+    ? button.dataset.show
+    : button.dataset.hide;
 });

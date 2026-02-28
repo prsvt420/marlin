@@ -17,7 +17,7 @@
       {% if parent_category.subcategories %}
         <div class="categories__group">
           <a class="categories__group-link" href="{{ parent_category.get_absolute_url }}" aria-label="Marlin — {{ parent_category.name }}">
-            <h2 class="categories__title" aria-hidden="true">{{ parent_category.name }} <svg viewBox="0 0 9 14"><path d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z"/></svg></h2>
+            <h2 class="categories__name" aria-hidden="true">{{ parent_category.name }} <svg viewBox="0 0 9 14"><path d="M6.660,8.922 L6.660,8.922 L2.350,13.408 L0.503,11.486 L4.813,7.000 L0.503,2.515 L2.350,0.592 L8.507,7.000 L6.660,8.922 Z"/></svg></h2>
           </a>
           <ul class="categories__list">
             {% for subcategory in parent_category.subcategories.all %}
@@ -29,7 +29,7 @@
 	                  {% else %}
 	                    <img class="category-card__image" src="{% static 'catalog/img/default-category-image.jpg' %}" alt="" draggable="false">
 	                  {% endif %}
-	                    <h3 class="category-card__title">{{ subcategory.name }}</h3>
+	                    <h3 class="category-card__name">{{ subcategory.name }}</h3>
 	                </article>
 	              </a>
 		          </li>

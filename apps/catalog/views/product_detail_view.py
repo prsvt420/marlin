@@ -1,6 +1,8 @@
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from django.db.models import QuerySet
+from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView
 
 from apps.carts.selectors import CartSelector
@@ -17,11 +19,26 @@ class ProductDetailView(DetailView):
         category_slug: str = self.kwargs["category_slug"]
         return ProductSelector().get_products(category_slug=category_slug)
 
+    @property
+    def breadcrumbs(self) -> List[Dict[str, Any]]:
+        breadcrumbs: List[Dict[str, Any]] = [
+            {"name": _("Catalog"), "url": reverse("catalog:category-list")},
+        ]
+
+        for ancestor in CategorySelector().get_hierarchy(
+            category=self.object.category
+        ):
+            breadcrumbs.append(
+                {"name": ancestor.name, "url": ancestor.get_absolute_url()}
+            )
+
+        breadcrumbs.append({"name": self.object.name})
+
+        return breadcrumbs
+
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context: Dict[str, Any] = super().get_context_data(**kwargs)
-        context["hierarchy_categories"] = CategorySelector().get_hierarchy(
-            category=self.object.category
-        )
+        context["breadcrumbs"] = self.breadcrumbs
 
         if self.request.user.is_authenticated:
             context[
