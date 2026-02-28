@@ -2,5 +2,11 @@
   <div class="hero__content">
     <h1 class="hero__title">{{ title }}</h1>
     <p class="hero__description">{{ description }}</p>
+
+    {% if search_url %}
+      <form method="get" action="{{ search_url }}">
+        <input class="hero__search input" name="q" value="{{ search_query|default_if_none:'' }}" autocomplete="off" placeholder="{{ search_placeholder }}">
+      </form>
+    {% endif %}
   </div>
 </section>

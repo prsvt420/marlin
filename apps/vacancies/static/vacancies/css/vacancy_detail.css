@@ -12,7 +12,6 @@
 }
 
 .vacancy__salary {
-  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-lg);
   color: var(--text-color);
 }
@@ -23,7 +22,6 @@
 }
 
 .vacancy__short-description {
-  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-md);
   color: var(--text-color);
 }
@@ -31,6 +29,7 @@
 .vacancy__content {
   display: flex;
   gap: var(--space-xl);
+  align-items: baseline;
 }
 
 .vacancy-attributes {
