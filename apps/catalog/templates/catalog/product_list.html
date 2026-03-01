@@ -1,153 +1,92 @@
-{% extends 'legacy/base.html' %}
-
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{{ category.name }}{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/components/hero.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
 {% endblock %}
 
+{% block mix %}main--spaced{% endblock %}
+
 {% block content %}
-<section class="hero">
-    <div class="hero__content">
-        <h2 class="hero__title">{{ category.name }}.</h2>
-        <p class="hero__subtitle">{{ category.description }}.</p>
-        <form method="get" action="{% url 'catalog:product-list' category_slug=category.slug %}">
-            <input name="q" value="{{ search_query|default_if_none:'' }}" class="hero__search" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
-        </form>
-    </div>
-    <div class="hero__promo promo-card">
-        <div class="promo-card__header">
-            <p class="promo-card__label">{% trans "Daily Deals" %}</p>
-            <p class="promo-card__title">{% trans "Discounts up to 30%" %}</p>
-        </div>
+  {% url "catalog:product-list" category_slug=category.slug as search_url %}
+  {% include "catalog/includes/hero.html" with title=category.name|add:"." description=category.description|add:"." search_url=search_url search_placeholder=_("Find a product, e.g. — bananas") %}
 
-        <div class="promo-card__products">
-            <div class="promo-card__product product-badge">
-                <p class="product-badge__name">Бананы</p>
-                <p class="product-badge__price">89 ₽ / кг</p>
-            </div>
-            <div class="promo-card__product product-badge">
-                <p class="product-badge__name">Молоко</p>
-                <p class="product-badge__price">79 ₽</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="products">
-    {% if products %}
+	<section class="products {% if not products %}products--centered{% endif %}">
+		{% if products %}
+			<ul class="products__list">
+				{% for product in products %}
+					<li class="products__item">
+						<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
+							<article class="product-card surface" aria-hidden="true">
+								<div class="product-card__image-wrapper">
+                  {% if product.product_images.first %}
+                    <img class="product-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
+                  {% else %}
+                    <img class="product-card__image" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
+                  {% endif %}
 
-    <div class="products__controls">
-        <div class="dropdown">
-            <button class="products__controls-button dropdown__toggle" type="button">
-                {% trans "Sorting" %}: {{ current_ordering_option.label }}
-            </button>
+                  {% if product.discount %}
+                    <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
+                  {% endif %}
 
-            <ul class="dropdown__menu dropdown__menu--left">
-                {% for ordering_option_key, ordering_option in ordering_options.items %}
-                    <li class="dropdown__menu-item">
-                        <a href="?sort={{ ordering_option_key }}" class="dropdown__menu-button {% if ordering_option.label == current_ordering_option.label %}dropdown__menu-button--active{% endif %}">{{ ordering_option.label }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-    <div class="products__list">
-        {% for product in products %}
-        <a href="{{ product.get_absolute_url }}">
-            <article class="product-card">
-                <div class="product-card__image">
-                    {% if product.product_images.first %}
-                        <img src="{{ product.product_images.first.image_path.url }}"
-                            alt="{{ product.product_images.first.alt_text }}" draggable="false">
+                  {% if product.stock <= 100 %}
+                    {% if not product.stock %}
+                      <span class="product-card__stock product-card__stock--very-few">{% trans "not available" %}</span>
+                    {% elif product.stock <= 15 %}
+                      <span class="product-card__stock product-card__stock--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                    {% elif product.stock <= 50 %}
+                      <span class="product-card__stock product-card__stock--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
                     {% else %}
-                        <img src="{% static 'catalog/img/default-product-image.jpg' %}"
-                            alt="{% trans 'No image available' %}" draggable="false">
+                      <span class="product-card__stock product-card__stock--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
                     {% endif %}
-
-                    {% if product.discount %}
-                        <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
-                    {% endif %}
-
-                    {% if product.stock <= 100 %}
-                        {% if not product.stock %}
-                            <span class="product-card__stock product-card__stock--very-few">{% trans "not available" %}</span>
-                        {% elif product.stock <= 15 %}
-                            <span class="product-card__stock product-card__stock--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                        {% elif product.stock <= 50 %}
-                            <span class="product-card__stock product-card__stock--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                        {% else %}
-                            <span class="product-card__stock product-card__stock--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                        {% endif %}
-                    {% endif %}
+                  {% endif %}
                 </div>
-                <div class="product-card__content">
-                    <h3 class="product-card__name">{{ product.name|truncatechars:20 }}</h3>
-                    <p class="product-card__description">{{ product.description|truncatechars:25 }}</p>
-                    <div class="product-card__price">
-                        {% if product.discount %}
-                            <span class="product-card__current-price">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-                            <span class="product-card__old-price">{{ product.price }} ₽</span>
-                        {% else %}
-                            <span class="product-card__current-price">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-                        {% endif %}
-                    </div>
-                    <div class="product-card__footer">
-                        {% if product.stock %}
-                            {% if not product.pk in cart_product_pks %}
-                                <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post">
-                                    {% csrf_token %}
-                                    <button class="product-card__button">{% trans "Add to Cart" %}</button>
-                                </form>
-                            {% else %}
-                                <button class="product-card__button" disabled>{% trans "In cart" %}</button>
-                            {% endif %}
-                        {% else %}
-                            <button class="product-card__button" disabled>{% trans "Not available" %}</button>
-                        {% endif %}
-                    </div>
-                </div>
-            </article>
-        </a>
-        {% endfor %}
-    </div>
 
-    {% if page_obj.paginator.num_pages > 1 %}
-    <div class="products__pagination">
-        {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__prev">⭠</a>
-        {% else %}
-            <button class="pagination__prev" disabled>⭠</button>
-        {% endif %}
+								<div class="product-card__content">
+									<h2 class="product-card__name">{{ product.name|truncatechars:20 }}</h2>
+									<p class="product-card__description">{{ product.description|truncatechars:50 }}</p>
+									<p class="product-card__price">
+	                  {% if product.discount %}
+                      <span class="product-card__price-current">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+                      <span class="product-card__price-old">{{ product.price }} ₽</span>
+	                  {% else %}
+                      <span class="product-card__price-current">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+	                  {% endif %}
+                  </p>
 
-        <ul class="pagination__pages">
-            {% for num in page_obj.paginator.page_range %}
-                {% if num >= page_obj.number|add:-2 and num <= page_obj.number|add:2 %}
-                    <li><a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__page {% if num == page_obj.number %}active{% endif %}">{{ num }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+							    {% if product.stock %}
+					          {% if not product.pk in cart_product_pks %}
+					            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
+					              {% csrf_token %}
+					              <button class="product-card__button button">{% trans "Add to Cart" %}</button>
+					            </form>
+					          {% else %}
+                      <button class="product-card__button button button--disabled" disabled>{% trans "In cart" %}</button>
+					          {% endif %}
+						      {% else %}
+						        <button class="product-card__button button button--disabled" disabled>{% trans "Not available" %}</button>
+						      {% endif %}
+								</div>
+							</article>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
 
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}" class="pagination__next">⭢</a>
-        {% else %}
-            <button class="pagination__next" disabled>⭢</button>
-        {% endif %}
-    </div>
-    {% endif %}
-
-    {% else %}
-    {% if search_query %}
-        <div class="no-products">
-            <p class="no-products__text">{% trans "No results found for your search" %}</p>
+			{% include "includes/pagination.html" with page_obj=page_obj search_query=search_query %}
+		{% else %}
+			{% if search_query %}
+        <div class="products__empty">
+          <p class="products__empty-text">{% trans "No results found for your search" %}</p>
         </div>
-    {% else %}
-        <div class="no-products">
-            <p class="no-products__text">{% trans "No products found in the catalog" %}</p>
+      {% else %}
+        <div class="products__empty">
+          <p class="products__empty-text">{% trans "No products found in the catalog" %}</p>
         </div>
-    {% endif %}
-    {% endif %}
-</section>
+      {% endif %}
+		{% endif %}
+	</section>
 {% endblock %}

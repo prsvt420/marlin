@@ -11,7 +11,7 @@
 }
 
 .categories__group-link {
-  width: max-content;
+  width: fit-content;
 }
 
 .categories__name {

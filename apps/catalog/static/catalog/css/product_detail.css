@@ -108,7 +108,7 @@
 .product__name {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xxl);
-  line-height: var(--line-height-none);
+  line-height: var(--line-height-snug);
 }
 
 .product__unit {
@@ -120,7 +120,6 @@
   display: flex;
   align-items: baseline;
   gap: var(--space-sm);
-  line-height: var(--line-height-none);
 }
 
 .product__price-current {
@@ -179,14 +178,13 @@
 
 .product__nutrition-list {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .product__nutrition-item {
   text-align: center;
   position: relative;
   flex: 1;
+  padding: 0 var(--space-xs);
 }
 
 .product__nutrition-label {

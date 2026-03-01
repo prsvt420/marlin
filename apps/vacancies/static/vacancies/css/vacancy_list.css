@@ -20,16 +20,11 @@
   display: flex;
   flex-direction: column;
   transition: transform var(--transition-duration) var(--transition-timing-function);
+  gap: var(--space-sm);
 }
 
 .vacancy-card:hover {
   transform: translateY(var(--translate-y));
-}
-
-.vacancy-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
 }
 
 .vacancy-card__title {

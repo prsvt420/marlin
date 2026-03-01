@@ -19,7 +19,7 @@
 				{% for vacancy in vacancies %}
 					<li class="vacancies__item">
 						<a href="{{ vacancy.get_absolute_url }}" aria-label="Marlin — {{ vacancy.title }}">
-							<article class="vacancy-card surface">
+							<article class="vacancy-card surface" aria-hidden="true">
 								<header class="vacancy-card__header">
 									<h1 class="vacancy-card__title">{{ vacancy.title }}</h1>
 						      {% if vacancy.formatted_salary %}
