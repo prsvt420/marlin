@@ -68,6 +68,6 @@ class ProductSelector:
         return (
             self.get_products(only_active=only_active)
             .filter(pk=product_pk)
-            .select_for_update()
+            .select_for_update(of=("self",))
             .first()
         )
