@@ -20,7 +20,7 @@
 				{% for product in products %}
 					<li class="products__item">
 						<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
-							<article class="product-card surface" aria-hidden="true">
+							<article class="product-card surface">
 								<div class="product-card__image-wrapper">
                   {% if product.product_images.first %}
                     <img class="product-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
@@ -29,18 +29,18 @@
                   {% endif %}
 
                   {% if product.discount %}
-                    <span class="product-card__discount">-{{ product.discount|floatformat:"-2u" }}%</span>
+                    <span class="product-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
                   {% endif %}
 
                   {% if product.stock <= 100 %}
                     {% if not product.stock %}
-                      <span class="product-card__stock product-card__stock--very-few">{% trans "not available" %}</span>
+                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--very-few">{% trans "not available" %}</span>
                     {% elif product.stock <= 15 %}
-                      <span class="product-card__stock product-card__stock--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
                     {% elif product.stock <= 50 %}
-                      <span class="product-card__stock product-card__stock--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
                     {% else %}
-                      <span class="product-card__stock product-card__stock--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
+                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
                     {% endif %}
                   {% endif %}
                 </div>

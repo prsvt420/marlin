@@ -39,29 +39,20 @@
   color: var(--text-color);
 }
 
-.vacancy-card__experience {
-  padding: var(--space-xxs) var(--space-xs);
-  border-radius: var(--radius-pill);
-  color: white;
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  width: max-content;
+.vacancy-card__experience-badge--no_exp {
+  background: var(--green-badge-gradient);
 }
 
-.vacancy-card__experience--no_exp {
-  background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+.vacancy-card__experience-badge--6_plus {
+  background: var(--red-badge-gradient);
 }
 
-.vacancy-card__experience--6_plus {
-  background: linear-gradient(135deg, #f44336 0%, #e57373 100%);
+.vacancy-card__experience-badge--3_6 {
+  background: var(--orange-badge-gradient);
 }
 
-.vacancy-card__experience--3_6 {
-  background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
-}
-
-.vacancy-card__experience--1_3 {
-  background: linear-gradient(135deg, #2196F3 0%, #64b5f6 100%);
+.vacancy-card__experience-badge--1_3 {
+  background: var(--blue-badge-gradient);
 }
 
 .vacancy-card__location {
