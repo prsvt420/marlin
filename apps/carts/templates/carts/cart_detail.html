@@ -1,5 +1,4 @@
-{% extends 'legacy/base.html' %}
-
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{% trans "Cart" %}{% endblock %}
@@ -8,135 +7,151 @@
 <link rel="stylesheet" href="{% static 'carts/css/cart_detail.css' %}">
 {% endblock %}
 
+{% block mix %}main--spaced{% endblock %}
+
 {% block content %}
-<section class="hero">
-    <div class="hero__content">
-        <h2 class="hero__title">{% trans "Cart" %}.</h2>
-        <p class="hero__subtitle">{% trans "All selected products are collected in one place." %}</p>
-    </div>
-</section>
+	{% include "includes/hero.html" with title=_("Cart.") description=_("All selected products are collected in one place.") %}
 
-<section class="cart">
-    {% if cart.cart_items.exists %}
-        <div class="cart__items">
-            <p class="cart__count">{% trans "In cart" %} {{ cart.formatted_total_quantity }}.</p>
-            {% for cart_item in cart.cart_items.all %}
-                {% if cart_item.product.is_active and cart_item.product.stock > 0 %}
-                    <a href="{{ cart_item.product.get_absolute_url }}">
-                        <article class="cart-item-card">
-                            <div class="cart-item-card__image">
-                                {% if cart_item.product.product_images.first %}
-                                    <img src="{{ cart_item.product.product_images.first.image_path.url }}"
-                                        alt="{{ cart_item.product.product_images.first.alt_text }}" draggable="false">
-                                {% else %}
-                                    <img src="{% static 'catalog/img/default-product-image.jpg' %}"
-                                        alt="{% trans 'No image available' %}" draggable="false">
-                                {% endif %}
+	<section class="cart {% if not cart.cart_items.exists %}cart--centered{% endif %}">
+		{% if cart.cart_items.exists %}
+			<div class="cart__content">
+				<p class="cart__count">{% trans "In cart" %} {{ cart.formatted_total_quantity }}.</p>
 
+				<ul class="cart__list">
+					{% for cart_item in cart.cart_items.all %}
+						{% with product=cart_item.product %}
+							{% if product.is_active and product.stock > 0 %}
+								<li class="cart__item">
+									<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
+										<article class="cart-item-card surface">
+											<div class="cart-item-card__image-wrapper">
+			                  {% if product.product_images.first %}
+			                    <img class="cart-item-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
+			                  {% else %}
+			                    <img class="cart-item-card__image" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
+			                  {% endif %}
 
-                                {% if cart_item.product.discount %}
-                                    <span class="cart-item-card__discount">-{{ cart_item.product.discount|floatformat:"-2u" }}%</span>
-                                {% endif %}
+			                  {% if product.discount %}
+			                    <span class="cart-item-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
+			                  {% endif %}
+											</div>
 
-                                {% if cart_item.product.stock <= 100 %}
-                                    {% if not cart_item.product.stock %}
-                                        <span class="cart-item-card__stock cart-item-card__stock--very-few">{% trans "not available" %}</span>
-                                    {% elif cart_item.product.stock <= 15 %}
-                                        <span class="cart-item-card__stock cart-item-card__stock--few">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                    {% elif cart_item.product.stock <= 50 %}
-                                        <span class="cart-item-card__stock cart-item-card__stock--enough">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                    {% else %}
-                                        <span class="cart-item-card__stock cart-item-card__stock--many">{% blocktrans with stock=cart_item.product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                                    {% endif %}
-                                {% endif %}
-                            </div>
-                            <div class="cart-item-card__content">
-                                <h3 class="cart-item-card__title">{{ cart_item.product.name }}</h3>
-                                <div class="cart-item-card__quantity">
-                                    <div class="cart-item-card__quantity-controls">
-                                        {% if cart_item.quantity > 1 %}
-                                            <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post">
-                                                {% csrf_token %}
-                                                <button type="submit" name="action" value="decrement" class="cart-item-card__quantity-button">−</button>
-                                            </form>
-                                        {% else %}
-                                            <button class="cart-item-card__quantity-button" disabled>−</button>
-                                        {% endif %}
-
-                                        <span class="cart-item-card__quantity-value">{{ cart_item.quantity }}</span>
-
-                                        {% if cart_item.quantity < cart_item.product.stock %}
-                                            <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post">
-                                                {% csrf_token %}
-                                                <button type="submit" name="action" value="increment" class="cart-item-card__quantity-button">+</button>
-                                            </form>
-                                        {% else %}
-                                            <button class="cart-item-card__quantity-button" disabled>+</button>
-                                        {% endif %}
-                                    </div>
-                                    <p class="cart-item-card__stock-limit">{% trans "up to" %} {{ cart_item.product.stock }} {{ cart_item.product.get_unit_type_display }}</p>
-                                </div>
-                                <div class="cart-item-card__price">
-                                    <p class="cart-item-card__current-price">{{ cart_item.total_price }} ₽</p>
-                                    <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
-                                </div>
-                                <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post">
-                                    {% csrf_token %}
-                                    <button type="submit" class="cart__button">{% trans "Delete" %}</button>
-                                </form>
-                            </div>
-                        </article>
-                    </a>
-                {% else %}
-                    <article class="cart-item-card">
-                        <div class="cart-item-card__image">
-                            {% if cart_item.product.product_images.first %}
-                                <img src="{{ cart_item.product.product_images.first.image_path.url }}"
-                                    alt="{{ cart_item.product.product_images.first.alt_text }}" draggable="false">
-                            {% else %}
-                                <img src="{% static 'catalog/img/default-product-image.jpg' %}"
-                                    alt="{% trans 'No image available' %}" draggable="false">
-                            {% endif %}
-                        </div>
-                        <div class="cart-item-card__content">
-                            <h3 class="cart-item-card__title">{{ cart_item.product.name }}</h3>
-                            <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post">
+											<div class="cart-item-card__content">
+												<h2 class="cart-item-card__title">{{ cart_item.product.name }}</h2>
+                        <div class="cart-item-card__quantity">
+	                        <div class="cart-item-card__quantity-buttons">
+		                        {% if cart_item.quantity > 1 %}
+                              <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post" novalidate>
                                 {% csrf_token %}
-                                <button type="submit" class="cart__button">{% trans "Delete" %}</button>
-                            </form>
-                        </div>
-                    </article>
-                {% endif %}
-            {% endfor %}
-            <form action="{% url 'carts:clear' %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="cart__button">{% trans "Clear" %}</button>
-            </form>
-        </div>
-        <div class="cart__summary">
-            <p class="cart__summary-row cart__summary-row--total-price">
-                <span>{% trans "Total" %}</span>
-                <span>{{ cart_prices.total_price }} ₽</span>
-            </p>
-            <p class="cart__summary-row">
-                <span>{% trans "Products" %}</span>
-                <span>{{ cart_prices.products_total_price }} ₽</span>
-            </p>
-            <p class="cart__summary-row">
-                <span>{% trans "Delivery" %}</span>
-                <span>{% trans "Free" %}</span>
-            </p>
+                                <button class="cart-item-card__quantity-button button" type="submit" name="action" value="decrement">−</button>
+                              </form>
+                            {% else %}
+                              <button class="cart-item-card__quantity-button button button--disabled" disabled>−</button>
+                            {% endif %}
 
-            <span class="cart__summary-bottom-border">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 15">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M432 0H0V15H8C8 10.5817 11.5817 7 16 7C20.4183 7 24 10.5817 24 15H33C33 10.5817 36.5817 7 41 7C45.4183 7 49 10.5817 49 15H58C58 10.5817 61.5817 7 66 7C70.4183 7 74 10.5817 74 15H83C83 10.5817 86.5817 7 91 7C95.4183 7 99 10.5817 99 15H108C108 10.5817 111.582 7 116 7C120.418 7 124 10.5817 124 15H133C133 10.5817 136.582 7 141 7C145.418 7 149 10.5817 149 15H158C158 10.5817 161.582 7 166 7C170.418 7 174 10.5817 174 15H183C183 10.5817 186.582 7 191 7C195.418 7 199 10.5817 199 15H208C208 10.5817 211.582 7 216 7C220.418 7 224 10.5817 224 15H233C233 10.5817 236.582 7 241 7C245.418 7 249 10.5817 249 15H258C258 10.5817 261.582 7 266 7C270.418 7 274 10.5817 274 15H283C283 10.5817 286.582 7 291 7C295.418 7 299 10.5817 299 15H308C308 10.5817 311.582 7 316 7C320.418 7 324 10.5817 324 15H333C333 10.5817 336.582 7 341 7C345.418 7 349 10.5817 349 15H358C358 10.5817 361.582 7 366 7C370.418 7 374 10.5817 374 15H383C383 10.5817 386.582 7 391 7C395.418 7 399 10.5817 399 15H408C408 10.5817 411.582 7 416 7C420.418 7 424 10.5817 424 15H432V0Z"></path>
-                </svg>
-            </span>
-        </div>
-    {% else %}
-        <div class="no-cart-items">
-            <p class="no-cart-items__text">{% trans "Your cart is empty" %}</p>
-        </div>
-    {% endif %}
-</section>
+		                        <p class="cart-item-card__quantity-value">{{ cart_item.quantity }}</p>
+
+                            {% if cart_item.quantity < cart_item.product.stock %}
+                              <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+                                {% csrf_token %}
+                                <button class="cart-item-card__quantity-button button" type="submit" name="action" value="increment">+</button>
+                              </form>
+                            {% else %}
+                              <button class="cart-item-card__quantity-button button button--disabled" disabled>+</button>
+                            {% endif %}
+                          </div>
+                          <p class="cart-item-card__quantity-limit">{% trans "up to" %} {{ cart_item.product.stock }} {{ cart_item.product.get_unit_type_display }}</p>
+                        </div>
+                        <div class="cart-item-card__price">
+                          <p class="cart-item-card__price-current">{{ cart_item.total_price }} ₽</p>
+                          <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
+                        </div>
+                        <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+                          {% csrf_token %}
+                          <button class="cart__button button cart__button--delete-cart-item" type="submit">{% trans "Delete" %}</button>
+                        </form>
+											</div>
+										</article>
+									</a>
+								</li>
+							{% else %}
+								<li class="cart__item">
+										<article class="cart-item-card cart-item-card--unavailable surface">
+											<div class="cart-item-card__image-wrapper">
+			                  {% if product.product_images.first %}
+			                    <img class="cart-item-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
+			                  {% else %}
+			                    <img class="cart-item-card__image" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
+			                  {% endif %}
+											</div>
+
+											<div class="cart-item-card__content">
+												<h2 class="cart-item-card__title">{{ cart_item.product.name }}</h2>
+                        <div class="cart-item-card__quantity">
+	                        <div class="cart-item-card__quantity-buttons">
+                            <button class="cart-item-card__quantity-button button button--disabled" disabled>−</button>
+		                        <p class="cart-item-card__quantity-value">0</p>
+                            <button class="cart-item-card__quantity-button button button--disabled" disabled>+</button>
+                          </div>
+                          <p class="cart-item-card__quantity-limit">{% trans "up to" %} 0 {{ cart_item.product.get_unit_type_display }}</p>
+                        </div>
+                        <div class="cart-item-card__price">
+                          <p class="cart-item-card__price-current">{{ cart_item.total_price }} ₽</p>
+                          <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
+                        </div>
+                        <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+                          {% csrf_token %}
+                          <button class="cart__button button cart__button--delete-cart-item" type="submit">{% trans "Delete" %}</button>
+                        </form>
+											</div>
+										</article>
+								</li>
+							{% endif %}
+						{% endwith %}
+					{% endfor %}
+				</ul>
+
+        <form action="{% url 'carts:clear' %}" method="post" novalidate>
+          {% csrf_token %}
+          <button class="cart__button button cart__button--clear" type="submit">{% trans "Clear" %}</button>
+        </form>
+			</div>
+
+			<div class="cart__summary surface">
+				<ul class="cart__summary-list">
+					<li class="cart__summary-item cart__summary-item--total-price">
+						<p class="cart__summary-label">{% trans "Total" %}</p>
+						<p class="cart__summary-value">{{ cart_prices.total_price }} ₽</p>
+					</li>
+					<li class="cart__summary-item">
+						<p class="cart__summary-label">{% trans "Products" %}</p>
+						<p class="cart__summary-value">{{ cart_prices.products_total_price }} ₽</p>
+					</li>
+					<li class="cart__summary-item">
+						<p class="cart__summary-label">{% trans "Assembly" %}</p>
+						<p class="cart__summary-value">{% trans "Free" %}</p>
+					</li>
+					<li class="cart__summary-item">
+						<p class="cart__summary-label">{% trans "Delivery" %}</p>
+						<p class="cart__summary-value">{% trans "Free" %}</p>
+					</li>
+				</ul>
+
+        <form action="#" method="post" novalidate>
+          {% csrf_token %}
+          <button class="cart__button button cart__button--checkout" type="submit">{% trans "Go to checkout" %}</button>
+        </form>
+
+				<span class="cart__summary-bottom-border">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 15">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M432 0H0V15H8C8 10.5817 11.5817 7 16 7C20.4183 7 24 10.5817 24 15H33C33 10.5817 36.5817 7 41 7C45.4183 7 49 10.5817 49 15H58C58 10.5817 61.5817 7 66 7C70.4183 7 74 10.5817 74 15H83C83 10.5817 86.5817 7 91 7C95.4183 7 99 10.5817 99 15H108C108 10.5817 111.582 7 116 7C120.418 7 124 10.5817 124 15H133C133 10.5817 136.582 7 141 7C145.418 7 149 10.5817 149 15H158C158 10.5817 161.582 7 166 7C170.418 7 174 10.5817 174 15H183C183 10.5817 186.582 7 191 7C195.418 7 199 10.5817 199 15H208C208 10.5817 211.582 7 216 7C220.418 7 224 10.5817 224 15H233C233 10.5817 236.582 7 241 7C245.418 7 249 10.5817 249 15H258C258 10.5817 261.582 7 266 7C270.418 7 274 10.5817 274 15H283C283 10.5817 286.582 7 291 7C295.418 7 299 10.5817 299 15H308C308 10.5817 311.582 7 316 7C320.418 7 324 10.5817 324 15H333C333 10.5817 336.582 7 341 7C345.418 7 349 10.5817 349 15H358C358 10.5817 361.582 7 366 7C370.418 7 374 10.5817 374 15H383C383 10.5817 386.582 7 391 7C395.418 7 399 10.5817 399 15H408C408 10.5817 411.582 7 416 7C420.418 7 424 10.5817 424 15H432V0Z"></path>
+          </svg>
+        </span>
+			</div>
+		{% else %}
+      <div class="cart__empty">
+        <p class="cart__empty-text">{% trans "Your cart is empty" %}</p>
+      </div>
+		{% endif %}
+	</section>
 {% endblock %}
