@@ -5,6 +5,7 @@
 
 {% block css %}
 	<link rel="stylesheet" href="{% static 'catalog/css/components/hero.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/components/stock.css' %}">
 	<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
 {% endblock %}
 
@@ -32,22 +33,11 @@
                     <span class="product-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
                   {% endif %}
 
-                  {% if product.stock <= 100 %}
-                    {% if not product.stock %}
-                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--very-few">{% trans "not available" %}</span>
-                    {% elif product.stock <= 15 %}
-                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                    {% elif product.stock <= 50 %}
-                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                    {% else %}
-                      <span class="product-card__stock-badge badge badge--absolute product-card__stock-badge--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-                    {% endif %}
-                  {% endif %}
+									{% include "catalog/includes/stock.html" with stock=product.stock %}
                 </div>
 
 								<div class="product-card__content">
 									<h2 class="product-card__name">{{ product.name|truncatechars:20 }}</h2>
-									<p class="product-card__description">{{ product.description|truncatechars:50 }}</p>
 									<p class="product-card__price">
 	                  {% if product.discount %}
                       <span class="product-card__price-current">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>

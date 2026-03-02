@@ -5,6 +5,7 @@
 
 {% block css %}
 	<link rel="stylesheet" href="{% static 'catalog/css/product_detail.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/components/stock.css' %}">
 	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
 {% endblock %}
 
@@ -37,17 +38,7 @@
         <span class="product__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
       {% endif %}
 
-      {% if product.stock <= 100 %}
-        {% if not product.stock %}
-          <span class="product__stock-badge badge badge--absolute product__stock-badge--very-few">{% trans "not available" %}</span>
-        {% elif product.stock <= 15 %}
-          <span class="product__stock-badge badge badge--absolute product__stock-badge--few">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-        {% elif product.stock <= 50 %}
-          <span class="product__stock-badge badge badge--absolute product__stock-badge--enough">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-        {% else %}
-          <span class="product__stock-badge badge badge--absolute product__stock-badge--many">{% blocktrans with stock=product.stock %}{{ stock }} left{% endblocktrans %}</span>
-        {% endif %}
-      {% endif %}
+			{% include "catalog/includes/stock.html" with stock=product.stock %}
     </div>
 
     <div class="product__info">

@@ -1,0 +1,13 @@
+{% load i18n %}
+
+{% if stock <= 100 %}
+  {% if not stock %}
+    <span class="product-stock-badge badge badge--absolute product-stock-badge--very-few">{% trans "not available" %}</span>
+  {% elif stock <= 15 %}
+    <span class="product-stock-badge badge badge--absolute product-stock-badge--few">{% blocktrans %}{{ stock }} left{% endblocktrans %}</span>
+  {% elif stock <= 50 %}
+    <span class="product-stock-badge badge badge--absolute product-stock-badge--enough">{% blocktrans %}{{ stock }} left{% endblocktrans %}</span>
+  {% else %}
+    <span class="product-stock-badge badge badge--absolute product-stock-badge--many">{% blocktrans %}{{ stock }} left{% endblocktrans %}</span>
+  {% endif %}
+{% endif %}

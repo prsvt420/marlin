@@ -63,33 +63,10 @@
   object-fit: contain;
 }
 
-.product__discount-badge, .product__stock-badge {
-  top: 15px;
-}
-
 .product__discount-badge {
+  top: 15px;
   left: 15px;
   background: var(--red-badge-gradient);
-}
-
-.product__stock-badge {
-  right: 15px;
-}
-
-.product__stock-badge--many {
-  background: var(--green-badge-gradient);
-}
-
-.product__stock-badge--very-few {
-  background: var(--red-badge-gradient);
-}
-
-.product__stock-badge--few {
-  background: var(--orange-badge-gradient);
-}
-
-.product__stock-badge--enough {
-  background: var(--blue-badge-gradient);
 }
 
 .product__info {
