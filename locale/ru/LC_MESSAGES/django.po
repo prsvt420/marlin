@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-03 17:27+0800\n"
+"POT-Creation-Date: 2026-03-03 23:13+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -1370,7 +1370,7 @@ msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
 #: .\apps\catalog\templates\catalog\product_list.html:73
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:52
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:59
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
@@ -1585,19 +1585,19 @@ msgstr "Зарплата"
 msgid "Vacancies"
 msgstr "Вакансии"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:6
+#: .\apps\vacancies\choices\work_experience_choices.py:6
 msgid "No experience"
 msgstr "Без опыта"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:7
+#: .\apps\vacancies\choices\work_experience_choices.py:7
 msgid "From 1 to 3 years"
 msgstr "От 1 года до 3 лет"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:8
+#: .\apps\vacancies\choices\work_experience_choices.py:8
 msgid "From 3 to 6 years"
 msgstr "От 3 до 6 лет"
 
-#: .\apps\vacancies\choices\experience_level_choices.py:9
+#: .\apps\vacancies\choices\work_experience_choices.py:9
 msgid "More than 6 years"
 msgstr "Более 6 лет"
 
@@ -1616,6 +1616,28 @@ msgstr "Гибкий график"
 #: .\apps\vacancies\choices\work_schedule_choices.py:9
 msgid "Remote work"
 msgstr "Удалённая работа"
+
+#: .\apps\vacancies\filters\vacancy_filter.py:13
+msgid "Search"
+msgstr "Поиск"
+
+#: .\apps\vacancies\filters\vacancy_filter.py:17
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:32
+msgid "Work experience"
+msgstr "Опыт работы"
+
+#: .\apps\vacancies\filters\vacancy_filter.py:21
+#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:28
+msgid "Work schedule"
+msgstr "График работы"
+
+#: .\apps\vacancies\filters\vacancy_filter.py:25
+msgid "Professional area"
+msgstr "Профессиональная область"
+
+#: .\apps\vacancies\filters\vacancy_filter.py:29
+msgid "City"
+msgstr "Город"
 
 #: .\apps\vacancies\models\city_model.py:11
 msgid "City name."
@@ -1705,12 +1727,12 @@ msgid "Expected work schedule."
 msgstr "Предполагаемый график работы."
 
 #: .\apps\vacancies\models\vacancy_model.py:52
-msgid "experience level"
-msgstr "уровень опыта"
+msgid "work experience"
+msgstr "опыт работы"
 
 #: .\apps\vacancies\models\vacancy_model.py:53
-msgid "Required work experience level."
-msgstr "Требуемый уровень опыта работы."
+msgid "Required work experience."
+msgstr "Требуемый опыт работы."
 
 #: .\apps\vacancies\models\vacancy_model.py:56
 msgid "salary from"
@@ -1767,43 +1789,43 @@ msgstr "до %(salary_to)s"
 msgid "Maximum salary must be greater than minimum salary."
 msgstr "Максимальная заработная плата должна быть больше минимальной."
 
+#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:47
+msgid "Apply"
+msgstr "Применить"
+
+#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:49
+msgid "Reset"
+msgstr "Сбросить"
+
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:26
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:29
 msgid "Salary before taxes"
 msgstr "Зарплата до вычета налогов"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:26
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:29
 msgid "before taxes"
 msgstr "до вычета налогов"
 
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:28
-msgid "Work schedule"
-msgstr "График работы"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:32
-msgid "Work experience"
-msgstr "Опыт работы"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:14
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
 msgid "Working in Marlin."
 msgstr "Работа в Marlin."
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:14
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
 msgid "Join our team and help deliver fresh produce to thousands of customers."
 msgstr ""
 "Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты "
 "тысячам клиентов."
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:14
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
 msgid "Find a vacancy, e.g. — courier"
 msgstr "Найти вакансию, например — курьер"
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:39
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:46
 msgid "More details"
 msgstr "Подробнее"
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:56
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:63
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 

@@ -1,0 +1,53 @@
+{% load i18n %}
+
+<div class="vacancy-filters surface">
+	<form class="form" action="{% url 'vacancies:list' %}" method="get" novalidate>
+		<div class="form__group">
+			<p class="form__label">{{ filter.form.city.label }}</p>
+			{% for value, label in filter.form.city.field.choices %}
+				<label class="form__label form__label-small">
+					<input class="input--checkbox" name="city" type="checkbox" value="{{ value }}" {% if value|stringformat:"s" in filter.form.city.value|stringformat:"s" %}checked{% endif %}>
+					<span class="input--span-checkbox"></span>
+					{{ label }}
+				</label>
+			{% endfor %}
+		</div>
+		<div class="form__group">
+			<p class="form__label">{{ filter.form.professional_area.label }}</p>
+			{% for value, label in filter.form.professional_area.field.choices %}
+				<label class="form__label form__label-small">
+					<input class="input--checkbox" name="professional_area" type="checkbox" value="{{ value }}" {% if value|stringformat:"s" in filter.form.professional_area.value|stringformat:"s" %}checked{% endif %}>
+					<span class="input--span-checkbox"></span>
+					{{ label }}
+				</label>
+			{% endfor %}
+		</div>
+		<div class="form__group">
+			<p class="form__label">{{ filter.form.work_experience.label }}</p>
+			{% for value, label in filter.form.work_experience.field.choices %}
+				<label class="form__label form__label-small">
+					<input class="input--checkbox" name="work_experience" type="checkbox" value="{{ value }}" {% if value in filter.form.work_experience.value %}checked{% endif %}>
+					<span class="input--span-checkbox"></span>
+					{{ label }}
+				</label>
+			{% endfor %}
+		</div>
+		<div class="form__group">
+			<p class="form__label">{{ filter.form.work_schedule.label }}</p>
+			{% for value, label in filter.form.work_schedule.field.choices %}
+				<label class="form__label form__label-small">
+					<input class="input--checkbox" name="work_schedule" type="checkbox" value="{{ value }}" {% if value in filter.form.work_schedule.value %}checked{% endif %}>
+					<span class="input--span-checkbox"></span>
+					{{ label }}
+				</label>
+			{% endfor %}
+		</div>
+
+		<div class="vacancy-filters__buttons">
+			<button class="vacancy-filters__button button" type="submit">{% trans "Apply" %}</button>
+			{% if filter.form.has_changed %}
+				<a class="vacancy-filters__button button button--light" href="{% url 'vacancies:list' %}">{% trans "Reset" %}</a>
+			{% endif %}
+		</div>
+	</form>
+</div>

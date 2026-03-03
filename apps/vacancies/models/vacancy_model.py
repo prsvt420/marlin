@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django_stubs_ext import StrOrPromise
 
-from apps.vacancies.choices import ExperienceLevel, WorkSchedule
+from apps.vacancies.choices import WorkExperience, WorkSchedule
 
 
 class Vacancy(models.Model):  # type: ignore
@@ -45,12 +45,12 @@ class Vacancy(models.Model):  # type: ignore
         verbose_name=_("work schedule"),
         help_text=_("Expected work schedule."),
     )
-    experience_level = models.CharField(
+    work_experience = models.CharField(
         max_length=10,
-        choices=ExperienceLevel.choices,
-        default=ExperienceLevel.NO_EXPERIENCE,
-        verbose_name=_("experience level"),
-        help_text=_("Required work experience level."),
+        choices=WorkExperience.choices,
+        default=WorkExperience.NO_EXPERIENCE,
+        verbose_name=_("work experience"),
+        help_text=_("Required work experience."),
     )
     salary_from = models.PositiveIntegerField(
         verbose_name=_("salary from"),

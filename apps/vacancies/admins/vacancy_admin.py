@@ -21,7 +21,7 @@ class VacancyAdmin(TranslationAdmin):
     list_filter = (
         "professional_area__name",
         "is_active",
-        "experience_level",
+        "work_experience",
         "work_schedule",
         "city",
     )
@@ -35,7 +35,7 @@ class VacancyAdmin(TranslationAdmin):
         "city",
         "salary_from",
         "salary_to",
-        "experience_level",
+        "work_experience",
         "work_schedule",
         "is_active",
         ("created_at", "updated_at"),
