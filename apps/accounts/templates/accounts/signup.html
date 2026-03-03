@@ -67,9 +67,7 @@
 	    <label class="form__label form__label-small">
 		    <input class="input--checkbox" name="agreement" id="agreement" type="checkbox">
         <span class="input--span-checkbox"></span>
-		    {% blocktrans %}
-          Я согласен с <a class="form__link link" href="{{ terms_url }}">Пользовательским соглашением</a> и <a class="form__link link" href="{{ privacy_url }}">Политикой конфиденциальности</a>
-	      {% endblocktrans %}
+		    {% blocktrans %}I agree to the <a class="form__link link" href="{{ terms_url }}">Terms</a> and the <a class="form__link link" href="{{ privacy_url }}">Privacy Policy</a>{% endblocktrans %}
 		    {% if form.agreement.errors %}<sup class="form__error">*{{ form.agreement.errors.0 }}</sup>{% endif %}
 	    </label>
     </div>
