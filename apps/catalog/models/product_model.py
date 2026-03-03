@@ -56,6 +56,17 @@ class Product(models.Model):  # type: ignore
         verbose_name=_("final price"),
         help_text=_("Product final price (autocalculated)."),
     )
+    is_available = models.GeneratedField(
+        expression=models.Case(
+            models.When(is_active=True, stock__gt=0, then=True),
+            default=False,
+            output_field=models.BooleanField(),
+        ),
+        output_field=models.BooleanField(),
+        db_persist=True,
+        verbose_name=_("availability"),
+        help_text=_("Product availability (autocalculated)."),
+    )
     category = models.ForeignKey(
         to="Category",
         on_delete=models.CASCADE,

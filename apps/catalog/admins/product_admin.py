@@ -25,6 +25,7 @@ class ProductAdmin(TranslationAdmin):
         "final_price",
         "stock",
         "is_active",
+        "is_available",
     )
     list_display_links = ("name",)
     list_editable = ("is_active", "discount", "stock")
@@ -39,6 +40,7 @@ class ProductAdmin(TranslationAdmin):
         "created_at",
         "updated_at",
         "final_price",
+        "is_available",
     )
     inlines = (
         ProductImageInline,
@@ -57,6 +59,7 @@ class ProductAdmin(TranslationAdmin):
         "sku",
         "stock",
         "is_active",
+        "is_available",
         ("created_at", "updated_at"),
     )
     autocomplete_fields = ("category",)

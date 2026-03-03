@@ -15,12 +15,12 @@
 	<section class="cart {% if not cart.cart_items.exists %}cart--centered{% endif %}">
 		{% if cart.cart_items.exists %}
 			<div class="cart__content">
-				<p class="cart__count">{% trans "In cart" %} {{ cart.formatted_total_quantity }}.</p>
+				{% if available_cart_items %}
+					<p class="cart__count">{% blocktrans count count_cart_items=available_cart_items|length %}In cart {{ count_cart_items }} available product.{% plural %}In cart {{ count_cart_items }} available products.{% endblocktrans %}</p>
 
-				<ul class="cart__list">
-					{% for cart_item in cart.cart_items.all %}
-						{% with product=cart_item.product %}
-							{% if product.is_active and product.stock > 0 %}
+					<ul class="cart__list">
+						{% for cart_item in available_cart_items %}
+							{% with product=cart_item.product %}
 								<li class="cart__item">
 									<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
 										<article class="cart-item-card surface">
@@ -74,7 +74,17 @@
 										</article>
 									</a>
 								</li>
-							{% else %}
+							{% endwith %}
+						{% endfor %}
+					</ul>
+				{% endif %}
+
+				{% if unavailable_cart_items %}
+					<p class="cart__count">{% blocktrans count count_cart_items=unavailable_cart_items|length %}In cart {{ count_cart_items }} unavailable product.{% plural %}In cart {{ count_cart_items }} unavailable products.{% endblocktrans %}</p>
+
+					<ul class="cart__list">
+						{% for cart_item in unavailable_cart_items %}
+							{% with product=cart_item.product %}
 								<li class="cart__item">
 										<article class="cart-item-card cart-item-card--unavailable surface">
 											<div class="cart-item-card__image-wrapper">
@@ -87,18 +97,6 @@
 
 											<div class="cart-item-card__content">
 												<h2 class="cart-item-card__title">{{ cart_item.product.name }}</h2>
-                        <div class="cart-item-card__quantity">
-	                        <div class="cart-item-card__quantity-buttons">
-                            <button class="cart-item-card__quantity-button button button--disabled" disabled>−</button>
-		                        <p class="cart-item-card__quantity-value">0</p>
-                            <button class="cart-item-card__quantity-button button button--disabled" disabled>+</button>
-                          </div>
-                          <p class="cart-item-card__quantity-limit">{% trans "up to" %} 0 {{ cart_item.product.get_unit_type_display }}</p>
-                        </div>
-                        <div class="cart-item-card__price">
-                          <p class="cart-item-card__price-current">{{ cart_item.total_price }} ₽</p>
-                          <p class="cart-item-card__price-summary">{{ cart_item.quantity }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }}</p>
-                        </div>
                         <form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post" novalidate>
                           {% csrf_token %}
                           <button class="cart__button button cart__button--delete-cart-item" type="submit">{% trans "Delete" %}</button>
@@ -106,10 +104,10 @@
 											</div>
 										</article>
 								</li>
-							{% endif %}
-						{% endwith %}
-					{% endfor %}
-				</ul>
+							{% endwith %}
+						{% endfor %}
+					</ul>
+				{% endif %}
 
         <form action="{% url 'carts:clear' %}" method="post" novalidate>
           {% csrf_token %}
@@ -121,7 +119,7 @@
 				<ul class="cart__summary-list">
 					<li class="cart__summary-item cart__summary-item--total-price">
 						<p class="cart__summary-label">{% trans "Total" %}</p>
-						<p class="cart__summary-value">{{ cart_prices.total_price }} ₽</p>
+						<p class="cart__summary-value cart__summary-value--total-price">{{ cart_prices.total_price }} ₽</p>
 					</li>
 					<li class="cart__summary-item">
 						<p class="cart__summary-label">{% trans "Products" %}</p>

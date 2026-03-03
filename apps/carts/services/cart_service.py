@@ -36,14 +36,14 @@ class CartService:
 
     @transaction.atomic
     def clear_cart(self, *, cart: Cart) -> None:
-        cart_items: QuerySet[CartItem] = (
-            CartSelector().get_cart_items_for_cart(cart=cart)
+        cart_items: QuerySet[CartItem] = CartSelector().get_cart_items(
+            cart=cart
         )
         cart_items.delete()
 
     @transaction.atomic
     def delete_cart_item(self, *, cart: Cart, cart_item_pk: int) -> None:
-        cart_item: Optional[CartItem] = CartSelector().get_cart_item_for_cart(
+        cart_item: Optional[CartItem] = CartSelector().get_cart_item(
             cart=cart,
             cart_item_pk=cart_item_pk,
         )
@@ -83,7 +83,7 @@ class CartService:
     def adjust_cart_item_quantity(
         self, *, cart: Cart, cart_item_pk: int, delta: int
     ) -> CartItem:
-        cart_item: Optional[CartItem] = CartSelector().get_cart_item_for_cart(
+        cart_item: Optional[CartItem] = CartSelector().get_cart_item(
             cart=cart,
             cart_item_pk=cart_item_pk,
         )
@@ -113,8 +113,8 @@ class CartService:
 
     @transaction.atomic
     def has_unavailable_cart_items(self, *, cart: Cart) -> bool:
-        cart_items: QuerySet[CartItem] = (
-            CartSelector().get_cart_items_for_cart(cart=cart)
+        cart_items: QuerySet[CartItem] = CartSelector().get_cart_items(
+            cart=cart
         )
 
         for cart_item in cart_items:
@@ -129,8 +129,8 @@ class CartService:
     def validate_cart_item_quantities(self, *, cart: Cart) -> bool:
         was_modified: bool = False
 
-        cart_items: QuerySet[CartItem] = (
-            CartSelector().get_cart_items_for_cart(cart=cart)
+        cart_items: QuerySet[CartItem] = CartSelector().get_cart_items(
+            cart=cart
         )
 
         for cart_item in cart_items:

@@ -59,6 +59,7 @@
 
 .cart-item-card__image {
   width: 150px;
+  height: 120px;
   object-fit: cover;
 }
 
@@ -76,6 +77,7 @@
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   color: var(--text-color);
+  width: 30%;
 }
 
 .cart-item-card__quantity {
@@ -103,6 +105,7 @@
 .cart-item-card__quantity-value {
   font-weight: var(--font-weight-bold);
   color: var(--text-color);
+  font-size: var(--font-size-md);
 }
 
 .cart-item-card__quantity-limit {
@@ -152,13 +155,18 @@
   font-size: var(--font-size-md);
 }
 
-.cart__summary-item--total-price {
+.cart__summary-item--total-price,
+.cart__summary-value--total-price {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
 }
 
 .cart__summary-value {
   font-weight: var(--font-weight-semibold);
+}
+
+.cart__summary-value--total-price {
+  font-weight: var(--font-weight-bold);
 }
 
 .cart__button--checkout {

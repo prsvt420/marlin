@@ -1,5 +1,5 @@
 from decimal import ROUND_HALF_UP, Decimal
-from typing import Dict, Optional, Set
+from typing import Dict, List, Optional, Set
 
 from django.db.models import Prefetch, Q, QuerySet, Sum
 
@@ -11,23 +11,25 @@ from apps.catalog.selectors import ProductSelector
 
 class CartSelector:
 
-    def get_cart_items(self) -> QuerySet[CartItem]:
-        return CartItem.objects.prefetch_related(
+    def get_carts(self) -> QuerySet[Cart]:
+        return Cart.objects.prefetch_related(
             Prefetch(
-                lookup="product",
-                queryset=ProductSelector().get_products(only_active=False),
+                lookup="cart_items",
+                queryset=CartItem.objects.prefetch_related(
+                    Prefetch(
+                        lookup="product",
+                        queryset=ProductSelector().get_products(
+                            only_active=False
+                        ),
+                    )
+                ),
             )
         )
 
-    def get_carts(self) -> QuerySet[Cart]:
-        return Cart.objects.prefetch_related(
-            Prefetch(lookup="cart_items", queryset=self.get_cart_items())
-        )
-
-    def get_cart_items_for_cart(self, *, cart: Cart) -> QuerySet[CartItem]:
+    def get_cart_items(self, *, cart: Cart) -> QuerySet[CartItem]:
         return cart.cart_items.all()
 
-    def get_cart_item_for_cart(
+    def get_cart_item(
         self, *, cart: Cart, cart_item_pk: int
     ) -> Optional[CartItem]:
         return cart.cart_items.filter(pk=cart_item_pk).first()
@@ -47,9 +49,9 @@ class CartSelector:
         )
 
     def get_cart_products_total_price(self, *, cart: Cart) -> Decimal:
-        cart_items: QuerySet[CartItem] = self.get_cart_items_for_cart(
-            cart=cart
-        ).filter(product__is_active=True, product__stock__gt=0)
+        cart_items: QuerySet[CartItem] = self.get_cart_items(cart=cart).filter(
+            product__is_active=True, product__stock__gt=0
+        )
 
         total_price: Decimal = cart_items.aggregate(
             total_price=Sum(
@@ -76,3 +78,17 @@ class CartSelector:
         return cart.cart_items.filter(
             Q(product__is_active=False) | Q(product__stock__lte=0)
         ).exists()
+
+    def get_available_cart_items(self, *, cart: Cart) -> List[CartItem]:
+        return [
+            cart_item
+            for cart_item in cart.cart_items.all()
+            if cart_item.product.is_available
+        ]
+
+    def get_unavailable_cart_items(self, *, cart: Cart) -> List[CartItem]:
+        return [
+            cart_item
+            for cart_item in cart.cart_items.all()
+            if not cart_item.product.is_available
+        ]

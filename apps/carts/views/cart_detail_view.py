@@ -45,4 +45,10 @@ class CartDetailView(LoginRequiredMixin, DetailView):
         context["cart_prices"] = CartSelector().get_cart_prices(
             cart=self.object
         )
+        context["available_cart_items"] = (
+            CartSelector().get_available_cart_items(cart=self.object)
+        )
+        context["unavailable_cart_items"] = (
+            CartSelector().get_unavailable_cart_items(cart=self.object)
+        )
         return context
