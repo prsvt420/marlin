@@ -305,6 +305,19 @@ phonenumbers = [
 ]
 
 [[package]]
+name = "django-spurl"
+version = "0.6.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+    { name = "urlobject" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1e/f6/ed7efeff662ed0d4f8cbccf55f203933c0b8efe71480053604bf144b0755/django-spurl-0.6.8.tar.gz", hash = "sha256:a282ae3bcee523a28df1f4b33111c8e5ee4e14ac6104657d34823d9b2800d200", size = 14859, upload-time = "2021-11-15T02:58:44.665Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f6/0b/7a8ddcf124ec7d1216a758f57b5cefd68d5c6566fdf8181c2939b44434df/django_spurl-0.6.8-py3-none-any.whl", hash = "sha256:b3952752b90f78c67c69b9e57982101785d09db417cc6bc308f7b5985198c88a", size = 13694, upload-time = "2021-11-15T02:58:42.303Z" },
+]
+
+[[package]]
 name = "django-stubs"
 version = "5.2.5"
 source = { registry = "https://pypi.org/simple" }
@@ -589,6 +602,7 @@ dependencies = [
     { name = "django-ipware" },
     { name = "django-modeltranslation" },
     { name = "django-phonenumber-field", extra = ["phonenumbers"] },
+    { name = "django-spurl" },
     { name = "django-stubs" },
     { name = "django-user-agents" },
     { name = "docutils" },
@@ -631,6 +645,7 @@ requires-dist = [
     { name = "django-ipware", specifier = ">=7.0.1" },
     { name = "django-modeltranslation", specifier = ">=0.19.17" },
     { name = "django-phonenumber-field", extras = ["phonenumbers"], specifier = ">=8.4.0" },
+    { name = "django-spurl", specifier = ">=0.6.8" },
     { name = "django-stubs", specifier = ">=5.2.5" },
     { name = "django-user-agents", specifier = ">=0.4.0" },
     { name = "docutils", specifier = ">=0.22.2" },
@@ -1225,6 +1240,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
+]
+
+[[package]]
+name = "urlobject"
+version = "3.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/fd/163e6b835b9fabf9c3999f71c5f224daa9d68a38012cccd7ab2a2f861af9/urlobject-3.0.0.tar.gz", hash = "sha256:bfdfe70746d92a039a33e964959bb12cecd9807a434fdb7fef5f38e70a295818", size = 28237, upload-time = "2025-07-11T17:53:22.877Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ee/38/18c4bbe751a7357b3f6a33352e3af3305ad78f3e72ab7e3d667de4663ed9/urlobject-3.0.0-py3-none-any.whl", hash = "sha256:fd2465520d0a8c5ed983aa47518a2c5bcde0c276a4fd0eb28b0de5dcefd93b1e", size = 16261, upload-time = "2025-07-11T17:53:21.989Z" },
 ]
 
 [[package]]

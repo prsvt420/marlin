@@ -1,21 +1,23 @@
+{% load spurl %}
+
 {% if page_obj.paginator.num_pages > 1 %}
   <div class="pagination">
     {% if page_obj.has_previous %}
-        <a class="pagination__button button" href="?page={{ page_obj.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}">⭠</a>
+        <a class="pagination__button button" href="{% spurl path=request.get_full_path set_query='page={{ page_obj.previous_page_number }}' %}">⭠</a>
     {% endif %}
 
     <ul class="pagination__list">
-      {% for number in page_obj.paginator.page_range %}
-				{% if number >= page_obj.number|add:-1 and number <= page_obj.number|add:1 or page_obj.number <= 2 and number <= 3 or page_obj.number > page_obj.paginator.num_pages|add:-2 and number > page_obj.paginator.num_pages|add:-3 %}
+      {% for page_number in page_obj.paginator.page_range %}
+				{% if page_number >= page_obj.number|add:-1 and page_number <= page_obj.number|add:1 or page_obj.number <= 2 and page_number <= 3 or page_obj.number > page_obj.paginator.num_pages|add:-2 and page_number > page_obj.paginator.num_pages|add:-3 %}
 	        <li class="pagination__item">
-	          <a class="pagination__button button {% if number == page_obj.number %}pagination__button--active{% endif %}" href="?page={{ number }}{% if search_query %}&q={{ search_query }}{% endif %}">{{ number }}</a>
+	          <a class="pagination__button button {% if page_number == page_obj.number %}pagination__button--active{% endif %}" href="{% spurl path=request.get_full_path set_query='page={{ page_number }}' %}">{{ page_number }}</a>
           </li>
         {% endif %}
       {% endfor %}
     </ul>
 
     {% if page_obj.has_next %}
-      <a class="pagination__button button" href="?page={{ page_obj.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}">⭢</a>
+      <a class="pagination__button button" href="{% spurl path=request.get_full_path set_query='page={{ page_obj.next_page_number }}' %}">⭢</a>
     {% endif %}
   </div>
 {% endif %}

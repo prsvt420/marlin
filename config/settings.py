@@ -33,6 +33,7 @@ INSTALLED_APPS: List[str] = [
     "django_user_agents",
     "health_check",
     "compressor",
+    "spurl",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
