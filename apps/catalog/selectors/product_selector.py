@@ -18,8 +18,6 @@ class ProductSelector:
     def get_products(
         self,
         *,
-        search_query: Optional[str] = None,
-        order_field: Optional[str] = None,
         category_slug: Optional[str] = None,
         only_active: bool = True,
     ) -> QuerySet[Product]:
@@ -44,12 +42,6 @@ class ProductSelector:
                 Q(category__slug=category_slug)
                 | Q(category__parent__slug=category_slug),  # noqa: W503
             )
-
-        if search_query:
-            products = products.filter(name__icontains=search_query)
-
-        if order_field:
-            products = products.order_by(order_field)
 
         return products
 

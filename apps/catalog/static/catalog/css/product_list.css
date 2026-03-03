@@ -1,19 +1,16 @@
 .products {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--space-md);
   flex: 1
-}
-
-.products--centered {
-  align-items: center;
-  justify-content: center
 }
 
 .products__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: var(--space-md);
+  flex: 1;
+  align-content: start;
 }
 
 .product-card {
@@ -90,10 +87,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex: 1;
 }
 
 .products__empty-text {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .products {
+    flex-direction: column;
+  }
 }

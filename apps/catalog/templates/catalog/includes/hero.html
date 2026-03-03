@@ -7,7 +7,7 @@
 
     {% if search_url %}
       <form class="hero__search-form" method="get" action="{{ search_url }}">
-        <input class="hero__search input" name="q" value="{{ search_query|default_if_none:'' }}" autocomplete="off" placeholder="{{ search_placeholder }}">
+        <input class="hero__search input" name="q" value="{{ filter.form.q.value|default_if_none:'' }}" autocomplete="off" placeholder="{{ search_placeholder }}">
         <span class="hero__search-badge badge badge--absolute hero__search-badge--empty">{% trans "Enter query" %}</span>
 	      <span class="hero__search-badge badge badge--absolute hero__search-badge--typing">{% trans "Press Enter" %}</span>
       </form>

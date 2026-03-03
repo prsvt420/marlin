@@ -60,6 +60,46 @@
   display: block;
 }
 
+.input--radio {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: var(--z-index-back);
+}
+
+.input--span-radio {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--radius-pill);
+  margin-right: var(--space-xxs);
+  vertical-align: sub;
+  user-select: none;
+}
+
+.input--span-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--input-text-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  line-height: var(--line-height-none);
+}
+
+.input--radio:checked + .input--span-radio::before {
+  display: block;
+}
+
+
 .input::placeholder {
   color: var(--input-placeholder-color);
   opacity: 1

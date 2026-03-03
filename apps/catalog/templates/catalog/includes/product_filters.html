@@ -1,0 +1,23 @@
+{% load i18n %}
+
+<div class="product-filters surface">
+	<form class="form" action="{% url 'catalog:product-list' category_slug=category.slug %}" method="get" novalidate>
+		<div class="form__group">
+			<p class="form__label">{{ filter.form.sort.label }}</p>
+			{% for value, label in filter.form.sort.field.choices %}
+				<label class="form__label form__label-small">
+					<input class="input--radio" name="sort" type="radio" value="{{ value }}" {% if not value %}checked{% endif %} {% if value in filter.form.sort.value %}checked{% endif %}>
+					<span class="input--span-radio"></span>
+					{{ label }}
+				</label>
+			{% endfor %}
+		</div>
+
+		<div class="product-filters__buttons">
+			<button class="product-filters__button button" type="submit">{% trans "Apply" %}</button>
+			{% if filter.form.has_changed %}
+				<a class="product-filters__button button button--light" href="{% url 'catalog:product-list' category_slug=category.slug %}">{% trans "Reset" %}</a>
+			{% endif %}
+		</div>
+	</form>
+</div>

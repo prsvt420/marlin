@@ -6,6 +6,7 @@
 {% block css %}
 	<link rel="stylesheet" href="{% static 'catalog/css/components/hero.css' %}">
 	<link rel="stylesheet" href="{% static 'catalog/css/components/stock.css' %}">
+	<link rel="stylesheet" href="{% static 'catalog/css/components/product_filters.css' %}">
 	<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
 {% endblock %}
 
@@ -15,7 +16,9 @@
   {% url "catalog:product-list" category_slug=category.slug as search_url %}
   {% include "catalog/includes/hero.html" with title=category.name|add:"." description=category.description|add:"." search_url=search_url search_placeholder=_("Find a product, e.g. — bananas") %}
 
-	<section class="products {% if not products %}products--centered{% endif %}">
+	<section class="products">
+		{% include "catalog/includes/product_filters.html" %}
+
 		{% if products %}
 			<ul class="products__list">
 				{% for product in products %}
@@ -66,9 +69,9 @@
 				{% endfor %}
 			</ul>
 
-			{% include "includes/pagination.html" with page_obj=page_obj search_query=search_query %}
+			{% include "includes/pagination.html" %}
 		{% else %}
-			{% if search_query %}
+			{% if filter.form.q.value %}
         <div class="products__empty">
           <p class="products__empty-text">{% trans "No results found for your search" %}</p>
         </div>

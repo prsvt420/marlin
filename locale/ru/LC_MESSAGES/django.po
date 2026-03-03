@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-03 23:13+0800\n"
+"POT-Creation-Date: 2026-03-04 22:47+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -721,7 +721,7 @@ msgstr[2] "В корзине %(count_cart_items)s доступных товар�
 #: .\apps\carts\templates\carts\cart_detail.html:94
 #: .\apps\catalog\admins\category_admin.py:55
 #: .\apps\catalog\templates\catalog\product_detail.html:26
-#: .\apps\catalog\templates\catalog\product_list.html:29
+#: .\apps\catalog\templates\catalog\product_list.html:32
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
@@ -947,21 +947,29 @@ msgstr "л"
 msgid "pcs"
 msgstr "шт"
 
-#: .\apps\catalog\constants.py:8
+#: .\apps\catalog\filters\product_filter.py:16
+msgid "Price"
+msgstr "Цена"
+
+#: .\apps\catalog\filters\product_filter.py:17
+msgid "Discount"
+msgstr "Скидка"
+
+#: .\apps\catalog\filters\product_filter.py:18
+msgid "Price (descending)"
+msgstr "Цена (по убыванию)"
+
+#: .\apps\catalog\filters\product_filter.py:19
+msgid "Discount (descending)"
+msgstr "Скидка (по убыванию)"
+
+#: .\apps\catalog\filters\product_filter.py:21
 msgid "Default"
 msgstr "По умолчанию"
 
-#: .\apps\catalog\constants.py:9
-msgid "Cheapest first"
-msgstr "Сначала дешевле"
-
-#: .\apps\catalog\constants.py:10
-msgid "Most expensive first"
-msgstr "Сначала дороже"
-
-#: .\apps\catalog\constants.py:11
-msgid "By discount amount"
-msgstr "По размеру скидки"
+#: .\apps\catalog\filters\product_filter.py:22
+msgid "Sorting"
+msgstr "Сортировка"
 
 #: .\apps\catalog\models\attribute_model.py:9
 #: .\apps\catalog\models\category_model.py:19
@@ -1302,6 +1310,16 @@ msgstr "Ежедневные предложения"
 msgid "Discounts up to"
 msgstr "Скидки до"
 
+#: .\apps\catalog\templates\catalog\includes\product_filters.html:17
+#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:47
+msgid "Apply"
+msgstr "Применить"
+
+#: .\apps\catalog\templates\catalog\includes\product_filters.html:19
+#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:49
+msgid "Reset"
+msgstr "Сбросить"
+
 #: .\apps\catalog\templates\catalog\includes\stock.html:5
 msgid "not available"
 msgstr "нет в наличии"
@@ -1318,17 +1336,17 @@ msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:64
-#: .\apps\catalog\templates\catalog\product_list.html:54
+#: .\apps\catalog\templates\catalog\product_list.html:57
 msgid "Add to Cart"
 msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:67
-#: .\apps\catalog\templates\catalog\product_list.html:57
+#: .\apps\catalog\templates\catalog\product_list.html:60
 msgid "In cart"
 msgstr "В корзине"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:70
-#: .\apps\catalog\templates\catalog\product_list.html:60
+#: .\apps\catalog\templates\catalog\product_list.html:63
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1365,16 +1383,16 @@ msgstr "Информация отсутствует"
 msgid "Characteristics"
 msgstr "Характеристики"
 
-#: .\apps\catalog\templates\catalog\product_list.html:16
+#: .\apps\catalog\templates\catalog\product_list.html:17
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
-#: .\apps\catalog\templates\catalog\product_list.html:73
+#: .\apps\catalog\templates\catalog\product_list.html:76
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:59
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
-#: .\apps\catalog\templates\catalog\product_list.html:77
+#: .\apps\catalog\templates\catalog\product_list.html:80
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
 
@@ -1788,14 +1806,6 @@ msgstr "до %(salary_to)s"
 #: .\apps\vacancies\models\vacancy_model.py:121
 msgid "Maximum salary must be greater than minimum salary."
 msgstr "Максимальная заработная плата должна быть больше минимальной."
-
-#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:47
-msgid "Apply"
-msgstr "Применить"
-
-#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:49
-msgid "Reset"
-msgstr "Сбросить"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:29
