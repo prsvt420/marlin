@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-04 22:47+0800\n"
+"POT-Creation-Date: 2026-03-04 22:55+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -721,7 +721,7 @@ msgstr[2] "В корзине %(count_cart_items)s доступных товар�
 #: .\apps\carts\templates\carts\cart_detail.html:94
 #: .\apps\catalog\admins\category_admin.py:55
 #: .\apps\catalog\templates\catalog\product_detail.html:26
-#: .\apps\catalog\templates\catalog\product_list.html:32
+#: .\apps\catalog\templates\catalog\product_list.html:33
 msgid "No image available"
 msgstr "Изображение отсутствует"
 
@@ -1336,17 +1336,17 @@ msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:64
-#: .\apps\catalog\templates\catalog\product_list.html:57
+#: .\apps\catalog\templates\catalog\product_list.html:58
 msgid "Add to Cart"
 msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:67
-#: .\apps\catalog\templates\catalog\product_list.html:60
+#: .\apps\catalog\templates\catalog\product_list.html:61
 msgid "In cart"
 msgstr "В корзине"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:70
-#: .\apps\catalog\templates\catalog\product_list.html:63
+#: .\apps\catalog\templates\catalog\product_list.html:64
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1387,12 +1387,12 @@ msgstr "Характеристики"
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
-#: .\apps\catalog\templates\catalog\product_list.html:76
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:59
+#: .\apps\catalog\templates\catalog\product_list.html:78
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:61
 msgid "No results found for your search"
 msgstr "По запросу ничего не найдено"
 
-#: .\apps\catalog\templates\catalog\product_list.html:80
+#: .\apps\catalog\templates\catalog\product_list.html:82
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
 
@@ -1808,12 +1808,12 @@ msgid "Maximum salary must be greater than minimum salary."
 msgstr "Максимальная заработная плата должна быть больше минимальной."
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:29
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
 msgid "Salary before taxes"
 msgstr "Зарплата до вычета налогов"
 
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:29
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
 msgid "before taxes"
 msgstr "до вычета налогов"
 
@@ -1831,11 +1831,11 @@ msgstr ""
 msgid "Find a vacancy, e.g. — courier"
 msgstr "Найти вакансию, например — курьер"
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:46
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:47
 msgid "More details"
 msgstr "Подробнее"
 
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:63
+#: .\apps\vacancies\templates\vacancies\vacancy_list.html:65
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 

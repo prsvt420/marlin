@@ -20,56 +20,58 @@
 		{% include "catalog/includes/product_filters.html" %}
 
 		{% if products %}
-			<ul class="products__list">
-				{% for product in products %}
-					<li class="products__item">
-						<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
-							<article class="product-card surface">
-								<div class="product-card__image-wrapper">
-                  {% if product.product_images.first %}
-                    <img class="product-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
-                  {% else %}
-                    <img class="product-card__image" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
-                  {% endif %}
-
-                  {% if product.discount %}
-                    <span class="product-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
-                  {% endif %}
-
-									{% include "catalog/includes/stock.html" with stock=product.stock %}
-                </div>
-
-								<div class="product-card__content">
-									<h2 class="product-card__name">{{ product.name|truncatechars:20 }}</h2>
-									<p class="product-card__price">
-	                  {% if product.discount %}
-                      <span class="product-card__price-current">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-                      <span class="product-card__price-old">{{ product.price }} ₽</span>
+			<div class="products__list-wrapper">
+				<ul class="products__list">
+					{% for product in products %}
+						<li class="products__item">
+							<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
+								<article class="product-card surface">
+									<div class="product-card__image-wrapper">
+	                  {% if product.product_images.first %}
+	                    <img class="product-card__image" src="{{ product.product_images.first.image_path.url }}" alt="{{ product.product_images.first.alt_text }}" draggable="false">
 	                  {% else %}
-                      <span class="product-card__price-current">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+	                    <img class="product-card__image" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
 	                  {% endif %}
-                  </p>
 
-							    {% if product.stock %}
-					          {% if not product.pk in cart_product_pks %}
-					            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
-					              {% csrf_token %}
-					              <button class="product-card__button button">{% trans "Add to Cart" %}</button>
-					            </form>
-					          {% else %}
-                      <button class="product-card__button button button--disabled" disabled>{% trans "In cart" %}</button>
-					          {% endif %}
-						      {% else %}
-						        <button class="product-card__button button button--disabled" disabled>{% trans "Not available" %}</button>
-						      {% endif %}
-								</div>
-							</article>
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
+	                  {% if product.discount %}
+	                    <span class="product-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
+	                  {% endif %}
 
-			{% include "includes/pagination.html" %}
+										{% include "catalog/includes/stock.html" with stock=product.stock %}
+	                </div>
+
+									<div class="product-card__content">
+										<h2 class="product-card__name">{{ product.name|truncatechars:20 }}</h2>
+										<p class="product-card__price">
+		                  {% if product.discount %}
+	                      <span class="product-card__price-current">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+	                      <span class="product-card__price-old">{{ product.price }} ₽</span>
+		                  {% else %}
+	                      <span class="product-card__price-current">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
+		                  {% endif %}
+	                  </p>
+
+								    {% if product.stock %}
+						          {% if not product.pk in cart_product_pks %}
+						            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
+						              {% csrf_token %}
+						              <button class="product-card__button button">{% trans "Add to Cart" %}</button>
+						            </form>
+						          {% else %}
+	                      <button class="product-card__button button button--disabled" disabled>{% trans "In cart" %}</button>
+						          {% endif %}
+							      {% else %}
+							        <button class="product-card__button button button--disabled" disabled>{% trans "Not available" %}</button>
+							      {% endif %}
+									</div>
+								</article>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+				{% include "includes/pagination.html" %}
+			</div>
 		{% else %}
 			{% if filter.form.q.value %}
         <div class="products__empty">
