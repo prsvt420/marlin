@@ -2,20 +2,20 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_stubs_ext import StrOrPromise
 
+from apps.core.models import BaseModel
 
-class City(models.Model):  # type: ignore
+
+class City(BaseModel):  # type: ignore
     name = models.CharField(
         max_length=255,
         unique=True,
         verbose_name=_("name"),
-        help_text=_("City name."),
     )
     region = models.ForeignKey(
         to="Region",
-        on_delete=models.CASCADE,
+        on_delete=models.PROTECT,
         related_name="cities",
         verbose_name=_("region"),
-        help_text=_("Region to which the city belongs."),
         null=True,
         blank=True,
     )

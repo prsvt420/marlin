@@ -1,13 +1,14 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from apps.core.models import BaseModel
 
-class Region(models.Model):  # type: ignore
+
+class Region(BaseModel):  # type: ignore
     name = models.CharField(
         max_length=255,
         unique=True,
         verbose_name=_("name"),
-        help_text=_("Region name."),
     )
 
     class Meta:
