@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-04 22:55+0800\n"
+"POT-Creation-Date: 2026-03-05 19:00+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -667,7 +667,7 @@ msgstr "Текущий статус корзины (активна, конвер
 
 #: .\apps\carts\models\cart_model.py:25
 #: .\apps\catalog\models\category_model.py:60
-#: .\apps\catalog\models\product_model.py:97
+#: .\apps\catalog\models\product_model.py:97 .\apps\core\models\base_model.py:8
 #: .\apps\vacancies\models\vacancy_model.py:74
 msgid "created date"
 msgstr "дата создания"
@@ -679,6 +679,7 @@ msgstr "Дата и время добавления корзины."
 #: .\apps\carts\models\cart_model.py:30
 #: .\apps\catalog\models\category_model.py:65
 #: .\apps\catalog\models\product_model.py:102
+#: .\apps\core\models\base_model.py:13
 #: .\apps\vacancies\models\vacancy_model.py:79
 msgid "updated date"
 msgstr "дата обновления"
