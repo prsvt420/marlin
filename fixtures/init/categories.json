@@ -11,14 +11,11 @@
     "description": "Широкий ассортимент свежих и натуральных продуктов — от сочных фруктов и ароматных ягод до питательных орехов и полезных овощей. Категория объединяет всё, что необходимо для сбалансированного и разнообразного рациона",
     "description_ru": "Широкий ассортимент свежих и натуральных продуктов — от сочных фруктов и ароматных ягод до питательных орехов и полезных овощей. Категория объединяет всё, что необходимо для сбалансированного и разнообразного рациона",
     "description_en": "A wide selection of fresh and natural products — from juicy fruits and fragrant berries to nutritious nuts and healthy vegetables. This category includes everything needed for a balanced and varied diet",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T13:59:54.107Z",
-    "updated_at": "2025-11-26T13:59:54.107Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -33,14 +30,11 @@
     "description": "Свежие овощи, ароматная зелень и натуральные грибы для ежедневного приготовления и полезного питания. Отлично подходят для салатов, гарниров, супов и основных блюд",
     "description_ru": "Свежие овощи, ароматная зелень и натуральные грибы для ежедневного приготовления и полезного питания. Отлично подходят для салатов, гарниров, супов и основных блюд",
     "description_en": "Fresh vegetables, aromatic herbs, and natural mushrooms ideal for everyday cooking and healthy eating. Perfect for salads, side dishes, soups, and main courses",
-    "image_path": "category_images/ovoshi-zelen-griby.png",
-    "alt_text": "Изображение для категории Овощи, зелень, грибы",
-    "alt_text_ru": "Изображение для категории Овощи, зелень, грибы",
-    "alt_text_en": "Image for category Vegetables, greens, mushrooms",
+    "image": "category_images/ovoshi-zelen-griby.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T14:03:02.295Z",
-    "updated_at": "2025-11-26T14:03:02.295Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -55,14 +49,11 @@
     "description": "Сочные фрукты и спелые ягоды, богатые витаминами и вкусом. Подходят для перекусов, десертов, напитков и приготовления полезных блюд",
     "description_ru": "Сочные фрукты и спелые ягоды, богатые витаминами и вкусом. Подходят для перекусов, десертов, напитков и приготовления полезных блюд",
     "description_en": "Juicy fruits and ripe berries rich in vitamins and flavor. Suitable for snacks, desserts, beverages, and healthy recipes",
-    "image_path": "category_images/frukty-yagody.png",
-    "alt_text": "Изображение для категории Фрукты, ягоды",
-    "alt_text_ru": "Изображение для категории Фрукты, ягоды",
-    "alt_text_en": "Image for category Fruits, berries",
+    "image": "category_images/frukty-yagody.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T14:04:52.102Z",
-    "updated_at": "2025-11-26T14:06:27.613Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -77,14 +68,11 @@
     "description": "Полезные орехи и натуральные сухофрукты — отличный источник энергии и питательных веществ. Идеальны для перекусов, выпечки или добавления в каши и салаты",
     "description_ru": "Полезные орехи и натуральные сухофрукты — отличный источник энергии и питательных веществ. Идеальны для перекусов, выпечки или добавления в каши и салаты",
     "description_en": "Healthy nuts and natural dried fruits — a great source of energy and nutrients. Ideal for snacking, baking, or adding to cereals and salads",
-    "image_path": "category_images/orehi-suhofrukty.png",
-    "alt_text": "Изображение для категории Орехи, сухофрукты",
-    "alt_text_ru": "Изображение для категории Орехи, сухофрукты",
-    "alt_text_en": "Image for category Nuts, dried fruits",
+    "image": "category_images/orehi-suhofrukty.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T14:05:41.559Z",
-    "updated_at": "2025-11-26T14:06:27.603Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -99,14 +87,11 @@
     "description": "Большой выбор свежего хлеба, ароматной сдобы и разнообразной выпечки — от хрустящих багетов до нежных булочек. Категория объединяет всё, что нужно для вкусного и полноценного ежедневного рациона",
     "description_ru": "Большой выбор свежего хлеба, ароматной сдобы и разнообразной выпечки — от хрустящих багетов до нежных булочек. Категория объединяет всё, что нужно для вкусного и полноценного ежедневного рациона",
     "description_en": "A wide selection of fresh bread, aromatic pastries, and a variety of baked goods—from crispy baguettes to delicate buns. This category brings together everything you need for a delicious and nutritious daily diet",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T14:15:43.888Z",
-    "updated_at": "2025-11-27T08:02:05.870Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -121,14 +106,11 @@
     "description": "Классический хлеб и мягкий лаваш, приготовленные по традиционным рецептам. Отлично подходят к основным блюдам, закускам и ежедневному меню",
     "description_ru": "Классический хлеб и мягкий лаваш, приготовленные по традиционным рецептам. Отлично подходят к основным блюдам, закускам и ежедневному меню",
     "description_en": "Traditional bread and soft lavash made using classic recipes. Perfect for main dishes, snacks, and everyday meals",
-    "image_path": "category_images/hleb-lavash.png",
-    "alt_text": "Изображение для категории Хлеб, лаваш",
-    "alt_text_ru": "Изображение для категории Хлеб, лаваш",
-    "alt_text_en": "Image for category Bread, Lavash",
+    "image": "category_images/hleb-lavash.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T14:17:09.968Z",
-    "updated_at": "2025-11-26T14:17:09.968Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -143,14 +125,11 @@
     "description": "Сладкая и ароматная выпечка: булочки, круассаны, пироги и другая сдоба. Идеальный выбор для завтрака, перекуса или к чаю",
     "description_ru": "Сладкая и ароматная выпечка: булочки, круассаны, пироги и другая сдоба. Идеальный выбор для завтрака, перекуса или к чаю",
     "description_en": "Sweet and fragrant pastries: buns, croissants, pies, and other baked treats. A perfect choice for breakfast, a snack, or tea time",
-    "image_path": "category_images/sdoba-vypechka.png",
-    "alt_text": "Изображение для категории Сдоба, выпечка",
-    "alt_text_ru": "Изображение для категории Сдоба, выпечка",
-    "alt_text_en": "Image for category Pastries, baked goods",
+    "image": "category_images/sdoba-vypechka.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T14:18:41.382Z",
-    "updated_at": "2025-11-26T14:18:41.382Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -165,14 +144,11 @@
     "description": "Лёгкие и полезные хлебцы, хрустящие сухари и крекеры. Подходят для перекусов, диетического питания и лёгких блюд",
     "description_ru": "Лёгкие и полезные хлебцы, хрустящие сухари и крекеры. Подходят для перекусов, диетического питания и лёгких блюд",
     "description_en": "Light and healthy crispbreads, crunchy rusks, and crackers. Suitable for snacking, dietary meals, and light dishes",
-    "image_path": "category_images/hlebcy-suhari.png",
-    "alt_text": "Изображение для категории Хлебцы, сухари",
-    "alt_text_ru": "Изображение для категории Хлебцы, сухари",
-    "alt_text_en": "Image for category Bread, crackers",
+    "image": "category_images/hlebcy-suhari.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T14:19:38.515Z",
-    "updated_at": "2025-11-26T14:20:09.655Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -187,14 +163,11 @@
     "description": "Свежие мясные продукты, колбасы и полуфабрикаты высокого качества. В категорию входят охлаждённое мясо, птица, фарш, котлеты и разнообразные мясные закуски — всё для приготовления вкусных и питательных блюд",
     "description_ru": "Свежие мясные продукты, колбасы и полуфабрикаты высокого качества. В категорию входят охлаждённое мясо, птица, фарш, котлеты и разнообразные мясные закуски — всё для приготовления вкусных и питательных блюд",
     "description_en": "Fresh meat products, sausages, and high-quality ready-to-cook items. The category includes chilled meat, poultry, ground meat, cutlets, and a variety of meat snacks — everything for delicious and satisfying meals",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T16:17:40.354Z",
-    "updated_at": "2025-11-27T07:55:20.958Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -209,14 +182,11 @@
     "description": "Охлаждённое мясо высокого качества: говядина, свинина, ягнятина и другие виды. Идеально подходит для жарки, тушения, запекания и приготовления бульонов",
     "description_ru": "Охлаждённое мясо высокого качества: говядина, свинина, ягнятина и другие виды. Идеально подходит для жарки, тушения, запекания и приготовления бульонов",
     "description_en": "High-quality chilled meat, including beef, pork, lamb, and more. Ideal for frying, stewing, roasting, and preparing broths",
-    "image_path": "category_images/myaso.png",
-    "alt_text": "Изображение для категории Мясо",
-    "alt_text_ru": "Изображение для категории Мясо",
-    "alt_text_en": "Image for category Meat",
+    "image": "category_images/myaso.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T16:19:29.724Z",
-    "updated_at": "2025-11-26T16:19:29.724Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -231,14 +201,11 @@
     "description": "Свежая птица: курица, индейка, утка и другие разновидности. Универсальный продукт для повседневных и праздничных блюд",
     "description_ru": "Свежая птица: курица, индейка, утка и другие разновидности. Универсальный продукт для повседневных и праздничных блюд",
     "description_en": "Fresh poultry: chicken, turkey, duck, and more. A versatile choice for everyday meals and festive dishes",
-    "image_path": "category_images/ptica.png",
-    "alt_text": "Изображение для категории Птица",
-    "alt_text_ru": "Изображение для категории Птица",
-    "alt_text_en": "Image for category Bird",
+    "image": "category_images/ptica.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T16:21:36.221Z",
-    "updated_at": "2025-11-26T16:21:36.221Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -253,14 +220,11 @@
     "description": "Готовые котлеты и свежий фарш из мяса и птицы. Удобное решение для быстрого приготовления домашних блюд",
     "description_ru": "Готовые котлеты и свежий фарш из мяса и птицы. Удобное решение для быстрого приготовления домашних блюд",
     "description_en": "Ready-made cutlets and fresh ground meat from beef, pork, or poultry. A convenient option for quick and homemade-style cooking",
-    "image_path": "category_images/kotlety-farsh.png",
-    "alt_text": "Изображение для категории Котлеты, фарш",
-    "alt_text_ru": "Изображение для категории Котлеты, фарш",
-    "alt_text_en": "Image for category Cutlets, minced meat",
+    "image": "category_images/kotlety-farsh.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T16:22:49.666Z",
-    "updated_at": "2025-11-26T16:23:55.913Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -275,14 +239,11 @@
     "description": "Большой выбор варёных, копчёных и сырокопчёных колбас, а также сосисок и сардельки. Подходят для завтраков, перекусов и горячих блюд",
     "description_ru": "Большой выбор варёных, копчёных и сырокопчёных колбас, а также сосисок и сардельки. Подходят для завтраков, перекусов и горячих блюд",
     "description_en": "A wide selection of boiled, smoked, and dry-cured sausages, as well as hot dogs and frankfurters. Suitable for breakfasts, snacks, and hot dishes",
-    "image_path": "category_images/kolbasa-sosiski.png",
-    "alt_text": "Изображение для категории Колбаса, сосиски",
-    "alt_text_ru": "Изображение для категории Колбаса, сосиски",
-    "alt_text_en": "Image for category Sausage, hot dogs",
+    "image": "category_images/kolbasa-sosiski.webp",
     "sort_order": 3,
     "is_active": true,
-    "created_at": "2025-11-26T16:25:26.030Z",
-    "updated_at": "2025-11-26T16:25:26.030Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -297,14 +258,11 @@
     "description": "Нежные паштеты, рулеты и мясные закуски, готовые к подаче. Отлично подходят для бутербродов, закусочных тарелок и лёгких перекусов",
     "description_ru": "Нежные паштеты, рулеты и мясные закуски, готовые к подаче. Отлично подходят для бутербродов, закусочных тарелок и лёгких перекусов",
     "description_en": "Delicate pâtés, meat rolls, and ready-to-eat appetizers. Perfect for sandwiches, appetizer platters, and quick snacks",
-    "image_path": "category_images/pashtety-zakuski.png",
-    "alt_text": "Изображение для категории Паштеты, закуски",
-    "alt_text_ru": "Изображение для категории Паштеты, закуски",
-    "alt_text_en": "Image for category Pates, appetizers",
+    "image": "category_images/pashtety-zakuski.webp",
     "sort_order": 4,
     "is_active": true,
-    "created_at": "2025-11-26T16:26:44.969Z",
-    "updated_at": "2025-11-26T16:26:44.969Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -319,14 +277,11 @@
     "description": "Натуральная молочная продукция и свежие яйца для ежедневного рациона. В категории представлены молоко, кисломолочные продукты, сыры, масло, йогурты и десерты — всё, что необходимо для здорового и разнообразного питания",
     "description_ru": "Натуральная молочная продукция и свежие яйца для ежедневного рациона. В категории представлены молоко, кисломолочные продукты, сыры, масло, йогурты и десерты — всё, что необходимо для здорового и разнообразного питания",
     "description_en": "Natural dairy products and fresh eggs for everyday consumption. The category includes milk, fermented dairy products, cheese, butter, yogurts, and desserts — everything needed for a healthy and varied diet",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 3,
     "is_active": true,
-    "created_at": "2025-11-26T16:59:57.715Z",
-    "updated_at": "2025-11-26T16:59:57.715Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -341,14 +296,11 @@
     "description": "Свежие молочные продукты: пастеризованное, ультрапастеризованное и фермерское молоко, а также классическая и густая сметана. Подходят для напитков, блюд и домашней выпечки",
     "description_ru": "Свежие молочные продукты: пастеризованное, ультрапастеризованное и фермерское молоко, а также классическая и густая сметана. Подходят для напитков, блюд и домашней выпечки",
     "description_en": "Fresh dairy staples: pasteurized, ultra-pasteurized, and farm milk, along with classic and thick sour cream. Ideal for drinks, cooking, and home baking",
-    "image_path": "category_images/moloko-smetana.png",
-    "alt_text": "Изображение для категории Молоко, сметана",
-    "alt_text_ru": "Изображение для категории Молоко, сметана",
-    "alt_text_en": "Image for category Milk, sour cream",
+    "image": "category_images/moloko-smetana.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T17:01:39.680Z",
-    "updated_at": "2025-11-26T17:03:39.342Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -363,14 +315,11 @@
     "description": "Полезные кисломолочные продукты — кефир, ряженка, творог и творожные изделия. Отличный выбор для лёгкого и сбалансированного питания",
     "description_ru": "Полезные кисломолочные продукты — кефир, ряженка, творог и творожные изделия. Отличный выбор для лёгкого и сбалансированного питания",
     "description_en": "Nutritious fermented dairy products — kefir, ryazhenka, cottage cheese, and curd snacks. A great choice for light and balanced nutrition",
-    "image_path": "category_images/kefir-tvorog.png",
-    "alt_text": "Изображение для категории Кефир, творог",
-    "alt_text_ru": "Изображение для категории Кефир, творог",
-    "alt_text_en": "Image for category Kefir, cottage cheese",
+    "image": "category_images/kefir-tvorog.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T17:05:15.298Z",
-    "updated_at": "2025-11-26T17:05:15.298Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -385,14 +334,11 @@
     "description": "Широкий выбор сыров: твёрдые, полутвёрдые, мягкие, сливочные и рассольные сорта. Подходят для салатов, закусок, сендвичей и горячих блюд",
     "description_ru": "Широкий выбор сыров: твёрдые, полутвёрдые, мягкие, сливочные и рассольные сорта. Подходят для салатов, закусок, сендвичей и горячих блюд",
     "description_en": "A wide selection of cheeses: hard, semi-hard, soft, creamy, and brined varieties. Suitable for salads, appetizers, sandwiches, and hot dishes",
-    "image_path": "category_images/syr.png",
-    "alt_text": "Изображение для категории Сыр",
-    "alt_text_ru": "Изображение для категории Сыр",
-    "alt_text_en": "Image for category Cheese",
+    "image": "category_images/syr.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T17:06:43.626Z",
-    "updated_at": "2025-11-26T17:06:43.626Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -407,14 +353,11 @@
     "description": "Свежие куриные яйца и качественное сливочное масло разной жирности. Необходимые продукты для ежедневного приготовления и выпечки",
     "description_ru": "Свежие куриные яйца и качественное сливочное масло разной жирности. Необходимые продукты для ежедневного приготовления и выпечки",
     "description_en": "Fresh chicken eggs and high-quality butter with different fat levels. Essential ingredients for everyday cooking and baking",
-    "image_path": "category_images/yajco-maslo.png",
-    "alt_text": "Изображение для категории Яйцо, масло",
-    "alt_text_ru": "Изображение для категории Яйцо, масло",
-    "alt_text_en": "Image for category Egg, butter",
+    "image": "category_images/yajco-maslo.webp",
     "sort_order": 3,
     "is_active": true,
-    "created_at": "2025-11-26T17:09:12.167Z",
-    "updated_at": "2025-11-26T17:09:12.167Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -429,14 +372,11 @@
     "description": "Разнообразные виды майонеза — классический, лёгкий, оливковый и соусы на его основе. Отлично подходят для салатов, гарниров и бутербродов",
     "description_ru": "Разнообразные виды майонеза — классический, лёгкий, оливковый и соусы на его основе. Отлично подходят для салатов, гарниров и бутербродов",
     "description_en": "A variety of mayonnaise options — classic, light, olive, and mayonnaise-based sauces. Perfect for salads, sides, and sandwiches",
-    "image_path": "category_images/majonez.png",
-    "alt_text": "Изображение для категории Майонез",
-    "alt_text_ru": "Изображение для категории Майонез",
-    "alt_text_en": "Image for category Mayonnaise",
+    "image": "category_images/majonez.webp",
     "sort_order": 4,
     "is_active": true,
-    "created_at": "2025-11-26T17:10:09.204Z",
-    "updated_at": "2025-11-26T17:10:09.204Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -451,14 +391,11 @@
     "description": "Йогурты, питьевые и густые, а также молочные и творожные десерты. Вкусные и полезные продукты для перекуса или лёгкого сладкого угощения",
     "description_ru": "Йогурты, питьевые и густые, а также молочные и творожные десерты. Вкусные и полезные продукты для перекуса или лёгкого сладкого угощения",
     "description_en": "Yogurts, both drinkable and spoonable, along with dairy and curd desserts. Tasty and nutritious options for snacks or light sweet treats",
-    "image_path": "category_images/jogurty-deserty.png",
-    "alt_text": "Изображение для категории Йогурты, десерты",
-    "alt_text_ru": "Изображение для категории Йогурты, десерты",
-    "alt_text_en": "Image for category Yogurts, desserts",
+    "image": "category_images/jogurty-deserty.webp",
     "sort_order": 5,
     "is_active": true,
-    "created_at": "2025-11-26T17:11:16.553Z",
-    "updated_at": "2025-11-26T17:11:16.553Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -473,14 +410,11 @@
     "description": "Свежая рыба, морепродукты и готовые изделия из них. В категорию входят охлаждённая и замороженная рыба, креветки, кальмары а также икра и рыбные закуски — всё для приготовления полезных и вкусных блюд",
     "description_ru": "Свежая рыба, морепродукты и готовые изделия из них. В категорию входят охлаждённая и замороженная рыба, креветки, кальмары а также икра и рыбные закуски — всё для приготовления полезных и вкусных блюд",
     "description_en": "Fresh fish, seafood, and ready-to-cook products. The category includes chilled and frozen fish, shrimp, squid, as well as caviar and seafood appetizers — everything for healthy and delicious meals",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 4,
     "is_active": true,
-    "created_at": "2025-11-26T17:19:22.307Z",
-    "updated_at": "2025-11-27T08:14:42.105Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -495,14 +429,11 @@
     "description": "Разнообразные виды рыбы: белая, красная, морская и речная. Подходит для жарки, запекания, тушения, гриля и приготовления супов",
     "description_ru": "Разнообразные виды рыбы: белая, красная, морская и речная. Подходит для жарки, запекания, тушения, гриля и приготовления супов",
     "description_en": "A variety of fish types: white, red, marine, and freshwater. Suitable for frying, roasting, stewing, grilling, and making soups",
-    "image_path": "category_images/ryba.png",
-    "alt_text": "Изображение для категории Рыба",
-    "alt_text_ru": "Изображение для категории Рыба",
-    "alt_text_en": "Image for category Fish",
+    "image": "category_images/ryba.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T17:20:47.942Z",
-    "updated_at": "2025-11-26T17:20:47.942Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -517,14 +448,11 @@
     "description": "Креветки, мидии, кальмары, осьминоги и другие морепродукты. Отлично подходят для пасты, салатов, горячих блюд и закусок",
     "description_ru": "Креветки, мидии, кальмары, осьминоги и другие морепродукты. Отлично подходят для пасты, салатов, горячих блюд и закусок",
     "description_en": "Shrimp, mussels, squid, octopus, and other seafood. Perfect for pasta, salads, hot dishes, and appetizers",
-    "image_path": "category_images/moreprodukty.png",
-    "alt_text": "Изображение для категории Морепродукты",
-    "alt_text_ru": "Изображение для категории Морепродукты",
-    "alt_text_en": "Image for category Seafood",
+    "image": "category_images/moreprodukty.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T17:22:25.579Z",
-    "updated_at": "2025-11-26T17:22:25.579Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -539,14 +467,11 @@
     "description": "Красная икра, икра минтая, намазки, рулеты и рыбные закуски. Готовые продукты для праздничного стола и повседневных бутербродов",
     "description_ru": "Красная икра, икра минтая, намазки, рулеты и рыбные закуски. Готовые продукты для праздничного стола и повседневных бутербродов",
     "description_en": "Red caviar, pollock roe, spreads, rolls, and seafood appetizers. Ready-to-eat products for festive occasions or everyday sandwiches",
-    "image_path": "category_images/ikra-zakuski.png",
-    "alt_text": "Изображение для категории Икра, закуски",
-    "alt_text_ru": "Изображение для категории Икра, закуски",
-    "alt_text_en": "Image for category Caviar, snacks",
+    "image": "category_images/ikra-zakuski.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T17:23:52.230Z",
-    "updated_at": "2025-11-26T17:23:52.230Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -561,14 +486,11 @@
     "description": "Разнообразные сладости для ежедневных угощений. В категории представлены шоколад, печенье, вафли, десерты, мороженое, мёд, пасты и другие лакомства — всё, что нужно для вкусных перекусов и сладких моментов",
     "description_ru": "Разнообразные сладости для ежедневных угощений. В категории представлены шоколад, печенье, вафли, десерты, мороженое, мёд, пасты и другие лакомства — всё, что нужно для вкусных перекусов и сладких моментов",
     "description_en": "A variety of sweets for everyday treats. The category includes chocolate, cookies, waffles, desserts, ice cream, honey, spreads, and other delicacies — everything needed for enjoyable snacks and sweet moments",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 5,
     "is_active": true,
-    "created_at": "2025-11-26T18:30:24.554Z",
-    "updated_at": "2025-11-26T20:08:23.619Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -583,14 +505,11 @@
     "description": "Шоколадные плитки, батончики, пралине и разнообразные конфеты для настоящих любителей сладкого",
     "description_ru": "Шоколадные плитки, батончики, пралине и разнообразные конфеты для настоящих любителей сладкого",
     "description_en": "Chocolate bars, pralines, truffles, and assorted candies for true sweet lovers",
-    "image_path": "category_images/shokolad-konfety.png",
-    "alt_text": "Изображение для категории Шоколад, конфеты",
-    "alt_text_ru": "Изображение для категории Шоколад, конфеты",
-    "alt_text_en": "Image for category Chocolate, Candies",
+    "image": "category_images/shokolad-konfety.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-26T18:33:40.745Z",
-    "updated_at": "2025-11-26T18:35:12.257Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -605,14 +524,11 @@
     "description": "Разнообразное печенье, хрустящие вафли и ароматные пряники для чая, кофе и перекусов",
     "description_ru": "Разнообразное печенье, хрустящие вафли и ароматные пряники для чая, кофе и перекусов",
     "description_en": "A variety of cookies, crispy waffles, and fragrant gingerbread perfect for tea, coffee, and snacking",
-    "image_path": "category_images/pechene-vafli-pryaniki.png",
-    "alt_text": "Изображение для категории Печенье, вафли, пряники",
-    "alt_text_ru": "Изображение для категории Печенье, вафли, пряники",
-    "alt_text_en": "Image for category Cookies, wafers, gingerbread",
+    "image": "category_images/pechene-vafli-pryaniki.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-26T18:39:26.428Z",
-    "updated_at": "2025-11-26T18:39:26.428Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -627,14 +543,11 @@
     "description": "Воздушный зефир, фруктовый мармелад и восточная халва для лёгкого и приятного угощения",
     "description_ru": "Воздушный зефир, фруктовый мармелад и восточная халва для лёгкого и приятного угощения",
     "description_en": "Soft marshmallows, fruity marmalade, and traditional halva for a light and delightful treat",
-    "image_path": "category_images/zefir-marmelad-halva.png",
-    "alt_text": "Изображение для категории Зефир, мармелад, халва",
-    "alt_text_ru": "Изображение для категории Зефир, мармелад, халва",
-    "alt_text_en": "Image for category Marshmallows, marmalade, halva",
+    "image": "category_images/zefir-marmelad-halva.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-26T18:45:14.254Z",
-    "updated_at": "2025-11-26T18:45:14.254Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -649,14 +562,11 @@
     "description": "Свежие торты и пирожные — от классических до современных десертов для праздничного и повседневного стола",
     "description_ru": "Свежие торты и пирожные — от классических до современных десертов для праздничного и повседневного стола",
     "description_en": "Fresh cakes and pastries — from classic to modern desserts for festive and everyday occasions",
-    "image_path": "category_images/torty-pirozhnye.png",
-    "alt_text": "Изображение для категории Торты, пирожные",
-    "alt_text_ru": "Изображение для категории Торты, пирожные",
-    "alt_text_en": "Image for category Cakes, pastries",
+    "image": "category_images/torty-pirozhnye.webp",
     "sort_order": 3,
     "is_active": true,
-    "created_at": "2025-11-26T20:01:27.357Z",
-    "updated_at": "2025-11-26T20:01:27.357Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -671,14 +581,11 @@
     "description": "Классическое и кремовое мороженое, фруктовые сорбеты и эскимо на любой вкус",
     "description_ru": "Классическое и кремовое мороженое, фруктовые сорбеты и эскимо на любой вкус",
     "description_en": "Classic and creamy ice cream, fruity sorbets, and ice pops for any taste",
-    "image_path": "category_images/morozhenoe.png",
-    "alt_text": "Изображение для категории Мороженое",
-    "alt_text_ru": "Изображение для категории Мороженое",
-    "alt_text_en": "Image for category Ice Cream",
+    "image": "category_images/morozhenoe.webp",
     "sort_order": 4,
     "is_active": true,
-    "created_at": "2025-11-26T20:03:18.483Z",
-    "updated_at": "2025-11-26T20:03:18.483Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -693,14 +600,11 @@
     "description": "Жевательная резинка, фруктовые леденцы и яркие драже для лёгких сладких перекусов",
     "description_ru": "Жевательная резинка, фруктовые леденцы и яркие драже для лёгких сладких перекусов",
     "description_en": "Chewing gum, fruity lollipops, and colorful dragee for quick sweet snacks",
-    "image_path": "category_images/zhvachka-ledency-drazhe.png",
-    "alt_text": "Изображение для категории Жвачка, леденцы, драже",
-    "alt_text_ru": "Изображение для категории Жвачка, леденцы, драже",
-    "alt_text_en": "Image for category Chewing gum, lollipops, dragees",
+    "image": "category_images/zhvachka-ledency-drazhe.webp",
     "sort_order": 5,
     "is_active": true,
-    "created_at": "2025-11-26T20:04:25.629Z",
-    "updated_at": "2025-11-26T20:04:45.407Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -715,14 +619,11 @@
     "description": "Натуральный мёд, фруктовое варенье и сладкие пасты для завтраков, чая и десертов",
     "description_ru": "Натуральный мёд, фруктовое варенье и сладкие пасты для завтраков, чая и десертов",
     "description_en": "Natural honey, fruity jams, and sweet spreads for breakfasts, tea, and desserts",
-    "image_path": "category_images/varene-myod-pasty.png",
-    "alt_text": "Изображение для категории Варенье, мёд, пасты",
-    "alt_text_ru": "Изображение для категории Варенье, мёд, пасты",
-    "alt_text_en": "Image for category Jam, honey, pastes",
+    "image": "category_images/varene-myod-pasty.webp",
     "sort_order": 6,
     "is_active": true,
-    "created_at": "2025-11-26T20:06:11.447Z",
-    "updated_at": "2025-11-26T20:06:11.447Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -737,14 +638,11 @@
     "description": "Разнообразные напитки для утоления жажды и ежедневного потребления. В категории представлены вода, газированные напитки, соки, морсы, холодный чай, квас, а также пиво, вино и энергетики — всё, что нужно для освежающих и любимых напитков",
     "description_ru": "Разнообразные напитки для утоления жажды и ежедневного потребления. В категории представлены вода, газированные напитки, соки, морсы, холодный чай, квас, а также пиво, вино и энергетики — всё, что нужно для освежающих и любимых напитков",
     "description_en": "A variety of beverages for hydration and everyday drinking. The category includes water, soft drinks, juices, fruit drinks, iced tea, kvass, as well as beer, wine, and energy drinks — everything for refreshing and favorite beverages",
-    "image_path": "",
-    "alt_text": "",
-    "alt_text_ru": null,
-    "alt_text_en": null,
+    "image": "",
     "sort_order": 6,
     "is_active": true,
-    "created_at": "2025-11-26T20:50:55.149Z",
-    "updated_at": "2025-11-26T20:50:55.149Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -759,14 +657,11 @@
     "description": "Питьевая и минеральная вода — газированная и негазированная для ежедневного употребления",
     "description_ru": "Питьевая и минеральная вода — газированная и негазированная для ежедневного употребления",
     "description_en": "Drinking and mineral water — sparkling or still, suitable for daily hydration",
-    "image_path": "category_images/voda.png",
-    "alt_text": "Изображение для категории Вода",
-    "alt_text_ru": "Изображение для категории Вода",
-    "alt_text_en": "Image for category Water",
+    "image": "category_images/voda.webp",
     "sort_order": 0,
     "is_active": true,
-    "created_at": "2025-11-27T08:04:14.379Z",
-    "updated_at": "2025-11-27T08:04:14.379Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -781,14 +676,11 @@
     "description": "Различные газированные напитки — классические, фруктовые и безалкогольные освежающие варианты",
     "description_ru": "Различные газированные напитки — классические, фруктовые и безалкогольные освежающие варианты",
     "description_en": "A variety of carbonated drinks - classic, fruity and non-alcoholic refreshing options",
-    "image_path": "category_images/gazirovka.png",
-    "alt_text": "Изображение для категории Газировка",
-    "alt_text_ru": "Изображение для категории Газировка",
-    "alt_text_en": "Image for category Soda",
+    "image": "category_images/gazirovka.webp",
     "sort_order": 1,
     "is_active": true,
-    "created_at": "2025-11-27T08:06:48.641Z",
-    "updated_at": "2025-11-27T08:06:48.641Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -803,14 +695,11 @@
     "description": "Натуральные соки и морсы с ягодными и фруктовыми вкусами для полезных и освежающих напитков",
     "description_ru": "Натуральные соки и морсы с ягодными и фруктовыми вкусами для полезных и освежающих напитков",
     "description_en": "Natural juices and fruit drinks with berry and fruit flavors for refreshing and wholesome beverages",
-    "image_path": "category_images/soki-morsy.png",
-    "alt_text": "Изображение для категории Соки, морсы",
-    "alt_text_ru": "Изображение для категории Соки, морсы",
-    "alt_text_en": "Image for category Juices, fruit drinks",
+    "image": "category_images/soki-morsy.webp",
     "sort_order": 2,
     "is_active": true,
-    "created_at": "2025-11-27T08:08:01.695Z",
-    "updated_at": "2025-11-27T08:08:01.695Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -825,14 +714,11 @@
     "description": "Освежающий холодный чай и традиционный квас — отличные напитки для жаркого дня и лёгких перекусов",
     "description_ru": "Освежающий холодный чай и традиционный квас — отличные напитки для жаркого дня и лёгких перекусов",
     "description_en": "Refreshing iced tea and traditional kvass — great beverage choices for warm days and light meals",
-    "image_path": "category_images/holodnyj-chaj-kvas.png",
-    "alt_text": "Изображение для категории Холодный чай, квас",
-    "alt_text_ru": "Изображение для категории Холодный чай, квас",
-    "alt_text_en": "Image for category Iced Tea, Kvass",
+    "image": "category_images/holodnyj-chaj-kvas.webp",
     "sort_order": 3,
     "is_active": true,
-    "created_at": "2025-11-27T08:09:26.382Z",
-    "updated_at": "2025-11-27T08:09:26.382Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 },
 {
@@ -847,14 +733,11 @@
     "description": "Пиво, вино и энергетические напитки для разных случаев — от расслабленного вечера до быстрого восстановления энергии",
     "description_ru": "Пиво, вино и энергетические напитки для разных случаев — от расслабленного вечера до быстрого восстановления энергии",
     "description_en": "Beer, wine, and energy drinks for different moments — from relaxed evenings to a quick energy boost",
-    "image_path": "category_images/pivo-vino-energetiki.png",
-    "alt_text": "Изображение для категории Пиво, вино, энергетики",
-    "alt_text_ru": "Изображение для категории Пиво, вино, энергетики",
-    "alt_text_en": "Image for category Beer, Wine, Energy Drinks",
+    "image": "category_images/pivo-vino-energetiki.webp",
     "sort_order": 4,
     "is_active": true,
-    "created_at": "2025-11-27T08:10:35.100Z",
-    "updated_at": "2025-11-27T08:10:35.100Z"
+    "created_at": "2026-03-06T00:00:00.000Z",
+    "updated_at": "2026-03-06T00:00:00.000Z"
   }
 }
 ]

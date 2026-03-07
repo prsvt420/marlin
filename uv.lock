@@ -205,6 +205,15 @@ wheels = [
 ]
 
 [[package]]
+name = "django-cleanup"
+version = "9.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4b/01/b15a8de8b9ec75ea157ec58f86411894ca1182305fabaee31193076e7f62/django_cleanup-9.0.0.tar.gz", hash = "sha256:bb9fb560aaf62959c81e31fa40885c36bbd5854d5aa21b90df2c7e4ba633531e", size = 17917, upload-time = "2024-09-18T21:58:06.089Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/87/d7/a83dc87c2383e125da29948f7bccf5b30126c087a5a831316482407a960f/django_cleanup-9.0.0-py3-none-any.whl", hash = "sha256:19f8b0e830233f9f0f683b17181f414672a0f48afe3ea3cc80ba47ae40ad880c", size = 10726, upload-time = "2024-09-18T21:58:04.626Z" },
+]
+
+[[package]]
 name = "django-compressor"
 version = "4.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -314,6 +323,15 @@ wheels = [
 [package.optional-dependencies]
 phonenumbers = [
     { name = "phonenumbers" },
+]
+
+[[package]]
+name = "django-resized"
+version = "1.0.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fc/aa/5e83b3dec9c1ec7d336c86e83bbc93674cd4fc125879a827b932a0ec25c3/django_resized-1.0.3.tar.gz", hash = "sha256:c199f2b6e315816753df3a7a3889b923d3b73ce89fa16af93761cf2ea9bac4f7", size = 4948, upload-time = "2024-10-14T06:08:58.726Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/ac/3495743e9923a3b79a929782f63db7acd606dc94c15c296487ef6d015717/django_resized-1.0.3-py3-none-any.whl", hash = "sha256:b5b0cf0d1db4f8db43362eef121d94d63487e2bff7a59c45046a1420788db353", size = 5149, upload-time = "2024-10-14T06:08:55.665Z" },
 ]
 
 [[package]]
@@ -608,6 +626,7 @@ dependencies = [
     { name = "celery" },
     { name = "cssmin" },
     { name = "django" },
+    { name = "django-cleanup" },
     { name = "django-compressor" },
     { name = "django-csp" },
     { name = "django-filter" },
@@ -615,6 +634,7 @@ dependencies = [
     { name = "django-ipware" },
     { name = "django-modeltranslation" },
     { name = "django-phonenumber-field", extra = ["phonenumbers"] },
+    { name = "django-resized" },
     { name = "django-spurl" },
     { name = "django-stubs" },
     { name = "django-user-agents" },
@@ -652,6 +672,7 @@ requires-dist = [
     { name = "celery", specifier = ">=5.6.2" },
     { name = "cssmin", specifier = ">=0.2.0" },
     { name = "django", specifier = ">=5.2.6" },
+    { name = "django-cleanup", specifier = ">=9.0.0" },
     { name = "django-compressor", specifier = ">=4.6.0" },
     { name = "django-csp", specifier = ">=4.0" },
     { name = "django-filter", specifier = ">=25.2" },
@@ -659,6 +680,7 @@ requires-dist = [
     { name = "django-ipware", specifier = ">=7.0.1" },
     { name = "django-modeltranslation", specifier = ">=0.19.17" },
     { name = "django-phonenumber-field", extras = ["phonenumbers"], specifier = ">=8.4.0" },
+    { name = "django-resized", specifier = ">=1.0.3" },
     { name = "django-spurl", specifier = ">=0.6.8" },
     { name = "django-stubs", specifier = ">=5.2.5" },
     { name = "django-user-agents", specifier = ">=0.4.0" },

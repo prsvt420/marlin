@@ -30,6 +30,8 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "phonenumber_field",
+    "django_resized",
+    "django_cleanup.apps.CleanupConfig",
     "django_user_agents",
     "health_check",
     "compressor",

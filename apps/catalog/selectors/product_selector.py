@@ -8,7 +8,6 @@ from django.db.models import (
 
 from apps.catalog.models import Product
 from apps.catalog.selectors import (
-    ProductAttributeSelector,
     ProductImageSelector,
 )
 
@@ -22,15 +21,11 @@ class ProductSelector:
         only_active: bool = True,
     ) -> QuerySet[Product]:
         products: QuerySet[Product] = Product.objects.select_related(
-            "category", "product_nutrition"
+            "category", "nutrition"
         ).prefetch_related(
             Prefetch(
-                "product_images",
+                lookup="images",
                 queryset=ProductImageSelector().get_product_images(),
-            ),
-            Prefetch(
-                "product_attributes",
-                queryset=ProductAttributeSelector().get_product_attributes(),
             ),
         )
 

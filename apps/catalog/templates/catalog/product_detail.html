@@ -17,18 +17,18 @@
 	<section class="product">
     <div class="product__swiper surface swiper">
       <div class="swiper-wrapper">
-        {% for product_image in product.product_images.all %}
+        {% for product_image in product.images.all %}
 	        <div class="swiper-slide">
-	          <img class="product__swiper-item" src="{{ product_image.image_path.url }}" alt="{{ product_image.alt_text }} - {{ product_image.sort_order }}" draggable="false">
+	          <img class="product__swiper-item" src="{{ product_image.image.url }}" alt="{{ product.name }} - {{ product_image.sort_order }}" draggable="false">
 	        </div>
         {% empty %}
           <div class="swiper-slide">
-            <img class="product__swiper-item" src="{% static 'catalog/img/default-product-image.jpg' %}" alt="{% trans 'No image available' %}" draggable="false">
+            <img class="product__swiper-item" src="{% static 'catalog/img/default-product-image.webp' %}" alt="" draggable="false">
           </div>
         {% endfor %}
       </div>
 
-      {% if product.product_images.count %}
+      {% if product.images.count %}
         <div class="swiper-button-prev product__swiper-button product__swiper-button--prev"></div>
         <div class="swiper-button-next product__swiper-button product__swiper-button--next"></div>
         <div class="swiper-pagination product__swiper-pagination"></div>
@@ -92,22 +92,22 @@
 		    <div class="product__nutrition">
 			    <p class="product__label">{% trans "Nutritional value" %}</p>
 
-			    {% if product.product_nutrition %}
+			    {% if product.nutrition %}
 				    <ul class="product__nutrition-list">
 						  <li class="product__nutrition-item">
-						    <p class="product__nutrition-label">{{ product.product_nutrition.proteins|floatformat:"1u" }}</p>
+						    <p class="product__nutrition-label">{{ product.nutrition.proteins|floatformat:"1u" }}</p>
 						    <p class="product__nutrition-value">{% trans "proteins" %}</p>
 					    </li>
 					    <li class="product__nutrition-item">
-						    <p class="product__nutrition-label">{{ product.product_nutrition.fats|floatformat:"1u" }}</p>
+						    <p class="product__nutrition-label">{{ product.nutrition.fats|floatformat:"1u" }}</p>
 						    <p class="product__nutrition-value">{% trans "fats" %}</p>
 					    </li>
 					    <li class="product__nutrition-item">
-						    <p class="product__nutrition-label">{{ product.product_nutrition.carbs|floatformat:"1u" }}</p>
+						    <p class="product__nutrition-label">{{ product.nutrition.carbs|floatformat:"1u" }}</p>
 						    <p class="product__nutrition-value">{% trans "carbs" %}</p>
 					    </li>
 					    <li class="product__nutrition-item">
-						    <p class="product__nutrition-label">{{ product.product_nutrition.calories|floatformat:"1u" }}</p>
+						    <p class="product__nutrition-label">{{ product.nutrition.calories|floatformat:"1u" }}</p>
 						    <p class="product__nutrition-value">{% trans "calories" %}</p>
 					    </li>
 				    </ul>
@@ -118,10 +118,10 @@
 		    <div class="product__characteristics">
 			    <p class="product__label">{% trans "Characteristics" %}</p>
 		      <ul class="product__characteristics-list">
-						{% for product_attribute in product.product_attributes.all %}
+						{% for attribute, value in product.attributes.items %}
 			        <li class="product__characteristics-item">
-				        <p class="product__characteristics-label">{{ product_attribute.attribute.name }}</p>
-                <p class="product__characteristics-value">{{ product_attribute.value }}</p>
+				        <p class="product__characteristics-label">{{ attribute }}</p>
+                <p class="product__characteristics-value">{{ value }}</p>
 			        </li>
 			      {% empty %}
 			        <li>

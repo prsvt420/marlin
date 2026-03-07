@@ -1,30 +1,29 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django_resized import ResizedImageField
+
+from apps.core.models import BaseModel
 
 
-class ProductImage(models.Model):  # type: ignore
+class ProductImage(BaseModel):  # type: ignore
     product = models.ForeignKey(
         to="Product",
         on_delete=models.CASCADE,
-        related_name="product_images",
+        related_name="images",
         verbose_name=_("product"),
-        help_text=_("The product to which the image belongs."),
     )
-    image_path = models.ImageField(
+    image = ResizedImageField(
+        size=(1024, 1024),
+        crop=None,
+        quality=80,
+        force_format="WEBP",
         upload_to="product_images/",
+        keep_meta=False,
         verbose_name=_("image"),
-        help_text=_("Path to the product image."),
-    )
-    alt_text = models.CharField(
-        max_length=255,
-        blank=True,
-        verbose_name=_("alternative text"),
-        help_text=_("Description of the image for SEO and accessibility."),
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name=_("display order"),
-        help_text=_("Order in which product images appear in lists."),
+        verbose_name=_("sort order"),
     )
 
     class Meta:
@@ -35,4 +34,4 @@ class ProductImage(models.Model):  # type: ignore
         ordering = ("product__name", "sort_order")
 
     def __str__(self) -> str:
-        return f"{self.product.name} - {self.image_path}"
+        return f"{self.product.name} - {self.image}"

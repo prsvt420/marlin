@@ -1,15 +1,27 @@
 from django.contrib import admin
+from django.templatetags.static import static
+from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
 
 from apps.catalog.models import ProductImage
 
 
 @admin.register(ProductImage)
-class ProductImageAdmin(TranslationAdmin):
+class ProductImageAdmin(admin.ModelAdmin):
     list_per_page = 25
-    list_display = ("product", "image_path", "sort_order")
+    list_display = ("product", "image_preview", "sort_order")
     list_editable = ("sort_order",)
     search_fields = ("product__name",)
     ordering = ("product__name", "sort_order")
     search_help_text = _("Search by product name")
+
+    @admin.display(description=_("Image preview"))
+    def image_preview(self, obj: ProductImage) -> str:
+        return format_html(
+            "<img src='{}' style='max-height: 100px;'/>",
+            (
+                obj.image.url
+                if obj.image
+                else static("catalog/img/default-product-image.webp")
+            ),
+        )

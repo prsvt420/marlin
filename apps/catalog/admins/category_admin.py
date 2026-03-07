@@ -1,7 +1,7 @@
 from django.contrib import admin
+from django.templatetags.static import static
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from django_stubs_ext import StrOrPromise
 from modeltranslation.admin import TranslationAdmin
 
 from apps.catalog.models import Category
@@ -17,8 +17,8 @@ class CategoryAdmin(TranslationAdmin):
         "name",
         "parent",
         "is_active",
-        "sort_order",
         "image_preview",
+        "sort_order",
     )
     list_editable = ("is_active", "sort_order")
     list_filter = ("parent", "is_active")
@@ -36,20 +36,19 @@ class CategoryAdmin(TranslationAdmin):
         "description",
         "sort_order",
         "is_active",
-        ("image_path", "image_preview"),
-        "alt_text",
+        ("image", "image_preview"),
         ("created_at", "updated_at"),
     )
     search_help_text = _("Search by category name")
     list_select_related = ("parent",)
 
     @admin.display(description=_("Image preview"))
-    def image_preview(self, obj: Category) -> StrOrPromise:
-
-        if obj.image_path:
-            return format_html(
-                "<img src='{}' alt='{}' style='max-height: 100px;'/>",
-                obj.image_path.url,
-                obj.alt_text or "",
-            )
-        return _("No image available")
+    def image_preview(self, obj: Category) -> str:
+        return format_html(
+            "<img src='{}' style='max-height: 100px;'/>",
+            (
+                obj.image.url
+                if obj.image
+                else static("catalog/img/default-category-image.webp")
+            ),
+        )

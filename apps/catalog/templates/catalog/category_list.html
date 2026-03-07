@@ -24,10 +24,10 @@
 		          <li class="categories__item">
 			          <a href="{{ subcategory.get_absolute_url }}" aria-label="Marlin — {{ subcategory.name }}">
 	                <article class="category-card" aria-hidden="true">
-	                  {% if subcategory.image_path %}
-	                    <img class="category-card__image" src="{{ subcategory.image_path.url }}" alt="" draggable="false">
+	                  {% if subcategory.image %}
+	                    <img class="category-card__image" src="{{ subcategory.image.url }}" alt="" draggable="false">
 	                  {% else %}
-	                    <img class="category-card__image" src="{% static 'catalog/img/default-category-image.jpg' %}" alt="" draggable="false">
+	                    <img class="category-card__image" src="{% static 'catalog/img/default-category-image.webp' %}" alt="" draggable="false">
 	                  {% endif %}
 	                    <h3 class="category-card__name">{{ subcategory.name }}</h3>
 	                </article>

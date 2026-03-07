@@ -1,69 +1,53 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import pgettext_lazy
+from django_resized import ResizedImageField
+
+from apps.core.models import BaseModel
 
 
-class Category(models.Model):  # type: ignore
+class Category(BaseModel):  # type: ignore
     parent = models.ForeignKey(
         to="self",
         on_delete=models.CASCADE,
         related_name="subcategories",
         null=True,
         blank=True,
-        verbose_name=_("parent category"),
-        help_text=_("Parent category (if nesting is used)."),
+        verbose_name=_("parent"),
     )
     name = models.CharField(
         max_length=255,
         unique=True,
         verbose_name=_("name"),
-        help_text=_("Category name."),
     )
     slug = models.SlugField(
         max_length=255,
         unique=True,
-        verbose_name=_("URL-identifier"),
-        help_text=_("Unique URL identifier (letters, numbers, hyphens)."),
+        verbose_name=_("slug"),
     )
     description = models.TextField(
         blank=True,
         verbose_name=_("description"),
-        help_text=_("Category description."),
     )
-    image_path = models.ImageField(
+    image = ResizedImageField(
+        size=(1024, 1024),
+        crop=None,
+        quality=80,
+        force_format="WEBP",
         upload_to="category_images/",
+        keep_meta=False,
         blank=True,
         null=True,
         verbose_name=_("image"),
-        help_text=_("Path to the category image."),
-    )
-    alt_text = models.CharField(
-        max_length=255,
-        blank=True,
-        verbose_name=_("alternative text"),
-        help_text=_("Description of the image for SEO and accessibility."),
     )
     sort_order = models.PositiveIntegerField(
         default=0,
-        verbose_name=_("display order"),
-        help_text=_("Order in which categories appear in lists."),
+        verbose_name=_("sort order"),
     )
     is_active = models.BooleanField(
         default=True,
-        verbose_name=_("active"),
-        help_text=_(
-            "Determines whether the category is displayed in the catalog."
-        ),
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_("created date"),
-        help_text=_("Date and time the category was added."),
-    )
-    updated_at = models.DateTimeField(
-        auto_now=True,
-        verbose_name=_("updated date"),
-        help_text=_("Date and time when the category was last updated."),
+        verbose_name=pgettext_lazy("feminine", "active"),
     )
 
     class Meta:

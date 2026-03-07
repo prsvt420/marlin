@@ -3,7 +3,6 @@ from django.utils.translation import gettext_lazy as _
 from modeltranslation.admin import TranslationAdmin
 
 from apps.catalog.admins import (
-    ProductAttributeInline,
     ProductImageInline,
     ProductNutritionInline,
 )
@@ -17,7 +16,6 @@ class ProductAdmin(TranslationAdmin):
         "slug": ("name",),
     }
     list_display = (
-        "sku",
         "name",
         "category",
         "price",
@@ -29,11 +27,8 @@ class ProductAdmin(TranslationAdmin):
     )
     list_display_links = ("name",)
     list_editable = ("is_active", "discount", "stock")
-    search_fields = (
-        "sku",
-        "name",
-    )
-    search_help_text = _("Search by name or article (SKU)")
+    search_fields = ("name",)
+    search_help_text = _("Search by product name")
     list_filter = ("category__name", "is_active", "unit_type")
     date_hierarchy = "created_at"
     readonly_fields = (
@@ -45,18 +40,17 @@ class ProductAdmin(TranslationAdmin):
     inlines = (
         ProductImageInline,
         ProductNutritionInline,
-        ProductAttributeInline,
     )
     fields = (
         ("name", "slug"),
         "description",
         "composition",
+        "attributes",
         "unit_type",
         "price",
         "discount",
         "final_price",
         "category",
-        "sku",
         "stock",
         "is_active",
         "is_available",

@@ -7,5 +7,5 @@ from apps.catalog.models import (
 
 @translator.register(Product)
 class ProductTranslationOptions(translator.TranslationOptions):
-    fields = ("name", "description", "composition")
+    fields = ("name", "description", "composition", "attributes")
     required_languages = ("ru", "en")
