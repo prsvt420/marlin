@@ -2,41 +2,63 @@ from decimal import Decimal
 
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.contrib.filters.admin import ChoicesDropdownFilter
+from unfold.decorators import display
 
 from apps.carts.admins import CartItemInline
+from apps.carts.choices import CartStatus
 from apps.carts.models import Cart
 from apps.carts.selectors import CartSelector
+from apps.core.admins import BaseModelAdmin
 
 
 @admin.register(Cart)
-class CartAdmin(admin.ModelAdmin):
-    list_per_page = 25
+class CartAdmin(BaseModelAdmin):
+    inlines = (CartItemInline,)
     list_display = (
         "user",
-        "cart_status",
+        "display_cart_status",
         "total_quantity",
         "total_price",
+        "updated_at",
+        "created_at",
     )
-    list_editable = ("cart_status",)
-    list_filter = ("cart_status",)
+    fields = (
+        "user",
+        "cart_status",
+        "total_price",
+        "total_quantity",
+        "created_at",
+        "updated_at",
+    )
+    readonly_fields = (
+        "total_price",
+        "total_quantity",
+        "created_at",
+        "updated_at",
+    )
+    list_filter = (("cart_status", ChoicesDropdownFilter),)
     search_fields = (
         "user__email",
         "user__username",
     )
     search_help_text = _("Search by email and username")
-    date_hierarchy = "created_at"
-    readonly_fields = ("created_at", "updated_at")
-    fields = (
-        "user",
-        "cart_status",
-        ("created_at", "updated_at"),
-    )
-    inlines = (CartItemInline,)
 
-    @admin.display(description=_("Total price"))
+    @display(
+        description=_("Status"),
+        label={
+            CartStatus.ACTIVE: "success",
+            CartStatus.CONVERTED: "info",
+            CartStatus.ABANDONED: "danger",
+        },
+    )
+    def display_cart_status(self, obj: Cart) -> str:
+        return obj.cart_status
+
+    @display(description=_("Total price"))
     def total_price(self, obj: Cart) -> Decimal:
         return CartSelector().get_cart_prices(cart=obj)["total_price"]
 
-    @admin.display(description=_("Total quantity"))
+    @display(description=_("Total quantity"))
     def total_quantity(self, obj: Cart) -> int:
         return obj.total_quantity

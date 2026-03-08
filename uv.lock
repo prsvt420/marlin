@@ -376,6 +376,18 @@ wheels = [
 ]
 
 [[package]]
+name = "django-unfold"
+version = "0.83.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7c/66/5ddc3a921a6b4540b3bb319faa9a0a097efb5c2b86e4386ddffd349ec248/django_unfold-0.83.1.tar.gz", hash = "sha256:af3f9710496d172f0079343d1ba3128528da6d8ef4a57b070efcfc6456d8ed2b", size = 1111682, upload-time = "2026-03-05T17:40:31.518Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/78/fb/f3822627068f99de66989e3f2bdb9cf0eaafa50cbe49615011c74de41706/django_unfold-0.83.1-py3-none-any.whl", hash = "sha256:233cca8f7d9d173518597ce4dbafb0167f3075b556d7fb2b97e44217a1c6ba0f", size = 1227058, upload-time = "2026-03-05T17:40:30.054Z" },
+]
+
+[[package]]
 name = "django-user-agents"
 version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -637,6 +649,7 @@ dependencies = [
     { name = "django-resized" },
     { name = "django-spurl" },
     { name = "django-stubs" },
+    { name = "django-unfold" },
     { name = "django-user-agents" },
     { name = "docutils" },
     { name = "flower" },
@@ -683,6 +696,7 @@ requires-dist = [
     { name = "django-resized", specifier = ">=1.0.3" },
     { name = "django-spurl", specifier = ">=0.6.8" },
     { name = "django-stubs", specifier = ">=5.2.5" },
+    { name = "django-unfold", specifier = ">=0.83.1" },
     { name = "django-user-agents", specifier = ">=0.4.0" },
     { name = "docutils", specifier = ">=0.22.2" },
     { name = "flower", specifier = ">=2.0.1" },

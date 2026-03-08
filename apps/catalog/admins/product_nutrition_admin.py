@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.models import ProductNutrition
+from apps.core.admins import BaseModelAdmin
 
 
 @admin.register(ProductNutrition)
-class ProductNutritionAdmin(admin.ModelAdmin):
-    list_per_page = 25
+class ProductNutritionAdmin(BaseModelAdmin):
     list_display = (
         "product",
         "calories",
@@ -15,5 +15,4 @@ class ProductNutritionAdmin(admin.ModelAdmin):
         "carbs",
     )
     search_fields = ("product__name",)
-    ordering = ("product__name",)
     search_help_text = _("Search by product name")

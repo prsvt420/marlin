@@ -1,14 +1,21 @@
-from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from unfold.admin import TabularInline
+from unfold.decorators import display
 
 from apps.carts.models import CartItem
 
 
-class CartItemInline(admin.TabularInline):
+class CartItemInline(TabularInline):
     model = CartItem
     extra = 0
-    readonly_fields = ("price_snapshot", "total_price")
+    readonly_fields = (
+        "price_snapshot",
+        "total_price",
+        "created_at",
+        "updated_at",
+    )
+    tab = True
 
-    @admin.display(description=_("Total price"))
+    @display(description=_("Total price"))
     def total_price(self, obj: CartItem) -> str:
         return obj.total_price

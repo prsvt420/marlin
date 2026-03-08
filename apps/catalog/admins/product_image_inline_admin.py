@@ -1,8 +1,9 @@
-from django.contrib import admin
+from unfold.admin import TabularInline
 
 from apps.catalog.models import ProductImage
 
 
-class ProductImageInline(admin.TabularInline):
+class ProductImageInline(TabularInline):
     model = ProductImage
     extra = 1
+    tab = True

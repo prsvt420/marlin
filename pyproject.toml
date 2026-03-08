@@ -29,6 +29,7 @@ dependencies = [
     "django-filter>=25.2",
     "django-resized>=1.0.3",
     "django-cleanup>=9.0.0",
+    "django-unfold>=0.83.1",
 ]
 
 [tool.black]

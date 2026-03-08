@@ -33,6 +33,7 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
                 ),
             ],
         ),
+        name="health-check",
     ),
     path(
         route="catalog/",

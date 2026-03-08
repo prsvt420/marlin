@@ -1,20 +1,20 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TabbedTranslationAdmin
+from unfold.contrib.filters.admin import RelatedDropdownFilter
 
+from apps.core.admins import BaseModelAdmin
 from apps.vacancies.models import City
 
 
 @admin.register(City)
-class CityAdmin(TranslationAdmin):
-    list_per_page = 25
+class CityAdmin(BaseModelAdmin, TabbedTranslationAdmin):
     list_display = (
         "name",
         "region",
     )
-    list_filter = ("region__name",)
-    search_fields = ("name", "region__name")
-    ordering = ("name",)
-    search_help_text = _("Search by city and region name")
+    readonly_fields = ("created_at", "updated_at")
+    list_filter = (("region", RelatedDropdownFilter),)
     list_select_related = ("region",)
-    empty_value_display = "—"
+    search_fields = ("name", "region__name")
+    search_help_text = _("Search by city and region name")

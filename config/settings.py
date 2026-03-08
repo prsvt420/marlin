@@ -2,7 +2,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
 from decouple import config
+from django.templatetags.static import static
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django_stubs_ext import StrOrPromise
 
 BASE_DIR: Path = Path(__file__).resolve().parent.parent
@@ -20,6 +22,15 @@ INTERNAL_IPS: List[str] = [
 ]
 
 INSTALLED_APPS: List[str] = [
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
+    "unfold.contrib.import_export",
+    "unfold.contrib.guardian",
+    "unfold.contrib.simple_history",
+    "unfold.contrib.location_field",
+    "unfold.contrib.constance",
     "modeltranslation",
     "django.contrib.admin",
     "django.contrib.admindocs",
@@ -205,3 +216,130 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
 LOGIN_URL: StrOrPromise = reverse_lazy(viewname="accounts:signin")
 LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy(viewname="pages:home")
 LOGOUT_REDIRECT_URL: StrOrPromise = LOGIN_URL
+
+UNFOLD: Dict[str, Any] = {
+    "SITE_TITLE": "Marlin",
+    "SITE_HEADER": "Marlin",
+    "SITE_URL": reverse_lazy(viewname="pages:home"),
+    "SITE_ICON": {
+        "light": lambda request: static("img/logo.png"),
+        "dark": lambda request: static("img/logo.png"),
+    },
+    "SITE_FAVICONS": [
+        {
+            "rel": "icon",
+            "sizes": "32x32",
+            "type": "image/svg+xml",
+            "href": lambda request: static("img/favicon.ico"),
+        },
+    ],
+    "SHOW_BACK_BUTTON": True,
+    "ENVIRONMENT": lambda request: [
+        ("DEVELOPMENT" if DEBUG else "PRODUCTION"),
+        ("info" if DEBUG else "danger"),
+    ],
+    "SHOW_LANGUAGES": True,
+    "EXTENSIONS": {
+        "modeltranslation": {
+            "flags": {
+                "en": "🇬🇧",
+                "ru": "🇷🇺",
+            },
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+        "navigation": [
+            {
+                "title": _("Infrastructure"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Celery Flower",
+                        "icon": "auto_graph",
+                        "link": "http://localhost:5555",
+                        "permission": (
+                            lambda request: request.user.is_superuser
+                        ),
+                    },
+                    {
+                        "title": "Health Check",
+                        "icon": "health_and_safety",
+                        "link": reverse_lazy(viewname="health-check"),
+                        "permission": (
+                            lambda request: request.user.is_superuser
+                        ),
+                    },
+                ],
+            },
+            {
+                "title": _("Catalog"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": _("Products"),
+                        "icon": "inventory_2",
+                        "link": reverse_lazy(
+                            "admin:catalog_product_changelist"
+                        ),
+                    },
+                    {
+                        "title": _("Categories"),
+                        "icon": "account_tree",
+                        "link": reverse_lazy(
+                            "admin:catalog_category_changelist"
+                        ),
+                    },
+                ],
+            },
+            {
+                "title": _("Users & Access"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": _("Users"),
+                        "icon": "person",
+                        "link": reverse_lazy("admin:accounts_user_changelist"),
+                    },
+                    {
+                        "title": _("Groups"),
+                        "icon": "group",
+                        "link": reverse_lazy("admin:auth_group_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": _("Orders & Carts"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": _("Carts"),
+                        "icon": "shopping_cart",
+                        "link": reverse_lazy("admin:carts_cart_changelist"),
+                    },
+                    {
+                        "title": _("Cart Items"),
+                        "icon": "list_alt",
+                        "link": reverse_lazy(
+                            "admin:carts_cartitem_changelist"
+                        ),
+                    },
+                ],
+            },
+            {
+                "title": _("Recruitment"),
+                "separator": True,
+                "items": [
+                    {
+                        "title": _("Vacancies"),
+                        "icon": "work",
+                        "link": reverse_lazy(
+                            "admin:vacancies_vacancy_changelist"
+                        ),
+                    },
+                ],
+            },
+        ],
+    },
+}

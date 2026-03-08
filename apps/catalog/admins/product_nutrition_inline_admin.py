@@ -1,9 +1,10 @@
-from django.contrib import admin
+from unfold.admin import TabularInline
 
 from apps.catalog.models import ProductNutrition
 
 
-class ProductNutritionInline(admin.StackedInline):
+class ProductNutritionInline(TabularInline):
     model = ProductNutrition
     extra = 0
     max_num = 1
+    tab = True

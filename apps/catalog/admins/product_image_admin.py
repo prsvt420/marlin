@@ -4,15 +4,13 @@ from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.models import ProductImage
+from apps.core.admins import BaseModelAdmin
 
 
 @admin.register(ProductImage)
-class ProductImageAdmin(admin.ModelAdmin):
-    list_per_page = 25
+class ProductImageAdmin(BaseModelAdmin):
     list_display = ("product", "image_preview", "sort_order")
-    list_editable = ("sort_order",)
     search_fields = ("product__name",)
-    ordering = ("product__name", "sort_order")
     search_help_text = _("Search by product name")
 
     @admin.display(description=_("Image preview"))

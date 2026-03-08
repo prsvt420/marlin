@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-08 22:03+0800\n"
+"POT-Creation-Date: 2026-03-09 21:52+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -19,19 +19,7 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\apps\accounts\admins\user_admin.py:35
-msgid "Personal info"
-msgstr "Личная информация"
-
-#: .\apps\accounts\admins\user_admin.py:47
-msgid "Permissions"
-msgstr "Разрешения"
-
-#: .\apps\accounts\admins\user_admin.py:58
-msgid "Important dates"
-msgstr "Важные даты"
-
-#: .\apps\accounts\admins\user_admin.py:64
+#: .\apps\accounts\admins\user_admin.py:62
 msgid "Search by first name, last name, middle name, email and phone number"
 msgstr "Поиск по имени, фамилии, отчеству, электронной почты и номеру телефона"
 
@@ -542,20 +530,24 @@ msgstr "Вы успешно зарегистрированы! Активируй
 msgid "An account activation link has been sent to your email."
 msgstr "Ссылка для активации аккаунта отправлена на вашу электронную почту."
 
-#: .\apps\carts\admins\cart_admin.py:26
+#: .\apps\carts\admins\cart_admin.py:45
 msgid "Search by email and username"
 msgstr "Поиск по электронной почте и имени пользователя"
 
-#: .\apps\carts\admins\cart_admin.py:36
-#: .\apps\carts\admins\cart_item_inline_admin.py:12
+#: .\apps\carts\admins\cart_admin.py:48
+msgid "Status"
+msgstr "Статус"
+
+#: .\apps\carts\admins\cart_admin.py:58
+#: .\apps\carts\admins\cart_item_inline_admin.py:19
 msgid "Total price"
 msgstr "Общая цена"
 
-#: .\apps\carts\admins\cart_admin.py:40
+#: .\apps\carts\admins\cart_admin.py:62
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9
+#: .\apps\carts\apps.py:9 .\config\settings.py:317
 msgid "Carts"
 msgstr "Корзины"
 
@@ -675,7 +667,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:281
 msgid "Products"
 msgstr "Продукты"
 
@@ -831,24 +823,24 @@ msgid ""
 "price has been updated."
 msgstr "Количество товара в корзине успешно обновлено. Цена была обновлена."
 
-#: .\apps\catalog\admins\category_admin.py:42
+#: .\apps\catalog\admins\category_admin.py:29
 msgid "Search by category name"
 msgstr "Поиск по названию категории"
 
-#: .\apps\catalog\admins\category_admin.py:45
-#: .\apps\catalog\admins\product_image_admin.py:18
+#: .\apps\catalog\admins\category_admin.py:31
+#: .\apps\catalog\admins\product_image_admin.py:16
 msgid "Image preview"
 msgstr "Превью изображения"
 
-#: .\apps\catalog\admins\product_admin.py:31
-#: .\apps\catalog\admins\product_image_admin.py:16
-#: .\apps\catalog\admins\product_nutrition_admin.py:19
+#: .\apps\catalog\admins\product_admin.py:49
+#: .\apps\catalog\admins\product_image_admin.py:14
+#: .\apps\catalog\admins\product_nutrition_admin.py:18
 msgid "Search by product name"
 msgstr "Поиск по названию продукта"
 
 #: .\apps\catalog\apps.py:9
 #: .\apps\catalog\templates\catalog\category_list.html:4
-#: .\apps\catalog\views\product_detail_view.py:25
+#: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:277
 #: .\templates\includes\header.html:16
 msgid "Catalog"
 msgstr "Каталог"
@@ -1313,29 +1305,29 @@ msgstr ""
 msgid "Promotions"
 msgstr "Акции"
 
-#: .\apps\vacancies\admins\city_admin.py:18
+#: .\apps\vacancies\admins\city_admin.py:20
 msgid "Search by city and region name"
 msgstr "Поиск по названию города и региона"
 
-#: .\apps\vacancies\admins\professional_area_admin.py:13
+#: .\apps\vacancies\admins\professional_area_admin.py:12
 msgid "Search by professional field name"
 msgstr "Поиск по названию профессиональной области"
 
-#: .\apps\vacancies\admins\region_admin.py:13
+#: .\apps\vacancies\admins\region_admin.py:12
 msgid "Search by region name"
 msgstr "Поиск по названию региона"
 
-#: .\apps\vacancies\admins\vacancy_admin.py:20
+#: .\apps\vacancies\admins\vacancy_admin.py:41
 msgid "Search by vacancy title and description"
 msgstr "Поиск по заголовку и описанию вакансии"
 
-#: .\apps\vacancies\admins\vacancy_admin.py:50
+#: .\apps\vacancies\admins\vacancy_admin.py:43
 msgid "Salary"
 msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:335
 #: .\templates\includes\footer.html:19
 msgid "Vacancies"
 msgstr "Вакансии"
@@ -1511,6 +1503,38 @@ msgstr "Подробнее"
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:65
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
+
+#: .\config\settings.py:255
+msgid "Infrastructure"
+msgstr "Инфраструктура"
+
+#: .\config\settings.py:288
+msgid "Categories"
+msgstr "Категории"
+
+#: .\config\settings.py:297
+msgid "Users & Access"
+msgstr "Пользователи и доступ"
+
+#: .\config\settings.py:301
+msgid "Users"
+msgstr "Пользователи"
+
+#: .\config\settings.py:306
+msgid "Groups"
+msgstr "Группы"
+
+#: .\config\settings.py:313
+msgid "Orders & Carts"
+msgstr "Заказы и корзины"
+
+#: .\config\settings.py:322
+msgid "Cart Items"
+msgstr "Элементы корзины"
+
+#: .\config\settings.py:331
+msgid "Recruitment"
+msgstr "Подбор персонала"
 
 #: .\templates\403.html:15
 msgid "Oops! Access denied"

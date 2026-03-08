@@ -1,20 +1,25 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TabbedTranslationAdmin
+from unfold.contrib.filters.admin import (
+    ChoicesDropdownFilter,
+    RelatedDropdownFilter,
+)
 
 from apps.catalog.admins import (
     ProductImageInline,
     ProductNutritionInline,
 )
 from apps.catalog.models import Product
+from apps.core.admins import BaseModelAdmin
 
 
 @admin.register(Product)
-class ProductAdmin(TranslationAdmin):
-    list_per_page = 25
-    prepopulated_fields = {
-        "slug": ("name",),
-    }
+class ProductAdmin(BaseModelAdmin, TabbedTranslationAdmin):
+    inlines = (
+        ProductImageInline,
+        ProductNutritionInline,
+    )
     list_display = (
         "name",
         "category",
@@ -25,35 +30,20 @@ class ProductAdmin(TranslationAdmin):
         "is_active",
         "is_available",
     )
-    list_display_links = ("name",)
-    list_editable = ("is_active", "discount", "stock")
-    search_fields = ("name",)
-    search_help_text = _("Search by product name")
-    list_filter = ("category__name", "is_active", "unit_type")
-    date_hierarchy = "created_at"
     readonly_fields = (
+        "final_price",
+        "is_available",
         "created_at",
         "updated_at",
-        "final_price",
-        "is_available",
     )
-    inlines = (
-        ProductImageInline,
-        ProductNutritionInline,
-    )
-    fields = (
-        ("name", "slug"),
-        "description",
-        "composition",
-        "attributes",
-        "unit_type",
-        "price",
-        "discount",
-        "final_price",
-        "category",
-        "stock",
-        "is_active",
-        "is_available",
-        ("created_at", "updated_at"),
-    )
+    prepopulated_fields = {
+        "slug": ("name",),
+    }
     autocomplete_fields = ("category",)
+    list_filter = (
+        "is_active",
+        ("unit_type", ChoicesDropdownFilter),
+        ("category", RelatedDropdownFilter),
+    )
+    search_fields = ("name",)
+    search_help_text = _("Search by product name")
