@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-08 21:58+0800\n"
+"POT-Creation-Date: 2026-03-08 22:03+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -142,63 +142,37 @@ msgstr "Фамилия обязательна."
 msgid "The middle name must not be longer than 255 characters."
 msgstr "Длина отчества не должна превышать 255 символов."
 
-#: .\apps\accounts\models\user_model.py:11
+#: .\apps\accounts\models\user_model.py:12
 msgid "email"
 msgstr "электронная почта"
 
-#: .\apps\accounts\models\user_model.py:12
-msgid "User email."
-msgstr "Электронная почта пользователя."
-
-#: .\apps\accounts\models\user_model.py:16
+#: .\apps\accounts\models\user_model.py:17
 msgid "phone number"
 msgstr "номер телефона"
 
-#: .\apps\accounts\models\user_model.py:17
-msgid "User phone number."
-msgstr "Номер телефона пользователя."
-
-#: .\apps\accounts\models\user_model.py:21
+#: .\apps\accounts\models\user_model.py:22
 msgid "first name"
 msgstr "имя"
-
-#: .\apps\accounts\models\user_model.py:23
-msgid "User first name."
-msgstr "Имя пользователя."
 
 #: .\apps\accounts\models\user_model.py:26
 msgid "last name"
 msgstr "фамилия"
 
-#: .\apps\accounts\models\user_model.py:28
-msgid "User last name."
-msgstr "Фамилия пользователя."
-
 #: .\apps\accounts\models\user_model.py:31
 msgid "middle name"
 msgstr "отчество"
 
-#: .\apps\accounts\models\user_model.py:33
-msgid "User middle name."
-msgstr "Отчество пользователя."
-
-#: .\apps\accounts\models\user_model.py:37
+#: .\apps\accounts\models\user_model.py:35
+#: .\apps\catalog\models\product_model.py:83
+msgctxt "masculine"
 msgid "active"
 msgstr "активный"
 
-#: .\apps\accounts\models\user_model.py:40
-msgid ""
-"Designates whether this user should be treated as active. Unselect this "
-"instead of deleting accounts."
-msgstr ""
-"Отметьте, если пользователь должен считаться активным. Уберите эту отметку "
-"вместо удаления учётной записи."
-
-#: .\apps\accounts\models\user_model.py:56 .\apps\carts\models\cart_model.py:14
+#: .\apps\accounts\models\user_model.py:49 .\apps\carts\models\cart_model.py:14
 msgid "user"
 msgstr "пользователь"
 
-#: .\apps\accounts\models\user_model.py:57
+#: .\apps\accounts\models\user_model.py:50
 msgid "users"
 msgstr "пользователи"
 
@@ -1002,11 +976,6 @@ msgstr "доступность"
 #: .\apps\catalog\models\product_model.py:79
 msgid "stock"
 msgstr "наличие"
-
-#: .\apps\catalog\models\product_model.py:83
-msgctxt "masculine"
-msgid "active"
-msgstr "активный"
 
 #: .\apps\catalog\models\product_model.py:90
 msgid "products"
