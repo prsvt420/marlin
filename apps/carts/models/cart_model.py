@@ -3,32 +3,21 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from apps.carts.choices import CartStatus
+from apps.core.models import BaseModel
 
 
-class Cart(models.Model):  # type: ignore
+class Cart(BaseModel):  # type: ignore
     user = models.ForeignKey(
         to=get_user_model(),
         on_delete=models.CASCADE,
         related_name="carts",
         verbose_name=_("user"),
-        help_text=_("The user to which the cart belongs."),
     )
     cart_status = models.CharField(
         max_length=20,
         choices=CartStatus.choices,
         default=CartStatus.ACTIVE,
         verbose_name=_("cart status"),
-        help_text=_("Current cart status (active, converted, abandoned)."),
-    )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_("created date"),
-        help_text=_("Date and time the cart was created."),
-    )
-    updated_at = models.DateTimeField(
-        auto_now=True,
-        verbose_name=_("updated date"),
-        help_text=_("Date and time when the cart was last updated."),
     )
 
     class Meta:  # noqa: D106
@@ -46,6 +35,7 @@ class Cart(models.Model):  # type: ignore
                 ),
             ),
         ]
+        ordering = ("-updated_at",)
 
     def __str__(self) -> str:
         return (

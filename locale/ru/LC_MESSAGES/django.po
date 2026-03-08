@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-07 22:51+0800\n"
+"POT-Creation-Date: 2026-03-08 21:58+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -194,7 +194,7 @@ msgstr ""
 "Отметьте, если пользователь должен считаться активным. Уберите эту отметку "
 "вместо удаления учётной записи."
 
-#: .\apps\accounts\models\user_model.py:56 .\apps\carts\models\cart_model.py:13
+#: .\apps\accounts\models\user_model.py:56 .\apps\carts\models\cart_model.py:14
 msgid "user"
 msgstr "пользователь"
 
@@ -586,25 +586,24 @@ msgid "Carts"
 msgstr "Корзины"
 
 #: .\apps\carts\choices\cart_status_choices.py:6
+msgctxt "feminine"
 msgid "Active"
 msgstr "Активна"
 
 #: .\apps\carts\choices\cart_status_choices.py:7
+msgctxt "feminine"
 msgid "Сonverted"
 msgstr "Конвертирована"
 
 #: .\apps\carts\choices\cart_status_choices.py:8
+msgctxt "feminine"
 msgid "Abandoned"
 msgstr "Заброшена"
 
-#: .\apps\carts\models\cart_item_model.py:15
-#: .\apps\carts\models\cart_model.py:37
+#: .\apps\carts\models\cart_item_model.py:16
+#: .\apps\carts\models\cart_model.py:26
 msgid "cart"
 msgstr "корзина"
-
-#: .\apps\carts\models\cart_item_model.py:16
-msgid "The cart to which the cart item belongs."
-msgstr "Корзина, к которой относится элемент."
 
 #: .\apps\carts\models\cart_item_model.py:22
 #: .\apps\catalog\models\product_image_model.py:13
@@ -613,79 +612,49 @@ msgstr "Корзина, к которой относится элемент."
 msgid "product"
 msgstr "продукт"
 
-#: .\apps\carts\models\cart_item_model.py:23
-msgid "Product belonging to the cart item."
-msgstr "Продукт, добавленный в элемент корзины."
-
-#: .\apps\carts\models\cart_item_model.py:27
+#: .\apps\carts\models\cart_item_model.py:26
 msgid "quantity"
 msgstr "количество"
 
-#: .\apps\carts\models\cart_item_model.py:28
-msgid "Number of products in cart item."
-msgstr "Количество продуктов в элементе корзины."
-
-#: .\apps\carts\models\cart_item_model.py:33
+#: .\apps\carts\models\cart_item_model.py:31
 msgid "price snapshot"
 msgstr "ценовой снимок"
 
-#: .\apps\carts\models\cart_item_model.py:35
-msgid "Price of the product at the time it was added to the cart."
-msgstr "Цена продукта на момент его добавления в корзину."
-
-#: .\apps\carts\models\cart_item_model.py:45
+#: .\apps\carts\models\cart_item_model.py:41
 msgid "total price"
 msgstr "общая цена"
 
-#: .\apps\carts\models\cart_item_model.py:46
-msgid "Cart item total price (autocalculated)."
-msgstr "Финальная цена элемента корзины (рассчитывается автоматически)."
+#: .\apps\carts\models\cart_item_model.py:42
+#: .\apps\catalog\models\product_model.py:57
+#: .\apps\catalog\models\product_model.py:69
+msgid "Calculated by the system."
+msgstr "Рассчитывается системой."
 
-#: .\apps\carts\models\cart_item_model.py:52
+#: .\apps\carts\models\cart_item_model.py:48
 msgid "cart item"
 msgstr "элемент корзины"
 
-#: .\apps\carts\models\cart_item_model.py:53
+#: .\apps\carts\models\cart_item_model.py:49
 msgid "cart items"
 msgstr "элементы корзины"
 
-#: .\apps\carts\models\cart_model.py:14
-msgid "The user to which the cart belongs."
-msgstr "Пользователь, к которому принадлежит корзина."
+#: .\apps\carts\models\cart_item_model.py:55
+msgid "This product is already in your cart."
+msgstr "Этот продукт уже находится в корзине."
 
 #: .\apps\carts\models\cart_model.py:20
 msgid "cart status"
 msgstr "статус корзины"
 
-#: .\apps\carts\models\cart_model.py:21
-msgid "Current cart status (active, converted, abandoned)."
-msgstr "Текущий статус корзины (активна, конвертирована, заброшена)."
-
-#: .\apps\carts\models\cart_model.py:25 .\apps\core\models\base_model.py:8
-msgid "created date"
-msgstr "дата создания"
-
-#: .\apps\carts\models\cart_model.py:26
-msgid "Date and time the cart was created."
-msgstr "Дата и время добавления корзины."
-
-#: .\apps\carts\models\cart_model.py:30 .\apps\core\models\base_model.py:13
-msgid "updated date"
-msgstr "дата обновления"
-
-#: .\apps\carts\models\cart_model.py:31
-msgid "Date and time when the cart was last updated."
-msgstr "Дата и время последнего обновления корзины."
-
-#: .\apps\carts\models\cart_model.py:38
+#: .\apps\carts\models\cart_model.py:27
 msgid "carts"
 msgstr "корзины"
 
-#: .\apps\carts\models\cart_model.py:45
+#: .\apps\carts\models\cart_model.py:34
 msgid "A user can have only one active cart."
 msgstr "У пользователя может быть только одна активная корзина."
 
-#: .\apps\carts\models\cart_model.py:52
+#: .\apps\carts\models\cart_model.py:42
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\templates\includes\header.html:19
 msgid "Cart"
@@ -1026,11 +995,6 @@ msgstr "скидка"
 msgid "final price"
 msgstr "финальная цена"
 
-#: .\apps\catalog\models\product_model.py:57
-#: .\apps\catalog\models\product_model.py:69
-msgid "Calculated by the system."
-msgstr "Рассчитывается системой."
-
 #: .\apps\catalog\models\product_model.py:68
 msgid "availability"
 msgstr "доступность"
@@ -1191,6 +1155,14 @@ msgstr "По запросу ничего не найдено"
 #: .\apps\catalog\templates\catalog\product_list.html:82
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
+
+#: .\apps\core\models\base_model.py:8
+msgid "created date"
+msgstr "дата создания"
+
+#: .\apps\core\models\base_model.py:13
+msgid "updated date"
+msgstr "дата обновления"
 
 #: .\apps\pages\apps.py:9
 msgid "Pages"

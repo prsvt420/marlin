@@ -1,8 +1,8 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import pgettext_lazy
 
 
 class CartStatus(models.TextChoices):
-    ACTIVE = "active", _("Active")
-    CONVERTED = "converted", _("Сonverted")
-    ABANDONED = "abandoned", _("Abandoned")
+    ACTIVE = "active", pgettext_lazy("feminine", "Active")
+    CONVERTED = "converted", pgettext_lazy("feminine", "Сonverted")
+    ABANDONED = "abandoned", pgettext_lazy("feminine", "Abandoned")

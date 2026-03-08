@@ -5,35 +5,30 @@ from django.db.models import ExpressionWrapper, F
 from django.utils.translation import gettext_lazy as _
 
 from apps.catalog.models import Product
+from apps.core.models import BaseModel
 
 
-class CartItem(models.Model):  # type: ignore
+class CartItem(BaseModel):  # type: ignore
     cart = models.ForeignKey(
         to="Cart",
         on_delete=models.CASCADE,
         related_name="cart_items",
         verbose_name=_("cart"),
-        help_text=_("The cart to which the cart item belongs."),
     )
     product = models.ForeignKey(
         to=Product,
         on_delete=models.CASCADE,
         related_name="cart_items",
         verbose_name=_("product"),
-        help_text=_("Product belonging to the cart item."),
     )
     quantity = models.PositiveIntegerField(
         default=1,
         verbose_name=_("quantity"),
-        help_text=_("Number of products in cart item."),
     )
     price_snapshot = models.DecimalField(
         max_digits=10,
         decimal_places=2,
         verbose_name=_("price snapshot"),
-        help_text=_(
-            "Price of the product at the time it was added to the cart."
-        ),
     )
     total_price = models.GeneratedField(
         expression=ExpressionWrapper(
@@ -42,8 +37,9 @@ class CartItem(models.Model):  # type: ignore
         ),
         output_field=models.DecimalField(max_digits=10, decimal_places=2),
         db_persist=True,
+        editable=False,
         verbose_name=_("total price"),
-        help_text=_("Cart item total price (autocalculated)."),
+        help_text=_("Calculated by the system."),
     )
 
     class Meta:
@@ -55,12 +51,12 @@ class CartItem(models.Model):  # type: ignore
             models.UniqueConstraint(
                 fields=["cart", "product"],
                 name="unique_cart_product",
-            ),
-            models.CheckConstraint(
-                check=models.Q(quantity__gt=0),
-                name="constraint_quantity_gt_zero",
+                violation_error_message=_(
+                    "This product is already in your cart."
+                ),
             ),
         ]
+        ordering = ("-created_at",)
 
     def __str__(self) -> str:
         return f"{self.cart}: {self.product} x {self.quantity}"
