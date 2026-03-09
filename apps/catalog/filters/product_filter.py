@@ -1,4 +1,5 @@
 import django_filters
+from django.contrib.postgres import search
 from django.db.models import QuerySet
 from django.utils.translation import gettext_lazy as _
 
@@ -32,4 +33,16 @@ class ProductFilter(django_filters.FilterSet):
         if not value:
             return queryset
 
-        return queryset.filter(name__icontains=value)
+        search_vector: search.SearchVector = search.SearchVector("name")
+        search_query: search.SearchQuery = search.SearchQuery(value=value)
+
+        return (
+            queryset.annotate(
+                search=search_vector,
+                rank=search.SearchRank(
+                    search_vector, search_query, cover_density=True
+                ),
+            )
+            .filter(search=search_query)
+            .order_by("-rank")
+        )
