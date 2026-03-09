@@ -28,6 +28,7 @@ class CartItem(BaseModel):  # type: ignore
     price_snapshot = models.DecimalField(
         max_digits=10,
         decimal_places=2,
+        editable=False,
         verbose_name=_("price snapshot"),
     )
     total_price = models.GeneratedField(
