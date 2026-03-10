@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-10 19:50+0800\n"
+"POT-Creation-Date: 2026-03-10 21:11+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -554,7 +554,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:329
+#: .\apps\carts\apps.py:9 .\config\settings.py:330
 msgid "Carts"
 msgstr "Корзины"
 
@@ -674,7 +674,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:293
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:294
 msgid "Products"
 msgstr "Продукты"
 
@@ -847,7 +847,7 @@ msgstr "Поиск по названию продукта"
 
 #: .\apps\catalog\apps.py:9
 #: .\apps\catalog\templates\catalog\category_list.html:4
-#: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:289
+#: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:290
 #: .\templates\includes\header.html:16
 msgid "Catalog"
 msgstr "Каталог"
@@ -1132,6 +1132,10 @@ msgstr "дата создания"
 msgid "updated date"
 msgstr "дата обновления"
 
+#: .\apps\orders\apps.py:9
+msgid "Orders"
+msgstr "Заказы"
+
 #: .\apps\pages\apps.py:9
 msgid "Pages"
 msgstr "Страницы"
@@ -1334,7 +1338,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:347
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:348
 #: .\templates\includes\footer.html:19
 msgid "Vacancies"
 msgstr "Вакансии"
@@ -1511,35 +1515,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:267
+#: .\config\settings.py:268
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:300
+#: .\config\settings.py:301
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:309
+#: .\config\settings.py:310
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:313
+#: .\config\settings.py:314
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:318
+#: .\config\settings.py:319
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:325
+#: .\config\settings.py:326
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:334
+#: .\config\settings.py:335
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:343
+#: .\config\settings.py:344
 msgid "Recruitment"
 msgstr "Подбор персонала"
 
