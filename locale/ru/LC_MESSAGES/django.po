@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-09 21:56+0800\n"
+"POT-Creation-Date: 2026-03-10 19:50+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -166,7 +166,7 @@ msgstr "пользователи"
 
 #: .\apps\accounts\templates\accounts\password_reset.html:4
 #: .\apps\accounts\templates\accounts\password_reset.html:17
-#: .\apps\accounts\templates\accounts\password_reset.html:30
+#: .\apps\accounts\templates\accounts\password_reset.html:34
 #: .\apps\accounts\templates\emails\password_reset.html:9
 #: .\apps\accounts\templates\emails\password_reset.txt:7
 #: .\apps\accounts\templates\emails\password_reset_subject.txt:3
@@ -177,7 +177,7 @@ msgstr "Сброс пароля"
 #: .\apps\accounts\templates\accounts\profile.html:33
 #: .\apps\accounts\templates\accounts\signup.html:30
 #: .\apps\pages\templates\pages\contact.html:38
-#: .\apps\pages\templates\pages\contact.html:96
+#: .\apps\pages\templates\pages\contact.html:100
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -188,7 +188,7 @@ msgstr "Электронная почта"
 msgid "Enter email"
 msgstr "Введите email"
 
-#: .\apps\accounts\templates\accounts\password_reset.html:34
+#: .\apps\accounts\templates\accounts\password_reset.html:38
 #: .\apps\accounts\templates\accounts\password_reset_confirm.html:44
 msgid "Remembered your password? Sign in"
 msgstr "Вспомнили пароль? Войти"
@@ -247,7 +247,7 @@ msgstr "Введите имя пользователя"
 #: .\apps\accounts\templates\accounts\profile.html:37
 #: .\apps\accounts\templates\accounts\signup.html:34
 #: .\apps\pages\templates\pages\contact.html:42
-#: .\apps\pages\templates\pages\contact.html:68
+#: .\apps\pages\templates\pages\contact.html:72
 msgid "Phone number"
 msgstr "Номер телефона"
 
@@ -320,22 +320,22 @@ msgstr "Забыли пароль?"
 #: .\apps\accounts\templates\accounts\signin.html:47
 #: .\apps\accounts\templates\accounts\signup.html:4
 #: .\apps\accounts\templates\accounts\signup.html:17
-#: .\apps\accounts\templates\accounts\signup.html:75
+#: .\apps\accounts\templates\accounts\signup.html:78
 msgid "Sign up"
 msgstr "Зарегистрироваться"
 
 #: .\apps\accounts\templates\accounts\signin.html:51
-#: .\apps\accounts\templates\accounts\signup.html:83
+#: .\apps\accounts\templates\accounts\signup.html:86
 msgid "or"
 msgstr "или"
 
 #: .\apps\accounts\templates\accounts\signin.html:55
-#: .\apps\accounts\templates\accounts\signup.html:87
+#: .\apps\accounts\templates\accounts\signup.html:90
 msgid "Sign in with VK ID"
 msgstr "Войти с VK ID"
 
 #: .\apps\accounts\templates\accounts\signin.html:56
-#: .\apps\accounts\templates\accounts\signup.html:88
+#: .\apps\accounts\templates\accounts\signup.html:91
 msgid "Sign in with Google"
 msgstr "Войти с Google"
 
@@ -359,7 +359,7 @@ msgstr ""
 "class=\"form__link link\" href=\"%(privacy_url)s\">Политикой "
 "конфиденциальности</a>"
 
-#: .\apps\accounts\templates\accounts\signup.html:79
+#: .\apps\accounts\templates\accounts\signup.html:82
 msgid "Already have an account? Sign in"
 msgstr "Уже есть аккаунт? Войти"
 
@@ -499,20 +499,27 @@ msgstr ""
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 
-#: .\apps\accounts\views\password_reset_view.py:14
+#: .\apps\accounts\views\password_reset_view.py:18
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
+
+#: .\apps\accounts\views\password_reset_view.py:31
+#: .\apps\accounts\views\signup_view.py:33
+#: .\apps\pages\views\contact_view.py:27
+msgid "Please pass the captcha and try again."
+msgstr "Пожалуйста, пройдите капчу и попробуйте снова."
+
+#: .\apps\accounts\views\password_reset_view.py:40
+#: .\apps\accounts\views\profile_view.py:30
+#: .\apps\accounts\views\signin_view.py:32
+#: .\apps\accounts\views\signup_view.py:52
+#: .\apps\pages\views\contact_view.py:45
+msgid "Please correct the errors in the form and try again."
+msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
 #: .\apps\accounts\views\profile_view.py:19
 msgid "Your profile information has been successfully updated."
 msgstr "Информация в вашем профиле успешно обновлена."
-
-#: .\apps\accounts\views\profile_view.py:30
-#: .\apps\accounts\views\signin_view.py:32
-#: .\apps\accounts\views\signup_view.py:38
-#: .\apps\pages\views\contact_view.py:31
-msgid "Please correct the errors in the form and try again."
-msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
 
 #: .\apps\accounts\views\signin_view.py:18
 msgid "You have successfully signed in. Welcome!"
@@ -522,11 +529,11 @@ msgstr "Вы успешно авторизованы. Добро пожалов�
 msgid "You have been signed out. Have a nice day!"
 msgstr "Вы вышли из аккаунта. Хорошего дня!"
 
-#: .\apps\accounts\views\signup_view.py:19
+#: .\apps\accounts\views\signup_view.py:21
 msgid "You have successfully signed up! Activate your account."
 msgstr "Вы успешно зарегистрированы! Активируйте аккаунт."
 
-#: .\apps\accounts\views\signup_view.py:30
+#: .\apps\accounts\views\signup_view.py:44
 msgid "An account activation link has been sent to your email."
 msgstr "Ссылка для активации аккаунта отправлена на вашу электронную почту."
 
@@ -547,7 +554,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:317
+#: .\apps\carts\apps.py:9 .\config\settings.py:329
 msgid "Carts"
 msgstr "Корзины"
 
@@ -667,7 +674,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:281
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:293
 msgid "Products"
 msgstr "Продукты"
 
@@ -840,7 +847,7 @@ msgstr "Поиск по названию продукта"
 
 #: .\apps\catalog\apps.py:9
 #: .\apps\catalog\templates\catalog\category_list.html:4
-#: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:277
+#: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:289
 #: .\templates\includes\header.html:16
 msgid "Catalog"
 msgstr "Каталог"
@@ -857,27 +864,27 @@ msgstr "л"
 msgid "pcs"
 msgstr "шт"
 
-#: .\apps\catalog\filters\product_filter.py:16
+#: .\apps\catalog\filters\product_filter.py:17
 msgid "Price"
 msgstr "Цена"
 
-#: .\apps\catalog\filters\product_filter.py:17
+#: .\apps\catalog\filters\product_filter.py:18
 msgid "Discount"
 msgstr "Скидка"
 
-#: .\apps\catalog\filters\product_filter.py:18
+#: .\apps\catalog\filters\product_filter.py:19
 msgid "Price (descending)"
 msgstr "Цена (по убыванию)"
 
-#: .\apps\catalog\filters\product_filter.py:19
+#: .\apps\catalog\filters\product_filter.py:20
 msgid "Discount (descending)"
 msgstr "Скидка (по убыванию)"
 
-#: .\apps\catalog\filters\product_filter.py:21
+#: .\apps\catalog\filters\product_filter.py:22
 msgid "Default"
 msgstr "По умолчанию"
 
-#: .\apps\catalog\filters\product_filter.py:22
+#: .\apps\catalog\filters\product_filter.py:23
 msgid "Sorting"
 msgstr "Сортировка"
 
@@ -1268,35 +1275,35 @@ msgstr "Сообщение"
 msgid "Enter message"
 msgstr "Введите сообщение"
 
-#: .\apps\pages\templates\pages\contact.html:55
+#: .\apps\pages\templates\pages\contact.html:59
 msgid "Send"
 msgstr "Отправить"
 
-#: .\apps\pages\templates\pages\contact.html:58
+#: .\apps\pages\templates\pages\contact.html:62
 msgid "Contact information"
 msgstr "Контактная информация"
 
-#: .\apps\pages\templates\pages\contact.html:62
+#: .\apps\pages\templates\pages\contact.html:66
 msgid "Address"
 msgstr "Адрес"
 
-#: .\apps\pages\templates\pages\contact.html:63
+#: .\apps\pages\templates\pages\contact.html:67
 msgid "Moscow, Example Street, 15"
 msgstr "г. Москва, ул. Примерная, д. 15"
 
-#: .\apps\pages\templates\pages\contact.html:74
+#: .\apps\pages\templates\pages\contact.html:78
 msgid "Social networks"
 msgstr "Соцсети"
 
-#: .\apps\pages\templates\pages\contact.html:90
+#: .\apps\pages\templates\pages\contact.html:94
 msgid "Working hours"
 msgstr "Часы работы"
 
-#: .\apps\pages\templates\pages\contact.html:91
+#: .\apps\pages\templates\pages\contact.html:95
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
 
-#: .\apps\pages\views\contact_view.py:21
+#: .\apps\pages\views\contact_view.py:35
 msgid "Your message has been successfully sent! We will contact you shortly."
 msgstr ""
 "Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время."
@@ -1327,7 +1334,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:335
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:347
 #: .\templates\includes\footer.html:19
 msgid "Vacancies"
 msgstr "Вакансии"
@@ -1364,25 +1371,25 @@ msgstr "Гибкий график"
 msgid "Remote work"
 msgstr "Удалённая работа"
 
-#: .\apps\vacancies\filters\vacancy_filter.py:13
+#: .\apps\vacancies\filters\vacancy_filter.py:14
 msgid "Search"
 msgstr "Поиск"
 
-#: .\apps\vacancies\filters\vacancy_filter.py:17
+#: .\apps\vacancies\filters\vacancy_filter.py:18
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:32
 msgid "Work experience"
 msgstr "Опыт работы"
 
-#: .\apps\vacancies\filters\vacancy_filter.py:21
+#: .\apps\vacancies\filters\vacancy_filter.py:22
 #: .\apps\vacancies\templates\vacancies\vacancy_detail.html:28
 msgid "Work schedule"
 msgstr "График работы"
 
-#: .\apps\vacancies\filters\vacancy_filter.py:25
+#: .\apps\vacancies\filters\vacancy_filter.py:26
 msgid "Professional area"
 msgstr "Профессиональная область"
 
-#: .\apps\vacancies\filters\vacancy_filter.py:29
+#: .\apps\vacancies\filters\vacancy_filter.py:30
 msgid "City"
 msgstr "Город"
 
@@ -1504,35 +1511,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:255
+#: .\config\settings.py:267
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:288
+#: .\config\settings.py:300
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:297
+#: .\config\settings.py:309
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:301
+#: .\config\settings.py:313
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:306
+#: .\config\settings.py:318
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:313
+#: .\config\settings.py:325
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:322
+#: .\config\settings.py:334
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:331
+#: .\config\settings.py:343
 msgid "Recruitment"
 msgstr "Подбор персонала"
 

@@ -201,14 +201,26 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
         "default-src": ["'none'"],
         "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
         "img-src": ["'self'"],
-        "script-src": ["'self'"],
-        "style-src": ["'self'", "https://fonts.googleapis.com"],
+        "script-src": [
+            "'self'",
+            "https://smartcaptcha.cloud.yandex.ru",
+            "https://captcha-api.yandex.ru",
+        ],
+        "style-src": [
+            "'self'",
+            "https://fonts.googleapis.com",
+            "'unsafe-inline'",
+        ],
         "connect-src": ["'self'"],
         "form-action": ["'self'"],
         "frame-ancestors": ["'none'"],
         "base-uri": ["'self'"],
         "object-src": ["'none'"],
-        "frame-src": ["https://yandex.ru/map-widget/"],
+        "frame-src": [
+            "https://yandex.ru/map-widget/",
+            "https://smartcaptcha.cloud.yandex.ru",
+            "https://captcha-api.yandex.ru",
+        ],
         "upgrade-insecure-requests": [],
     },
 }
@@ -343,3 +355,13 @@ UNFOLD: Dict[str, Any] = {
         ],
     },
 }
+
+YANDEX_SMART_CAPTCHA_VALIDATE_URL: str = (
+    "https://smartcaptcha.yandexcloud.net/validate"
+)
+YANDEX_SMART_CAPTCHA_CLIENT_KEY: str = config(
+    "YANDEX_SMART_CAPTCHA_CLIENT_KEY"
+)
+YANDEX_SMART_CAPTCHA_SERVER_KEY: str = config(
+    "YANDEX_SMART_CAPTCHA_SERVER_KEY"
+)

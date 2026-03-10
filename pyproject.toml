@@ -30,6 +30,7 @@ dependencies = [
     "django-resized>=1.0.3",
     "django-cleanup>=9.0.0",
     "django-unfold>=0.83.1",
+    "requests>=2.32.5",
 ]
 
 [tool.black]

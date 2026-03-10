@@ -52,6 +52,10 @@
 				  </div>
 			  {% endwith %}
 
+		    <div class="form__group">
+		      <div id="yandex-smart-captcha-container" data-language="{{ LANGUAGE_CODE }}" data-sitekey="{{ YANDEX_SMART_CAPTCHA_CLIENT_KEY }}"></div>
+		    </div>
+
 			  <button class="form__button button" type="submit">{% trans "Send" %}</button>
 		  </form>
 
@@ -106,4 +110,6 @@
 {% block js %}
 	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
 	<script src="{% static 'js/masks.js' %}"></script>
+	<script src="{% static 'js/yandex-smart-captcha-onload.js' %}"></script>
+	<script src="https://smartcaptcha.cloud.yandex.ru/captcha.js?render=onload&onload=onloadYandexSmartCaptcha" defer></script>
 {% endblock %}

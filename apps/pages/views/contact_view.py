@@ -4,16 +4,30 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import FormView
 
+from apps.core.services import YandexSmartCaptchaService
 from apps.pages.forms import ContactForm
 from apps.pages.services import ContactService
+from config.settings import YANDEX_SMART_CAPTCHA_CLIENT_KEY
 
 
 class ContactView(FormView):
     template_name = "pages/contact.html"
     form_class = ContactForm
     success_url = reverse_lazy(viewname="pages:contact")
+    extra_context = {
+        "YANDEX_SMART_CAPTCHA_CLIENT_KEY": YANDEX_SMART_CAPTCHA_CLIENT_KEY
+    }
 
     def form_valid(self, form: ContactForm) -> HttpResponse:
+        if not YandexSmartCaptchaService().validate_captcha(
+            request=self.request
+        ):
+            messages.error(
+                self.request,
+                _("Please pass the captcha and try again."),
+            )
+            return super().form_invalid(form=form)
+
         ContactService().send_contact_emails(context=form.cleaned_data)
         messages.success(
             request=self.request,

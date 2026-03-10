@@ -9,6 +9,8 @@ from django.views.generic import CreateView
 
 from apps.accounts.forms import SignUpForm
 from apps.accounts.services import UserService
+from apps.core.services import YandexSmartCaptchaService
+from config.settings import YANDEX_SMART_CAPTCHA_CLIENT_KEY
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
@@ -18,8 +20,20 @@ class SignUpView(SuccessMessageMixin, CreateView):
     success_message = _(
         "You have successfully signed up! Activate your account."
     )
+    extra_context = {
+        "YANDEX_SMART_CAPTCHA_CLIENT_KEY": YANDEX_SMART_CAPTCHA_CLIENT_KEY
+    }
 
     def form_valid(self, form: SignUpForm) -> HttpResponse:
+        if not YandexSmartCaptchaService().validate_captcha(
+            request=self.request
+        ):
+            messages.error(
+                self.request,
+                _("Please pass the captcha and try again."),
+            )
+            return super().form_invalid(form=form)
+
         response: HttpResponse = super().form_valid(form=form)
 
         UserService().send_account_activation_email(
