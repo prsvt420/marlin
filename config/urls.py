@@ -59,6 +59,10 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
         route="promotions/",
         view=include(arg="apps.promotions.urls", namespace="promotions"),
     ),
+    path(
+        route="orders/",
+        view=include("apps.orders.urls", namespace="orders"),
+    ),
 ]
 
 
