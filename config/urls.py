@@ -84,4 +84,8 @@ if settings.DEBUG:
             route="500/",
             view=TemplateView.as_view(template_name="500.html"),
         ),
+        path(
+            route="base/",
+            view=TemplateView.as_view(template_name="redesign/base.html"),
+        ),
     )

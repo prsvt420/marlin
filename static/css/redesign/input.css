@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: 'Montserrat', sans-serif;
+  --max-width-page: 1440px;
+
+  --color-white: oklch(1 0 0);
+  --color-black: oklch(0 0 0);
+  --color-smoky-white: oklch(0.9605 0.0046 258.32);
+  --color-platinum: oklch(0.93 0 0);
+
+  --color-base-100: var(--color-white);
+  --color-base-200: var(--color-smoky-white);
+  --color-base-300: var(--color-platinum);
+  --color-base-content: var(--color-black);
+
+  --color-primary: var(--color-black);
+  --color-primary-content: var(--color-white);
+
+  --color-secondary: var(--color-smoky-white);
+  --color-secondary-content: var(--color-black);
+}
+
+@layer components {
+  .link {
+    @apply text-base cursor-pointer transition duration-300 ease-in-out text-base-content/60 hover:text-base-content;
+  }
+
+  .link--active {
+    @apply !text-base-content;
+  }
+
+  .input {
+    @apply rounded-full text-base py-3 px-6 outline-none bg-base-200 text-base-content;
+  }
+}

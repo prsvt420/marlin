@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-10 21:11+0800\n"
+"POT-Creation-Date: 2026-03-26 19:07+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -292,6 +292,8 @@ msgstr "Сохранить"
 
 #: .\apps\accounts\templates\accounts\profile.html:55
 #: .\templates\includes\header.html:28
+#: .\templates\redesign\includes\_header.html:46
+#: .\templates\redesign\includes\_header.html:101
 msgid "Sign out"
 msgstr "Выйти"
 
@@ -305,6 +307,8 @@ msgstr "Удалить аккаунт"
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
 #: .\templates\includes\header.html:33
+#: .\templates\redesign\includes\_header.html:31
+#: .\templates\redesign\includes\_header.html:86
 msgid "Sign in"
 msgstr "Войти"
 
@@ -630,6 +634,8 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\models\cart_model.py:42
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\templates\includes\header.html:19
+#: .\templates\redesign\includes\_header.html:25
+#: .\templates\redesign\includes\_header.html:80
 msgid "Cart"
 msgstr "Корзина"
 
@@ -849,6 +855,8 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\templates\catalog\category_list.html:4
 #: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:290
 #: .\templates\includes\header.html:16
+#: .\templates\redesign\includes\_header.html:19
+#: .\templates\redesign\includes\_header.html:74
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1240,6 +1248,7 @@ msgstr ""
 
 #: .\apps\pages\templates\pages\contact.html:4
 #: .\templates\includes\footer.html:16
+#: .\templates\redesign\includes\_footer.html:34
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -1340,6 +1349,7 @@ msgstr "Зарплата"
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
 #: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:348
 #: .\templates\includes\footer.html:19
+#: .\templates\redesign\includes\_footer.html:37
 msgid "Vacancies"
 msgstr "Вакансии"
 
@@ -1582,11 +1592,13 @@ msgstr "Логотип Marlin"
 
 #: .\templates\email_base.html:70 .\templates\email_base.txt:4
 #: .\templates\includes\header.html:8
+#: .\templates\redesign\includes\_header.html:9
 msgid "Fresh products near you"
 msgstr "Свежие продукты рядом с вами"
 
 #: .\templates\email_base.html:79 .\templates\email_base.txt:8
 #: .\templates\includes\footer.html:23
+#: .\templates\redesign\includes\_footer.html:51
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
@@ -1595,14 +1607,17 @@ msgid "Additional"
 msgstr "Дополнительная"
 
 #: .\templates\includes\footer.html:7
+#: .\templates\redesign\includes\_footer.html:13
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 #: .\templates\includes\footer.html:10
+#: .\templates\redesign\includes\_footer.html:18
 msgid "Public Offer"
 msgstr "Публичная оферта"
 
 #: .\templates\includes\footer.html:13
+#: .\templates\redesign\includes\_footer.html:23
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
@@ -1633,3 +1648,23 @@ msgstr "Внимание!"
 #: .\templates\includes\messages.html:16
 msgid "Info"
 msgstr "Информация"
+
+#: .\templates\redesign\includes\_footer.html:8
+msgid "Legal information"
+msgstr "Правовая информация"
+
+#: .\templates\redesign\includes\_footer.html:30
+msgid "About the company"
+msgstr "О компании"
+
+#: .\templates\redesign\includes\_footer.html:43
+msgid "Download the app"
+msgstr "Скачайте приложение"
+
+#: .\templates\redesign\includes\_footer.html:47
+msgid "Point your camera and download the app"
+msgstr "Наведите камеру и скачайте приложение"
+
+#: .\templates\redesign\includes\_header.html:62
+msgid "Menu"
+msgstr "Меню"

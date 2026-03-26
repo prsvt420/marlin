@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static i18n compress %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}{% endblock %} — Марлин</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		{% compress css %}
+			<link rel="stylesheet" href="{% static 'css/redesign/output.css' %}">
+			{% block css %}{% endblock %}
+		{% endcompress %}
+		<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+	</head>
+	<body class="flex flex-col font-body bg-base-100 font-medium relative min-h-screen min-h-[100dvh]">
+		{% include "redesign/includes/_header.html" %}
+			<main class="flex flex-col flex-[1_0_auto] {% block mix %}{% endblock %}">
+		    <div class="w-full max-w-page mx-auto p-8 max-md:p-4">
+	        {% block content %}{% endblock %}
+		    </div>
+			</main>
+		{% include "redesign/includes/_footer.html" %}
+		{% block js %}{% endblock %}
+	</body>
+</html>

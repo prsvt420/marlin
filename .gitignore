@@ -217,3 +217,9 @@ __marimo__/
 
 # Django Compressor & Static collection
 staticfiles/
+
+# Node.js
+node_modules
+
+# Tailwind
+static/css/redesign/output.css
