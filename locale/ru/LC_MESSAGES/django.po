@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-26 19:07+0800\n"
+"POT-Creation-Date: 2026-03-27 02:48+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -1557,31 +1557,32 @@ msgstr "Элементы корзины"
 msgid "Recruitment"
 msgstr "Подбор персонала"
 
-#: .\templates\403.html:15
+#: .\templates\403.html:15 .\templates\redesign\403.html:9
 msgid "Oops! Access denied"
 msgstr "Упс! Доступ запрещён"
 
-#: .\templates\403.html:16
+#: .\templates\403.html:16 .\templates\redesign\403.html:10
 msgid "You don't have permission to access this page."
 msgstr "У вас нет разрешения на доступ к этой странице."
 
 #: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
+#: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
 
-#: .\templates\404.html:15
+#: .\templates\404.html:15 .\templates\redesign\404.html:9
 msgid "Oops! The page you are looking for was not found"
 msgstr "Упс! Страница, которую вы ищете, не найдена"
 
-#: .\templates\404.html:16
+#: .\templates\404.html:16 .\templates\redesign\404.html:10
 msgid "The page may have been deleted or you followed an incorrect link."
 msgstr "Возможно, страница была удалена или вы перешли по неверной ссылке."
 
-#: .\templates\500.html:15
+#: .\templates\500.html:15 .\templates\redesign\500.html:9
 msgid "Oops! Something went wrong"
 msgstr "Упс! Что-то пошло не так"
 
-#: .\templates\500.html:16
+#: .\templates\500.html:16 .\templates\redesign\500.html:10
 msgid "An internal error occurred. Please refresh the page or try again later."
 msgstr ""
 "Произошла внутренняя ошибка. Обновите страницу или повторите попытку позже."

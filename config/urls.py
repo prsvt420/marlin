@@ -74,15 +74,15 @@ if settings.DEBUG:
     urlpatterns += (
         path(
             route="404/",
-            view=TemplateView.as_view(template_name="404.html"),
+            view=TemplateView.as_view(template_name="redesign/404.html"),
         ),
         path(
             route="403/",
-            view=TemplateView.as_view(template_name="403.html"),
+            view=TemplateView.as_view(template_name="redesign/403.html"),
         ),
         path(
             route="500/",
-            view=TemplateView.as_view(template_name="500.html"),
+            view=TemplateView.as_view(template_name="redesign/500.html"),
         ),
         path(
             route="base/",
