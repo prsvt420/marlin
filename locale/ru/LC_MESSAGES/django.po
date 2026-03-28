@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-27 02:48+0800\n"
+"POT-Creation-Date: 2026-03-29 00:32+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -292,8 +292,8 @@ msgstr "Сохранить"
 
 #: .\apps\accounts\templates\accounts\profile.html:55
 #: .\templates\includes\header.html:28
-#: .\templates\redesign\includes\_header.html:46
-#: .\templates\redesign\includes\_header.html:101
+#: .\templates\redesign\includes\_header.html:51
+#: .\templates\redesign\includes\_header.html:106
 msgid "Sign out"
 msgstr "Выйти"
 
@@ -307,8 +307,8 @@ msgstr "Удалить аккаунт"
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
 #: .\templates\includes\header.html:33
-#: .\templates\redesign\includes\_header.html:31
-#: .\templates\redesign\includes\_header.html:86
+#: .\templates\redesign\includes\_header.html:36
+#: .\templates\redesign\includes\_header.html:91
 msgid "Sign in"
 msgstr "Войти"
 
@@ -634,8 +634,8 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\models\cart_model.py:42
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\templates\includes\header.html:19
-#: .\templates\redesign\includes\_header.html:25
-#: .\templates\redesign\includes\_header.html:80
+#: .\templates\redesign\includes\_header.html:30
+#: .\templates\redesign\includes\_header.html:85
 msgid "Cart"
 msgstr "Корзина"
 
@@ -853,10 +853,13 @@ msgstr "Поиск по названию продукта"
 
 #: .\apps\catalog\apps.py:9
 #: .\apps\catalog\templates\catalog\category_list.html:4
+#: .\apps\catalog\templates\catalog\redesign\category_list.html:4
+#: .\apps\catalog\templates\catalog\redesign\category_list.html:10
+#: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:290
 #: .\templates\includes\header.html:16
-#: .\templates\redesign\includes\_header.html:19
-#: .\templates\redesign\includes\_header.html:74
+#: .\templates\redesign\includes\_header.html:24
+#: .\templates\redesign\includes\_header.html:79
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1120,6 +1123,7 @@ msgid "Characteristics"
 msgstr "Характеристики"
 
 #: .\apps\catalog\templates\catalog\product_list.html:17
+#: .\templates\redesign\includes\_header.html:15
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
@@ -1131,6 +1135,16 @@ msgstr "По запросу ничего не найдено"
 #: .\apps\catalog\templates\catalog\product_list.html:82
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
+
+#: .\apps\catalog\templates\catalog\redesign\category_list.html:16
+#: .\config\settings.py:301
+msgid "Categories"
+msgstr "Категории"
+
+#: .\apps\catalog\views\category_list_view.py:15
+#: .\templates\includes\header.html:4
+msgid "Home"
+msgstr "Главная"
 
 #: .\apps\core\models\base_model.py:8
 msgid "created date"
@@ -1529,10 +1543,6 @@ msgstr "На данный момент вакансий нет"
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:301
-msgid "Categories"
-msgstr "Категории"
-
 #: .\config\settings.py:310
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
@@ -1622,10 +1632,6 @@ msgstr "Публичная оферта"
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
-#: .\templates\includes\header.html:4
-msgid "Home"
-msgstr "Главная"
-
 #: .\templates\includes\header.html:13
 msgid "Main"
 msgstr "Главная"
@@ -1666,6 +1672,6 @@ msgstr "Скачайте приложение"
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\redesign\includes\_header.html:62
+#: .\templates\redesign\includes\_header.html:67
 msgid "Menu"
 msgstr "Меню"

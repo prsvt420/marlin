@@ -1,0 +1,15 @@
+<nav>
+	<ul class="flex items-center">
+		{% for breadcrumb in breadcrumbs %}
+      {% if not forloop.last %}
+				<li class="inline-flex items-center after:content-['/'] after:mx-2 after:text-base-content/60 after:text-sm">
+					<a href="{{ breadcrumb.url }}" class="link text-sm">{{ breadcrumb.name }}</a>
+				</li>
+			{% else %}
+				<li>
+					<a href="{{ breadcrumb.url }}" class="link link--active text-sm">{{ breadcrumb.name }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>
