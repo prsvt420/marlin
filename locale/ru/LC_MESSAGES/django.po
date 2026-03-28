@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-29 00:32+0800\n"
+"POT-Creation-Date: 2026-03-29 03:08+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -1142,7 +1142,8 @@ msgid "Categories"
 msgstr "Категории"
 
 #: .\apps\catalog\views\category_list_view.py:15
-#: .\templates\includes\header.html:4
+#: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
+#: .\apps\pages\views\terms_view.py:10 .\templates\includes\header.html:4
 msgid "Home"
 msgstr "Главная"
 
@@ -1329,6 +1330,24 @@ msgstr "Часы работы"
 #: .\apps\pages\templates\pages\contact.html:95
 msgid "Mon-Sun from 9:00 to 21:00"
 msgstr "ПН-ВС с 9:00 до 21:00"
+
+#: .\apps\pages\templates\pages\redesign\offer.html:4
+#: .\apps\pages\views\offer_view.py:12 .\templates\includes\footer.html:10
+#: .\templates\redesign\includes\_footer.html:18
+msgid "Public Offer"
+msgstr "Публичная оферта"
+
+#: .\apps\pages\templates\pages\redesign\privacy.html:4
+#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\footer.html:7
+#: .\templates\redesign\includes\_footer.html:13
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+#: .\apps\pages\templates\pages\redesign\terms.html:4
+#: .\apps\pages\views\terms_view.py:12 .\templates\includes\footer.html:13
+#: .\templates\redesign\includes\_footer.html:23
+msgid "Terms of Service"
+msgstr "Пользовательское соглашение"
 
 #: .\apps\pages\views\contact_view.py:35
 msgid "Your message has been successfully sent! We will contact you shortly."
@@ -1616,21 +1635,6 @@ msgstr "Все права защищены."
 #: .\templates\includes\footer.html:4
 msgid "Additional"
 msgstr "Дополнительная"
-
-#: .\templates\includes\footer.html:7
-#: .\templates\redesign\includes\_footer.html:13
-msgid "Privacy Policy"
-msgstr "Политика конфиденциальности"
-
-#: .\templates\includes\footer.html:10
-#: .\templates\redesign\includes\_footer.html:18
-msgid "Public Offer"
-msgstr "Публичная оферта"
-
-#: .\templates\includes\footer.html:13
-#: .\templates\redesign\includes\_footer.html:23
-msgid "Terms of Service"
-msgstr "Пользовательское соглашение"
 
 #: .\templates\includes\header.html:13
 msgid "Main"
