@@ -17,12 +17,14 @@
 	</head>
 	<body class="flex flex-col font-body bg-base-100 font-medium relative min-h-screen min-h-[100dvh]">
 		{% include "redesign/includes/_header.html" %}
-			<main class="flex flex-col flex-[1_0_auto] {% block mix %}{% endblock %}">
+			<main class="flex flex-col flex-auto {% block mix %}{% endblock %}">
 		    <div class="w-full max-w-page mx-auto p-8 max-md:p-4">
 	        {% block content %}{% endblock %}
 		    </div>
 			</main>
 		{% include "redesign/includes/_footer.html" %}
+		<script src="{% static 'js/embla-carousel.umd.js' %}"></script>
+	  <script src="{% static 'js/carousel.js' %}"></script>
 		{% block js %}{% endblock %}
 	</body>
 </html>

@@ -31,14 +31,18 @@
   }
 
   .input {
-    @apply rounded-full text-base py-3 px-6 outline-none bg-base-200 text-base-content;
+    @apply rounded-full text-base px-5 py-3 h-12 bg-base-100 outline-none text-base-content border border-base-300;
   }
 
   .button {
-    @apply rounded-full font-semibold text-base transition duration-300 ease-in-out py-3 px-6;
+    @apply rounded-full text-base px-5 py-3 h-12 cursor-pointer font-semibold transition duration-300 ease-in-out;
   }
 
   .button--primary {
     @apply bg-primary text-primary-content hover:bg-primary/80;
+  }
+
+  .button--disabled {
+    @apply cursor-default text-primary-content !bg-primary/80;
   }
 }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-03-29 03:08+0800\n"
+"POT-Creation-Date: 2026-03-31 03:48+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -292,8 +292,8 @@ msgstr "Сохранить"
 
 #: .\apps\accounts\templates\accounts\profile.html:55
 #: .\templates\includes\header.html:28
-#: .\templates\redesign\includes\_header.html:51
-#: .\templates\redesign\includes\_header.html:106
+#: .\templates\redesign\includes\_header.html:52
+#: .\templates\redesign\includes\_header.html:108
 msgid "Sign out"
 msgstr "Выйти"
 
@@ -307,8 +307,8 @@ msgstr "Удалить аккаунт"
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
 #: .\templates\includes\header.html:33
-#: .\templates\redesign\includes\_header.html:36
-#: .\templates\redesign\includes\_header.html:91
+#: .\templates\redesign\includes\_header.html:37
+#: .\templates\redesign\includes\_header.html:93
 msgid "Sign in"
 msgstr "Войти"
 
@@ -635,7 +635,7 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\templates\includes\header.html:19
 #: .\templates\redesign\includes\_header.html:30
-#: .\templates\redesign\includes\_header.html:85
+#: .\templates\redesign\includes\_header.html:86
 msgid "Cart"
 msgstr "Корзина"
 
@@ -859,7 +859,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\product_detail_view.py:25 .\config\settings.py:290
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:24
-#: .\templates\redesign\includes\_header.html:79
+#: .\templates\redesign\includes\_header.html:80
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -993,6 +993,7 @@ msgstr "продукты"
 
 #: .\apps\catalog\models\product_nutrition_model.py:18
 #: .\apps\catalog\templates\catalog\product_detail.html:111
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:76
 msgid "calories"
 msgstr "калории"
 
@@ -1003,11 +1004,13 @@ msgstr "белки"
 
 #: .\apps\catalog\models\product_nutrition_model.py:30
 #: .\apps\catalog\templates\catalog\product_detail.html:103
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:74
 msgid "fats"
 msgstr "жиры"
 
 #: .\apps\catalog\models\product_nutrition_model.py:36
 #: .\apps\catalog\templates\catalog\product_detail.html:107
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:75
 msgid "carbs"
 msgstr "углеводы"
 
@@ -1076,16 +1079,19 @@ msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:64
 #: .\apps\catalog\templates\catalog\product_list.html:58
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:60
 msgid "Add to Cart"
 msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:67
 #: .\apps\catalog\templates\catalog\product_list.html:61
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:63
 msgid "In cart"
 msgstr "В корзине"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:70
 #: .\apps\catalog\templates\catalog\product_list.html:64
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:66
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1094,6 +1100,7 @@ msgid "Category"
 msgstr "Категория"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:79
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:86
 msgid "Description"
 msgstr "Описание"
 
@@ -1106,10 +1113,12 @@ msgid "Hide"
 msgstr "Скрыть"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:89
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:81
 msgid "Composition"
 msgstr "Состав"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:93
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:71
 msgid "Nutritional value"
 msgstr "Пищевая ценность"
 
@@ -1119,6 +1128,7 @@ msgid "No information available"
 msgstr "Информация отсутствует"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:119
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:91
 msgid "Characteristics"
 msgstr "Характеристики"
 
@@ -1140,6 +1150,10 @@ msgstr "Продукты в каталоге не найдены"
 #: .\config\settings.py:301
 msgid "Categories"
 msgstr "Категории"
+
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:73
+msgid "Proteins"
+msgstr "Белки"
 
 #: .\apps\catalog\views\category_list_view.py:15
 #: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
@@ -1676,6 +1690,6 @@ msgstr "Скачайте приложение"
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\redesign\includes\_header.html:67
+#: .\templates\redesign\includes\_header.html:68
 msgid "Menu"
 msgstr "Меню"
