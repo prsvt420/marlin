@@ -10,63 +10,31 @@
 			<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Catalog" %}</h1>
 		</div>
 
-		<div class="flex gap-8">
-	    <aside class="flex flex-col w-1/5 max-xl:hidden">
-	      <div class="sticky top-[112px]">
-	        <p class="font-bold text-base-content text-2xl mb-3">{% trans "Categories" %}</p>
-	        <nav>
-	          <ul class="flex flex-col gap-2">
-	            {% for parent_category in parent_categories %}
-	              {% if parent_category.subcategories %}
-	                <li>
-	                  <button data-aside-category-btn class="link flex items-center w-full justify-between text-left cursor-pointer">
-	                    {{ parent_category.name }}
-	                    <svg class="transition duration-300 ease-in-out inline size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-	                  </button>
-	                  <ul class="flex flex-col gap-1 overflow-hidden max-h-0 transition-all duration-300 ease-in-out px-4">
-	                    {% for subcategory in parent_category.subcategories.all %}
-	                      <li class="first:pt-1 last:pb-1">
-	                        <a class="link text-sm" href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a>
-	                      </li>
-	                    {% endfor %}
-	                  </ul>
-	                </li>
-	              {% endif %}
-	            {% endfor %}
-	          </ul>
-	        </nav>
-	      </div>
-	    </aside>
-			<ul class="flex flex-col gap-6">
-				{% for parent_category in parent_categories %}
-					{% if parent_category.subcategories %}
-						<li class="flex flex-col gap-3">
-							<a class="w-fit" href="{{ parent_category.get_absolute_url }}">
-								<h2 class="font-bold text-2xl text-base-content max-md:text-xl">
-									{{ parent_category.name }}
-								  <svg class="inline size-5 -ml-1 max-md:size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-								</h2>
-							</a>
-							<ul class="flex flex-wrap gap-2">
-								{% for subcategory in parent_category.subcategories.all %}
-									<li>
-										<a href="{{ subcategory.get_absolute_url }}">
-											<article class="bg-base-200 transition duration-300 ease-in-out hover:-translate-y-0.5 p-3 rounded-box relative overflow-hidden size-30">
-			                  <img class="absolute inset-0 size-full object-cover" src="{% if subcategory.image %}{{ subcategory.image.url }}{% else %}{% static 'catalog/img/default-category-image.webp' %}{% endif %}" alt="" draggable="false">
-			                  <h3 class="relative hyphens-auto text-sm text-base-content">{{ subcategory.name }}</h3>
-											</article>
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
-		</div>
+		<ul class="flex flex-col gap-6">
+			{% for parent_category in parent_categories %}
+				{% if parent_category.subcategories %}
+					<li class="flex flex-col gap-3">
+						<a class="w-fit" href="{{ parent_category.get_absolute_url }}">
+							<h2 class="font-bold text-2xl text-base-content max-md:text-xl">
+								{{ parent_category.name }}
+							  <svg class="inline size-5 -ml-1 max-md:size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+							</h2>
+						</a>
+						<ul class="flex flex-wrap gap-2">
+							{% for subcategory in parent_category.subcategories.all %}
+								<li>
+									<a href="{{ subcategory.get_absolute_url }}">
+										<article class="bg-base-200 transition duration-300 ease-in-out hover:-translate-y-0.5 p-3 rounded-box relative overflow-hidden size-30">
+		                  <img class="absolute inset-0 size-full object-cover" src="{% if subcategory.image %}{{ subcategory.image.url }}{% else %}{% static 'catalog/img/default-category-image.webp' %}{% endif %}" alt="" draggable="false">
+		                  <h3 class="relative hyphens-auto text-sm text-base-content">{{ subcategory.name }}</h3>
+										</article>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
 	</section>
-{% endblock %}
-
-{% block js %}
-	<script src="{% static 'catalog/js/aside-categories.js' %}"></script>
 {% endblock %}

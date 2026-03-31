@@ -56,7 +56,7 @@
   }
 
   .input {
-    @apply rounded-field text-base px-5 py-3 h-12 bg-base-100 outline-none text-base-content border border-base-300;
+    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-base-content border border-base-300;
   }
 
   .input::placeholder {
@@ -71,15 +71,19 @@
     @apply bg-primary text-primary-content hover:bg-primary/80;
   }
 
+  .button--secondary {
+    @apply bg-secondary text-secondary-content hover:hover:bg-[#e4e4e4];
+  }
+
   .button--disabled {
     @apply cursor-default text-primary-content !bg-primary/80;
   }
 
   .button--vk {
-    @apply bg-[#0077FF] text-white hover:bg-[#0066DD];
+    @apply bg-[#0077ff] text-white hover:bg-[#0066dd];
   }
 
   .button--google {
-    @apply bg-white border border-base-300 text-[#1F1F1F] hover:bg-[#EEEEEE];
+    @apply bg-white border border-base-300 text-[#1f1f1f] hover:bg-[#e4e4e4];
   }
 }
