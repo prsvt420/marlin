@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import 'tailwind-scrollbar-hide/v4';
 
+@plugin "@tailwindcss/forms" {
+  strategy: class;
+}
+
 @theme {
   --font-body: 'Montserrat', sans-serif;
   --max-width-page: 1440px;
@@ -9,6 +13,7 @@
   --color-black: oklch(0 0 0);
   --color-smoky-white: oklch(0.9605 0.0046 258.32);
   --color-platinum: oklch(0.93 0 0);
+  --color-amaranth: oklch(0.602 0.2173 16.84);
 
   --color-base-100: var(--color-white);
   --color-base-200: var(--color-smoky-white);
@@ -20,11 +25,17 @@
 
   --color-secondary: var(--color-smoky-white);
   --color-secondary-content: var(--color-black);
+
+  --color-error: var(--color-amaranth);
 }
 
 @layer base {
   * {
     @apply scrollbar-hide;
+  }
+
+  .smart-captcha {
+    @apply !min-w-full;
   }
 }
 
@@ -41,6 +52,10 @@
     @apply rounded-full text-base px-5 py-3 h-12 bg-base-100 outline-none text-base-content border border-base-300;
   }
 
+  .input::placeholder {
+    @apply text-base-content/60;
+  }
+
   .button {
     @apply rounded-full text-base px-5 py-3 h-12 cursor-pointer font-semibold transition duration-300 ease-in-out;
   }
@@ -51,5 +66,13 @@
 
   .button--disabled {
     @apply cursor-default text-primary-content !bg-primary/80;
+  }
+
+  .button--vk {
+    @apply bg-[#0077FF] text-white hover:bg-[#0066DD];
+  }
+
+  .button--google {
+    @apply bg-white border border-base-300 text-[#1F1F1F] hover:bg-[#EEEEEE];
   }
 }

@@ -1,10 +1,11 @@
-const passwordInput = document.getElementById('password');
-const openEyeIcon = document.querySelector('.form__eye--open');
-const closedEyeIcon = document.querySelector('.form__eye--closed');
+const inputPassword = document.getElementById("password");
+const togglePassword = document.getElementById("toggle-password")
+const eyeOpen = document.getElementById("eye-open");
+const eyeClosed = document.getElementById("eye-closed");
 
-openEyeIcon.onclick = closedEyeIcon.onclick = () => {
-  const isPasswordHidden = passwordInput.type === 'password';
-  passwordInput.type = isPasswordHidden ? 'text' : 'password';
-  openEyeIcon.style.display = isPasswordHidden ? 'none' : 'block';
-  closedEyeIcon.style.display = isPasswordHidden ? 'block' : 'none';
-};
+togglePassword.addEventListener("click", () => {
+  const isPasswordType = inputPassword.type === "password";
+  inputPassword.type = isPasswordType ? "text" : "password";
+  eyeOpen.classList.toggle("hidden", isPasswordType);
+  eyeClosed.classList.toggle("hidden", !isPasswordType);
+});

@@ -14,7 +14,7 @@ from config.settings import YANDEX_SMART_CAPTCHA_CLIENT_KEY
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
-    template_name = "accounts/signup.html"
+    template_name = "accounts/redesign/signup.html"
     form_class = SignUpForm
     success_url = reverse_lazy(viewname="accounts:signin")
     success_message = _(
@@ -32,6 +32,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
                 self.request,
                 _("Please pass the captcha and try again."),
             )
+            form.add_error(None, _("Please pass the captcha and try again."))
             return super().form_invalid(form=form)
 
         response: HttpResponse = super().form_valid(form=form)

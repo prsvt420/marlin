@@ -20,6 +20,7 @@
   "homepage": "https://github.com/prsvt420/marlin#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/forms": "^0.5.11",
     "tailwindcss": "^4.2.2"
   },
   "dependencies": {

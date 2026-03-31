@@ -1,0 +1,147 @@
+{% extends "redesign/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Sign up" %}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col items-center justify-center min-h-[70vh]">
+		<form class="flex flex-col gap-4 p-6 w-full max-w-100 bg-base-200 rounded-2xl" action="{% url 'accounts:signup' %}" method="post" novalidate>
+			{% csrf_token %}
+			<h1 class="font-bold text-base-content text-center text-2xl">{% trans "Sign up" %}</h1>
+
+			{% if form.non_field_errors %}
+			  <div class="bg-error/10 border border-error/30 rounded-2xl px-4 py-3">
+			    {% for error in form.non_field_errors %}
+			      <p class="text-sm text-error">{{ error }}</p>
+			    {% endfor %}
+			  </div>
+			{% endif %}
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="username">{% trans "Username" %}</label>
+				<input id="username" class="input {% if form.username.errors %}border-error{% endif %}" name="username" type="text" autocomplete="username" value="{{ form.username.value|default:'' }}" placeholder="{% trans 'Enter username' %}">
+				{% if form.username.errors %}
+				  <p class="text-sm text-error">{{ form.username.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="email">{% trans "Email" %}</label>
+				<input id="email" class="input {% if form.email.errors %}border-error{% endif %}" name="email" type="text" autocomplete="email" value="{{ form.email.value|default:'' }}" placeholder="{% trans 'Enter email' %}">
+				{% if form.email.errors %}
+				  <p class="text-sm text-error">{{ form.email.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="phone_number">{% trans "Phone number" %}</label>
+				<input id="phone_number" class="input {% if form.phone_number.errors %}border-error{% endif %}" name="phone_number" type="tel" autocomplete="tel" value="{{ form.phone_number.value|default:'' }}" placeholder="+7 (___) ___-__-__">
+				{% if form.phone_number.errors %}
+				  <p class="text-sm text-error">{{ form.phone_number.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="first_name">{% trans "First name" %}</label>
+				<input id="first_name" class="input {% if form.first_name.errors %}border-error{% endif %}" name="first_name" type="text" autocomplete="given-name" value="{{ form.first_name.value|default:'' }}" placeholder="{% trans 'Enter first name' %}">
+				{% if form.first_name.errors %}
+				  <p class="text-sm text-error">{{ form.first_name.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="last_name">{% trans "Last name" %}</label>
+				<input id="last_name" class="input {% if form.last_name.errors %}border-error{% endif %}" name="last_name" type="text" autocomplete="family-name" value="{{ form.last_name.value|default:'' }}" placeholder="{% trans 'Enter last name' %}">
+				{% if form.last_name.errors %}
+				  <p class="text-sm text-error">{{ form.last_name.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="middle_name">{% trans "Middle name" %} ({% trans "if any" %})</label>
+				<input id="middle_name" class="input {% if form.middle_name.errors %}border-error{% endif %}" name="middle_name" type="text" autocomplete="additional-name" value="{{ form.middle_name.value|default:'' }}" placeholder="{% trans 'Enter middle name' %}">
+				{% if form.middle_name.errors %}
+				  <p class="text-sm text-error">{{ form.middle_name.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="password">{% trans "Password" %}</label>
+				<div class="relative">
+					<input id="password" class="input w-full pr-12 {% if form.password1.errors %}border-error{% endif %}" name="password1" type="password" autocomplete="new-password" placeholder="{% trans 'Enter password' %}">
+					<button id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2 link" type="button">
+						<svg id="eye-open" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+						<svg id="eye-closed" class="size-5 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M20 14.8335C21.3082 13.3317 22 12 22 12C22 12 18.3636 5 12 5C11.6588 5 11.3254 5.02013 11 5.05822C10.6578 5.09828 10.3244 5.15822 10 5.23552M12 9C12.3506 9 12.6872 9.06015 13 9.17071C13.8524 9.47199 14.528 10.1476 14.8293 11C14.9398 11.3128 15 11.6494 15 12M3 3L21 21M12 15C11.6494 15 11.3128 14.9398 11 14.8293C10.1476 14.528 9.47198 13.8524 9.1707 13C9.11386 12.8392 9.07034 12.6721 9.04147 12.5M4.14701 9C3.83877 9.34451 3.56234 9.68241 3.31864 10C2.45286 11.1282 2 12 2 12C2 12 5.63636 19 12 19C12.3412 19 12.6746 18.9799 13 18.9418" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+					</button>
+				</div>
+				{% if form.password1.errors %}
+				  <p class="text-sm text-error">{{ form.password1.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<label class="text-base text-base-content" for="password2">{% trans "Password confirmation" %}</label>
+				<input id="password2" class="input {% if form.password2.errors %}border-error{% endif %}" name="password2" type="password" autocomplete="new-password" placeholder="{% trans 'Confirm password' %}">
+				{% if form.password2.errors %}
+				  <p class="text-sm text-error">{{ form.password2.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				{% url "pages:terms" as terms_url %}
+				{% url "pages:privacy" as privacy_url %}
+				<div class="flex items-start gap-2">
+				  <input id="agreement" class="form-checkbox cursor-pointer bg-base-100 mt-0.5 border border-base-300 rounded text-primary focus:ring-0 focus:ring-offset-0 {% if form.agreement.errors %}border-error{% endif %}" name="agreement" type="checkbox">
+					<label for="agreement" class="text-sm hyphens-auto text-base-content">
+						{% blocktrans %}I agree to the <a class="link text-sm" href="{{ terms_url }}">Terms</a> and the <a class="link text-sm" href="{{ privacy_url }}">Privacy Policy</a>{% endblocktrans %}
+					</label>
+				</div>
+				{% if form.agreement.errors %}
+				  <p class="text-sm text-error">{{ form.agreement.errors.0 }}</p>
+				{% endif %}
+			</div>
+
+			<div class="flex flex-col gap-1">
+				<div id="yandex-smart-captcha-container" data-language="{{ LANGUAGE_CODE }}" data-sitekey="{{ YANDEX_SMART_CAPTCHA_CLIENT_KEY }}"></div>
+			</div>
+
+			<button class="button button--primary mt-2" type="submit">{% trans "Sign up" %}</button>
+
+			<ul class="flex gap-2 justify-center">
+				<li>
+					<a class="link text-sm" href="{% url 'accounts:signin' %}">{% trans "Already have an account? Sign in" %}</a>
+				</li>
+			</ul>
+
+			<div class="flex justify-center items-center gap-3">
+			  <span class="w-1/3 h-px bg-base-content/60"></span>
+			  <span class="text-sm text-base-content/60">{% trans "or" %}</span>
+			  <span class="w-1/3 h-px bg-base-content/60"></span>
+			</div>
+
+			<ul class="flex flex-col gap-2">
+				<li>
+					<a class="button button--vk flex gap-2 items-center justify-center" href="#">
+						<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 100" fill="none"><g clip-path="url(#clip0_2_2)"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.52944 7.02944C0.5 14.0589 0.5 25.3726 0.5 48V52C0.5 74.6274 0.5 85.9411 7.52944 92.9706C14.5589 100 25.8726 100 48.5 100H52.5C75.1274 100 86.4411 100 93.4706 92.9706C100.5 85.9411 100.5 74.6274 100.5 52V48C100.5 25.3726 100.5 14.0589 93.4706 7.02944C86.4411 0 75.1274 0 52.5 0H48.5C25.8726 0 14.5589 0 7.52944 7.02944ZM17.3752 30.4169C17.9168 56.4169 30.9167 72.0418 53.7084 72.0418H55.0003V57.1668C63.3753 58.0001 69.7082 64.1252 72.2498 72.0418H84.0835C80.8335 60.2085 72.2914 53.6668 66.9581 51.1668C72.2914 48.0835 79.7915 40.5835 81.5831 30.4169H70.8328C68.4995 38.6669 61.5836 46.1668 55.0003 46.8751V30.4169H44.2499V59.2501C37.5833 57.5835 29.1668 49.5002 28.7918 30.4169H17.3752Z" fill="white"/></g><defs><clipPath id="clip0_2_2"><rect width="100" height="100" fill="white" transform="translate(0.5)"/></clipPath></defs></svg>
+						{% trans "Sign in with VK ID" %}
+					</a>
+				</li>
+				<li>
+					<a class="button button--google flex gap-2 items-center justify-center" href="#">
+						<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+						{% trans "Sign in with Google" %}
+					</a>
+				</li>
+			</ul>
+		</form>
+	</section>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'accounts/js/toggle-password.js' %}"></script>
+	<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/masks.js' %}"></script>
+	<script src="{% static 'js/yandex-smart-captcha-onload.js' %}"></script>
+	<script src="https://smartcaptcha.cloud.yandex.ru/captcha.js?render=onload&onload=onloadYandexSmartCaptcha" defer></script>
+{% endblock %}

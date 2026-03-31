@@ -11,7 +11,7 @@ from config.settings import YANDEX_SMART_CAPTCHA_CLIENT_KEY
 
 
 class PasswordResetView(SuccessMessageMixin, _PasswordResetView):
-    template_name = "accounts/password_reset.html"
+    template_name = "accounts/redesign/password_reset.html"
     email_template_name = "emails/password_reset.txt"
     subject_template_name = "emails/password_reset_subject.txt"
     html_email_template_name = "emails/password_reset.html"
@@ -30,6 +30,7 @@ class PasswordResetView(SuccessMessageMixin, _PasswordResetView):
                 self.request,
                 _("Please pass the captcha and try again."),
             )
+            form.add_error(None, _("Please pass the captcha and try again."))
             return super().form_invalid(form)
 
         return super().form_valid(form)

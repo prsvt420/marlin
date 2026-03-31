@@ -70,10 +70,10 @@
 				<div class="flex flex-col gap-1">
 					<h2 class="text-base-content text-lg font-bold">{% trans "Nutritional value" %}</h2>
 					<p class="text-base-content text-base">
-						{% trans "Proteins" %} – {{ product.nutrition.proteins|floatformat:"1u" }},
-						{% trans "fats" %} – {{ product.nutrition.fats|floatformat:"1u" }},
-						{% trans "carbs" %} – {{ product.nutrition.carbs|floatformat:"1u" }},
-						{% trans "calories" %} – {{ product.nutrition.calories|floatformat:"1u" }}
+						{% trans "Proteins" %} – {{ product.nutrition.proteins|floatformat:"1u" }} {% trans "g" %},
+						{% trans "fats" %} – {{ product.nutrition.fats|floatformat:"1u" }} {% trans "g" %},
+						{% trans "carbs" %} – {{ product.nutrition.carbs|floatformat:"1u" }} {% trans "g" %},
+						{% trans "calories" %} – {{ product.nutrition.calories|floatformat:"1u" }} {% trans "kcal" %}
 					</p>
 				</div>
 
