@@ -13,13 +13,13 @@
 			<div class="sticky top-[112px] flex-1 self-start min-w-0 flex gap-2 max-md:static max-md:flex-col-reverse">
 			  <div id="thumbs" class="flex flex-col gap-2 max-md:flex-row">
 			    {% for image in product.images.all %}
-			      <div class="flex items-center bg-base-200 size-20 rounded-2xl overflow-hidden cursor-pointer border border-transparent" data-index="{{ forloop.counter0 }}">
+			      <div class="flex items-center bg-base-200 size-20 rounded-box overflow-hidden cursor-pointer border border-transparent" data-index="{{ forloop.counter0 }}">
 			        <img class="object-cover" src="{{ image.image.url }}" alt="" draggable="false">
 			      </div>
 			    {% endfor %}
 			  </div>
 
-			  <div id="embla" class="relative w-full aspect-square bg-base-200 rounded-2xl overflow-hidden">
+			  <div id="embla" class="relative w-full aspect-square bg-base-200 rounded-box overflow-hidden">
 			    <div id="embla-container" class="flex h-full">
 			      {% if product.images.all %}
 			        {% for image in product.images.all %}
@@ -46,7 +46,7 @@
 
 					{% if product.discount %}
 				    <p class="inline-flex gap-2 items-baseline font-bold">
-		          <span class="text-2xl text-warning-content p-2 bg-warning rounded-2xl">{{ product.final_price }} ₽</span>
+		          <span class="text-2xl text-warning-content p-2 bg-warning rounded-box">{{ product.final_price }} ₽</span>
 					    <span class="relative text-xl text-base-content/60 after:text-red-400 after:absolute after:left-0 after:right-0 after:top-1/2 after:h-px after:bg-current after:rotate-[-15deg]">{{ product.price }} ₽</span>
 				    </p>
 	        {% else %}
