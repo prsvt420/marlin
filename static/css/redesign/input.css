@@ -14,6 +14,7 @@
   --color-smoky-white: oklch(0.9605 0.0046 258.32);
   --color-platinum: oklch(0.93 0 0);
   --color-amaranth: oklch(0.602 0.2173 16.84);
+  --color-laser-lemon: oklch(0.905 0.182 98.111);
 
   --color-base-100: var(--color-white);
   --color-base-200: var(--color-smoky-white);
@@ -27,6 +28,8 @@
   --color-secondary-content: var(--color-black);
 
   --color-error: var(--color-amaranth);
+  --color-warning: var(--color-laser-lemon);
+  --color-warning-content: var(--color-black);
 }
 
 @layer base {

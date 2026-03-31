@@ -1,0 +1,3 @@
+const lang = document.documentElement.lang;
+const message = lang === "ru" ? "Мы нанимаем сотрудников: https://marlinio.ru/vacancies/" : "We hire employees: https://marlinio.ru/vacancies/";
+console.log("     _       _         _   _          \r\n    | | ___ (_)_ __   | |_| |__   ___ \r\n _  | |/ _ \\| | \'_ \\  | __| \'_ \\ / _ \\\r\n| |_| | (_) | | | | | | |_| | | |  __/\r\n \\___/ \\___/|_|_| |_|  \\__|_| |_|\\___|\r\n      |  \\/  | __ _ _ __| (_)_ __     \r\n      | |\\/| |/ _` | \'__| | | \'_ \\    \r\n      | |  | | (_| | |  | | | | | |   \r\n      |_|  |_|\\__,_|_|  |_|_|_| |_|\r\n      \r\n" + message)
