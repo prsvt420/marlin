@@ -108,8 +108,16 @@ CACHES: Dict[str, Any] = {
         "LOCATION": config(
             "CACHE_LOCATION", default="redis://127.0.0.1:6379/0"
         ),
-    }
+    },
+    "ratelimit": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": config(
+            "RATELIMIT_CACHE_LOCATION", default="redis://127.0.0.1:6379/2"
+        ),
+    },
 }
+
+RATELIMIT_USE_CACHE: str = "ratelimit"
 
 AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
     {
@@ -136,9 +144,11 @@ TIME_ZONE: str = "Europe/Moscow"
 USE_I18N: bool = True
 USE_TZ: bool = True
 
-CELERY_BROKER_URL = config("CELERY_URL", default="redis://127.0.0.1:6379/1")
+CELERY_BROKER_URL = config(
+    "CELERY_BROKER_URL", default="redis://127.0.0.1:6379/1"
+)
 CELERY_RESULT_BACKEND = config(
-    "CELERY_URL", default="redis://127.0.0.1:6379/1"
+    "CELERY_BROKER_URL", default="redis://127.0.0.1:6379/1"
 )
 CELERY_TIMEZONE: str = TIME_ZONE
 CELERY_ACCEPT_CONTENT = ["json"]

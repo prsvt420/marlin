@@ -1,28 +1,47 @@
 from typing import List
 
 from django.urls import URLPattern, path
+from django_ratelimit.decorators import ratelimit
 
 from apps.accounts import views
 
 app_name: str = "accounts"
 
 urlpatterns: List[URLPattern] = [
-    path(route="signin/", view=views.SignInView.as_view(), name="signin"),
+    path(
+        route="signin/",
+        view=ratelimit(key="ip", method="post", rate="5/m", block=True)(
+            views.SignInView.as_view()
+        ),
+        name="signin",
+    ),
     path(route="signout/", view=views.SignOutView.as_view(), name="signout"),
-    path(route="signup/", view=views.SignUpView.as_view(), name="signup"),
+    path(
+        route="signup/",
+        view=ratelimit(key="ip", method="post", rate="10/m", block=True)(
+            views.SignUpView.as_view()
+        ),
+        name="signup",
+    ),
     path(
         route="password-reset/",
-        view=views.PasswordResetView.as_view(),
+        view=ratelimit(key="ip", method="post", rate="3/m", block=True)(
+            views.PasswordResetView.as_view()
+        ),
         name="password-reset",
     ),
     path(
         route="password-reset/<uidb64>/<token>/",
-        view=views.PasswordResetConfirmView.as_view(),
+        view=ratelimit(key="ip", rate="5/m", block=True)(
+            views.PasswordResetConfirmView.as_view()
+        ),
         name="password-reset-confirm",
     ),
     path(
         route="activate/<uidb64>/<token>/",
-        view=views.AccountActivateView.as_view(),
+        view=ratelimit(key="ip", rate="5/m", block=True)(
+            views.AccountActivateView.as_view()
+        ),
         name="activate",
     ),
     path(

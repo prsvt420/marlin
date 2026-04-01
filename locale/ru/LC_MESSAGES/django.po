@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-01 12:01+0800\n"
+"POT-Creation-Date: 2026-04-01 14:19+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -619,7 +619,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:330
+#: .\apps\carts\apps.py:9 .\config\settings.py:340
 msgid "Carts"
 msgstr "Корзины"
 
@@ -741,7 +741,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:294
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:304
 msgid "Products"
 msgstr "Продукты"
 
@@ -919,7 +919,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:25
 #: .\apps\catalog\views\product_list_view.py:50
-#: .\apps\catalog\views\product_search_list_view.py:36 .\config\settings.py:290
+#: .\apps\catalog\views\product_search_list_view.py:36 .\config\settings.py:300
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:26
 #: .\templates\redesign\includes\_header.html:82
@@ -1485,7 +1485,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:348
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:358
 #: .\templates\includes\footer.html:19
 #: .\templates\redesign\includes\_footer.html:37
 msgid "Vacancies"
@@ -1663,35 +1663,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:268
+#: .\config\settings.py:278
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:301
+#: .\config\settings.py:311
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:310
+#: .\config\settings.py:320
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:314
+#: .\config\settings.py:324
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:319
+#: .\config\settings.py:329
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:326
+#: .\config\settings.py:336
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:335
+#: .\config\settings.py:345
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:344
+#: .\config\settings.py:354
 msgid "Recruitment"
 msgstr "Подбор персонала"
 
@@ -1768,6 +1768,14 @@ msgstr "Внимание!"
 #: .\templates\includes\messages.html:16
 msgid "Info"
 msgstr "Информация"
+
+#: .\templates\redesign\429.html:9
+msgid "Too many requests"
+msgstr "Слишком много запросов"
+
+#: .\templates\redesign\429.html:10
+msgid "Please wait a moment and try again."
+msgstr "Пожалуйста, подождите немного и попробуйте снова."
 
 #: .\templates\redesign\includes\_footer.html:8
 msgid "Legal information"

@@ -9,6 +9,8 @@ from django.views.generic import TemplateView
 from health_check.views import HealthCheckView
 from redis.asyncio import Redis as RedisClient
 
+handler403: str = "apps.core.views.handler403"
+
 urlpatterns: List[Union[URLResolver, URLPattern]] = [
     path(
         route="admin/doc/", view=include(arg="django.contrib.admindocs.urls")
@@ -79,6 +81,10 @@ if settings.DEBUG:
         path(
             route="403/",
             view=TemplateView.as_view(template_name="redesign/403.html"),
+        ),
+        path(
+            route="429/",
+            view=TemplateView.as_view(template_name="redesign/429.html"),
         ),
         path(
             route="500/",
