@@ -2,6 +2,8 @@ from typing import Any, Dict, Optional
 
 from django.db.models import QuerySet
 from django.http import Http404
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from django_filters.views import FilterView
 
 from apps.carts.selectors import CartSelector
@@ -11,7 +13,7 @@ from apps.catalog.selectors import CategorySelector, ProductSelector
 
 
 class ProductListView(FilterView):
-    template_name = "catalog/product_list.html"
+    template_name = "catalog/redesign/product_list.html"
     context_object_name = "products"
     paginate_by = 12
     paginate_orphans = 4
@@ -42,6 +44,17 @@ class ProductListView(FilterView):
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["category"] = self.category
+        context["breadcrumbs"] = [
+            {"name": _("Home"), "url": reverse_lazy("pages:home")},
+            {
+                "name": _("Catalog"),
+                "url": reverse_lazy("catalog:category-list"),
+            },
+            {
+                "name": context["category"],
+                "url": context["category"].get_absolute_url(),
+            },
+        ]
 
         if self.request.user.is_authenticated:
             context[

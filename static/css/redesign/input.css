@@ -7,7 +7,7 @@
 
 @theme {
   --font-body: 'Montserrat', sans-serif;
-  --max-width-page: 1440px;
+  --max-width-page: 1330px;
 
   --color-white: oklch(1 0 0);
   --color-black: oklch(0 0 0);
@@ -56,7 +56,7 @@
   }
 
   .input {
-    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-base-content border border-base-300;
+    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-base-content;
   }
 
   .input::placeholder {
@@ -84,6 +84,6 @@
   }
 
   .button--google {
-    @apply bg-white border border-base-300 text-[#1f1f1f] hover:bg-[#e4e4e4];
+    @apply bg-white text-[#1f1f1f] hover:bg-[#e4e4e4];
   }
 }

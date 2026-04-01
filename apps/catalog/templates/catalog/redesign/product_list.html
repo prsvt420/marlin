@@ -1,0 +1,58 @@
+{% extends "redesign/base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col gap-8">
+		<div class="flex flex-col">
+			{% include "redesign/includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<div class="flex items-baseline gap-2">
+				<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ category.name }}</h1>
+				<span class="text-base-content/60 text-sm">{% blocktrans count count_products=products|length %}{{ count_products }} product{% plural %}{{ count_products }} products{% endblocktrans %}</span>
+			</div>
+		</div>
+
+		<ul class="grid gap-y-8 gap-x-4 grid-cols-5 max-lg:grid-cols-4 max-md:gap-y-4 max-md:gap-x-2 max-md:grid-cols-3 max-sm:grid-cols-2">
+			{% for product in products %}
+				<li>
+					<a href="{{ product.get_absolute_url }}">
+						<article class="flex flex-col gap-3 transition duration-300 ease-in-out hover:-translate-y-0.5">
+							<div class="p-4 bg-base-200 rounded-box aspect-square">
+								<img class="size-full object-cover" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
+							</div>
+							<div class="flex flex-col">
+								<p class="inline-flex items-center gap-1 text-sm font-bold">
+									<svg class="size-4 fill-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+									<span class="text-base-content">4,74</span> <span class="text-base-content/60">(1428 оценок)</span>
+								</p>
+								<h2 class="font-bold text-base-content text-base">{{ product.name }}</h2>
+							</div>
+							{% if product.discount %}
+							<p class="mt-auto inline-flex gap-2 items-baseline font-bold">
+								<span class="text-base text-warning-content p-1 bg-warning rounded-md">{{ product.final_price }} ₽</span>
+								<span class="relative text-sm text-base-content/60 after:text-red-400 after:absolute after:left-0 after:right-0 after:top-1/2 after:h-px after:bg-current after:rotate-[-15deg]">{{ product.price }} ₽</span>
+							</p>
+							{% else %}
+								<p class="mt-auto font-bold text-base-content text-base">{{ product.price }} ₽</p>
+							{% endif %}
+
+							{% if product.stock %}
+								{% if not product.pk in cart_product_pks %}
+									<form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
+										{% csrf_token %}
+										<button class="button button--primary w-full">{% trans "Add to Cart" %}</button>
+									</form>
+								{% else %}
+									<button class="button button--disabled w-full" disabled>{% trans "In cart" %}</button>
+								{% endif %}
+							{% else %}
+								<button class="button button--disabled w-full" disabled>{% trans "Not available" %}</button>
+							{% endif %}
+						</article>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endblock %}

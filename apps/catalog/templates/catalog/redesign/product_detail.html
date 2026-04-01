@@ -37,16 +37,18 @@
 			</div>
 
 			<div class="flex-1 min-w-0 flex flex-col gap-4">
-				<div class="flex flex-col gap-3 mb-4 font-bold">
-					<p class="inline-flex items-center gap-1 text-sm">
-						<svg class="size-4 fill-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
-					  <span class="text-base-content">4,74</span> <span class="text-base-content/60">(1428 оценок)</span>
-					</p>
-					<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ product.name }}</h1>
+				<div class="flex flex-col gap-3 mb-4">
+					<div class="flex flex-col">
+						<p class="inline-flex items-center gap-1 text-sm font-bold">
+							<svg class="size-4 fill-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+						  <span class="text-base-content">4,74</span> <span class="text-base-content/60">(1428 оценок)</span>
+						</p>
+						<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ product.name }}</h1>
+					</div>
 
 					{% if product.discount %}
 				    <p class="inline-flex gap-2 items-baseline font-bold">
-		          <span class="text-2xl text-warning-content p-2 bg-warning rounded-box">{{ product.final_price }} ₽</span>
+		          <span class="text-2xl text-warning-content p-1 bg-warning rounded-md">{{ product.final_price }} ₽</span>
 					    <span class="relative text-xl text-base-content/60 after:text-red-400 after:absolute after:left-0 after:right-0 after:top-1/2 after:h-px after:bg-current after:rotate-[-15deg]">{{ product.price }} ₽</span>
 				    </p>
 	        {% else %}
