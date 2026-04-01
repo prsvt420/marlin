@@ -4,10 +4,10 @@
 {% block title %}{% trans "Search by query" %} «{{ filter.form.q.value|default_if_none:'' }}»{% endblock %}
 
 {% block content %}
-	<section class="flex flex-col gap-8">
+	<section class="flex flex-col gap-8 max-md:gap-4">
 		<div class="flex flex-col">
 			{% include "redesign/includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
-			<div class="flex items-baseline gap-2 max-md:flex-col">
+			<div class="flex items-baseline gap-2 max-md:gap-0 max-md:flex-col">
 				<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Search by query" %} «{{ filter.form.q.value|default_if_none:''|truncatechars:30 }}»</h1>
 				<span class="text-base-content/60 text-sm">{% blocktrans count count_products=products|length %}{{ count_products }} product{% plural %}{{ count_products }} products{% endblocktrans %}</span>
 			</div>
@@ -18,8 +18,8 @@
 				<li>
 					<a href="{{ product.get_absolute_url }}">
 						<article class="flex flex-col gap-3 transition duration-300 ease-in-out hover:-translate-y-0.5">
-							<div class="p-4 bg-base-200 rounded-box aspect-square">
-								<img class="size-full object-cover" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
+							<div class="bg-base-200 rounded-box aspect-square overflow-hidden flex items-center justify-center">
+								<img class="max-h-full max-w-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 							</div>
 							<div class="flex flex-col">
 								<p class="inline-flex items-center gap-1 text-sm font-bold">
