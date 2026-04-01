@@ -1,49 +1,35 @@
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 from django.db.models import QuerySet
-from django.http import Http404
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django_filters.views import FilterView
 
 from apps.carts.selectors import CartSelector
-from apps.catalog.filters import ProductFilter
-from apps.catalog.models import Category, Product
-from apps.catalog.selectors import CategorySelector, ProductSelector
+from apps.catalog.filters import ProductSearchFilter
+from apps.catalog.models import Product
+from apps.catalog.selectors import ProductSelector
 
 
-class ProductListView(FilterView):
-    template_name = "catalog/redesign/product_list.html"
+class ProductSearchListView(FilterView):
+    template_name = "catalog/redesign/product_search_list.html"
     context_object_name = "products"
     paginate_by = 12
     paginate_orphans = 4
-    filterset_class = ProductFilter
+    filterset_class = ProductSearchFilter
 
-    @property
-    def category_slug(self) -> str:
-        return self.kwargs["category_slug"]
-
-    @property
-    def category(self) -> Category:
-        category: Optional[Category] = CategorySelector().get_category(
-            category_slug=self.category_slug
-        )
-
-        if category is None:
-            raise Http404
-
-        return category
+    def get(self, request: HttpRequest, **kwargs: Any) -> HttpResponse:
+        if not request.GET.get(key="q", default="").strip():
+            return redirect(to="pages:home")
+        return super().get(request, **kwargs)
 
     def get_queryset(self) -> QuerySet[Product]:
-        category_slug: Optional[str] = self.category_slug
-
-        return ProductSelector().get_products(
-            category_slug=category_slug,
-        )
+        return ProductSelector().get_products()
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context: Dict[str, Any] = super().get_context_data(**kwargs)
-        context["category"] = self.category
         context["breadcrumbs"] = [
             {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
             {
@@ -51,8 +37,8 @@ class ProductListView(FilterView):
                 "url": reverse_lazy(viewname="catalog:category-list"),
             },
             {
-                "name": context["category"],
-                "url": context["category"].get_absolute_url(),
+                "name": _("Search by query"),
+                "url": reverse_lazy(viewname="catalog:product-search-list"),
             },
         ]
 

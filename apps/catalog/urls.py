@@ -11,6 +11,11 @@ urlpatterns: List[URLPattern] = [
         route="", view=views.CategoryListView.as_view(), name="category-list"
     ),
     path(
+        route="search/",
+        view=views.ProductSearchListView.as_view(),
+        name="product-search-list",
+    ),
+    path(
         route="<slug:category_slug>/",
         view=views.ProductListView.as_view(),
         name="product-list",

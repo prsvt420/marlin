@@ -7,10 +7,10 @@ class TermsView(TemplateView):
     template_name = "pages/redesign/terms.html"
     extra_context = {
         "breadcrumbs": [
-            {"name": _("Home"), "url": reverse_lazy("pages:home")},
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
             {
                 "name": _("Terms of Service"),
-                "url": reverse_lazy("pages:terms"),
+                "url": reverse_lazy(viewname="pages:terms"),
             },
         ]
     }

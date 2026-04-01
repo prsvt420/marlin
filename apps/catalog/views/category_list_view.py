@@ -12,10 +12,10 @@ class CategoryListView(ListView):
     context_object_name = "parent_categories"
     extra_context = {
         "breadcrumbs": [
-            {"name": _("Home"), "url": reverse_lazy("pages:home")},
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
             {
                 "name": _("Catalog"),
-                "url": reverse_lazy("catalog:category-list"),
+                "url": reverse_lazy(viewname="catalog:category-list"),
             },
         ]
     }

@@ -7,10 +7,10 @@ class OfferView(TemplateView):
     template_name = "pages/redesign/offer.html"
     extra_context = {
         "breadcrumbs": [
-            {"name": _("Home"), "url": reverse_lazy("pages:home")},
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
             {
                 "name": _("Public Offer"),
-                "url": reverse_lazy("pages:offer"),
+                "url": reverse_lazy(viewname="pages:offer"),
             },
         ]
     }
