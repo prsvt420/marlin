@@ -14,6 +14,9 @@
   --color-smoky-white: oklch(0.9605 0.0046 258.32);
   --color-platinum: oklch(0.93 0 0);
   --color-amaranth: oklch(0.602 0.2173 16.84);
+  --color-emerald: oklch(0.596 0.145 163.22);
+  --color-amber: oklch(0.769 0.188 70.08);
+  --color-azure: oklch(0.623 0.143 253.35);
   --color-laser-lemon: oklch(0.905 0.182 98.111);
 
   --color-base-100: var(--color-white);
@@ -28,13 +31,15 @@
   --color-secondary-content: var(--color-black);
 
   --color-error: var(--color-amaranth);
-  --color-error-content: var(--color-black);
-  --color-warning: var(--color-laser-lemon);
-  --color-warning-content: var(--color-black);
+  --color-success: var(--color-emerald);
+  --color-warning: var(--color-amber);
+  --color-info: var(--color-azure);
 
   --radius-box: var(--radius-2xl);
   --radius-field: calc(infinity * 1px);
 }
+
+@source inline("bg-error bg-success bg-warning bg-info bg-error/10 bg-success/10 bg-warning/10 bg-info/10 text-error text-success text-warning text-info");
 
 @layer base {
   * {
@@ -61,6 +66,10 @@
 
   .input::placeholder {
     @apply text-base-content/60;
+  }
+
+  input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
   }
 
   .button {

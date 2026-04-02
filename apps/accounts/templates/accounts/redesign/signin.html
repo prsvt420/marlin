@@ -5,21 +5,21 @@
 
 {% block content %}
 	<section class="flex flex-col items-center justify-center min-h-[70vh]">
-		<form class="flex flex-col gap-4 p-6 w-full max-w-100 bg-base-200 rounded-box" action="{% url 'accounts:signin' %}" method="post" novalidate>
+		<form class="flex flex-col gap-4 p-4 w-full max-w-100 bg-base-200 rounded-box" action="{% url 'accounts:signin' %}" method="post" novalidate>
 			{% csrf_token %}
 			<h1 class="font-bold text-base-content text-center text-2xl">{% trans "Sign in" %}</h1>
 
 			{% if form.non_field_errors %}
-			  <div class="bg-error/10 border border-error/30 rounded-box px-4 py-3">
-			    {% for error in form.non_field_errors %}
-			      <p class="text-sm text-error">{{ error }}</p>
+			  <div class="bg-error/10 rounded-box px-4 py-3">
+			    {% for field_error in form.non_field_errors %}
+			      <p class="text-sm hyphens-auto text-error">{{ field_error }}</p>
 			    {% endfor %}
 			  </div>
 			{% endif %}
 
 	    <div class="flex flex-col gap-1">
         <label class="text-base text-base-content" for="username">{% trans "Username" %}</label>
-        <input id="username" class="input bg-base-100 {% if form.username.errors %}border-error{% endif %}" name="username" type="text" autocomplete="username" value="{{ form.username.value|default:'' }}" placeholder="{% trans 'Enter username' %}">
+        <input id="username" class="input bg-base-100 {% if form.username.errors %}border border-error{% endif %}" name="username" type="text" autocomplete="username" value="{{ form.username.value|default:'' }}" placeholder="{% trans 'Enter username' %}">
         {% if form.username.errors %}
           <p class="text-sm text-error">{{ form.username.errors.0 }}</p>
         {% endif %}
@@ -28,7 +28,7 @@
 	    <div class="flex flex-col gap-1">
 	      <label class="text-base text-base-content" for="password">{% trans "Password" %}</label>
 		    <div class="relative">
-			    <input id="password" class="input bg-base-100 w-full pr-12 {% if form.password.errors %}border-error{% endif %}" name="password" type="password" autocomplete="current-password" placeholder="{% trans 'Enter password' %}">
+			    <input id="password" class="input bg-base-100 w-full pr-12 {% if form.password.errors %}border border-error{% endif %}" name="password" type="password" autocomplete="current-password" placeholder="{% trans 'Enter password' %}">
 		      <button id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2 link" type="button">
 						<svg id="eye-open" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
 		        <svg id="eye-closed" class="size-5 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M20 14.8335C21.3082 13.3317 22 12 22 12C22 12 18.3636 5 12 5C11.6588 5 11.3254 5.02013 11 5.05822C10.6578 5.09828 10.3244 5.15822 10 5.23552M12 9C12.3506 9 12.6872 9.06015 13 9.17071C13.8524 9.47199 14.528 10.1476 14.8293 11C14.9398 11.3128 15 11.6494 15 12M3 3L21 21M12 15C11.6494 15 11.3128 14.9398 11 14.8293C10.1476 14.528 9.47198 13.8524 9.1707 13C9.11386 12.8392 9.07034 12.6721 9.04147 12.5M4.14701 9C3.83877 9.34451 3.56234 9.68241 3.31864 10C2.45286 11.1282 2 12 2 12C2 12 5.63636 19 12 19C12.3412 19 12.6746 18.9799 13 18.9418" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>

@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{% block title %}{% endblock %} — Марлин</title>
+		<script src="{% static 'js/console-banner.js' %}"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,11 +18,12 @@
 	</head>
 	<body class="flex flex-col font-body bg-base-100 font-medium relative min-h-screen min-h-[100dvh]">
 		{% include "redesign/includes/_header.html" %}
-			<main class="flex flex-col flex-auto {% block mix %}{% endblock %}">
-		    <div class="w-full max-w-page mx-auto p-8 max-md:p-4">
-	        {% block content %}{% endblock %}
-		    </div>
-			</main>
+		{% include "redesign/includes/_messages.html" %}
+		<main class="flex flex-col flex-auto {% block mix %}{% endblock %}">
+	    <div class="w-full max-w-page mx-auto p-8 max-md:p-4">
+        {% block content %}{% endblock %}
+	    </div>
+		</main>
 		{% include "redesign/includes/_footer.html" %}
 
 		<div class="fixed bottom-5 z-10 left-5 right-5 flex justify-between max-md:flex-col max-md:items-end max-md:right-5 max-md:left-auto max-md:bottom-2.5 max-md:gap-2">
@@ -33,9 +35,6 @@
 		  </button>
 		</div>
 
-		<script src="{% static 'js/console-banner.js' %}"></script>
-		<script src="{% static 'js/embla-carousel.umd.js' %}"></script>
-	  <script src="{% static 'js/carousel.js' %}"></script>
 		<script src="{% static 'js/scroll-top.js' %}"></script>
 		{% block js %}{% endblock %}
 	</body>
