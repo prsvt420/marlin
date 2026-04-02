@@ -18,7 +18,7 @@ class UserAdmin(_UserAdmin, BaseModelAdmin, ModelAdmin):
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
     list_display = (
-        "username",
+        "email",
         "is_staff",
         "is_superuser",
         "is_active",
@@ -28,7 +28,6 @@ class UserAdmin(_UserAdmin, BaseModelAdmin, ModelAdmin):
             None,
             {
                 "fields": (
-                    "username",
                     "first_name",
                     "last_name",
                     "middle_name",
@@ -61,3 +60,4 @@ class UserAdmin(_UserAdmin, BaseModelAdmin, ModelAdmin):
     search_help_text = _(
         "Search by first name, last name, middle name, email and phone number"
     )
+    ordering = ("email",)

@@ -6,6 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 
 class User(AbstractUser):
+    username = None  # type: ignore
     email = models.EmailField(
         max_length=255,
         unique=True,
@@ -34,14 +35,13 @@ class User(AbstractUser):
         default=False,
         verbose_name=pgettext_lazy("masculine", "active"),
     )
-
     REQUIRED_FIELDS = [
-        "email",
         "phone_number",
         "first_name",
         "last_name",
         "middle_name",
     ]
+    USERNAME_FIELD = "email"
 
     class Meta:
         db_table = "accounts_user"

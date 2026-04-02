@@ -18,8 +18,8 @@
 			{% endif %}
 
 	    <div class="flex flex-col gap-1">
-        <label class="text-base text-base-content" for="username">{% trans "Username" %}</label>
-        <input id="username" class="input bg-base-100 {% if form.username.errors %}border border-error{% endif %}" name="username" type="text" autocomplete="username" value="{{ form.username.value|default:'' }}" placeholder="{% trans 'Enter username' %}">
+        <label class="text-base text-base-content" for="username">{% trans "Email" %}</label>
+        <input id="username" class="input bg-base-100 {% if form.username.errors %}border border-error{% endif %}" name="username" type="text" autocomplete="username" value="{{ form.username.value|default:'' }}" placeholder="{% trans 'Enter email' %}">
         {% if form.username.errors %}
           <p class="text-sm text-error">{{ form.username.errors.0 }}</p>
         {% endif %}

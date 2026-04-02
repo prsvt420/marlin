@@ -1,17 +1,16 @@
 from django import forms
 from django.contrib.auth.forms import (
     AuthenticationForm,
-    UsernameField,
 )
 from django.utils.translation import gettext_lazy as _
 
 
 class SignInForm(AuthenticationForm):
-    username = UsernameField(
+    username = forms.EmailField(
         required=True,
-        label=_("Username"),
+        label=_("Email"),
         error_messages={
-            "required": _("The username is required."),
+            "required": _("The email is required."),
         },
     )
     password = forms.CharField(

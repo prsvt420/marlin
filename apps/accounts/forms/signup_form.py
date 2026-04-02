@@ -27,7 +27,6 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = get_user_model()
         fields = (
-            "username",
             "email",
             "phone_number",
             "first_name",
@@ -35,13 +34,6 @@ class SignUpForm(UserCreationForm):
             "middle_name",
         )
         error_messages = {
-            "username": {
-                "max_length": _(
-                    "The username must not be longer than 255 characters."
-                ),
-                "unique": _("This username is already in use."),
-                "required": _("The username is required."),
-            },
             "email": {
                 "max_length": _(
                     "The email must not be longer than 255 characters."

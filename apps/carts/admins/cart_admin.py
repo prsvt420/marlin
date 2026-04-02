@@ -38,11 +38,8 @@ class CartAdmin(BaseModelAdmin):
         "updated_at",
     )
     list_filter = (("cart_status", ChoicesDropdownFilter),)
-    search_fields = (
-        "user__email",
-        "user__username",
-    )
-    search_help_text = _("Search by email and username")
+    search_fields = ("user__email",)
+    search_help_text = _("Search by email")
 
     @display(
         description=_("Status"),

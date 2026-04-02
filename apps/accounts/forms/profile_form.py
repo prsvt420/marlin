@@ -6,4 +6,4 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = get_user_model()
-        fields = ("username", "first_name", "last_name", "middle_name")
+        fields = ("first_name", "last_name", "middle_name")

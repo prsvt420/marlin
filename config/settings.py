@@ -211,7 +211,7 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
     "DIRECTIVES": {
         "default-src": ["'none'"],
         "font-src": ["'self'", "https://fonts.gstatic.com", "data:"],
-        "img-src": ["'self'"],
+        "img-src": ["'self'", "data:"],
         "script-src": [
             "'self'",
             "https://smartcaptcha.cloud.yandex.ru",
