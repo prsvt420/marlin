@@ -28,7 +28,6 @@ class SignUpForm(UserCreationForm):
         model = get_user_model()
         fields = (
             "email",
-            "phone_number",
             "first_name",
             "last_name",
             "middle_name",
@@ -43,14 +42,6 @@ class SignUpForm(UserCreationForm):
                 ),
                 "unique": _("This email address is already registered."),
                 "required": _("The email is required."),
-            },
-            "phone_number": {
-                "invalid": _(
-                    "The phone number must "
-                    "be in the format +7 (XXX) XXX-XX-XX."
-                ),
-                "unique": _("This phone number is already registered."),
-                "required": _("The phone number is required."),
             },
             "first_name": {
                 "max_length": _(

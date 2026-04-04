@@ -44,7 +44,7 @@ class UserAdmin(_UserAdmin, BaseModelAdmin, ModelAdmin):
             },
         ),
     )
-    readonly_fields = ("last_login", "date_joined")
+    readonly_fields = ("email", "last_login", "date_joined")
     list_filter = (
         "is_staff",
         "is_superuser",

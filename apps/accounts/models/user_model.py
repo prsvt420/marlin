@@ -4,8 +4,11 @@ from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
 from phonenumber_field.modelfields import PhoneNumberField
 
+from apps.accounts.managers import UserManager
+
 
 class User(AbstractUser):
+    objects = UserManager()  # type: ignore
     username = None  # type: ignore
     email = models.EmailField(
         max_length=255,
@@ -13,6 +16,8 @@ class User(AbstractUser):
         verbose_name=_("email"),
     )
     phone_number = PhoneNumberField(
+        blank=True,
+        null=True,
         unique=True,
         region="RU",
         verbose_name=_("phone number"),
@@ -36,10 +41,8 @@ class User(AbstractUser):
         verbose_name=pgettext_lazy("masculine", "active"),
     )
     REQUIRED_FIELDS = [
-        "phone_number",
         "first_name",
         "last_name",
-        "middle_name",
     ]
     USERNAME_FIELD = "email"
 

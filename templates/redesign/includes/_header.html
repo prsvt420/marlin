@@ -43,7 +43,7 @@
 						<li>
 							<a class="flex flex-col items-center justify-center h-12 link text-sm {% if current_view_name == 'accounts:profile' %}link--active{% endif %}" href="{% url 'accounts:profile' %}">
 								<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5454 8.82505C16.5454 11.5028 14.3746 13.6735 11.6969 13.6735C9.01913 13.6735 6.84839 11.5028 6.84839 8.82505C6.84839 6.1473 9.01913 3.97656 11.6969 3.97656C14.3746 3.97656 16.5454 6.1473 16.5454 8.82505Z"></path><path d="M7.63062 14.6484C5.01417 15.8674 2.96437 18.1474 1.99988 20.9549H21.9999C21.0354 18.1474 18.9856 15.8674 16.3691 14.6484C15.1527 15.564 13.6396 16.1067 11.9999 16.1067C10.3601 16.1067 8.84709 15.564 7.63062 14.6484Z"></path></svg>
-								{{ request.user.first_name }}
+								{{ request.user.first_name|truncatechars:10 }}
 							</a>
 						</li>
 						<li>
@@ -99,7 +99,7 @@
 							<li>
 								<a class="flex items-center gap-2 link text-sm {% if current_view_name == 'accounts:profile' %}link--active{% endif %}" href="{% url 'accounts:profile' %}">
 									<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5454 8.82505C16.5454 11.5028 14.3746 13.6735 11.6969 13.6735C9.01913 13.6735 6.84839 11.5028 6.84839 8.82505C6.84839 6.1473 9.01913 3.97656 11.6969 3.97656C14.3746 3.97656 16.5454 6.1473 16.5454 8.82505Z"></path><path d="M7.63062 14.6484C5.01417 15.8674 2.96437 18.1474 1.99988 20.9549H21.9999C21.0354 18.1474 18.9856 15.8674 16.3691 14.6484C15.1527 15.564 13.6396 16.1067 11.9999 16.1067C10.3601 16.1067 8.84709 15.564 7.63062 14.6484Z"></path></svg>
-									{{ request.user.first_name }}
+									{{ request.user.first_name|truncatechars:10 }}
 								</a>
 							</li>
 							<li>

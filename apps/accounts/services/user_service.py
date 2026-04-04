@@ -48,6 +48,11 @@ class UserService:
                 user.is_active = True
                 user.save(update_fields=["is_active"])
 
+    def reset_password_to_unusable(self, *, user: User) -> None:
+        with transaction.atomic():
+            user.set_unusable_password()
+            user.save(update_fields=["password"])
+
     def send_account_activation_email(self, *, user: User):
         context: Mapping[str, Any] = {
             "token": default_token_generator.make_token(user=user),

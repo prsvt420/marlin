@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-02 17:11+0800\n"
+"POT-Creation-Date: 2026-04-04 09:56+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -29,19 +29,19 @@ msgstr "Аккаунты"
 
 #: .\apps\accounts\forms\password_reset_form.py:10
 #: .\apps\accounts\forms\signin_form.py:13
-#: .\apps\accounts\forms\signup_form.py:45
+#: .\apps\accounts\forms\signup_form.py:44
 #: .\apps\pages\forms\contact_form.py:19
 msgid "The email is required."
 msgstr "Электронная почта обязательна."
 
 #: .\apps\accounts\forms\password_reset_form.py:11
-#: .\apps\accounts\forms\signup_form.py:42
+#: .\apps\accounts\forms\signup_form.py:41
 #: .\apps\pages\forms\contact_form.py:20
 msgid "The email must be in the format user@example.com."
 msgstr "Электронная почта должена быть в формате user@example.com."
 
 #: .\apps\accounts\forms\password_reset_form.py:13
-#: .\apps\accounts\forms\signup_form.py:39
+#: .\apps\accounts\forms\signup_form.py:38
 #: .\apps\pages\forms\contact_form.py:22
 msgid "The email must not be longer than 255 characters."
 msgstr "Длина электронной почты не должна превышать 255 символов."
@@ -68,7 +68,7 @@ msgstr "Электронная почта"
 
 #: .\apps\accounts\forms\signin_form.py:18
 #: .\apps\accounts\templates\accounts\redesign\signin.html:29
-#: .\apps\accounts\templates\accounts\redesign\signup.html:61
+#: .\apps\accounts\templates\accounts\redesign\signup.html:53
 #: .\apps\accounts\templates\accounts\signin.html:30
 #: .\apps\accounts\templates\accounts\signup.html:50
 msgid "Password"
@@ -87,77 +87,103 @@ msgstr "Подтверждение пароля обязательно."
 msgid "Consent required."
 msgstr "Требуется согласие."
 
-#: .\apps\accounts\forms\signup_form.py:44
+#: .\apps\accounts\forms\signup_form.py:43
 msgid "This email address is already registered."
 msgstr "Эта электронная почта уже зарегистрирована."
 
-#: .\apps\accounts\forms\signup_form.py:49
-#: .\apps\pages\forms\contact_form.py:31
-msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
-msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
-
-#: .\apps\accounts\forms\signup_form.py:52
-msgid "This phone number is already registered."
-msgstr "Этот номер телефона уже зарегистрирован."
-
-#: .\apps\accounts\forms\signup_form.py:53
-#: .\apps\pages\forms\contact_form.py:29
-msgid "The phone number is required."
-msgstr "Номер телефона обязателен."
-
-#: .\apps\accounts\forms\signup_form.py:57
+#: .\apps\accounts\forms\signup_form.py:48
 msgid "The first name must not be longer than 255 characters."
 msgstr "Длина имени не должна превышать 255 символов."
 
-#: .\apps\accounts\forms\signup_form.py:59
+#: .\apps\accounts\forms\signup_form.py:50
 msgid "The first name is required."
 msgstr "Имя обязательно."
 
-#: .\apps\accounts\forms\signup_form.py:63
+#: .\apps\accounts\forms\signup_form.py:54
 msgid "The last name must not be longer than 255 characters."
 msgstr "Длина фамилии не должна превышать 255 символов."
 
-#: .\apps\accounts\forms\signup_form.py:65
+#: .\apps\accounts\forms\signup_form.py:56
 msgid "The last name is required."
 msgstr "Фамилия обязательна."
 
-#: .\apps\accounts\forms\signup_form.py:69
+#: .\apps\accounts\forms\signup_form.py:60
 msgid "The middle name must not be longer than 255 characters."
 msgstr "Длина отчества не должна превышать 255 символов."
 
-#: .\apps\accounts\models\user_model.py:13
+#: .\apps\accounts\models\proxy_user_social_auth.py:8
+msgid "Social account"
+msgstr "Социальный аккаунт"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:366
+msgid "Social accounts"
+msgstr "Социальные аккаунты"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:13
+#: .\apps\accounts\models\user_model.py:52 .\apps\carts\models\cart_model.py:14
+msgid "user"
+msgstr "пользователь"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:14
+msgid "provider"
+msgstr "провайдер"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:15
+msgid "identifier"
+msgstr "идентификатор"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:16
+msgid "extra data"
+msgstr "дополнительные данные"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:17
+#: .\apps\core\models\base_model.py:8
+msgid "created date"
+msgstr "дата создания"
+
+#: .\apps\accounts\models\proxy_user_social_auth.py:18
+#: .\apps\core\models\base_model.py:13
+msgid "updated date"
+msgstr "дата обновления"
+
+#: .\apps\accounts\models\user_model.py:16
 msgid "email"
 msgstr "электронная почта"
 
-#: .\apps\accounts\models\user_model.py:18
+#: .\apps\accounts\models\user_model.py:23
 msgid "phone number"
 msgstr "номер телефона"
 
-#: .\apps\accounts\models\user_model.py:23
+#: .\apps\accounts\models\user_model.py:28
 msgid "first name"
 msgstr "имя"
 
-#: .\apps\accounts\models\user_model.py:27
+#: .\apps\accounts\models\user_model.py:32
 msgid "last name"
 msgstr "фамилия"
 
-#: .\apps\accounts\models\user_model.py:32
+#: .\apps\accounts\models\user_model.py:37
 msgid "middle name"
 msgstr "отчество"
 
-#: .\apps\accounts\models\user_model.py:36
+#: .\apps\accounts\models\user_model.py:41
 #: .\apps\catalog\models\product_model.py:83
 msgctxt "masculine"
 msgid "active"
 msgstr "активный"
 
-#: .\apps\accounts\models\user_model.py:49 .\apps\carts\models\cart_model.py:14
-msgid "user"
-msgstr "пользователь"
-
-#: .\apps\accounts\models\user_model.py:50
+#: .\apps\accounts\models\user_model.py:53
 msgid "users"
 msgstr "пользователи"
+
+#: .\apps\accounts\pipelines\associate_by_email.py:39
+msgid "Your account was linked to Google. Old password has been reset."
+msgstr "Ваш аккаунт был привязан к Google. Старый пароль был сброшен."
+
+#: .\apps\accounts\pipelines\send_signin_social_notification.py:32
+#, python-format
+msgid "You have successfully signed in with %(backend_name)s. Welcome!"
+msgstr "Вы успешно авторизованы через %(backend_name)s. Добро пожаловать!"
 
 #: .\apps\accounts\templates\accounts\password_reset.html:4
 #: .\apps\accounts\templates\accounts\password_reset.html:17
@@ -253,7 +279,6 @@ msgid "Enter username"
 msgstr "Введите имя пользователя"
 
 #: .\apps\accounts\templates\accounts\profile.html:37
-#: .\apps\accounts\templates\accounts\redesign\signup.html:29
 #: .\apps\accounts\templates\accounts\signup.html:34
 #: .\apps\pages\templates\pages\contact.html:42
 #: .\apps\pages\templates\pages\contact.html:72
@@ -261,43 +286,43 @@ msgid "Phone number"
 msgstr "Номер телефона"
 
 #: .\apps\accounts\templates\accounts\profile.html:41
-#: .\apps\accounts\templates\accounts\redesign\signup.html:37
+#: .\apps\accounts\templates\accounts\redesign\signup.html:29
 #: .\apps\accounts\templates\accounts\signup.html:38
 msgid "First name"
 msgstr "Имя"
 
 #: .\apps\accounts\templates\accounts\profile.html:42
-#: .\apps\accounts\templates\accounts\redesign\signup.html:38
+#: .\apps\accounts\templates\accounts\redesign\signup.html:30
 #: .\apps\accounts\templates\accounts\signup.html:39
 msgid "Enter first name"
 msgstr "Введите имя"
 
 #: .\apps\accounts\templates\accounts\profile.html:45
-#: .\apps\accounts\templates\accounts\redesign\signup.html:45
+#: .\apps\accounts\templates\accounts\redesign\signup.html:37
 #: .\apps\accounts\templates\accounts\signup.html:42
 msgid "Last name"
 msgstr "Фамилия"
 
 #: .\apps\accounts\templates\accounts\profile.html:46
-#: .\apps\accounts\templates\accounts\redesign\signup.html:46
+#: .\apps\accounts\templates\accounts\redesign\signup.html:38
 #: .\apps\accounts\templates\accounts\signup.html:43
 msgid "Enter last name"
 msgstr "Введите фамилию"
 
 #: .\apps\accounts\templates\accounts\profile.html:49
-#: .\apps\accounts\templates\accounts\redesign\signup.html:53
+#: .\apps\accounts\templates\accounts\redesign\signup.html:45
 #: .\apps\accounts\templates\accounts\signup.html:46
 msgid "Middle name"
 msgstr "Отчество"
 
 #: .\apps\accounts\templates\accounts\profile.html:49
-#: .\apps\accounts\templates\accounts\redesign\signup.html:53
+#: .\apps\accounts\templates\accounts\redesign\signup.html:45
 #: .\apps\accounts\templates\accounts\signup.html:46
 msgid "if any"
 msgstr "если есть"
 
 #: .\apps\accounts\templates\accounts\profile.html:50
-#: .\apps\accounts\templates\accounts\redesign\signup.html:54
+#: .\apps\accounts\templates\accounts\redesign\signup.html:46
 #: .\apps\accounts\templates\accounts\signup.html:47
 msgid "Enter middle name"
 msgstr "Введите отчество"
@@ -332,7 +357,7 @@ msgid "Sign in"
 msgstr "Войти"
 
 #: .\apps\accounts\templates\accounts\redesign\signin.html:31
-#: .\apps\accounts\templates\accounts\redesign\signup.html:63
+#: .\apps\accounts\templates\accounts\redesign\signup.html:55
 #: .\apps\accounts\templates\accounts\signin.html:32
 #: .\apps\accounts\templates\accounts\signup.html:52
 msgid "Enter password"
@@ -346,7 +371,7 @@ msgstr "Забыли пароль?"
 #: .\apps\accounts\templates\accounts\redesign\signin.html:49
 #: .\apps\accounts\templates\accounts\redesign\signup.html:4
 #: .\apps\accounts\templates\accounts\redesign\signup.html:10
-#: .\apps\accounts\templates\accounts\redesign\signup.html:100
+#: .\apps\accounts\templates\accounts\redesign\signup.html:92
 #: .\apps\accounts\templates\accounts\signin.html:47
 #: .\apps\accounts\templates\accounts\signup.html:4
 #: .\apps\accounts\templates\accounts\signup.html:17
@@ -355,37 +380,37 @@ msgid "Sign up"
 msgstr "Зарегистрироваться"
 
 #: .\apps\accounts\templates\accounts\redesign\signin.html:55
-#: .\apps\accounts\templates\accounts\redesign\signup.html:110
+#: .\apps\accounts\templates\accounts\redesign\signup.html:102
 #: .\apps\accounts\templates\accounts\signin.html:51
 #: .\apps\accounts\templates\accounts\signup.html:86
 msgid "or"
 msgstr "или"
 
 #: .\apps\accounts\templates\accounts\redesign\signin.html:63
-#: .\apps\accounts\templates\accounts\redesign\signup.html:118
+#: .\apps\accounts\templates\accounts\redesign\signup.html:110
 #: .\apps\accounts\templates\accounts\signin.html:55
 #: .\apps\accounts\templates\accounts\signup.html:90
 msgid "Sign in with VK ID"
 msgstr "Войти с VK ID"
 
 #: .\apps\accounts\templates\accounts\redesign\signin.html:69
-#: .\apps\accounts\templates\accounts\redesign\signup.html:124
+#: .\apps\accounts\templates\accounts\redesign\signup.html:116
 #: .\apps\accounts\templates\accounts\signin.html:56
 #: .\apps\accounts\templates\accounts\signup.html:91
 msgid "Sign in with Google"
 msgstr "Войти с Google"
 
-#: .\apps\accounts\templates\accounts\redesign\signup.html:75
+#: .\apps\accounts\templates\accounts\redesign\signup.html:67
 #: .\apps\accounts\templates\accounts\signup.html:60
 msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
-#: .\apps\accounts\templates\accounts\redesign\signup.html:76
+#: .\apps\accounts\templates\accounts\redesign\signup.html:68
 #: .\apps\accounts\templates\accounts\signup.html:61
 msgid "Confirm password"
 msgstr "Подтвердите пароль"
 
-#: .\apps\accounts\templates\accounts\redesign\signup.html:88
+#: .\apps\accounts\templates\accounts\redesign\signup.html:80
 #, python-format
 msgid ""
 "I agree to the <a class=\"link text-sm\" href=\"%(terms_url)s\">Terms</a> "
@@ -395,7 +420,7 @@ msgstr ""
 "href=\"%(terms_url)s\">Пользовательским соглашением</a> и <a class=\"link "
 "text-sm\" href=\"%(privacy_url)s\">Политикой конфиденциальности</a>"
 
-#: .\apps\accounts\templates\accounts\redesign\signup.html:104
+#: .\apps\accounts\templates\accounts\redesign\signup.html:96
 #: .\apps\accounts\templates\accounts\signup.html:82
 msgid "Already have an account? Sign in"
 msgstr "Уже есть аккаунт? Войти"
@@ -605,7 +630,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:340
+#: .\apps\carts\apps.py:9 .\config\settings.py:384
 msgid "Carts"
 msgstr "Корзины"
 
@@ -727,7 +752,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:304
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:341
 msgid "Products"
 msgstr "Продукты"
 
@@ -905,7 +930,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:25
 #: .\apps\catalog\views\product_list_view.py:50
-#: .\apps\catalog\views\product_search_list_view.py:36 .\config\settings.py:300
+#: .\apps\catalog\views\product_search_list_view.py:36 .\config\settings.py:337
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:26
 #: .\templates\redesign\includes\_header.html:82
@@ -1238,14 +1263,6 @@ msgstr "Поиск по запросу"
 msgid "Home"
 msgstr "Главная"
 
-#: .\apps\core\models\base_model.py:8
-msgid "created date"
-msgstr "дата создания"
-
-#: .\apps\core\models\base_model.py:13
-msgid "updated date"
-msgstr "дата обновления"
-
 #: .\apps\orders\apps.py:9
 msgid "Orders"
 msgstr "Заказы"
@@ -1261,6 +1278,14 @@ msgstr "ФИО обязательно."
 #: .\apps\pages\forms\contact_form.py:12
 msgid "The full name must not be longer than 255 characters."
 msgstr "Длина ФИО не должна превышать 255 символов."
+
+#: .\apps\pages\forms\contact_form.py:29
+msgid "The phone number is required."
+msgstr "Номер телефона обязателен."
+
+#: .\apps\pages\forms\contact_form.py:31
+msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
+msgstr "Номер телефона должен быть в формате +7 (XXX) XXX-XX-XX."
 
 #: .\apps\pages\forms\contact_form.py:38
 msgid "The subject is required."
@@ -1471,7 +1496,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:358
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:402
 #: .\templates\includes\footer.html:19
 #: .\templates\redesign\includes\_footer.html:37
 msgid "Vacancies"
@@ -1649,35 +1674,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:278
+#: .\config\settings.py:315
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:311
+#: .\config\settings.py:348
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:320
+#: .\config\settings.py:357
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:324
+#: .\config\settings.py:361
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:329
+#: .\config\settings.py:373
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:336
+#: .\config\settings.py:380
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:345
+#: .\config\settings.py:389
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:354
+#: .\config\settings.py:398
 msgid "Recruitment"
 msgstr "Подбор персонала"
 

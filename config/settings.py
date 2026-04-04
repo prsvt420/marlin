@@ -48,6 +48,7 @@ INSTALLED_APPS: List[str] = [
     "compressor",
     "django_filters",
     "spurl",
+    "social_django",
     "apps.catalog",
     "apps.pages",
     "apps.vacancies",
@@ -139,6 +140,42 @@ AUTH_PASSWORD_VALIDATORS: List[Dict[str, str]] = [
 ]
 
 AUTH_USER_MODEL: str = "accounts.User"
+
+AUTHENTICATION_BACKENDS: List[str] = [
+    "social_core.backends.google.GoogleOAuth2",
+    "django.contrib.auth.backends.ModelBackend",
+]
+
+SOCIAL_AUTH_IMMUTABLE_USER_FIELDS: List[str] = [
+    "first_name",
+    "last_name",
+    "email",
+]
+SOCIAL_AUTH_JSONFIELD_ENABLED: bool = True
+SOCIAL_AUTH_URL_NAMESPACE: str = "accounts:social"
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY: str = config("GOOGLE_OAUTH2_CLIENT_ID")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET: str = config("GOOGLE_OAUTH2_CLIENT_SECRET")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE: List[str] = [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile",
+]
+SOCIAL_AUTH_PIPELINE: List[str] = [
+    "social_core.pipeline.social_auth.social_details",
+    "social_core.pipeline.social_auth.social_uid",
+    "social_core.pipeline.social_auth.auth_allowed",
+    "social_core.pipeline.social_auth.social_user",
+    "social_core.pipeline.user.get_username",
+    "apps.accounts.pipelines.associate_by_email",
+    "social_core.pipeline.user.create_user",
+    "apps.accounts.pipelines.activate_user",
+    "social_core.pipeline.social_auth.associate_user",
+    "social_core.pipeline.social_auth.load_extra_data",
+    "social_core.pipeline.user.user_details",
+    "apps.accounts.pipelines.send_signin_social_notification",
+]
+SOCIAL_AUTH_LOGIN_ERROR_URL: StrOrPromise = reverse_lazy(
+    viewname="accounts:signin"
+)
 
 TIME_ZONE: str = "Europe/Moscow"
 USE_I18N: bool = True
@@ -324,6 +361,13 @@ UNFOLD: Dict[str, Any] = {
                         "title": _("Users"),
                         "icon": "person",
                         "link": reverse_lazy("admin:accounts_user_changelist"),
+                    },
+                    {
+                        "title": _("Social accounts"),
+                        "icon": "passkey",
+                        "link": reverse_lazy(
+                            "admin:accounts_proxyusersocialauth_changelist"
+                        ),
                     },
                     {
                         "title": _("Groups"),

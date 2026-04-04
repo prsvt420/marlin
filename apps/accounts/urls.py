@@ -1,13 +1,18 @@
-from typing import List
+from typing import List, Union
 
-from django.urls import URLPattern, path
+from django.urls import URLPattern, URLResolver, include, path
 from django_ratelimit.decorators import ratelimit
 
 from apps.accounts import views
 
 app_name: str = "accounts"
 
-urlpatterns: List[URLPattern] = [
+urlpatterns: List[Union[URLResolver, URLPattern]] = [
+    path(
+        route="",
+        view=include(arg="social_django.urls", namespace="social"),
+        name="social",
+    ),
     path(
         route="signin/",
         view=ratelimit(key="ip", method="post", rate="5/m", block=True)(
