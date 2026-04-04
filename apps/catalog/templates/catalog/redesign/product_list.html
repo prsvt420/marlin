@@ -19,7 +19,10 @@
 					<li>
 						<a href="{{ product.get_absolute_url }}">
 							<article class="h-full flex flex-col gap-3 transition duration-300 ease-in-out hover:-translate-y-0.5">
-								<div class="bg-base-200 rounded-box aspect-square overflow-hidden flex items-center justify-center">
+								<div class="relative bg-base-200 rounded-box aspect-square overflow-hidden flex items-center justify-center">
+					        {% if product.discount %}
+									  <span class="absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount }}%</span>
+									{% endif %}
 									<img class="p-4 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 								</div>
 								<div class="flex flex-col">

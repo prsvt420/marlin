@@ -9,7 +9,10 @@
 			{% include "redesign/includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
 		</div>
 
-		<div class="flex gap-8 max-md:flex-col">
+		<div class="relative flex gap-8 max-md:flex-col">
+      {% if product.discount %}
+		    <span class="hidden max-md:inline absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount }}%</span>
+			{% endif %}
 			<div class="sticky top-[112px] flex-1 self-start min-w-0 flex gap-2 max-md:static max-md:flex-col-reverse">
 			  <div id="thumbs" class="flex flex-col gap-2 max-md:flex-row">
 			    {% for image in product.images.all %}
@@ -33,6 +36,9 @@
 			        </div>
 			      {% endif %}
 			    </div>
+	        {% if product.discount %}
+		        <span class="max-md:hidden absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount }}%</span>
+					{% endif %}
 			  </div>
 			</div>
 
