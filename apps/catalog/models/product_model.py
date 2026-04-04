@@ -22,6 +22,8 @@ class Product(BaseModel):  # type: ignore
         verbose_name=_("slug"),
     )
     composition = models.TextField(
+        max_length=255,
+        blank=True,
         verbose_name=_("composition"),
     )
     attributes = models.JSONField(

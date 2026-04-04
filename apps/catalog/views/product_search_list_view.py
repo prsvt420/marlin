@@ -16,7 +16,7 @@ from apps.catalog.selectors import ProductSelector
 class ProductSearchListView(FilterView):
     template_name = "catalog/redesign/product_search_list.html"
     context_object_name = "products"
-    paginate_by = 12
+    paginate_by = 20
     paginate_orphans = 4
     filterset_class = ProductSearchFilter
 

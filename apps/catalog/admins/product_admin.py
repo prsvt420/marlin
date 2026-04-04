@@ -23,6 +23,7 @@ class ProductAdmin(BaseModelAdmin, TabbedTranslationAdmin):
     list_display = (
         "name",
         "category",
+        "unit_type",
         "price",
         "discount",
         "final_price",
