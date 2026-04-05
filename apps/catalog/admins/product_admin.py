@@ -25,6 +25,7 @@ class ProductAdmin(BaseModelAdmin, TabbedTranslationAdmin):
         "category",
         "unit_type",
         "price",
+        "weight_step",
         "discount",
         "final_price",
         "stock",

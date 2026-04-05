@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-04 20:04+0800\n"
+"POT-Creation-Date: 2026-04-05 10:15+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -167,7 +167,7 @@ msgid "middle name"
 msgstr "отчество"
 
 #: .\apps\accounts\models\user_model.py:41
-#: .\apps\catalog\models\product_model.py:85
+#: .\apps\catalog\models\product_model.py:97
 msgctxt "masculine"
 msgid "active"
 msgstr "активный"
@@ -649,45 +649,45 @@ msgctxt "feminine"
 msgid "Abandoned"
 msgstr "Заброшена"
 
-#: .\apps\carts\models\cart_item_model.py:16
+#: .\apps\carts\models\cart_item_model.py:17
 #: .\apps\carts\models\cart_model.py:26
 msgid "cart"
 msgstr "корзина"
 
-#: .\apps\carts\models\cart_item_model.py:22
+#: .\apps\carts\models\cart_item_model.py:23
 #: .\apps\catalog\models\product_image_model.py:13
-#: .\apps\catalog\models\product_model.py:91
+#: .\apps\catalog\models\product_model.py:103
 #: .\apps\catalog\models\product_nutrition_model.py:12
 msgid "product"
 msgstr "продукт"
 
-#: .\apps\carts\models\cart_item_model.py:26
+#: .\apps\carts\models\cart_item_model.py:29
 msgid "quantity"
 msgstr "количество"
 
-#: .\apps\carts\models\cart_item_model.py:32
+#: .\apps\carts\models\cart_item_model.py:35
 msgid "price snapshot"
 msgstr "ценовой снимок"
 
-#: .\apps\carts\models\cart_item_model.py:42
+#: .\apps\carts\models\cart_item_model.py:45
 msgid "total price"
 msgstr "общая цена"
 
-#: .\apps\carts\models\cart_item_model.py:43
-#: .\apps\catalog\models\product_model.py:59
-#: .\apps\catalog\models\product_model.py:71
+#: .\apps\carts\models\cart_item_model.py:46
+#: .\apps\catalog\models\product_model.py:75
+#: .\apps\catalog\models\product_model.py:93
 msgid "Calculated by the system."
 msgstr "Рассчитывается системой."
 
-#: .\apps\carts\models\cart_item_model.py:49
+#: .\apps\carts\models\cart_item_model.py:52
 msgid "cart item"
 msgstr "элемент корзины"
 
-#: .\apps\carts\models\cart_item_model.py:50
+#: .\apps\carts\models\cart_item_model.py:53
 msgid "cart items"
 msgstr "элементы корзины"
 
-#: .\apps\carts\models\cart_item_model.py:56
+#: .\apps\carts\models\cart_item_model.py:59
 msgid "This product is already in your cart."
 msgstr "Этот продукт уже находится в корзине."
 
@@ -917,7 +917,7 @@ msgstr "Поиск по названию категории"
 msgid "Image preview"
 msgstr "Превью изображения"
 
-#: .\apps\catalog\admins\product_admin.py:50
+#: .\apps\catalog\admins\product_admin.py:51
 #: .\apps\catalog\admins\product_image_admin.py:14
 #: .\apps\catalog\admins\product_nutrition_admin.py:18
 msgid "Search by product name"
@@ -978,7 +978,7 @@ msgid "parent"
 msgstr "родитель"
 
 #: .\apps\catalog\models\category_model.py:22
-#: .\apps\catalog\models\product_model.py:14
+#: .\apps\catalog\models\product_model.py:16
 #: .\apps\vacancies\models\city_model.py:12
 #: .\apps\vacancies\models\professional_area_model.py:11
 #: .\apps\vacancies\models\region_model.py:11
@@ -986,12 +986,12 @@ msgid "name"
 msgstr "название"
 
 #: .\apps\catalog\models\category_model.py:27
-#: .\apps\catalog\models\product_model.py:22
+#: .\apps\catalog\models\product_model.py:24
 msgid "slug"
 msgstr "слаг"
 
 #: .\apps\catalog\models\category_model.py:31
-#: .\apps\catalog\models\product_model.py:17
+#: .\apps\catalog\models\product_model.py:19
 #: .\apps\vacancies\models\vacancy_model.py:20
 msgid "description"
 msgstr "описание"
@@ -1013,7 +1013,7 @@ msgid "active"
 msgstr "активная"
 
 #: .\apps\catalog\models\category_model.py:56
-#: .\apps\catalog\models\product_model.py:77
+#: .\apps\catalog\models\product_model.py:81
 msgid "category"
 msgstr "категория"
 
@@ -1029,39 +1029,47 @@ msgstr "изображение продукта"
 msgid "product images"
 msgstr "изображения продуктов"
 
-#: .\apps\catalog\models\product_model.py:27
+#: .\apps\catalog\models\product_model.py:29
 msgid "composition"
 msgstr "состав"
 
-#: .\apps\catalog\models\product_model.py:30
+#: .\apps\catalog\models\product_model.py:32
 msgid "attributes"
 msgstr "атрибуты"
 
-#: .\apps\catalog\models\product_model.py:36
+#: .\apps\catalog\models\product_model.py:38
 msgid "unit type"
 msgstr "тип единицы измерения"
 
-#: .\apps\catalog\models\product_model.py:41
+#: .\apps\catalog\models\product_model.py:45
+msgid "weight step"
+msgstr "шаг веса"
+
+#: .\apps\catalog\models\product_model.py:46
+msgid "Step for weighing products."
+msgstr "Шаг для взвешиваемых продуктов."
+
+#: .\apps\catalog\models\product_model.py:51
 msgid "price"
 msgstr "цена"
 
-#: .\apps\catalog\models\product_model.py:47
+#: .\apps\catalog\models\product_model.py:57
 msgid "discount"
 msgstr "скидка"
 
-#: .\apps\catalog\models\product_model.py:58
-msgid "final price"
-msgstr "финальная цена"
-
-#: .\apps\catalog\models\product_model.py:70
-msgid "availability"
-msgstr "доступность"
-
-#: .\apps\catalog\models\product_model.py:81
+#: .\apps\catalog\models\product_model.py:63
 msgid "stock"
 msgstr "наличие"
 
+#: .\apps\catalog\models\product_model.py:74
+msgid "final price"
+msgstr "финальная цена"
+
 #: .\apps\catalog\models\product_model.py:92
+msgid "availability"
+msgstr "доступность"
+
+#: .\apps\catalog\models\product_model.py:104
 msgid "products"
 msgstr "продукты"
 

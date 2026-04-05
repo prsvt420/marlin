@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.urls import reverse
@@ -35,6 +37,14 @@ class Product(BaseModel):  # type: ignore
         default=UnitType.PIECE,
         verbose_name=_("unit type"),
     )
+    weight_step = models.DecimalField(
+        max_digits=4,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        verbose_name=_("weight step"),
+        help_text=_("Step for weighing products."),
+    )
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
@@ -45,6 +55,12 @@ class Product(BaseModel):  # type: ignore
         decimal_places=2,
         default=0,
         verbose_name=_("discount"),
+    )
+    stock = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        default=Decimal(value="0.00"),
+        verbose_name=_("stock"),
     )
     final_price = models.GeneratedField(
         expression=models.ExpressionWrapper(
@@ -58,6 +74,12 @@ class Product(BaseModel):  # type: ignore
         verbose_name=_("final price"),
         help_text=_("Calculated by the system."),
     )
+    category = models.ForeignKey(
+        to="Category",
+        on_delete=models.CASCADE,
+        related_name="products",
+        verbose_name=_("category"),
+    )
     is_available = models.GeneratedField(
         expression=models.Case(
             models.When(is_active=True, stock__gt=0, then=True),
@@ -69,16 +91,6 @@ class Product(BaseModel):  # type: ignore
         editable=False,
         verbose_name=_("availability"),
         help_text=_("Calculated by the system."),
-    )
-    category = models.ForeignKey(
-        to="Category",
-        on_delete=models.CASCADE,
-        related_name="products",
-        verbose_name=_("category"),
-    )
-    stock = models.PositiveIntegerField(
-        default=0,
-        verbose_name=_("stock"),
     )
     is_active = models.BooleanField(
         default=True,

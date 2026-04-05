@@ -1,3 +1,4 @@
+from decimal import Decimal
 from typing import Optional
 
 from django.db import IntegrityError, transaction
@@ -67,21 +68,30 @@ class CartService:
         if product is None:
             raise ProductUnavailableError()
 
-        if product.stock < quantity:
+        real_quantity: Decimal = (
+            Decimal(value=quantity) * product.weight_step
+            if product.weight_step is not None
+            else Decimal(value=quantity)
+        )
+
+        if real_quantity < (product.weight_step or Decimal(value="1")):
+            raise InvalidCartItemQuantityError()
+
+        if product.stock < real_quantity:
             raise InsufficientStockError()
 
         try:
             return CartItem.objects.create(
                 cart=cart,
                 product=product,
-                quantity=quantity,
+                quantity=real_quantity,
             )
         except IntegrityError as error:
             raise CartItemAlreadyExistsError() from error
 
     @transaction.atomic
     def adjust_cart_item_quantity(
-        self, *, cart: Cart, cart_item_pk: int, delta: int
+        self, *, cart: Cart, cart_item_pk: int, delta: int = 1
     ) -> CartItem:
         cart_item: Optional[CartItem] = CartSelector().get_cart_item(
             cart=cart,
@@ -91,11 +101,6 @@ class CartService:
         if not cart_item:
             raise CartItemNotFoundError()
 
-        new_quantity: int = cart_item.quantity + delta
-
-        if new_quantity <= 0:
-            raise InvalidCartItemQuantityError()
-
         product: Optional[Product] = ProductSelector().get_product_for_update(
             product_pk=cart_item.product.pk,
         )
@@ -103,7 +108,18 @@ class CartService:
         if product is None:
             raise ProductUnavailableError()
 
-        if delta > 0 and product.stock < new_quantity:
+        real_delta: Decimal = (
+            Decimal(value=delta) * product.weight_step
+            if product.weight_step is not None
+            else Decimal(value=delta)
+        )
+
+        new_quantity: Decimal = cart_item.quantity + real_delta
+
+        if new_quantity < (product.weight_step or Decimal(value="1")):
+            raise InvalidCartItemQuantityError()
+
+        if product.stock < new_quantity:
             raise InsufficientStockError()
 
         cart_item.quantity = new_quantity
@@ -140,7 +156,15 @@ class CartService:
                 continue
 
             if cart_item.quantity > product.stock:
-                cart_item.quantity = product.stock
+                if product.weight_step:
+                    weight_steps: int = int(
+                        product.stock / product.weight_step
+                    )
+                    cart_item.quantity = (
+                        Decimal(value=weight_steps) * product.weight_step
+                    )
+                else:
+                    cart_item.quantity = product.stock
                 cart_item.save(update_fields=["quantity"])
                 was_modified = True
 

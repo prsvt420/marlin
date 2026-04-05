@@ -1,3 +1,4 @@
+from decimal import Decimal
 from typing import Any
 
 from django.db import models
@@ -21,8 +22,10 @@ class CartItem(BaseModel):  # type: ignore
         related_name="cart_items",
         verbose_name=_("product"),
     )
-    quantity = models.PositiveIntegerField(
-        default=1,
+    quantity = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        default=Decimal(value="1.00"),
         verbose_name=_("quantity"),
     )
     price_snapshot = models.DecimalField(

@@ -35,7 +35,7 @@ def associate_by_email(
         UserService().reset_password_to_unusable(user=existing_user)
         messages.info(
             request,
-            message=_(
+            _(
                 "Your account was linked to Google. "
                 "Old password has been reset."
             ),
