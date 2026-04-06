@@ -41,6 +41,7 @@ class ProductAdmin(BaseModelAdmin, TabbedTranslationAdmin):
     prepopulated_fields = {
         "slug": ("name",),
     }
+    list_editable = ("unit_type", "price", "stock", "weight_step")
     autocomplete_fields = ("category",)
     list_filter = (
         "is_active",

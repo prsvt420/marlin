@@ -5,7 +5,6 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView
 
-from apps.carts.selectors import CartSelector
 from apps.catalog.models import Product
 from apps.catalog.selectors import CategorySelector, ProductSelector
 
@@ -39,12 +38,4 @@ class ProductDetailView(DetailView):
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context: Dict[str, Any] = super().get_context_data(**kwargs)
         context["breadcrumbs"] = self.breadcrumbs
-
-        if self.request.user.is_authenticated:
-            context[
-                "cart_product_pks"
-            ] = CartSelector().get_user_active_cart_product_pks(
-                user=self.request.user  # type: ignore
-            )
-
         return context

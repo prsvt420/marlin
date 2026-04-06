@@ -1,5 +1,5 @@
 {% extends "redesign/base.html" %}
-{% load static i18n %}
+{% load static i18n get_item can_increment_cart_item_quantity can_decrement_cart_item_quantity %}
 
 {% block title %}{{ product.name }}{% endblock %}
 
@@ -10,9 +10,6 @@
 		</div>
 
 		<div class="relative flex gap-8 max-md:flex-col">
-      {% if product.discount %}
-		    <span class="hidden max-md:inline absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount }}%</span>
-			{% endif %}
 			<div class="sticky top-[112px] flex-1 self-start min-w-0 flex gap-2 max-md:static max-md:flex-col-reverse">
 			  <div id="thumbs" class="flex flex-col gap-2 max-md:flex-row">
 			    {% for image in product.images.all %}
@@ -37,8 +34,11 @@
 			      {% endif %}
 			    </div>
 	        {% if product.discount %}
-		        <span class="max-md:hidden absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount }}%</span>
-					{% endif %}
+		        <span class="max-md:hidden absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+				    <span class="hidden max-md:inline absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+				  {% endif %}
+	        <span class="max-md:hidden absolute bottom-3 left-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">{% trans "In stock" %} {{ product.stock|floatformat:"u" }} {{ product.get_unit_type_display }}</span>
+          <span class="hidden max-md:inline absolute bottom-3 left-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">{% trans "In stock" %} {{ product.stock|floatformat:"u" }} {{ product.get_unit_type_display }}</span>
 			  </div>
 			</div>
 
@@ -47,9 +47,10 @@
 					<div class="flex flex-col">
 						<p class="inline-flex items-center gap-1 text-sm font-bold">
 							<svg class="size-4 fill-laser-lemon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
-						  <span class="text-base-content">4,74</span> <span class="text-base-content/60">(1428 оценок)</span>
+						  <span class="text-base-content">4.74</span> <span class="text-base-content/60">(1428 оценок)</span>
 						</p>
-						<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ product.name }}</h1>
+						<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ product.name }}{% if product.unit_type in "kg l" %}, <span class="text-base-content/60"> {{ product.weight_step|floatformat:"u" }} {{ product.get_unit_type_display }}{% endif %}</span></h1>
+		        <p class="font-bold text-base-content/60 text-base">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
 					</div>
 
 					{% if product.discount %}
@@ -62,16 +63,48 @@
 					{% endif %}
 
 			    {% if product.stock %}
-	          {% if not product.pk in cart_product_pks %}
-	            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
-	              {% csrf_token %}
-	              <button class="button button--primary w-[200px] max-md:w-full">{% trans "Add to Cart" %}</button>
-	            </form>
-	          {% else %}
-	            <button class="button button--disabled w-[200px] max-md:w-full" disabled>{% trans "In cart" %}</button>
-	          {% endif %}
+						{% with cart_item=cart_items_map|get_item:product.id %}
+		          {% if not cart_item %}
+		            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
+		              {% csrf_token %}
+		              <button class="button button--primary w-[200px] max-md:w-full">{% trans "Add to Cart" %}</button>
+		            </form>
+		          {% else %}
+								<div class="flex items-center h-12 p-1 border border-primary rounded-field justify-between w-[200px] max-md:w-full">
+									{% can_decrement_cart_item_quantity cart_item=cart_item as decrement_allowed_cart_item_quantity %}
+									{% if decrement_allowed_cart_item_quantity %}
+										<form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+											{% csrf_token %}
+											<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="decrement">
+												<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+											</button>
+										</form>
+									{% else %}
+										<button class="flex items-center justify-center button button--disabled p-2 size-10 button--primary" type="submit" name="action" value="decrement">
+											<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+										</button>
+									{% endif %}
+
+									<p class="text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"u" }} {{ product.get_unit_type_display }}</p>
+
+									{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
+                  {% if increment_allowed_cart_item_quantity %}
+	                  <form action="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+	                    {% csrf_token %}
+											<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="increment">
+												<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+											</button>
+										</form>
+									{% else %}
+										<button class="flex items-center justify-center button button--disabled p-2 size-10 button--primary" type="submit" name="action" value="increment">
+		                  <svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+										</button>
+									{% endif %}
+								</div>
+		          {% endif %}
+						{% endwith %}
 		      {% else %}
-		        <button class="button button--disabled w-[250px] max-md:w-full" disabled>{% trans "Not available" %}</button>
+		        <button class="button button--disabled w-[200px] max-md:w-full" disabled>{% trans "Not available" %}</button>
 		      {% endif %}
 				</div>
 

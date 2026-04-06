@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-05 10:15+0800\n"
+"POT-Creation-Date: 2026-04-06 20:16+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -115,7 +115,7 @@ msgstr "Длина отчества не должна превышать 255 с�
 msgid "Social account"
 msgstr "Социальный аккаунт"
 
-#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:366
+#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:367
 msgid "Social accounts"
 msgstr "Социальные аккаунты"
 
@@ -630,7 +630,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:384
+#: .\apps\carts\apps.py:9 .\config\settings.py:385
 msgid "Carts"
 msgstr "Корзины"
 
@@ -752,7 +752,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:341
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:342
 msgid "Products"
 msgstr "Продукты"
 
@@ -917,7 +917,7 @@ msgstr "Поиск по названию категории"
 msgid "Image preview"
 msgstr "Превью изображения"
 
-#: .\apps\catalog\admins\product_admin.py:51
+#: .\apps\catalog\admins\product_admin.py:52
 #: .\apps\catalog\admins\product_image_admin.py:14
 #: .\apps\catalog\admins\product_nutrition_admin.py:18
 msgid "Search by product name"
@@ -928,9 +928,9 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\templates\catalog\redesign\category_list.html:4
 #: .\apps\catalog\templates\catalog\redesign\category_list.html:10
 #: .\apps\catalog\views\category_list_view.py:17
-#: .\apps\catalog\views\product_detail_view.py:25
-#: .\apps\catalog\views\product_list_view.py:50
-#: .\apps\catalog\views\product_search_list_view.py:36 .\config\settings.py:337
+#: .\apps\catalog\views\product_detail_view.py:24
+#: .\apps\catalog\views\product_list_view.py:49
+#: .\apps\catalog\views\product_search_list_view.py:35 .\config\settings.py:338
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:26
 #: .\templates\redesign\includes\_header.html:82
@@ -1075,7 +1075,7 @@ msgstr "продукты"
 
 #: .\apps\catalog\models\product_nutrition_model.py:18
 #: .\apps\catalog\templates\catalog\product_detail.html:111
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:85
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:118
 msgid "calories"
 msgstr "калории"
 
@@ -1086,13 +1086,13 @@ msgstr "белки"
 
 #: .\apps\catalog\models\product_nutrition_model.py:30
 #: .\apps\catalog\templates\catalog\product_detail.html:103
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:83
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:116
 msgid "fats"
 msgstr "жиры"
 
 #: .\apps\catalog\models\product_nutrition_model.py:36
 #: .\apps\catalog\templates\catalog\product_detail.html:107
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:84
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:117
 msgid "carbs"
 msgstr "углеводы"
 
@@ -1156,30 +1156,30 @@ msgid "%(stock)s left"
 msgstr "осталось %(stock)s"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:48
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:53
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:34
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:34
 msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:64
 #: .\apps\catalog\templates\catalog\product_list.html:58
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:68
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:49
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:49
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:70
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:51
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:51
 msgid "Add to Cart"
 msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:67
 #: .\apps\catalog\templates\catalog\product_list.html:61
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:71
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:52
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:52
 msgid "In cart"
 msgstr "В корзине"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:70
 #: .\apps\catalog\templates\catalog\product_list.html:64
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:74
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:55
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:55
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:107
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:88
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:88
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1188,7 +1188,7 @@ msgid "Category"
 msgstr "Категория"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:79
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:98
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:131
 msgid "Description"
 msgstr "Описание"
 
@@ -1201,12 +1201,12 @@ msgid "Hide"
 msgstr "Скрыть"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:89
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:92
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:125
 msgid "Composition"
 msgstr "Состав"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:93
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:80
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:113
 msgid "Nutritional value"
 msgstr "Пищевая ценность"
 
@@ -1216,7 +1216,7 @@ msgid "No information available"
 msgstr "Информация отсутствует"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:119
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:104
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:137
 msgid "Characteristics"
 msgstr "Характеристики"
 
@@ -1234,17 +1234,22 @@ msgstr "По запросу ничего не найдено"
 msgid "No products found in the catalog"
 msgstr "Продукты в каталоге не найдены"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:82
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:40
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:41
+msgid "In stock"
+msgstr "В наличии"
+
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:115
 msgid "Proteins"
 msgstr "Белки"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:82
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:83
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:84
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:115
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:116
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:117
 msgid "g"
 msgstr "г"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:85
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:118
 msgid "kcal"
 msgstr "ккал"
 
@@ -1257,13 +1262,13 @@ msgstr[0] "%(count_products)s продукт"
 msgstr[1] "%(count_products)s продукта"
 msgstr[2] "%(count_products)s продуктов"
 
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:64
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:64
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:97
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:97
 msgid "No available products yet"
 msgstr "Пока нет доступных продуктов"
 
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:65
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:65
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:98
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:98
 #: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
 #: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
 msgid "Return to catalog"
@@ -1271,13 +1276,13 @@ msgstr "Вернуться в каталог"
 
 #: .\apps\catalog\templates\catalog\redesign\product_search_list.html:4
 #: .\apps\catalog\templates\catalog\redesign\product_search_list.html:11
-#: .\apps\catalog\views\product_search_list_view.py:40
+#: .\apps\catalog\views\product_search_list_view.py:39
 msgid "Search by query"
 msgstr "Поиск по запросу"
 
 #: .\apps\catalog\views\category_list_view.py:15
-#: .\apps\catalog\views\product_list_view.py:48
-#: .\apps\catalog\views\product_search_list_view.py:34
+#: .\apps\catalog\views\product_list_view.py:47
+#: .\apps\catalog\views\product_search_list_view.py:33
 #: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
 #: .\apps\pages\views\terms_view.py:10 .\templates\includes\header.html:4
 msgid "Home"
@@ -1516,7 +1521,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:402
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:403
 #: .\templates\includes\footer.html:19
 #: .\templates\redesign\includes\_footer.html:37
 msgid "Vacancies"
@@ -1694,35 +1699,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:315
+#: .\config\settings.py:316
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:348
+#: .\config\settings.py:349
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:357
+#: .\config\settings.py:358
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:361
+#: .\config\settings.py:362
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:373
+#: .\config\settings.py:374
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:380
+#: .\config\settings.py:381
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:389
+#: .\config\settings.py:390
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:398
+#: .\config\settings.py:399
 msgid "Recruitment"
 msgstr "Подбор персонала"
 

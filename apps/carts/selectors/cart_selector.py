@@ -1,5 +1,5 @@
 from decimal import ROUND_HALF_UP, Decimal
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional
 
 from django.db.models import Prefetch, Q, QuerySet, Sum
 
@@ -41,12 +41,11 @@ class CartSelector:
             .first()
         )
 
-    def get_user_active_cart_product_pks(self, *, user: User) -> Set[int]:
-        return set(
-            CartItem.objects.filter(
-                cart__user=user, cart__cart_status=CartStatus.ACTIVE
-            ).values_list("product_id", flat=True)
-        )
+    def get_cart_items_map(self, *, cart: Cart) -> Dict[int, CartItem]:
+        return {
+            cart_item.product_id: cart_item
+            for cart_item in cart.cart_items.all()
+        }
 
     def get_cart_products_total_price(self, *, cart: Cart) -> Decimal:
         cart_items: QuerySet[CartItem] = self.get_cart_items(cart=cart).filter(

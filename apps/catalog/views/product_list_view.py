@@ -6,7 +6,6 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django_filters.views import FilterView
 
-from apps.carts.selectors import CartSelector
 from apps.catalog.filters import ProductFilter
 from apps.catalog.models import Category, Product
 from apps.catalog.selectors import CategorySelector, ProductSelector
@@ -55,12 +54,4 @@ class ProductListView(FilterView):
                 "url": context["category"].get_absolute_url(),
             },
         ]
-
-        if self.request.user.is_authenticated:
-            context[
-                "cart_product_pks"
-            ] = CartSelector().get_user_active_cart_product_pks(
-                user=self.request.user  # type: ignore
-            )
-
         return context

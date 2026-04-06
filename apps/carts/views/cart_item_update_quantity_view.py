@@ -91,4 +91,4 @@ class CartItemUpdateQuantityView(LoginRequiredMixin, View):
                     "successfully updated. The price has been updated."
                 ),
             )
-        return redirect(to="carts:detail")
+        return redirect(to=request.META.get("HTTP_REFERER", "pages:home"))
