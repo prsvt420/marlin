@@ -66,7 +66,7 @@
 													</button>
 												{% endif %}
 
-												<p class="text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"u" }} {{ product.get_unit_type_display }}</p>
+												<p class="text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
 
 												{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
 			                  {% if increment_allowed_cart_item_quantity %}
