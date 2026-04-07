@@ -61,9 +61,12 @@
 														</button>
 													</form>
 												{% else %}
-													<button class="flex items-center justify-center button button--disabled p-2 size-10 button--primary" type="submit" name="action" value="decrement">
-														<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-													</button>
+													<form action="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" method="post" novalidate>
+														{% csrf_token %}
+														<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit">
+															<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+														</button>
+													</form>
 												{% endif %}
 
 												<p class="text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
