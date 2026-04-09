@@ -3,6 +3,7 @@ from typing import Any, Dict, Optional
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
+from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView
 
@@ -12,7 +13,7 @@ from apps.carts.services import CartService
 
 
 class CartDetailView(LoginRequiredMixin, DetailView):
-    template_name = "carts/cart_detail.html"
+    template_name = "carts/redesign/cart_detail.html"
     context_object_name = "cart"
 
     def get_object(self, queryset: Optional[QuerySet[Cart]] = None) -> Cart:
@@ -51,4 +52,11 @@ class CartDetailView(LoginRequiredMixin, DetailView):
         context["unavailable_cart_items"] = (
             CartSelector().get_unavailable_cart_items(cart=self.object)
         )
+        context["breadcrumbs"] = [
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
+            {
+                "name": _("Cart"),
+                "url": reverse_lazy(viewname="carts:detail"),
+            },
+        ]
         return context
