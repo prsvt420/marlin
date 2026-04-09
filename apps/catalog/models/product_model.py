@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
+from django.db.models.functions import Floor
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
@@ -64,8 +65,14 @@ class Product(BaseModel):  # type: ignore
     )
     final_price = models.GeneratedField(
         expression=models.ExpressionWrapper(
-            expression=models.F("price")
-            * (models.Value(1) - models.F("discount") / models.Value(100.0)),
+            expression=Floor(
+                models.F(name="price")
+                * (
+                    models.Value(value=1)
+                    - models.F(name="discount") / models.Value(value=100.0)
+                )
+            )
+            + models.Value(value=Decimal(value="0.99")),
             output_field=models.DecimalField(max_digits=10, decimal_places=2),
         ),
         output_field=models.DecimalField(max_digits=10, decimal_places=2),
