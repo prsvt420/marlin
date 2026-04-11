@@ -10,3 +10,6 @@ class UserSelector:
 
     def get_user_by_email(self, *, email: str) -> Optional[User]:
         return User.objects.filter(email=email).first()
+
+    def has_usable_password(self, *, user: User) -> bool:
+        return user.has_usable_password()

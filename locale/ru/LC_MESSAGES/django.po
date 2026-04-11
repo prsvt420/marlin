@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
-"Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-11 15:40+0800\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-11 15:44+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -585,7 +585,15 @@ msgstr "Ссылка для сброса пароля была отправле�
 msgid "Please pass the captcha and try again."
 msgstr "Пожалуйста, пройдите капчу и попробуйте снова."
 
-#: .\apps\accounts\views\password_reset_view.py:41
+#: .\apps\accounts\views\password_reset_view.py:49
+msgid ""
+"This account uses social sign in. Please sign in with social account and set "
+"a password."
+msgstr ""
+"Для входа в эту учетную запись используются социальные сети. Пожалуйста, "
+"войдите, используя аккаунт социальной сети, и установите пароль."
+
+#: .\apps\accounts\views\password_reset_view.py:60
 #: .\apps\accounts\views\profile_view.py:30
 #: .\apps\accounts\views\signin_view.py:32
 #: .\apps\accounts\views\signup_view.py:53
