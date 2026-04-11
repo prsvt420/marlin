@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-09 15:52+0800\n"
+"Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
+"POT-Creation-Date: 2026-04-11 15:40+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -573,12 +573,12 @@ msgstr ""
 msgid "The password reset link is invalid or expired."
 msgstr "Ссылка для сброса пароля недействительна или устарела."
 
-#: .\apps\accounts\views\password_reset_view.py:18
+#: .\apps\accounts\views\password_reset_view.py:23
 msgid "A password reset link has been sent to your email."
 msgstr "Ссылка для сброса пароля была отправлена на вашу электронную почту."
 
-#: .\apps\accounts\views\password_reset_view.py:31
-#: .\apps\accounts\views\password_reset_view.py:33
+#: .\apps\accounts\views\password_reset_view.py:36
+#: .\apps\accounts\views\password_reset_view.py:38
 #: .\apps\accounts\views\signup_view.py:33
 #: .\apps\accounts\views\signup_view.py:35
 #: .\apps\pages\views\contact_view.py:27
@@ -819,8 +819,8 @@ msgstr[2] ""
 "sm\">%(count_cart_items)s продуктов</span>"
 
 #: .\apps\carts\templates\carts\redesign\cart_detail.html:147
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:101
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:101
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:103
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:103
 #: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
 #: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
 msgid "Return to catalog"
@@ -1215,16 +1215,17 @@ msgstr "осталось %(stock)s"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:48
 #: .\apps\catalog\templates\catalog\redesign\product_detail.html:53
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:34
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:34
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:180
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:36
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:36
 msgid "Price per 1"
 msgstr "Цена за 1"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:64
 #: .\apps\catalog\templates\catalog\product_list.html:58
 #: .\apps\catalog\templates\catalog\redesign\product_detail.html:70
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:51
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:51
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:53
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:53
 msgid "Add to Cart"
 msgstr "В корзину"
 
@@ -1236,8 +1237,8 @@ msgstr "В корзине"
 #: .\apps\catalog\templates\catalog\product_detail.html:70
 #: .\apps\catalog\templates\catalog\product_list.html:64
 #: .\apps\catalog\templates\catalog\redesign\product_detail.html:110
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:91
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:91
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:93
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:93
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1311,8 +1312,12 @@ msgstr "г"
 msgid "kcal"
 msgstr "ккал"
 
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:12
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:12
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:160
+msgid "Вам также может понравиться"
+msgstr ""
+
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:13
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:13
 #, python-format
 msgid "%(count_products)s product"
 msgid_plural "%(count_products)s products"
@@ -1320,8 +1325,8 @@ msgstr[0] "%(count_products)s продукт"
 msgstr[1] "%(count_products)s продукта"
 msgstr[2] "%(count_products)s продуктов"
 
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:100
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:100
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:102
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:102
 msgid "No available products yet"
 msgstr "Пока нет доступных продуктов"
 

@@ -58,3 +58,12 @@ class ProductSelector:
             .select_for_update(of=("self",))
             .first()
         )
+
+    def get_similar_products(
+        self, *, product: Product, limit: int = 12
+    ) -> QuerySet[Product]:
+        return (
+            self.get_products(category_slug=product.category.slug)
+            .exclude(pk=product.pk)
+            .order_by("?")[:limit]
+        )

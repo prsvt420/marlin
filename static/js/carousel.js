@@ -21,3 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   embla.on("select", updateThumbs)
   updateThumbs()
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const similarNode = document.getElementById("similar-embla")
+  if (!similarNode) return
+
+  EmblaCarousel(similarNode, { dragFree: true, loop: false, align: "start" })
+})
