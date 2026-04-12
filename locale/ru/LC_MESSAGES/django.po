@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-12 16:25+0800\n"
+"POT-Creation-Date: 2026-04-12 20:13+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -1223,7 +1223,7 @@ msgstr "осталось %(stock)s"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:48
 #: .\apps\catalog\templates\catalog\redesign\product_detail.html:53
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:180
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:181
 #: .\apps\catalog\templates\catalog\redesign\product_list.html:36
 #: .\apps\catalog\templates\catalog\redesign\product_search_list.html:36
 msgid "Price per 1"
@@ -1283,7 +1283,7 @@ msgid "No information available"
 msgstr "Информация отсутствует"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:119
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:140
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:141
 msgid "Characteristics"
 msgstr "Характеристики"
 
@@ -1320,9 +1320,13 @@ msgstr "г"
 msgid "kcal"
 msgstr "ккал"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:160
-msgid "Вам также может понравиться"
-msgstr ""
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:136
+msgid "Show in full"
+msgstr "Показать полностью"
+
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:161
+msgid "You may also like"
+msgstr "Вам также может понравиться"
 
 #: .\apps\catalog\templates\catalog\redesign\product_list.html:13
 #: .\apps\catalog\templates\catalog\redesign\product_search_list.html:13
