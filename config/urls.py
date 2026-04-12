@@ -31,7 +31,11 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
                 "health_check.contrib.psutil.CPU",
                 (
                     "health_check.contrib.redis.Redis",
-                    {"client": RedisClient.from_url("redis://localhost:6379")},
+                    {
+                        "client": RedisClient.from_url(
+                            url="redis://localhost:6379"
+                        )
+                    },
                 ),
             ],
         ),
@@ -63,7 +67,11 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
     ),
     path(
         route="orders/",
-        view=include("apps.orders.urls", namespace="orders"),
+        view=include(arg="apps.orders.urls", namespace="orders"),
+    ),
+    path(
+        route="reviews/",
+        view=include(arg="apps.reviews.urls", namespace="reviews"),
     ),
 ]
 
