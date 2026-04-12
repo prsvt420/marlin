@@ -48,6 +48,7 @@ INSTALLED_APPS: List[str] = [
     "compressor",
     "django_filters",
     "spurl",
+    "django_htmx",
     "social_django",
     "apps.core",
     "apps.carts",
@@ -72,6 +73,7 @@ MIDDLEWARE: List[str] = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "csp.middleware.CSPMiddleware",
     "django_user_agents.middleware.UserAgentMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
 ]
 
 ROOT_URLCONF: str = "config.urls"

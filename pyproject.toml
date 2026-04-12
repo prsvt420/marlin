@@ -33,6 +33,7 @@ dependencies = [
     "requests>=2.32.5",
     "django-ratelimit>=4.1.0",
     "social-auth-app-django>=5.7.0",
+    "django-htmx>=1.27.0",
 ]
 
 [tool.black]

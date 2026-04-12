@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-12 20:13+0800\n"
+"POT-Creation-Date: 2026-04-13 01:15+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -115,7 +115,7 @@ msgstr "Длина отчества не должна превышать 255 с�
 msgid "Social account"
 msgstr "Социальный аккаунт"
 
-#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:368
+#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:370
 msgid "Social accounts"
 msgstr "Социальные аккаунты"
 
@@ -638,7 +638,7 @@ msgstr "Общая цена"
 msgid "Total quantity"
 msgstr "Общее количество"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:386
+#: .\apps\carts\apps.py:9 .\config\settings.py:388
 msgid "Carts"
 msgstr "Корзины"
 
@@ -764,7 +764,7 @@ msgstr "Очистить"
 msgid "Total"
 msgstr "Итого"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:343
+#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:345
 msgid "Products"
 msgstr "Продукты"
 
@@ -996,7 +996,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:24
 #: .\apps\catalog\views\product_list_view.py:49
-#: .\apps\catalog\views\product_search_list_view.py:35 .\config\settings.py:339
+#: .\apps\catalog\views\product_search_list_view.py:35 .\config\settings.py:341
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:26
 #: .\templates\redesign\includes\_header.html:90
@@ -1585,7 +1585,7 @@ msgstr "Зарплата"
 
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:404
+#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:406
 #: .\templates\includes\footer.html:19
 #: .\templates\redesign\includes\_footer.html:37
 msgid "Vacancies"
@@ -1763,35 +1763,35 @@ msgstr "Подробнее"
 msgid "There are currently no vacancies"
 msgstr "На данный момент вакансий нет"
 
-#: .\config\settings.py:317
+#: .\config\settings.py:319
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:350
+#: .\config\settings.py:352
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:359
+#: .\config\settings.py:361
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:363
+#: .\config\settings.py:365
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:375
+#: .\config\settings.py:377
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:382
+#: .\config\settings.py:384
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:391
+#: .\config\settings.py:393
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
-#: .\config\settings.py:400
+#: .\config\settings.py:402
 msgid "Recruitment"
 msgstr "Подбор персонала"
 

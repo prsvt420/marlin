@@ -16,7 +16,7 @@
 		{% endcompress %}
 		<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 	</head>
-	<body class="flex flex-col font-body bg-base-100 font-medium relative min-h-screen min-h-[100dvh]">
+	<body class="flex flex-col font-body bg-base-100 font-medium relative min-h-screen min-h-[100dvh]" hx-headers="{'x-csrftoken': '{{ csrf_token }}'}">
 		{% include "redesign/includes/_header.html" %}
 		{% include "redesign/includes/_messages.html" %}
 		<main class="flex flex-col flex-auto {% block mix %}{% endblock %}">
@@ -36,6 +36,7 @@
 		</div>
 
 		<script src="{% static 'js/scroll-top.js' %}"></script>
+		<script src="{% static 'js/htmx.min.js' %}"></script>
 		{% block js %}{% endblock %}
 	</body>
 </html>
