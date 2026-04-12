@@ -24,7 +24,14 @@
 							{% for subcategory in parent_category.subcategories.all %}
 								<li>
 									<a href="{{ subcategory.get_absolute_url }}">
-										<article class="bg-base-200 transition duration-300 ease-in-out hover:-translate-y-0.5 p-3 rounded-box relative overflow-hidden size-30">
+										<article class="{% if forloop.parentloop.counter0|divisibleby:7 %}bg-lime-200
+																	  {% elif forloop.parentloop.counter0|add:'-1'|divisibleby:7 %}bg-yellow-200
+																	  {% elif forloop.parentloop.counter0|add:'-2'|divisibleby:7 %}bg-red-200
+																	  {% elif forloop.parentloop.counter0|add:'-3'|divisibleby:7 %}bg-green-200
+																	  {% elif forloop.parentloop.counter0|add:'-4'|divisibleby:7 %}bg-purple-200
+																	  {% elif forloop.parentloop.counter0|add:'-5'|divisibleby:7 %}bg-pink-200
+																	  {% else %}bg-blue-200
+                                    {% endif %} transition duration-300 ease-in-out hover:-translate-y-0.5 p-3 rounded-box relative overflow-hidden size-30">
 		                  <img class="absolute inset-0 size-full object-cover" src="{% if subcategory.image %}{{ subcategory.image.url }}{% else %}{% static 'catalog/img/default-category-image.webp' %}{% endif %}" alt="" draggable="false">
 		                  <h3 class="relative hyphens-auto text-sm text-base-content">{{ subcategory.name }}</h3>
 										</article>
