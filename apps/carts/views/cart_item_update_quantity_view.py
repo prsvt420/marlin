@@ -3,7 +3,7 @@ from typing import Dict, Optional
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
@@ -13,7 +13,8 @@ from apps.carts.exceptions import (
     InvalidCartItemQuantityError,
     ProductUnavailableError,
 )
-from apps.carts.models import Cart
+from apps.carts.models import Cart, CartItem
+from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
 
 
@@ -91,4 +92,19 @@ class CartItemUpdateQuantityView(LoginRequiredMixin, View):
                     "successfully updated. The price has been updated."
                 ),
             )
+
+        if request.htmx:  # type: ignore
+            cart_item: Optional[CartItem] = CartSelector().get_cart_item(
+                cart=cart, cart_item_pk=cart_item_pk
+            )
+            return render(
+                request,
+                template_name=(
+                    "carts/redesign/includes/_product_cart_item_control.html"
+                ),
+                context={
+                    "product": cart_item.product if cart_item else None,
+                },
+            )
+
         return redirect(to=request.META.get("HTTP_REFERER", "pages:home"))

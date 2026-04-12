@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
@@ -13,6 +13,7 @@ from apps.carts.exceptions import (
 )
 from apps.carts.models import Cart
 from apps.carts.services import CartService
+from apps.catalog.selectors import ProductSelector
 
 
 class CartItemCreateView(LoginRequiredMixin, View):
@@ -75,4 +76,18 @@ class CartItemCreateView(LoginRequiredMixin, View):
                     "The price has been updated."
                 ),
             )
+
+        if request.htmx:  # type: ignore
+            return render(
+                request,
+                template_name=(
+                    "carts/redesign/includes/_product_cart_item_control.html"
+                ),
+                context={
+                    "product": ProductSelector().get_product(
+                        product_pk=product_pk
+                    ),
+                },
+            )
+
         return redirect(to=request.META.get("HTTP_REFERER", "pages:home"))

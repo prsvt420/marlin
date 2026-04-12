@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-13 01:15+0800\n"
+"POT-Creation-Date: 2026-04-13 06:21+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -827,12 +827,24 @@ msgstr[2] ""
 "sm\">%(count_cart_items)s продуктов</span>"
 
 #: .\apps\carts\templates\carts\redesign\cart_detail.html:147
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:103
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:103
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:59
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:59
 #: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
 #: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
+
+#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:7
+#: .\apps\catalog\templates\catalog\product_detail.html:64
+#: .\apps\catalog\templates\catalog\product_list.html:58
+msgid "Add to Cart"
+msgstr "В корзину"
+
+#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:46
+#: .\apps\catalog\templates\catalog\product_detail.html:70
+#: .\apps\catalog\templates\catalog\product_list.html:64
+msgid "Not available"
+msgstr "Нет в наличии"
 
 #: .\apps\carts\views\cart_clear_view.py:21
 msgid "Your cart has been successfully cleared."
@@ -855,7 +867,7 @@ msgstr "Количество товаров на складе изменилос
 msgid "Home"
 msgstr "Главная"
 
-#: .\apps\carts\views\cart_item_create_view.py:34
+#: .\apps\carts\views\cart_item_create_view.py:35
 msgid ""
 "An error occurred while adding the product to the cart. The quantity "
 "specified is incorrect."
@@ -863,14 +875,14 @@ msgstr ""
 "Произошла ошибка при добавлении продукта в корзину. Указанное количество "
 "неверно."
 
-#: .\apps\carts\views\cart_item_create_view.py:42
+#: .\apps\carts\views\cart_item_create_view.py:43
 msgid ""
 "An error occurred while adding the product to the cart. Product is "
 "unavailable."
 msgstr ""
 "Произошла ошибка при добавлении продукта в корзину. Продукт недоступен."
 
-#: .\apps\carts\views\cart_item_create_view.py:50
+#: .\apps\carts\views\cart_item_create_view.py:51
 msgid ""
 "An error occurred while adding the product to the cart. The requested "
 "quantity is out of stock."
@@ -878,7 +890,7 @@ msgstr ""
 "Произошла ошибка при добавлении продукта в корзину. Запрошенное количество "
 "продукта отсутствует на складе."
 
-#: .\apps\carts\views\cart_item_create_view.py:58
+#: .\apps\carts\views\cart_item_create_view.py:59
 msgid ""
 "An error occurred while adding the product to the cart. The product is "
 "already in the cart."
@@ -886,20 +898,20 @@ msgstr ""
 "Произошла ошибка при добавлении продукта в корзину. Этот продукт уже "
 "находится в корзине."
 
-#: .\apps\carts\views\cart_item_create_view.py:66
+#: .\apps\carts\views\cart_item_create_view.py:67
 msgid ""
 "An error occurred while adding the product to the cart. Please try again."
 msgstr ""
 "Произошла ошибка при добавлении продукта в корзину. Пожалуйста, попробуйте "
 "еще раз."
 
-#: .\apps\carts\views\cart_item_create_view.py:74
+#: .\apps\carts\views\cart_item_create_view.py:75
 msgid ""
 "The product has been successfully added to your cart. The price has been "
 "updated."
 msgstr "Продукт успешно добавлен в вашу корзину. Цена была обновлена."
 
-#: .\apps\carts\views\cart_item_delete_view.py:28
+#: .\apps\carts\views\cart_item_delete_view.py:34
 msgid ""
 "An error occurred while deleting the product to the cart. The product is not "
 "in the cart."
@@ -907,20 +919,20 @@ msgstr ""
 "Произошла ошибка при удалении продукта из корзины. Продукт отсутствует в "
 "корзине."
 
-#: .\apps\carts\views\cart_item_delete_view.py:36
+#: .\apps\carts\views\cart_item_delete_view.py:42
 msgid ""
 "An error occurred while deleting the product to the cart. Please try again."
 msgstr ""
 "Произошла ошибка при удалении продукта из корзины. Пожалуйста, попробуйте "
 "еще раз."
 
-#: .\apps\carts\views\cart_item_delete_view.py:44
+#: .\apps\carts\views\cart_item_delete_view.py:50
 msgid ""
 "The product has been successfully deleted from the cart. The price has been "
 "updated."
 msgstr "Продукт успешно удален из корзины. Цена была обновлена."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:35
+#: .\apps\carts\views\cart_item_update_quantity_view.py:36
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. An "
 "invalid action is specified."
@@ -928,7 +940,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Указано "
 "недопустимое действие."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:49
+#: .\apps\carts\views\cart_item_update_quantity_view.py:50
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. "
 "The quantity specified is incorrect."
@@ -936,7 +948,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Указанное "
 "количество неверно."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:57
+#: .\apps\carts\views\cart_item_update_quantity_view.py:58
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. "
 "The product is not in the cart."
@@ -944,7 +956,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Продукт "
 "отсутствует в корзине."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:65
+#: .\apps\carts\views\cart_item_update_quantity_view.py:66
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. "
 "Product is unavailable."
@@ -952,7 +964,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Продукт "
 "недоступен."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:73
+#: .\apps\carts\views\cart_item_update_quantity_view.py:74
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. "
 "The requested quantity is out of stock."
@@ -960,7 +972,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Запрошенное "
 "количество продукта отсутствует на складе."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:82
+#: .\apps\carts\views\cart_item_update_quantity_view.py:83
 msgid ""
 "An error occurred while changing the quantity of the product in the cart. "
 "Please try again."
@@ -968,7 +980,7 @@ msgstr ""
 "Произошла ошибка при изменении количества товара в корзине. Пожалуйста, "
 "попробуйте еще раз."
 
-#: .\apps\carts\views\cart_item_update_quantity_view.py:90
+#: .\apps\carts\views\cart_item_update_quantity_view.py:91
 msgid ""
 "The quantity of the product in the cart has been successfully updated. The "
 "price has been updated."
@@ -1141,7 +1153,7 @@ msgstr "продукты"
 
 #: .\apps\catalog\models\product_nutrition_model.py:18
 #: .\apps\catalog\templates\catalog\product_detail.html:111
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:121
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:77
 msgid "calories"
 msgstr "калории"
 
@@ -1152,13 +1164,13 @@ msgstr "белки"
 
 #: .\apps\catalog\models\product_nutrition_model.py:30
 #: .\apps\catalog\templates\catalog\product_detail.html:103
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:119
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:75
 msgid "fats"
 msgstr "жиры"
 
 #: .\apps\catalog\models\product_nutrition_model.py:36
 #: .\apps\catalog\templates\catalog\product_detail.html:107
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:120
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:76
 msgid "carbs"
 msgstr "углеводы"
 
@@ -1223,39 +1235,23 @@ msgstr "осталось %(stock)s"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:48
 #: .\apps\catalog\templates\catalog\redesign\product_detail.html:53
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:181
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:137
 #: .\apps\catalog\templates\catalog\redesign\product_list.html:36
 #: .\apps\catalog\templates\catalog\redesign\product_search_list.html:36
 msgid "Price per 1"
 msgstr "Цена за 1"
-
-#: .\apps\catalog\templates\catalog\product_detail.html:64
-#: .\apps\catalog\templates\catalog\product_list.html:58
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:70
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:53
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:53
-msgid "Add to Cart"
-msgstr "В корзину"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:67
 #: .\apps\catalog\templates\catalog\product_list.html:61
 msgid "In cart"
 msgstr "В корзине"
 
-#: .\apps\catalog\templates\catalog\product_detail.html:70
-#: .\apps\catalog\templates\catalog\product_list.html:64
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:110
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:93
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:93
-msgid "Not available"
-msgstr "Нет в наличии"
-
 #: .\apps\catalog\templates\catalog\product_detail.html:75
 msgid "Category"
 msgstr "Категория"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:79
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:134
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:90
 msgid "Description"
 msgstr "Описание"
 
@@ -1268,12 +1264,12 @@ msgid "Hide"
 msgstr "Скрыть"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:89
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:128
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:84
 msgid "Composition"
 msgstr "Состав"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:93
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:116
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:72
 msgid "Nutritional value"
 msgstr "Пищевая ценность"
 
@@ -1283,7 +1279,7 @@ msgid "No information available"
 msgstr "Информация отсутствует"
 
 #: .\apps\catalog\templates\catalog\product_detail.html:119
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:141
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:97
 msgid "Characteristics"
 msgstr "Характеристики"
 
@@ -1306,25 +1302,25 @@ msgstr "Продукты в каталоге не найдены"
 msgid "In stock"
 msgstr "В наличии"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:118
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:74
 msgid "Proteins"
 msgstr "Белки"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:118
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:119
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:120
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:74
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:75
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:76
 msgid "g"
 msgstr "г"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:121
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:77
 msgid "kcal"
 msgstr "ккал"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:136
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:92
 msgid "Show in full"
 msgstr "Показать полностью"
 
-#: .\apps\catalog\templates\catalog\redesign\product_detail.html:161
+#: .\apps\catalog\templates\catalog\redesign\product_detail.html:117
 msgid "You may also like"
 msgstr "Вам также может понравиться"
 
@@ -1337,8 +1333,8 @@ msgstr[0] "%(count_products)s продукт"
 msgstr[1] "%(count_products)s продукта"
 msgstr[2] "%(count_products)s продуктов"
 
-#: .\apps\catalog\templates\catalog\redesign\product_list.html:102
-#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:102
+#: .\apps\catalog\templates\catalog\redesign\product_list.html:58
+#: .\apps\catalog\templates\catalog\redesign\product_search_list.html:58
 msgid "No available products yet"
 msgstr "Пока нет доступных продуктов"
 
