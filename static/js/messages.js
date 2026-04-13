@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function animateMessages() {
   document.querySelectorAll(".message").forEach((message, messageIndex) => {
 
     const removeMessage = () => {
@@ -16,4 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     message.addEventListener("click", removeMessage);
   });
+}
+
+document.addEventListener("DOMContentLoaded", animateMessages);
+
+document.addEventListener("htmx:oobAfterSwap", (e) => {
+  if (e.detail.target.id === "messages-container") {
+    animateMessages();
+  }
 });
