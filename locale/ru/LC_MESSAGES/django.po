@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-13 06:21+0800\n"
+"POT-Creation-Date: 2026-04-13 20:33+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -333,8 +333,8 @@ msgstr "Сохранить"
 
 #: .\apps\accounts\templates\accounts\profile.html:55
 #: .\templates\includes\header.html:28
-#: .\templates\redesign\includes\_header.html:62
-#: .\templates\redesign\includes\_header.html:126
+#: .\templates\redesign\includes\_header.html:60
+#: .\templates\redesign\includes\_header.html:122
 msgid "Sign out"
 msgstr "Выйти"
 
@@ -351,8 +351,8 @@ msgstr "Удалить аккаунт"
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
 #: .\templates\includes\header.html:33
-#: .\templates\redesign\includes\_header.html:47
-#: .\templates\redesign\includes\_header.html:111
+#: .\templates\redesign\includes\_header.html:45
+#: .\templates\redesign\includes\_header.html:107
 msgid "Sign in"
 msgstr "Войти"
 
@@ -717,8 +717,8 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\redesign\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:58
 #: .\templates\includes\header.html:19
-#: .\templates\redesign\includes\_header.html:40
-#: .\templates\redesign\includes\_header.html:104
+#: .\templates\redesign\includes\_header.html:38
+#: .\templates\redesign\includes\_header.html:100
 msgid "Cart"
 msgstr "Корзина"
 
@@ -1011,7 +1011,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\product_search_list_view.py:35 .\config\settings.py:341
 #: .\templates\includes\header.html:16
 #: .\templates\redesign\includes\_header.html:26
-#: .\templates\redesign\includes\_header.html:90
+#: .\templates\redesign\includes\_header.html:88
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1884,6 +1884,6 @@ msgstr "Скачайте приложение"
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\redesign\includes\_header.html:78
+#: .\templates\redesign\includes\_header.html:76
 msgid "Menu"
 msgstr "Меню"
