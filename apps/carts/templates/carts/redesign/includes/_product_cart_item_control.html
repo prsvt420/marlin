@@ -3,32 +3,36 @@
 {% if product.stock %}
 	{% with cart_item=cart_items_map|get_item:product.id %}
     {% if not cart_item %}
-      <form hx-post="{% url 'carts:cart-item-create' product_pk=product.pk %}" hx-target="closest [data-product-cart-item-control]">
-        <button class="button button--primary w-full">{% trans "Add to Cart" %}</button>
+      <form hx-post="{% url 'carts:cart-item-create' product_pk=product.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
+        <button class="button button--primary w-full">
+	        <span class="spinner htmx-indicator-show border-primary-content border-t-primary"></span>
+	        <span class="htmx-indicator-hide">{% trans "Add to Cart" %}</span>
+        </button>
       </form>
     {% else %}
 			<div class="flex w-full items-center h-12 p-1 border border-primary rounded-field justify-between max-md:w-full">
 				{% can_decrement_cart_item_quantity cart_item=cart_item as decrement_allowed_cart_item_quantity %}
 				{% if decrement_allowed_cart_item_quantity %}
-					<form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]">
+					<form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
 						<input type="hidden" name="action" value="decrement">
 						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="decrement">
 							<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
 						</button>
 					</form>
 				{% else %}
-					<form hx-post="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]">
+					<form hx-post="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
 						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit">
 							<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
 						</button>
 					</form>
 				{% endif %}
 
-				<p class="text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
+				<div class="spinner htmx-indicator-show"></div>
+				<p class="htmx-indicator-hide text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
 
 				{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
         {% if increment_allowed_cart_item_quantity %}
-          <form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]">
+          <form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
             <input type="hidden" name="action" value="increment">
 						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="increment">
 							<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>

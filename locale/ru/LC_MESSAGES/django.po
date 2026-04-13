@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-13 20:33+0800\n"
+"POT-Creation-Date: 2026-04-14 00:41+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -834,13 +834,13 @@ msgstr[2] ""
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
 
-#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:7
+#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:9
 #: .\apps\catalog\templates\catalog\product_detail.html:64
 #: .\apps\catalog\templates\catalog\product_list.html:58
 msgid "Add to Cart"
 msgstr "В корзину"
 
-#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:46
+#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:50
 #: .\apps\catalog\templates\catalog\product_detail.html:70
 #: .\apps\catalog\templates\catalog\product_list.html:64
 msgid "Not available"
