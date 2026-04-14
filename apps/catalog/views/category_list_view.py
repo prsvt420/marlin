@@ -8,7 +8,7 @@ from apps.catalog.selectors import CategorySelector
 
 
 class CategoryListView(ListView):
-    template_name = "catalog/redesign/category_list.html"
+    template_name = "catalog/category_list.html"
     context_object_name = "parent_categories"
     extra_context = {
         "breadcrumbs": [

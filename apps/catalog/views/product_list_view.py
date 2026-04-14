@@ -12,7 +12,7 @@ from apps.catalog.selectors import CategorySelector, ProductSelector
 
 
 class ProductListView(FilterView):
-    template_name = "catalog/redesign/product_list.html"
+    template_name = "catalog/product_list.html"
     context_object_name = "products"
     paginate_by = 20
     paginate_orphans = 4
@@ -20,7 +20,7 @@ class ProductListView(FilterView):
 
     def get_template_names(self) -> List[str]:
         if self.request.htmx:  # type: ignore
-            return ["catalog/redesign/includes/_product_list_htmx.html"]
+            return ["catalog/includes/_product_list_htmx.html"]
         return [self.template_name]
 
     @property

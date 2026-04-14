@@ -1,87 +1,20 @@
-{% extends "base.html" %}
+{% extends "redesign/base.html" %}
 {% load static i18n %}
 
 {% block title %}{{ category.name }}{% endblock %}
 
-{% block css %}
-	<link rel="stylesheet" href="{% static 'catalog/css/components/hero.css' %}">
-	<link rel="stylesheet" href="{% static 'catalog/css/components/stock.css' %}">
-	<link rel="stylesheet" href="{% static 'catalog/css/components/product_filters.css' %}">
-	<link rel="stylesheet" href="{% static 'catalog/css/product_list.css' %}">
-{% endblock %}
-
-{% block mix %}main--spaced{% endblock %}
-
 {% block content %}
-  {% url "catalog:product-list" category_slug=category.slug as search_url %}
-  {% include "catalog/includes/hero.html" with title=category.name|add:"." description=category.description|add:"." search_url=search_url search_placeholder=_("Find a product, e.g. — bananas") %}
-
-	<section class="products">
-		{% include "catalog/includes/product_filters.html" %}
-
-		{% if products %}
-			<div class="products__list-wrapper">
-				<ul class="products__list">
-					{% for product in products %}
-						<li class="products__item">
-							<a href="{{ product.get_absolute_url }}" aria-label="Marlin — {{ product.name }}">
-								<article class="product-card surface">
-									<div class="product-card__image-wrapper">
-	                  {% if product.images.first %}
-	                    <img class="product-card__image" src="{{ product.images.first.image.url }}" alt="" draggable="false">
-	                  {% else %}
-	                    <img class="product-card__image" src="{% static 'catalog/img/default-product-image.webp' %}" alt="" draggable="false">
-	                  {% endif %}
-
-	                  {% if product.discount %}
-	                    <span class="product-card__discount-badge badge badge--absolute">-{{ product.discount|floatformat:"-2u" }}%</span>
-	                  {% endif %}
-
-										{% include "catalog/includes/stock.html" with stock=product.stock %}
-	                </div>
-
-									<div class="product-card__content">
-										<h2 class="product-card__name">{{ product.name|truncatechars:20 }}</h2>
-										<p class="product-card__price">
-		                  {% if product.discount %}
-	                      <span class="product-card__price-current">{{ product.final_price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-	                      <span class="product-card__price-old">{{ product.price }} ₽</span>
-		                  {% else %}
-	                      <span class="product-card__price-current">{{ product.price }} ₽ {% if product.unit_type != "pcs" %} / {{ product.get_unit_type_display }} {% endif %}</span>
-		                  {% endif %}
-	                  </p>
-
-								    {% if product.stock %}
-						          {% if not product.pk in cart_product_pks %}
-						            <form action="{% url 'carts:cart-item-create' product_pk=product.pk %}" method="post" novalidate>
-						              {% csrf_token %}
-						              <button class="product-card__button button">{% trans "Add to Cart" %}</button>
-						            </form>
-						          {% else %}
-	                      <button class="product-card__button button button--disabled" disabled>{% trans "In cart" %}</button>
-						          {% endif %}
-							      {% else %}
-							        <button class="product-card__button button button--disabled" disabled>{% trans "Not available" %}</button>
-							      {% endif %}
-									</div>
-								</article>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-
-				{% include "includes/pagination.html" %}
+	<section class="flex flex-col gap-8 max-md:gap-4">
+		<div class="flex flex-col">
+			{% include "redesign/includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<div class="flex items-baseline gap-2 max-md:gap-0 max-md:flex-col">
+				<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{{ category.name }}</h1>
+				{% if paginator.count %}
+					<span class="text-base-content/60 text-sm">{% blocktrans count count_products=paginator.count %}{{ count_products }} product{% plural %}{{ count_products }} products{% endblocktrans %}</span>
+				{% endif %}
 			</div>
-		{% else %}
-			{% if filter.form.q.value %}
-        <div class="products__empty">
-          <p class="products__empty-text">{% trans "No results found for your search" %}</p>
-        </div>
-      {% else %}
-        <div class="products__empty">
-          <p class="products__empty-text">{% trans "No products found in the catalog" %}</p>
-        </div>
-      {% endif %}
-		{% endif %}
+		</div>
+
+		{% include "catalog/includes/_product_list.html" %}
 	</section>
 {% endblock %}

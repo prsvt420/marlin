@@ -13,7 +13,7 @@ from apps.catalog.selectors import ProductSelector
 
 
 class ProductSearchListView(FilterView):
-    template_name = "catalog/redesign/product_search_list.html"
+    template_name = "catalog/product_search_list.html"
     context_object_name = "products"
     paginate_by = 20
     paginate_orphans = 4
@@ -21,7 +21,7 @@ class ProductSearchListView(FilterView):
 
     def get_template_names(self) -> List[str]:
         if self.request.htmx:  # type: ignore
-            return ["catalog/redesign/includes/_product_list_htmx.html"]
+            return ["catalog/includes/_product_list_htmx.html"]
         return [self.template_name]
 
     def get(self, request: HttpRequest, **kwargs: Any) -> HttpResponse:
