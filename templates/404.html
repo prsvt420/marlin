@@ -3,17 +3,11 @@
 
 {% block title %}404{% endblock %}
 
-{% block css %}
-	<link rel="stylesheet" href="{% static 'css/error.css' %}">
-{% endblock %}
-
-{% block mix %}main--centered{% endblock %}
-
 {% block content %}
-	<section class="error">
-	  <h1 class="error__code">404</h1>
-		<h2 class="error__title">{% trans "Oops! The page you are looking for was not found" %}</h2>
-	  <p class="error__description">{% trans "The page may have been deleted or you followed an incorrect link." %}</p>
-		<a href="{% url 'catalog:category-list' %}" class="error__button button">{% trans "Return to catalog" %}</a>
-	</section>
+  <section class="flex flex-col gap-2 items-center justify-center text-center min-h-[70vh]">
+    <h1 class="font-bold text-base-content/60 text-7xl">404</h1>
+    <h2 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Oops! The page you are looking for was not found" %}</h2>
+    <p class="text-base-content/60 text-base">{% trans "The page may have been deleted or you followed an incorrect link." %}</p>
+    <a class="button button--primary mt-2" href="{% url 'catalog:category-list' %}">{% trans "Return to catalog" %}</a>
+  </section>
 {% endblock %}

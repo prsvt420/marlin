@@ -1,4 +1,4 @@
-{% extends "redesign/base.html" %}
+{% extends "base.html" %}
 {% load static i18n %}
 
 {% block title %}{% trans "Search by query" %} «{{ filter.form.q.value|default_if_none:'' }}»{% endblock %}
@@ -6,7 +6,7 @@
 {% block content %}
 	<section class="flex flex-col gap-8 max-md:gap-4">
 		<div class="flex flex-col">
-			{% include "redesign/includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
 			<div class="flex items-baseline gap-2 max-md:gap-0 max-md:flex-col">
 				<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Search by query" %} «{{ filter.form.q.value|default_if_none:''|truncatechars:30 }}»</h1>
 				{% if paginator.count %}

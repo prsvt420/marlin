@@ -5,9 +5,5 @@ from django_ratelimit.exceptions import Ratelimited
 
 def handler403(request: HttpRequest, exception=None) -> HttpResponse:
     if isinstance(exception, Ratelimited):
-        return render(
-            request=request, template_name="redesign/429.html", status=429
-        )
-    return render(
-        request=request, template_name="redesign/403.html", status=403
-    )
+        return render(request=request, template_name="429.html", status=429)
+    return render(request=request, template_name="403.html", status=403)

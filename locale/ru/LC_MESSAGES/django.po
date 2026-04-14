@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-14 15:10+0800\n"
+"POT-Creation-Date: 2026-04-14 15:18+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -221,7 +221,6 @@ msgid "Confirm new password"
 msgstr "Подтвердите новый пароль"
 
 #: .\apps\accounts\templates\accounts\profile.html:4
-#: .\templates\includes\header.html:23
 msgid "Profile"
 msgstr "Профиль"
 
@@ -230,9 +229,7 @@ msgstr "Профиль"
 #: .\apps\accounts\templates\accounts\signin.html:42
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
-#: .\templates\includes\header.html:33
-#: .\templates\redesign\includes\_header.html:45
-#: .\templates\redesign\includes\_header.html:107
+#: .\templates\includes\_header.html:45 .\templates\includes\_header.html:107
 msgid "Sign in"
 msgstr "Войти"
 
@@ -595,9 +592,7 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\apps\carts\templates\carts\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:58
-#: .\templates\includes\header.html:19
-#: .\templates\redesign\includes\_header.html:38
-#: .\templates\redesign\includes\_header.html:100
+#: .\templates\includes\_header.html:38 .\templates\includes\_header.html:100
 msgid "Cart"
 msgstr "Корзина"
 
@@ -647,8 +642,7 @@ msgstr "Ваша корзина пуста"
 
 #: .\apps\carts\templates\carts\cart_detail.html:147
 #: .\apps\catalog\templates\catalog\includes\_product_list.html:21
-#: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
-#: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
+#: .\templates\403.html:11 .\templates\404.html:11
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
 
@@ -677,7 +671,7 @@ msgstr "Количество товаров на складе изменилос
 #: .\apps\catalog\views\product_list_view.py:52
 #: .\apps\catalog\views\product_search_list_view.py:38
 #: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
-#: .\apps\pages\views\terms_view.py:10 .\templates\includes\header.html:4
+#: .\apps\pages\views\terms_view.py:10
 msgid "Home"
 msgstr "Главная"
 
@@ -822,9 +816,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\product_detail_view.py:24
 #: .\apps\catalog\views\product_list_view.py:54
 #: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:341
-#: .\templates\includes\header.html:16
-#: .\templates\redesign\includes\_header.html:26
-#: .\templates\redesign\includes\_header.html:88
+#: .\templates\includes\_header.html:26 .\templates\includes\_header.html:88
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1174,26 +1166,22 @@ msgstr ""
 "пользователя успешно получено и требует дальнейшей обработки."
 
 #: .\apps\pages\templates\pages\contact.html:4
-#: .\templates\includes\footer.html:16
-#: .\templates\redesign\includes\_footer.html:34
+#: .\templates\includes\_footer.html:34
 msgid "Contacts"
 msgstr "Контакты"
 
 #: .\apps\pages\templates\pages\offer.html:4
-#: .\apps\pages\views\offer_view.py:12 .\templates\includes\footer.html:10
-#: .\templates\redesign\includes\_footer.html:18
+#: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:18
 msgid "Public Offer"
 msgstr "Публичная оферта"
 
 #: .\apps\pages\templates\pages\privacy.html:4
-#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\footer.html:7
-#: .\templates\redesign\includes\_footer.html:13
+#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\_footer.html:13
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 #: .\apps\pages\templates\pages\terms.html:4
-#: .\apps\pages\views\terms_view.py:12 .\templates\includes\footer.html:13
-#: .\templates\redesign\includes\_footer.html:23
+#: .\apps\pages\views\terms_view.py:12 .\templates\includes\_footer.html:23
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
@@ -1233,8 +1221,7 @@ msgstr "Зарплата"
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
 #: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:406
-#: .\templates\includes\footer.html:19
-#: .\templates\redesign\includes\_footer.html:37
+#: .\templates\includes\_footer.html:37
 msgid "Vacancies"
 msgstr "Вакансии"
 
@@ -1458,27 +1445,35 @@ msgstr "Элементы корзины"
 msgid "Recruitment"
 msgstr "Подбор персонала"
 
-#: .\templates\403.html:15 .\templates\redesign\403.html:9
+#: .\templates\403.html:9
 msgid "Oops! Access denied"
 msgstr "Упс! Доступ запрещён"
 
-#: .\templates\403.html:16 .\templates\redesign\403.html:10
+#: .\templates\403.html:10
 msgid "You don't have permission to access this page."
 msgstr "У вас нет разрешения на доступ к этой странице."
 
-#: .\templates\404.html:15 .\templates\redesign\404.html:9
+#: .\templates\404.html:9
 msgid "Oops! The page you are looking for was not found"
 msgstr "Упс! Страница, которую вы ищете, не найдена"
 
-#: .\templates\404.html:16 .\templates\redesign\404.html:10
+#: .\templates\404.html:10
 msgid "The page may have been deleted or you followed an incorrect link."
 msgstr "Возможно, страница была удалена или вы перешли по неверной ссылке."
 
-#: .\templates\500.html:15 .\templates\redesign\500.html:9
+#: .\templates\429.html:9
+msgid "Too many requests"
+msgstr "Слишком много запросов"
+
+#: .\templates\429.html:10
+msgid "Please wait a moment and try again."
+msgstr "Пожалуйста, подождите немного и попробуйте снова."
+
+#: .\templates\500.html:9
 msgid "Oops! Something went wrong"
 msgstr "Упс! Что-то пошло не так"
 
-#: .\templates\500.html:16 .\templates\redesign\500.html:10
+#: .\templates\500.html:10
 msgid "An internal error occurred. Please refresh the page or try again later."
 msgstr ""
 "Произошла внутренняя ошибка. Обновите страницу или повторите попытку позже."
@@ -1488,87 +1483,39 @@ msgid "Marlin logo"
 msgstr "Логотип Marlin"
 
 #: .\templates\email_base.html:70 .\templates\email_base.txt:4
-#: .\templates\includes\header.html:8
-#: .\templates\redesign\includes\_header.html:9
+#: .\templates\includes\_header.html:9
 msgid "Fresh products near you"
 msgstr "Свежие продукты рядом с вами"
 
 #: .\templates\email_base.html:79 .\templates\email_base.txt:8
-#: .\templates\includes\footer.html:23
-#: .\templates\redesign\includes\_footer.html:51
+#: .\templates\includes\_footer.html:51
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
-#: .\templates\includes\footer.html:4
-msgid "Additional"
-msgstr "Дополнительная"
-
-#: .\templates\includes\header.html:13
-msgid "Main"
-msgstr "Главная"
-
-#: .\templates\includes\header.html:28
-#: .\templates\redesign\includes\_header.html:60
-#: .\templates\redesign\includes\_header.html:122
-msgid "Sign out"
-msgstr "Выйти"
-
-#: .\templates\includes\hero.html:11
-msgid "Enter query"
-msgstr "Введите запрос"
-
-#: .\templates\includes\hero.html:12
-msgid "Press Enter"
-msgstr "Нажмите Ввод"
-
-#: .\templates\includes\messages.html:4
-msgid "System messages"
-msgstr "Системные сообщения"
-
-#: .\templates\includes\messages.html:10
-msgid "Success!"
-msgstr "Успех!"
-
-#: .\templates\includes\messages.html:12
-msgid "Error!"
-msgstr "Ошибка!"
-
-#: .\templates\includes\messages.html:14
-msgid "Warning!"
-msgstr "Внимание!"
-
-#: .\templates\includes\messages.html:16
-msgid "Info"
-msgstr "Информация"
-
-#: .\templates\redesign\429.html:9
-msgid "Too many requests"
-msgstr "Слишком много запросов"
-
-#: .\templates\redesign\429.html:10
-msgid "Please wait a moment and try again."
-msgstr "Пожалуйста, подождите немного и попробуйте снова."
-
-#: .\templates\redesign\includes\_footer.html:8
+#: .\templates\includes\_footer.html:8
 msgid "Legal information"
 msgstr "Правовая информация"
 
-#: .\templates\redesign\includes\_footer.html:30
+#: .\templates\includes\_footer.html:30
 msgid "About the company"
 msgstr "О компании"
 
-#: .\templates\redesign\includes\_footer.html:43
+#: .\templates\includes\_footer.html:43
 msgid "Download the app"
 msgstr "Скачайте приложение"
 
-#: .\templates\redesign\includes\_footer.html:47
+#: .\templates\includes\_footer.html:47
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\redesign\includes\_header.html:16
+#: .\templates\includes\_header.html:16
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
-#: .\templates\redesign\includes\_header.html:76
+#: .\templates\includes\_header.html:60 .\templates\includes\_header.html:122
+msgid "Sign out"
+msgstr "Выйти"
+
+#: .\templates\includes\_header.html:76
 msgid "Menu"
 msgstr "Меню"

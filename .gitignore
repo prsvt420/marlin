@@ -222,4 +222,4 @@ staticfiles/
 node_modules
 
 # Tailwind
-static/css/redesign/output.css
+static/css/output.css

@@ -3,17 +3,10 @@
 
 {% block title %}500{% endblock %}
 
-{% block css %}
-	<link rel="stylesheet" href="{% static 'css/error.css' %}">
-{% endblock %}
-
-{% block mix %}main--centered{% endblock %}
-
 {% block content %}
-	<section class="error">
-	  <h1 class="error__code">500</h1>
-		<h2 class="error__title">{% trans "Oops! Something went wrong" %}</h2>
-	  <p class="error__description">{% trans "An internal error occurred. Please refresh the page or try again later." %}</p>
-		<a href="{% url 'catalog:category-list' %}" class="error__button button">{% trans "Return to catalog" %}</a>
-	</section>
+  <section class="flex flex-col gap-2 items-center justify-center text-center min-h-[70vh]">
+    <h1 class="font-bold text-base-content/60 text-7xl">500</h1>
+    <h2 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Oops! Something went wrong" %}</h2>
+    <p class="text-base-content/60 text-base">{% trans "An internal error occurred. Please refresh the page or try again later." %}</p>
+  </section>
 {% endblock %}
