@@ -5,7 +5,7 @@
 
 {% block content %}
 	<section class="flex flex-col items-center justify-center min-h-[70vh]">
-		<form class="flex flex-col gap-4 p-4 w-full max-w-100 bg-surface-dim rounded-box" action="{% url 'accounts:signup' %}" method="post" novalidate>
+		<form class="flex flex-col gap-4 p-4 w-full max-w-100 shadow-lg rounded-box" action="{% url 'accounts:signup' %}" method="post" novalidate>
 			{% csrf_token %}
 			<h1 class="font-bold text-on-surface text-center text-2xl">{% trans "Sign up" %}</h1>
 
@@ -19,7 +19,7 @@
 
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="email">{% trans "Email" %}</label>
-				<input id="email" class="input bg-surface {% if form.email.errors %}border border-error{% endif %}" name="email" type="text" autocomplete="email" value="{{ form.email.value|default:'' }}" placeholder="{% trans 'Enter email' %}">
+				<input id="email" class="input {% if form.email.errors %}outline-error{% endif %}" name="email" type="text" autocomplete="email" value="{{ form.email.value|default:'' }}" placeholder="{% trans 'Enter email' %}">
 				{% if form.email.errors %}
 				  <p class="text-sm text-error">{{ form.email.errors.0 }}</p>
 				{% endif %}
@@ -27,7 +27,7 @@
 
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="first_name">{% trans "First name" %}</label>
-				<input id="first_name" class="input bg-surface {% if form.first_name.errors %}border border-error{% endif %}" name="first_name" type="text" autocomplete="given-name" value="{{ form.first_name.value|default:'' }}" placeholder="{% trans 'Enter first name' %}">
+				<input id="first_name" class="input {% if form.first_name.errors %}outline-error{% endif %}" name="first_name" type="text" autocomplete="given-name" value="{{ form.first_name.value|default:'' }}" placeholder="{% trans 'Enter first name' %}">
 				{% if form.first_name.errors %}
 				  <p class="text-sm text-error">{{ form.first_name.errors.0 }}</p>
 				{% endif %}
@@ -35,7 +35,7 @@
 
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="last_name">{% trans "Last name" %}</label>
-				<input id="last_name" class="input bg-surface {% if form.last_name.errors %}border border-error{% endif %}" name="last_name" type="text" autocomplete="family-name" value="{{ form.last_name.value|default:'' }}" placeholder="{% trans 'Enter last name' %}">
+				<input id="last_name" class="input {% if form.last_name.errors %}outline-error{% endif %}" name="last_name" type="text" autocomplete="family-name" value="{{ form.last_name.value|default:'' }}" placeholder="{% trans 'Enter last name' %}">
 				{% if form.last_name.errors %}
 				  <p class="text-sm text-error">{{ form.last_name.errors.0 }}</p>
 				{% endif %}
@@ -43,7 +43,7 @@
 
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="middle_name">{% trans "Middle name" %} ({% trans "if any" %})</label>
-				<input id="middle_name" class="input bg-surface {% if form.middle_name.errors %}border border-error{% endif %}" name="middle_name" type="text" autocomplete="additional-name" value="{{ form.middle_name.value|default:'' }}" placeholder="{% trans 'Enter middle name' %}">
+				<input id="middle_name" class="input {% if form.middle_name.errors %}outline-error{% endif %}" name="middle_name" type="text" autocomplete="additional-name" value="{{ form.middle_name.value|default:'' }}" placeholder="{% trans 'Enter middle name' %}">
 				{% if form.middle_name.errors %}
 				  <p class="text-sm text-error">{{ form.middle_name.errors.0 }}</p>
 				{% endif %}
@@ -52,7 +52,7 @@
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="password">{% trans "Password" %}</label>
 				<div class="relative">
-					<input id="password" class="input bg-surface w-full pr-12 {% if form.password1.errors %}border border-error{% endif %}" name="password1" type="password" autocomplete="new-password" placeholder="{% trans 'Enter password' %}">
+					<input id="password" class="input w-full pr-12 {% if form.password1.errors %}outline-error{% endif %}" name="password1" type="password" autocomplete="new-password" placeholder="{% trans 'Enter password' %}">
 					<button id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2 link" type="button">
 						<svg id="eye-open" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
 						<svg id="eye-closed" class="size-5 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path d="M20 14.8335C21.3082 13.3317 22 12 22 12C22 12 18.3636 5 12 5C11.6588 5 11.3254 5.02013 11 5.05822C10.6578 5.09828 10.3244 5.15822 10 5.23552M12 9C12.3506 9 12.6872 9.06015 13 9.17071C13.8524 9.47199 14.528 10.1476 14.8293 11C14.9398 11.3128 15 11.6494 15 12M3 3L21 21M12 15C11.6494 15 11.3128 14.9398 11 14.8293C10.1476 14.528 9.47198 13.8524 9.1707 13C9.11386 12.8392 9.07034 12.6721 9.04147 12.5M4.14701 9C3.83877 9.34451 3.56234 9.68241 3.31864 10C2.45286 11.1282 2 12 2 12C2 12 5.63636 19 12 19C12.3412 19 12.6746 18.9799 13 18.9418" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
@@ -65,7 +65,7 @@
 
 			<div class="flex flex-col gap-1">
 				<label class="text-base text-on-surface" for="password2">{% trans "Password confirmation" %}</label>
-				<input id="password2" class="input bg-surface {% if form.password2.errors %}border border-error{% endif %}" name="password2" type="password" autocomplete="new-password" placeholder="{% trans 'Confirm password' %}">
+				<input id="password2" class="input {% if form.password2.errors %}outline-error{% endif %}" name="password2" type="password" autocomplete="new-password" placeholder="{% trans 'Confirm password' %}">
 				{% if form.password2.errors %}
 				  <p class="text-sm text-error">{{ form.password2.errors.0 }}</p>
 				{% endif %}
@@ -75,7 +75,7 @@
 				{% url "pages:terms" as terms_url %}
 				{% url "pages:privacy" as privacy_url %}
 				<div class="flex items-start gap-2">
-				  <input id="agreement" class="form-checkbox cursor-pointer bg-surface mt-0.5 border border-edge rounded text-primary focus:ring-0 focus:ring-offset-0 {% if form.agreement.errors %}border border-error{% endif %}" name="agreement" type="checkbox">
+				  <input id="agreement" class="checkbox {% if form.agreement.errors %}outline-error{% endif %}" name="agreement" type="checkbox">
 					<label for="agreement" class="text-sm hyphens-auto text-on-surface">
 						{% blocktrans %}I agree to the <a class="link text-sm" href="{{ terms_url }}">Terms</a> and the <a class="link text-sm" href="{{ privacy_url }}">Privacy Policy</a>{% endblocktrans %}
 					</label>

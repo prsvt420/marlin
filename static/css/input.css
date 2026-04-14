@@ -67,23 +67,27 @@
 
 @layer components {
   .link {
-    @apply text-base cursor-pointer transition duration-300 ease-in-out text-on-surface/60 hover:text-on-surface;
+    @apply text-base cursor-pointer transition duration-300 ease-in-out text-on-surface/60 hover:text-primary;
   }
 
   .link--active {
-    @apply !text-on-surface;
+    @apply !text-primary;
   }
 
   .input {
-    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-on-surface;
+    @apply rounded-field border border-edge text-base px-5 py-3 h-12 outline-1 outline-transparent hover:outline-edge focus:outline-primary text-on-surface;
+
+    &::placeholder {
+      @apply text-on-surface/60;
+    }
+
+    &:-webkit-autofill {
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
-  .input::placeholder {
-    @apply text-on-surface/60;
-  }
-
-  input:-webkit-autofill {
-    transition: background-color 5000s ease-in-out 0s;
+  .checkbox {
+    @apply form-checkbox cursor-pointer bg-surface mt-0.5 border border-edge rounded text-primary focus:ring-0 focus:ring-offset-0 outline-1 outline-transparent hover:outline-edge focus:outline-primary;
   }
 
   .button {
@@ -107,7 +111,7 @@
   }
 
   .button--google {
-    @apply bg-white text-[#1f1f1f] hover:bg-[#e4e4e4];
+    @apply bg-white text-[#1f1f1f] hover:bg-[#e4e4e4] border border-[#dadce0];
   }
 
   .spinner {
