@@ -56,8 +56,7 @@ class CartItemDeleteView(HtmxLoginRequiredMixin, View):
             return render(
                 request,
                 template_name=(
-                    "carts/redesign/includes/"
-                    "_product_cart_item_control_htmx.html"
+                    "carts/includes/" "_product_cart_item_control_htmx.html"
                 ),
                 context={
                     "product": cart_item.product if cart_item else None,

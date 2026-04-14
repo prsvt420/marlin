@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-14 15:04+0800\n"
+"POT-Creation-Date: 2026-04-14 15:10+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -593,8 +593,7 @@ msgstr "У пользователя может быть только одна а
 
 #: .\apps\carts\models\cart_model.py:42
 #: .\apps\carts\templates\carts\cart_detail.html:4
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:4
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:10
+#: .\apps\carts\templates\carts\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:58
 #: .\templates\includes\header.html:19
 #: .\templates\redesign\includes\_header.html:38
@@ -602,122 +601,62 @@ msgstr "У пользователя может быть только одна а
 msgid "Cart"
 msgstr "Корзина"
 
-#: .\apps\carts\templates\carts\cart_detail.html:13
-msgid "Cart."
-msgstr "Корзина."
-
-#: .\apps\carts\templates\carts\cart_detail.html:13
-msgid "All selected products are collected in one place."
-msgstr "Все выбранные продукты собраны в одном месте."
-
 #: .\apps\carts\templates\carts\cart_detail.html:19
 #, python-format
-msgid "In cart %(count_cart_items)s available product."
-msgid_plural "In cart %(count_cart_items)s available products."
-msgstr[0] "В корзине %(count_cart_items)s доступный продукт."
-msgstr[1] "В корзине %(count_cart_items)s доступных продукта."
-msgstr[2] "В корзине %(count_cart_items)s доступных продуктов."
+msgid ""
+"In stock <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s product</span>"
+msgid_plural ""
+"In stock <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s products</span>"
+msgstr[0] ""
+"В наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продукт</span>"
+msgstr[1] ""
+"В наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продукта</span>"
+msgstr[2] ""
+"В наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продуктов</span>"
 
-#: .\apps\carts\templates\carts\cart_detail.html:63
-msgid "up to"
-msgstr "до"
-
-#: .\apps\carts\templates\carts\cart_detail.html:71
-#: .\apps\carts\templates\carts\cart_detail.html:102
-msgid "Delete"
-msgstr "Удалить"
-
-#: .\apps\carts\templates\carts\cart_detail.html:83
-#, python-format
-msgid "In cart %(count_cart_items)s unavailable product."
-msgid_plural "In cart %(count_cart_items)s unavailable products."
-msgstr[0] "В корзине %(count_cart_items)s недоступный продукт."
-msgstr[1] "В корзине %(count_cart_items)s недоступных продукта."
-msgstr[2] "В корзине %(count_cart_items)s недоступных продуктов."
-
-#: .\apps\carts\templates\carts\cart_detail.html:114
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:22
+#: .\apps\carts\templates\carts\cart_detail.html:22
 msgid "Clear"
 msgstr "Очистить"
 
-#: .\apps\carts\templates\carts\cart_detail.html:121
-msgid "Total"
-msgstr "Итого"
+#: .\apps\carts\templates\carts\cart_detail.html:102
+#, python-format
+msgid ""
+"Out of stock <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s product</span>"
+msgid_plural ""
+"Out of stock <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s products</span>"
+msgstr[0] ""
+"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продукт</span>"
+msgstr[1] ""
+"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продукта</span>"
+msgstr[2] ""
+"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
+"sm\">%(count_cart_items)s продуктов</span>"
 
-#: .\apps\carts\templates\carts\cart_detail.html:125 .\config\settings.py:345
-msgid "Products"
-msgstr "Продукты"
-
-#: .\apps\carts\templates\carts\cart_detail.html:129
-msgid "Assembly"
-msgstr "Сборка"
-
-#: .\apps\carts\templates\carts\cart_detail.html:130
-#: .\apps\carts\templates\carts\cart_detail.html:134
-msgid "Free"
-msgstr "Бесплатно"
-
-#: .\apps\carts\templates\carts\cart_detail.html:133
-msgid "Delivery"
-msgstr "Доставка"
-
-#: .\apps\carts\templates\carts\cart_detail.html:140
-msgid "Go to checkout"
-msgstr "К оформлению"
-
-#: .\apps\carts\templates\carts\cart_detail.html:151
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:146
+#: .\apps\carts\templates\carts\cart_detail.html:146
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
 
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:19
-#, python-format
-msgid ""
-"In stock <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s product</span>"
-msgid_plural ""
-"In stock <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s products</span>"
-msgstr[0] ""
-"В наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продукт</span>"
-msgstr[1] ""
-"В наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продукта</span>"
-msgstr[2] ""
-"В наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продуктов</span>"
-
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:102
-#, python-format
-msgid ""
-"Out of stock <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s product</span>"
-msgid_plural ""
-"Out of stock <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s products</span>"
-msgstr[0] ""
-"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продукт</span>"
-msgstr[1] ""
-"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продукта</span>"
-msgstr[2] ""
-"Нет в наличии <span class=\"font-medium text-base-content/60 text-"
-"sm\">%(count_cart_items)s продуктов</span>"
-
-#: .\apps\carts\templates\carts\redesign\cart_detail.html:147
+#: .\apps\carts\templates\carts\cart_detail.html:147
 #: .\apps\catalog\templates\catalog\includes\_product_list.html:21
 #: .\templates\403.html:17 .\templates\404.html:17 .\templates\500.html:17
 #: .\templates\redesign\403.html:11 .\templates\redesign\404.html:11
 msgid "Return to catalog"
 msgstr "Вернуться в каталог"
 
-#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:9
+#: .\apps\carts\templates\carts\includes\_product_cart_item_control.html:9
 msgid "Add to Cart"
 msgstr "В корзину"
 
-#: .\apps\carts\templates\carts\redesign\includes\_product_cart_item_control.html:50
+#: .\apps\carts\templates\carts\includes\_product_cart_item_control.html:50
 msgid "Not available"
 msgstr "Нет в наличии"
 
@@ -1486,6 +1425,10 @@ msgstr "На данный момент вакансий нет"
 #: .\config\settings.py:319
 msgid "Infrastructure"
 msgstr "Инфраструктура"
+
+#: .\config\settings.py:345
+msgid "Products"
+msgstr "Продукты"
 
 #: .\config\settings.py:352
 msgid "Categories"

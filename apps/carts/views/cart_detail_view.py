@@ -13,7 +13,7 @@ from apps.carts.services import CartService
 
 
 class CartDetailView(LoginRequiredMixin, DetailView):
-    template_name = "carts/redesign/cart_detail.html"
+    template_name = "carts/cart_detail.html"
     context_object_name = "cart"
 
     def get_object(self, queryset: Optional[QuerySet[Cart]] = None) -> Cart:
