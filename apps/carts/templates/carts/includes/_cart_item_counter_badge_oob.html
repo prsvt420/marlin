@@ -1,6 +1,6 @@
-<span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-desktop" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-base-content p-1 bg-laser-lemon rounded-full min-w-[16px] h-[16px]" hx-swap-oob="true">
+<span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-desktop" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-on-surface p-1 bg-accent rounded-full min-w-[16px] h-[16px]" hx-swap-oob="true">
   {% if cart.total_quantity > 99 %}99+{% else %}{{ cart.total_quantity }}{% endif %}
 </span>
-<span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-mobile" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-base-content p-1 bg-laser-lemon rounded-full min-w-[16px] h-[16px]" hx-swap-oob="true">
+<span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-mobile" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-on-surface p-1 bg-accent rounded-full min-w-[16px] h-[16px]" hx-swap-oob="true">
   {% if cart.total_quantity > 99 %}99+{% else %}{{ cart.total_quantity }}{% endif %}
 </span>

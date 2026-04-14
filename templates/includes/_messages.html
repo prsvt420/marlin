@@ -4,7 +4,7 @@
 	{% if messages %}
 		<section class="pointer-events-none flex flex-col gap-2 w-full max-w-100 fixed top-30 right-5 max-md:top-5 max-md:right-0 max-md:px-4 max-md:max-w-full z-10">
 		  {% for message in messages %}
-		    <article class="message relative transition duration-300 opacity-0 translate-x-[120%] ease-in-out cursor-pointer rounded-box bg-base-200 p-4">
+		    <article class="message relative transition duration-300 opacity-0 translate-x-[120%] ease-in-out cursor-pointer rounded-box bg-surface-dim p-4">
 	        <p class="text-sm flex items-center text-{{ message.tags }} gap-2">
 	          {% if message.tags == "success" %}
 		          <svg class="stroke-current shrink-0 size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>

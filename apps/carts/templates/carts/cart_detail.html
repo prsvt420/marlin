@@ -7,7 +7,7 @@
 	<section class="flex flex-col gap-8 max-md:gap-4">
 		<div class="flex flex-col">
 			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
-			<h1 class="font-bold text-base-content text-3xl max-md:text-2xl">{% trans "Cart" %}</h1>
+			<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{% trans "Cart" %}</h1>
 		</div>
 
 		{% if cart.cart_items.exists %}
@@ -16,20 +16,20 @@
 					{% if available_cart_items %}
 						<div class="flex flex-col">
 							<div class="flex items-baseline justify-between">
-								<p class="font-bold text-base-content text-2xl max-md:text-xl">{% blocktrans count count_cart_items=available_cart_items|length %}In stock <span class="font-medium text-base-content/60 text-sm">{{ count_cart_items }} product</span>{% plural %}In stock <span class="font-medium text-base-content/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
+								<p class="font-bold text-on-surface text-2xl max-md:text-xl">{% blocktrans count count_cart_items=available_cart_items|length %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} product</span>{% plural %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
 				        <form action="{% url 'carts:clear' %}" method="post" novalidate>
 				          {% csrf_token %}
 				          <button class="link text-sm" type="submit">{% trans "Clear" %}</button>
 				        </form>
 							</div>
-			        <ul class="flex flex-col divide-y divide-base-200">
+			        <ul class="flex flex-col divide-y divide-surface-dim">
 				        {% for cart_item in available_cart_items %}
 				          {% with product=cart_item.product %}
 					          <li class="flex items-start gap-4 py-4">
 						          <a href="{{ product.get_absolute_url }}">
-							          <div class="relative bg-base-200 rounded-box size-20 max-md:size-18 overflow-hidden flex items-center justify-center">
+							          <div class="relative bg-surface-dim rounded-box size-20 max-md:size-18 overflow-hidden flex items-center justify-center">
 					                {% if product.discount %}
-					                  <span class="absolute top-1 right-1 z-5 bg-laser-lemon text-base-content text-xs font-bold px-1.5 py-0.5 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+					                  <span class="absolute top-1 right-1 z-5 bg-accent text-on-surface text-xs font-bold px-1.5 py-0.5 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
 					                {% endif %}
 					                <img class="p-2 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 					              </div>
@@ -39,12 +39,12 @@
 				                <div class="flex justify-between">
 					                <a href="{{ product.get_absolute_url }}">
 						                <div class="flex flex-col">
-						                  <h2 class="font-bold text-base-content text-sm">{{ product.name }}</h2>
-															<p class="font-bold text-xs text-base-content/60">{{ cart_item.quantity|floatformat:"-2u" }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }} ₽</p>
+						                  <h2 class="font-bold text-on-surface text-sm">{{ product.name }}</h2>
+															<p class="font-bold text-xs text-on-surface/60">{{ cart_item.quantity|floatformat:"-2u" }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }} ₽</p>
 						                </div>
 					                </a>
 					                <div class="min-w-[100px] flex justify-end">
-						                <p class="font-bold text-base-content text-sm min-w-fit rounded-md">{{ cart_item.total_price }} ₽</p>
+						                <p class="font-bold text-on-surface text-sm min-w-fit rounded-md">{{ cart_item.total_price }} ₽</p>
 					                </div>
 				                </div>
 							          <div class="flex justify-between items-center">
@@ -72,7 +72,7 @@
 															</form>
 														{% endif %}
 
-														<p class="text-xs font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
+														<p class="text-xs font-bold text-on-surface">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
 
 														{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
 					                  {% if increment_allowed_cart_item_quantity %}
@@ -99,15 +99,15 @@
 
 					{% if unavailable_cart_items %}
 						<div class="flex flex-col">
-								<p class="font-bold text-base-content text-2xl max-md:text-xl">{% blocktrans count count_cart_items=unavailable_cart_items|length %}Out of stock <span class="font-medium text-base-content/60 text-sm">{{ count_cart_items }} product</span>{% plural %}Out of stock <span class="font-medium text-base-content/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
-								<ul class="flex flex-col divide-y divide-base-200">
+								<p class="font-bold text-on-surface text-2xl max-md:text-xl">{% blocktrans count count_cart_items=unavailable_cart_items|length %}Out of stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} product</span>{% plural %}Out of stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
+								<ul class="flex flex-col divide-y divide-surface-dim">
 				        {% for cart_item in unavailable_cart_items %}
 				          {% with product=cart_item.product %}
 					          <li class="flex items-start opacity-75 gap-4 py-4">
 						          <a href="{{ product.get_absolute_url }}">
-							          <div class="relative bg-base-200 rounded-box size-20 max-md:size-18 overflow-hidden flex items-center justify-center">
+							          <div class="relative bg-surface-dim rounded-box size-20 max-md:size-18 overflow-hidden flex items-center justify-center">
 					                {% if product.discount %}
-					                  <span class="absolute top-1 right-1 z-5 bg-laser-lemon text-base-content text-xs font-bold px-1.5 py-0.5 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+					                  <span class="absolute top-1 right-1 z-5 bg-accent text-on-surface text-xs font-bold px-1.5 py-0.5 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
 					                {% endif %}
 					                <img class="p-2 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 					              </div>
@@ -117,11 +117,11 @@
 				                <div class="flex justify-between">
 					                <a href="{{ product.get_absolute_url }}">
 						                <div class="flex flex-col">
-						                  <h2 class="font-bold text-base-content text-base">{{ product.name }}</h2>
+						                  <h2 class="font-bold text-on-surface text-base">{{ product.name }}</h2>
 						                </div>
 					                </a>
 					                <div class="min-w-[100px] flex justify-end">
-						                <p class="font-bold text-base-content text-base min-w-fit rounded-md">{{ cart_item.total_price }} ₽</p>
+						                <p class="font-bold text-on-surface text-base min-w-fit rounded-md">{{ cart_item.total_price }} ₽</p>
 					                </div>
 				                </div>
 		                    <div class="flex justify-between items-center">
@@ -143,7 +143,7 @@
 			</div>
 		{% else %}
 			<div class="flex flex-col gap-2 items-center justify-center text-center min-h-[50vh]">
-        <p class="font-bold text-base-content text-2xl max-md:text-xl">{% trans "Your cart is empty" %}</p>
+        <p class="font-bold text-on-surface text-2xl max-md:text-xl">{% trans "Your cart is empty" %}</p>
 		    <a class="button button--primary mt-2" href="{% url 'catalog:category-list' %}">{% trans "Return to catalog" %}</a>
 			</div>
 		{% endif %}

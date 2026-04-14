@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const active = embla.selectedScrollSnap()
     thumbs.forEach(el => {
       const isActive = +el.dataset.index === active
-      el.classList.toggle("border-base-300", isActive)
+      el.classList.toggle("border-edge", isActive)
       el.classList.toggle("border-transparent", !isActive)
     })
   }

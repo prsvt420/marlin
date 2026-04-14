@@ -19,16 +19,18 @@
   --color-azure: oklch(0.623 0.143 253.35);
   --color-laser-lemon: oklch(0.905 0.182 98.111);
 
-  --color-base-100: var(--color-white);
-  --color-base-200: var(--color-smoky-white);
-  --color-base-300: var(--color-platinum);
-  --color-base-content: var(--color-black);
+  --color-surface: var(--color-white);
+  --color-surface-dim: var(--color-smoky-white);
+  --color-on-surface: var(--color-black);
+
+  --color-edge: var(--color-platinum);
+
+  --color-accent: var(--color-laser-lemon);
 
   --color-primary: var(--color-black);
-  --color-primary-content: var(--color-white);
-
+  --color-on-primary: var(--color-white);
   --color-secondary: var(--color-smoky-white);
-  --color-secondary-content: var(--color-black);
+  --color-on-secondary: var(--color-black);
 
   --color-error: var(--color-amaranth);
   --color-success: var(--color-emerald);
@@ -65,19 +67,19 @@
 
 @layer components {
   .link {
-    @apply text-base cursor-pointer transition duration-300 ease-in-out text-base-content/60 hover:text-base-content;
+    @apply text-base cursor-pointer transition duration-300 ease-in-out text-on-surface/60 hover:text-on-surface;
   }
 
   .link--active {
-    @apply !text-base-content;
+    @apply !text-on-surface;
   }
 
   .input {
-    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-base-content;
+    @apply rounded-field text-base px-5 py-3 h-12 outline-none text-on-surface;
   }
 
   .input::placeholder {
-    @apply text-base-content/60;
+    @apply text-on-surface/60;
   }
 
   input:-webkit-autofill {
@@ -89,15 +91,15 @@
   }
 
   .button--primary {
-    @apply bg-primary text-primary-content hover:bg-primary/80;
+    @apply bg-primary text-on-primary hover:bg-primary/80;
   }
 
   .button--secondary {
-    @apply bg-secondary text-secondary-content hover:hover:bg-[#e4e4e4];
+    @apply bg-secondary text-on-secondary hover:bg-[#e4e4e4];
   }
 
   .button--disabled {
-    @apply cursor-default text-primary-content !bg-primary/80;
+    @apply cursor-default text-on-primary !bg-primary/80;
   }
 
   .button--vk {

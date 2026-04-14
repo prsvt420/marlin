@@ -1,19 +1,19 @@
 {% load static i18n %}
 
-<header class="bg-base-100 select-none sticky h-[80px] inset-x-0 top-0 z-10 border-b border-base-300">
+<header class="bg-surface select-none sticky h-[80px] inset-x-0 top-0 z-10 border-b border-edge">
 	<div class="flex items-center justify-between gap-8 py-4 px-8 max-md:px-4 max-w-page mx-auto">
 		<a class="flex items-center gap-2" href="{% url 'pages:home' %}">
 			<img class="size-12" src="{% static 'img/logo.png' %}" alt="" draggable="false">
 			<div>
-				<p class="font-bold text-base text-base-content leading-none">Марлин</p>
-				<small class="text-xs text-base-content/60 leading-none block">{% trans "Fresh products near you" %}</small>
+				<p class="font-bold text-base text-on-surface leading-none">Марлин</p>
+				<small class="text-xs text-on-surface/60 leading-none block">{% trans "Fresh products near you" %}</small>
 			</div>
 		</a>
 
 		<div class="relative flex-1 max-md:hidden">
-		  <svg class="absolute left-4 top-1/2 -translate-y-1/2 size-4 text-base-content/40 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+		  <svg class="absolute left-4 top-1/2 -translate-y-1/2 size-4 text-on-surface/40 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
 			<form action="{% url 'catalog:product-search-list' %}" method="get" novalidate>
-				<input id="search-input" class="input bg-base-200 w-full pl-10 text-sm" value="{{ filter.form.q.value|default_if_none:'' }}" type="text" name="q" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
+				<input id="search-input" class="input bg-surface-dim w-full pl-10 text-sm" value="{{ filter.form.q.value|default_if_none:'' }}" type="text" name="q" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
 			</form>
 		</div>
 
@@ -30,7 +30,7 @@
 	          <a class="flex flex-col items-center justify-center h-12 link text-sm {% if current_view_name == 'carts:detail' %}link--active{% endif %}" href="{% url 'carts:detail' %}">
 		          <div class="relative">
                 <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path fill-rule="evenodd" clip-rule="evenodd" d="M5.57386 4.69147C4.74068 5.38295 4.52122 6.55339 4.08231 8.89427L3.33231 12.8943C2.71512 16.186 2.40652 17.8318 3.30624 18.9159C4.20595 20 5.88048 20 9.22954 20H14.7704C18.1195 20 19.794 20 20.6937 18.9159C21.5934 17.8318 21.2849 16.186 20.6677 12.8943L19.9177 8.89427C19.4787 6.55339 19.2593 5.38295 18.4261 4.69147C17.5929 4 16.4021 4 14.0204 4H9.97954C7.59787 4 6.40703 4 5.57386 4.69147ZM9.87822 7.75007C10.1875 8.62497 11.0219 9.25 12.0004 9.25C12.9789 9.25 13.8133 8.62497 14.1225 7.75007C14.2606 7.35953 14.6891 7.15483 15.0796 7.29287C15.4701 7.43091 15.6748 7.8594 15.5368 8.24993C15.0224 9.70541 13.6343 10.75 12.0004 10.75C10.3664 10.75 8.97839 9.70541 8.46396 8.24993C8.32592 7.8594 8.53061 7.43091 8.92115 7.29287C9.31169 7.15483 9.74018 7.35953 9.87822 7.75007Z"></path></g></svg>
-				        <span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-desktop" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-base-content p-1 bg-laser-lemon rounded-full min-w-[16px] h-[16px]">
+				        <span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-desktop" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-on-surface p-1 bg-accent rounded-full min-w-[16px] h-[16px]">
 				          {% if cart.total_quantity > 99 %}99+{% else %}{{ cart.total_quantity }}{% endif %}
 				        </span>
 		          </div>
@@ -71,8 +71,8 @@
 				<span class="block w-5 h-0.5 bg-current rounded-full"></span>
 			</button>
 
-			<div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-full bg-base-100 z-20 translate-x-full transition-transform duration-300 ease-in-out min-md:hidden">
-				<div class="flex items-center justify-between py-2 px-4 mx-auto border-b border-base-300 h-[80px]">
+			<div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-full bg-surface z-20 translate-x-full transition-transform duration-300 ease-in-out min-md:hidden">
+				<div class="flex items-center justify-between py-2 px-4 mx-auto border-b border-edge h-[80px]">
 					<span class="font-bold">{% trans "Menu" %}</span>
 					<button id="close-mobile-menu-btn" class="flex items-center justify-center size-8 link">
 					  <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -92,7 +92,7 @@
 		          <a class="flex items-center gap-2 link text-sm {% if current_view_name == 'carts:detail' %}link--active{% endif %}" href="{% url 'carts:detail' %}">
 			          <div class="relative">
                   <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g><path fill-rule="evenodd" clip-rule="evenodd" d="M5.57386 4.69147C4.74068 5.38295 4.52122 6.55339 4.08231 8.89427L3.33231 12.8943C2.71512 16.186 2.40652 17.8318 3.30624 18.9159C4.20595 20 5.88048 20 9.22954 20H14.7704C18.1195 20 19.794 20 20.6937 18.9159C21.5934 17.8318 21.2849 16.186 20.6677 12.8943L19.9177 8.89427C19.4787 6.55339 19.2593 5.38295 18.4261 4.69147C17.5929 4 16.4021 4 14.0204 4H9.97954C7.59787 4 6.40703 4 5.57386 4.69147ZM9.87822 7.75007C10.1875 8.62497 11.0219 9.25 12.0004 9.25C12.9789 9.25 13.8133 8.62497 14.1225 7.75007C14.2606 7.35953 14.6891 7.15483 15.0796 7.29287C15.4701 7.43091 15.6748 7.8594 15.5368 8.24993C15.0224 9.70541 13.6343 10.75 12.0004 10.75C10.3664 10.75 8.97839 9.70541 8.46396 8.24993C8.32592 7.8594 8.53061 7.43091 8.92115 7.29287C9.31169 7.15483 9.74018 7.35953 9.87822 7.75007Z"></path></g></svg>
-					        <span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-mobile" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-base-content p-1 bg-laser-lemon rounded-full min-w-[16px] h-[16px]" {% if not cart.total_quantity %}hidden{% endif %}>
+					        <span {% if not cart.total_quantity %}hidden{% endif %} id="cart-item-counter-badge-mobile" class="flex items-center justify-center font-bold absolute -top-2 right-0 translate-x-1/2 text-xs text-on-surface p-1 bg-accent rounded-full min-w-[16px] h-[16px]" {% if not cart.total_quantity %}hidden{% endif %}>
 				            {% if cart.total_quantity > 99 %}99+{% else %}{{ cart.total_quantity }}{% endif %}
 					        </span>
 			          </div>

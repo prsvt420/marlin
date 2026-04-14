@@ -5,7 +5,7 @@
     {% if not cart_item %}
       <form hx-post="{% url 'carts:cart-item-create' product_pk=product.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
         <button class="button button--primary w-full">
-	        <span class="spinner htmx-indicator-show border-primary-content border-t-primary"></span>
+	        <span class="spinner htmx-indicator-show border-on-primary border-t-primary"></span>
 	        <span class="htmx-indicator-hide">{% trans "Add to Cart" %}</span>
         </button>
       </form>
@@ -28,7 +28,7 @@
 				{% endif %}
 
 				<div class="spinner htmx-indicator-show"></div>
-				<p class="htmx-indicator-hide text-base font-bold text-base-content">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
+				<p class="htmx-indicator-hide text-base font-bold text-on-surface">{{ cart_item.quantity|floatformat:"-2u" }} {{ product.get_unit_type_display }}</p>
 
 				{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
         {% if increment_allowed_cart_item_quantity %}

@@ -2,28 +2,28 @@
 
 <a href="{{ product.get_absolute_url }}">
 	<article class="h-full flex flex-col gap-3 transition duration-300 ease-in-out hover:-translate-y-0.5">
-		<div class="relative bg-base-200 rounded-box aspect-square overflow-hidden flex items-center justify-center">
+		<div class="relative bg-surface-dim rounded-box aspect-square overflow-hidden flex items-center justify-center">
       {% if product.discount %}
-			  <span class="absolute top-3 right-3 z-5 bg-laser-lemon text-base-content text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+			  <span class="absolute top-3 right-3 z-5 bg-accent text-on-surface text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
 			{% endif %}
 			<img class="p-4 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 		</div>
 		<div class="flex flex-col">
 			<p class="inline-flex items-center gap-1 text-sm font-bold">
-				<svg class="size-4 fill-laser-lemon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
-				<span class="text-base-content">4.74</span> <span class="text-base-content/60">(1428 оценок)</span>
+				<svg class="size-4 fill-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+				<span class="text-on-surface">4.74</span> <span class="text-on-surface/60">(1428 оценок)</span>
 			</p>
-			<h2 class="font-bold text-base-content text-base">{{ product.name }}</h2>
-      <p class="font-bold text-base-content/60 text-sm">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
+			<h2 class="font-bold text-on-surface text-base">{{ product.name }}</h2>
+      <p class="font-bold text-on-surface/60 text-sm">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
 		</div>
 
 		{% if product.discount %}
 			<p class="mt-auto inline-flex gap-2 items-baseline font-bold">
-				<span class="text-base text-base-content p-1 bg-laser-lemon rounded-md">{{ product.final_price }} ₽</span>
-				<span class="relative text-sm text-base-content/60 after:text-red-400 after:absolute after:left-0 after:right-0 after:top-1/2 after:h-px after:bg-current after:rotate-[-15deg]">{{ product.price }} ₽</span>
+				<span class="text-base text-on-surface p-1 bg-accent rounded-md">{{ product.final_price }} ₽</span>
+				<span class="relative text-sm text-on-surface/60 after:text-red-400 after:absolute after:left-0 after:right-0 after:top-1/2 after:h-px after:bg-current after:rotate-[-15deg]">{{ product.price }} ₽</span>
 			</p>
 		{% else %}
-			<p class="mt-auto font-bold text-base-content text-base">{{ product.price }} ₽</p>
+			<p class="mt-auto font-bold text-on-surface text-base">{{ product.price }} ₽</p>
 		{% endif %}
 
 		<div data-product-cart-item-control>
