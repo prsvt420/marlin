@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class OfferView(TemplateView):
-    template_name = "pages/redesign/offer.html"
+    template_name = "pages/offer.html"
     extra_context = {
         "breadcrumbs": [
             {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},

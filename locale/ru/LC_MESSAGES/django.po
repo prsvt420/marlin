@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-14 14:56+0800\n"
+"POT-Creation-Date: 2026-04-14 14:58+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -58,8 +58,6 @@ msgstr "Подтверждение нового пароля обязатель�
 #: .\apps\accounts\templates\accounts\password_reset.html:21
 #: .\apps\accounts\templates\accounts\signin.html:21
 #: .\apps\accounts\templates\accounts\signup.html:21
-#: .\apps\pages\templates\pages\contact.html:38
-#: .\apps\pages\templates\pages\contact.html:100
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -192,7 +190,6 @@ msgstr "Сброс пароля"
 #: .\apps\accounts\templates\accounts\password_reset.html:22
 #: .\apps\accounts\templates\accounts\signin.html:22
 #: .\apps\accounts\templates\accounts\signup.html:22
-#: .\apps\pages\templates\pages\contact.html:39
 msgid "Enter email"
 msgstr "Введите email"
 
@@ -1344,88 +1341,19 @@ msgstr ""
 msgid "Contacts"
 msgstr "Контакты"
 
-#: .\apps\pages\templates\pages\contact.html:13
-msgid "Get in touch with us."
-msgstr "Свяжитесь с нами."
-
-#: .\apps\pages\templates\pages\contact.html:13
-msgid "We are always available and happy to answer your questions."
-msgstr "Мы всегда на связи и будем рады ответить на ваши вопросы."
-
-#: .\apps\pages\templates\pages\contact.html:24
-msgid "Send us a message"
-msgstr "Напишите нам сообщение"
-
-#: .\apps\pages\templates\pages\contact.html:34
-msgid "Full name"
-msgstr "ФИО"
-
-#: .\apps\pages\templates\pages\contact.html:35
-msgid "Enter full name"
-msgstr "Введите ФИО"
-
-#: .\apps\pages\templates\pages\contact.html:42
-#: .\apps\pages\templates\pages\contact.html:72
-msgid "Phone number"
-msgstr "Номер телефона"
-
-#: .\apps\pages\templates\pages\contact.html:46
-msgid "Subject"
-msgstr "Тема"
-
-#: .\apps\pages\templates\pages\contact.html:47
-msgid "Enter subject"
-msgstr "Введите тему"
-
-#: .\apps\pages\templates\pages\contact.html:50
-msgid "Message"
-msgstr "Сообщение"
-
-#: .\apps\pages\templates\pages\contact.html:51
-msgid "Enter message"
-msgstr "Введите сообщение"
-
-#: .\apps\pages\templates\pages\contact.html:59
-msgid "Send"
-msgstr "Отправить"
-
-#: .\apps\pages\templates\pages\contact.html:62
-msgid "Contact information"
-msgstr "Контактная информация"
-
-#: .\apps\pages\templates\pages\contact.html:66
-msgid "Address"
-msgstr "Адрес"
-
-#: .\apps\pages\templates\pages\contact.html:67
-msgid "Moscow, Example Street, 15"
-msgstr "г. Москва, ул. Примерная, д. 15"
-
-#: .\apps\pages\templates\pages\contact.html:78
-msgid "Social networks"
-msgstr "Соцсети"
-
-#: .\apps\pages\templates\pages\contact.html:94
-msgid "Working hours"
-msgstr "Часы работы"
-
-#: .\apps\pages\templates\pages\contact.html:95
-msgid "Mon-Sun from 9:00 to 21:00"
-msgstr "ПН-ВС с 9:00 до 21:00"
-
-#: .\apps\pages\templates\pages\redesign\offer.html:4
+#: .\apps\pages\templates\pages\offer.html:4
 #: .\apps\pages\views\offer_view.py:12 .\templates\includes\footer.html:10
 #: .\templates\redesign\includes\_footer.html:18
 msgid "Public Offer"
 msgstr "Публичная оферта"
 
-#: .\apps\pages\templates\pages\redesign\privacy.html:4
+#: .\apps\pages\templates\pages\privacy.html:4
 #: .\apps\pages\views\privacy_view.py:12 .\templates\includes\footer.html:7
 #: .\templates\redesign\includes\_footer.html:13
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
-#: .\apps\pages\templates\pages\redesign\terms.html:4
+#: .\apps\pages\templates\pages\terms.html:4
 #: .\apps\pages\views\terms_view.py:12 .\templates\includes\footer.html:13
 #: .\templates\redesign\includes\_footer.html:23
 msgid "Terms of Service"

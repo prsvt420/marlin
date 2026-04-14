@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class TermsView(TemplateView):
-    template_name = "pages/redesign/terms.html"
+    template_name = "pages/terms.html"
     extra_context = {
         "breadcrumbs": [
             {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},

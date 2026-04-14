@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class PrivacyView(TemplateView):
-    template_name = "pages/redesign/privacy.html"
+    template_name = "pages/privacy.html"
     extra_context = {
         "breadcrumbs": [
             {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
