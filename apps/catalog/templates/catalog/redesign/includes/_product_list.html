@@ -1,0 +1,16 @@
+{% load static i18n %}
+
+{% if products %}
+	<ul class="grid gap-y-8 gap-x-4 grid-cols-5 max-lg:grid-cols-4 max-md:gap-y-4 max-md:gap-x-2 max-md:grid-cols-3 max-sm:grid-cols-2">
+		{% for product in products %}
+			<li>
+				{% include "catalog/redesign/includes/_product_card.html" %}
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<div class="flex flex-col gap-2 items-center justify-center text-center min-h-[50vh]">
+    <p class="font-bold text-base-content text-2xl max-md:text-xl">{% trans "No available products yet" %}</p>
+    <a class="button button--primary mt-2" href="{% url 'catalog:category-list' %}">{% trans "Return to catalog" %}</a>
+	</div>
+{% endif %}
