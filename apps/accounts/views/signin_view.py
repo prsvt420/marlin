@@ -14,7 +14,7 @@ from apps.accounts.services import UserService
 
 
 class SignInView(SuccessMessageMixin, LoginView):
-    template_name = "accounts/redesign/signin.html"
+    template_name = "accounts/signin.html"
     success_message = _("You have successfully signed in. Welcome!")
     redirect_authenticated_user = True
     form_class = SignInForm

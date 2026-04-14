@@ -14,7 +14,7 @@ from config.settings import YANDEX_SMART_CAPTCHA_CLIENT_KEY
 
 
 class SignUpView(SuccessMessageMixin, CreateView):
-    template_name = "accounts/redesign/signup.html"
+    template_name = "accounts/signup.html"
     form_class = SignUpForm
     success_url = reverse_lazy(viewname="accounts:signin")
     success_message = _(

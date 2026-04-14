@@ -21,7 +21,7 @@ from apps.accounts.services import UserService
 
 class PasswordResetConfirmView(SuccessMessageMixin, _PasswordResetConfirmView):
     form_class = SetPasswordForm
-    template_name = "accounts/redesign/password_reset_confirm.html"
+    template_name = "accounts/password_reset_confirm.html"
     success_message = _(
         "Your password has been updated. You can now sign"
         " in with your new credentials."
