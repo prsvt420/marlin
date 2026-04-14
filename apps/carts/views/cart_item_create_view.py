@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
@@ -11,12 +10,13 @@ from apps.carts.exceptions import (
     InvalidCartItemQuantityError,
     ProductUnavailableError,
 )
+from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.services import CartService
 from apps.catalog.selectors import ProductSelector
 
 
-class CartItemCreateView(LoginRequiredMixin, View):
+class CartItemCreateView(HtmxLoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, product_pk: int) -> HttpResponse:
         cart: Cart = CartService().get_or_create_active_cart_for_user(

@@ -1,19 +1,19 @@
 from typing import Optional
 
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
 from apps.carts.exceptions import CartItemNotFoundError
+from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart, CartItem
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
 
 
-class CartItemDeleteView(LoginRequiredMixin, View):
+class CartItemDeleteView(HtmxLoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, cart_item_pk: int) -> HttpResponse:
         cart: Cart = CartService().get_or_create_active_cart_for_user(

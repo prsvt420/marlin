@@ -1,7 +1,6 @@
 from typing import Dict, Optional
 
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
@@ -13,12 +12,13 @@ from apps.carts.exceptions import (
     InvalidCartItemQuantityError,
     ProductUnavailableError,
 )
+from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart, CartItem
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
 
 
-class CartItemUpdateQuantityView(LoginRequiredMixin, View):
+class CartItemUpdateQuantityView(HtmxLoginRequiredMixin, View):
 
     def post(self, request: HttpRequest, cart_item_pk: int) -> HttpResponse:
         action: Optional[str] = request.POST.get(key="action")
