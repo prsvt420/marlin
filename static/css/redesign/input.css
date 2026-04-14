@@ -109,6 +109,6 @@
   }
 
   .spinner {
-    @apply w-5 h-5 border-3 border-primary border-t-transparent rounded-full animate-spin;
+    @apply size-5 border-3 border-primary border-t-transparent rounded-full animate-spin;
   }
 }

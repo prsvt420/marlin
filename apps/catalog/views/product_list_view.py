@@ -1,4 +1,4 @@
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 from django.db.models import QuerySet
 from django.http import Http404
@@ -17,6 +17,11 @@ class ProductListView(FilterView):
     paginate_by = 20
     paginate_orphans = 4
     filterset_class = ProductFilter
+
+    def get_template_names(self) -> List[str]:
+        if self.request.htmx:  # type: ignore
+            return ["catalog/redesign/includes/_product_list_htmx.html"]
+        return [self.template_name]
 
     @property
     def category_slug(self) -> str:

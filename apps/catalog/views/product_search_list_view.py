@@ -1,4 +1,4 @@
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
@@ -18,6 +18,11 @@ class ProductSearchListView(FilterView):
     paginate_by = 20
     paginate_orphans = 4
     filterset_class = ProductSearchFilter
+
+    def get_template_names(self) -> List[str]:
+        if self.request.htmx:  # type: ignore
+            return ["catalog/redesign/includes/_product_list_htmx.html"]
+        return [self.template_name]
 
     def get(self, request: HttpRequest, **kwargs: Any) -> HttpResponse:
         if not request.GET.get(key="q", default="").strip():
