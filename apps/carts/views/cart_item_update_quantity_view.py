@@ -1,3 +1,4 @@
+import re
 from typing import Dict, Optional
 
 from django.contrib import messages
@@ -20,7 +21,9 @@ from apps.carts.services import CartService
 
 class CartItemUpdateQuantityView(HtmxLoginRequiredMixin, View):
 
-    def post(self, request: HttpRequest, cart_item_pk: int) -> HttpResponse:
+    def post(  # noqa: C901
+        self, request: HttpRequest, cart_item_pk: int
+    ) -> HttpResponse:
         action: Optional[str] = request.POST.get(key="action")
         cart: Cart = CartService().get_or_create_active_cart_for_user(
             user=self.request.user  # type: ignore
@@ -97,10 +100,30 @@ class CartItemUpdateQuantityView(HtmxLoginRequiredMixin, View):
             cart_item: Optional[CartItem] = CartSelector().get_cart_item(
                 cart=cart, cart_item_pk=cart_item_pk
             )
+
+            htmx_target: Optional[str] = request.htmx.target  # type: ignore
+
+            if htmx_target and re.match(
+                pattern=r"^cart-item-control-\d+$", string=htmx_target
+            ):
+                if cart_item:
+                    return render(
+                        request,
+                        template_name=(
+                            "carts/includes/_cart_item_control_htmx.html"
+                        ),
+                        context={"cart_item": cart_item},
+                    )
+                return render(
+                    request,
+                    template_name="carts/includes/_cart_item_stale_htmx.html",
+                    context={"cart_item_pk": cart_item_pk},
+                )
+
             return render(
                 request,
                 template_name=(
-                    "carts/includes/" "_product_cart_item_control_htmx.html"
+                    "carts/includes/_product_cart_item_control_htmx.html"
                 ),
                 context={
                     "product": cart_item.product if cart_item else None,

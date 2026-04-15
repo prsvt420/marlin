@@ -1,0 +1,9 @@
+{% include "carts/includes/_cart_item_counter_badge_oob.html" %}
+{% include "includes/_messages_oob.html" %}
+{% if cart.cart_items.exists %}
+	{% include "carts/includes/_cart_summary_oob.html" %}
+	{% include "carts/includes/_available_cart_items_section_state_oob.html" %}
+	{% include "carts/includes/_unavailable_cart_items_section_state_oob.html" %}
+{% else %}
+	{% include "carts/includes/_cart_empty_oob.html" %}
+{% endif %}

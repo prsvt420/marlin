@@ -1,0 +1,3 @@
+{% load i18n %}
+
+<p id="available-cart-items-counter" class="font-bold text-on-surface text-2xl max-md:text-xl" hx-swap-oob="true">{% blocktrans count count_cart_items=available_cart_items|length %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} product</span>{% plural %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>

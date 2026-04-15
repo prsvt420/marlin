@@ -1,3 +1,4 @@
+import re
 from typing import Optional
 
 from django.contrib import messages
@@ -53,10 +54,28 @@ class CartItemDeleteView(HtmxLoginRequiredMixin, View):
             )
 
         if request.htmx:  # type: ignore
+            htmx_target: Optional[str] = request.htmx.target  # type: ignore
+
+            if htmx_target and re.match(
+                pattern=r"^cart-item-\d+$", string=htmx_target
+            ):
+                if cart_item:
+                    return render(
+                        request,
+                        template_name=(
+                            "carts/includes/_cart_item_delete_htmx.html"
+                        ),
+                    )
+                return render(
+                    request,
+                    template_name="carts/includes/_cart_item_stale_htmx.html",
+                    context={"cart_item_pk": cart_item_pk},
+                )
+
             return render(
                 request,
                 template_name=(
-                    "carts/includes/" "_product_cart_item_control_htmx.html"
+                    "carts/includes/_product_cart_item_control_htmx.html"
                 ),
                 context={
                     "product": cart_item.product if cart_item else None,

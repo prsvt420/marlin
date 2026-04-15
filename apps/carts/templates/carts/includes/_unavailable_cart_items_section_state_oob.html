@@ -1,0 +1,5 @@
+{% if unavailable_cart_items %}
+  {% include "carts/includes/_unavailable_cart_items_counter_oob.html" %}
+{% else %}
+  <div id="unavailable-cart-items-section" hidden hx-swap-oob="true"></div>
+{% endif %}

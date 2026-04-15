@@ -1,0 +1,37 @@
+{% load static i18n %}
+
+<aside id="cart-summary" class="flex flex-col gap-3 max-md:self-center shadow-surface p-4 rounded-box h-fit" hx-swap-oob="true">
+  <form class="relative w-full" action="">
+    <input class="input {% if form.username.errors %}outline-error{% endif %}" name="promo_code" type="text" value="" placeholder="{% trans 'Enter promo code' %}">
+    <button class="absolute right-4 top-1/2 -translate-y-1/2 link" type="button">
+      <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </button>
+    {% if form.promo_code.errors %}
+      <p class="text-sm text-error">{{ form.promo_code.errors.0 }}</p>
+    {% endif %}
+  </form>
+  <ul class="flex flex-col divide-dashed divide-y divide-edge">
+    <li class="flex font-bold justify-between text-xl py-3">
+      <p class="text-base-content">{% trans "Total" %}</p>
+      <p>{{ cart_prices.total_price }} ₽</p>
+    </li>
+    <li class="flex text-base justify-between py-3">
+      <p>{% trans "Products" %}</p>
+      <p class="font-bold">{{ cart_prices.products_total_price }} ₽</p>
+    </li>
+    <li class="flex text-base flex-col py-3">
+      <div class="flex justify-between">
+        <p>{% trans "Assembly" %}</p>
+        <p class="font-bold">{% trans "Free" %}</p>
+      </div>
+      <div class="flex text-base justify-between">
+        <p>{% trans "Delivery" %}</p>
+        <p class="font-bold">{% trans "Free" %}</p>
+      </div>
+    </li>
+  </ul>
+  <form action="#" method="post" novalidate>
+    {% csrf_token %}
+    <button class="w-full button button--primary" type="submit">{% trans "Go to checkout" %}</button>
+  </form>
+</aside>

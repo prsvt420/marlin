@@ -1,0 +1,26 @@
+{% load static i18n %}
+
+
+<div id="available-cart-items-section" class="flex flex-col" {% if not available_cart_items %}hidden{% endif %}>
+	<div class="flex items-baseline justify-between">
+		<p id="available-cart-items-counter" class="font-bold text-on-surface text-2xl max-md:text-xl">{% blocktrans count count_cart_items=available_cart_items|length %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} product</span>{% plural %}In stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
+    <form hx-post="{% url 'carts:clear' %}" hx-target="#cart-content" hx-swap="outerHTML">
+      {% csrf_token %}
+      <button class="link text-sm" type="submit">{% trans "Clear" %}</button>
+    </form>
+	</div>
+  <ul class="flex flex-col divide-y divide-surface-dim">
+    {% for cart_item in available_cart_items %}
+			{% include "carts/includes/_available_cart_item.html" %}
+    {% endfor %}
+  </ul>
+</div>
+
+<div id="unavailable-cart-items-section" class="flex flex-col" {% if not unavailable_cart_items %}hidden{% endif %}>
+		<p id="unavailable-cart-items-counter" class="font-bold text-on-surface text-2xl max-md:text-xl">{% blocktrans count count_cart_items=unavailable_cart_items|length %}Out of stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} product</span>{% plural %}Out of stock <span class="font-medium text-on-surface/60 text-sm">{{ count_cart_items }} products</span>{% endblocktrans %}</p>
+		<ul class="flex flex-col divide-y divide-surface-dim">
+    {% for cart_item in unavailable_cart_items %}
+			{% include "carts/includes/_unavailable_cart_item.html" %}
+    {% endfor %}
+  </ul>
+</div>

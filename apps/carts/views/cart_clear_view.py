@@ -1,15 +1,15 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
+from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.services import CartService
 
 
-class CartClearView(LoginRequiredMixin, View):
+class CartClearView(HtmxLoginRequiredMixin, View):
 
     def post(self, request: HttpRequest) -> HttpResponse:
         cart: Cart = CartService().get_or_create_active_cart_for_user(
@@ -20,4 +20,9 @@ class CartClearView(LoginRequiredMixin, View):
             request,
             _("Your cart has been successfully cleared."),
         )
+        if request.htmx:  # type: ignore
+            return render(
+                request,
+                template_name="carts/includes/_cart_clear_htmx.html",
+            )
         return redirect(to="carts:detail")

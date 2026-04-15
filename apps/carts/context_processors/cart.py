@@ -22,8 +22,16 @@ def cart(request: HttpRequest) -> Dict[str, Any]:
     cart_items_map: Dict[int, CartItem] = CartSelector().get_cart_items_map(
         cart=cart
     )
+    cart_prices = CartSelector().get_cart_prices(cart=cart)
 
     context["cart"] = cart
     context["cart_items_map"] = cart_items_map
+    context["cart_prices"] = cart_prices
+    context["available_cart_items"] = CartSelector().get_available_cart_items(
+        cart=cart
+    )
+    context["unavailable_cart_items"] = (
+        CartSelector().get_unavailable_cart_items(cart=cart)
+    )
 
     return context

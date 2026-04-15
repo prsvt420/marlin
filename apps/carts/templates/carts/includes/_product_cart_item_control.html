@@ -15,7 +15,7 @@
 				{% if decrement_allowed_cart_item_quantity %}
 					<form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
 						<input type="hidden" name="action" value="decrement">
-						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="decrement">
+						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit">
 							<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
 						</button>
 					</form>
@@ -33,13 +33,13 @@
 				{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
         {% if increment_allowed_cart_item_quantity %}
           <form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">
-            <input type="hidden" name="action" value="increment">
-						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit" name="action" value="increment">
+	          <input type="hidden" name="action" value="increment">
+						<button class="flex items-center justify-center button p-2 size-10 button--primary" type="submit">
 							<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 						</button>
 					</form>
 				{% else %}
-					<button class="flex items-center justify-center button button--disabled p-2 size-10 button--primary" type="submit" name="action" value="increment">
+					<button class="flex items-center justify-center button button--disabled p-2 size-10 button--primary" type="submit">
             <svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
 					</button>
 				{% endif %}

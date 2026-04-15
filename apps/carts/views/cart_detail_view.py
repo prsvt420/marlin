@@ -1,18 +1,18 @@
 from typing import Any, Dict, Optional
 
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView
 
+from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
 
 
-class CartDetailView(LoginRequiredMixin, DetailView):
+class CartDetailView(HtmxLoginRequiredMixin, DetailView):
     template_name = "carts/cart_detail.html"
     context_object_name = "cart"
 
@@ -43,9 +43,6 @@ class CartDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context: Dict[str, Any] = super().get_context_data(**kwargs)
-        context["cart_prices"] = CartSelector().get_cart_prices(
-            cart=self.object
-        )
         context["available_cart_items"] = (
             CartSelector().get_available_cart_items(cart=self.object)
         )

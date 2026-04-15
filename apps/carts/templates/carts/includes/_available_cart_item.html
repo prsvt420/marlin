@@ -1,0 +1,39 @@
+{% load static %}
+
+{% with product=cart_item.product %}
+  <li id="cart-item-{{ cart_item.pk }}" data-cart-item class="flex items-start gap-4 py-4">
+    <a href="{{ product.get_absolute_url }}">
+      <div class="relative bg-surface-dim rounded-box size-20 max-md:size-18 overflow-hidden flex items-center justify-center">
+        {% if product.discount %}
+          <span class="absolute top-1 right-1 z-5 bg-accent text-on-surface text-xs font-bold px-1.5 py-0.5 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
+        {% endif %}
+        <img class="p-2 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
+      </div>
+    </a>
+
+    <div class="flex flex-col flex-1 w-full justify-between gap-2 max-md:justify-normal h-20 max-md:h-auto">
+      <div class="flex justify-between">
+        <a href="{{ product.get_absolute_url }}">
+          <div class="flex flex-col">
+            <h2 class="font-bold text-on-surface text-sm">{{ product.name }}</h2>
+						<p class="font-bold text-xs text-on-surface/60">{{ cart_item.quantity|floatformat:"-2u" }} {{ cart_item.product.get_unit_type_display }} x {{ cart_item.price_snapshot }} ₽</p>
+          </div>
+        </a>
+        <div class="min-w-[100px] flex justify-end">
+          <p class="font-bold text-on-surface text-sm min-w-fit rounded-md">{{ cart_item.total_price }} ₽</p>
+        </div>
+      </div>
+      <div class="flex justify-between items-center">
+				<form hx-post="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" hx-target="closest li[data-cart-item]" hx-swap="outerHTML" hx-indicator="this">
+					<button class="flex items-center justify-center button p-1 size-8 button--primary" type="submit">
+						<svg class="htmx-indicator-hide rounded-full size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M14.1111 6.5C13.5895 6.5 13.1667 6.92522 13.1667 7.44975C13.1667 7.97429 13.5895 8.39951 14.1111 8.39951H17.8889C18.4105 8.39951 18.8333 7.97429 18.8333 7.44975C18.8333 6.92522 18.4105 6.5 17.8889 6.5H14.1111Z" fill="currentColor"></path><path d="M14.1111 14.0978C14.6327 14.0978 15.0556 14.5231 15.0556 15.0478L15.0556 18.8468C15.0556 19.3715 14.6327 19.7968 14.1111 19.7968C13.5895 19.7968 13.1667 19.3715 13.1667 18.8468L13.1667 15.0478C13.1667 14.5231 13.5895 14.0978 14.1111 14.0978Z" fill="currentColor"></path><path d="M18.8333 15.0478C18.8333 14.5231 18.4105 14.0978 17.8889 14.0978C17.3673 14.0978 16.9444 14.5231 16.9444 15.0478V18.8468C16.9444 19.3715 17.3673 19.7968 17.8889 19.7968C18.4105 19.7968 18.8333 19.3715 18.8333 18.8468V15.0478Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 10.299C7.5 9.77448 7.92284 9.34926 8.44444 9.34926H23.5556C24.0772 9.34926 24.5 9.77448 24.5 10.299C24.5 10.8235 24.0772 11.2488 23.5556 11.2488H22.7711C22.6772 14.2049 22.5904 16.3141 22.4583 18.3391C22.4222 18.8915 22.3804 19.4181 22.3352 19.9146C22.325 20.0272 22.3151 20.1399 22.3053 20.2528C22.2422 20.9742 22.1786 21.7011 22.0158 22.4062C21.8503 23.1229 21.5784 23.7398 21.0562 24.2817C19.8598 25.5235 18.0872 25.5099 16.4719 25.4975C16.3128 25.4963 16.1553 25.4951 16 25.4951C15.8546 25.4951 15.7071 25.4961 15.5583 25.4971C13.9484 25.5081 12.1733 25.5202 10.9804 24.2836C10.4573 23.7414 10.1852 23.1221 10.0191 22.4029C9.85521 21.6937 9.79037 20.9626 9.72604 20.237C9.71592 20.1229 9.70577 20.0085 9.69529 19.8948C9.65014 19.4049 9.6079 18.8859 9.5708 18.3419C9.44042 16.4296 9.28251 14.1032 9.23872 11.2488H8.44444C7.92284 11.2488 7.5 10.8235 7.5 10.299ZM11.1278 11.2488H20.8812C20.7883 14.1661 20.7026 16.2348 20.5734 18.2147C20.5385 18.7501 20.4979 19.2605 20.4542 19.7417C20.3603 20.7747 20.2964 21.4546 20.1759 21.9765C20.0643 22.4598 19.9194 22.7318 19.6996 22.96C19.3604 23.312 18.9219 23.457 18.4438 23.5193C17.8731 23.5937 17.1322 23.5956 16.0247 23.5956C14.9127 23.5956 14.1681 23.5937 13.5948 23.5194C13.116 23.4573 12.6761 23.3134 12.3362 22.961C12.1174 22.7343 11.9718 22.4614 11.8589 21.973C11.7373 21.4467 11.672 20.7602 11.5761 19.7194C11.5323 19.2439 11.4913 18.7401 11.4553 18.212C11.3256 16.3099 11.1714 14.0346 11.1278 11.2488Z" fill="currentColor"></path></svg>
+						<span class="spinner size-3 border-2 htmx-indicator-show border-on-primary border-t-primary"></span>
+					</button>
+				</form>
+	      <div id="cart-item-control-{{ cart_item.pk }}" data-cart-item-control>
+          {% include "carts/includes/_cart_item_control.html" %}
+	      </div>
+      </div>
+    </div>
+  </li>
+{% endwith %}

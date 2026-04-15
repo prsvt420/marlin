@@ -1,0 +1,38 @@
+{% load static can_increment_cart_item_quantity can_decrement_cart_item_quantity %}
+
+<div class="flex items-center min-w-[120px] max-w-[120px] h-8 p-1 border border-primary rounded-field justify-between">
+	{% can_decrement_cart_item_quantity cart_item=cart_item as decrement_allowed_cart_item_quantity %}
+	{% if decrement_allowed_cart_item_quantity %}
+		<form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-cart-item-control]" hx-indicator="closest [data-cart-item-control]">
+			<input type="hidden" name="action" value="decrement">
+			<button class="flex items-center justify-center button p-1.5 size-6 button--primary" type="submit">
+				<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+			</button>
+		</form>
+	{% else %}
+		<form hx-post="{% url 'carts:cart-item-delete' cart_item_pk=cart_item.pk %}" hx-target="closest li[data-cart-item]" hx-swap="outerHTML" hx-indicator="closest [data-cart-item-control]">
+			<button class="flex items-center justify-center button p-1.5 size-6 button--primary" type="submit">
+				<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+			</button>
+		</form>
+	{% endif %}
+
+  <div class="flex-1 flex items-center justify-center">
+    <span class="spinner size-3 border-2 htmx-indicator-show"></span>
+    <p class="htmx-indicator-hide text-xs font-bold text-on-surface">{{ cart_item.quantity|floatformat:"-2u" }} {{ cart_item.product.get_unit_type_display }}</p>
+  </div>
+
+	{% can_increment_cart_item_quantity cart_item=cart_item as increment_allowed_cart_item_quantity %}
+  {% if increment_allowed_cart_item_quantity %}
+    <form hx-post="{% url 'carts:cart-item-update-quantity' cart_item_pk=cart_item.pk %}" hx-target="closest [data-cart-item-control]" hx-indicator="closest [data-cart-item-control]">
+      <input type="hidden" name="action" value="increment">
+	    <button class="flex items-center justify-center button p-1.5 size-6 button--primary" type="submit">
+				<svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+			</button>
+		</form>
+	{% else %}
+		<button class="flex items-center justify-center button button--disabled p-1.5 size-6 button--primary">
+      <svg class="rounded-full size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+		</button>
+	{% endif %}
+</div>
