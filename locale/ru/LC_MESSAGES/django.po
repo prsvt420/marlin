@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-14 23:08+0800\n"
+"POT-Creation-Date: 2026-04-15 18:26+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -636,11 +636,40 @@ msgstr[2] ""
 "Нет в наличии <span class=\"font-medium text-on-surface/60 text-"
 "sm\">%(count_cart_items)s продуктов</span>"
 
-#: .\apps\carts\templates\carts\cart_detail.html:146
+#: .\apps\carts\templates\carts\cart_detail.html:145
+msgid "Enter promo code"
+msgstr "Введите промокод"
+
+#: .\apps\carts\templates\carts\cart_detail.html:155
+msgid "Total"
+msgstr "Итого"
+
+#: .\apps\carts\templates\carts\cart_detail.html:159 .\config\settings.py:345
+msgid "Products"
+msgstr "Продукты"
+
+#: .\apps\carts\templates\carts\cart_detail.html:164
+msgid "Assembly"
+msgstr "Сборка"
+
+#: .\apps\carts\templates\carts\cart_detail.html:165
+#: .\apps\carts\templates\carts\cart_detail.html:169
+msgid "Free"
+msgstr "Бесплатно"
+
+#: .\apps\carts\templates\carts\cart_detail.html:168
+msgid "Delivery"
+msgstr "Доставка"
+
+#: .\apps\carts\templates\carts\cart_detail.html:175
+msgid "Go to checkout"
+msgstr "К оформлению"
+
+#: .\apps\carts\templates\carts\cart_detail.html:181
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
 
-#: .\apps\carts\templates\carts\cart_detail.html:147
+#: .\apps\carts\templates\carts\cart_detail.html:182
 #: .\apps\catalog\templates\catalog\includes\_product_list.html:21
 #: .\templates\403.html:11 .\templates\404.html:11
 msgid "Return to catalog"
@@ -1413,10 +1442,6 @@ msgstr "На данный момент вакансий нет"
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:345
-msgid "Products"
-msgstr "Продукты"
-
 #: .\config\settings.py:352
 msgid "Categories"
 msgstr "Категории"
@@ -1508,7 +1533,7 @@ msgstr "Скачайте приложение"
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\includes\_header.html:16
+#: .\templates\includes\_header.html:14
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
