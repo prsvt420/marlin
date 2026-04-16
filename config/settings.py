@@ -356,6 +356,13 @@ UNFOLD: Dict[str, Any] = {
                             "admin:catalog_category_changelist"
                         ),
                     },
+                    {
+                        "title": _("Favorites"),
+                        "icon": "favorite",
+                        "link": reverse_lazy(
+                            "admin:favorites_favorite_changelist"
+                        ),
+                    },
                 ],
             },
             {

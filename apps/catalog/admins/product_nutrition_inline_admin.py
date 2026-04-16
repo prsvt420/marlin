@@ -8,3 +8,4 @@ class ProductNutritionInline(TabularInline):
     extra = 0
     max_num = 1
     tab = True
+    autocomplete_fields = ("product",)

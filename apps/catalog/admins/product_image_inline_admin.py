@@ -7,3 +7,4 @@ class ProductImageInline(TabularInline):
     model = ProductImage
     extra = 1
     tab = True
+    autocomplete_fields = ("product",)

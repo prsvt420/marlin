@@ -12,6 +12,7 @@ class ProductImageAdmin(BaseModelAdmin):
     list_display = ("product", "image_preview", "sort_order")
     search_fields = ("product__name",)
     search_help_text = _("Search by product name")
+    autocomplete_fields = ("product",)
 
     @admin.display(description=_("Image preview"))
     def image_preview(self, obj: ProductImage) -> str:

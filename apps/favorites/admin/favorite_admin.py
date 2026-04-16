@@ -1,33 +1,28 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
-from apps.carts.models import CartItem
 from apps.core.admins import BaseModelAdmin
+from apps.favorites.models import Favorite
 
 
-@admin.register(CartItem)
-class CartItemAdmin(BaseModelAdmin):
+@admin.register(Favorite)
+class FavoriteAdmin(BaseModelAdmin):
     list_display = (
-        "cart",
+        "user",
         "product",
-        "quantity",
-        "price_snapshot",
-        "total_price",
-        "updated_at",
         "created_at",
+        "updated_at",
     )
     readonly_fields = (
-        "price_snapshot",
-        "total_price",
         "created_at",
         "updated_at",
     )
-    search_help_text = _("Search by cart or product name")
     search_fields = (
         "user__email",
         "product__name",
     )
+    search_help_text = _("Search by email or product name")
     autocomplete_fields = (
-        "cart",
+        "user",
         "product",
     )

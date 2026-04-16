@@ -16,3 +16,4 @@ class ProductNutritionAdmin(BaseModelAdmin):
     )
     search_fields = ("product__name",)
     search_help_text = _("Search by product name")
+    autocomplete_fields = ("product",)

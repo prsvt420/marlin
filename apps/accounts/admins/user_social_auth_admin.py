@@ -9,7 +9,7 @@ from apps.core.admins import BaseModelAdmin
 class UserSocialAuthAdmin(BaseModelAdmin, ModelAdmin):
     list_display = ("user", "provider", "uid", "created", "modified")
     list_filter = ("provider",)
-    raw_id_fields = ("user",)
+    autocomplete_fields = ("user",)
     readonly_fields = ("created", "modified")
     list_select_related = True
     search_fields = (

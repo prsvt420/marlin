@@ -15,6 +15,7 @@ class CartItemInline(TabularInline):
         "updated_at",
     )
     tab = True
+    autocomplete_fields = ("product",)
 
     @display(description=_("Total price"))
     def total_price(self, obj: CartItem) -> str:

@@ -40,6 +40,7 @@ class CartAdmin(BaseModelAdmin):
     list_filter = (("cart_status", ChoicesDropdownFilter),)
     search_fields = ("user__email",)
     search_help_text = _("Search by email")
+    autocomplete_fields = ("user",)
 
     @display(
         description=_("Status"),
