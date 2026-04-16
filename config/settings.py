@@ -59,6 +59,7 @@ INSTALLED_APPS: List[str] = [
     "apps.promotions",
     "apps.orders",
     "apps.reviews",
+    "apps.favorites",
 ]
 
 MIDDLEWARE: List[str] = [
