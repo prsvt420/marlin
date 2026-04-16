@@ -48,6 +48,15 @@
 				</div>
 			</div>
 		</div>
-    <small class="text-sm text-on-surface/60">&copy; <time datetime="2025">2025</time>-<time datetime="{% now 'Y' %}">{% now "Y" %}</time> marlinio.ru &bull; Марлин. {% trans "All rights reserved." %}</small>
+		<div class="flex justify-between max-md:flex-col gap-4">
+	    <small class="text-sm text-on-surface/60">&copy; <time datetime="2025">2025</time>-<time datetime="{% now 'Y' %}">{% now "Y" %}</time> marlinio.ru &bull; Марлин. {% trans "All rights reserved." %}</small>
+			<form action="{% url 'set_language' %}" method="post" class="flex gap-2">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ request.path }}">
+        <button type="submit" name="language" value="ru" class="link text-sm">Русскоязычная версия</button>
+        <span class="text-on-surface/60 select-none">/</span>
+        <button type="submit" name="language" value="en" class="link text-sm">English version</button>
+      </form>
+		</div>
 	</div>
 </footer>
