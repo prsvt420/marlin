@@ -55,9 +55,7 @@ class CartItem(BaseModel):  # type: ignore
             models.UniqueConstraint(
                 fields=["cart", "product"],
                 name="unique_cart_product",
-                violation_error_message=_(
-                    "This product is already in your cart."
-                ),
+                violation_error_message=_("This product is already in cart."),
             ),
         ]
         ordering = ("-created_at",)

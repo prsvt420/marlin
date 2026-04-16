@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-16 21:55+0800\n"
+"POT-Creation-Date: 2026-04-16 22:55+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -114,6 +114,7 @@ msgstr "Социальные аккаунты"
 
 #: .\apps\accounts\models\proxy_user_social_auth.py:13
 #: .\apps\accounts\models\user_model.py:52 .\apps\carts\models\cart_model.py:14
+#: .\apps\favorites\models\favorite_model.py:14
 msgid "user"
 msgstr "пользователь"
 
@@ -543,6 +544,7 @@ msgstr "корзина"
 #: .\apps\catalog\models\product_image_model.py:13
 #: .\apps\catalog\models\product_model.py:110
 #: .\apps\catalog\models\product_nutrition_model.py:12
+#: .\apps\favorites\models\favorite_model.py:20
 msgid "product"
 msgstr "продукт"
 
@@ -572,8 +574,8 @@ msgstr "элемент корзины"
 msgid "cart items"
 msgstr "элементы корзины"
 
-#: .\apps\carts\models\cart_item_model.py:59
-msgid "This product is already in your cart."
+#: .\apps\carts\models\cart_item_model.py:58
+msgid "This product is already in cart."
 msgstr "Этот продукт уже находится в корзине."
 
 #: .\apps\carts\models\cart_model.py:20
@@ -1094,6 +1096,18 @@ msgstr "Поиск по запросу"
 #: .\apps\favorites\apps.py:9
 msgid "Favorites"
 msgstr "Избранное"
+
+#: .\apps\favorites\models\favorite_model.py:26
+msgid "favorite"
+msgstr "избранное"
+
+#: .\apps\favorites\models\favorite_model.py:27
+msgid "favorites"
+msgstr "избранное"
+
+#: .\apps\favorites\models\favorite_model.py:34
+msgid "This product is already in favorites."
+msgstr "Этот продукт уже находится в корзине."
 
 #: .\apps\orders\apps.py:9
 msgid "Orders"
