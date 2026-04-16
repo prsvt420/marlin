@@ -73,6 +73,10 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
         route="reviews/",
         view=include(arg="apps.reviews.urls", namespace="reviews"),
     ),
+    path(
+        route="favorites/",
+        view=include(arg="apps.favorites.urls", namespace="favorites"),
+    ),
 ]
 
 
