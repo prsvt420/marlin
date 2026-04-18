@@ -1,0 +1,9 @@
+{% load i18n in_collection %}
+
+{% with is_favorited=product_pk|in_collection:favorite_product_pks %}
+	<form hx-post="{% url 'favorites:toggle' product_pk=product_pk %}" hx-target="closest [data-favorite-button]" hx-swap="innerHTML">
+		<button class="link {% if is_favorited %}text-error{% else %}hover:text-error{% endif %}">
+	    <svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.025 5.476a5.714 5.714 0 0 0-8.058-.022 5.714 5.714 0 0 0-8.003.077c-5.638 5.637 4.333 12.823 7.969 15.772 3.722-3.072 13.78-10.139 8.092-15.827Z"/></svg>
+	  </button>
+	</form>
+{% endwith %}

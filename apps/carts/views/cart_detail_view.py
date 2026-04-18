@@ -1,4 +1,4 @@
-from typing import Any, Dict, Optional
+from typing import Optional
 
 from django.contrib import messages
 from django.db.models import QuerySet
@@ -6,15 +6,24 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView
 
-from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
+from apps.core.mixins import HtmxLoginRequiredMixin
 
 
 class CartDetailView(HtmxLoginRequiredMixin, DetailView):
     template_name = "carts/cart_detail.html"
     context_object_name = "cart"
+    extra_context = {
+        "breadcrumbs": [
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
+            {
+                "name": _("Cart"),
+                "url": reverse_lazy(viewname="carts:detail"),
+            },
+        ]
+    }
 
     def get_object(self, queryset: Optional[QuerySet[Cart]] = None) -> Cart:
         cart: Cart = CartService().get_or_create_active_cart_for_user(
@@ -40,20 +49,3 @@ class CartDetailView(HtmxLoginRequiredMixin, DetailView):
             )
 
         return cart
-
-    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
-        context: Dict[str, Any] = super().get_context_data(**kwargs)
-        context["available_cart_items"] = (
-            CartSelector().get_available_cart_items(cart=self.object)
-        )
-        context["unavailable_cart_items"] = (
-            CartSelector().get_unavailable_cart_items(cart=self.object)
-        )
-        context["breadcrumbs"] = [
-            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
-            {
-                "name": _("Cart"),
-                "url": reverse_lazy(viewname="carts:detail"),
-            },
-        ]
-        return context

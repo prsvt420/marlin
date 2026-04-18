@@ -39,6 +39,9 @@
 				  {% endif %}
 	        <span class="max-md:hidden absolute bottom-3 left-3 z-5 bg-accent text-on-surface text-sm font-bold px-2 py-1 rounded-full">{% trans "In stock" %} {{ product.stock|floatformat:"u" }} {{ product.get_unit_type_display }}</span>
           <span class="hidden max-md:inline absolute bottom-3 left-3 z-5 bg-accent text-on-surface text-sm font-bold px-2 py-1 rounded-full">{% trans "In stock" %} {{ product.stock|floatformat:"u" }} {{ product.get_unit_type_display }}</span>
+          <div class="absolute link top-3 left-3 z-5" data-favorite-button>
+			      {% include "favorites/includes/_favorite_button.html" with product_pk=product.pk %}
+					</div>
 			  </div>
 			</div>
 

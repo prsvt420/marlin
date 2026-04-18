@@ -8,10 +8,10 @@ from django.utils.translation import gettext_lazy as _
 from django.views import View
 
 from apps.carts.exceptions import CartItemNotFoundError
-from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart, CartItem
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
+from apps.core.mixins import HtmxLoginRequiredMixin
 
 
 class CartItemDeleteView(HtmxLoginRequiredMixin, View):

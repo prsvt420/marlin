@@ -38,6 +38,12 @@
 		          {% trans "Cart" %}
 	          </a>
 					</li>
+          <li>
+            <a class="flex flex-col items-center justify-between h-12 link text-sm {% if current_view_name == 'favorites:list' %}link--active{% endif %}" href="{% url 'favorites:list' %}">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.025 5.476a5.714 5.714 0 0 0-8.058-.022 5.714 5.714 0 0 0-8.003.077c-5.638 5.637 4.333 12.823 7.969 15.772 3.722-3.072 13.78-10.139 8.092-15.827Z" fill="currentColor"></path></svg>
+              {% trans "Favorites" %}
+            </a>
+          </li>
 					{% if not request.user.is_authenticated %}
 						<li>
 							<a class="flex flex-col items-center justify-between h-12 link text-sm {% if current_view_name == 'accounts:signin' %}link--active{% endif %}" href="{% url 'accounts:signin' %}">
@@ -100,6 +106,12 @@
 			          {% trans "Cart" %}
 		          </a>
 						</li>
+	          <li>
+	            <a class="flex items-center gap-2 link text-sm {% if current_view_name == 'favorites:list' %}link--active{% endif %}" href="{% url 'favorites:list' %}">
+	              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.025 5.476a5.714 5.714 0 0 0-8.058-.022 5.714 5.714 0 0 0-8.003.077c-5.638 5.637 4.333 12.823 7.969 15.772 3.722-3.072 13.78-10.139 8.092-15.827Z" fill="currentColor"></path></svg>
+	              {% trans "Favorites" %}
+	            </a>
+            </li>
 						{% if not request.user.is_authenticated %}
 							<li>
 								<a class="flex items-center gap-2 link text-sm {% if current_view_name == 'accounts:signin' %}link--active{% endif %}" href="{% url 'accounts:signin' %}">

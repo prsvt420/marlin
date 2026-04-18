@@ -90,6 +90,7 @@ TEMPLATES: List[Dict[str, Any]] = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "apps.carts.context_processors.cart",
+                "apps.favorites.context_processors.favorite",
             ],
         },
     },

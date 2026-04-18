@@ -10,10 +10,10 @@ from apps.carts.exceptions import (
     InvalidCartItemQuantityError,
     ProductUnavailableError,
 )
-from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.services import CartService
 from apps.catalog.selectors import ProductSelector
+from apps.core.mixins import HtmxLoginRequiredMixin
 
 
 class CartItemCreateView(HtmxLoginRequiredMixin, View):

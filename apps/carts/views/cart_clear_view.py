@@ -4,9 +4,9 @@ from django.shortcuts import redirect, render
 from django.utils.translation import gettext_lazy as _
 from django.views import View
 
-from apps.carts.mixins import HtmxLoginRequiredMixin
 from apps.carts.models import Cart
 from apps.carts.services import CartService
+from apps.core.mixins import HtmxLoginRequiredMixin
 
 
 class CartClearView(HtmxLoginRequiredMixin, View):

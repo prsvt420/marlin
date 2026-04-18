@@ -8,9 +8,9 @@
   {% endfor %}
 </ul>
 
-	<div id="load-more-container" class="flex justify-center" hx-swap-oob="true">
-    {% if page_obj.has_next %}
-      <div id="load-more-trigger" hx-get="{% spurl path=request.get_full_path set_query='page={{ page_obj.next_page_number }}' %}" hx-target="#product-list-container" hx-swap="beforeend" hx-select="#product-list-container > li" hx-trigger="intersect once threshold:0.1" hx-indicator="#load-more-spinner"></div>
-      <div id="load-more-spinner" class="spinner size-10 htmx-indicator"></div>
-    {% endif %}
-	</div>
+<div id="load-more-container" class="flex justify-center" hx-swap-oob="true">
+  {% if page_obj.has_next %}
+    <div id="load-more-trigger" hx-get="{% spurl path=request.get_full_path set_query='page={{ page_obj.next_page_number }}' %}" hx-target="#product-list-container" hx-swap="beforeend" hx-select="#product-list-container > li" hx-trigger="intersect once threshold:0.1" hx-indicator="#load-more-spinner"></div>
+    <div id="load-more-spinner" class="spinner size-10 htmx-indicator"></div>
+  {% endif %}
+</div>
