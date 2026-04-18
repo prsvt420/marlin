@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-18 11:03+0800\n"
+"POT-Creation-Date: 2026-04-19 05:15+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -115,6 +115,7 @@ msgstr "Социальные аккаунты"
 #: .\apps\accounts\models\proxy_user_social_auth.py:13
 #: .\apps\accounts\models\user_model.py:52 .\apps\carts\models\cart_model.py:14
 #: .\apps\favorites\models\favorite_model.py:14
+#: .\apps\orders\models\order_model.py:23
 msgid "user"
 msgstr "пользователь"
 
@@ -540,7 +541,7 @@ msgid "Abandoned"
 msgstr "Заброшена"
 
 #: .\apps\carts\models\cart_item_model.py:17
-#: .\apps\carts\models\cart_model.py:26
+#: .\apps\carts\models\cart_model.py:26 .\apps\orders\models\order_model.py:29
 msgid "cart"
 msgstr "корзина"
 
@@ -549,24 +550,31 @@ msgstr "корзина"
 #: .\apps\catalog\models\product_model.py:110
 #: .\apps\catalog\models\product_nutrition_model.py:12
 #: .\apps\favorites\models\favorite_model.py:20
+#: .\apps\orders\models\order_item_model.py:22
 msgid "product"
 msgstr "продукт"
 
 #: .\apps\carts\models\cart_item_model.py:29
+#: .\apps\orders\models\order_item_model.py:28
 msgid "quantity"
 msgstr "количество"
 
 #: .\apps\carts\models\cart_item_model.py:35
+#: .\apps\orders\models\order_item_model.py:38
 msgid "price snapshot"
 msgstr "ценовой снимок"
 
 #: .\apps\carts\models\cart_item_model.py:45
+#: .\apps\orders\models\order_item_model.py:48
+#: .\apps\orders\models\order_model.py:82
 msgid "total price"
 msgstr "общая цена"
 
 #: .\apps\carts\models\cart_item_model.py:46
 #: .\apps\catalog\models\product_model.py:82
 #: .\apps\catalog\models\product_model.py:100
+#: .\apps\orders\models\order_item_model.py:49
+#: .\apps\orders\models\order_model.py:83
 msgid "Calculated by the system."
 msgstr "Рассчитывается системой."
 
@@ -1146,6 +1154,141 @@ msgstr "Продукт успешно удален из избранного."
 #: .\apps\orders\apps.py:9
 msgid "Orders"
 msgstr "Заказы"
+
+#: .\apps\orders\choices\delivery_method_choices.py:6
+msgid "Courier"
+msgstr "Курьером"
+
+#: .\apps\orders\choices\delivery_method_choices.py:7
+msgid "Pickup"
+msgstr "Самовывоз"
+
+#: .\apps\orders\choices\order_status_choices.py:6
+msgctxt "masculine"
+msgid "Pending"
+msgstr "Ожидает"
+
+#: .\apps\orders\choices\order_status_choices.py:7
+msgctxt "masculine"
+msgid "Confirmed"
+msgstr "Подтверждён"
+
+#: .\apps\orders\choices\order_status_choices.py:8
+msgctxt "masculine"
+msgid "Assembling"
+msgstr "Собирается"
+
+#: .\apps\orders\choices\order_status_choices.py:9
+msgctxt "masculine"
+msgid "Shipped"
+msgstr "Отправлен"
+
+#: .\apps\orders\choices\order_status_choices.py:10
+msgctxt "masculine"
+msgid "Completed"
+msgstr "Завершён"
+
+#: .\apps\orders\choices\order_status_choices.py:11
+msgctxt "masculine"
+msgid "Cancelled"
+msgstr "Отменён"
+
+#: .\apps\orders\choices\payment_method_choices.py:6
+msgid "Online"
+msgstr "Онлайн"
+
+#: .\apps\orders\choices\payment_method_choices.py:7
+msgid "On delivery"
+msgstr "При получении"
+
+#: .\apps\orders\choices\payment_status_choices.py:6
+msgctxt "feminine"
+msgid "Pending"
+msgstr "Ожидается"
+
+#: .\apps\orders\choices\payment_status_choices.py:7
+msgctxt "feminine"
+msgid "Paid"
+msgstr "Оплачена"
+
+#: .\apps\orders\choices\payment_status_choices.py:8
+msgctxt "feminine"
+msgid "Failed"
+msgstr "Не удалась"
+
+#: .\apps\orders\choices\payment_status_choices.py:9
+msgctxt "feminine"
+msgid "Refunded"
+msgstr "Возвращена"
+
+#: .\apps\orders\models\order_item_model.py:16
+#: .\apps\orders\models\order_model.py:96
+msgid "order"
+msgstr "заказ"
+
+#: .\apps\orders\models\order_item_model.py:32
+msgid "product name snapshot"
+msgstr "снимок названия продукта"
+
+#: .\apps\orders\models\order_item_model.py:55
+msgid "order item"
+msgstr "элемент заказа"
+
+#: .\apps\orders\models\order_item_model.py:56
+msgid "order items"
+msgstr "элементы заказа"
+
+#: .\apps\orders\models\order_item_model.py:61
+msgid "This product is already in order."
+msgstr "Этот продукт уже находится в заказе."
+
+#: .\apps\orders\models\order_model.py:37
+msgid "order status"
+msgstr "статус заказа"
+
+#: .\apps\orders\models\order_model.py:42
+msgid "delivery method"
+msgstr "способ доставки"
+
+#: .\apps\orders\models\order_model.py:47
+msgid "delivery address"
+msgstr "адрес доставки"
+
+#: .\apps\orders\models\order_model.py:53
+msgid "payment status"
+msgstr "статус платежа"
+
+#: .\apps\orders\models\order_model.py:58
+msgid "payment method"
+msgstr "способ оплаты"
+
+#: .\apps\orders\models\order_model.py:62
+msgid "comment"
+msgstr "комментарий"
+
+#: .\apps\orders\models\order_model.py:66
+msgid "recipient name"
+msgstr "имя получателя"
+
+#: .\apps\orders\models\order_model.py:70
+msgid "recipient email"
+msgstr "email получателя"
+
+#: .\apps\orders\models\order_model.py:74
+msgid "recipient phone number"
+msgstr "номер телефона получателя"
+
+#: .\apps\orders\models\order_model.py:87
+msgid "number"
+msgstr "номер"
+
+#: .\apps\orders\models\order_model.py:97
+msgid "orders"
+msgstr "заказы"
+
+#: .\apps\orders\models\order_model.py:102
+msgid "Order"
+msgstr "Заказ"
 
 #: .\apps\pages\apps.py:9
 msgid "Pages"
