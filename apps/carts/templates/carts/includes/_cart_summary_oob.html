@@ -30,8 +30,5 @@
       </div>
     </li>
   </ul>
-  <form action="#" method="post" novalidate>
-    {% csrf_token %}
-    <button class="w-full button button--primary" type="submit">{% trans "Go to checkout" %}</button>
-  </form>
+  <a href="{% url 'orders:checkout' %}" class="text-center button button--primary">{% trans "Go to checkout" %}</a>
 </aside>

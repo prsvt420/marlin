@@ -91,3 +91,6 @@ class CartSelector:
             for cart_item in cart.cart_items.all()
             if not cart_item.product.is_available
         ]
+
+    def is_cart_empty(self, *, cart: Cart) -> bool:
+        return not cart.cart_items.exists()

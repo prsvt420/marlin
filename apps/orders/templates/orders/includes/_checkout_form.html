@@ -1,0 +1,121 @@
+{% load static i18n %}
+
+<form class="flex flex-col gap-3 p-4 shadow-surface rounded-box h-fit" method="post" novalidate>
+  {% csrf_token %}
+
+  {% if form.non_field_errors %}
+    <div class="bg-error/10 rounded-box px-4 py-3">
+      {% for field_error in form.non_field_errors %}
+        <p class="text-sm hyphens-auto text-error">{{ field_error }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <h2 class="font-bold text-on-surface text-xl">{% trans "Delivery" %}</h2>
+
+  <div class="flex flex-col gap-1">
+    <p class="text-base text-on-surface">{% trans "Delivery method" %}</p>
+    <div class="flex flex-col gap-1">
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input class="radio js-delivery-method" type="radio" name="delivery_method" value="pickup" {% if form.delivery_method.value == 'pickup' or not form.delivery_method.value %}checked{% endif %}>
+        <span>{% trans "Pickup" %}</span>
+      </label>
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input class="radio js-delivery-method" type="radio" name="delivery_method" value="courier" {% if form.delivery_method.value == 'courier' %}checked{% endif %}>
+        <span>{% trans "Courier" %}</span>
+      </label>
+    </div>
+    {% if form.delivery_method.errors %}
+      <p class="text-sm text-error">{{ form.delivery_method.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div class="flex flex-col gap-1 js-delivery-address-field">
+    <label class="text-base text-on-surface" for="delivery_address">{% trans "Delivery address" %}</label>
+    <input id="delivery_address" class="input {% if form.delivery_address.errors %}outline-error{% endif %}" name="delivery_address" type="text" value="{{ form.delivery_address.value|default_if_none:'' }}" placeholder="{% trans 'City, street, house, apartment' %}">
+    {% if form.delivery_address.errors %}
+      <p class="text-sm text-error">{{ form.delivery_address.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <h2 class="font-bold text-on-surface text-xl">{% trans "Payment" %}</h2>
+
+  <div class="flex flex-col gap-1">
+    <p class="text-base text-on-surface">{% trans "Payment method" %}</p>
+    <div class="flex flex-col gap-1">
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input class="radio" type="radio" name="payment_method" value="online" {% if form.payment_method.value == 'online' or not form.payment_method.value %}checked{% endif %}>
+        <span>{% trans "Online" %}</span>
+      </label>
+      <label class="flex items-center gap-2 cursor-pointer">
+        <input class="radio" type="radio" name="payment_method" value="on_delivery" {% if form.payment_method.value == 'on_delivery' %}checked{% endif %}>
+        <span>{% trans "On delivery" %}</span>
+      </label>
+    </div>
+    {% if form.payment_method.errors %}
+      <p class="text-sm text-error">{{ form.payment_method.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <h2 class="font-bold text-on-surface text-xl">{% trans "Recipient" %}</h2>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-base text-on-surface" for="recipient_name">{% trans "Name" %}</label>
+    <input id="recipient_name" class="input {% if form.recipient_name.errors %}outline-error{% endif %}" name="recipient_name" type="text" autocomplete="name" value="{{ form.recipient_name.value|default_if_none:user.first_name }}" placeholder="{% trans 'Enter name' %}">
+    {% if form.recipient_name.errors %}
+      <p class="text-sm text-error">{{ form.recipient_name.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-base text-on-surface" for="recipient_email">{% trans "Email" %}</label>
+    <input id="recipient_email" class="input {% if form.recipient_email.errors %}outline-error{% endif %}" name="recipient_email" type="email" autocomplete="email" value="{{ form.recipient_email.value|default_if_none:user.email }}" placeholder="{% trans 'Enter email' %}">
+    {% if form.recipient_email.errors %}
+      <p class="text-sm text-error">{{ form.recipient_email.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-base text-on-surface" for="recipient_phone_number">{% trans "Phone" %}</label>
+    <input id="recipient_phone_number" class="phone-mask input {% if form.recipient_phone_number.errors %}outline-error{% endif %}" name="recipient_phone_number" type="text" autocomplete="tel" value="{{ form.recipient_phone_number.value|default_if_none:user.phone_number }}" placeholder="+7 (___) ___-__-__">
+    {% if form.recipient_phone_number.errors %}
+      <p class="text-sm text-error">{{ form.recipient_phone_number.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-base text-on-surface" for="comment">{% trans "Comment" %}</label>
+    <textarea id="comment" class="input min-h-12 max-h-24 rounded-3xl" name="comment" rows="3" placeholder="{% trans 'Anything we should know' %}">{{ form.comment.value|default_if_none:'' }}</textarea>
+    {% if form.comment.errors %}
+      <p class="text-sm text-error">{{ form.comment.errors.0 }}</p>
+    {% endif %}
+  </div>
+
+	{% url 'pages:offer' as offer_url %}
+	<p class="text-sm hyphens-auto text-on-surface">
+	  {% blocktrans %}By creating an order, you agree to the <a class="link text-sm" href="{{ offer_url }}">Public Offer</a>{% endblocktrans %}
+	</p>
+
+  <button class="button button--primary" type="submit">{% trans "Complete" %}</button>
+
+  <ul class="flex flex-col divide-dashed divide-y divide-edge">
+    <li class="flex font-bold justify-between text-xl py-3">
+      <p class="text-base-content">{% trans "Total" %}</p>
+      <p>{{ cart_prices.total_price }} ₽</p>
+    </li>
+    <li class="flex text-base justify-between py-3">
+      <p>{% trans "Products" %}</p>
+      <p class="font-bold">{{ cart_prices.products_total_price }} ₽</p>
+    </li>
+    <li class="flex text-base flex-col py-3">
+      <div class="flex justify-between">
+        <p>{% trans "Assembly" %}</p>
+        <p class="font-bold">{% trans "Free" %}</p>
+      </div>
+      <div class="flex text-base justify-between">
+        <p>{% trans "Delivery" %}</p>
+        <p class="font-bold">{% trans "Free" %}</p>
+      </div>
+    </li>
+  </ul>
+</form>

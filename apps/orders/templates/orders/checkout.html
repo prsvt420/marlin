@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Checkout" %}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col gap-8 max-md:gap-4">
+		<div class="flex flex-col">
+			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{% trans "Checkout" %}</h1>
+		</div>
+
+		<div class="flex gap-8 max-md:gap-4 max-md:flex-col">
+			<aside class="w-full max-w-[380px] max-md:max-w-full">
+				{% include "orders/includes/_checkout_form.html" %}
+			</aside>
+
+			<div class="flex flex-col flex-1 w-full">
+				{% include "orders/includes/_checkout_items.html" %}
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/masks.js' %}"></script>
+	<script src="{% static 'orders/js/delivery-address-toggle.js' %}"></script>
+{% endblock %}

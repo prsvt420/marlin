@@ -169,3 +169,8 @@ class CartService:
                 was_modified = True
 
         return was_modified
+
+    @transaction.atomic
+    def change_cart_status(self, *, cart: Cart, new_status: CartStatus):
+        cart.cart_status = new_status
+        cart.save(update_fields=["cart_status"])

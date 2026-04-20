@@ -92,6 +92,10 @@
     @apply form-checkbox cursor-pointer bg-surface mt-0.5 border border-edge rounded text-primary focus:ring-0 focus:ring-offset-0 outline-1 outline-transparent hover:outline-edge focus:outline-primary;
   }
 
+  .radio {
+    @apply form-radio cursor-pointer bg-surface mt-0.5 border border-edge text-primary focus:ring-0 focus:ring-offset-0 outline-1 outline-transparent hover:outline-edge focus:outline-primary;
+  }
+
   .button {
     @apply rounded-field text-base px-5 py-3 h-12 cursor-pointer font-semibold transition duration-300 ease-in-out;
   }
