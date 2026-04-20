@@ -259,13 +259,14 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
             "'self'",
             "https://smartcaptcha.cloud.yandex.ru",
             "https://captcha-api.yandex.ru",
+            "https://suggest-maps.yandex.ru/v1/suggest",
         ],
         "style-src": [
             "'self'",
             "https://fonts.googleapis.com",
             "'unsafe-inline'",
         ],
-        "connect-src": ["'self'"],
+        "connect-src": ["'self'", "https://suggest-maps.yandex.ru/v1/suggest"],
         "form-action": ["'self'"],
         "frame-ancestors": ["'none'"],
         "base-uri": ["'self'"],
@@ -433,3 +434,4 @@ YANDEX_SMART_CAPTCHA_CLIENT_KEY: str = config(
 YANDEX_SMART_CAPTCHA_SERVER_KEY: str = config(
     "YANDEX_SMART_CAPTCHA_SERVER_KEY"
 )
+YANDEX_GEOSUGGEST_KEY: str = config("YANDEX_GEOSUGGEST_KEY")

@@ -19,6 +19,7 @@ from apps.carts.services import CartService
 from apps.orders.exceptions import OrderError
 from apps.orders.forms import CheckoutForm
 from apps.orders.services import OrderService
+from config.settings import YANDEX_GEOSUGGEST_KEY
 
 
 class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
@@ -33,6 +34,7 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
                 "url": reverse_lazy(viewname="orders:checkout"),
             },
         ],
+        "YANDEX_GEOSUGGEST_KEY": YANDEX_GEOSUGGEST_KEY,
     }
     success_message = _("The order has been successfully created.")
 
@@ -47,7 +49,7 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
     ) -> HttpResponseBase:
         if CartSelector().is_cart_empty(cart=self.cart):
             messages.info(request, _("Your cart is empty."))
-            return redirect(to="carts:detail")
+            return redirect(to="catalog:category-list")
 
         if CartSelector().has_unavailable_cart_items(cart=self.cart):
             return redirect(to="carts:detail")
