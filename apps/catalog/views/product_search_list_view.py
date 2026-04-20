@@ -21,7 +21,7 @@ class ProductSearchListView(FilterView):
 
     def get_template_names(self) -> List[str]:
         if self.request.htmx:  # type: ignore
-            return ["catalog/includes/_product_list_htmx.html"]
+            return ["catalog/includes/_product_list.html"]
         return [self.template_name]
 
     def get(self, request: HttpRequest, **kwargs: Any) -> HttpResponse:
