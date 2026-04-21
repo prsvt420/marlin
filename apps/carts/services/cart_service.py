@@ -128,22 +128,8 @@ class CartService:
         return cart_item
 
     @transaction.atomic
-    def has_unavailable_cart_items(self, *, cart: Cart) -> bool:
-        cart_items: QuerySet[CartItem] = CartSelector().get_cart_items(
-            cart=cart
-        )
-
-        for cart_item in cart_items:
-            product: Product = cart_item.product
-
-            if not product.is_active or product.stock <= 0:
-                return True
-
-        return False
-
-    @transaction.atomic
     def validate_cart_item_quantities(self, *, cart: Cart) -> bool:
-        was_modified: bool = False
+        is_stock_changed: bool = False
 
         cart_items: QuerySet[CartItem] = CartSelector().get_cart_items(
             cart=cart
@@ -166,11 +152,14 @@ class CartService:
                 else:
                     cart_item.quantity = product.stock
                 cart_item.save(update_fields=["quantity"])
-                was_modified = True
 
-        return was_modified
+                is_stock_changed = True
+
+        return is_stock_changed
 
     @transaction.atomic
-    def change_cart_status(self, *, cart: Cart, new_status: CartStatus):
+    def change_cart_status(
+        self, *, cart: Cart, new_status: CartStatus
+    ) -> None:
         cart.cart_status = new_status
         cart.save(update_fields=["cart_status"])

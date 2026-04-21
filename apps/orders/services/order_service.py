@@ -10,9 +10,10 @@ from apps.carts.choices import CartStatus
 from apps.carts.models import Cart, CartItem
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
+from apps.catalog.services import ProductService
 from apps.orders.exceptions import EmptyCartError
 from apps.orders.models import Order, OrderItem
-from apps.orders.selectors.order_selector import OrderSelector
+from apps.orders.selectors import OrderSelector
 
 
 class OrderService:
@@ -65,6 +66,12 @@ class OrderService:
                 for cart_item in available_cart_items
             ]
         )
+
+        for cart_item in available_cart_items:
+            ProductService().decrease_stock(
+                product_pk=cart_item.product.pk, quantity=cart_item.quantity
+            )
+
         self.recompute_total_price(order=order)
 
         CartService().change_cart_status(

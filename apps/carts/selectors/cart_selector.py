@@ -1,7 +1,7 @@
 from decimal import ROUND_HALF_UP, Decimal
 from typing import Dict, List, Optional
 
-from django.db.models import Prefetch, Q, QuerySet, Sum
+from django.db.models import Prefetch, QuerySet, Sum
 
 from apps.accounts.models import User
 from apps.carts.choices import CartStatus
@@ -49,7 +49,7 @@ class CartSelector:
 
     def get_cart_products_total_price(self, *, cart: Cart) -> Decimal:
         cart_items: QuerySet[CartItem] = self.get_cart_items(cart=cart).filter(
-            product__is_active=True, product__stock__gt=0
+            product__is_available=True
         )
 
         total_price: Decimal = cart_items.aggregate(
@@ -74,9 +74,7 @@ class CartSelector:
         return cart_prices
 
     def has_unavailable_cart_items(self, *, cart: Cart) -> bool:
-        return cart.cart_items.filter(
-            Q(product__is_active=False) | Q(product__stock__lte=0)
-        ).exists()
+        return cart.cart_items.filter(product__is_available=False).exists()
 
     def get_available_cart_items(self, *, cart: Cart) -> List[CartItem]:
         return [

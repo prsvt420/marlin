@@ -16,7 +16,7 @@ from django.views.generic import FormView
 from apps.carts.models import Cart
 from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
-from apps.orders.exceptions import OrderError
+from apps.orders.exceptions import EmptyCartError
 from apps.orders.forms import CheckoutForm
 from apps.orders.services import OrderService
 from config.settings import YANDEX_GEOSUGGEST_KEY
@@ -54,6 +54,16 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
         if CartSelector().has_unavailable_cart_items(cart=self.cart):
             return redirect(to="carts:detail")
 
+        if CartService().validate_cart_item_quantities(cart=self.cart):
+            messages.warning(
+                self.request,
+                _(
+                    "The stock availability has changed. "
+                    "The price has been updated."
+                ),
+            )
+            return redirect(to="carts:detail")
+
         return super().dispatch(request=request, **kwargs)
 
     def form_valid(self, form: CheckoutForm) -> HttpResponse:
@@ -63,7 +73,9 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
                 cart=self.cart,
                 **form.cleaned_data,
             )
-        except OrderError:
+        except EmptyCartError:
+            return redirect(to="carts:detail")
+        except Exception:
             messages.error(
                 self.request, _("An error occurred while creating the order.")
             )

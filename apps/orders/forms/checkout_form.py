@@ -28,3 +28,23 @@ class CheckoutForm(forms.ModelForm):
             "recipient_phone_number",
             "comment",
         )
+        error_messages = {
+            "recipient_email": {
+                "max_length": _(
+                    "The email must not be longer than 255 characters."
+                ),
+                "invalid": _(
+                    "The email must be in the format user@example.com."
+                ),
+                "required": _("The email is required."),
+            },
+            "recipient_name": {
+                "max_length": _(
+                    "The name must not be longer than 255 characters."
+                ),
+                "required": _("The name is required."),
+            },
+            "recipient_phone_number": {
+                "required": _("The phone number is required."),
+            },
+        }

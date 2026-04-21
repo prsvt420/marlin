@@ -115,6 +115,12 @@ class Product(BaseModel):  # type: ignore
                 fields=["attributes"], name="index_product_attributes_gin"
             )
         ]
+        constraints = [
+            models.CheckConstraint(
+                condition=models.Q(stock__gte=0),
+                name="check_product_stock_non_negative",
+            ),
+        ]
 
     def __str__(self) -> str:
         return f"{self.name}"

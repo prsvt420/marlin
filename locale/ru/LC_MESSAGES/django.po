@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-20 20:26+0800\n"
+"POT-Creation-Date: 2026-04-21 22:27+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -30,18 +30,21 @@ msgstr "Аккаунты"
 #: .\apps\accounts\forms\password_reset_form.py:10
 #: .\apps\accounts\forms\signin_form.py:13
 #: .\apps\accounts\forms\signup_form.py:44
+#: .\apps\orders\forms\checkout_form.py:39
 #: .\apps\pages\forms\contact_form.py:19
 msgid "The email is required."
 msgstr "Электронная почта обязательна."
 
 #: .\apps\accounts\forms\password_reset_form.py:11
 #: .\apps\accounts\forms\signup_form.py:41
+#: .\apps\orders\forms\checkout_form.py:37
 #: .\apps\pages\forms\contact_form.py:20
 msgid "The email must be in the format user@example.com."
 msgstr "Электронная почта должена быть в формате user@example.com."
 
 #: .\apps\accounts\forms\password_reset_form.py:13
 #: .\apps\accounts\forms\signup_form.py:38
+#: .\apps\orders\forms\checkout_form.py:34
 #: .\apps\pages\forms\contact_form.py:22
 msgid "The email must not be longer than 255 characters."
 msgstr "Длина электронной почты не должна превышать 255 символов."
@@ -478,7 +481,7 @@ msgstr ""
 #: .\apps\accounts\views\profile_view.py:30
 #: .\apps\accounts\views\signin_view.py:32
 #: .\apps\accounts\views\signup_view.py:53
-#: .\apps\orders\views\checkout_view.py:77
+#: .\apps\orders\views\checkout_view.py:89
 #: .\apps\pages\views\contact_view.py:45
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
@@ -739,6 +742,7 @@ msgid "There are unavailable products in your cart. Please delete them."
 msgstr "В вашей корзине есть недоступные продукты. Пожалуйста, удалите их."
 
 #: .\apps\carts\views\cart_detail_view.py:46
+#: .\apps\orders\views\checkout_view.py:61
 msgid "The stock availability has changed. The price has been updated."
 msgstr "Количество товаров на складе изменилось. Цена была обновлена."
 
@@ -1240,6 +1244,19 @@ msgstr "Возвращена"
 msgid "The delivery address is required."
 msgstr "Адрес доставки обязателен."
 
+#: .\apps\orders\forms\checkout_form.py:43
+msgid "The name must not be longer than 255 characters."
+msgstr "Имя не должно превышать 255 символов."
+
+#: .\apps\orders\forms\checkout_form.py:45
+msgid "The name is required."
+msgstr "Имя обязательно."
+
+#: .\apps\orders\forms\checkout_form.py:48
+#: .\apps\pages\forms\contact_form.py:29
+msgid "The phone number is required."
+msgstr "Номер телефона обязателен."
+
 #: .\apps\orders\models\order_item_model.py:16
 #: .\apps\orders\models\order_model.py:96
 msgid "order"
@@ -1402,7 +1419,7 @@ msgstr "Заказ успешно оформлен."
 msgid "Your cart is empty."
 msgstr "Ваша корзина пуста."
 
-#: .\apps\orders\views\checkout_view.py:68
+#: .\apps\orders\views\checkout_view.py:80
 msgid "An error occurred while creating the order."
 msgstr "Произошла ошибка при оформлении заказа."
 
@@ -1417,10 +1434,6 @@ msgstr "ФИО обязательно."
 #: .\apps\pages\forms\contact_form.py:12
 msgid "The full name must not be longer than 255 characters."
 msgstr "Длина ФИО не должна превышать 255 символов."
-
-#: .\apps\pages\forms\contact_form.py:29
-msgid "The phone number is required."
-msgstr "Номер телефона обязателен."
 
 #: .\apps\pages\forms\contact_form.py:31
 msgid "The phone number must be in the format +7 (XXX) XXX-XX-XX."
