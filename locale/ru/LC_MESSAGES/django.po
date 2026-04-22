@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-21 22:27+0800\n"
+"POT-Creation-Date: 2026-04-22 13:57+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -166,7 +166,7 @@ msgid "middle name"
 msgstr "отчество"
 
 #: .\apps\accounts\models\user_model.py:41
-#: .\apps\catalog\models\product_model.py:104
+#: .\apps\catalog\models\product_model.py:111
 msgctxt "masculine"
 msgid "active"
 msgstr "активный"
@@ -553,7 +553,7 @@ msgstr "корзина"
 
 #: .\apps\carts\models\cart_item_model.py:23
 #: .\apps\catalog\models\product_image_model.py:13
-#: .\apps\catalog\models\product_model.py:110
+#: .\apps\catalog\models\product_model.py:117
 #: .\apps\catalog\models\product_nutrition_model.py:12
 #: .\apps\favorites\models\favorite_model.py:20
 #: .\apps\orders\models\order_item_model.py:22
@@ -578,7 +578,7 @@ msgstr "общая цена"
 
 #: .\apps\carts\models\cart_item_model.py:46
 #: .\apps\catalog\models\product_model.py:82
-#: .\apps\catalog\models\product_model.py:100
+#: .\apps\catalog\models\product_model.py:107
 #: .\apps\orders\models\order_item_model.py:49
 #: .\apps\orders\models\order_model.py:83
 msgid "Calculated by the system."
@@ -1019,11 +1019,11 @@ msgstr "наличие"
 msgid "final price"
 msgstr "финальная цена"
 
-#: .\apps\catalog\models\product_model.py:99
+#: .\apps\catalog\models\product_model.py:106
 msgid "availability"
 msgstr "доступность"
 
-#: .\apps\catalog\models\product_model.py:111
+#: .\apps\catalog\models\product_model.py:118
 msgid "products"
 msgstr "продукты"
 

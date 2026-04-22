@@ -1,6 +1,6 @@
 {% load i18n get_item can_increment_cart_item_quantity can_decrement_cart_item_quantity %}
 
-{% if product.stock %}
+{% if product.is_available %}
 	{% with cart_item=cart_items_map|get_item:product.id %}
     {% if not cart_item %}
       <form hx-post="{% url 'carts:cart-item-create' product_pk=product.pk %}" hx-target="closest [data-product-cart-item-control]" hx-indicator="closest [data-product-cart-item-control]">

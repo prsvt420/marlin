@@ -2,7 +2,7 @@ from decimal import Decimal
 
 from django.contrib.postgres.indexes import GinIndex
 from django.db import models
-from django.db.models.functions import Floor
+from django.db.models.functions import Coalesce, Floor
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
@@ -89,7 +89,14 @@ class Product(BaseModel):  # type: ignore
     )
     is_available = models.GeneratedField(
         expression=models.Case(
-            models.When(is_active=True, stock__gt=0, then=True),
+            models.When(
+                is_active=True,
+                stock__gte=Coalesce(
+                    models.F("weight_step"),
+                    models.Value(Decimal(value="1")),
+                ),
+                then=True,
+            ),
             default=False,
             output_field=models.BooleanField(),
         ),
