@@ -1,4 +1,3 @@
-import datetime
 from decimal import Decimal
 from typing import Any, Dict, List
 
@@ -17,16 +16,6 @@ from apps.orders.selectors import OrderSelector
 
 
 class OrderService:
-    @transaction.atomic
-    def generate_order_number(self) -> str:
-        current_year: int = datetime.date.today().year
-        current_count_orders_per_current_year: int = (
-            OrderSelector().get_current_count_orders_per_year(
-                year=current_year
-            )
-        )
-        current_count_orders_per_current_year += 1
-        return f"ORD-{current_year}-{current_count_orders_per_current_year:06}"
 
     @transaction.atomic
     def recompute_total_price(self, *, order: Order) -> None:
@@ -50,9 +39,10 @@ class OrderService:
         order: Order = Order.objects.create(
             user=user,
             cart=cart,
-            number=self.generate_order_number(),
             **checkout_data,
         )
+        order.number = f"ORD-{order.created_at.year}-{order.pk:06d}"
+        order.save(update_fields=["number"])
 
         OrderItem.objects.bulk_create(
             [
