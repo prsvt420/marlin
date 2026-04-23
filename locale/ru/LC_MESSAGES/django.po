@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-22 13:57+0800\n"
+"POT-Creation-Date: 2026-04-23 21:37+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -61,7 +61,7 @@ msgstr "Подтверждение нового пароля обязатель�
 #: .\apps\accounts\templates\accounts\password_reset.html:21
 #: .\apps\accounts\templates\accounts\signin.html:21
 #: .\apps\accounts\templates\accounts\signup.html:21
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:78
+#: .\apps\orders\templates\orders\checkout.html:90
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -196,7 +196,7 @@ msgstr "Сброс пароля"
 #: .\apps\accounts\templates\accounts\password_reset.html:22
 #: .\apps\accounts\templates\accounts\signin.html:22
 #: .\apps\accounts\templates\accounts\signup.html:22
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:79
+#: .\apps\orders\templates\orders\checkout.html:91
 msgid "Enter email"
 msgstr "Введите электронную почту"
 
@@ -677,20 +677,19 @@ msgstr "Введите промокод"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:15
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:15
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:110
+#: .\apps\orders\templates\orders\checkout.html:122
 msgid "Total"
 msgstr "Итого"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:19
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:19
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:114
-#: .\config\settings.py:348
+#: .\apps\orders\templates\orders\checkout.html:126 .\config\settings.py:348
 msgid "Products"
 msgstr "Продукты"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:24
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:24
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:119
+#: .\apps\orders\templates\orders\checkout.html:131
 msgid "Assembly"
 msgstr "Сборка"
 
@@ -698,15 +697,15 @@ msgstr "Сборка"
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:29
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:25
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:29
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:120
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:124
+#: .\apps\orders\templates\orders\checkout.html:132
+#: .\apps\orders\templates\orders\checkout.html:136
 msgid "Free"
 msgstr "Бесплатно"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:28
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:28
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:14
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:123
+#: .\apps\orders\templates\orders\checkout.html:26
+#: .\apps\orders\templates\orders\checkout.html:135
 msgid "Delivery"
 msgstr "Доставка"
 
@@ -731,7 +730,7 @@ msgstr "Ваша корзина успешно очищена."
 #: .\apps\catalog\views\category_list_view.py:15
 #: .\apps\catalog\views\product_list_view.py:52
 #: .\apps\catalog\views\product_search_list_view.py:38
-#: .\apps\favorites\views\favorite_list_view.py:18
+#: .\apps\favorites\views\favorite_list_view.py:20
 #: .\apps\orders\views\checkout_view.py:30 .\apps\pages\views\offer_view.py:10
 #: .\apps\pages\views\privacy_view.py:10 .\apps\pages\views\terms_view.py:10
 msgid "Home"
@@ -1130,7 +1129,7 @@ msgstr "Поиск по электронной почте или названи�
 #: .\apps\favorites\apps.py:9
 #: .\apps\favorites\templates\favorites\favorite_list.html:4
 #: .\apps\favorites\templates\favorites\favorite_list.html:11
-#: .\apps\favorites\views\favorite_list_view.py:20 .\config\settings.py:362
+#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:362
 #: .\templates\includes\_header.html:44 .\templates\includes\_header.html:112
 msgid "Favorites"
 msgstr "Избранное"
@@ -1171,12 +1170,12 @@ msgid "Orders"
 msgstr "Заказы"
 
 #: .\apps\orders\choices\delivery_method_choices.py:6
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:25
+#: .\apps\orders\templates\orders\checkout.html:37
 msgid "Courier"
 msgstr "Курьером"
 
 #: .\apps\orders\choices\delivery_method_choices.py:7
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:21
+#: .\apps\orders\templates\orders\checkout.html:33
 msgid "Pickup"
 msgstr "Самовывоз"
 
@@ -1211,12 +1210,12 @@ msgid "Cancelled"
 msgstr "Отменён"
 
 #: .\apps\orders\choices\payment_method_choices.py:6
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:55
+#: .\apps\orders\templates\orders\checkout.html:67
 msgid "Online"
 msgstr "Онлайн"
 
 #: .\apps\orders\choices\payment_method_choices.py:7
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:59
+#: .\apps\orders\templates\orders\checkout.html:71
 msgid "On delivery"
 msgstr "При получении"
 
@@ -1332,55 +1331,55 @@ msgstr "Заказ"
 msgid "Checkout"
 msgstr "Оформление заказа"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:17
+#: .\apps\orders\templates\orders\checkout.html:29
 msgid "Delivery method"
 msgstr "Способ доставки"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:34
+#: .\apps\orders\templates\orders\checkout.html:46
 msgid "Delivery address"
 msgstr "Адрес доставки"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:37
+#: .\apps\orders\templates\orders\checkout.html:49
 msgid "City, street, house, apartment"
 msgstr "Город, улица, дом, квартира"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:41
+#: .\apps\orders\templates\orders\checkout.html:53
 msgid "The courier will contact you"
 msgstr "Курьер свяжется с вами"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:48
+#: .\apps\orders\templates\orders\checkout.html:60
 msgid "Payment"
 msgstr "Оплата"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:51
+#: .\apps\orders\templates\orders\checkout.html:63
 msgid "Payment method"
 msgstr "Способ оплаты"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:67
+#: .\apps\orders\templates\orders\checkout.html:79
 msgid "Recipient"
 msgstr "Получатель"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:70
+#: .\apps\orders\templates\orders\checkout.html:82
 msgid "Name"
 msgstr "Имя"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:71
+#: .\apps\orders\templates\orders\checkout.html:83
 msgid "Enter name"
 msgstr "Введите имя"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:86
+#: .\apps\orders\templates\orders\checkout.html:98
 msgid "Phone"
 msgstr "Номер телефона"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:94
+#: .\apps\orders\templates\orders\checkout.html:106
 msgid "Comment"
 msgstr "Комментарий"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:95
+#: .\apps\orders\templates\orders\checkout.html:107
 msgid "Anything we should know"
 msgstr "Что нам следует знать"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:103
+#: .\apps\orders\templates\orders\checkout.html:115
 #, python-format
 msgid ""
 "By creating an order, you agree to the <a class=\"link text-sm\" "
@@ -1389,11 +1388,11 @@ msgstr ""
 "Оформляя заказ, вы подтверждаете своё согласие с <a class=\"link text-sm\" "
 "href=\"%(offer_url)s\">Публичной офертой</a>"
 
-#: .\apps\orders\templates\orders\includes\_checkout_form.html:106
+#: .\apps\orders\templates\orders\checkout.html:118
 msgid "Complete"
 msgstr "Завершить"
 
-#: .\apps\orders\templates\orders\includes\_checkout_items.html:5
+#: .\apps\orders\templates\orders\checkout.html:145
 #, python-format
 msgid ""
 "Your order <span class=\"font-medium text-on-surface/60 text-"

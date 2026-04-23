@@ -1,7 +1,7 @@
 {% load i18n spurl %}
 
 {% if favorites %}
-	<ul id="favorite-list-container" class="grid gap-y-8 gap-x-4 grid-cols-5 max-lg:grid-cols-4 max-md:gap-y-4 max-md:gap-x-2 max-md:grid-cols-3 max-sm:grid-cols-2">
+	<ul id="favorite-list-container" class="grid gap-y-8 gap-x-4 grid-cols-5 max-lg:grid-cols-4 max-md:gap-y-4 max-md:gap-x-2 max-md:grid-cols-3 max-sm:grid-cols-2" hx-swap-oob="beforeend">
 		{% for favorite in favorites %}
 			{% with product=favorite.product %}
 				<li>
@@ -11,9 +11,9 @@
 		{% endfor %}
 	</ul>
 
-	<div id="load-more-container" class="flex justify-center">
+	<div id="load-more-container" class="flex justify-center" hx-swap-oob="true">
     {% if page_obj.has_next %}
-      <div id="load-more-trigger" hx-get="{% spurl path=request.get_full_path set_query='page={{ page_obj.next_page_number }}' %}" hx-target="#favorite-list-container" hx-swap="beforeend" hx-select="#favorite-list-container > li" hx-trigger="intersect once threshold:0.1" hx-indicator="#load-more-spinner"></div>
+      <div id="load-more-trigger" hx-get="{% spurl path=request.get_full_path set_query='page={{ page_obj.next_page_number }}' %}" hx-trigger="intersect once threshold:0.1" hx-swap="none" hx-indicator="#load-more-spinner"></div>
       <div id="load-more-spinner" class="spinner size-10 htmx-indicator"></div>
     {% endif %}
 	</div>

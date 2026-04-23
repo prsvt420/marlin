@@ -1,3 +1,5 @@
+from typing import List
+
 from django.db.models import QuerySet
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -22,6 +24,11 @@ class FavoriteListView(HtmxLoginRequiredMixin, ListView):
             },
         ]
     }
+
+    def get_template_names(self) -> List[str]:
+        if self.request.htmx:  # type: ignore
+            return ["favorites/includes/_favorite_list.html"]
+        return [self.template_name]
 
     def get_queryset(self) -> QuerySet[Favorite]:
         return FavoriteSelector().get_user_favorites(
