@@ -18,6 +18,7 @@ from apps.carts.selectors import CartSelector
 from apps.carts.services import CartService
 from apps.orders.exceptions import EmptyCartError
 from apps.orders.forms import CheckoutForm
+from apps.orders.models import Order
 from apps.orders.services import OrderService
 from config.settings import YANDEX_GEOSUGGEST_KEY
 
@@ -68,10 +69,13 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
 
     def form_valid(self, form: CheckoutForm) -> HttpResponse:
         try:
-            OrderService().checkout(
+            order: Order = OrderService().checkout(
                 user=self.request.user,  # type: ignore
                 cart=self.cart,
                 **form.cleaned_data,
+            )
+            self.success_url = reverse(
+                viewname="orders:detail", kwargs={"order_number": order.number}
             )
         except EmptyCartError:
             return redirect(to="carts:detail")
@@ -89,6 +93,3 @@ class CheckoutView(LoginRequiredMixin, SuccessMessageMixin, FormView):
             _("Please correct the errors in the form and try again."),
         )
         return super().form_invalid(form=form)
-
-    def get_success_url(self) -> str:
-        return reverse(viewname="catalog:category-list")

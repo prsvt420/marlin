@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-23 21:37+0800\n"
+"POT-Creation-Date: 2026-04-24 23:23+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -62,6 +62,7 @@ msgstr "Подтверждение нового пароля обязатель�
 #: .\apps\accounts\templates\accounts\signin.html:21
 #: .\apps\accounts\templates\accounts\signup.html:21
 #: .\apps\orders\templates\orders\checkout.html:90
+#: .\apps\orders\templates\orders\order_detail.html:90
 msgid "Email"
 msgstr "Электронная почта"
 
@@ -481,7 +482,7 @@ msgstr ""
 #: .\apps\accounts\views\profile_view.py:30
 #: .\apps\accounts\views\signin_view.py:32
 #: .\apps\accounts\views\signup_view.py:53
-#: .\apps\orders\views\checkout_view.py:89
+#: .\apps\orders\views\checkout_view.py:93
 #: .\apps\pages\views\contact_view.py:45
 msgid "Please correct the errors in the form and try again."
 msgstr "Пожалуйста, исправьте ошибки в форме и попробуйте снова."
@@ -612,7 +613,7 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\apps\carts\templates\carts\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:22
-#: .\apps\orders\views\checkout_view.py:31 .\templates\includes\_header.html:38
+#: .\apps\orders\views\checkout_view.py:32 .\templates\includes\_header.html:38
 #: .\templates\includes\_header.html:106
 msgid "Cart"
 msgstr "Корзина"
@@ -678,18 +679,22 @@ msgstr "Введите промокод"
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:15
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:15
 #: .\apps\orders\templates\orders\checkout.html:122
+#: .\apps\orders\templates\orders\order_detail.html:108
 msgid "Total"
 msgstr "Итого"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:19
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:19
-#: .\apps\orders\templates\orders\checkout.html:126 .\config\settings.py:348
+#: .\apps\orders\templates\orders\checkout.html:126
+#: .\apps\orders\templates\orders\order_detail.html:112
+#: .\config\settings.py:348
 msgid "Products"
 msgstr "Продукты"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:24
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:24
 #: .\apps\orders\templates\orders\checkout.html:131
+#: .\apps\orders\templates\orders\order_detail.html:117
 msgid "Assembly"
 msgstr "Сборка"
 
@@ -699,6 +704,8 @@ msgstr "Сборка"
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:29
 #: .\apps\orders\templates\orders\checkout.html:132
 #: .\apps\orders\templates\orders\checkout.html:136
+#: .\apps\orders\templates\orders\order_detail.html:118
+#: .\apps\orders\templates\orders\order_detail.html:122
 msgid "Free"
 msgstr "Бесплатно"
 
@@ -706,6 +713,8 @@ msgstr "Бесплатно"
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:28
 #: .\apps\orders\templates\orders\checkout.html:26
 #: .\apps\orders\templates\orders\checkout.html:135
+#: .\apps\orders\templates\orders\order_detail.html:43
+#: .\apps\orders\templates\orders\order_detail.html:121
 msgid "Delivery"
 msgstr "Доставка"
 
@@ -731,8 +740,10 @@ msgstr "Ваша корзина успешно очищена."
 #: .\apps\catalog\views\product_list_view.py:52
 #: .\apps\catalog\views\product_search_list_view.py:38
 #: .\apps\favorites\views\favorite_list_view.py:20
-#: .\apps\orders\views\checkout_view.py:30 .\apps\pages\views\offer_view.py:10
-#: .\apps\pages\views\privacy_view.py:10 .\apps\pages\views\terms_view.py:10
+#: .\apps\orders\views\checkout_view.py:31
+#: .\apps\orders\views\order_detail_view.py:41
+#: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
+#: .\apps\pages\views\terms_view.py:10
 msgid "Home"
 msgstr "Главная"
 
@@ -741,7 +752,7 @@ msgid "There are unavailable products in your cart. Please delete them."
 msgstr "В вашей корзине есть недоступные продукты. Пожалуйста, удалите их."
 
 #: .\apps\carts\views\cart_detail_view.py:46
-#: .\apps\orders\views\checkout_view.py:61
+#: .\apps\orders\views\checkout_view.py:62
 msgid "The stock availability has changed. The price has been updated."
 msgstr "Количество товаров на складе изменилось. Цена была обновлена."
 
@@ -1171,11 +1182,13 @@ msgstr "Заказы"
 
 #: .\apps\orders\choices\delivery_method_choices.py:6
 #: .\apps\orders\templates\orders\checkout.html:37
+#: .\apps\orders\templates\orders\order_detail.html:54
 msgid "Courier"
 msgstr "Курьером"
 
 #: .\apps\orders\choices\delivery_method_choices.py:7
 #: .\apps\orders\templates\orders\checkout.html:33
+#: .\apps\orders\templates\orders\order_detail.html:50
 msgid "Pickup"
 msgstr "Самовывоз"
 
@@ -1211,11 +1224,13 @@ msgstr "Отменён"
 
 #: .\apps\orders\choices\payment_method_choices.py:6
 #: .\apps\orders\templates\orders\checkout.html:67
+#: .\apps\orders\templates\orders\order_detail.html:73
 msgid "Online"
 msgstr "Онлайн"
 
 #: .\apps\orders\choices\payment_method_choices.py:7
 #: .\apps\orders\templates\orders\checkout.html:71
+#: .\apps\orders\templates\orders\order_detail.html:77
 msgid "On delivery"
 msgstr "При получении"
 
@@ -1322,20 +1337,25 @@ msgid "orders"
 msgstr "заказы"
 
 #: .\apps\orders\models\order_model.py:102
+#: .\apps\orders\templates\orders\order_detail.html:4
+#: .\apps\orders\templates\orders\order_detail.html:10
+#: .\apps\orders\views\order_detail_view.py:43
 msgid "Order"
 msgstr "Заказ"
 
 #: .\apps\orders\templates\orders\checkout.html:4
 #: .\apps\orders\templates\orders\checkout.html:10
-#: .\apps\orders\views\checkout_view.py:33
+#: .\apps\orders\views\checkout_view.py:34
 msgid "Checkout"
 msgstr "Оформление заказа"
 
 #: .\apps\orders\templates\orders\checkout.html:29
+#: .\apps\orders\templates\orders\order_detail.html:46
 msgid "Delivery method"
 msgstr "Способ доставки"
 
 #: .\apps\orders\templates\orders\checkout.html:46
+#: .\apps\orders\templates\orders\order_detail.html:61
 msgid "Delivery address"
 msgstr "Адрес доставки"
 
@@ -1348,18 +1368,22 @@ msgid "The courier will contact you"
 msgstr "Курьер свяжется с вами"
 
 #: .\apps\orders\templates\orders\checkout.html:60
+#: .\apps\orders\templates\orders\order_detail.html:66
 msgid "Payment"
 msgstr "Оплата"
 
 #: .\apps\orders\templates\orders\checkout.html:63
+#: .\apps\orders\templates\orders\order_detail.html:69
 msgid "Payment method"
 msgstr "Способ оплаты"
 
 #: .\apps\orders\templates\orders\checkout.html:79
+#: .\apps\orders\templates\orders\order_detail.html:82
 msgid "Recipient"
 msgstr "Получатель"
 
 #: .\apps\orders\templates\orders\checkout.html:82
+#: .\apps\orders\templates\orders\order_detail.html:85
 msgid "Name"
 msgstr "Имя"
 
@@ -1368,10 +1392,12 @@ msgid "Enter name"
 msgstr "Введите имя"
 
 #: .\apps\orders\templates\orders\checkout.html:98
+#: .\apps\orders\templates\orders\order_detail.html:95
 msgid "Phone"
 msgstr "Номер телефона"
 
 #: .\apps\orders\templates\orders\checkout.html:106
+#: .\apps\orders\templates\orders\order_detail.html:101
 msgid "Comment"
 msgstr "Комментарий"
 
@@ -1410,15 +1436,33 @@ msgstr[2] ""
 "Ваш заказ <span class=\"font-medium text-on-surface/60 text-"
 "sm\">%(count_cart_items)s продуктов</span>"
 
-#: .\apps\orders\views\checkout_view.py:39
+#: .\apps\orders\templates\orders\order_detail.html:130
+#, python-format
+msgid ""
+"In order <span class=\"font-medium text-on-surface/60 text-"
+"sm\">%(count_order_items)s product</span>"
+msgid_plural ""
+"In order <span class=\"font-medium text-on-surface/60 text-"
+"sm\">%(count_order_items)s products</span>"
+msgstr[0] ""
+"В заказе <span class=\"font-medium text-on-surface/60 text-"
+"sm\">%(count_order_items)s продукт</span>"
+msgstr[1] ""
+"В заказе <span class=\"font-medium text-on-surface/60 text-"
+"sm\">%(count_order_items)s продукта</span>"
+msgstr[2] ""
+"В заказе <span class=\"font-medium text-on-surface/60 text-"
+"sm\">%(count_order_items)s продуктов</span>"
+
+#: .\apps\orders\views\checkout_view.py:40
 msgid "The order has been successfully created."
 msgstr "Заказ успешно оформлен."
 
-#: .\apps\orders\views\checkout_view.py:51
+#: .\apps\orders\views\checkout_view.py:52
 msgid "Your cart is empty."
 msgstr "Ваша корзина пуста."
 
-#: .\apps\orders\views\checkout_view.py:80
+#: .\apps\orders\views\checkout_view.py:84
 msgid "An error occurred while creating the order."
 msgstr "Произошла ошибка при оформлении заказа."
 

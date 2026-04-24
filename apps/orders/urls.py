@@ -10,4 +10,9 @@ urlpatterns: List[URLPattern] = [
     path(
         route="checkout/", view=views.CheckoutView.as_view(), name="checkout"
     ),
+    path(
+        route="<str:order_number>/",
+        view=views.OrderDetailView.as_view(),
+        name="detail",
+    ),
 ]
