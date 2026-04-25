@@ -129,6 +129,9 @@
 	                  {% if product.discount %}
 	                    <span class="absolute top-3 right-3 z-5 bg-accent text-on-surface text-sm font-bold px-2 py-1 rounded-full">-{{ product.discount|floatformat:"u" }}%</span>
 	                  {% endif %}
+										<div class="absolute link top-3 left-3 z-5" data-favorite-button>
+											{% include "favorites/includes/_favorite_button.html" with product_pk=product.pk %}
+										</div>
 	                  <img class="p-4 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
 	                </div>
 	                <div class="flex flex-col">

@@ -2,7 +2,52 @@
 
 <footer class="border-t border-edge">
 	<div class="flex flex-col w-full p-8 gap-4 max-md:p-4 max-w-page mx-auto">
-		<div class="grid grid-cols-3 gap-4 max-md:grid-cols-1">
+		<div class="grid grid-cols-4 gap-4 max-md:grid-cols-1">
+			<nav>
+        <h2 class="text-sm text-on-surface font-bold mb-2">
+          {% trans "Navigation" %}
+        </h2>
+        <ul>
+          <li>
+            <a class="link text-sm" href="{% url 'pages:home' %}">
+              {% trans "Home" %}
+            </a>
+          </li>
+          <li>
+            <a class="link text-sm" href="{% url 'catalog:category-list' %}">
+              {% trans "Catalog" %}
+            </a>
+          </li>
+          <li>
+            <a class="link text-sm" href="{% url 'carts:detail' %}">
+              {% trans "Cart" %}
+            </a>
+          </li>
+          <li>
+            <a class="link text-sm" href="{% url 'favorites:list' %}">
+              {% trans "Favorites" %}
+            </a>
+					</li>
+					<li>
+            <a class="link text-sm" href="{% url 'accounts:profile' %}">
+              {% trans "Profile" %}
+            </a>
+					</li>
+				</ul>
+			</nav>
+			<nav>
+				<h2 class="text-sm text-on-surface font-bold mb-2">
+					{% trans "About the company" %}
+				</h2>
+				<ul>
+					<li>
+						<a class="link text-sm" href="{% url 'pages:contact' %}">{% trans "Contacts" %}</a>
+					</li>
+					<li>
+						<a class="link text-sm" href="{% url 'vacancies:list' %}">{% trans "Vacancies" %}</a>
+					</li>
+				</ul>
+			</nav>
 			<nav>
 				<h2 class="text-sm text-on-surface font-bold mb-2">
 					{% trans "Legal information" %}
@@ -22,19 +67,6 @@
 						<a class="link text-sm" href="{% url 'pages:terms' %}">
 							{% trans "Terms of Service" %}
 						</a>
-					</li>
-				</ul>
-			</nav>
-			<nav>
-				<h2 class="text-sm text-on-surface font-bold mb-2">
-					{% trans "About the company" %}
-				</h2>
-				<ul>
-					<li>
-						<a class="link text-sm" href="{% url 'pages:contact' %}">{% trans "Contacts" %}</a>
-					</li>
-					<li>
-						<a class="link text-sm" href="{% url 'vacancies:list' %}">{% trans "Vacancies" %}</a>
 					</li>
 				</ul>
 			</nav>

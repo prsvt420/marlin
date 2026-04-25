@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-24 23:23+0800\n"
+"POT-Creation-Date: 2026-04-25 12:20+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -229,6 +229,7 @@ msgid "Confirm new password"
 msgstr "Подтвердите новый пароль"
 
 #: .\apps\accounts\templates\accounts\profile.html:4
+#: .\templates\includes\_footer.html:33
 msgid "Profile"
 msgstr "Профиль"
 
@@ -613,8 +614,8 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\cart_detail.html:4
 #: .\apps\carts\templates\carts\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:22
-#: .\apps\orders\views\checkout_view.py:32 .\templates\includes\_header.html:38
-#: .\templates\includes\_header.html:106
+#: .\apps\orders\views\checkout_view.py:32 .\templates\includes\_footer.html:23
+#: .\templates\includes\_header.html:38 .\templates\includes\_header.html:106
 msgid "Cart"
 msgstr "Корзина"
 
@@ -743,7 +744,7 @@ msgstr "Ваша корзина успешно очищена."
 #: .\apps\orders\views\checkout_view.py:31
 #: .\apps\orders\views\order_detail_view.py:41
 #: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
-#: .\apps\pages\views\terms_view.py:10
+#: .\apps\pages\views\terms_view.py:10 .\templates\includes\_footer.html:13
 msgid "Home"
 msgstr "Главная"
 
@@ -897,7 +898,8 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\product_detail_view.py:24
 #: .\apps\catalog\views\product_list_view.py:54
 #: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:344
-#: .\templates\includes\_header.html:26 .\templates\includes\_header.html:94
+#: .\templates\includes\_footer.html:18 .\templates\includes\_header.html:26
+#: .\templates\includes\_header.html:94
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1066,7 +1068,7 @@ msgstr "пищевые ценности продуктов"
 
 #: .\apps\catalog\templates\catalog\includes\_product_card.html:22
 #: .\apps\catalog\templates\catalog\product_detail.html:56
-#: .\apps\catalog\templates\catalog\product_detail.html:140
+#: .\apps\catalog\templates\catalog\product_detail.html:143
 msgid "Price per 1"
 msgstr "Цена за 1"
 
@@ -1141,7 +1143,8 @@ msgstr "Поиск по электронной почте или названи�
 #: .\apps\favorites\templates\favorites\favorite_list.html:4
 #: .\apps\favorites\templates\favorites\favorite_list.html:11
 #: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:362
-#: .\templates\includes\_header.html:44 .\templates\includes\_header.html:112
+#: .\templates\includes\_footer.html:28 .\templates\includes\_header.html:44
+#: .\templates\includes\_header.html:112
 msgid "Favorites"
 msgstr "Избранное"
 
@@ -1573,22 +1576,22 @@ msgstr ""
 "пользователя успешно получено и требует дальнейшей обработки."
 
 #: .\apps\pages\templates\pages\contact.html:4
-#: .\templates\includes\_footer.html:34
+#: .\templates\includes\_footer.html:44
 msgid "Contacts"
 msgstr "Контакты"
 
 #: .\apps\pages\templates\pages\offer.html:4
-#: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:18
+#: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:63
 msgid "Public Offer"
 msgstr "Публичная оферта"
 
 #: .\apps\pages\templates\pages\privacy.html:4
-#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\_footer.html:13
+#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\_footer.html:58
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 #: .\apps\pages\templates\pages\terms.html:4
-#: .\apps\pages\views\terms_view.py:12 .\templates\includes\_footer.html:23
+#: .\apps\pages\views\terms_view.py:12 .\templates\includes\_footer.html:68
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
@@ -1628,7 +1631,7 @@ msgstr "Зарплата"
 #: .\apps\vacancies\apps.py:9
 #: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
 #: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:416
-#: .\templates\includes\_footer.html:37
+#: .\templates\includes\_footer.html:47
 msgid "Vacancies"
 msgstr "Вакансии"
 
@@ -1891,23 +1894,27 @@ msgid "Fresh products near you"
 msgstr "Свежие продукты рядом с вами"
 
 #: .\templates\email_base.html:79 .\templates\email_base.txt:8
-#: .\templates\includes\_footer.html:52
+#: .\templates\includes\_footer.html:84
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
 #: .\templates\includes\_footer.html:8
-msgid "Legal information"
-msgstr "Правовая информация"
+msgid "Navigation"
+msgstr "Навигация"
 
-#: .\templates\includes\_footer.html:30
+#: .\templates\includes\_footer.html:40
 msgid "About the company"
 msgstr "О компании"
 
-#: .\templates\includes\_footer.html:43
+#: .\templates\includes\_footer.html:53
+msgid "Legal information"
+msgstr "Правовая информация"
+
+#: .\templates\includes\_footer.html:75
 msgid "Download the app"
 msgstr "Скачайте приложение"
 
-#: .\templates\includes\_footer.html:47
+#: .\templates\includes\_footer.html:79
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
