@@ -21,7 +21,11 @@ class ProductDetailView(DetailView):
     @property
     def breadcrumbs(self) -> List[Dict[str, Any]]:
         breadcrumbs: List[Dict[str, Any]] = [
-            {"name": _("Catalog"), "url": reverse("catalog:category-list")},
+            {"name": _("Home"), "url": reverse(viewname="pages:home")},
+            {
+                "name": _("Catalog"),
+                "url": reverse(viewname="catalog:category-list"),
+            },
         ]
 
         for ancestor in CategorySelector().get_hierarchy(

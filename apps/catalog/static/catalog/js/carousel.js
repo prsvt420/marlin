@@ -28,3 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   EmblaCarousel(similarNode, { dragFree: true, loop: false, align: "start" })
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popularNode = document.getElementById("popular-embla")
+  if (!popularNode) return
+
+  EmblaCarousel(popularNode, { dragFree: true, loop: false, align: "start" })
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  const newNode = document.getElementById("new-embla")
+  if (!newNode) return
+
+  EmblaCarousel(newNode, { dragFree: true, loop: false, align: "start" })
+})

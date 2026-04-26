@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-25 12:20+0800\n"
+"POT-Creation-Date: 2026-04-26 14:44+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -738,11 +738,14 @@ msgstr "Ваша корзина успешно очищена."
 
 #: .\apps\carts\views\cart_detail_view.py:20
 #: .\apps\catalog\views\category_list_view.py:15
+#: .\apps\catalog\views\product_detail_view.py:24
 #: .\apps\catalog\views\product_list_view.py:52
 #: .\apps\catalog\views\product_search_list_view.py:38
 #: .\apps\favorites\views\favorite_list_view.py:20
 #: .\apps\orders\views\checkout_view.py:31
 #: .\apps\orders\views\order_detail_view.py:41
+#: .\apps\pages\templates\pages\home.html:4
+#: .\apps\pages\templates\pages\home.html:10 .\apps\pages\views\home_view.py:16
 #: .\apps\pages\views\offer_view.py:10 .\apps\pages\views\privacy_view.py:10
 #: .\apps\pages\views\terms_view.py:10 .\templates\includes\_footer.html:13
 msgid "Home"
@@ -895,7 +898,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\templates\catalog\category_list.html:4
 #: .\apps\catalog\templates\catalog\category_list.html:10
 #: .\apps\catalog\views\category_list_view.py:17
-#: .\apps\catalog\views\product_detail_view.py:24
+#: .\apps\catalog\views\product_detail_view.py:25
 #: .\apps\catalog\views\product_list_view.py:54
 #: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:344
 #: .\templates\includes\_footer.html:18 .\templates\includes\_header.html:26
@@ -1579,6 +1582,50 @@ msgstr ""
 #: .\templates\includes\_footer.html:44
 msgid "Contacts"
 msgstr "Контакты"
+
+#: .\apps\pages\templates\pages\home.html:14
+msgid "Why us"
+msgstr "Почему мы"
+
+#: .\apps\pages\templates\pages\home.html:19
+msgid "Fast delivery"
+msgstr "Быстрая доставка"
+
+#: .\apps\pages\templates\pages\home.html:20
+msgid "Within 30 minutes around the city"
+msgstr "В пределах 30 минут езды от города"
+
+#: .\apps\pages\templates\pages\home.html:26
+msgid "Fresh products"
+msgstr "Свежие продукты"
+
+#: .\apps\pages\templates\pages\home.html:27
+msgid "We check quality every day"
+msgstr "Мы ежедневно проверяем качество"
+
+#: .\apps\pages\templates\pages\home.html:33
+msgid "Easy payment"
+msgstr "Удобная оплата"
+
+#: .\apps\pages\templates\pages\home.html:34
+msgid "Payment is made online or upon receipt"
+msgstr "Оплата производится онлайн или при получении"
+
+#: .\apps\pages\templates\pages\home.html:40
+msgid "Easy returns"
+msgstr "Простой возврат"
+
+#: .\apps\pages\templates\pages\home.html:41
+msgid "Refund within 10 days"
+msgstr "Возврат в течение 10 дней"
+
+#: .\apps\pages\templates\pages\home.html:49
+msgid "Popular products"
+msgstr "Популярные продукты"
+
+#: .\apps\pages\templates\pages\home.html:65
+msgid "New products"
+msgstr "Новые продукты"
 
 #: .\apps\pages\templates\pages\offer.html:4
 #: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:63

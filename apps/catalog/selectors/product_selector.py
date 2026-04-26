@@ -67,3 +67,9 @@ class ProductSelector:
             .exclude(pk=product.pk)
             .order_by("?")[:limit]
         )
+
+    def get_popular_products(self, *, limit: int = 12) -> QuerySet[Product]:
+        return self.get_products().order_by("?")[:limit]
+
+    def get_new_products(self, *, limit: int = 12) -> QuerySet[Product]:
+        return self.get_products().order_by("-created_at")[:limit]

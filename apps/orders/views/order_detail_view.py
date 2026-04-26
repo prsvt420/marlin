@@ -80,7 +80,7 @@ class OrderDetailView(LoginRequiredMixin, DetailView):
                     {"label": self.ORDER_STATUS_DICT[key], "state": "pending"}
                 )
 
-        order_status_progress_percent = (
+        order_status_progress_percent: int = (
             current_idx if not is_cancelled else 1
         ) * 20
 

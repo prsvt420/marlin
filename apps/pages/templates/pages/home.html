@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col gap-8 max-md:gap-4">
+		<div class="flex flex-col">
+			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{% trans "Home" %}</h1>
+		</div>
+
+		<div class="flex flex-col gap-3">
+			<h2 class="font-bold text-2xl text-on-surface max-md:text-xl">{% trans "Why us" %}</h2>
+			<ul class="grid grid-cols-4 gap-2 max-md:grid-cols-2">
+				<li>
+					<article class="bg-surface-dim p-4 rounded-box flex flex-col h-full">
+						<svg class="size-8 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+						<h3 class="font-bold text-on-surface text-base">{% trans "Fast delivery" %}</h3>
+						<p class="text-sm text-on-surface/70">{% trans "Within 30 minutes around the city" %}</p>
+					</article>
+				</li>
+				<li>
+					<article class="bg-surface-dim p-4 rounded-box flex flex-col h-full">
+						<svg class="size-8 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+						<h3 class="font-bold text-on-surface text-base">{% trans "Fresh products" %}</h3>
+						<p class="text-sm text-on-surface/60">{% trans "We check quality every day" %}</p>
+					</article>
+				</li>
+				<li>
+					<article class="bg-surface-dim p-4 rounded-box flex flex-col h-full">
+						<svg class="size-8 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+						<h3 class="font-bold text-on-surface text-base">{% trans "Easy payment" %}</h3>
+						<p class="text-sm text-on-surface/60">{% trans "Payment is made online or upon receipt" %}</p>
+					</article>
+				</li>
+				<li>
+					<article class="bg-surface-dim p-4 rounded-box flex flex-col h-full">
+						<svg class="size-8 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+						<h3 class="font-bold text-on-surface text-base">{% trans "Easy returns" %}</h3>
+						<p class="text-sm text-on-surface/60">{% trans "Refund within 10 days" %}</p>
+					</article>
+				</li>
+			</ul>
+		</div>
+
+		{% if popular_products %}
+			<div class="flex flex-col gap-3">
+				<h2 class="font-bold text-2xl text-on-surface max-md:text-xl">{% trans "Popular products" %}</h2>
+
+				<div id="popular-embla" class="select-none overflow-hidden">
+					<ul id="popular-embla-container" class="flex gap-4 max-md:gap-2">
+						{% for product in popular_products %}
+							<li class="min-w-60">
+								{% include "catalog/includes/_product_card.html" %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endif %}
+
+		{% if popular_products %}
+			<div class="flex flex-col gap-3">
+				<h2 class="font-bold text-2xl text-on-surface max-md:text-xl">{% trans "New products" %}</h2>
+
+				<div id="new-embla" class="select-none overflow-hidden">
+					<ul id="new-embla-container" class="flex gap-4 max-md:gap-2">
+						{% for product in new_products %}
+							<li class="min-w-60">
+								{% include "catalog/includes/_product_card.html" %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endif %}
+	</section>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'js/embla-carousel.umd.js' %}"></script>
+  <script src="{% static 'catalog/js/carousel.js' %}"></script>
+{% endblock %}
