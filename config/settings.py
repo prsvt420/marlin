@@ -54,7 +54,6 @@ INSTALLED_APPS: List[str] = [
     "apps.carts",
     "apps.catalog",
     "apps.pages",
-    "apps.vacancies",
     "apps.accounts",
     "apps.promotions",
     "apps.orders",
@@ -404,19 +403,6 @@ UNFOLD: Dict[str, Any] = {
                         "icon": "list_alt",
                         "link": reverse_lazy(
                             "admin:carts_cartitem_changelist"
-                        ),
-                    },
-                ],
-            },
-            {
-                "title": _("Recruitment"),
-                "separator": True,
-                "items": [
-                    {
-                        "title": _("Vacancies"),
-                        "icon": "work",
-                        "link": reverse_lazy(
-                            "admin:vacancies_vacancy_changelist"
                         ),
                     },
                 ],

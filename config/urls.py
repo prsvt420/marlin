@@ -50,10 +50,6 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
         view=include(arg="apps.pages.urls", namespace="pages"),
     ),
     path(
-        route="vacancies/",
-        view=include(arg="apps.vacancies.urls", namespace="vacancies"),
-    ),
-    path(
         route="accounts/",
         view=include(arg="apps.accounts.urls", namespace="accounts"),
     ),

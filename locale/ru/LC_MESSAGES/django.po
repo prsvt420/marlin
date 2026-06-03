@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-04-26 14:44+0800\n"
+"POT-Creation-Date: 2026-05-30 17:20+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -113,7 +113,7 @@ msgstr "Длина отчества не должна превышать 255 с�
 msgid "Social account"
 msgstr "Социальный аккаунт"
 
-#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:380
+#: .\apps\accounts\models\proxy_user_social_auth.py:9 .\config\settings.py:379
 msgid "Social accounts"
 msgstr "Социальные аккаунты"
 
@@ -529,7 +529,7 @@ msgstr "Общее количество"
 msgid "Search by cart or product name"
 msgstr "Поиск по электронной почте или названию продукта"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:398
+#: .\apps\carts\apps.py:9 .\config\settings.py:397
 msgid "Carts"
 msgstr "Корзины"
 
@@ -688,7 +688,7 @@ msgstr "Итого"
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:19
 #: .\apps\orders\templates\orders\checkout.html:126
 #: .\apps\orders\templates\orders\order_detail.html:112
-#: .\config\settings.py:348
+#: .\config\settings.py:347
 msgid "Products"
 msgstr "Продукты"
 
@@ -898,9 +898,9 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\templates\catalog\category_list.html:4
 #: .\apps\catalog\templates\catalog\category_list.html:10
 #: .\apps\catalog\views\category_list_view.py:17
-#: .\apps\catalog\views\product_detail_view.py:25
+#: .\apps\catalog\views\product_detail_view.py:26
 #: .\apps\catalog\views\product_list_view.py:54
-#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:344
+#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:343
 #: .\templates\includes\_footer.html:18 .\templates\includes\_header.html:26
 #: .\templates\includes\_header.html:94
 msgid "Catalog"
@@ -948,9 +948,6 @@ msgstr "родитель"
 
 #: .\apps\catalog\models\category_model.py:22
 #: .\apps\catalog\models\product_model.py:17
-#: .\apps\vacancies\models\city_model.py:12
-#: .\apps\vacancies\models\professional_area_model.py:11
-#: .\apps\vacancies\models\region_model.py:11
 msgid "name"
 msgstr "название"
 
@@ -961,7 +958,6 @@ msgstr "слаг"
 
 #: .\apps\catalog\models\category_model.py:31
 #: .\apps\catalog\models\product_model.py:20
-#: .\apps\vacancies\models\vacancy_model.py:20
 msgid "description"
 msgstr "описание"
 
@@ -976,7 +972,6 @@ msgid "sort order"
 msgstr "порядок сортировки"
 
 #: .\apps\catalog\models\category_model.py:50
-#: .\apps\vacancies\models\vacancy_model.py:59
 msgctxt "feminine"
 msgid "active"
 msgstr "активная"
@@ -1145,7 +1140,7 @@ msgstr "Поиск по электронной почте или названи�
 #: .\apps\favorites\apps.py:9
 #: .\apps\favorites\templates\favorites\favorite_list.html:4
 #: .\apps\favorites\templates\favorites\favorite_list.html:11
-#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:362
+#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:361
 #: .\templates\includes\_footer.html:28 .\templates\includes\_header.html:44
 #: .\templates\includes\_header.html:112
 msgid "Favorites"
@@ -1628,17 +1623,17 @@ msgid "New products"
 msgstr "Новые продукты"
 
 #: .\apps\pages\templates\pages\offer.html:4
-#: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:63
+#: .\apps\pages\views\offer_view.py:12 .\templates\includes\_footer.html:60
 msgid "Public Offer"
 msgstr "Публичная оферта"
 
 #: .\apps\pages\templates\pages\privacy.html:4
-#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\_footer.html:58
+#: .\apps\pages\views\privacy_view.py:12 .\templates\includes\_footer.html:55
 msgid "Privacy Policy"
 msgstr "Политика конфиденциальности"
 
 #: .\apps\pages\templates\pages\terms.html:4
-#: .\apps\pages\views\terms_view.py:12 .\templates\includes\_footer.html:68
+#: .\apps\pages\views\terms_view.py:12 .\templates\includes\_footer.html:65
 msgid "Terms of Service"
 msgstr "Пользовательское соглашение"
 
@@ -1655,248 +1650,33 @@ msgstr "Акции"
 msgid "Reviews"
 msgstr "Отзывы"
 
-#: .\apps\vacancies\admins\city_admin.py:20
-msgid "Search by city and region name"
-msgstr "Поиск по названию города и региона"
-
-#: .\apps\vacancies\admins\professional_area_admin.py:12
-msgid "Search by professional field name"
-msgstr "Поиск по названию профессиональной области"
-
-#: .\apps\vacancies\admins\region_admin.py:12
-msgid "Search by region name"
-msgstr "Поиск по названию региона"
-
-#: .\apps\vacancies\admins\vacancy_admin.py:41
-msgid "Search by vacancy title and description"
-msgstr "Поиск по заголовку и описанию вакансии"
-
-#: .\apps\vacancies\admins\vacancy_admin.py:43
-msgid "Salary"
-msgstr "Зарплата"
-
-#: .\apps\vacancies\apps.py:9
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:4
-#: .\apps\vacancies\views\vacancy_detail_view.py:23 .\config\settings.py:416
-#: .\templates\includes\_footer.html:47
-msgid "Vacancies"
-msgstr "Вакансии"
-
-#: .\apps\vacancies\choices\work_experience_choices.py:6
-msgid "No experience"
-msgstr "Без опыта"
-
-#: .\apps\vacancies\choices\work_experience_choices.py:7
-msgid "From 1 to 3 years"
-msgstr "От 1 года до 3 лет"
-
-#: .\apps\vacancies\choices\work_experience_choices.py:8
-msgid "From 3 to 6 years"
-msgstr "От 3 до 6 лет"
-
-#: .\apps\vacancies\choices\work_experience_choices.py:9
-msgid "More than 6 years"
-msgstr "Более 6 лет"
-
-#: .\apps\vacancies\choices\work_schedule_choices.py:6
-msgid "Full-time"
-msgstr "Полный день"
-
-#: .\apps\vacancies\choices\work_schedule_choices.py:7
-msgid "Shift schedule"
-msgstr "Сменный график"
-
-#: .\apps\vacancies\choices\work_schedule_choices.py:8
-msgid "Flexible schedule"
-msgstr "Гибкий график"
-
-#: .\apps\vacancies\choices\work_schedule_choices.py:9
-msgid "Remote work"
-msgstr "Удалённая работа"
-
-#: .\apps\vacancies\filters\vacancy_filter.py:14
-msgid "Search"
-msgstr "Поиск"
-
-#: .\apps\vacancies\filters\vacancy_filter.py:18
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:32
-msgid "Work experience"
-msgstr "Опыт работы"
-
-#: .\apps\vacancies\filters\vacancy_filter.py:22
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:28
-msgid "Work schedule"
-msgstr "График работы"
-
-#: .\apps\vacancies\filters\vacancy_filter.py:26
-msgid "Professional area"
-msgstr "Профессиональная область"
-
-#: .\apps\vacancies\filters\vacancy_filter.py:30
-msgid "City"
-msgstr "Город"
-
-#: .\apps\vacancies\models\city_model.py:18
-#: .\apps\vacancies\models\region_model.py:17
-msgid "region"
-msgstr "регион"
-
-#: .\apps\vacancies\models\city_model.py:26
-#: .\apps\vacancies\models\vacancy_model.py:33
-msgid "city"
-msgstr "город"
-
-#: .\apps\vacancies\models\city_model.py:27
-msgid "cities"
-msgstr "города"
-
-#: .\apps\vacancies\models\city_model.py:31
-msgid "city of"
-msgstr "г."
-
-#: .\apps\vacancies\models\professional_area_model.py:17
-#: .\apps\vacancies\models\vacancy_model.py:27
-msgid "professional area"
-msgstr "профессиональная область"
-
-#: .\apps\vacancies\models\professional_area_model.py:18
-msgid "professional areas"
-msgstr "профессиональные области"
-
-#: .\apps\vacancies\models\region_model.py:18
-msgid "regions"
-msgstr "регионы"
-
-#: .\apps\vacancies\models\vacancy_model.py:14
-msgid "title"
-msgstr "заголовок"
-
-#: .\apps\vacancies\models\vacancy_model.py:17
-msgid "short description"
-msgstr "краткое описание"
-
-#: .\apps\vacancies\models\vacancy_model.py:21
-msgid "Text or HTML markup: div, ul, h3, li."
-msgstr "Текст или HTML-разметка: div, ul, h3, li."
-
-#: .\apps\vacancies\models\vacancy_model.py:39
-msgid "work schedule"
-msgstr "график работы"
-
-#: .\apps\vacancies\models\vacancy_model.py:45
-msgid "work experience"
-msgstr "опыт работы"
-
-#: .\apps\vacancies\models\vacancy_model.py:48
-msgid "salary from"
-msgstr "зарплата от"
-
-#: .\apps\vacancies\models\vacancy_model.py:53
-msgid "salary to"
-msgstr "зарплата до"
-
-#: .\apps\vacancies\models\vacancy_model.py:65
-msgid "vacancy"
-msgstr "вакансия"
-
-#: .\apps\vacancies\models\vacancy_model.py:66
-msgid "vacancies"
-msgstr "вакансии"
-
-#: .\apps\vacancies\models\vacancy_model.py:80
-msgid "Maximum salary must be greater than minimum salary."
-msgstr "Максимальная заработная плата должна быть больше минимальной."
-
-#: .\apps\vacancies\models\vacancy_model.py:91
-#, python-format
-msgid "%(salary_from)s – %(salary_to)s"
-msgstr "%(salary_from)s – %(salary_to)s"
-
-#: .\apps\vacancies\models\vacancy_model.py:96
-#, python-format
-msgid "from %(salary_from)s"
-msgstr "от %(salary_from)s"
-
-#: .\apps\vacancies\models\vacancy_model.py:100
-#, python-format
-msgid "to %(salary_to)s"
-msgstr "до %(salary_to)s"
-
-#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:47
-msgid "Apply"
-msgstr "Применить"
-
-#: .\apps\vacancies\templates\vacancies\includes\vacancy_filters.html:49
-msgid "Reset"
-msgstr "Сбросить"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
-msgid "Salary before taxes"
-msgstr "Зарплата до вычета налогов"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_detail.html:19
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:30
-msgid "before taxes"
-msgstr "до вычета налогов"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
-msgid "Working in Marlin."
-msgstr "Работа в Marlin."
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
-msgid "Join our team and help deliver fresh produce to thousands of customers."
-msgstr ""
-"Присоединяйтесь к нашей команде и помогайте доставлять свежие продукты "
-"тысячам клиентов."
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:15
-msgid "Find a vacancy, e.g. — courier"
-msgstr "Найти вакансию, например — курьер"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:47
-msgid "More details"
-msgstr "Подробнее"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:61
-msgid "No results found for your search"
-msgstr "По запросу ничего не найдено"
-
-#: .\apps\vacancies\templates\vacancies\vacancy_list.html:65
-msgid "There are currently no vacancies"
-msgstr "На данный момент вакансий нет"
-
-#: .\config\settings.py:322
+#: .\config\settings.py:321
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:355
+#: .\config\settings.py:354
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:371
+#: .\config\settings.py:370
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:375
+#: .\config\settings.py:374
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:387
+#: .\config\settings.py:386
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:394
+#: .\config\settings.py:393
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:403
+#: .\config\settings.py:402
 msgid "Cart Items"
 msgstr "Элементы корзины"
-
-#: .\config\settings.py:412
-msgid "Recruitment"
-msgstr "Подбор персонала"
 
 #: .\templates\403.html:9
 msgid "Oops! Access denied"
@@ -1941,7 +1721,7 @@ msgid "Fresh products near you"
 msgstr "Свежие продукты рядом с вами"
 
 #: .\templates\email_base.html:79 .\templates\email_base.txt:8
-#: .\templates\includes\_footer.html:84
+#: .\templates\includes\_footer.html:81
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
@@ -1953,15 +1733,15 @@ msgstr "Навигация"
 msgid "About the company"
 msgstr "О компании"
 
-#: .\templates\includes\_footer.html:53
+#: .\templates\includes\_footer.html:50
 msgid "Legal information"
 msgstr "Правовая информация"
 
-#: .\templates\includes\_footer.html:75
+#: .\templates\includes\_footer.html:72
 msgid "Download the app"
 msgstr "Скачайте приложение"
 
-#: .\templates\includes\_footer.html:79
+#: .\templates\includes\_footer.html:76
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
