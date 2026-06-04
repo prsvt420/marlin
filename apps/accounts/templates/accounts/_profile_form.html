@@ -1,0 +1,52 @@
+{% load i18n %}
+
+<form id="profile-form-container" class="flex flex-col gap-3 p-4 rounded-box border border-edge h-full" action="{% url 'accounts:profile' %}" method="post" novalidate>
+	{% csrf_token %}
+
+	<h2 class="font-bold text-on-surface text-xl">{% trans "Personal data" %}</h2>
+
+	{% if form.non_field_errors %}
+		<div class="bg-error/10 rounded-box px-4 py-3">
+			{% for field_error in form.non_field_errors %}
+				<p class="text-sm hyphens-auto text-error">{{ field_error }}</p>
+			{% endfor %}
+		</div>
+	{% endif %}
+
+	<div class="flex flex-col gap-1">
+		<label class="text-base text-on-surface" for="last_name">{% trans "Last name" %}</label>
+		<input id="last_name" class="input {% if form.last_name.errors %}outline-error{% endif %}" name="last_name" type="text" autocomplete="family-name" value="{{ form.last_name.value|default:'' }}" placeholder="{% trans 'Enter last name' %}">
+		{% if form.last_name.errors %}
+			<p class="text-sm text-error">{{ form.last_name.errors.0 }}</p>
+		{% endif %}
+	</div>
+
+	<div class="flex flex-col gap-1">
+		<label class="text-base text-on-surface" for="first_name">{% trans "First name" %}</label>
+		<input id="first_name" class="input {% if form.first_name.errors %}outline-error{% endif %}" name="first_name" type="text" autocomplete="given-name" value="{{ form.first_name.value|default:'' }}" placeholder="{% trans 'Enter first name' %}">
+		{% if form.first_name.errors %}
+			<p class="text-sm text-error">{{ form.first_name.errors.0 }}</p>
+		{% endif %}
+	</div>
+
+	<div class="flex flex-col gap-1">
+		<label class="text-base text-on-surface" for="middle_name">{% trans "Middle name" %} ({% trans "if any" %})</label>
+		<input id="middle_name" class="input {% if form.middle_name.errors %}outline-error{% endif %}" name="middle_name" type="text" autocomplete="additional-name" value="{{ form.middle_name.value|default:'' }}" placeholder="{% trans 'Enter middle name' %}">
+		{% if form.middle_name.errors %}
+			<p class="text-sm text-error">{{ form.middle_name.errors.0 }}</p>
+		{% endif %}
+	</div>
+
+	<div class="flex flex-col gap-1">
+		<label class="text-base text-on-surface" for="phone_number">{% trans "Phone" %}</label>
+		<input id="phone_number" class="phone-mask input {% if form.phone_number.errors %}outline-error{% endif %}" name="phone_number" type="text" autocomplete="tel" value="{{ form.phone_number.value|default:'' }}" placeholder="+7 (___) ___-__-__">
+		{% if form.phone_number.errors %}
+			<p class="text-sm text-error">{{ form.phone_number.errors.0 }}</p>
+		{% endif %}
+	</div>
+
+	<button class="button button--primary flex items-center justify-center gap-2 mt-2" type="submit">
+		<span class="spinner size-5 border-2 htmx-indicator-show border-on-primary border-t-primary"></span>
+		<span class="htmx-indicator-hide">{% trans "Save changes" %}</span>
+	</button>
+</form>

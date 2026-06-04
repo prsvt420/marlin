@@ -284,8 +284,8 @@ LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy(viewname="pages:home")
 LOGOUT_REDIRECT_URL: StrOrPromise = LOGIN_URL
 
 UNFOLD: Dict[str, Any] = {
-    "SITE_TITLE": "Marlin",
-    "SITE_HEADER": "Marlin",
+    "SITE_TITLE": "Марлин",
+    "SITE_HEADER": "Марлин",
     "SITE_URL": reverse_lazy(viewname="pages:home"),
     "SITE_ICON": {
         "light": lambda request: static("img/logo.png"),

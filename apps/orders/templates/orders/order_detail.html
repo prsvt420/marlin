@@ -16,7 +16,7 @@
 
       {% for order_status_step in order_status_steps %}
         <li class="flex flex-col items-center gap-2 flex-1 relative">
-          {% if order_status_step.state == "done" or step.state == "current" %}
+          {% if order_status_step.state == "done" or order_status_step.state == "current" %}
             <div class="flex items-center justify-center size-9 max-md:size-8 rounded-full bg-primary text-on-primary">
               <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
             </div>

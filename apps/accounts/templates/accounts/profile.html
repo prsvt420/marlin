@@ -2,3 +2,156 @@
 {% load static i18n %}
 
 {% block title %}{% trans "Profile" %}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col gap-8 max-md:gap-4">
+		<div class="flex flex-col">
+			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{% trans "Profile" %}</h1>
+		</div>
+
+		<div class="flex flex-col gap-8 max-md:gap-4">
+				<section id="profile-data" class="grid grid-cols-[minmax(0,1fr)_400px] items-stretch gap-6 max-lg:grid-cols-1">
+					{% include "accounts/_profile_form.html" %}
+
+					<div class="flex flex-col gap-4 h-full">
+						<section class="flex flex-col flex-1 gap-3 p-4 rounded-box border border-edge">
+							<h2 class="font-bold text-on-surface text-xl">{% trans "Account" %}</h2>
+							<ul class="flex flex-col divide-y divide-edge">
+								<li class="flex justify-between gap-4 py-3">
+									<span class="text-sm text-on-surface/60">{% trans "Email" %}</span>
+									<span class="text-sm text-on-surface text-right break-all">{{ request.user.email }}</span>
+								</li>
+								<li class="flex justify-between gap-4 py-3">
+									<span class="text-sm text-on-surface/60">{% trans "Status" %}</span>
+									<span class="text-sm text-success text-right">{% trans "Active" %}</span>
+								</li>
+								<li class="flex justify-between gap-4 py-3">
+									<span class="text-sm text-on-surface/60">{% trans "Joined" %}</span>
+									<span class="text-sm text-on-surface text-right">{{ request.user.date_joined|date:"d.m.Y H:i" }}</span>
+								</li>
+								<li class="flex justify-between gap-4 py-3">
+									<span class="text-sm text-on-surface/60">{% trans "Last sign in" %}</span>
+									<span class="text-sm text-on-surface text-right">{% if request.user.last_login %}{{ request.user.last_login|date:"d.m.Y H:i" }}{% else %}{% trans "Not yet" %}{% endif %}</span>
+								</li>
+							</ul>
+						</section>
+
+						<section id="profile-security" class="flex flex-col gap-3 p-4 rounded-box border border-edge">
+							<h2 class="font-bold text-on-surface text-xl">{% trans "Security" %}</h2>
+							<a class="button button--secondary text-center" href="{% url 'accounts:password-reset' %}">{% trans "Change password" %}</a>
+							<form action="{% url 'accounts:delete' %}" method="post">
+								{% csrf_token %}
+								<button class="button w-full bg-error/10 text-error hover:bg-error/20" type="submit">{% trans "Delete account" %}</button>
+							</form>
+						</section>
+					</div>
+				</section>
+
+				<section id="profile-links" class="flex flex-col gap-4">
+					<div class="flex items-baseline gap-2">
+						<h2 class="font-bold text-on-surface text-2xl max-md:text-xl">{% trans "Social accounts" %}</h2>
+					</div>
+
+					{% if social_accounts %}
+						<ul class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+							{% for social_account in social_accounts %}
+								<li class="flex flex-col gap-2 rounded-box border border-edge p-4">
+									<div class="flex items-center justify-between gap-4">
+										<p class="inline-flex items-center gap-2 font-bold text-on-surface">
+											{% if social_account.provider == "google-oauth2" %}
+												<svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+												Google
+											{% else %}
+												{{ social_account.provider }}
+											{% endif %}
+										</p>
+										<span class="text-xs text-success">{% trans "Connected" %}</span>
+									</div>
+									<p class="text-xs text-on-surface/60 break-all">{{ social_account.uid }}</p>
+									<p class="text-xs text-on-surface/60">{% trans "Updated" %}: {{ social_account.modified|date:"d.m.Y H:i" }}</p>
+								</li>
+							{% endfor %}
+						</ul>
+					{% else %}
+						<div class="flex flex-col gap-3 rounded-box border border-edge p-4">
+							<p class="text-sm text-on-surface/60">{% trans "No linked accounts yet." %}</p>
+						</div>
+					{% endif %}
+
+					{% url "accounts:profile" as profile_url %}
+					{% if "google-oauth2" not in connected_social_providers %}
+						<a class="button button--google flex gap-2 items-center justify-center w-full max-w-80" href="{% url 'accounts:social:begin' backend='google-oauth2' %}?next={{ profile_url }}">
+							<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+							{% trans "Link Google account" %}
+						</a>
+					{% endif %}
+				</section>
+
+				<section id="profile-orders" class="flex flex-col gap-4">
+					<div class="flex items-baseline justify-between gap-4 max-md:flex-col max-md:gap-0">
+						<div class="flex items-baseline gap-2">
+							<h2 class="font-bold text-on-surface text-2xl max-md:text-xl">{% trans "Orders" %}</h2>
+						</div>
+						<a class="link text-sm" href="{% url 'catalog:category-list' %}">
+							{% if recent_orders %}
+								{% trans "Continue shopping" %}
+							{% else %}
+								{% trans "Start shopping" %}
+							{% endif %}
+						</a>
+					</div>
+
+					{% if recent_orders %}
+						<ol class="flex flex-col gap-4">
+							{% for order in recent_orders %}
+								<li>
+									<article class="flex items-center justify-between gap-4 rounded-box border border-edge p-4 max-md:items-start max-md:flex-col">
+										<div class="flex flex-col gap-1">
+											<a class="font-bold text-on-surface text-base" href="{% url 'orders:detail' order_number=order.number %}">{% trans "Order" %} {{ order.number }}</a>
+											<p class="text-sm text-on-surface/60">
+												{{ order.created_at|date:"d.m.Y H:i" }}
+												&middot;
+												{% blocktrans count count_order_items=order.total_quantity %}{{ count_order_items }} product{% plural %}{{ count_order_items }} products{% endblocktrans %}
+											</p>
+											<p class="text-sm text-on-surface/60">{{ order.get_delivery_method_display }} &middot; {{ order.get_payment_method_display }}</p>
+										</div>
+
+										<ul class="flex items-center justify-center w-36 min-w-36 h-12 max-md:w-full max-md:min-w-0 max-md:justify-center">
+											{% for order_item in order.order_items.all|slice:":4" %}
+												{% with product=order_item.product %}
+													<li class="{% if not forloop.first %}-ml-4{% endif %} {% if forloop.counter == 1 %}opacity-100{% elif forloop.counter == 2 %}opacity-75{% elif forloop.counter == 3 %}opacity-50{% else %}opacity-25{% endif %}" style="z-index: {{ forloop.revcounter }};">
+														<a class="flex items-center justify-center size-12 rounded-box bg-surface-dim border border-surface overflow-hidden" href="{{ product.get_absolute_url }}">
+															<img class="p-1.5 mix-blend-darken max-size-full object-contain" src="{% if product.images.first %}{{ product.images.first.image.url }}{% else %}{% static 'catalog/img/default-product-image.webp' %}{% endif %}" alt="" draggable="false">
+														</a>
+													</li>
+												{% endwith %}
+											{% endfor %}
+										</ul>
+
+										<div class="flex items-center justify-end gap-3 min-w-40 max-md:w-full max-md:justify-between">
+											<span class="text-sm bg-surface-dim rounded-field px-3 py-1">{{ order.get_order_status_display }}</span>
+											<strong class="font-bold text-on-surface text-base min-w-fit">{{ order.total_price }} &#8381;</strong>
+											<a class="link text-sm" href="{% url 'orders:detail' order_number=order.number %}">{% trans "Details" %}</a>
+										</div>
+									</article>
+								</li>
+							{% endfor %}
+						</ol>
+					{% else %}
+						<div class="flex flex-col items-center justify-center gap-3 rounded-box p-8 min-h-60">
+							<p class="font-bold text-on-surface text-xl max-md:text-lg">{% trans "You have no orders yet." %}</p>
+							<a class="button button--primary mt-2" href="{% url 'catalog:category-list' %}">{% trans "Return to catalog" %}</a>
+						</div>
+					{% endif %}
+				</section>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/masks.js' %}"></script>
+{% endblock %}

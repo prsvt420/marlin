@@ -15,7 +15,7 @@ def associate_by_email(
     request: HttpRequest,
     user: Optional[UserProtocol] = None,
     **kwargs: Any,
-):
+) -> Optional[Dict[str, Any]]:
     if user:
         return None
 
