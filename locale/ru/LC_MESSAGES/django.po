@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-06-05 18:08+0800\n"
+"POT-Creation-Date: 2026-06-07 02:21+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -320,35 +320,39 @@ msgstr "Безопасность"
 msgid "Delete account"
 msgstr "Удалить аккаунт"
 
-#: .\apps\accounts\templates\accounts\profile.html:69
+#: .\apps\accounts\templates\accounts\profile.html:72
 msgid "Connected"
 msgstr "Подключено"
 
-#: .\apps\accounts\templates\accounts\profile.html:72
+#: .\apps\accounts\templates\accounts\profile.html:75
 msgid "Updated"
 msgstr "Обновлено"
 
-#: .\apps\accounts\templates\accounts\profile.html:78
+#: .\apps\accounts\templates\accounts\profile.html:81
 msgid "No linked accounts yet."
 msgstr "Пока нет связанных аккаунтов."
 
-#: .\apps\accounts\templates\accounts\profile.html:86
+#: .\apps\accounts\templates\accounts\profile.html:89
+msgid "Link VK ID account"
+msgstr "Привязать аккаунт VK ID"
+
+#: .\apps\accounts\templates\accounts\profile.html:95
 msgid "Link Google account"
 msgstr "Привязать аккаунт Google"
 
-#: .\apps\accounts\templates\accounts\profile.html:94 .\apps\orders\apps.py:9
+#: .\apps\accounts\templates\accounts\profile.html:103 .\apps\orders\apps.py:9
 msgid "Orders"
 msgstr "Заказы"
 
-#: .\apps\accounts\templates\accounts\profile.html:98
+#: .\apps\accounts\templates\accounts\profile.html:107
 msgid "Continue shopping"
 msgstr "Продолжить покупки"
 
-#: .\apps\accounts\templates\accounts\profile.html:100
+#: .\apps\accounts\templates\accounts\profile.html:109
 msgid "Start shopping"
 msgstr "Начать покупки"
 
-#: .\apps\accounts\templates\accounts\profile.html:111
+#: .\apps\accounts\templates\accounts\profile.html:120
 #: .\apps\orders\models\order_model.py:102
 #: .\apps\orders\templates\orders\order_detail.html:4
 #: .\apps\orders\templates\orders\order_detail.html:10
@@ -356,7 +360,7 @@ msgstr "Начать покупки"
 msgid "Order"
 msgstr "Заказ"
 
-#: .\apps\accounts\templates\accounts\profile.html:115
+#: .\apps\accounts\templates\accounts\profile.html:124
 #, python-format
 msgid "%(count_order_items)s product"
 msgid_plural "%(count_order_items)s products"
@@ -364,15 +368,15 @@ msgstr[0] "%(count_order_items)s продукт"
 msgstr[1] "%(count_order_items)s продукта"
 msgstr[2] "%(count_order_items)s продуктов"
 
-#: .\apps\accounts\templates\accounts\profile.html:135
+#: .\apps\accounts\templates\accounts\profile.html:144
 msgid "Details"
 msgstr "Детали"
 
-#: .\apps\accounts\templates\accounts\profile.html:143
+#: .\apps\accounts\templates\accounts\profile.html:152
 msgid "You have no orders yet."
 msgstr "У вас пока нет заказов."
 
-#: .\apps\accounts\templates\accounts\profile.html:144
+#: .\apps\accounts\templates\accounts\profile.html:153
 #: .\apps\carts\templates\carts\includes\_cart_empty.html:5
 #: .\apps\catalog\templates\catalog\includes\_product_list.html:21
 #: .\apps\favorites\templates\favorites\includes\_favorite_list.html:23
@@ -642,6 +646,11 @@ msgstr "Вы успешно зарегистрированы! Активируй
 #: .\apps\accounts\views\signup_view.py:45
 msgid "An account activation link has been sent to your email."
 msgstr "Ссылка для активации аккаунта отправлена на вашу электронную почту."
+
+#: .\apps\accounts\views\vk_auth_unavailable_view.py:14
+msgid ""
+"VK ID authorization is temporarily unavailable. Please try another method."
+msgstr "Авторизация через VK ID временно недоступна. Попробуйте другой способ."
 
 #: .\apps\carts\admins\cart_admin.py:42
 msgid "Search by email"

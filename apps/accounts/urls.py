@@ -9,6 +9,11 @@ app_name: str = "accounts"
 
 urlpatterns: List[Union[URLResolver, URLPattern]] = [
     path(
+        route="vk-unavailable/",
+        view=views.VkAuthUnavailableView.as_view(),
+        name="vk-unavailable",
+    ),
+    path(
         route="",
         view=include(arg="social_django.urls", namespace="social"),
         name="social",

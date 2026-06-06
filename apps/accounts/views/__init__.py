@@ -8,6 +8,7 @@ from apps.accounts.views.profile_view import ProfileView
 from apps.accounts.views.signin_view import SignInView
 from apps.accounts.views.signout_view import SignOutView
 from apps.accounts.views.signup_view import SignUpView
+from apps.accounts.views.vk_auth_unavailable_view import VkAuthUnavailableView
 
 __all__ = [
     "AccountActivateView",
@@ -18,4 +19,5 @@ __all__ = [
     "SignUpView",
     "ProfileView",
     "AccountDeleteView",
+    "VkAuthUnavailableView",
 ]
