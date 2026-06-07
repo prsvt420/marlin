@@ -7,6 +7,7 @@ from django.views.generic import DetailView
 
 from apps.catalog.models import Product
 from apps.catalog.selectors import CategorySelector, ProductSelector
+from apps.reviews.selectors import ProductReviewSelector
 
 
 class ProductDetailView(DetailView):
@@ -45,4 +46,23 @@ class ProductDetailView(DetailView):
         context["similar_products"] = ProductSelector().get_similar_products(
             product=self.object
         )
+
+        if self.request.user.is_authenticated:
+            product_review_selector = ProductReviewSelector()
+            can_review_product: bool = (
+                product_review_selector.can_user_review_product(
+                    user=self.request.user,  # type: ignore
+                    product_pk=self.object.pk,
+                )
+            )
+            context["can_review_product"] = can_review_product
+
+            if can_review_product:
+                context["product_review"] = (
+                    product_review_selector.get_user_product_review(
+                        user=self.request.user,  # type: ignore
+                        product_pk=self.object.pk,
+                    )
+                )
+
         return context

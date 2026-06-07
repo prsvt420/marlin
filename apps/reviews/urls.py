@@ -1,9 +1,15 @@
 from typing import List
 
-from django.urls import URLPattern, path  # noqa: F401
+from django.urls import URLPattern, path
 
-from . import views  # noqa: F401
+from apps.reviews import views
 
 app_name: str = "reviews"
 
-urlpatterns: List[URLPattern] = []
+urlpatterns: List[URLPattern] = [
+    path(
+        route="products/<int:product_pk>/rating/",
+        view=views.ProductReviewUpdateView.as_view(),
+        name="product-rating-update",
+    ),
+]

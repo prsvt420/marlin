@@ -48,10 +48,12 @@
 			<div class="flex-1 min-w-0 flex flex-col gap-4">
 				<div class="flex flex-col gap-3 mb-4">
 					<div class="flex flex-col">
-						<p class="inline-flex items-center gap-1 text-sm font-bold">
-							<svg class="size-4 fill-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
-						  <span class="text-on-surface">4.74</span> <span class="text-on-surface/60">(1428 оценок)</span>
-						</p>
+						<div class="flex items-center justify-between gap-4 max-sm:items-start max-sm:flex-col">
+							{% include "reviews/includes/_product_rating_summary.html" %}
+							{% if can_review_product %}
+								{% include "reviews/includes/_product_review_control.html" %}
+							{% endif %}
+						</div>
 						<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{{ product.name }}{% if product.unit_type in "kg l" %}, <span class="text-on-surface/60"> {{ product.weight_step|floatformat:"-2u" }} {{ product.get_unit_type_display }}{% endif %}</span></h1>
 		        <p class="font-bold text-on-surface/60 text-base">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
 					</div>
@@ -137,7 +139,7 @@
 	                <div class="flex flex-col">
 	                  <p class="inline-flex items-center gap-1 text-xs font-bold">
 											<svg class="size-3 fill-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
-											<span class="text-on-surface">4.74</span> <span class="text-on-surface/60">(1428 оценок)</span>
+											<span class="text-on-surface">{{ product.rating_average|floatformat:"2u" }}</span> <span class="text-on-surface/60">({{ product.rating_count }} оценок)</span>
 										</p>
 		                <h3 class="font-bold text-on-surface text-sm leading-tight line-clamp-2">{{ product.name }}</h3>
 	                  <p class="font-bold text-on-surface/60 text-xs">{% trans "Price per 1" %} {{ product.get_unit_type_display }}</p>
@@ -164,4 +166,5 @@
 	<script src="{% static 'js/embla-carousel.umd.js' %}"></script>
   <script src="{% static 'catalog/js/carousel.js' %}"></script>
   <script src="{% static 'catalog/js/text-expander.js' %}"></script>
+  <script src="{% static 'reviews/js/product-review-rating.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,36 @@
+{% load i18n %}
+
+{% if can_review_product %}
+	{% with current_rating=product_review.rating|default:0 %}
+	<div class="transition-opacity [&.htmx-request]:opacity-50 [&.htmx-request]:pointer-events-none" data-product-review-control data-current-rating="{{ current_rating }}">
+		<div class="flex items-center">
+			<form
+				class="flex items-center gap-0.5"
+				data-rating-stars
+				hx-post="{% url 'reviews:product-rating-update' product_pk=product.pk %}"
+				hx-target="closest [data-product-review-control]"
+				hx-swap="outerHTML"
+				hx-indicator="closest [data-product-review-control]"
+				hx-sync="this:replace"
+				aria-label="{% trans 'Rate product' %}"
+			>
+			<button class="cursor-pointer transition duration-200 hover:scale-110 {% if current_rating >= 1 %}text-accent{% else %}text-on-surface/20{% endif %}" type="submit" name="rating" value="1" data-rating-value="1" aria-label="{% trans '1 star' %}" aria-pressed="{% if current_rating == 1 %}true{% else %}false{% endif %}">
+				<svg class="size-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+			</button>
+			<button class="cursor-pointer transition duration-200 hover:scale-110 {% if current_rating >= 2 %}text-accent{% else %}text-on-surface/20{% endif %}" type="submit" name="rating" value="2" data-rating-value="2" aria-label="{% trans '2 stars' %}" aria-pressed="{% if current_rating == 2 %}true{% else %}false{% endif %}">
+				<svg class="size-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+			</button>
+			<button class="cursor-pointer transition duration-200 hover:scale-110 {% if current_rating >= 3 %}text-accent{% else %}text-on-surface/20{% endif %}" type="submit" name="rating" value="3" data-rating-value="3" aria-label="{% trans '3 stars' %}" aria-pressed="{% if current_rating == 3 %}true{% else %}false{% endif %}">
+				<svg class="size-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+			</button>
+			<button class="cursor-pointer transition duration-200 hover:scale-110 {% if current_rating >= 4 %}text-accent{% else %}text-on-surface/20{% endif %}" type="submit" name="rating" value="4" data-rating-value="4" aria-label="{% trans '4 stars' %}" aria-pressed="{% if current_rating == 4 %}true{% else %}false{% endif %}">
+				<svg class="size-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+			</button>
+			<button class="cursor-pointer transition duration-200 hover:scale-110 {% if current_rating >= 5 %}text-accent{% else %}text-on-surface/20{% endif %}" type="submit" name="rating" value="5" data-rating-value="5" aria-label="{% trans '5 stars' %}" aria-pressed="{% if current_rating == 5 %}true{% else %}false{% endif %}">
+				<svg class="size-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.3621 2.56546C12.826 1.40315 11.174 1.40315 10.6379 2.56546L8.50501 7.18955L3.44814 7.78912C2.17705 7.93983 1.66657 9.51091 2.60632 10.38L6.345 13.8374L5.35257 18.832C5.10311 20.0875 6.43955 21.0585 7.55647 20.4333L12 17.946L16.4435 20.4333C17.5604 21.0585 18.8969 20.0875 18.6474 18.832L17.655 13.8374L21.3937 10.38C22.3334 9.51091 21.8229 7.93983 20.5518 7.78912L15.495 7.18955L13.3621 2.56546Z" clip-rule="evenodd"></path></svg>
+			</button>
+			</form>
+		</div>
+	</div>
+	{% endwith %}
+{% endif %}
