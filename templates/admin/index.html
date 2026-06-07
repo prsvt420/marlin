@@ -1,0 +1,89 @@
+{% extends "admin/base.html" %}
+
+{% load i18n unfold %}
+
+{% block title %}
+    {% if subtitle %}{{ subtitle }} | {% endif %}
+    {{ title }} | {{ site_title|default:_("Django site admin") }}
+{% endblock %}
+
+{% block branding %}
+    {% include "unfold/helpers/site_branding.html" %}
+{% endblock %}
+
+{% block content %}
+    {% if dashboard %}
+        {% component "unfold/components/container.html" %}
+            <div class="flex flex-col gap-6 mb-8">
+                <div>
+                    {% component "unfold/components/title.html" %}
+                        {% trans "Business overview" %}
+                    {% endcomponent %}
+                    {% component "unfold/components/text.html" with class="text-base-500 dark:text-base-400 mt-1" %}
+                        {% trans "Current indicators and data for the last 30 days." %}
+                    {% endcomponent %}
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {% for metric in dashboard.metrics %}
+                        {% component "unfold/components/card.html" with icon=metric.icon icon_class="left-2" %}
+                            <div class="flex flex-col gap-1 pl-6">
+                                <span class="text-sm text-base-500 dark:text-base-400">
+                                    {{ metric.title }}
+                                </span>
+                                <strong class="font-semibold text-2xl text-font-important-light tracking-tight dark:text-font-important-dark">
+                                    {{ metric.value }}
+                                </strong>
+                                <span class="text-xs text-base-400 dark:text-base-500">
+                                    {{ metric.description }}
+                                </span>
+                            </div>
+                        {% endcomponent %}
+                    {% endfor %}
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                    {% component "unfold/components/card.html" with title=_("Orders by day") %}
+                        {% component "unfold/components/chart/line.html" with data=dashboard.orders_chart height=260 %}
+                        {% endcomponent %}
+                    {% endcomponent %}
+
+                    {% component "unfold/components/card.html" with title=_("Paid revenue by day") %}
+                        {% component "unfold/components/chart/line.html" with data=dashboard.revenue_chart height=260 %}
+                        {% endcomponent %}
+                    {% endcomponent %}
+                </div>
+
+                <div class="grid grid-cols-1 gap-6 xl:grid-cols-3">
+                    {% component "unfold/components/card.html" with title=_("Order statuses") %}
+                        {% component "unfold/components/table.html" with table=dashboard.status_table card_included=1 %}
+                        {% endcomponent %}
+                    {% endcomponent %}
+
+                    {% component "unfold/components/card.html" with title=_("Top products") %}
+                        {% component "unfold/components/table.html" with table=dashboard.top_products_table card_included=1 %}
+                        {% endcomponent %}
+                    {% endcomponent %}
+
+                    {% component "unfold/components/card.html" with title=_("Low stock") %}
+                        {% component "unfold/components/table.html" with table=dashboard.low_stock_table card_included=1 %}
+                        {% endcomponent %}
+                    {% endcomponent %}
+                </div>
+
+                {% component "unfold/components/card.html" with title=_("Latest orders") %}
+                    {% component "unfold/components/table.html" with table=dashboard.latest_orders_table card_included=1 striped=1 %}
+                    {% endcomponent %}
+                {% endcomponent %}
+            </div>
+        {% endcomponent %}
+    {% endif %}
+
+    <div class="flex flex-col lg:flex-row lg:gap-8">
+        <div class="grow">
+            {% include "unfold/helpers/app_list_default.html" %}
+        </div>
+
+        {% include "unfold/helpers/history.html" %}
+    </div>
+{% endblock %}

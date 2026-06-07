@@ -287,6 +287,9 @@ UNFOLD: Dict[str, Any] = {
     "SITE_TITLE": "Марлин",
     "SITE_HEADER": "Марлин",
     "SITE_URL": reverse_lazy(viewname="pages:home"),
+    "DASHBOARD_CALLBACK": (
+        "apps.core.admins.admin_dashboard.dashboard_callback"
+    ),
     "SITE_ICON": {
         "light": lambda request: static("img/logo.png"),
         "dark": lambda request: static("img/logo.png"),
@@ -393,6 +396,18 @@ UNFOLD: Dict[str, Any] = {
                 "title": _("Orders & Carts"),
                 "separator": True,
                 "items": [
+                    {
+                        "title": _("Orders"),
+                        "icon": "receipt_long",
+                        "link": reverse_lazy("admin:orders_order_changelist"),
+                    },
+                    {
+                        "title": _("Order items"),
+                        "icon": "format_list_bulleted",
+                        "link": reverse_lazy(
+                            "admin:orders_orderitem_changelist"
+                        ),
+                    },
                     {
                         "title": _("Carts"),
                         "icon": "shopping_cart",

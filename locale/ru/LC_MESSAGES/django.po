@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-06-07 02:21+0800\n"
+"POT-Creation-Date: 2026-06-08 01:28+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -115,7 +115,7 @@ msgid "Social account"
 msgstr "Социальный аккаунт"
 
 #: .\apps\accounts\models\proxy_user_social_auth.py:9
-#: .\apps\accounts\templates\accounts\profile.html:53 .\config\settings.py:379
+#: .\apps\accounts\templates\accounts\profile.html:53 .\config\settings.py:382
 msgid "Social accounts"
 msgstr "Социальные аккаунты"
 
@@ -293,6 +293,8 @@ msgstr "Аккаунт"
 
 #: .\apps\accounts\templates\accounts\profile.html:26
 #: .\apps\carts\admins\cart_admin.py:46
+#: .\apps\core\admins\admin_dashboard.py:305
+#: .\apps\core\admins\admin_dashboard.py:320
 msgid "Status"
 msgstr "Статус"
 
@@ -340,7 +342,10 @@ msgstr "Привязать аккаунт VK ID"
 msgid "Link Google account"
 msgstr "Привязать аккаунт Google"
 
-#: .\apps\accounts\templates\accounts\profile.html:103 .\apps\orders\apps.py:9
+#: .\apps\accounts\templates\accounts\profile.html:103
+#: .\apps\core\admins\admin_dashboard.py:294
+#: .\apps\core\admins\admin_dashboard.py:305 .\apps\orders\apps.py:9
+#: .\config\settings.py:400
 msgid "Orders"
 msgstr "Заказы"
 
@@ -669,7 +674,7 @@ msgstr "Общее количество"
 msgid "Search by cart or product name"
 msgstr "Поиск по электронной почте или названию продукта"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:397
+#: .\apps\carts\apps.py:9 .\config\settings.py:412
 msgid "Carts"
 msgstr "Корзины"
 
@@ -812,6 +817,7 @@ msgstr "Введите промокод"
 
 #: .\apps\carts\templates\carts\includes\_cart_summary.html:15
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:15
+#: .\apps\core\admins\admin_dashboard.py:321
 #: .\apps\orders\templates\orders\checkout.html:122
 #: .\apps\orders\templates\orders\order_detail.html:108
 msgid "Total"
@@ -821,7 +827,7 @@ msgstr "Итого"
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:19
 #: .\apps\orders\templates\orders\checkout.html:126
 #: .\apps\orders\templates\orders\order_detail.html:112
-#: .\config\settings.py:347
+#: .\config\settings.py:350
 msgid "Products"
 msgstr "Продукты"
 
@@ -1018,7 +1024,7 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:26
 #: .\apps\catalog\views\product_list_view.py:54
-#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:343
+#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:346
 #: .\templates\includes\_footer.html:18 .\templates\includes\_header.html:26
 #: .\templates\includes\_header.html:94
 msgid "Catalog"
@@ -1251,6 +1257,92 @@ msgstr[2] "%(count_products)s продуктов"
 msgid "Search by query"
 msgstr "Поиск по запросу"
 
+#: .\apps\core\admins\admin_dashboard.py:246
+msgid "Revenue today"
+msgstr "Выручка сегодня"
+
+#: .\apps\core\admins\admin_dashboard.py:248
+#: .\apps\core\admins\admin_dashboard.py:255
+#, python-format
+msgid "%(count)s orders"
+msgstr "Заказов: %(count)s"
+
+#: .\apps\core\admins\admin_dashboard.py:253
+msgid "Revenue for 30 days"
+msgstr "Выручка за 30 дней"
+
+#: .\apps\core\admins\admin_dashboard.py:260
+msgid "Average order"
+msgstr "Средний чек"
+
+#: .\apps\core\admins\admin_dashboard.py:262
+msgid "Paid orders for 30 days"
+msgstr "Оплаченные заказы за 30 дней"
+
+#: .\apps\core\admins\admin_dashboard.py:266
+msgid "New users"
+msgstr "Новые пользователи"
+
+#: .\apps\core\admins\admin_dashboard.py:270
+msgid "For the last 30 days"
+msgstr "За последние 30 дней"
+
+#: .\apps\core\admins\admin_dashboard.py:274
+msgid "Cart conversion"
+msgstr "Конверсия корзин"
+
+#: .\apps\core\admins\admin_dashboard.py:276
+#, python-format
+msgid "%(count)s converted carts"
+msgstr "Конвертированных корзин: %(count)s"
+
+#: .\apps\core\admins\admin_dashboard.py:281
+msgid "Active carts"
+msgstr "Активные корзины"
+
+#: .\apps\core\admins\admin_dashboard.py:283
+#, python-format
+msgid "%(count)s cancelled orders"
+msgstr "Отменённых заказов: %(count)s"
+
+#: .\apps\core\admins\admin_dashboard.py:300
+#: .\apps\core\admins\admin_dashboard.py:309
+msgid "Revenue"
+msgstr "Выручка"
+
+#: .\apps\core\admins\admin_dashboard.py:305
+msgid "Share"
+msgstr "Доля"
+
+#: .\apps\core\admins\admin_dashboard.py:309
+#: .\apps\core\admins\admin_dashboard.py:313
+msgid "Product"
+msgstr "Товар"
+
+#: .\apps\core\admins\admin_dashboard.py:309
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\apps\core\admins\admin_dashboard.py:313
+msgid "Stock"
+msgstr "Остаток"
+
+#: .\apps\core\admins\admin_dashboard.py:313
+msgid "Unit"
+msgstr "Единица"
+
+#: .\apps\core\admins\admin_dashboard.py:318
+msgid "Number"
+msgstr "Номер"
+
+#: .\apps\core\admins\admin_dashboard.py:319
+msgid "Customer"
+msgstr "Покупатель"
+
+#: .\apps\core\admins\admin_dashboard.py:322
+msgid "Created"
+msgstr "Создан"
+
 #: .\apps\favorites\admin\favorite_admin.py:24
 msgid "Search by email or product name"
 msgstr "Поиск по электронной почте или названию продукта"
@@ -1258,7 +1350,7 @@ msgstr "Поиск по электронной почте или названи�
 #: .\apps\favorites\apps.py:9
 #: .\apps\favorites\templates\favorites\favorite_list.html:4
 #: .\apps\favorites\templates\favorites\favorite_list.html:11
-#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:361
+#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:364
 #: .\templates\includes\_footer.html:28 .\templates\includes\_header.html:44
 #: .\templates\includes\_header.html:112
 msgid "Favorites"
@@ -1294,6 +1386,22 @@ msgstr "Продукт успешно добавлен в избранное."
 #: .\apps\favorites\views\favorite_toggle_view.py:37
 msgid "The product has been successfully removed from favorites."
 msgstr "Продукт успешно удален из избранного."
+
+#: .\apps\orders\admins\order_admin.py:72
+msgid "Search by order number, user, recipient email, name or phone"
+msgstr "Поиск по номеру заказа, пользователю, email, имени или телефону"
+
+#: .\apps\orders\admins\order_admin.py:82
+msgid "Order status"
+msgstr "Статус заказа"
+
+#: .\apps\orders\admins\order_admin.py:96
+msgid "Payment status"
+msgstr "Статус оплаты"
+
+#: .\apps\orders\admins\order_item_admin.py:37
+msgid "Search by order number or product name"
+msgstr "Поиск по номеру заказа или названию товара"
 
 #: .\apps\orders\choices\delivery_method_choices.py:6
 #: .\apps\orders\templates\orders\checkout.html:37
@@ -1752,31 +1860,35 @@ msgstr "Акции"
 msgid "Reviews"
 msgstr "Отзывы"
 
-#: .\config\settings.py:321
+#: .\config\settings.py:324
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:354
+#: .\config\settings.py:357
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:370
+#: .\config\settings.py:373
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:374
+#: .\config\settings.py:377
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:386
+#: .\config\settings.py:389
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:393
+#: .\config\settings.py:396
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:402
+#: .\config\settings.py:405
+msgid "Order items"
+msgstr "Позиции заказов"
+
+#: .\config\settings.py:417
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
@@ -1812,6 +1924,42 @@ msgstr "Упс! Что-то пошло не так"
 msgid "An internal error occurred. Please refresh the page or try again later."
 msgstr ""
 "Произошла внутренняя ошибка. Обновите страницу или повторите попытку позже."
+
+#: .\templates\admin\index.html:7
+msgid "Django site admin"
+msgstr "Администрация сайта Django"
+
+#: .\templates\admin\index.html:20
+msgid "Business overview"
+msgstr "Обзор показателей"
+
+#: .\templates\admin\index.html:23
+msgid "Current indicators and data for the last 30 days."
+msgstr "Текущие показатели и данные за последние 30 дней."
+
+#: .\templates\admin\index.html:46
+msgid "Orders by day"
+msgstr "Заказы по дням"
+
+#: .\templates\admin\index.html:51
+msgid "Paid revenue by day"
+msgstr "Оплаченная выручка по дням"
+
+#: .\templates\admin\index.html:58
+msgid "Order statuses"
+msgstr "Статусы заказов"
+
+#: .\templates\admin\index.html:63
+msgid "Top products"
+msgstr "Популярные товары"
+
+#: .\templates\admin\index.html:68
+msgid "Low stock"
+msgstr "Низкие остатки"
+
+#: .\templates\admin\index.html:74
+msgid "Latest orders"
+msgstr "Последние заказы"
 
 #: .\templates\email_base.html:65
 msgid "Marlin logo"
