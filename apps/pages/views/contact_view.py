@@ -15,7 +15,14 @@ class ContactView(FormView):
     form_class = ContactForm
     success_url = reverse_lazy(viewname="pages:contact")
     extra_context = {
-        "YANDEX_SMART_CAPTCHA_CLIENT_KEY": YANDEX_SMART_CAPTCHA_CLIENT_KEY
+        "YANDEX_SMART_CAPTCHA_CLIENT_KEY": YANDEX_SMART_CAPTCHA_CLIENT_KEY,
+        "breadcrumbs": [
+            {"name": _("Home"), "url": reverse_lazy(viewname="pages:home")},
+            {
+                "name": _("Contacts"),
+                "url": reverse_lazy(viewname="pages:contact"),
+            },
+        ],
     }
 
     def form_valid(self, form: ContactForm) -> HttpResponse:

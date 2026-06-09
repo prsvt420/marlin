@@ -2,3 +2,143 @@
 {% load static i18n %}
 
 {% block title %}{% trans "Contacts" %}{% endblock %}
+
+{% block content %}
+	<section class="flex flex-col gap-8 max-md:gap-4">
+		<header class="flex flex-col">
+			{% include "includes/_breadcrumbs.html" with breadcrumbs=breadcrumbs %}
+			<h1 class="font-bold text-on-surface text-3xl max-md:text-2xl">{% trans "Contacts" %}</h1>
+		</header>
+
+		<div class="flex items-start gap-8 max-lg:flex-col max-md:gap-4">
+			<aside class="w-full max-w-[380px] max-lg:max-w-full">
+				<form class="flex flex-col gap-3 p-4 shadow-surface rounded-box" action="{% url 'pages:contact' %}" method="post" novalidate>
+					{% csrf_token %}
+
+					<div>
+						<h2 class="font-bold text-on-surface text-xl">{% trans "Send us a message" %}</h2>
+					</div>
+
+					{% if form.non_field_errors %}
+						<div class="bg-error/10 rounded-box px-4 py-3">
+							{% for field_error in form.non_field_errors %}
+								<p class="text-sm hyphens-auto text-error">{{ field_error }}</p>
+							{% endfor %}
+						</div>
+					{% endif %}
+
+					{% with full_name=request.user.full_name email=request.user.email phone_number=request.user.phone_number %}
+						<div class="flex flex-col gap-1">
+							<label class="text-base text-on-surface" for="full_name">{% trans "Full name" %}</label>
+							<input id="full_name" class="input w-full {% if form.full_name.errors %}outline-error{% endif %}" name="full_name" type="text" autocomplete="name" value="{{ form.full_name.value|default:full_name }}" placeholder="{% trans 'Enter full name' %}">
+							{% if form.full_name.errors %}
+								<p class="text-sm text-error">{{ form.full_name.errors.0 }}</p>
+							{% endif %}
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label class="text-base text-on-surface" for="email">{% trans "Email" %}</label>
+							<input id="email" class="input w-full {% if form.email.errors %}outline-error{% endif %}" name="email" type="email" autocomplete="email" value="{{ form.email.value|default:email }}" placeholder="{% trans 'Enter email' %}">
+							{% if form.email.errors %}
+								<p class="text-sm text-error">{{ form.email.errors.0 }}</p>
+							{% endif %}
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label class="text-base text-on-surface" for="phone_number">{% trans "Phone number" %}</label>
+							<input id="phone_number" class="phone-mask input w-full {% if form.phone_number.errors %}outline-error{% endif %}" name="phone_number" type="tel" autocomplete="tel" value="{{ form.phone_number.value|default_if_none:phone_number|default_if_none:'' }}" placeholder="+7 (___) ___-__-__">
+							{% if form.phone_number.errors %}
+								<p class="text-sm text-error">{{ form.phone_number.errors.0 }}</p>
+							{% endif %}
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label class="text-base text-on-surface" for="subject">{% trans "Subject" %}</label>
+							<input id="subject" class="input w-full {% if form.subject.errors %}outline-error{% endif %}" name="subject" type="text" value="{{ form.subject.value|default:'' }}" placeholder="{% trans 'Enter subject' %}">
+							{% if form.subject.errors %}
+								<p class="text-sm text-error">{{ form.subject.errors.0 }}</p>
+							{% endif %}
+						</div>
+
+						<div class="flex flex-col gap-1">
+							<label class="text-base text-on-surface" for="message">{% trans "Message" %}</label>
+							<textarea id="message" class="input !h-auto min-h-24 max-h-48 w-full rounded-3xl resize-y {% if form.message.errors %}outline-error{% endif %}" name="message" rows="3" placeholder="{% trans 'Enter message' %}">{{ form.message.value|default:'' }}</textarea>
+							{% if form.message.errors %}
+								<p class="text-sm text-error">{{ form.message.errors.0 }}</p>
+							{% endif %}
+						</div>
+					{% endwith %}
+
+					<div id="yandex-smart-captcha-container" data-language="{{ LANGUAGE_CODE }}" data-sitekey="{{ YANDEX_SMART_CAPTCHA_CLIENT_KEY }}"></div>
+
+					<button class="button button--primary mt-2 w-full" type="submit">{% trans "Send" %}</button>
+				</form>
+			</aside>
+
+			<div class="flex flex-col flex-1 w-full gap-4" aria-label="{% trans 'Contact information' %}">
+				<div class="overflow-hidden rounded-box shadow-surface">
+					<iframe
+						class="block w-full h-[420px] max-md:h-80 border-0"
+						src="https://yandex.ru/map-widget/v1/-/CLQzZPjV?lang={{ LANGUAGE_CODE }}"
+						title="{% trans 'Address' %}: {% trans 'Moscow, Example Street, 15' %}"
+						loading="lazy"
+						allowfullscreen>
+					</iframe>
+				</div>
+
+				<ul class="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
+					<li>
+						<article class="flex flex-col h-full p-4 bg-surface-dim rounded-box">
+							<svg class="size-7 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+								<circle cx="12" cy="10" r="2.5"/>
+							</svg>
+							<h3 class="font-bold text-sm text-on-surface">{% trans "Address" %}</h3>
+							<p class="text-sm text-on-surface/60">{% trans "Moscow, Example Street, 15" %}</p>
+						</article>
+					</li>
+
+					<li>
+						<article class="flex flex-col h-full p-4 bg-surface-dim rounded-box">
+							<svg class="size-7 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M8.5 3.5 10 7l-2 1.5c1.3 2.8 3.7 5.2 6.5 6.5l1.5-2 3.5 1.5v3c0 1.1-.9 2-2 2C10.3 19.5 4.5 13.7 4.5 6.5c0-1.1.9-2 2-2h2Z"/>
+							</svg>
+							<h3 class="font-bold text-sm text-on-surface">{% trans "Phone number" %}</h3>
+							<a class="link text-sm" href="tel:+74951234567">+7 (495) 123-45-67</a>
+						</article>
+					</li>
+
+					<li>
+						<article class="flex flex-col h-full p-4 bg-surface-dim rounded-box">
+							<svg class="size-7 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+								<rect x="3" y="5" width="18" height="14" rx="2"/>
+								<path stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/>
+							</svg>
+							<h3 class="font-bold text-sm text-on-surface">{% trans "Email" %}</h3>
+							<a class="link text-sm break-all" href="mailto:support@marlinio.ru">support@marlinio.ru</a>
+						</article>
+					</li>
+
+					<li>
+						<article class="flex flex-col h-full p-4 bg-surface-dim rounded-box">
+							<svg class="size-7 mb-2 text-on-surface/60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+								<circle cx="12" cy="12" r="9"/>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/>
+							</svg>
+							<h3 class="font-bold text-sm text-on-surface">{% trans "Working hours" %}</h3>
+							<p class="text-sm text-on-surface/60">{% trans "Mon-Sun from 9:00 to 21:00" %}</p>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block js %}
+	<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+	<script src="{% static 'js/masks.js' %}"></script>
+	<script src="{% static 'js/yandex-smart-captcha-onload.js' %}"></script>
+	<script src="https://smartcaptcha.cloud.yandex.ru/captcha.js?render=onload&onload=onloadYandexSmartCaptcha" defer></script>
+{% endblock %}
