@@ -1,7 +1,7 @@
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
-from decouple import config
+from decouple import Csv, config
 from django.templatetags.static import static
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -13,9 +13,42 @@ SECRET_KEY: str = config("DJANGO_SECRET_KEY")
 
 DEBUG: bool = config("DJANGO_DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS: List[str] = [
-    "127.0.0.1",
-]
+ALLOWED_HOSTS: List[str] = config(
+    "DJANGO_ALLOWED_HOSTS",
+    default="127.0.0.1,localhost",
+    cast=Csv(),
+)
+
+CSRF_TRUSTED_ORIGINS: List[str] = config(
+    "DJANGO_CSRF_TRUSTED_ORIGINS",
+    default="",
+    cast=Csv(),
+)
+
+CSRF_COOKIE_SECURE: bool = config(
+    "DJANGO_CSRF_COOKIE_SECURE",
+    default=False,
+    cast=bool,
+)
+
+SESSION_COOKIE_SECURE: bool = config(
+    "DJANGO_SESSION_COOKIE_SECURE",
+    default=False,
+    cast=bool,
+)
+
+SECURE_PROXY_SSL_HEADER: Tuple[str, str] = (
+    "HTTP_X_FORWARDED_PROTO",
+    "https",
+)
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY: Optional[str] = (
+    config(
+        "DJANGO_SECURE_CROSS_ORIGIN_OPENER_POLICY",
+        default="",
+    )
+    or None
+)
 
 INTERNAL_IPS: List[str] = [
     "127.0.0.1",
@@ -39,7 +72,6 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "debug_toolbar",
     "phonenumber_field",
     "django_resized",
     "django_cleanup.apps.CleanupConfig",
@@ -70,11 +102,14 @@ MIDDLEWARE: List[str] = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "csp.middleware.CSPMiddleware",
     "django_user_agents.middleware.UserAgentMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
+
+if DEBUG:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
 
 ROOT_URLCONF: str = "config.urls"
 
@@ -232,7 +267,7 @@ COMPRESS_CSS_FILTERS: List[str] = [
     "compressor.filters.cssmin.CSSMinFilter",
 ]
 
-MEDIA_URL: str = "media/"
+MEDIA_URL: str = "/media/"
 MEDIA_ROOT: Path = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD: str = "django.db.models.BigAutoField"
@@ -275,9 +310,15 @@ CONTENT_SECURITY_POLICY: Dict[str, Any] = {
             "https://smartcaptcha.cloud.yandex.ru",
             "https://captcha-api.yandex.ru",
         ],
-        "upgrade-insecure-requests": [],
     },
 }
+
+if config(
+    "DJANGO_CSP_UPGRADE_INSECURE_REQUESTS",
+    default=False,
+    cast=bool,
+):
+    CONTENT_SECURITY_POLICY["DIRECTIVES"]["upgrade-insecure-requests"] = []
 
 LOGIN_URL: StrOrPromise = reverse_lazy(viewname="accounts:signin")
 LOGIN_REDIRECT_URL: StrOrPromise = reverse_lazy(viewname="pages:home")

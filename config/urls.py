@@ -1,6 +1,5 @@
 from typing import List, Union
 
-from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -33,7 +32,7 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
                     "health_check.contrib.redis.Redis",
                     {
                         "client": RedisClient.from_url(
-                            url="redis://localhost:6379"
+                            url=settings.CACHES["default"]["LOCATION"]
                         )
                     },
                 ),
@@ -77,6 +76,8 @@ urlpatterns: List[Union[URLResolver, URLPattern]] = [
 
 
 if settings.DEBUG:
+    from debug_toolbar.toolbar import debug_toolbar_urls
+
     urlpatterns += debug_toolbar_urls()
     urlpatterns += static(
         prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT

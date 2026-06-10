@@ -1,0 +1,12 @@
+.git
+.idea
+.mypy_cache
+.review
+.uv-cache
+.venv
+__pycache__
+*.py[cod]
+.env
+node_modules
+staticfiles
+media

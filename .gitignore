@@ -223,3 +223,7 @@ node_modules
 
 # Tailwind
 static/css/output.css
+
+# Docker data
+postgres_data/
+redis_data/
