@@ -227,3 +227,4 @@ static/css/output.css
 # Docker data
 postgres_data/
 redis_data/
+certbot/
