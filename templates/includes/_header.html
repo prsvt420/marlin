@@ -1,6 +1,6 @@
 {% load static i18n %}
 
-<header class="bg-surface select-none sticky h-[80px] inset-x-0 top-0 z-10 border-b border-edge">
+<header class="relative bg-surface select-none sticky h-[80px] inset-x-0 top-0 z-10 border-b border-edge">
 	<div class="flex items-center justify-between gap-8 py-4 px-8 max-md:px-4 max-w-page mx-auto">
 		<a class="flex items-center gap-2" href="{% url 'pages:home' %}">
 			<img class="size-12" src="{% static 'img/logo.png' %}" alt="" draggable="false">
@@ -10,8 +10,8 @@
 			</div>
 		</a>
 
-		<form class="relative flex-1 max-lg:hidden" action="{% url 'catalog:product-search-list' %}" method="get" novalidate>
-			<input id="search-input" class="input w-full pr-10 text-sm" value="{{ filter.form.q.value|default_if_none:'' }}" type="text" name="q" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}">
+		<form class="relative flex-1 max-lg:hidden" action="{% url 'catalog:product-search-list' %}" method="get" novalidate data-search-form>
+			<input id="search-input" class="input w-full pr-10 text-sm" value="{{ filter.form.q.value|default_if_none:'' }}" type="text" name="q" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}" data-search-input>
 			<button class="absolute right-4 top-1/2 -translate-y-1/2 link" type="submit">
 				<svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 4C6.01472 4 4 6.01472 4 8.5C4 10.9853 6.01472 13 8.5 13C10.9853 13 13 10.9853 13 8.5C13 6.01472 10.9853 4 8.5 4ZM2.5 8.5C2.5 5.18629 5.18629 2.5 8.5 2.5C11.8137 2.5 14.5 5.18629 14.5 8.5C14.5 9.88653 14.0297 11.1632 13.2399 12.1792L17.2803 16.2197C17.5732 16.5126 17.5732 16.9874 17.2803 17.2803C16.9874 17.5732 16.5126 17.5732 16.2197 17.2803L12.1792 13.2399C11.1632 14.0297 9.88653 14.5 8.5 14.5C5.18629 14.5 2.5 11.8137 2.5 8.5Z" fill="currentColor"></path></svg>
 			</button>
@@ -71,16 +71,30 @@
 				</ul>
 			</nav>
 
-			<button id="open-mobile-menu-btn" class="flex flex-col items-center justify-center gap-1.5 link min-md:hidden">
-				<span class="block w-5 h-0.5 bg-current rounded-full"></span>
-				<span class="block w-5 h-0.5 bg-current rounded-full"></span>
-				<span class="block w-5 h-0.5 bg-current rounded-full"></span>
-			</button>
+			<div class="flex items-center gap-2 min-md:hidden">
+				<button id="open-mobile-search-btn" class="flex items-center justify-center size-10 link {% if current_view_name == 'catalog:product-search-list' %}link--active{% endif %}" type="button" aria-controls="mobile-search" aria-expanded="false" aria-label="{% trans 'Search' %}">
+					<svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 4C6.01472 4 4 6.01472 4 8.5C4 10.9853 6.01472 13 8.5 13C10.9853 13 13 10.9853 13 8.5C13 6.01472 10.9853 4 8.5 4ZM2.5 8.5C2.5 5.18629 5.18629 2.5 8.5 2.5C11.8137 2.5 14.5 5.18629 14.5 8.5C14.5 9.88653 14.0297 11.1632 13.2399 12.1792L17.2803 16.2197C17.5732 16.5126 17.5732 16.9874 17.2803 17.2803C16.9874 17.5732 16.5126 17.5732 16.2197 17.2803L12.1792 13.2399C11.1632 14.0297 9.88653 14.5 8.5 14.5C5.18629 14.5 2.5 11.8137 2.5 8.5Z" fill="currentColor"></path></svg>
+				</button>
+				<button id="open-mobile-menu-btn" class="flex flex-col items-center justify-center gap-1.5 link size-10" type="button" aria-label="{% trans 'Menu' %}">
+					<span class="block w-5 h-0.5 bg-current rounded-full"></span>
+					<span class="block w-5 h-0.5 bg-current rounded-full"></span>
+					<span class="block w-5 h-0.5 bg-current rounded-full"></span>
+				</button>
+			</div>
+
+			<div id="mobile-search" class="hidden absolute top-full inset-x-0 px-4 pt-2 min-md:hidden">
+				<form class="relative max-w-page mx-auto" action="{% url 'catalog:product-search-list' %}" method="get" novalidate data-search-form>
+					<input id="mobile-search-input" class="input w-full pr-12 text-sm" value="{{ filter.form.q.value|default_if_none:'' }}" type="text" name="q" autocomplete="off" placeholder="{% trans 'Find a product, e.g. — bananas' %}" data-search-input>
+					<button class="absolute right-4 top-1/2 -translate-y-1/2 link" type="submit" aria-label="{% trans 'Search' %}">
+						<svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 4C6.01472 4 4 6.01472 4 8.5C4 10.9853 6.01472 13 8.5 13C10.9853 13 13 10.9853 13 8.5C13 6.01472 10.9853 4 8.5 4ZM2.5 8.5C2.5 5.18629 5.18629 2.5 8.5 2.5C11.8137 2.5 14.5 5.18629 14.5 8.5C14.5 9.88653 14.0297 11.1632 13.2399 12.1792L17.2803 16.2197C17.5732 16.5126 17.5732 16.9874 17.2803 17.2803C16.9874 17.5732 16.5126 17.5732 16.2197 17.2803L12.1792 13.2399C11.1632 14.0297 9.88653 14.5 8.5 14.5C5.18629 14.5 2.5 11.8137 2.5 8.5Z" fill="currentColor"></path></svg>
+					</button>
+				</form>
+			</div>
 
 			<div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-full bg-surface z-20 translate-x-full transition-transform duration-300 ease-in-out min-md:hidden">
 				<div class="flex items-center justify-between py-2 px-4 mx-auto border-b border-edge h-[80px]">
 					<span class="font-bold">{% trans "Menu" %}</span>
-					<button id="close-mobile-menu-btn" class="flex items-center justify-center size-8 link">
+					<button id="close-mobile-menu-btn" class="flex items-center justify-center size-8 link" type="button">
 					  <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
 					    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 					  </svg>
@@ -144,4 +158,5 @@
 </header>
 
 <script src="{% static 'js/mobile-menu.js' %}"></script>
+<script src="{% static 'js/mobile-search.js' %}"></script>
 <script src="{% static 'catalog/js/search-validation.js' %}"></script>

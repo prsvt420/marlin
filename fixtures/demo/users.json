@@ -1,0 +1,572 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "alexander.ivanov@example.com",
+      "phone_number": "+79000000001",
+      "first_name": "Александр",
+      "last_name": "Иванов",
+      "middle_name": "Сергеевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-12T08:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "elena.smirnova@example.com",
+      "phone_number": "+79000000002",
+      "first_name": "Елена",
+      "last_name": "Смирнова",
+      "middle_name": "Андреевна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-14T09:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "dmitry.kuznetsov@example.com",
+      "phone_number": "+79000000003",
+      "first_name": "Дмитрий",
+      "last_name": "Кузнецов",
+      "middle_name": "Олегович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-16T10:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "anna.popova@example.com",
+      "phone_number": "+79000000004",
+      "first_name": "Анна",
+      "last_name": "Попова",
+      "middle_name": "Викторовна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-18T11:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "maxim.vasiliev@example.com",
+      "phone_number": "+79000000005",
+      "first_name": "Максим",
+      "last_name": "Васильев",
+      "middle_name": "Игоревич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-20T12:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "maria.petrova@example.com",
+      "phone_number": "+79000000006",
+      "first_name": "Мария",
+      "last_name": "Петрова",
+      "middle_name": "Алексеевна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-22T13:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "artem.sokolov@example.com",
+      "phone_number": "+79000000007",
+      "first_name": "Артём",
+      "last_name": "Соколов",
+      "middle_name": "Михайлович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-24T07:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 8,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "olga.mikhailova@example.com",
+      "phone_number": "+79000000008",
+      "first_name": "Ольга",
+      "last_name": "Михайлова",
+      "middle_name": "Романовна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-26T08:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 9,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "ilya.novikov@example.com",
+      "phone_number": "+79000000009",
+      "first_name": "Илья",
+      "last_name": "Новиков",
+      "middle_name": "Павлович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-28T09:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 10,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "natalia.fedorova@example.com",
+      "phone_number": "+79000000010",
+      "first_name": "Наталья",
+      "last_name": "Фёдорова",
+      "middle_name": "Дмитриевна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-01-30T10:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 11,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "egor.morozov@example.com",
+      "phone_number": "+79000000011",
+      "first_name": "Егор",
+      "last_name": "Морозов",
+      "middle_name": "Владимирович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-01T11:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 12,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "tatiana.volkova@example.com",
+      "phone_number": "+79000000012",
+      "first_name": "Татьяна",
+      "last_name": "Волкова",
+      "middle_name": "Сергеевна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-03T12:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 13,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "nikita.alekseev@example.com",
+      "phone_number": "+79000000013",
+      "first_name": "Никита",
+      "last_name": "Алексеев",
+      "middle_name": "Андреевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-05T13:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 14,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "svetlana.lebedeva@example.com",
+      "phone_number": "+79000000014",
+      "first_name": "Светлана",
+      "last_name": "Лебедева",
+      "middle_name": "Олеговна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-07T07:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 15,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "kirill.semenov@example.com",
+      "phone_number": "+79000000015",
+      "first_name": "Кирилл",
+      "last_name": "Семёнов",
+      "middle_name": "Александрович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-09T08:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 16,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "irina.egorova@example.com",
+      "phone_number": "+79000000016",
+      "first_name": "Ирина",
+      "last_name": "Егорова",
+      "middle_name": "Валерьевна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-11T09:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 17,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "mikhail.pavlov@example.com",
+      "phone_number": "+79000000017",
+      "first_name": "Михаил",
+      "last_name": "Павлов",
+      "middle_name": "Евгеньевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-13T10:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 18,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "victoria.kozlova@example.com",
+      "phone_number": "+79000000018",
+      "first_name": "Виктория",
+      "last_name": "Козлова",
+      "middle_name": "Ильинична",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-15T11:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 19,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "roman.stepanov@example.com",
+      "phone_number": "+79000000019",
+      "first_name": "Роман",
+      "last_name": "Степанов",
+      "middle_name": "Денисович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-17T12:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 20,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "ksenia.nikolaeva@example.com",
+      "phone_number": "+79000000020",
+      "first_name": "Ксения",
+      "last_name": "Николаева",
+      "middle_name": "Максимовна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-19T13:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 21,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "andrey.orlov@example.com",
+      "phone_number": "+79000000021",
+      "first_name": "Андрей",
+      "last_name": "Орлов",
+      "middle_name": "Константинович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-21T07:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 22,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "daria.andreeva@example.com",
+      "phone_number": "+79000000022",
+      "first_name": "Дарья",
+      "last_name": "Андреева",
+      "middle_name": "Павловна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-23T08:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 23,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "vladislav.makarov@example.com",
+      "phone_number": "+79000000023",
+      "first_name": "Владислав",
+      "last_name": "Макаров",
+      "middle_name": "Сергеевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-25T09:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 24,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "yulia.zakharova@example.com",
+      "phone_number": "+79000000024",
+      "first_name": "Юлия",
+      "last_name": "Захарова",
+      "middle_name": "Игоревна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-02-27T10:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 25,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "denis.zaitsev@example.com",
+      "phone_number": "+79000000025",
+      "first_name": "Денис",
+      "last_name": "Зайцев",
+      "middle_name": "Анатольевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-01T11:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 26,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "alina.belyaeva@example.com",
+      "phone_number": "+79000000026",
+      "first_name": "Алина",
+      "last_name": "Беляева",
+      "middle_name": "Романовна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-03T12:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 27,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "stanislav.gromov@example.com",
+      "phone_number": "+79000000027",
+      "first_name": "Станислав",
+      "last_name": "Громов",
+      "middle_name": "Юрьевич",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-05T13:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 28,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "ekaterina.tikhonova@example.com",
+      "phone_number": "+79000000028",
+      "first_name": "Екатерина",
+      "last_name": "Тихонова",
+      "middle_name": "Вадимовна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-07T07:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 29,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "arseniy.krylov@example.com",
+      "phone_number": "+79000000029",
+      "first_name": "Арсений",
+      "last_name": "Крылов",
+      "middle_name": "Петрович",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-09T08:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 30,
+    "fields": {
+      "password": "!",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "veronika.komarova@example.com",
+      "phone_number": "+79000000030",
+      "first_name": "Вероника",
+      "last_name": "Комарова",
+      "middle_name": "Александровна",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-03-11T09:00:00.000Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

@@ -1,24 +1,3016 @@
 [
-{
-  "model": "catalog.productimage",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-03-06T00:00:00.000Z",
-    "updated_at": "2026-03-06T00:00:00.000Z",
-    "product": 1,
-    "image": "product_images/banany-ekvador-1.webp",
-    "sort_order": 0
+  {
+    "model": "catalog.productimage",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 1,
+      "image": "product_images/tykva-v-assortimente-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 1,
+      "image": "product_images/tykva-v-assortimente-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 1,
+      "image": "product_images/tykva-v-assortimente-2.webp",
+      "sort_order": 2
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 2,
+      "image": "product_images/kapusta-cvetnaya-svezhaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 3,
+      "image": "product_images/chesnok-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 4,
+      "image": "product_images/krasnyj-bolgarskij-perec-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 5,
+      "image": "product_images/tomaty-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 6,
+      "image": "product_images/morkov-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 7,
+      "image": "product_images/salat-frillis-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 8,
+      "image": "product_images/petrushka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 9,
+      "image": "product_images/zelyonyj-luk-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 10,
+      "image": "product_images/ogurec-sredneplodnyj-gladkij-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 11,
+      "image": "product_images/krasnyj-yaltinskij-luk-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 12,
+      "image": "product_images/selderej-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 12,
+      "image": "product_images/selderej-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 13,
+      "image": "product_images/rozovoe-pomelo-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 13,
+      "image": "product_images/rozovoe-pomelo-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 14,
+      "image": "product_images/lajm-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 14,
+      "image": "product_images/lajm-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 14,
+      "image": "product_images/lajm-2.webp",
+      "sort_order": 2
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 14,
+      "image": "product_images/lajm-3.webp",
+      "sort_order": 3
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 15,
+      "image": "product_images/pitahajya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 16,
+      "image": "product_images/banany-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 17,
+      "image": "product_images/apelsiny-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 17,
+      "image": "product_images/apelsiny-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 18,
+      "image": "product_images/yabloki-krasnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 18,
+      "image": "product_images/yabloki-krasnye-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 19,
+      "image": "product_images/granat-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 20,
+      "image": "product_images/grushi-kitajskie-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 20,
+      "image": "product_images/grushi-kitajskie-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 21,
+      "image": "product_images/limony-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 21,
+      "image": "product_images/limony-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 21,
+      "image": "product_images/limony-2.webp",
+      "sort_order": 2
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 22,
+      "image": "product_images/mandariny-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 22,
+      "image": "product_images/mandariny-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 36,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 23,
+      "image": "product_images/marakujya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 37,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 24,
+      "image": "product_images/ananas-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 38,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 25,
+      "image": "product_images/yabloki-red-delishes-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 39,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 26,
+      "image": "product_images/funduk-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 40,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 27,
+      "image": "product_images/izyum-svetlyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 41,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 27,
+      "image": "product_images/izyum-svetlyj-1.webp",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 42,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 316,
+      "image": "product_images/pivo-baltika-0-bezalkogolnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 43,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 317,
+      "image": "product_images/pivo-heineken-0-0-bezalkogolnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 44,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 318,
+      "image": "product_images/napitok-vinnyj-abrau-light-zero-bezalkogolnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 45,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 319,
+      "image": "product_images/napitok-energeticheskij-adrenaline-rush-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 46,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 320,
+      "image": "product_images/napitok-energeticheskij-red-bull-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 47,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 321,
+      "image": "product_images/pivo-bud-bezalkogolnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 48,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 322,
+      "image": "product_images/pivo-stella-artois-bezalkogolnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 49,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 323,
+      "image": "product_images/vino-beloe-bezalkogolnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 50,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 324,
+      "image": "product_images/napitok-energeticheskij-burn-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 51,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 325,
+      "image": "product_images/napitok-energeticheskij-monster-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 52,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 45,
+      "image": "product_images/pita-pshenichnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 53,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 70,
+      "image": "product_images/ryobra-svinye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 54,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 69,
+      "image": "product_images/stejk-iz-govyadiny-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 56,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 35,
+      "image": "product_images/arahis-zharenyj-solyonyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 57,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 29,
+      "image": "product_images/keshyu-zharenyj-lenta-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 58,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 34,
+      "image": "product_images/finiki-sushyonye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 59,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 59,
+      "image": "product_images/sushki-malyutka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 60,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 49,
+      "image": "product_images/vatrushka-s-tvorogom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 61,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 28,
+      "image": "product_images/mindal-zharenyj-lenta-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 62,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 30,
+      "image": "product_images/greckij-oreh-ochishhennyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 63,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 31,
+      "image": "product_images/fistashki-zharenye-solyonye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 64,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 32,
+      "image": "product_images/kuraga-otbornaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 65,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 33,
+      "image": "product_images/chernosliv-bez-kostochki-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 66,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 36,
+      "image": "product_images/baton-lenta-nareznoj-vysshij-sort-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 67,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 37,
+      "image": "product_images/hleb-hlebnyj-dom-gerkules-zernovoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 68,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 39,
+      "image": "product_images/lavash-armyanskij-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 69,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 40,
+      "image": "product_images/lepyoshki-pshenichnye-mission-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 70,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 41,
+      "image": "product_images/hleb-borodinskij-nareznoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 71,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 42,
+      "image": "product_images/hleb-darnickij-formovoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 72,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 43,
+      "image": "product_images/chiabatta-pshenichnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 73,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 44,
+      "image": "product_images/bulochki-dlya-burgerov-s-kunzhutom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 74,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 46,
+      "image": "product_images/kruassan-7days-s-kremom-kakao-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 75,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 48,
+      "image": "product_images/slojka-s-vishnej-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 76,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 51,
+      "image": "product_images/maffin-shokoladnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 77,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 53,
+      "image": "product_images/kruassan-s-varyonoj-sgushhyonkoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 78,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 55,
+      "image": "product_images/slojka-s-syrom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 79,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 56,
+      "image": "product_images/hlebcy-dr-korner-grechnevye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 80,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 57,
+      "image": "product_images/hlebcy-shhedrye-rzhanye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 81,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 61,
+      "image": "product_images/hlebcy-risovye-bez-soli-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 82,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 62,
+      "image": "product_images/hlebcy-ovsyanye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 83,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 63,
+      "image": "product_images/kreker-solyonyj-klassicheskij-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 84,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 60,
+      "image": "product_images/suhari-vanilnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 85,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 64,
+      "image": "product_images/suhari-panirovochnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 86,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 47,
+      "image": "product_images/bulochka-s-koricej-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 87,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 50,
+      "image": "product_images/pirozhok-s-yablokom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 88,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 66,
+      "image": "product_images/lopatka-svinaya-bez-kosti-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 89,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 67,
+      "image": "product_images/sheya-svinaya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 90,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 68,
+      "image": "product_images/myakot-govyadiny-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 91,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 71,
+      "image": "product_images/karbonad-svinoj-bez-kosti-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 92,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 72,
+      "image": "product_images/grudinka-govyazhya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 93,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 73,
+      "image": "product_images/vyrezka-svinaya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 94,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 74,
+      "image": "product_images/korejka-baranya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 95,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 76,
+      "image": "product_images/tushka-cyplyonka-brojlera-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 96,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 77,
+      "image": "product_images/file-grudki-cyplyonka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 97,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 78,
+      "image": "product_images/golen-cyplyonka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 98,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 79,
+      "image": "product_images/bedro-cyplyonka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 99,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 80,
+      "image": "product_images/file-grudki-indejki-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 100,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 81,
+      "image": "product_images/krylya-cyplyonka-ohlazhdyonnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 101,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 82,
+      "image": "product_images/bedro-indejki-ohlazhdyonnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 102,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 83,
+      "image": "product_images/tushka-utki-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 103,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 84,
+      "image": "product_images/grudka-cyplyonka-na-kosti-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 104,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 85,
+      "image": "product_images/pechen-kurinaya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 105,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 86,
+      "image": "product_images/farsh-domashnij-iz-svininy-i-govyadiny-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 106,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 87,
+      "image": "product_images/farsh-govyazhij-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 107,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 88,
+      "image": "product_images/farsh-kurinyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 108,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 90,
+      "image": "product_images/naggetsy-miratorg-kurinye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 109,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 91,
+      "image": "product_images/farsh-iz-indejki-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 110,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 93,
+      "image": "product_images/kupaty-svinye-dlya-zharki-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 111,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 89,
+      "image": "product_images/kotlety-miratorg-domashnie-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 112,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 96,
+      "image": "product_images/kolbasa-miratorg-doktorskaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 113,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 97,
+      "image": "product_images/kolbasa-caricyno-doktorskaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 114,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 98,
+      "image": "product_images/kolbasa-ostankino-papa-mozhet-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 115,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 99,
+      "image": "product_images/sosiski-vyazanka-molochnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 116,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 100,
+      "image": "product_images/servelat-dymov-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 117,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 102,
+      "image": "product_images/salyami-cherkizovo-flamenko-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 118,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 113,
+      "image": "product_images/yazyk-govyazhij-varyonyj-narezka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 119,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 119,
+      "image": "product_images/smetana-brest-litovsk-20-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 120,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 120,
+      "image": "product_images/smetana-lenta-15-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 121,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 121,
+      "image": "product_images/moloko-prostokvashino-3-2-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 122,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 122,
+      "image": "product_images/slivki-domik-v-derevne-10-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 123,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 123,
+      "image": "product_images/smetana-prostokvashino-20-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 124,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 125,
+      "image": "product_images/slivki-petmol-20-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 125,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 129,
+      "image": "product_images/kefir-prostokvashino-1-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 126,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 131,
+      "image": "product_images/kefir-prostokvashino-2-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 127,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 135,
+      "image": "product_images/varenec-molochnaya-kultura-3-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 128,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 136,
+      "image": "product_images/syr-lenta-rossijskij-50-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 129,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 137,
+      "image": "product_images/syr-brest-litovsk-slivochnyj-50-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 130,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 139,
+      "image": "product_images/syr-hochland-plavlenyj-slivochnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 131,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 141,
+      "image": "product_images/syr-gauda-45-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 132,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 142,
+      "image": "product_images/syr-maasdam-45-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 133,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 144,
+      "image": "product_images/syr-umalat-mocarella-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 134,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 148,
+      "image": "product_images/yajco-perepelinoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 135,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 103,
+      "image": "product_images/sosiski-klinskij-molochnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 136,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 134,
+      "image": "product_images/tvorog-prostokvashino-9-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 137,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 150,
+      "image": "product_images/maslo-slivochnoe-brest-litovsk-82-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 138,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 157,
+      "image": "product_images/majonez-maheev-provansal-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 139,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 160,
+      "image": "product_images/majonez-mr-ricco-na-perepelinom-yajce-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 140,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 166,
+      "image": "product_images/jogurt-teos-grecheskij-2-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 141,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 169,
+      "image": "product_images/tvorozhok-danissimo-s-hrustyashhimi-sharikami-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 142,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 171,
+      "image": "product_images/jogurt-chudo-klubnika-zemlyanika-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 143,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 173,
+      "image": "product_images/desert-tvorozhnyj-chudo-vishnya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 144,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 178,
+      "image": "product_images/mintaj-zamorozhennyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 145,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 179,
+      "image": "product_images/skumbriya-holodnogo-kopcheniya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 146,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 180,
+      "image": "product_images/seld-slabosolyonaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 147,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 186,
+      "image": "product_images/krevetki-varyono-morozhenye-70-90-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 148,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 187,
+      "image": "product_images/kalmar-tushka-zamorozhennaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 149,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 196,
+      "image": "product_images/ikra-lososevaya-zernistaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 150,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 197,
+      "image": "product_images/ikra-mintaya-probojnaya-solyonaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 151,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 198,
+      "image": "product_images/ikra-mojvy-santa-bremor-s-kopchyonym-lososem-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 152,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 201,
+      "image": "product_images/ikra-treski-probojnaya-solyonaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 153,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 206,
+      "image": "product_images/shokolad-alyonka-molochnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 154,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 211,
+      "image": "product_images/shokolad-milka-molochnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 155,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 209,
+      "image": "product_images/batonchik-snickers-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 156,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 210,
+      "image": "product_images/batonchik-bounty-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 157,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 215,
+      "image": "product_images/konfety-ferrero-rocher-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 158,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 218,
+      "image": "product_images/kreker-tuc-s-syrom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 159,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 219,
+      "image": "product_images/vafli-yashkino-shokoladnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 160,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 220,
+      "image": "product_images/pryaniki-yashkino-klassicheskie-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 161,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 207,
+      "image": "product_images/shokolad-alpen-gold-molochnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 162,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 259,
+      "image": "product_images/karamel-chupa-chups-kola-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 163,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 208,
+      "image": "product_images/shokolad-ritter-sport-s-fundukom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 164,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 257,
+      "image": "product_images/zhevatelnaya-rezinka-dirol-arbuznaya-svezhest-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 165,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 286,
+      "image": "product_images/napitok-coca-cola-silnogazirovannyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 166,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 287,
+      "image": "product_images/napitok-dobryj-cola-silnogazirovannyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 167,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 258,
+      "image": "product_images/drazhe-mentos-myata-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 168,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 282,
+      "image": "product_images/voda-bonaqua-negazirovannaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 169,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 265,
+      "image": "product_images/konfety-zhevatelnye-fruit-tella-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 170,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 217,
+      "image": "product_images/pechene-oreo-s-kakao-i-vanilnoj-nachinkoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 171,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 256,
+      "image": "product_images/zhevatelnaya-rezinka-orbit-belosnezhnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 172,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 263,
+      "image": "product_images/drazhe-skittles-fruktovoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 173,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 269,
+      "image": "product_images/pasta-orehovaya-nutella-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 174,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 262,
+      "image": "product_images/ledency-halls-mentol-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 175,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 297,
+      "image": "product_images/sok-rich-yablochnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 176,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 312,
+      "image": "product_images/chaj-holodnyj-lipton-persik-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 177,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 306,
+      "image": "product_images/chaj-holodnyj-lipton-limon-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 178,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 302,
+      "image": "product_images/sok-rich-ananasovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 179,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 289,
+      "image": "product_images/napitok-sprite-limon-lajm-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 180,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 154,
+      "image": "product_images/maslo-slivochnoe-vkusnoteevo-82-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 181,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 292,
+      "image": "product_images/napitok-fanta-apelsin-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 182,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 213,
+      "image": "product_images/shokolad-kinder-chocolate-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 183,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 153,
+      "image": "product_images/maslo-slivochnoe-ekomilk-72-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 184,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 168,
+      "image": "product_images/jogurt-epica-malina-i-granat-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 185,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 170,
+      "image": "product_images/puding-grand-dessert-shokolad-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 186,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 158,
+      "image": "product_images/majonez-ryaba-provansal-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 187,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 164,
+      "image": "product_images/majonez-moskovskij-provansal-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 188,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 296,
+      "image": "product_images/sok-j7-apelsinovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 189,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 301,
+      "image": "product_images/sok-j7-tomatnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 190,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 293,
+      "image": "product_images/napitok-dr-pepper-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 191,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 202,
+      "image": "product_images/zakuska-iz-seldi-s-lukom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 192,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 143,
+      "image": "product_images/syr-parmezan-vyderzhannyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 193,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 264,
+      "image": "product_images/drazhe-m-m-s-s-arahisom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 194,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 247,
+      "image": "product_images/morozhenoe-korovka-iz-korenovki-plombir-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 195,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 298,
+      "image": "product_images/nektar-dobryj-multifrukt-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 196,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 118,
+      "image": "product_images/moloko-piskaryovskoe-ultrapasterizovannoe-2-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 197,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 246,
+      "image": "product_images/morozhenoe-chistaya-liniya-plombir-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 198,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 116,
+      "image": "product_images/moloko-svezhee-zavtra-ultrapasterizovannoe-0-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 199,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 117,
+      "image": "product_images/moloko-lenta-pasterizovannoe-2-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 200,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 161,
+      "image": "product_images/majonez-sloboda-olivkovyj-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 201,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 159,
+      "image": "product_images/majonez-lenta-klassicheskij-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 202,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 279,
+      "image": "product_images/voda-essentuki-4-mineralnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 203,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 162,
+      "image": "product_images/majonez-maheev-lyogkij-30-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 204,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 181,
+      "image": "product_images/file-treski-zamorozhennoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 205,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 261,
+      "image": "product_images/zhevatelnaya-rezinka-five-myata-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 206,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 189,
+      "image": "product_images/morskoj-koktejl-zamorozhennyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 207,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 267,
+      "image": "product_images/dzhem-maheev-klubnichnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 208,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 295,
+      "image": "product_images/napitok-chernogolovka-dyushes-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 209,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 271,
+      "image": "product_images/dzhem-maheev-abrikosovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 210,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 212,
+      "image": "product_images/shokolad-babaevskij-tyomnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 211,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 229,
+      "image": "product_images/halva-rot-front-podsolnechnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 212,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 222,
+      "image": "product_images/pechene-mariya-zatyazhnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 213,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 140,
+      "image": "product_images/syr-umalat-brynza-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 214,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 227,
+      "image": "product_images/marmelad-bon-pari-zhevatelnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 215,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 185,
+      "image": "product_images/file-foreli-slabosolyonoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 216,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 109,
+      "image": "product_images/salo-belorusskoe-solyonoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 217,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 303,
+      "image": "product_images/nektar-dobryj-vishnyovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 218,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 124,
+      "image": "product_images/moloko-toplyonoe-3-2-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 219,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 284,
+      "image": "product_images/voda-narzan-mineralnaya-gazirovannaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 220,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 304,
+      "image": "product_images/mors-chudo-yagoda-chyornaya-smorodina-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 221,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 132,
+      "image": "product_images/ryazhenka-domik-v-derevne-3-2-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 222,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 149,
+      "image": "product_images/maslo-slivochnoe-lenta-82-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 223,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 280,
+      "image": "product_images/voda-aqua-minerale-gazirovannaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 224,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 156,
+      "image": "product_images/majonez-sloboda-provansal-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 225,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 174,
+      "image": "product_images/puding-grand-dessert-vanil-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 226,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 163,
+      "image": "product_images/majonez-ryaba-s-limonnym-sokom-67-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 227,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 192,
+      "image": "product_images/grebeshok-morskoj-zamorozhennyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 228,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 253,
+      "image": "product_images/eskimo-plombir-v-shokoladnoj-glazuri-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 229,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 128,
+      "image": "product_images/tvorog-lenta-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 230,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 127,
+      "image": "product_images/tvorog-iskrenne-vash-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 231,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 133,
+      "image": "product_images/tvorog-savushkin-2-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 232,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 126,
+      "image": "product_images/tvorog-brest-litovsk-9-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 233,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 183,
+      "image": "product_images/seld-atlanticheskaya-zamorozhennaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 234,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 260,
+      "image": "product_images/drazhe-tic-tac-apelsin-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 235,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 130,
+      "image": "product_images/kefir-molochnaya-kultura-3-5-4-5-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 236,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 115,
+      "image": "product_images/rulet-kurinyj-s-chesnokom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 237,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 236,
+      "image": "product_images/tort-medovik-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 238,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 182,
+      "image": "product_images/gorbusha-potroshyonaya-zamorozhennaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 239,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 243,
+      "image": "product_images/pirozhnoe-kartoshka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 240,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 111,
+      "image": "product_images/pashtet-hame-s-gusinoj-pechenyu-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 244,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 52,
+      "image": "product_images/ponchik-s-klubnichnoj-nachinkoj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 245,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 58,
+      "image": "product_images/tartaletki-kit-salatnye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 246,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 65,
+      "image": "product_images/palochki-hlebnye-s-kunzhutom-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 247,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 114,
+      "image": "product_images/bekon-syrokopchyonyj-narezka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 248,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 155,
+      "image": "product_images/maslo-toplyonoe-ghi-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 249,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 175,
+      "image": "product_images/jogurt-pitevoj-aktivia-zlaki-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 250,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 176,
+      "image": "product_images/forel-raduzhnaya-ohlazhdyonnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 251,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 184,
+      "image": "product_images/sibas-ohlazhdyonnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 252,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 194,
+      "image": "product_images/midii-v-rakovinah-varyono-morozhenye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 253,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 193,
+      "image": "product_images/kolca-kalmara-zamorozhennye-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 254,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 203,
+      "image": "product_images/ikra-iz-morskih-vodoroslej-krasnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 255,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 216,
+      "image": "product_images/pechene-yubilejnoe-tradicionnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 256,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 223,
+      "image": "product_images/vafli-korovka-vkus-toplyonogo-moloka-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 257,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 225,
+      "image": "product_images/kreker-rybki-s-solyu-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 258,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 228,
+      "image": "product_images/pastila-belyovskaya-yablochnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 259,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 226,
+      "image": "product_images/zefir-sharmel-vanilnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 260,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 230,
+      "image": "product_images/rahat-lukum-assorti-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 261,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 231,
+      "image": "product_images/zefir-belo-rozovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 262,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 233,
+      "image": "product_images/kozinak-podsolnechnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 263,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 237,
+      "image": "product_images/tort-praga-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 264,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 238,
+      "image": "product_images/desert-tiramisu-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 265,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 239,
+      "image": "product_images/ekler-vanilnyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 266,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 241,
+      "image": "product_images/tort-napoleon-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 267,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 248,
+      "image": "product_images/morozhenoe-magnat-mindal-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 268,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 252,
+      "image": "product_images/morozhenoe-shokoladnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 269,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 266,
+      "image": "product_images/myod-naturalnyj-raznotrave-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 270,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 268,
+      "image": "product_images/varene-ratibor-malinovoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 271,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 270,
+      "image": "product_images/pasta-arahisovaya-klassicheskaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 272,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 272,
+      "image": "product_images/varene-ratibor-chernichnoe-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 273,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 274,
+      "image": "product_images/pasta-shokoladno-molochnaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 274,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 275,
+      "image": "product_images/myod-naturalnyj-lipovyj-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 275,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 276,
+      "image": "product_images/voda-svyatoj-istochnik-negazirovannaya-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 276,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 288,
+      "image": "product_images/napitok-chernogolovka-bajkal-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 277,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 294,
+      "image": "product_images/napitok-chernogolovka-tarhun-0.webp",
+      "sort_order": 0
+    }
+  },
+  {
+    "model": "catalog.productimage",
+    "pk": 278,
+    "fields": {
+      "created_at": "2026-03-06T00:00:00.000Z",
+      "updated_at": "2026-03-06T00:00:00.000Z",
+      "product": 299,
+      "image": "product_images/sok-frutonyanya-yablochnyj-0.webp",
+      "sort_order": 0
+    }
   }
-},
-{
-  "model": "catalog.productimage",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-03-06T00:00:00.000Z",
-    "updated_at": "2026-03-06T00:00:00.000Z",
-    "product": 1,
-    "image": "product_images/banany-ekvador-2.webp",
-    "sort_order": 1
-  }
-}
 ]

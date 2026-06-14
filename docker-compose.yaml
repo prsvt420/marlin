@@ -49,7 +49,7 @@ services:
         condition: service_healthy
     command: >
       sh -c "python manage.py migrate &&
-             python -Xutf8 manage.py load_initial_categories &&
+             python -Xutf8 manage.py load_fixtures &&
              python -Xutf8 manage.py compilemessages --locale=ru --ignore=.venv &&
              python manage.py collectstatic --noinput &&
              python manage.py compress --force &&

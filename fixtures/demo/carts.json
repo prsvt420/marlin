@@ -1,0 +1,4342 @@
+[
+  {
+    "model": "carts.cart",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-06-02T06:00:00.000Z",
+      "updated_at": "2026-06-02T08:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-06-02T06:30:00.000Z",
+      "updated_at": "2026-06-02T10:25:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-06-02T07:00:00.000Z",
+      "updated_at": "2026-06-02T11:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-06-02T07:30:00.000Z",
+      "updated_at": "2026-06-02T13:25:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-06-02T13:00:00.000Z",
+      "updated_at": "2026-06-02T14:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-06-02T13:30:00.000Z",
+      "updated_at": "2026-06-02T16:25:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-06-02T14:00:00.000Z",
+      "updated_at": "2026-06-02T17:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-06-02T14:30:00.000Z",
+      "updated_at": "2026-06-02T19:25:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-06-02T15:00:00.000Z",
+      "updated_at": "2026-06-02T20:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-06-02T20:30:00.000Z",
+      "updated_at": "2026-06-02T22:25:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-06-02T21:00:00.000Z",
+      "updated_at": "2026-06-02T23:55:00.000Z",
+      "user": 1,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-06-02T21:30:00.000Z",
+      "updated_at": "2026-06-03T01:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-06-02T22:00:00.000Z",
+      "updated_at": "2026-06-03T02:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-06-02T22:30:00.000Z",
+      "updated_at": "2026-06-03T04:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-06-03T04:00:00.000Z",
+      "updated_at": "2026-06-03T05:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-06-03T04:30:00.000Z",
+      "updated_at": "2026-06-03T07:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-06-03T05:00:00.000Z",
+      "updated_at": "2026-06-03T08:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-06-03T05:30:00.000Z",
+      "updated_at": "2026-06-03T10:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-06-03T06:00:00.000Z",
+      "updated_at": "2026-06-03T11:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-06-03T11:30:00.000Z",
+      "updated_at": "2026-06-03T13:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-06-03T12:00:00.000Z",
+      "updated_at": "2026-06-03T14:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-06-03T12:30:00.000Z",
+      "updated_at": "2026-06-03T16:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-06-03T13:00:00.000Z",
+      "updated_at": "2026-06-03T17:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-06-03T13:30:00.000Z",
+      "updated_at": "2026-06-03T19:25:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-06-03T19:00:00.000Z",
+      "updated_at": "2026-06-03T20:55:00.000Z",
+      "user": 2,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-06-03T19:30:00.000Z",
+      "updated_at": "2026-06-03T22:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-06-03T20:00:00.000Z",
+      "updated_at": "2026-06-03T23:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-06-03T20:30:00.000Z",
+      "updated_at": "2026-06-04T01:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-06-03T21:00:00.000Z",
+      "updated_at": "2026-06-04T02:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-06-04T02:30:00.000Z",
+      "updated_at": "2026-06-04T04:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-06-04T03:00:00.000Z",
+      "updated_at": "2026-06-04T05:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-06-04T03:30:00.000Z",
+      "updated_at": "2026-06-04T07:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-06-04T04:00:00.000Z",
+      "updated_at": "2026-06-04T08:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-06-04T04:30:00.000Z",
+      "updated_at": "2026-06-04T10:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-06-04T10:00:00.000Z",
+      "updated_at": "2026-06-04T11:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 36,
+    "fields": {
+      "created_at": "2026-06-04T10:30:00.000Z",
+      "updated_at": "2026-06-04T13:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 37,
+    "fields": {
+      "created_at": "2026-06-04T11:00:00.000Z",
+      "updated_at": "2026-06-04T14:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 38,
+    "fields": {
+      "created_at": "2026-06-04T11:30:00.000Z",
+      "updated_at": "2026-06-04T16:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 39,
+    "fields": {
+      "created_at": "2026-06-04T12:00:00.000Z",
+      "updated_at": "2026-06-04T17:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 40,
+    "fields": {
+      "created_at": "2026-06-04T17:30:00.000Z",
+      "updated_at": "2026-06-04T19:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 41,
+    "fields": {
+      "created_at": "2026-06-04T18:00:00.000Z",
+      "updated_at": "2026-06-04T20:55:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 42,
+    "fields": {
+      "created_at": "2026-06-04T18:30:00.000Z",
+      "updated_at": "2026-06-04T22:25:00.000Z",
+      "user": 3,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 43,
+    "fields": {
+      "created_at": "2026-06-04T19:00:00.000Z",
+      "updated_at": "2026-06-04T23:55:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 44,
+    "fields": {
+      "created_at": "2026-06-04T19:30:00.000Z",
+      "updated_at": "2026-06-05T01:25:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 45,
+    "fields": {
+      "created_at": "2026-06-05T01:00:00.000Z",
+      "updated_at": "2026-06-05T02:55:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 46,
+    "fields": {
+      "created_at": "2026-06-05T01:30:00.000Z",
+      "updated_at": "2026-06-05T04:25:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 47,
+    "fields": {
+      "created_at": "2026-06-05T02:00:00.000Z",
+      "updated_at": "2026-06-05T05:55:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 48,
+    "fields": {
+      "created_at": "2026-06-05T02:30:00.000Z",
+      "updated_at": "2026-06-05T07:25:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 49,
+    "fields": {
+      "created_at": "2026-06-05T03:00:00.000Z",
+      "updated_at": "2026-06-05T08:55:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 50,
+    "fields": {
+      "created_at": "2026-06-05T08:30:00.000Z",
+      "updated_at": "2026-06-05T10:25:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 51,
+    "fields": {
+      "created_at": "2026-06-05T09:00:00.000Z",
+      "updated_at": "2026-06-05T11:55:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 52,
+    "fields": {
+      "created_at": "2026-06-05T09:30:00.000Z",
+      "updated_at": "2026-06-05T13:25:00.000Z",
+      "user": 4,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 53,
+    "fields": {
+      "created_at": "2026-06-05T10:00:00.000Z",
+      "updated_at": "2026-06-05T14:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 54,
+    "fields": {
+      "created_at": "2026-06-05T10:30:00.000Z",
+      "updated_at": "2026-06-05T16:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 55,
+    "fields": {
+      "created_at": "2026-06-05T16:00:00.000Z",
+      "updated_at": "2026-06-05T17:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 56,
+    "fields": {
+      "created_at": "2026-06-05T16:30:00.000Z",
+      "updated_at": "2026-06-05T19:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 57,
+    "fields": {
+      "created_at": "2026-06-05T17:00:00.000Z",
+      "updated_at": "2026-06-05T20:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 58,
+    "fields": {
+      "created_at": "2026-06-05T17:30:00.000Z",
+      "updated_at": "2026-06-05T22:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 59,
+    "fields": {
+      "created_at": "2026-06-05T18:00:00.000Z",
+      "updated_at": "2026-06-05T23:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 60,
+    "fields": {
+      "created_at": "2026-06-05T23:30:00.000Z",
+      "updated_at": "2026-06-06T01:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 61,
+    "fields": {
+      "created_at": "2026-06-06T00:00:00.000Z",
+      "updated_at": "2026-06-06T02:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 62,
+    "fields": {
+      "created_at": "2026-06-06T00:30:00.000Z",
+      "updated_at": "2026-06-06T04:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 63,
+    "fields": {
+      "created_at": "2026-06-06T01:00:00.000Z",
+      "updated_at": "2026-06-06T05:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 64,
+    "fields": {
+      "created_at": "2026-06-06T01:30:00.000Z",
+      "updated_at": "2026-06-06T07:25:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 65,
+    "fields": {
+      "created_at": "2026-06-06T07:00:00.000Z",
+      "updated_at": "2026-06-06T08:55:00.000Z",
+      "user": 5,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 66,
+    "fields": {
+      "created_at": "2026-06-06T07:30:00.000Z",
+      "updated_at": "2026-06-06T10:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 67,
+    "fields": {
+      "created_at": "2026-06-06T08:00:00.000Z",
+      "updated_at": "2026-06-06T11:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 68,
+    "fields": {
+      "created_at": "2026-06-06T08:30:00.000Z",
+      "updated_at": "2026-06-06T13:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 69,
+    "fields": {
+      "created_at": "2026-06-06T09:00:00.000Z",
+      "updated_at": "2026-06-06T14:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 70,
+    "fields": {
+      "created_at": "2026-06-06T14:30:00.000Z",
+      "updated_at": "2026-06-06T16:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 71,
+    "fields": {
+      "created_at": "2026-06-06T15:00:00.000Z",
+      "updated_at": "2026-06-06T17:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 72,
+    "fields": {
+      "created_at": "2026-06-06T15:30:00.000Z",
+      "updated_at": "2026-06-06T19:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 73,
+    "fields": {
+      "created_at": "2026-06-06T16:00:00.000Z",
+      "updated_at": "2026-06-06T20:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 74,
+    "fields": {
+      "created_at": "2026-06-06T16:30:00.000Z",
+      "updated_at": "2026-06-06T22:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 75,
+    "fields": {
+      "created_at": "2026-06-06T22:00:00.000Z",
+      "updated_at": "2026-06-06T23:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 76,
+    "fields": {
+      "created_at": "2026-06-06T22:30:00.000Z",
+      "updated_at": "2026-06-07T01:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 77,
+    "fields": {
+      "created_at": "2026-06-06T23:00:00.000Z",
+      "updated_at": "2026-06-07T02:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 78,
+    "fields": {
+      "created_at": "2026-06-06T23:30:00.000Z",
+      "updated_at": "2026-06-07T04:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 79,
+    "fields": {
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "updated_at": "2026-06-07T05:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 80,
+    "fields": {
+      "created_at": "2026-06-07T05:30:00.000Z",
+      "updated_at": "2026-06-07T07:25:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 81,
+    "fields": {
+      "created_at": "2026-06-07T06:00:00.000Z",
+      "updated_at": "2026-06-07T08:55:00.000Z",
+      "user": 6,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 82,
+    "fields": {
+      "created_at": "2026-06-07T06:30:00.000Z",
+      "updated_at": "2026-06-07T10:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 83,
+    "fields": {
+      "created_at": "2026-06-07T07:00:00.000Z",
+      "updated_at": "2026-06-07T11:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 84,
+    "fields": {
+      "created_at": "2026-06-07T07:30:00.000Z",
+      "updated_at": "2026-06-07T13:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 85,
+    "fields": {
+      "created_at": "2026-06-07T13:00:00.000Z",
+      "updated_at": "2026-06-07T14:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 86,
+    "fields": {
+      "created_at": "2026-06-07T13:30:00.000Z",
+      "updated_at": "2026-06-07T16:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 87,
+    "fields": {
+      "created_at": "2026-06-07T14:00:00.000Z",
+      "updated_at": "2026-06-07T17:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 88,
+    "fields": {
+      "created_at": "2026-06-07T14:30:00.000Z",
+      "updated_at": "2026-06-07T19:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 89,
+    "fields": {
+      "created_at": "2026-06-07T15:00:00.000Z",
+      "updated_at": "2026-06-07T20:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 90,
+    "fields": {
+      "created_at": "2026-06-07T20:30:00.000Z",
+      "updated_at": "2026-06-07T22:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 91,
+    "fields": {
+      "created_at": "2026-06-07T21:00:00.000Z",
+      "updated_at": "2026-06-07T23:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 92,
+    "fields": {
+      "created_at": "2026-06-07T21:30:00.000Z",
+      "updated_at": "2026-06-08T01:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 93,
+    "fields": {
+      "created_at": "2026-06-07T22:00:00.000Z",
+      "updated_at": "2026-06-08T02:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 94,
+    "fields": {
+      "created_at": "2026-06-07T22:30:00.000Z",
+      "updated_at": "2026-06-08T04:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 95,
+    "fields": {
+      "created_at": "2026-06-08T04:00:00.000Z",
+      "updated_at": "2026-06-08T05:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 96,
+    "fields": {
+      "created_at": "2026-06-08T04:30:00.000Z",
+      "updated_at": "2026-06-08T07:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 97,
+    "fields": {
+      "created_at": "2026-06-08T05:00:00.000Z",
+      "updated_at": "2026-06-08T08:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 98,
+    "fields": {
+      "created_at": "2026-06-08T05:30:00.000Z",
+      "updated_at": "2026-06-08T10:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 99,
+    "fields": {
+      "created_at": "2026-06-08T06:00:00.000Z",
+      "updated_at": "2026-06-08T11:55:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 100,
+    "fields": {
+      "created_at": "2026-06-08T11:30:00.000Z",
+      "updated_at": "2026-06-08T13:25:00.000Z",
+      "user": 7,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 101,
+    "fields": {
+      "created_at": "2026-06-08T12:00:00.000Z",
+      "updated_at": "2026-06-08T14:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 102,
+    "fields": {
+      "created_at": "2026-06-08T12:30:00.000Z",
+      "updated_at": "2026-06-08T16:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 103,
+    "fields": {
+      "created_at": "2026-06-08T13:00:00.000Z",
+      "updated_at": "2026-06-08T17:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 104,
+    "fields": {
+      "created_at": "2026-06-08T13:30:00.000Z",
+      "updated_at": "2026-06-08T19:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 105,
+    "fields": {
+      "created_at": "2026-06-08T19:00:00.000Z",
+      "updated_at": "2026-06-08T20:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 106,
+    "fields": {
+      "created_at": "2026-06-08T19:30:00.000Z",
+      "updated_at": "2026-06-08T22:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 107,
+    "fields": {
+      "created_at": "2026-06-08T20:00:00.000Z",
+      "updated_at": "2026-06-08T23:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 108,
+    "fields": {
+      "created_at": "2026-06-08T20:30:00.000Z",
+      "updated_at": "2026-06-09T01:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 109,
+    "fields": {
+      "created_at": "2026-06-08T21:00:00.000Z",
+      "updated_at": "2026-06-09T02:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 110,
+    "fields": {
+      "created_at": "2026-06-09T02:30:00.000Z",
+      "updated_at": "2026-06-09T04:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 111,
+    "fields": {
+      "created_at": "2026-06-09T03:00:00.000Z",
+      "updated_at": "2026-06-09T05:55:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 112,
+    "fields": {
+      "created_at": "2026-06-09T03:30:00.000Z",
+      "updated_at": "2026-06-09T07:25:00.000Z",
+      "user": 8,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 113,
+    "fields": {
+      "created_at": "2026-06-09T04:00:00.000Z",
+      "updated_at": "2026-06-09T08:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 114,
+    "fields": {
+      "created_at": "2026-06-09T04:30:00.000Z",
+      "updated_at": "2026-06-09T10:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 115,
+    "fields": {
+      "created_at": "2026-06-09T10:00:00.000Z",
+      "updated_at": "2026-06-09T11:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 116,
+    "fields": {
+      "created_at": "2026-06-09T10:30:00.000Z",
+      "updated_at": "2026-06-09T13:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 117,
+    "fields": {
+      "created_at": "2026-06-09T11:00:00.000Z",
+      "updated_at": "2026-06-09T14:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 118,
+    "fields": {
+      "created_at": "2026-06-09T11:30:00.000Z",
+      "updated_at": "2026-06-09T16:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 119,
+    "fields": {
+      "created_at": "2026-06-09T12:00:00.000Z",
+      "updated_at": "2026-06-09T17:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 120,
+    "fields": {
+      "created_at": "2026-06-09T17:30:00.000Z",
+      "updated_at": "2026-06-09T19:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 121,
+    "fields": {
+      "created_at": "2026-06-09T18:00:00.000Z",
+      "updated_at": "2026-06-09T20:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 122,
+    "fields": {
+      "created_at": "2026-06-09T18:30:00.000Z",
+      "updated_at": "2026-06-09T22:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 123,
+    "fields": {
+      "created_at": "2026-06-09T19:00:00.000Z",
+      "updated_at": "2026-06-09T23:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 124,
+    "fields": {
+      "created_at": "2026-06-09T19:30:00.000Z",
+      "updated_at": "2026-06-10T01:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 125,
+    "fields": {
+      "created_at": "2026-06-10T01:00:00.000Z",
+      "updated_at": "2026-06-10T02:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 126,
+    "fields": {
+      "created_at": "2026-06-10T01:30:00.000Z",
+      "updated_at": "2026-06-10T04:25:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 127,
+    "fields": {
+      "created_at": "2026-06-10T02:00:00.000Z",
+      "updated_at": "2026-06-10T05:55:00.000Z",
+      "user": 9,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 128,
+    "fields": {
+      "created_at": "2026-06-10T02:30:00.000Z",
+      "updated_at": "2026-06-10T07:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 129,
+    "fields": {
+      "created_at": "2026-06-10T03:00:00.000Z",
+      "updated_at": "2026-06-10T08:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 130,
+    "fields": {
+      "created_at": "2026-06-10T08:30:00.000Z",
+      "updated_at": "2026-06-10T10:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 131,
+    "fields": {
+      "created_at": "2026-06-10T09:00:00.000Z",
+      "updated_at": "2026-06-10T11:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 132,
+    "fields": {
+      "created_at": "2026-06-10T09:30:00.000Z",
+      "updated_at": "2026-06-10T13:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 133,
+    "fields": {
+      "created_at": "2026-06-10T10:00:00.000Z",
+      "updated_at": "2026-06-10T14:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 134,
+    "fields": {
+      "created_at": "2026-06-10T10:30:00.000Z",
+      "updated_at": "2026-06-10T16:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 135,
+    "fields": {
+      "created_at": "2026-06-10T16:00:00.000Z",
+      "updated_at": "2026-06-10T17:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 136,
+    "fields": {
+      "created_at": "2026-06-10T16:30:00.000Z",
+      "updated_at": "2026-06-10T19:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 137,
+    "fields": {
+      "created_at": "2026-06-10T17:00:00.000Z",
+      "updated_at": "2026-06-10T20:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 138,
+    "fields": {
+      "created_at": "2026-06-10T17:30:00.000Z",
+      "updated_at": "2026-06-10T22:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 139,
+    "fields": {
+      "created_at": "2026-06-10T18:00:00.000Z",
+      "updated_at": "2026-06-10T23:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 140,
+    "fields": {
+      "created_at": "2026-06-10T23:30:00.000Z",
+      "updated_at": "2026-06-11T01:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 141,
+    "fields": {
+      "created_at": "2026-06-11T00:00:00.000Z",
+      "updated_at": "2026-06-11T02:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 142,
+    "fields": {
+      "created_at": "2026-06-11T00:30:00.000Z",
+      "updated_at": "2026-06-11T04:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 143,
+    "fields": {
+      "created_at": "2026-06-11T01:00:00.000Z",
+      "updated_at": "2026-06-11T05:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 144,
+    "fields": {
+      "created_at": "2026-06-11T01:30:00.000Z",
+      "updated_at": "2026-06-11T07:25:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 145,
+    "fields": {
+      "created_at": "2026-06-11T07:00:00.000Z",
+      "updated_at": "2026-06-11T08:55:00.000Z",
+      "user": 10,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 146,
+    "fields": {
+      "created_at": "2026-06-11T07:30:00.000Z",
+      "updated_at": "2026-06-11T10:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 147,
+    "fields": {
+      "created_at": "2026-06-11T08:00:00.000Z",
+      "updated_at": "2026-06-11T11:55:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 148,
+    "fields": {
+      "created_at": "2026-06-11T08:30:00.000Z",
+      "updated_at": "2026-06-11T13:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 149,
+    "fields": {
+      "created_at": "2026-06-11T09:00:00.000Z",
+      "updated_at": "2026-06-11T14:55:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 150,
+    "fields": {
+      "created_at": "2026-06-11T14:30:00.000Z",
+      "updated_at": "2026-06-11T16:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 151,
+    "fields": {
+      "created_at": "2026-06-11T15:00:00.000Z",
+      "updated_at": "2026-06-11T17:55:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 152,
+    "fields": {
+      "created_at": "2026-06-11T15:30:00.000Z",
+      "updated_at": "2026-06-11T19:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 153,
+    "fields": {
+      "created_at": "2026-06-11T16:00:00.000Z",
+      "updated_at": "2026-06-11T20:55:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 154,
+    "fields": {
+      "created_at": "2026-06-11T16:30:00.000Z",
+      "updated_at": "2026-06-11T22:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 155,
+    "fields": {
+      "created_at": "2026-06-11T22:00:00.000Z",
+      "updated_at": "2026-06-11T23:55:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 156,
+    "fields": {
+      "created_at": "2026-06-11T22:30:00.000Z",
+      "updated_at": "2026-06-12T01:25:00.000Z",
+      "user": 11,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 157,
+    "fields": {
+      "created_at": "2026-06-11T23:00:00.000Z",
+      "updated_at": "2026-06-12T02:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 158,
+    "fields": {
+      "created_at": "2026-06-11T23:30:00.000Z",
+      "updated_at": "2026-06-12T04:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 159,
+    "fields": {
+      "created_at": "2026-06-12T00:00:00.000Z",
+      "updated_at": "2026-06-12T05:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 160,
+    "fields": {
+      "created_at": "2026-06-12T05:30:00.000Z",
+      "updated_at": "2026-06-12T07:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 161,
+    "fields": {
+      "created_at": "2026-06-12T06:00:00.000Z",
+      "updated_at": "2026-06-12T08:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 162,
+    "fields": {
+      "created_at": "2026-06-12T06:30:00.000Z",
+      "updated_at": "2026-06-12T10:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 163,
+    "fields": {
+      "created_at": "2026-06-12T07:00:00.000Z",
+      "updated_at": "2026-06-12T11:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 164,
+    "fields": {
+      "created_at": "2026-06-12T07:30:00.000Z",
+      "updated_at": "2026-06-12T13:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 165,
+    "fields": {
+      "created_at": "2026-06-12T13:00:00.000Z",
+      "updated_at": "2026-06-12T14:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 166,
+    "fields": {
+      "created_at": "2026-06-12T13:30:00.000Z",
+      "updated_at": "2026-06-12T16:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 167,
+    "fields": {
+      "created_at": "2026-06-12T14:00:00.000Z",
+      "updated_at": "2026-06-12T17:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 168,
+    "fields": {
+      "created_at": "2026-06-12T14:30:00.000Z",
+      "updated_at": "2026-06-12T19:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 169,
+    "fields": {
+      "created_at": "2026-06-12T15:00:00.000Z",
+      "updated_at": "2026-06-12T20:55:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 170,
+    "fields": {
+      "created_at": "2026-06-12T20:30:00.000Z",
+      "updated_at": "2026-06-12T22:25:00.000Z",
+      "user": 12,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 171,
+    "fields": {
+      "created_at": "2026-06-12T21:00:00.000Z",
+      "updated_at": "2026-06-12T23:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 172,
+    "fields": {
+      "created_at": "2026-06-12T21:30:00.000Z",
+      "updated_at": "2026-06-13T01:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 173,
+    "fields": {
+      "created_at": "2026-06-12T22:00:00.000Z",
+      "updated_at": "2026-06-13T02:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 174,
+    "fields": {
+      "created_at": "2026-06-12T22:30:00.000Z",
+      "updated_at": "2026-06-13T04:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 175,
+    "fields": {
+      "created_at": "2026-06-13T04:00:00.000Z",
+      "updated_at": "2026-06-13T05:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 176,
+    "fields": {
+      "created_at": "2026-06-13T04:30:00.000Z",
+      "updated_at": "2026-06-13T07:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 177,
+    "fields": {
+      "created_at": "2026-06-13T05:00:00.000Z",
+      "updated_at": "2026-06-13T08:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 178,
+    "fields": {
+      "created_at": "2026-06-13T05:30:00.000Z",
+      "updated_at": "2026-06-13T10:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 179,
+    "fields": {
+      "created_at": "2026-06-13T06:00:00.000Z",
+      "updated_at": "2026-06-13T11:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 180,
+    "fields": {
+      "created_at": "2026-06-13T11:30:00.000Z",
+      "updated_at": "2026-06-13T13:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 181,
+    "fields": {
+      "created_at": "2026-06-13T12:00:00.000Z",
+      "updated_at": "2026-06-13T14:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 182,
+    "fields": {
+      "created_at": "2026-06-13T12:30:00.000Z",
+      "updated_at": "2026-06-13T16:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 183,
+    "fields": {
+      "created_at": "2026-06-13T13:00:00.000Z",
+      "updated_at": "2026-06-13T17:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 184,
+    "fields": {
+      "created_at": "2026-06-13T13:30:00.000Z",
+      "updated_at": "2026-06-13T19:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 185,
+    "fields": {
+      "created_at": "2026-06-13T19:00:00.000Z",
+      "updated_at": "2026-06-13T20:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 186,
+    "fields": {
+      "created_at": "2026-06-13T19:30:00.000Z",
+      "updated_at": "2026-06-13T22:25:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 187,
+    "fields": {
+      "created_at": "2026-06-13T20:00:00.000Z",
+      "updated_at": "2026-06-13T23:55:00.000Z",
+      "user": 13,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 188,
+    "fields": {
+      "created_at": "2026-06-13T20:30:00.000Z",
+      "updated_at": "2026-06-14T01:25:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 189,
+    "fields": {
+      "created_at": "2026-06-13T21:00:00.000Z",
+      "updated_at": "2026-06-14T02:55:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 190,
+    "fields": {
+      "created_at": "2026-06-14T02:30:00.000Z",
+      "updated_at": "2026-06-14T04:25:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 191,
+    "fields": {
+      "created_at": "2026-06-14T03:00:00.000Z",
+      "updated_at": "2026-06-14T05:55:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 192,
+    "fields": {
+      "created_at": "2026-06-14T03:30:00.000Z",
+      "updated_at": "2026-06-14T07:25:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 193,
+    "fields": {
+      "created_at": "2026-06-14T04:00:00.000Z",
+      "updated_at": "2026-06-14T08:55:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 194,
+    "fields": {
+      "created_at": "2026-06-14T04:30:00.000Z",
+      "updated_at": "2026-06-14T10:25:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 195,
+    "fields": {
+      "created_at": "2026-06-14T10:00:00.000Z",
+      "updated_at": "2026-06-14T11:55:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 196,
+    "fields": {
+      "created_at": "2026-06-14T10:30:00.000Z",
+      "updated_at": "2026-06-14T13:25:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 197,
+    "fields": {
+      "created_at": "2026-06-14T11:00:00.000Z",
+      "updated_at": "2026-06-14T14:55:00.000Z",
+      "user": 14,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 198,
+    "fields": {
+      "created_at": "2026-06-14T11:30:00.000Z",
+      "updated_at": "2026-06-14T16:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 199,
+    "fields": {
+      "created_at": "2026-06-14T12:00:00.000Z",
+      "updated_at": "2026-06-14T17:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 200,
+    "fields": {
+      "created_at": "2026-06-14T17:30:00.000Z",
+      "updated_at": "2026-06-14T19:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 201,
+    "fields": {
+      "created_at": "2026-06-14T18:00:00.000Z",
+      "updated_at": "2026-06-14T20:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 202,
+    "fields": {
+      "created_at": "2026-06-14T18:30:00.000Z",
+      "updated_at": "2026-06-14T22:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 203,
+    "fields": {
+      "created_at": "2026-06-14T19:00:00.000Z",
+      "updated_at": "2026-06-14T23:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 204,
+    "fields": {
+      "created_at": "2026-06-14T19:30:00.000Z",
+      "updated_at": "2026-06-15T01:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 205,
+    "fields": {
+      "created_at": "2026-06-15T01:00:00.000Z",
+      "updated_at": "2026-06-15T02:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 206,
+    "fields": {
+      "created_at": "2026-06-15T01:30:00.000Z",
+      "updated_at": "2026-06-15T04:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 207,
+    "fields": {
+      "created_at": "2026-06-15T02:00:00.000Z",
+      "updated_at": "2026-06-15T05:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 208,
+    "fields": {
+      "created_at": "2026-06-15T02:30:00.000Z",
+      "updated_at": "2026-06-15T07:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 209,
+    "fields": {
+      "created_at": "2026-06-15T03:00:00.000Z",
+      "updated_at": "2026-06-15T08:55:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 210,
+    "fields": {
+      "created_at": "2026-06-15T08:30:00.000Z",
+      "updated_at": "2026-06-15T10:25:00.000Z",
+      "user": 15,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 211,
+    "fields": {
+      "created_at": "2026-06-15T09:00:00.000Z",
+      "updated_at": "2026-06-15T11:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 212,
+    "fields": {
+      "created_at": "2026-06-15T09:30:00.000Z",
+      "updated_at": "2026-06-15T13:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 213,
+    "fields": {
+      "created_at": "2026-06-15T10:00:00.000Z",
+      "updated_at": "2026-06-15T14:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 214,
+    "fields": {
+      "created_at": "2026-06-15T10:30:00.000Z",
+      "updated_at": "2026-06-15T16:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 215,
+    "fields": {
+      "created_at": "2026-06-15T16:00:00.000Z",
+      "updated_at": "2026-06-15T17:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 216,
+    "fields": {
+      "created_at": "2026-06-15T16:30:00.000Z",
+      "updated_at": "2026-06-15T19:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 217,
+    "fields": {
+      "created_at": "2026-06-15T17:00:00.000Z",
+      "updated_at": "2026-06-15T20:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 218,
+    "fields": {
+      "created_at": "2026-06-15T17:30:00.000Z",
+      "updated_at": "2026-06-15T22:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 219,
+    "fields": {
+      "created_at": "2026-06-15T18:00:00.000Z",
+      "updated_at": "2026-06-15T23:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 220,
+    "fields": {
+      "created_at": "2026-06-15T23:30:00.000Z",
+      "updated_at": "2026-06-16T01:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 221,
+    "fields": {
+      "created_at": "2026-06-16T00:00:00.000Z",
+      "updated_at": "2026-06-16T02:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 222,
+    "fields": {
+      "created_at": "2026-06-16T00:30:00.000Z",
+      "updated_at": "2026-06-16T04:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 223,
+    "fields": {
+      "created_at": "2026-06-16T01:00:00.000Z",
+      "updated_at": "2026-06-16T05:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 224,
+    "fields": {
+      "created_at": "2026-06-16T01:30:00.000Z",
+      "updated_at": "2026-06-16T07:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 225,
+    "fields": {
+      "created_at": "2026-06-16T07:00:00.000Z",
+      "updated_at": "2026-06-16T08:55:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 226,
+    "fields": {
+      "created_at": "2026-06-16T07:30:00.000Z",
+      "updated_at": "2026-06-16T10:25:00.000Z",
+      "user": 16,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 227,
+    "fields": {
+      "created_at": "2026-06-16T08:00:00.000Z",
+      "updated_at": "2026-06-16T11:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 228,
+    "fields": {
+      "created_at": "2026-06-16T08:30:00.000Z",
+      "updated_at": "2026-06-16T13:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 229,
+    "fields": {
+      "created_at": "2026-06-16T09:00:00.000Z",
+      "updated_at": "2026-06-16T14:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 230,
+    "fields": {
+      "created_at": "2026-06-16T14:30:00.000Z",
+      "updated_at": "2026-06-16T16:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 231,
+    "fields": {
+      "created_at": "2026-06-16T15:00:00.000Z",
+      "updated_at": "2026-06-16T17:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 232,
+    "fields": {
+      "created_at": "2026-06-16T15:30:00.000Z",
+      "updated_at": "2026-06-16T19:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 233,
+    "fields": {
+      "created_at": "2026-06-16T16:00:00.000Z",
+      "updated_at": "2026-06-16T20:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 234,
+    "fields": {
+      "created_at": "2026-06-16T16:30:00.000Z",
+      "updated_at": "2026-06-16T22:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 235,
+    "fields": {
+      "created_at": "2026-06-16T22:00:00.000Z",
+      "updated_at": "2026-06-16T23:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 236,
+    "fields": {
+      "created_at": "2026-06-16T22:30:00.000Z",
+      "updated_at": "2026-06-17T01:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 237,
+    "fields": {
+      "created_at": "2026-06-16T23:00:00.000Z",
+      "updated_at": "2026-06-17T02:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 238,
+    "fields": {
+      "created_at": "2026-06-16T23:30:00.000Z",
+      "updated_at": "2026-06-17T04:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 239,
+    "fields": {
+      "created_at": "2026-06-17T00:00:00.000Z",
+      "updated_at": "2026-06-17T05:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 240,
+    "fields": {
+      "created_at": "2026-06-17T05:30:00.000Z",
+      "updated_at": "2026-06-17T07:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 241,
+    "fields": {
+      "created_at": "2026-06-17T06:00:00.000Z",
+      "updated_at": "2026-06-17T08:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 242,
+    "fields": {
+      "created_at": "2026-06-17T06:30:00.000Z",
+      "updated_at": "2026-06-17T10:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 243,
+    "fields": {
+      "created_at": "2026-06-17T07:00:00.000Z",
+      "updated_at": "2026-06-17T11:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 244,
+    "fields": {
+      "created_at": "2026-06-17T07:30:00.000Z",
+      "updated_at": "2026-06-17T13:25:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 245,
+    "fields": {
+      "created_at": "2026-06-17T13:00:00.000Z",
+      "updated_at": "2026-06-17T14:55:00.000Z",
+      "user": 17,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 246,
+    "fields": {
+      "created_at": "2026-06-17T13:30:00.000Z",
+      "updated_at": "2026-06-17T16:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 247,
+    "fields": {
+      "created_at": "2026-06-17T14:00:00.000Z",
+      "updated_at": "2026-06-17T17:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 248,
+    "fields": {
+      "created_at": "2026-06-17T14:30:00.000Z",
+      "updated_at": "2026-06-17T19:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 249,
+    "fields": {
+      "created_at": "2026-06-17T15:00:00.000Z",
+      "updated_at": "2026-06-17T20:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 250,
+    "fields": {
+      "created_at": "2026-06-17T20:30:00.000Z",
+      "updated_at": "2026-06-17T22:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 251,
+    "fields": {
+      "created_at": "2026-06-17T21:00:00.000Z",
+      "updated_at": "2026-06-17T23:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 252,
+    "fields": {
+      "created_at": "2026-06-17T21:30:00.000Z",
+      "updated_at": "2026-06-18T01:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 253,
+    "fields": {
+      "created_at": "2026-06-17T22:00:00.000Z",
+      "updated_at": "2026-06-18T02:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 254,
+    "fields": {
+      "created_at": "2026-06-17T22:30:00.000Z",
+      "updated_at": "2026-06-18T04:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 255,
+    "fields": {
+      "created_at": "2026-06-18T04:00:00.000Z",
+      "updated_at": "2026-06-18T05:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 256,
+    "fields": {
+      "created_at": "2026-06-18T04:30:00.000Z",
+      "updated_at": "2026-06-18T07:25:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 257,
+    "fields": {
+      "created_at": "2026-06-18T05:00:00.000Z",
+      "updated_at": "2026-06-18T08:55:00.000Z",
+      "user": 18,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 258,
+    "fields": {
+      "created_at": "2026-06-18T05:30:00.000Z",
+      "updated_at": "2026-06-18T10:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 259,
+    "fields": {
+      "created_at": "2026-06-18T06:00:00.000Z",
+      "updated_at": "2026-06-18T11:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 260,
+    "fields": {
+      "created_at": "2026-06-18T11:30:00.000Z",
+      "updated_at": "2026-06-18T13:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 261,
+    "fields": {
+      "created_at": "2026-06-18T12:00:00.000Z",
+      "updated_at": "2026-06-18T14:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 262,
+    "fields": {
+      "created_at": "2026-06-18T12:30:00.000Z",
+      "updated_at": "2026-06-18T16:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 263,
+    "fields": {
+      "created_at": "2026-06-18T13:00:00.000Z",
+      "updated_at": "2026-06-18T17:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 264,
+    "fields": {
+      "created_at": "2026-06-18T13:30:00.000Z",
+      "updated_at": "2026-06-18T19:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 265,
+    "fields": {
+      "created_at": "2026-06-18T19:00:00.000Z",
+      "updated_at": "2026-06-18T20:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 266,
+    "fields": {
+      "created_at": "2026-06-18T19:30:00.000Z",
+      "updated_at": "2026-06-18T22:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 267,
+    "fields": {
+      "created_at": "2026-06-18T20:00:00.000Z",
+      "updated_at": "2026-06-18T23:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 268,
+    "fields": {
+      "created_at": "2026-06-18T20:30:00.000Z",
+      "updated_at": "2026-06-19T01:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 269,
+    "fields": {
+      "created_at": "2026-06-18T21:00:00.000Z",
+      "updated_at": "2026-06-19T02:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 270,
+    "fields": {
+      "created_at": "2026-06-19T02:30:00.000Z",
+      "updated_at": "2026-06-19T04:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 271,
+    "fields": {
+      "created_at": "2026-06-19T03:00:00.000Z",
+      "updated_at": "2026-06-19T05:55:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 272,
+    "fields": {
+      "created_at": "2026-06-19T03:30:00.000Z",
+      "updated_at": "2026-06-19T07:25:00.000Z",
+      "user": 19,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 273,
+    "fields": {
+      "created_at": "2026-06-19T04:00:00.000Z",
+      "updated_at": "2026-06-19T08:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 274,
+    "fields": {
+      "created_at": "2026-06-19T04:30:00.000Z",
+      "updated_at": "2026-06-19T10:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 275,
+    "fields": {
+      "created_at": "2026-06-19T10:00:00.000Z",
+      "updated_at": "2026-06-19T11:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 276,
+    "fields": {
+      "created_at": "2026-06-19T10:30:00.000Z",
+      "updated_at": "2026-06-19T13:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 277,
+    "fields": {
+      "created_at": "2026-06-19T11:00:00.000Z",
+      "updated_at": "2026-06-19T14:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 278,
+    "fields": {
+      "created_at": "2026-06-19T11:30:00.000Z",
+      "updated_at": "2026-06-19T16:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 279,
+    "fields": {
+      "created_at": "2026-06-19T12:00:00.000Z",
+      "updated_at": "2026-06-19T17:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 280,
+    "fields": {
+      "created_at": "2026-06-19T17:30:00.000Z",
+      "updated_at": "2026-06-19T19:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 281,
+    "fields": {
+      "created_at": "2026-06-19T18:00:00.000Z",
+      "updated_at": "2026-06-19T20:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 282,
+    "fields": {
+      "created_at": "2026-06-19T18:30:00.000Z",
+      "updated_at": "2026-06-19T22:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 283,
+    "fields": {
+      "created_at": "2026-06-19T19:00:00.000Z",
+      "updated_at": "2026-06-19T23:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 284,
+    "fields": {
+      "created_at": "2026-06-19T19:30:00.000Z",
+      "updated_at": "2026-06-20T01:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 285,
+    "fields": {
+      "created_at": "2026-06-20T01:00:00.000Z",
+      "updated_at": "2026-06-20T02:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 286,
+    "fields": {
+      "created_at": "2026-06-20T01:30:00.000Z",
+      "updated_at": "2026-06-20T04:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 287,
+    "fields": {
+      "created_at": "2026-06-20T02:00:00.000Z",
+      "updated_at": "2026-06-20T05:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 288,
+    "fields": {
+      "created_at": "2026-06-20T02:30:00.000Z",
+      "updated_at": "2026-06-20T07:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 289,
+    "fields": {
+      "created_at": "2026-06-20T03:00:00.000Z",
+      "updated_at": "2026-06-20T08:55:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 290,
+    "fields": {
+      "created_at": "2026-06-20T08:30:00.000Z",
+      "updated_at": "2026-06-20T10:25:00.000Z",
+      "user": 20,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 291,
+    "fields": {
+      "created_at": "2026-06-20T09:00:00.000Z",
+      "updated_at": "2026-06-20T11:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 292,
+    "fields": {
+      "created_at": "2026-06-20T09:30:00.000Z",
+      "updated_at": "2026-06-20T13:25:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 293,
+    "fields": {
+      "created_at": "2026-06-20T10:00:00.000Z",
+      "updated_at": "2026-06-20T14:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 294,
+    "fields": {
+      "created_at": "2026-06-20T10:30:00.000Z",
+      "updated_at": "2026-06-20T16:25:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 295,
+    "fields": {
+      "created_at": "2026-06-20T16:00:00.000Z",
+      "updated_at": "2026-06-20T17:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 296,
+    "fields": {
+      "created_at": "2026-06-20T16:30:00.000Z",
+      "updated_at": "2026-06-20T19:25:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 297,
+    "fields": {
+      "created_at": "2026-06-20T17:00:00.000Z",
+      "updated_at": "2026-06-20T20:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 298,
+    "fields": {
+      "created_at": "2026-06-20T17:30:00.000Z",
+      "updated_at": "2026-06-20T22:25:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 299,
+    "fields": {
+      "created_at": "2026-06-20T18:00:00.000Z",
+      "updated_at": "2026-06-20T23:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 300,
+    "fields": {
+      "created_at": "2026-06-20T23:30:00.000Z",
+      "updated_at": "2026-06-21T01:25:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 301,
+    "fields": {
+      "created_at": "2026-06-21T00:00:00.000Z",
+      "updated_at": "2026-06-21T02:55:00.000Z",
+      "user": 21,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 302,
+    "fields": {
+      "created_at": "2026-06-21T00:30:00.000Z",
+      "updated_at": "2026-06-21T04:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 303,
+    "fields": {
+      "created_at": "2026-06-21T01:00:00.000Z",
+      "updated_at": "2026-06-21T05:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 304,
+    "fields": {
+      "created_at": "2026-06-21T01:30:00.000Z",
+      "updated_at": "2026-06-21T07:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 305,
+    "fields": {
+      "created_at": "2026-06-21T07:00:00.000Z",
+      "updated_at": "2026-06-21T08:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 306,
+    "fields": {
+      "created_at": "2026-06-21T07:30:00.000Z",
+      "updated_at": "2026-06-21T10:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 307,
+    "fields": {
+      "created_at": "2026-06-21T08:00:00.000Z",
+      "updated_at": "2026-06-21T11:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 308,
+    "fields": {
+      "created_at": "2026-06-21T08:30:00.000Z",
+      "updated_at": "2026-06-21T13:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 309,
+    "fields": {
+      "created_at": "2026-06-21T09:00:00.000Z",
+      "updated_at": "2026-06-21T14:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 310,
+    "fields": {
+      "created_at": "2026-06-21T14:30:00.000Z",
+      "updated_at": "2026-06-21T16:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 311,
+    "fields": {
+      "created_at": "2026-06-21T15:00:00.000Z",
+      "updated_at": "2026-06-21T17:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 312,
+    "fields": {
+      "created_at": "2026-06-21T15:30:00.000Z",
+      "updated_at": "2026-06-21T19:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 313,
+    "fields": {
+      "created_at": "2026-06-21T16:00:00.000Z",
+      "updated_at": "2026-06-21T20:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 314,
+    "fields": {
+      "created_at": "2026-06-21T16:30:00.000Z",
+      "updated_at": "2026-06-21T22:25:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 315,
+    "fields": {
+      "created_at": "2026-06-21T22:00:00.000Z",
+      "updated_at": "2026-06-21T23:55:00.000Z",
+      "user": 22,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 316,
+    "fields": {
+      "created_at": "2026-06-21T22:30:00.000Z",
+      "updated_at": "2026-06-22T01:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 317,
+    "fields": {
+      "created_at": "2026-06-21T23:00:00.000Z",
+      "updated_at": "2026-06-22T02:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 318,
+    "fields": {
+      "created_at": "2026-06-21T23:30:00.000Z",
+      "updated_at": "2026-06-22T04:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 319,
+    "fields": {
+      "created_at": "2026-06-22T00:00:00.000Z",
+      "updated_at": "2026-06-22T05:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 320,
+    "fields": {
+      "created_at": "2026-06-22T05:30:00.000Z",
+      "updated_at": "2026-06-22T07:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 321,
+    "fields": {
+      "created_at": "2026-06-22T06:00:00.000Z",
+      "updated_at": "2026-06-22T08:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 322,
+    "fields": {
+      "created_at": "2026-06-22T06:30:00.000Z",
+      "updated_at": "2026-06-22T10:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 323,
+    "fields": {
+      "created_at": "2026-06-22T07:00:00.000Z",
+      "updated_at": "2026-06-22T11:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 324,
+    "fields": {
+      "created_at": "2026-06-22T07:30:00.000Z",
+      "updated_at": "2026-06-22T13:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 325,
+    "fields": {
+      "created_at": "2026-06-22T13:00:00.000Z",
+      "updated_at": "2026-06-22T14:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 326,
+    "fields": {
+      "created_at": "2026-06-22T13:30:00.000Z",
+      "updated_at": "2026-06-22T16:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 327,
+    "fields": {
+      "created_at": "2026-06-22T14:00:00.000Z",
+      "updated_at": "2026-06-22T17:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 328,
+    "fields": {
+      "created_at": "2026-06-22T14:30:00.000Z",
+      "updated_at": "2026-06-22T19:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 329,
+    "fields": {
+      "created_at": "2026-06-22T15:00:00.000Z",
+      "updated_at": "2026-06-22T20:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 330,
+    "fields": {
+      "created_at": "2026-06-22T20:30:00.000Z",
+      "updated_at": "2026-06-22T22:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 331,
+    "fields": {
+      "created_at": "2026-06-22T21:00:00.000Z",
+      "updated_at": "2026-06-22T23:55:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 332,
+    "fields": {
+      "created_at": "2026-06-22T21:30:00.000Z",
+      "updated_at": "2026-06-23T01:25:00.000Z",
+      "user": 23,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 333,
+    "fields": {
+      "created_at": "2026-06-22T22:00:00.000Z",
+      "updated_at": "2026-06-23T02:55:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 334,
+    "fields": {
+      "created_at": "2026-06-22T22:30:00.000Z",
+      "updated_at": "2026-06-23T04:25:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 335,
+    "fields": {
+      "created_at": "2026-06-23T04:00:00.000Z",
+      "updated_at": "2026-06-23T05:55:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 336,
+    "fields": {
+      "created_at": "2026-06-23T04:30:00.000Z",
+      "updated_at": "2026-06-23T07:25:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 337,
+    "fields": {
+      "created_at": "2026-06-23T05:00:00.000Z",
+      "updated_at": "2026-06-23T08:55:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 338,
+    "fields": {
+      "created_at": "2026-06-23T05:30:00.000Z",
+      "updated_at": "2026-06-23T10:25:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 339,
+    "fields": {
+      "created_at": "2026-06-23T06:00:00.000Z",
+      "updated_at": "2026-06-23T11:55:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 340,
+    "fields": {
+      "created_at": "2026-06-23T11:30:00.000Z",
+      "updated_at": "2026-06-23T13:25:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 341,
+    "fields": {
+      "created_at": "2026-06-23T12:00:00.000Z",
+      "updated_at": "2026-06-23T14:55:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 342,
+    "fields": {
+      "created_at": "2026-06-23T12:30:00.000Z",
+      "updated_at": "2026-06-23T16:25:00.000Z",
+      "user": 24,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 343,
+    "fields": {
+      "created_at": "2026-06-23T13:00:00.000Z",
+      "updated_at": "2026-06-23T17:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 344,
+    "fields": {
+      "created_at": "2026-06-23T13:30:00.000Z",
+      "updated_at": "2026-06-23T19:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 345,
+    "fields": {
+      "created_at": "2026-06-23T19:00:00.000Z",
+      "updated_at": "2026-06-23T20:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 346,
+    "fields": {
+      "created_at": "2026-06-23T19:30:00.000Z",
+      "updated_at": "2026-06-23T22:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 347,
+    "fields": {
+      "created_at": "2026-06-23T20:00:00.000Z",
+      "updated_at": "2026-06-23T23:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 348,
+    "fields": {
+      "created_at": "2026-06-23T20:30:00.000Z",
+      "updated_at": "2026-06-24T01:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 349,
+    "fields": {
+      "created_at": "2026-06-23T21:00:00.000Z",
+      "updated_at": "2026-06-24T02:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 350,
+    "fields": {
+      "created_at": "2026-06-24T02:30:00.000Z",
+      "updated_at": "2026-06-24T04:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 351,
+    "fields": {
+      "created_at": "2026-06-24T03:00:00.000Z",
+      "updated_at": "2026-06-24T05:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 352,
+    "fields": {
+      "created_at": "2026-06-24T03:30:00.000Z",
+      "updated_at": "2026-06-24T07:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 353,
+    "fields": {
+      "created_at": "2026-06-24T04:00:00.000Z",
+      "updated_at": "2026-06-24T08:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 354,
+    "fields": {
+      "created_at": "2026-06-24T04:30:00.000Z",
+      "updated_at": "2026-06-24T10:25:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 355,
+    "fields": {
+      "created_at": "2026-06-24T10:00:00.000Z",
+      "updated_at": "2026-06-24T11:55:00.000Z",
+      "user": 25,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 356,
+    "fields": {
+      "created_at": "2026-06-24T10:30:00.000Z",
+      "updated_at": "2026-06-24T13:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 357,
+    "fields": {
+      "created_at": "2026-06-24T11:00:00.000Z",
+      "updated_at": "2026-06-24T14:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 358,
+    "fields": {
+      "created_at": "2026-06-24T11:30:00.000Z",
+      "updated_at": "2026-06-24T16:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 359,
+    "fields": {
+      "created_at": "2026-06-24T12:00:00.000Z",
+      "updated_at": "2026-06-24T17:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 360,
+    "fields": {
+      "created_at": "2026-06-24T17:30:00.000Z",
+      "updated_at": "2026-06-24T19:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 361,
+    "fields": {
+      "created_at": "2026-06-24T18:00:00.000Z",
+      "updated_at": "2026-06-24T20:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 362,
+    "fields": {
+      "created_at": "2026-06-24T18:30:00.000Z",
+      "updated_at": "2026-06-24T22:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 363,
+    "fields": {
+      "created_at": "2026-06-24T19:00:00.000Z",
+      "updated_at": "2026-06-24T23:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 364,
+    "fields": {
+      "created_at": "2026-06-24T19:30:00.000Z",
+      "updated_at": "2026-06-25T01:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 365,
+    "fields": {
+      "created_at": "2026-06-25T01:00:00.000Z",
+      "updated_at": "2026-06-25T02:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 366,
+    "fields": {
+      "created_at": "2026-06-25T01:30:00.000Z",
+      "updated_at": "2026-06-25T04:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 367,
+    "fields": {
+      "created_at": "2026-06-25T02:00:00.000Z",
+      "updated_at": "2026-06-25T05:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 368,
+    "fields": {
+      "created_at": "2026-06-25T02:30:00.000Z",
+      "updated_at": "2026-06-25T07:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 369,
+    "fields": {
+      "created_at": "2026-06-25T03:00:00.000Z",
+      "updated_at": "2026-06-25T08:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 370,
+    "fields": {
+      "created_at": "2026-06-25T08:30:00.000Z",
+      "updated_at": "2026-06-25T10:25:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 371,
+    "fields": {
+      "created_at": "2026-06-25T09:00:00.000Z",
+      "updated_at": "2026-06-25T11:55:00.000Z",
+      "user": 26,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 372,
+    "fields": {
+      "created_at": "2026-06-25T09:30:00.000Z",
+      "updated_at": "2026-06-25T13:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 373,
+    "fields": {
+      "created_at": "2026-06-25T10:00:00.000Z",
+      "updated_at": "2026-06-25T14:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 374,
+    "fields": {
+      "created_at": "2026-06-25T10:30:00.000Z",
+      "updated_at": "2026-06-25T16:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 375,
+    "fields": {
+      "created_at": "2026-06-25T16:00:00.000Z",
+      "updated_at": "2026-06-25T17:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 376,
+    "fields": {
+      "created_at": "2026-06-25T16:30:00.000Z",
+      "updated_at": "2026-06-25T19:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 377,
+    "fields": {
+      "created_at": "2026-06-25T17:00:00.000Z",
+      "updated_at": "2026-06-25T20:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 378,
+    "fields": {
+      "created_at": "2026-06-25T17:30:00.000Z",
+      "updated_at": "2026-06-25T22:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 379,
+    "fields": {
+      "created_at": "2026-06-25T18:00:00.000Z",
+      "updated_at": "2026-06-25T23:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 380,
+    "fields": {
+      "created_at": "2026-06-25T23:30:00.000Z",
+      "updated_at": "2026-06-26T01:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 381,
+    "fields": {
+      "created_at": "2026-06-26T00:00:00.000Z",
+      "updated_at": "2026-06-26T02:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 382,
+    "fields": {
+      "created_at": "2026-06-26T00:30:00.000Z",
+      "updated_at": "2026-06-26T04:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 383,
+    "fields": {
+      "created_at": "2026-06-26T01:00:00.000Z",
+      "updated_at": "2026-06-26T05:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 384,
+    "fields": {
+      "created_at": "2026-06-26T01:30:00.000Z",
+      "updated_at": "2026-06-26T07:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 385,
+    "fields": {
+      "created_at": "2026-06-26T07:00:00.000Z",
+      "updated_at": "2026-06-26T08:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 386,
+    "fields": {
+      "created_at": "2026-06-26T07:30:00.000Z",
+      "updated_at": "2026-06-26T10:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 387,
+    "fields": {
+      "created_at": "2026-06-26T08:00:00.000Z",
+      "updated_at": "2026-06-26T11:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 388,
+    "fields": {
+      "created_at": "2026-06-26T08:30:00.000Z",
+      "updated_at": "2026-06-26T13:25:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 389,
+    "fields": {
+      "created_at": "2026-06-26T09:00:00.000Z",
+      "updated_at": "2026-06-26T14:55:00.000Z",
+      "user": 27,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 390,
+    "fields": {
+      "created_at": "2026-06-26T14:30:00.000Z",
+      "updated_at": "2026-06-26T16:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 391,
+    "fields": {
+      "created_at": "2026-06-26T15:00:00.000Z",
+      "updated_at": "2026-06-26T17:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 392,
+    "fields": {
+      "created_at": "2026-06-26T15:30:00.000Z",
+      "updated_at": "2026-06-26T19:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 393,
+    "fields": {
+      "created_at": "2026-06-26T16:00:00.000Z",
+      "updated_at": "2026-06-26T20:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 394,
+    "fields": {
+      "created_at": "2026-06-26T16:30:00.000Z",
+      "updated_at": "2026-06-26T22:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 395,
+    "fields": {
+      "created_at": "2026-06-26T22:00:00.000Z",
+      "updated_at": "2026-06-26T23:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 396,
+    "fields": {
+      "created_at": "2026-06-26T22:30:00.000Z",
+      "updated_at": "2026-06-27T01:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 397,
+    "fields": {
+      "created_at": "2026-06-26T23:00:00.000Z",
+      "updated_at": "2026-06-27T02:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 398,
+    "fields": {
+      "created_at": "2026-06-26T23:30:00.000Z",
+      "updated_at": "2026-06-27T04:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 399,
+    "fields": {
+      "created_at": "2026-06-27T00:00:00.000Z",
+      "updated_at": "2026-06-27T05:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 400,
+    "fields": {
+      "created_at": "2026-06-27T05:30:00.000Z",
+      "updated_at": "2026-06-27T07:25:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 401,
+    "fields": {
+      "created_at": "2026-06-27T06:00:00.000Z",
+      "updated_at": "2026-06-27T08:55:00.000Z",
+      "user": 28,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 402,
+    "fields": {
+      "created_at": "2026-06-27T06:30:00.000Z",
+      "updated_at": "2026-06-27T10:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 403,
+    "fields": {
+      "created_at": "2026-06-27T07:00:00.000Z",
+      "updated_at": "2026-06-27T11:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 404,
+    "fields": {
+      "created_at": "2026-06-27T07:30:00.000Z",
+      "updated_at": "2026-06-27T13:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 405,
+    "fields": {
+      "created_at": "2026-06-27T13:00:00.000Z",
+      "updated_at": "2026-06-27T14:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 406,
+    "fields": {
+      "created_at": "2026-06-27T13:30:00.000Z",
+      "updated_at": "2026-06-27T16:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 407,
+    "fields": {
+      "created_at": "2026-06-27T14:00:00.000Z",
+      "updated_at": "2026-06-27T17:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 408,
+    "fields": {
+      "created_at": "2026-06-27T14:30:00.000Z",
+      "updated_at": "2026-06-27T19:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 409,
+    "fields": {
+      "created_at": "2026-06-27T15:00:00.000Z",
+      "updated_at": "2026-06-27T20:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 410,
+    "fields": {
+      "created_at": "2026-06-27T20:30:00.000Z",
+      "updated_at": "2026-06-27T22:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 411,
+    "fields": {
+      "created_at": "2026-06-27T21:00:00.000Z",
+      "updated_at": "2026-06-27T23:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 412,
+    "fields": {
+      "created_at": "2026-06-27T21:30:00.000Z",
+      "updated_at": "2026-06-28T01:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 413,
+    "fields": {
+      "created_at": "2026-06-27T22:00:00.000Z",
+      "updated_at": "2026-06-28T02:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 414,
+    "fields": {
+      "created_at": "2026-06-27T22:30:00.000Z",
+      "updated_at": "2026-06-28T04:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 415,
+    "fields": {
+      "created_at": "2026-06-28T04:00:00.000Z",
+      "updated_at": "2026-06-28T05:55:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 416,
+    "fields": {
+      "created_at": "2026-06-28T04:30:00.000Z",
+      "updated_at": "2026-06-28T07:25:00.000Z",
+      "user": 29,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 417,
+    "fields": {
+      "created_at": "2026-06-28T05:00:00.000Z",
+      "updated_at": "2026-06-28T08:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 418,
+    "fields": {
+      "created_at": "2026-06-28T05:30:00.000Z",
+      "updated_at": "2026-06-28T10:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 419,
+    "fields": {
+      "created_at": "2026-06-28T06:00:00.000Z",
+      "updated_at": "2026-06-28T11:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 420,
+    "fields": {
+      "created_at": "2026-06-28T11:30:00.000Z",
+      "updated_at": "2026-06-28T13:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 421,
+    "fields": {
+      "created_at": "2026-06-28T12:00:00.000Z",
+      "updated_at": "2026-06-28T14:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 422,
+    "fields": {
+      "created_at": "2026-06-28T12:30:00.000Z",
+      "updated_at": "2026-06-28T16:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 423,
+    "fields": {
+      "created_at": "2026-06-28T13:00:00.000Z",
+      "updated_at": "2026-06-28T17:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 424,
+    "fields": {
+      "created_at": "2026-06-28T13:30:00.000Z",
+      "updated_at": "2026-06-28T19:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 425,
+    "fields": {
+      "created_at": "2026-06-28T19:00:00.000Z",
+      "updated_at": "2026-06-28T20:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 426,
+    "fields": {
+      "created_at": "2026-06-28T19:30:00.000Z",
+      "updated_at": "2026-06-28T22:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 427,
+    "fields": {
+      "created_at": "2026-06-28T20:00:00.000Z",
+      "updated_at": "2026-06-28T23:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 428,
+    "fields": {
+      "created_at": "2026-06-28T20:30:00.000Z",
+      "updated_at": "2026-06-29T01:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 429,
+    "fields": {
+      "created_at": "2026-06-28T21:00:00.000Z",
+      "updated_at": "2026-06-29T02:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 430,
+    "fields": {
+      "created_at": "2026-06-29T02:30:00.000Z",
+      "updated_at": "2026-06-29T04:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 431,
+    "fields": {
+      "created_at": "2026-06-29T03:00:00.000Z",
+      "updated_at": "2026-06-29T05:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 432,
+    "fields": {
+      "created_at": "2026-06-29T03:30:00.000Z",
+      "updated_at": "2026-06-29T07:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 433,
+    "fields": {
+      "created_at": "2026-06-29T04:00:00.000Z",
+      "updated_at": "2026-06-29T08:55:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 434,
+    "fields": {
+      "created_at": "2026-06-29T04:30:00.000Z",
+      "updated_at": "2026-06-29T10:25:00.000Z",
+      "user": 30,
+      "cart_status": "converted"
+    }
+  }
+]

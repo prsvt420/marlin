@@ -1,15 +1,4227 @@
 [
-{
-  "model": "catalog.productnutrition",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-03-06T00:00:00.000Z",
-    "updated_at": "2026-03-06T00:00:00.000Z",
-    "product": 1,
-    "calories": "89.00",
-    "proteins": "1.10",
-    "fats": "0.30",
-    "carbs": "23.00"
+  {
+    "model": "catalog.productnutrition",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-04-04T06:37:34.467Z",
+      "updated_at": "2026-04-04T13:54:57.460Z",
+      "product": 1,
+      "calories": "26.00",
+      "proteins": "1.00",
+      "fats": "0.10",
+      "carbs": "6.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-04-04T06:51:44.409Z",
+      "updated_at": "2026-04-04T13:34:44.866Z",
+      "product": 2,
+      "calories": "25.00",
+      "proteins": "1.90",
+      "fats": "0.30",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-04-04T06:59:03.207Z",
+      "updated_at": "2026-04-04T13:34:58.608Z",
+      "product": 3,
+      "calories": "149.00",
+      "proteins": "6.40",
+      "fats": "0.50",
+      "carbs": "33.10"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-04-04T08:08:33.921Z",
+      "updated_at": "2026-04-04T13:35:10.863Z",
+      "product": 4,
+      "calories": "31.00",
+      "proteins": "1.00",
+      "fats": "0.30",
+      "carbs": "6.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-04-04T08:15:00.739Z",
+      "updated_at": "2026-04-04T13:35:21.163Z",
+      "product": 5,
+      "calories": "18.00",
+      "proteins": "0.90",
+      "fats": "0.20",
+      "carbs": "3.90"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-04-04T08:26:16.186Z",
+      "updated_at": "2026-04-04T13:35:35.072Z",
+      "product": 6,
+      "calories": "41.00",
+      "proteins": "0.90",
+      "fats": "0.20",
+      "carbs": "9.60"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-04-04T08:31:40.407Z",
+      "updated_at": "2026-04-04T13:54:39.557Z",
+      "product": 7,
+      "calories": "15.00",
+      "proteins": "1.40",
+      "fats": "0.20",
+      "carbs": "2.90"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-04-04T08:44:58.170Z",
+      "updated_at": "2026-04-04T13:54:41.952Z",
+      "product": 8,
+      "calories": "36.00",
+      "proteins": "3.00",
+      "fats": "0.80",
+      "carbs": "6.30"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-04-04T08:49:29.905Z",
+      "updated_at": "2026-04-04T13:54:47.652Z",
+      "product": 9,
+      "calories": "32.00",
+      "proteins": "1.80",
+      "fats": "0.20",
+      "carbs": "7.30"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-04-04T08:52:28.705Z",
+      "updated_at": "2026-04-04T13:36:28.017Z",
+      "product": 10,
+      "calories": "15.00",
+      "proteins": "0.70",
+      "fats": "0.10",
+      "carbs": "3.60"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-04-04T09:26:28.779Z",
+      "updated_at": "2026-04-04T13:54:43.871Z",
+      "product": 11,
+      "calories": "40.00",
+      "proteins": "1.10",
+      "fats": "0.10",
+      "carbs": "9.30"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-04-04T09:30:21.630Z",
+      "updated_at": "2026-04-04T13:55:02.371Z",
+      "product": 12,
+      "calories": "16.00",
+      "proteins": "0.70",
+      "fats": "0.20",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-04-04T10:08:13.252Z",
+      "updated_at": "2026-04-04T13:38:20.616Z",
+      "product": 13,
+      "calories": "38.00",
+      "proteins": "0.80",
+      "fats": "0.00",
+      "carbs": "9.60"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-04-04T10:12:20.838Z",
+      "updated_at": "2026-04-04T10:12:20.838Z",
+      "product": 14,
+      "calories": "30.00",
+      "proteins": "0.70",
+      "fats": "0.20",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-04-04T10:15:35.815Z",
+      "updated_at": "2026-04-04T10:15:35.815Z",
+      "product": 15,
+      "calories": "60.00",
+      "proteins": "1.20",
+      "fats": "0.00",
+      "carbs": "13.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-04-04T10:19:20.777Z",
+      "updated_at": "2026-04-04T10:19:20.777Z",
+      "product": 16,
+      "calories": "89.00",
+      "proteins": "1.10",
+      "fats": "0.30",
+      "carbs": "22.80"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-04-04T10:23:42.229Z",
+      "updated_at": "2026-04-04T10:23:42.229Z",
+      "product": 17,
+      "calories": "47.00",
+      "proteins": "0.90",
+      "fats": "0.10",
+      "carbs": "11.80"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-04-04T10:26:19.721Z",
+      "updated_at": "2026-04-04T10:26:19.722Z",
+      "product": 18,
+      "calories": "52.00",
+      "proteins": "0.30",
+      "fats": "0.20",
+      "carbs": "13.80"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-04-04T10:28:50.052Z",
+      "updated_at": "2026-04-04T10:28:50.052Z",
+      "product": 19,
+      "calories": "83.00",
+      "proteins": "1.70",
+      "fats": "1.20",
+      "carbs": "18.70"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-04-04T10:33:48.924Z",
+      "updated_at": "2026-04-04T10:35:30.192Z",
+      "product": 20,
+      "calories": "42.00",
+      "proteins": "0.50",
+      "fats": "0.20",
+      "carbs": "10.70"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-04-04T10:39:00.918Z",
+      "updated_at": "2026-04-04T10:39:17.650Z",
+      "product": 21,
+      "calories": "29.00",
+      "proteins": "1.10",
+      "fats": "0.30",
+      "carbs": "9.30"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-04-04T10:41:51.123Z",
+      "updated_at": "2026-04-04T10:42:57.811Z",
+      "product": 22,
+      "calories": "53.00",
+      "proteins": "0.80",
+      "fats": "0.30",
+      "carbs": "13.30"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-04-04T10:44:50.400Z",
+      "updated_at": "2026-04-04T10:44:50.400Z",
+      "product": 23,
+      "calories": "97.00",
+      "proteins": "2.20",
+      "fats": "0.70",
+      "carbs": "23.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-04-04T10:46:40.640Z",
+      "updated_at": "2026-04-04T10:46:40.640Z",
+      "product": 24,
+      "calories": "50.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "13.10"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-04-04T10:49:33.168Z",
+      "updated_at": "2026-04-04T10:49:33.168Z",
+      "product": 25,
+      "calories": "52.00",
+      "proteins": "0.30",
+      "fats": "0.20",
+      "carbs": "13.80"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-04-04T12:54:26.728Z",
+      "updated_at": "2026-04-04T13:54:34.182Z",
+      "product": 26,
+      "calories": "628.00",
+      "proteins": "15.00",
+      "fats": "60.80",
+      "carbs": "16.70"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-04-04T13:03:48.239Z",
+      "updated_at": "2026-04-04T13:54:45.775Z",
+      "product": 27,
+      "calories": "299.00",
+      "proteins": "3.10",
+      "fats": "0.50",
+      "carbs": "79.20"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-04-05T00:28:00.000Z",
+      "updated_at": "2026-04-05T00:28:00.000Z",
+      "product": 28,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-04-05T00:29:00.000Z",
+      "updated_at": "2026-04-05T00:29:00.000Z",
+      "product": 29,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-04-05T00:30:00.000Z",
+      "updated_at": "2026-04-05T00:30:00.000Z",
+      "product": 30,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-04-05T00:31:00.000Z",
+      "updated_at": "2026-04-05T00:31:00.000Z",
+      "product": 31,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-04-05T00:32:00.000Z",
+      "updated_at": "2026-04-05T00:32:00.000Z",
+      "product": 32,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-04-05T00:33:00.000Z",
+      "updated_at": "2026-04-05T00:33:00.000Z",
+      "product": 33,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-04-05T00:34:00.000Z",
+      "updated_at": "2026-04-05T00:34:00.000Z",
+      "product": 34,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-04-05T00:35:00.000Z",
+      "updated_at": "2026-04-05T00:35:00.000Z",
+      "product": 35,
+      "calories": "570.00",
+      "proteins": "16.00",
+      "fats": "48.00",
+      "carbs": "24.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 36,
+    "fields": {
+      "created_at": "2026-04-05T00:36:00.000Z",
+      "updated_at": "2026-04-05T00:36:00.000Z",
+      "product": 36,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 37,
+    "fields": {
+      "created_at": "2026-04-05T00:37:00.000Z",
+      "updated_at": "2026-04-05T00:37:00.000Z",
+      "product": 37,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 38,
+    "fields": {
+      "created_at": "2026-04-05T00:38:00.000Z",
+      "updated_at": "2026-04-05T00:38:00.000Z",
+      "product": 38,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 39,
+    "fields": {
+      "created_at": "2026-04-05T00:39:00.000Z",
+      "updated_at": "2026-04-05T00:39:00.000Z",
+      "product": 39,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 40,
+    "fields": {
+      "created_at": "2026-04-05T00:40:00.000Z",
+      "updated_at": "2026-04-05T00:40:00.000Z",
+      "product": 40,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 41,
+    "fields": {
+      "created_at": "2026-04-05T00:41:00.000Z",
+      "updated_at": "2026-04-05T00:41:00.000Z",
+      "product": 41,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 42,
+    "fields": {
+      "created_at": "2026-04-05T00:42:00.000Z",
+      "updated_at": "2026-04-05T00:42:00.000Z",
+      "product": 42,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 43,
+    "fields": {
+      "created_at": "2026-04-05T00:43:00.000Z",
+      "updated_at": "2026-04-05T00:43:00.000Z",
+      "product": 43,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 44,
+    "fields": {
+      "created_at": "2026-04-05T00:44:00.000Z",
+      "updated_at": "2026-04-05T00:44:00.000Z",
+      "product": 44,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 45,
+    "fields": {
+      "created_at": "2026-04-05T00:45:00.000Z",
+      "updated_at": "2026-04-05T00:45:00.000Z",
+      "product": 45,
+      "calories": "250.00",
+      "proteins": "8.00",
+      "fats": "3.00",
+      "carbs": "49.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 46,
+    "fields": {
+      "created_at": "2026-04-05T00:46:00.000Z",
+      "updated_at": "2026-04-05T00:46:00.000Z",
+      "product": 46,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 47,
+    "fields": {
+      "created_at": "2026-04-05T00:47:00.000Z",
+      "updated_at": "2026-04-05T00:47:00.000Z",
+      "product": 47,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 48,
+    "fields": {
+      "created_at": "2026-04-05T00:48:00.000Z",
+      "updated_at": "2026-04-05T00:48:00.000Z",
+      "product": 48,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 49,
+    "fields": {
+      "created_at": "2026-04-05T00:49:00.000Z",
+      "updated_at": "2026-04-05T00:49:00.000Z",
+      "product": 49,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 50,
+    "fields": {
+      "created_at": "2026-04-05T00:50:00.000Z",
+      "updated_at": "2026-04-05T00:50:00.000Z",
+      "product": 50,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 51,
+    "fields": {
+      "created_at": "2026-04-05T00:51:00.000Z",
+      "updated_at": "2026-04-05T00:51:00.000Z",
+      "product": 51,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 52,
+    "fields": {
+      "created_at": "2026-04-05T00:52:00.000Z",
+      "updated_at": "2026-04-05T00:52:00.000Z",
+      "product": 52,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 53,
+    "fields": {
+      "created_at": "2026-04-05T00:53:00.000Z",
+      "updated_at": "2026-04-05T00:53:00.000Z",
+      "product": 53,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 54,
+    "fields": {
+      "created_at": "2026-04-05T00:54:00.000Z",
+      "updated_at": "2026-04-05T00:54:00.000Z",
+      "product": 54,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 55,
+    "fields": {
+      "created_at": "2026-04-05T00:55:00.000Z",
+      "updated_at": "2026-04-05T00:55:00.000Z",
+      "product": 55,
+      "calories": "360.00",
+      "proteins": "6.00",
+      "fats": "17.00",
+      "carbs": "46.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 56,
+    "fields": {
+      "created_at": "2026-04-05T00:56:00.000Z",
+      "updated_at": "2026-04-05T00:56:00.000Z",
+      "product": 56,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 57,
+    "fields": {
+      "created_at": "2026-04-05T00:57:00.000Z",
+      "updated_at": "2026-04-05T00:57:00.000Z",
+      "product": 57,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 58,
+    "fields": {
+      "created_at": "2026-04-05T00:58:00.000Z",
+      "updated_at": "2026-04-05T00:58:00.000Z",
+      "product": 58,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 59,
+    "fields": {
+      "created_at": "2026-04-05T00:59:00.000Z",
+      "updated_at": "2026-04-05T00:59:00.000Z",
+      "product": 59,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 60,
+    "fields": {
+      "created_at": "2026-04-05T01:00:00.000Z",
+      "updated_at": "2026-04-05T01:00:00.000Z",
+      "product": 60,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 61,
+    "fields": {
+      "created_at": "2026-04-05T01:01:00.000Z",
+      "updated_at": "2026-04-05T01:01:00.000Z",
+      "product": 61,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 62,
+    "fields": {
+      "created_at": "2026-04-05T01:02:00.000Z",
+      "updated_at": "2026-04-05T01:02:00.000Z",
+      "product": 62,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 63,
+    "fields": {
+      "created_at": "2026-04-05T01:03:00.000Z",
+      "updated_at": "2026-04-05T01:03:00.000Z",
+      "product": 63,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 64,
+    "fields": {
+      "created_at": "2026-04-05T01:04:00.000Z",
+      "updated_at": "2026-04-05T01:04:00.000Z",
+      "product": 64,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 65,
+    "fields": {
+      "created_at": "2026-04-05T01:05:00.000Z",
+      "updated_at": "2026-04-05T01:05:00.000Z",
+      "product": 65,
+      "calories": "350.00",
+      "proteins": "10.00",
+      "fats": "7.00",
+      "carbs": "66.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 66,
+    "fields": {
+      "created_at": "2026-04-05T01:06:00.000Z",
+      "updated_at": "2026-04-05T01:06:00.000Z",
+      "product": 66,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 67,
+    "fields": {
+      "created_at": "2026-04-05T01:07:00.000Z",
+      "updated_at": "2026-04-05T01:07:00.000Z",
+      "product": 67,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 68,
+    "fields": {
+      "created_at": "2026-04-05T01:08:00.000Z",
+      "updated_at": "2026-04-05T01:08:00.000Z",
+      "product": 68,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 69,
+    "fields": {
+      "created_at": "2026-04-05T01:09:00.000Z",
+      "updated_at": "2026-04-05T01:09:00.000Z",
+      "product": 69,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 70,
+    "fields": {
+      "created_at": "2026-04-05T01:10:00.000Z",
+      "updated_at": "2026-04-05T01:10:00.000Z",
+      "product": 70,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 71,
+    "fields": {
+      "created_at": "2026-04-05T01:11:00.000Z",
+      "updated_at": "2026-04-05T01:11:00.000Z",
+      "product": 71,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 72,
+    "fields": {
+      "created_at": "2026-04-05T01:12:00.000Z",
+      "updated_at": "2026-04-05T01:12:00.000Z",
+      "product": 72,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 73,
+    "fields": {
+      "created_at": "2026-04-05T01:13:00.000Z",
+      "updated_at": "2026-04-05T01:13:00.000Z",
+      "product": 73,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 74,
+    "fields": {
+      "created_at": "2026-04-05T01:14:00.000Z",
+      "updated_at": "2026-04-05T01:14:00.000Z",
+      "product": 74,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 75,
+    "fields": {
+      "created_at": "2026-04-05T01:15:00.000Z",
+      "updated_at": "2026-04-05T01:15:00.000Z",
+      "product": 75,
+      "calories": "240.00",
+      "proteins": "18.00",
+      "fats": "19.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 76,
+    "fields": {
+      "created_at": "2026-04-05T01:16:00.000Z",
+      "updated_at": "2026-04-05T01:16:00.000Z",
+      "product": 76,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 77,
+    "fields": {
+      "created_at": "2026-04-05T01:17:00.000Z",
+      "updated_at": "2026-04-05T01:17:00.000Z",
+      "product": 77,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 78,
+    "fields": {
+      "created_at": "2026-04-05T01:18:00.000Z",
+      "updated_at": "2026-04-05T01:18:00.000Z",
+      "product": 78,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 79,
+    "fields": {
+      "created_at": "2026-04-05T01:19:00.000Z",
+      "updated_at": "2026-04-05T01:19:00.000Z",
+      "product": 79,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 80,
+    "fields": {
+      "created_at": "2026-04-05T01:20:00.000Z",
+      "updated_at": "2026-04-05T01:20:00.000Z",
+      "product": 80,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 81,
+    "fields": {
+      "created_at": "2026-04-05T01:21:00.000Z",
+      "updated_at": "2026-04-05T01:21:00.000Z",
+      "product": 81,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 82,
+    "fields": {
+      "created_at": "2026-04-05T01:22:00.000Z",
+      "updated_at": "2026-04-05T01:22:00.000Z",
+      "product": 82,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 83,
+    "fields": {
+      "created_at": "2026-04-05T01:23:00.000Z",
+      "updated_at": "2026-04-05T01:23:00.000Z",
+      "product": 83,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 84,
+    "fields": {
+      "created_at": "2026-04-05T01:24:00.000Z",
+      "updated_at": "2026-04-05T01:24:00.000Z",
+      "product": 84,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 85,
+    "fields": {
+      "created_at": "2026-04-05T01:25:00.000Z",
+      "updated_at": "2026-04-05T01:25:00.000Z",
+      "product": 85,
+      "calories": "190.00",
+      "proteins": "20.00",
+      "fats": "12.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 86,
+    "fields": {
+      "created_at": "2026-04-05T01:26:00.000Z",
+      "updated_at": "2026-04-05T01:26:00.000Z",
+      "product": 86,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 87,
+    "fields": {
+      "created_at": "2026-04-05T01:27:00.000Z",
+      "updated_at": "2026-04-05T01:27:00.000Z",
+      "product": 87,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 88,
+    "fields": {
+      "created_at": "2026-04-05T01:28:00.000Z",
+      "updated_at": "2026-04-05T01:28:00.000Z",
+      "product": 88,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 89,
+    "fields": {
+      "created_at": "2026-04-05T01:29:00.000Z",
+      "updated_at": "2026-04-05T01:29:00.000Z",
+      "product": 89,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 90,
+    "fields": {
+      "created_at": "2026-04-05T01:30:00.000Z",
+      "updated_at": "2026-04-05T01:30:00.000Z",
+      "product": 90,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 91,
+    "fields": {
+      "created_at": "2026-04-05T01:31:00.000Z",
+      "updated_at": "2026-04-05T01:31:00.000Z",
+      "product": 91,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 92,
+    "fields": {
+      "created_at": "2026-04-05T01:32:00.000Z",
+      "updated_at": "2026-04-05T01:32:00.000Z",
+      "product": 92,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 93,
+    "fields": {
+      "created_at": "2026-04-05T01:33:00.000Z",
+      "updated_at": "2026-04-05T01:33:00.000Z",
+      "product": 93,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 94,
+    "fields": {
+      "created_at": "2026-04-05T01:34:00.000Z",
+      "updated_at": "2026-04-05T01:34:00.000Z",
+      "product": 94,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 95,
+    "fields": {
+      "created_at": "2026-04-05T01:35:00.000Z",
+      "updated_at": "2026-04-05T01:35:00.000Z",
+      "product": 95,
+      "calories": "230.00",
+      "proteins": "15.00",
+      "fats": "18.00",
+      "carbs": "5.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 96,
+    "fields": {
+      "created_at": "2026-04-05T01:36:00.000Z",
+      "updated_at": "2026-04-05T01:36:00.000Z",
+      "product": 96,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 97,
+    "fields": {
+      "created_at": "2026-04-05T01:37:00.000Z",
+      "updated_at": "2026-04-05T01:37:00.000Z",
+      "product": 97,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 98,
+    "fields": {
+      "created_at": "2026-04-05T01:38:00.000Z",
+      "updated_at": "2026-04-05T01:38:00.000Z",
+      "product": 98,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 99,
+    "fields": {
+      "created_at": "2026-04-05T01:39:00.000Z",
+      "updated_at": "2026-04-05T01:39:00.000Z",
+      "product": 99,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 100,
+    "fields": {
+      "created_at": "2026-04-05T01:40:00.000Z",
+      "updated_at": "2026-04-05T01:40:00.000Z",
+      "product": 100,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 101,
+    "fields": {
+      "created_at": "2026-04-05T01:41:00.000Z",
+      "updated_at": "2026-04-05T01:41:00.000Z",
+      "product": 101,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 102,
+    "fields": {
+      "created_at": "2026-04-05T01:42:00.000Z",
+      "updated_at": "2026-04-05T01:42:00.000Z",
+      "product": 102,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 103,
+    "fields": {
+      "created_at": "2026-04-05T01:43:00.000Z",
+      "updated_at": "2026-04-05T01:43:00.000Z",
+      "product": 103,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 104,
+    "fields": {
+      "created_at": "2026-04-05T01:44:00.000Z",
+      "updated_at": "2026-04-05T01:44:00.000Z",
+      "product": 104,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 105,
+    "fields": {
+      "created_at": "2026-04-05T01:45:00.000Z",
+      "updated_at": "2026-04-05T01:45:00.000Z",
+      "product": 105,
+      "calories": "280.00",
+      "proteins": "13.00",
+      "fats": "24.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 106,
+    "fields": {
+      "created_at": "2026-04-05T01:46:00.000Z",
+      "updated_at": "2026-04-05T01:46:00.000Z",
+      "product": 106,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 107,
+    "fields": {
+      "created_at": "2026-04-05T01:47:00.000Z",
+      "updated_at": "2026-04-05T01:47:00.000Z",
+      "product": 107,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 108,
+    "fields": {
+      "created_at": "2026-04-05T01:48:00.000Z",
+      "updated_at": "2026-04-05T01:48:00.000Z",
+      "product": 108,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 109,
+    "fields": {
+      "created_at": "2026-04-05T01:49:00.000Z",
+      "updated_at": "2026-04-05T01:49:00.000Z",
+      "product": 109,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 110,
+    "fields": {
+      "created_at": "2026-04-05T01:50:00.000Z",
+      "updated_at": "2026-04-05T01:50:00.000Z",
+      "product": 110,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 111,
+    "fields": {
+      "created_at": "2026-04-05T01:51:00.000Z",
+      "updated_at": "2026-04-05T01:51:00.000Z",
+      "product": 111,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 112,
+    "fields": {
+      "created_at": "2026-04-05T01:52:00.000Z",
+      "updated_at": "2026-04-05T01:52:00.000Z",
+      "product": 112,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 113,
+    "fields": {
+      "created_at": "2026-04-05T01:53:00.000Z",
+      "updated_at": "2026-04-05T01:53:00.000Z",
+      "product": 113,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 114,
+    "fields": {
+      "created_at": "2026-04-05T01:54:00.000Z",
+      "updated_at": "2026-04-05T01:54:00.000Z",
+      "product": 114,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 115,
+    "fields": {
+      "created_at": "2026-04-05T01:55:00.000Z",
+      "updated_at": "2026-04-05T01:55:00.000Z",
+      "product": 115,
+      "calories": "300.00",
+      "proteins": "12.00",
+      "fats": "27.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 116,
+    "fields": {
+      "created_at": "2026-04-05T01:56:00.000Z",
+      "updated_at": "2026-04-05T01:56:00.000Z",
+      "product": 116,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 117,
+    "fields": {
+      "created_at": "2026-04-05T01:57:00.000Z",
+      "updated_at": "2026-04-05T01:57:00.000Z",
+      "product": 117,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 118,
+    "fields": {
+      "created_at": "2026-04-05T01:58:00.000Z",
+      "updated_at": "2026-04-05T01:58:00.000Z",
+      "product": 118,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 119,
+    "fields": {
+      "created_at": "2026-04-05T01:59:00.000Z",
+      "updated_at": "2026-04-05T01:59:00.000Z",
+      "product": 119,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 120,
+    "fields": {
+      "created_at": "2026-04-05T02:00:00.000Z",
+      "updated_at": "2026-04-05T02:00:00.000Z",
+      "product": 120,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 121,
+    "fields": {
+      "created_at": "2026-04-05T02:01:00.000Z",
+      "updated_at": "2026-04-05T02:01:00.000Z",
+      "product": 121,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 122,
+    "fields": {
+      "created_at": "2026-04-05T02:02:00.000Z",
+      "updated_at": "2026-04-05T02:02:00.000Z",
+      "product": 122,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 123,
+    "fields": {
+      "created_at": "2026-04-05T02:03:00.000Z",
+      "updated_at": "2026-04-05T02:03:00.000Z",
+      "product": 123,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 124,
+    "fields": {
+      "created_at": "2026-04-05T02:04:00.000Z",
+      "updated_at": "2026-04-05T02:04:00.000Z",
+      "product": 124,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 125,
+    "fields": {
+      "created_at": "2026-04-05T02:05:00.000Z",
+      "updated_at": "2026-04-05T02:05:00.000Z",
+      "product": 125,
+      "calories": "72.00",
+      "proteins": "3.00",
+      "fats": "4.50",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 126,
+    "fields": {
+      "created_at": "2026-04-05T02:06:00.000Z",
+      "updated_at": "2026-04-05T02:06:00.000Z",
+      "product": 126,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 127,
+    "fields": {
+      "created_at": "2026-04-05T02:07:00.000Z",
+      "updated_at": "2026-04-05T02:07:00.000Z",
+      "product": 127,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 128,
+    "fields": {
+      "created_at": "2026-04-05T02:08:00.000Z",
+      "updated_at": "2026-04-05T02:08:00.000Z",
+      "product": 128,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 129,
+    "fields": {
+      "created_at": "2026-04-05T02:09:00.000Z",
+      "updated_at": "2026-04-05T02:09:00.000Z",
+      "product": 129,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 130,
+    "fields": {
+      "created_at": "2026-04-05T02:10:00.000Z",
+      "updated_at": "2026-04-05T02:10:00.000Z",
+      "product": 130,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 131,
+    "fields": {
+      "created_at": "2026-04-05T02:11:00.000Z",
+      "updated_at": "2026-04-05T02:11:00.000Z",
+      "product": 131,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 132,
+    "fields": {
+      "created_at": "2026-04-05T02:12:00.000Z",
+      "updated_at": "2026-04-05T02:12:00.000Z",
+      "product": 132,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 133,
+    "fields": {
+      "created_at": "2026-04-05T02:13:00.000Z",
+      "updated_at": "2026-04-05T02:13:00.000Z",
+      "product": 133,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 134,
+    "fields": {
+      "created_at": "2026-04-05T02:14:00.000Z",
+      "updated_at": "2026-04-05T02:14:00.000Z",
+      "product": 134,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 135,
+    "fields": {
+      "created_at": "2026-04-05T02:15:00.000Z",
+      "updated_at": "2026-04-05T02:15:00.000Z",
+      "product": 135,
+      "calories": "120.00",
+      "proteins": "12.00",
+      "fats": "5.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 136,
+    "fields": {
+      "created_at": "2026-04-05T02:16:00.000Z",
+      "updated_at": "2026-04-05T02:16:00.000Z",
+      "product": 136,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 137,
+    "fields": {
+      "created_at": "2026-04-05T02:17:00.000Z",
+      "updated_at": "2026-04-05T02:17:00.000Z",
+      "product": 137,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 138,
+    "fields": {
+      "created_at": "2026-04-05T02:18:00.000Z",
+      "updated_at": "2026-04-05T02:18:00.000Z",
+      "product": 138,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 139,
+    "fields": {
+      "created_at": "2026-04-05T02:19:00.000Z",
+      "updated_at": "2026-04-05T02:19:00.000Z",
+      "product": 139,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 140,
+    "fields": {
+      "created_at": "2026-04-05T02:20:00.000Z",
+      "updated_at": "2026-04-05T02:20:00.000Z",
+      "product": 140,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 141,
+    "fields": {
+      "created_at": "2026-04-05T02:21:00.000Z",
+      "updated_at": "2026-04-05T02:21:00.000Z",
+      "product": 141,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 142,
+    "fields": {
+      "created_at": "2026-04-05T02:22:00.000Z",
+      "updated_at": "2026-04-05T02:22:00.000Z",
+      "product": 142,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 143,
+    "fields": {
+      "created_at": "2026-04-05T02:23:00.000Z",
+      "updated_at": "2026-04-05T02:23:00.000Z",
+      "product": 143,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 144,
+    "fields": {
+      "created_at": "2026-04-05T02:24:00.000Z",
+      "updated_at": "2026-04-05T02:24:00.000Z",
+      "product": 144,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 145,
+    "fields": {
+      "created_at": "2026-04-05T02:25:00.000Z",
+      "updated_at": "2026-04-05T02:25:00.000Z",
+      "product": 145,
+      "calories": "340.00",
+      "proteins": "24.00",
+      "fats": "27.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 146,
+    "fields": {
+      "created_at": "2026-04-05T02:26:00.000Z",
+      "updated_at": "2026-04-05T02:26:00.000Z",
+      "product": 146,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 147,
+    "fields": {
+      "created_at": "2026-04-05T02:27:00.000Z",
+      "updated_at": "2026-04-05T02:27:00.000Z",
+      "product": 147,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 148,
+    "fields": {
+      "created_at": "2026-04-05T02:28:00.000Z",
+      "updated_at": "2026-04-05T02:28:00.000Z",
+      "product": 148,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 149,
+    "fields": {
+      "created_at": "2026-04-05T02:29:00.000Z",
+      "updated_at": "2026-04-05T02:29:00.000Z",
+      "product": 149,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 150,
+    "fields": {
+      "created_at": "2026-04-05T02:30:00.000Z",
+      "updated_at": "2026-04-05T02:30:00.000Z",
+      "product": 150,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 151,
+    "fields": {
+      "created_at": "2026-04-05T02:31:00.000Z",
+      "updated_at": "2026-04-05T02:31:00.000Z",
+      "product": 151,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 152,
+    "fields": {
+      "created_at": "2026-04-05T02:32:00.000Z",
+      "updated_at": "2026-04-05T02:32:00.000Z",
+      "product": 152,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 153,
+    "fields": {
+      "created_at": "2026-04-05T02:33:00.000Z",
+      "updated_at": "2026-04-05T02:33:00.000Z",
+      "product": 153,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 154,
+    "fields": {
+      "created_at": "2026-04-05T02:34:00.000Z",
+      "updated_at": "2026-04-05T02:34:00.000Z",
+      "product": 154,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 155,
+    "fields": {
+      "created_at": "2026-04-05T02:35:00.000Z",
+      "updated_at": "2026-04-05T02:35:00.000Z",
+      "product": 155,
+      "calories": "320.00",
+      "proteins": "9.00",
+      "fats": "30.00",
+      "carbs": "1.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 156,
+    "fields": {
+      "created_at": "2026-04-05T02:36:00.000Z",
+      "updated_at": "2026-04-05T02:36:00.000Z",
+      "product": 156,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 157,
+    "fields": {
+      "created_at": "2026-04-05T02:37:00.000Z",
+      "updated_at": "2026-04-05T02:37:00.000Z",
+      "product": 157,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 158,
+    "fields": {
+      "created_at": "2026-04-05T02:38:00.000Z",
+      "updated_at": "2026-04-05T02:38:00.000Z",
+      "product": 158,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 159,
+    "fields": {
+      "created_at": "2026-04-05T02:39:00.000Z",
+      "updated_at": "2026-04-05T02:39:00.000Z",
+      "product": 159,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 160,
+    "fields": {
+      "created_at": "2026-04-05T02:40:00.000Z",
+      "updated_at": "2026-04-05T02:40:00.000Z",
+      "product": 160,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 161,
+    "fields": {
+      "created_at": "2026-04-05T02:41:00.000Z",
+      "updated_at": "2026-04-05T02:41:00.000Z",
+      "product": 161,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 162,
+    "fields": {
+      "created_at": "2026-04-05T02:42:00.000Z",
+      "updated_at": "2026-04-05T02:42:00.000Z",
+      "product": 162,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 163,
+    "fields": {
+      "created_at": "2026-04-05T02:43:00.000Z",
+      "updated_at": "2026-04-05T02:43:00.000Z",
+      "product": 163,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 164,
+    "fields": {
+      "created_at": "2026-04-05T02:44:00.000Z",
+      "updated_at": "2026-04-05T02:44:00.000Z",
+      "product": 164,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 165,
+    "fields": {
+      "created_at": "2026-04-05T02:45:00.000Z",
+      "updated_at": "2026-04-05T02:45:00.000Z",
+      "product": 165,
+      "calories": "620.00",
+      "proteins": "1.00",
+      "fats": "67.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 166,
+    "fields": {
+      "created_at": "2026-04-05T02:46:00.000Z",
+      "updated_at": "2026-04-05T02:46:00.000Z",
+      "product": 166,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 167,
+    "fields": {
+      "created_at": "2026-04-05T02:47:00.000Z",
+      "updated_at": "2026-04-05T02:47:00.000Z",
+      "product": 167,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 168,
+    "fields": {
+      "created_at": "2026-04-05T02:48:00.000Z",
+      "updated_at": "2026-04-05T02:48:00.000Z",
+      "product": 168,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 169,
+    "fields": {
+      "created_at": "2026-04-05T02:49:00.000Z",
+      "updated_at": "2026-04-05T02:49:00.000Z",
+      "product": 169,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 170,
+    "fields": {
+      "created_at": "2026-04-05T02:50:00.000Z",
+      "updated_at": "2026-04-05T02:50:00.000Z",
+      "product": 170,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 171,
+    "fields": {
+      "created_at": "2026-04-05T02:51:00.000Z",
+      "updated_at": "2026-04-05T02:51:00.000Z",
+      "product": 171,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 172,
+    "fields": {
+      "created_at": "2026-04-05T02:52:00.000Z",
+      "updated_at": "2026-04-05T02:52:00.000Z",
+      "product": 172,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 173,
+    "fields": {
+      "created_at": "2026-04-05T02:53:00.000Z",
+      "updated_at": "2026-04-05T02:53:00.000Z",
+      "product": 173,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 174,
+    "fields": {
+      "created_at": "2026-04-05T02:54:00.000Z",
+      "updated_at": "2026-04-05T02:54:00.000Z",
+      "product": 174,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 175,
+    "fields": {
+      "created_at": "2026-04-05T02:55:00.000Z",
+      "updated_at": "2026-04-05T02:55:00.000Z",
+      "product": 175,
+      "calories": "110.00",
+      "proteins": "4.00",
+      "fats": "4.00",
+      "carbs": "15.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 176,
+    "fields": {
+      "created_at": "2026-04-05T02:56:00.000Z",
+      "updated_at": "2026-04-05T02:56:00.000Z",
+      "product": 176,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 177,
+    "fields": {
+      "created_at": "2026-04-05T02:57:00.000Z",
+      "updated_at": "2026-04-05T02:57:00.000Z",
+      "product": 177,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 178,
+    "fields": {
+      "created_at": "2026-04-05T02:58:00.000Z",
+      "updated_at": "2026-04-05T02:58:00.000Z",
+      "product": 178,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 179,
+    "fields": {
+      "created_at": "2026-04-05T02:59:00.000Z",
+      "updated_at": "2026-04-05T02:59:00.000Z",
+      "product": 179,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 180,
+    "fields": {
+      "created_at": "2026-04-05T03:00:00.000Z",
+      "updated_at": "2026-04-05T03:00:00.000Z",
+      "product": 180,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 181,
+    "fields": {
+      "created_at": "2026-04-05T03:01:00.000Z",
+      "updated_at": "2026-04-05T03:01:00.000Z",
+      "product": 181,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 182,
+    "fields": {
+      "created_at": "2026-04-05T03:02:00.000Z",
+      "updated_at": "2026-04-05T03:02:00.000Z",
+      "product": 182,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 183,
+    "fields": {
+      "created_at": "2026-04-05T03:03:00.000Z",
+      "updated_at": "2026-04-05T03:03:00.000Z",
+      "product": 183,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 184,
+    "fields": {
+      "created_at": "2026-04-05T03:04:00.000Z",
+      "updated_at": "2026-04-05T03:04:00.000Z",
+      "product": 184,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 185,
+    "fields": {
+      "created_at": "2026-04-05T03:05:00.000Z",
+      "updated_at": "2026-04-05T03:05:00.000Z",
+      "product": 185,
+      "calories": "170.00",
+      "proteins": "20.00",
+      "fats": "10.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 186,
+    "fields": {
+      "created_at": "2026-04-05T03:06:00.000Z",
+      "updated_at": "2026-04-05T03:06:00.000Z",
+      "product": 186,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 187,
+    "fields": {
+      "created_at": "2026-04-05T03:07:00.000Z",
+      "updated_at": "2026-04-05T03:07:00.000Z",
+      "product": 187,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 188,
+    "fields": {
+      "created_at": "2026-04-05T03:08:00.000Z",
+      "updated_at": "2026-04-05T03:08:00.000Z",
+      "product": 188,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 189,
+    "fields": {
+      "created_at": "2026-04-05T03:09:00.000Z",
+      "updated_at": "2026-04-05T03:09:00.000Z",
+      "product": 189,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 190,
+    "fields": {
+      "created_at": "2026-04-05T03:10:00.000Z",
+      "updated_at": "2026-04-05T03:10:00.000Z",
+      "product": 190,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 191,
+    "fields": {
+      "created_at": "2026-04-05T03:11:00.000Z",
+      "updated_at": "2026-04-05T03:11:00.000Z",
+      "product": 191,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 192,
+    "fields": {
+      "created_at": "2026-04-05T03:12:00.000Z",
+      "updated_at": "2026-04-05T03:12:00.000Z",
+      "product": 192,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 193,
+    "fields": {
+      "created_at": "2026-04-05T03:13:00.000Z",
+      "updated_at": "2026-04-05T03:13:00.000Z",
+      "product": 193,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 194,
+    "fields": {
+      "created_at": "2026-04-05T03:14:00.000Z",
+      "updated_at": "2026-04-05T03:14:00.000Z",
+      "product": 194,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 195,
+    "fields": {
+      "created_at": "2026-04-05T03:15:00.000Z",
+      "updated_at": "2026-04-05T03:15:00.000Z",
+      "product": 195,
+      "calories": "105.00",
+      "proteins": "18.00",
+      "fats": "2.00",
+      "carbs": "3.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 196,
+    "fields": {
+      "created_at": "2026-04-05T03:16:00.000Z",
+      "updated_at": "2026-04-05T03:16:00.000Z",
+      "product": 196,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 197,
+    "fields": {
+      "created_at": "2026-04-05T03:17:00.000Z",
+      "updated_at": "2026-04-05T03:17:00.000Z",
+      "product": 197,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 198,
+    "fields": {
+      "created_at": "2026-04-05T03:18:00.000Z",
+      "updated_at": "2026-04-05T03:18:00.000Z",
+      "product": 198,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 199,
+    "fields": {
+      "created_at": "2026-04-05T03:19:00.000Z",
+      "updated_at": "2026-04-05T03:19:00.000Z",
+      "product": 199,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 200,
+    "fields": {
+      "created_at": "2026-04-05T03:20:00.000Z",
+      "updated_at": "2026-04-05T03:20:00.000Z",
+      "product": 200,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 201,
+    "fields": {
+      "created_at": "2026-04-05T03:21:00.000Z",
+      "updated_at": "2026-04-05T03:21:00.000Z",
+      "product": 201,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 202,
+    "fields": {
+      "created_at": "2026-04-05T03:22:00.000Z",
+      "updated_at": "2026-04-05T03:22:00.000Z",
+      "product": 202,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 203,
+    "fields": {
+      "created_at": "2026-04-05T03:23:00.000Z",
+      "updated_at": "2026-04-05T03:23:00.000Z",
+      "product": 203,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 204,
+    "fields": {
+      "created_at": "2026-04-05T03:24:00.000Z",
+      "updated_at": "2026-04-05T03:24:00.000Z",
+      "product": 204,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 205,
+    "fields": {
+      "created_at": "2026-04-05T03:25:00.000Z",
+      "updated_at": "2026-04-05T03:25:00.000Z",
+      "product": 205,
+      "calories": "210.00",
+      "proteins": "17.00",
+      "fats": "15.00",
+      "carbs": "4.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 206,
+    "fields": {
+      "created_at": "2026-04-05T03:26:00.000Z",
+      "updated_at": "2026-04-05T03:26:00.000Z",
+      "product": 206,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 207,
+    "fields": {
+      "created_at": "2026-04-05T03:27:00.000Z",
+      "updated_at": "2026-04-05T03:27:00.000Z",
+      "product": 207,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 208,
+    "fields": {
+      "created_at": "2026-04-05T03:28:00.000Z",
+      "updated_at": "2026-04-05T03:28:00.000Z",
+      "product": 208,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 209,
+    "fields": {
+      "created_at": "2026-04-05T03:29:00.000Z",
+      "updated_at": "2026-04-05T03:29:00.000Z",
+      "product": 209,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 210,
+    "fields": {
+      "created_at": "2026-04-05T03:30:00.000Z",
+      "updated_at": "2026-04-05T03:30:00.000Z",
+      "product": 210,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 211,
+    "fields": {
+      "created_at": "2026-04-05T03:31:00.000Z",
+      "updated_at": "2026-04-05T03:31:00.000Z",
+      "product": 211,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 212,
+    "fields": {
+      "created_at": "2026-04-05T03:32:00.000Z",
+      "updated_at": "2026-04-05T03:32:00.000Z",
+      "product": 212,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 213,
+    "fields": {
+      "created_at": "2026-04-05T03:33:00.000Z",
+      "updated_at": "2026-04-05T03:33:00.000Z",
+      "product": 213,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 214,
+    "fields": {
+      "created_at": "2026-04-05T03:34:00.000Z",
+      "updated_at": "2026-04-05T03:34:00.000Z",
+      "product": 214,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 215,
+    "fields": {
+      "created_at": "2026-04-05T03:35:00.000Z",
+      "updated_at": "2026-04-05T03:35:00.000Z",
+      "product": 215,
+      "calories": "520.00",
+      "proteins": "7.00",
+      "fats": "30.00",
+      "carbs": "59.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 216,
+    "fields": {
+      "created_at": "2026-04-05T03:36:00.000Z",
+      "updated_at": "2026-04-05T03:36:00.000Z",
+      "product": 216,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 217,
+    "fields": {
+      "created_at": "2026-04-05T03:37:00.000Z",
+      "updated_at": "2026-04-05T03:37:00.000Z",
+      "product": 217,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 218,
+    "fields": {
+      "created_at": "2026-04-05T03:38:00.000Z",
+      "updated_at": "2026-04-05T03:38:00.000Z",
+      "product": 218,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 219,
+    "fields": {
+      "created_at": "2026-04-05T03:39:00.000Z",
+      "updated_at": "2026-04-05T03:39:00.000Z",
+      "product": 219,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 220,
+    "fields": {
+      "created_at": "2026-04-05T03:40:00.000Z",
+      "updated_at": "2026-04-05T03:40:00.000Z",
+      "product": 220,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 221,
+    "fields": {
+      "created_at": "2026-04-05T03:41:00.000Z",
+      "updated_at": "2026-04-05T03:41:00.000Z",
+      "product": 221,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 222,
+    "fields": {
+      "created_at": "2026-04-05T03:42:00.000Z",
+      "updated_at": "2026-04-05T03:42:00.000Z",
+      "product": 222,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 223,
+    "fields": {
+      "created_at": "2026-04-05T03:43:00.000Z",
+      "updated_at": "2026-04-05T03:43:00.000Z",
+      "product": 223,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 224,
+    "fields": {
+      "created_at": "2026-04-05T03:44:00.000Z",
+      "updated_at": "2026-04-05T03:44:00.000Z",
+      "product": 224,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 225,
+    "fields": {
+      "created_at": "2026-04-05T03:45:00.000Z",
+      "updated_at": "2026-04-05T03:45:00.000Z",
+      "product": 225,
+      "calories": "450.00",
+      "proteins": "7.00",
+      "fats": "18.00",
+      "carbs": "68.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 226,
+    "fields": {
+      "created_at": "2026-04-05T03:46:00.000Z",
+      "updated_at": "2026-04-05T03:46:00.000Z",
+      "product": 226,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 227,
+    "fields": {
+      "created_at": "2026-04-05T03:47:00.000Z",
+      "updated_at": "2026-04-05T03:47:00.000Z",
+      "product": 227,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 228,
+    "fields": {
+      "created_at": "2026-04-05T03:48:00.000Z",
+      "updated_at": "2026-04-05T03:48:00.000Z",
+      "product": 228,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 229,
+    "fields": {
+      "created_at": "2026-04-05T03:49:00.000Z",
+      "updated_at": "2026-04-05T03:49:00.000Z",
+      "product": 229,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 230,
+    "fields": {
+      "created_at": "2026-04-05T03:50:00.000Z",
+      "updated_at": "2026-04-05T03:50:00.000Z",
+      "product": 230,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 231,
+    "fields": {
+      "created_at": "2026-04-05T03:51:00.000Z",
+      "updated_at": "2026-04-05T03:51:00.000Z",
+      "product": 231,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 232,
+    "fields": {
+      "created_at": "2026-04-05T03:52:00.000Z",
+      "updated_at": "2026-04-05T03:52:00.000Z",
+      "product": 232,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 233,
+    "fields": {
+      "created_at": "2026-04-05T03:53:00.000Z",
+      "updated_at": "2026-04-05T03:53:00.000Z",
+      "product": 233,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 234,
+    "fields": {
+      "created_at": "2026-04-05T03:54:00.000Z",
+      "updated_at": "2026-04-05T03:54:00.000Z",
+      "product": 234,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 235,
+    "fields": {
+      "created_at": "2026-04-05T03:55:00.000Z",
+      "updated_at": "2026-04-05T03:55:00.000Z",
+      "product": 235,
+      "calories": "390.00",
+      "proteins": "4.00",
+      "fats": "10.00",
+      "carbs": "72.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 236,
+    "fields": {
+      "created_at": "2026-04-05T03:56:00.000Z",
+      "updated_at": "2026-04-05T03:56:00.000Z",
+      "product": 236,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 237,
+    "fields": {
+      "created_at": "2026-04-05T03:57:00.000Z",
+      "updated_at": "2026-04-05T03:57:00.000Z",
+      "product": 237,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 238,
+    "fields": {
+      "created_at": "2026-04-05T03:58:00.000Z",
+      "updated_at": "2026-04-05T03:58:00.000Z",
+      "product": 238,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 239,
+    "fields": {
+      "created_at": "2026-04-05T03:59:00.000Z",
+      "updated_at": "2026-04-05T03:59:00.000Z",
+      "product": 239,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 240,
+    "fields": {
+      "created_at": "2026-04-05T04:00:00.000Z",
+      "updated_at": "2026-04-05T04:00:00.000Z",
+      "product": 240,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 241,
+    "fields": {
+      "created_at": "2026-04-05T04:01:00.000Z",
+      "updated_at": "2026-04-05T04:01:00.000Z",
+      "product": 241,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 242,
+    "fields": {
+      "created_at": "2026-04-05T04:02:00.000Z",
+      "updated_at": "2026-04-05T04:02:00.000Z",
+      "product": 242,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 243,
+    "fields": {
+      "created_at": "2026-04-05T04:03:00.000Z",
+      "updated_at": "2026-04-05T04:03:00.000Z",
+      "product": 243,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 244,
+    "fields": {
+      "created_at": "2026-04-05T04:04:00.000Z",
+      "updated_at": "2026-04-05T04:04:00.000Z",
+      "product": 244,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 245,
+    "fields": {
+      "created_at": "2026-04-05T04:05:00.000Z",
+      "updated_at": "2026-04-05T04:05:00.000Z",
+      "product": 245,
+      "calories": "340.00",
+      "proteins": "5.00",
+      "fats": "20.00",
+      "carbs": "38.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 246,
+    "fields": {
+      "created_at": "2026-04-05T04:06:00.000Z",
+      "updated_at": "2026-04-05T04:06:00.000Z",
+      "product": 246,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 247,
+    "fields": {
+      "created_at": "2026-04-05T04:07:00.000Z",
+      "updated_at": "2026-04-05T04:07:00.000Z",
+      "product": 247,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 248,
+    "fields": {
+      "created_at": "2026-04-05T04:08:00.000Z",
+      "updated_at": "2026-04-05T04:08:00.000Z",
+      "product": 248,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 249,
+    "fields": {
+      "created_at": "2026-04-05T04:09:00.000Z",
+      "updated_at": "2026-04-05T04:09:00.000Z",
+      "product": 249,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 250,
+    "fields": {
+      "created_at": "2026-04-05T04:10:00.000Z",
+      "updated_at": "2026-04-05T04:10:00.000Z",
+      "product": 250,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 251,
+    "fields": {
+      "created_at": "2026-04-05T04:11:00.000Z",
+      "updated_at": "2026-04-05T04:11:00.000Z",
+      "product": 251,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 252,
+    "fields": {
+      "created_at": "2026-04-05T04:12:00.000Z",
+      "updated_at": "2026-04-05T04:12:00.000Z",
+      "product": 252,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 253,
+    "fields": {
+      "created_at": "2026-04-05T04:13:00.000Z",
+      "updated_at": "2026-04-05T04:13:00.000Z",
+      "product": 253,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 254,
+    "fields": {
+      "created_at": "2026-04-05T04:14:00.000Z",
+      "updated_at": "2026-04-05T04:14:00.000Z",
+      "product": 254,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 255,
+    "fields": {
+      "created_at": "2026-04-05T04:15:00.000Z",
+      "updated_at": "2026-04-05T04:15:00.000Z",
+      "product": 255,
+      "calories": "220.00",
+      "proteins": "4.00",
+      "fats": "12.00",
+      "carbs": "26.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 256,
+    "fields": {
+      "created_at": "2026-04-05T04:16:00.000Z",
+      "updated_at": "2026-04-05T04:16:00.000Z",
+      "product": 256,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 257,
+    "fields": {
+      "created_at": "2026-04-05T04:17:00.000Z",
+      "updated_at": "2026-04-05T04:17:00.000Z",
+      "product": 257,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 258,
+    "fields": {
+      "created_at": "2026-04-05T04:18:00.000Z",
+      "updated_at": "2026-04-05T04:18:00.000Z",
+      "product": 258,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 259,
+    "fields": {
+      "created_at": "2026-04-05T04:19:00.000Z",
+      "updated_at": "2026-04-05T04:19:00.000Z",
+      "product": 259,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 260,
+    "fields": {
+      "created_at": "2026-04-05T04:20:00.000Z",
+      "updated_at": "2026-04-05T04:20:00.000Z",
+      "product": 260,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 261,
+    "fields": {
+      "created_at": "2026-04-05T04:21:00.000Z",
+      "updated_at": "2026-04-05T04:21:00.000Z",
+      "product": 261,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 262,
+    "fields": {
+      "created_at": "2026-04-05T04:22:00.000Z",
+      "updated_at": "2026-04-05T04:22:00.000Z",
+      "product": 262,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 263,
+    "fields": {
+      "created_at": "2026-04-05T04:23:00.000Z",
+      "updated_at": "2026-04-05T04:23:00.000Z",
+      "product": 263,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 264,
+    "fields": {
+      "created_at": "2026-04-05T04:24:00.000Z",
+      "updated_at": "2026-04-05T04:24:00.000Z",
+      "product": 264,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 265,
+    "fields": {
+      "created_at": "2026-04-05T04:25:00.000Z",
+      "updated_at": "2026-04-05T04:25:00.000Z",
+      "product": 265,
+      "calories": "360.00",
+      "proteins": "0.00",
+      "fats": "1.00",
+      "carbs": "88.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 266,
+    "fields": {
+      "created_at": "2026-04-05T04:26:00.000Z",
+      "updated_at": "2026-04-05T04:26:00.000Z",
+      "product": 266,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 267,
+    "fields": {
+      "created_at": "2026-04-05T04:27:00.000Z",
+      "updated_at": "2026-04-05T04:27:00.000Z",
+      "product": 267,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 268,
+    "fields": {
+      "created_at": "2026-04-05T04:28:00.000Z",
+      "updated_at": "2026-04-05T04:28:00.000Z",
+      "product": 268,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 269,
+    "fields": {
+      "created_at": "2026-04-05T04:29:00.000Z",
+      "updated_at": "2026-04-05T04:29:00.000Z",
+      "product": 269,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 270,
+    "fields": {
+      "created_at": "2026-04-05T04:30:00.000Z",
+      "updated_at": "2026-04-05T04:30:00.000Z",
+      "product": 270,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 271,
+    "fields": {
+      "created_at": "2026-04-05T04:31:00.000Z",
+      "updated_at": "2026-04-05T04:31:00.000Z",
+      "product": 271,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 272,
+    "fields": {
+      "created_at": "2026-04-05T04:32:00.000Z",
+      "updated_at": "2026-04-05T04:32:00.000Z",
+      "product": 272,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 273,
+    "fields": {
+      "created_at": "2026-04-05T04:33:00.000Z",
+      "updated_at": "2026-04-05T04:33:00.000Z",
+      "product": 273,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 274,
+    "fields": {
+      "created_at": "2026-04-05T04:34:00.000Z",
+      "updated_at": "2026-04-05T04:34:00.000Z",
+      "product": 274,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 275,
+    "fields": {
+      "created_at": "2026-04-05T04:35:00.000Z",
+      "updated_at": "2026-04-05T04:35:00.000Z",
+      "product": 275,
+      "calories": "360.00",
+      "proteins": "5.00",
+      "fats": "14.00",
+      "carbs": "55.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 276,
+    "fields": {
+      "created_at": "2026-04-05T04:36:00.000Z",
+      "updated_at": "2026-04-05T04:36:00.000Z",
+      "product": 276,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 277,
+    "fields": {
+      "created_at": "2026-04-05T04:37:00.000Z",
+      "updated_at": "2026-04-05T04:37:00.000Z",
+      "product": 277,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 278,
+    "fields": {
+      "created_at": "2026-04-05T04:38:00.000Z",
+      "updated_at": "2026-04-05T04:38:00.000Z",
+      "product": 278,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 279,
+    "fields": {
+      "created_at": "2026-04-05T04:39:00.000Z",
+      "updated_at": "2026-04-05T04:39:00.000Z",
+      "product": 279,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 280,
+    "fields": {
+      "created_at": "2026-04-05T04:40:00.000Z",
+      "updated_at": "2026-04-05T04:40:00.000Z",
+      "product": 280,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 281,
+    "fields": {
+      "created_at": "2026-04-05T04:41:00.000Z",
+      "updated_at": "2026-04-05T04:41:00.000Z",
+      "product": 281,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 282,
+    "fields": {
+      "created_at": "2026-04-05T04:42:00.000Z",
+      "updated_at": "2026-04-05T04:42:00.000Z",
+      "product": 282,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 283,
+    "fields": {
+      "created_at": "2026-04-05T04:43:00.000Z",
+      "updated_at": "2026-04-05T04:43:00.000Z",
+      "product": 283,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 284,
+    "fields": {
+      "created_at": "2026-04-05T04:44:00.000Z",
+      "updated_at": "2026-04-05T04:44:00.000Z",
+      "product": 284,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 285,
+    "fields": {
+      "created_at": "2026-04-05T04:45:00.000Z",
+      "updated_at": "2026-04-05T04:45:00.000Z",
+      "product": 285,
+      "calories": "0.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "0.00"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 286,
+    "fields": {
+      "created_at": "2026-04-05T04:46:00.000Z",
+      "updated_at": "2026-04-05T04:46:00.000Z",
+      "product": 286,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 287,
+    "fields": {
+      "created_at": "2026-04-05T04:47:00.000Z",
+      "updated_at": "2026-04-05T04:47:00.000Z",
+      "product": 287,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 288,
+    "fields": {
+      "created_at": "2026-04-05T04:48:00.000Z",
+      "updated_at": "2026-04-05T04:48:00.000Z",
+      "product": 288,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 289,
+    "fields": {
+      "created_at": "2026-04-05T04:49:00.000Z",
+      "updated_at": "2026-04-05T04:49:00.000Z",
+      "product": 289,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 290,
+    "fields": {
+      "created_at": "2026-04-05T04:50:00.000Z",
+      "updated_at": "2026-04-05T04:50:00.000Z",
+      "product": 290,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 291,
+    "fields": {
+      "created_at": "2026-04-05T04:51:00.000Z",
+      "updated_at": "2026-04-05T04:51:00.000Z",
+      "product": 291,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 292,
+    "fields": {
+      "created_at": "2026-04-05T04:52:00.000Z",
+      "updated_at": "2026-04-05T04:52:00.000Z",
+      "product": 292,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 293,
+    "fields": {
+      "created_at": "2026-04-05T04:53:00.000Z",
+      "updated_at": "2026-04-05T04:53:00.000Z",
+      "product": 293,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 294,
+    "fields": {
+      "created_at": "2026-04-05T04:54:00.000Z",
+      "updated_at": "2026-04-05T04:54:00.000Z",
+      "product": 294,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 295,
+    "fields": {
+      "created_at": "2026-04-05T04:55:00.000Z",
+      "updated_at": "2026-04-05T04:55:00.000Z",
+      "product": 295,
+      "calories": "42.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "10.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 296,
+    "fields": {
+      "created_at": "2026-04-05T04:56:00.000Z",
+      "updated_at": "2026-04-05T04:56:00.000Z",
+      "product": 296,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 297,
+    "fields": {
+      "created_at": "2026-04-05T04:57:00.000Z",
+      "updated_at": "2026-04-05T04:57:00.000Z",
+      "product": 297,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 298,
+    "fields": {
+      "created_at": "2026-04-05T04:58:00.000Z",
+      "updated_at": "2026-04-05T04:58:00.000Z",
+      "product": 298,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 299,
+    "fields": {
+      "created_at": "2026-04-05T04:59:00.000Z",
+      "updated_at": "2026-04-05T04:59:00.000Z",
+      "product": 299,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 300,
+    "fields": {
+      "created_at": "2026-04-05T05:00:00.000Z",
+      "updated_at": "2026-04-05T05:00:00.000Z",
+      "product": 300,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 301,
+    "fields": {
+      "created_at": "2026-04-05T05:01:00.000Z",
+      "updated_at": "2026-04-05T05:01:00.000Z",
+      "product": 301,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 302,
+    "fields": {
+      "created_at": "2026-04-05T05:02:00.000Z",
+      "updated_at": "2026-04-05T05:02:00.000Z",
+      "product": 302,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 303,
+    "fields": {
+      "created_at": "2026-04-05T05:03:00.000Z",
+      "updated_at": "2026-04-05T05:03:00.000Z",
+      "product": 303,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 304,
+    "fields": {
+      "created_at": "2026-04-05T05:04:00.000Z",
+      "updated_at": "2026-04-05T05:04:00.000Z",
+      "product": 304,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 305,
+    "fields": {
+      "created_at": "2026-04-05T05:05:00.000Z",
+      "updated_at": "2026-04-05T05:05:00.000Z",
+      "product": 305,
+      "calories": "48.00",
+      "proteins": "0.50",
+      "fats": "0.10",
+      "carbs": "11.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 306,
+    "fields": {
+      "created_at": "2026-04-05T05:06:00.000Z",
+      "updated_at": "2026-04-05T05:06:00.000Z",
+      "product": 306,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 307,
+    "fields": {
+      "created_at": "2026-04-05T05:07:00.000Z",
+      "updated_at": "2026-04-05T05:07:00.000Z",
+      "product": 307,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 308,
+    "fields": {
+      "created_at": "2026-04-05T05:08:00.000Z",
+      "updated_at": "2026-04-05T05:08:00.000Z",
+      "product": 308,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 309,
+    "fields": {
+      "created_at": "2026-04-05T05:09:00.000Z",
+      "updated_at": "2026-04-05T05:09:00.000Z",
+      "product": 309,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 310,
+    "fields": {
+      "created_at": "2026-04-05T05:10:00.000Z",
+      "updated_at": "2026-04-05T05:10:00.000Z",
+      "product": 310,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 311,
+    "fields": {
+      "created_at": "2026-04-05T05:11:00.000Z",
+      "updated_at": "2026-04-05T05:11:00.000Z",
+      "product": 311,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 312,
+    "fields": {
+      "created_at": "2026-04-05T05:12:00.000Z",
+      "updated_at": "2026-04-05T05:12:00.000Z",
+      "product": 312,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 313,
+    "fields": {
+      "created_at": "2026-04-05T05:13:00.000Z",
+      "updated_at": "2026-04-05T05:13:00.000Z",
+      "product": 313,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 314,
+    "fields": {
+      "created_at": "2026-04-05T05:14:00.000Z",
+      "updated_at": "2026-04-05T05:14:00.000Z",
+      "product": 314,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 315,
+    "fields": {
+      "created_at": "2026-04-05T05:15:00.000Z",
+      "updated_at": "2026-04-05T05:15:00.000Z",
+      "product": 315,
+      "calories": "35.00",
+      "proteins": "0.00",
+      "fats": "0.00",
+      "carbs": "8.50"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 316,
+    "fields": {
+      "created_at": "2026-04-05T05:16:00.000Z",
+      "updated_at": "2026-04-05T05:16:00.000Z",
+      "product": 316,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 317,
+    "fields": {
+      "created_at": "2026-04-05T05:17:00.000Z",
+      "updated_at": "2026-04-05T05:17:00.000Z",
+      "product": 317,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 318,
+    "fields": {
+      "created_at": "2026-04-05T05:18:00.000Z",
+      "updated_at": "2026-04-05T05:18:00.000Z",
+      "product": 318,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 319,
+    "fields": {
+      "created_at": "2026-04-05T05:19:00.000Z",
+      "updated_at": "2026-04-05T05:19:00.000Z",
+      "product": 319,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 320,
+    "fields": {
+      "created_at": "2026-04-05T05:20:00.000Z",
+      "updated_at": "2026-04-05T05:20:00.000Z",
+      "product": 320,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 321,
+    "fields": {
+      "created_at": "2026-04-05T05:21:00.000Z",
+      "updated_at": "2026-04-05T05:21:00.000Z",
+      "product": 321,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 322,
+    "fields": {
+      "created_at": "2026-04-05T05:22:00.000Z",
+      "updated_at": "2026-04-05T05:22:00.000Z",
+      "product": 322,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 323,
+    "fields": {
+      "created_at": "2026-04-05T05:23:00.000Z",
+      "updated_at": "2026-04-05T05:23:00.000Z",
+      "product": 323,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 324,
+    "fields": {
+      "created_at": "2026-04-05T05:24:00.000Z",
+      "updated_at": "2026-04-05T05:24:00.000Z",
+      "product": 324,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
+  },
+  {
+    "model": "catalog.productnutrition",
+    "pk": 325,
+    "fields": {
+      "created_at": "2026-04-05T05:25:00.000Z",
+      "updated_at": "2026-04-05T05:25:00.000Z",
+      "product": 325,
+      "calories": "43.00",
+      "proteins": "0.20",
+      "fats": "0.00",
+      "carbs": "10.40"
+    }
   }
-}
 ]

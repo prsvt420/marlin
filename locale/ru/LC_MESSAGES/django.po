@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Marlin 1.0\n"
 "Report-Msgid-Bugs-To: i18n@marlinio.ru\n"
-"POT-Creation-Date: 2026-06-10 03:50+0800\n"
+"POT-Creation-Date: 2026-06-17 03:52+0800\n"
 "PO-Revision-Date: 2025-11-09 03:03+0800\n"
 "Last-Translator: Tokarev Denis Alexandrovich <wf.denis.tokarev@gmail.com>\n"
 "Language-Team: Marlin <i18n@marlinio.ru>\n"
@@ -117,7 +117,7 @@ msgid "Social account"
 msgstr "Социальный аккаунт"
 
 #: .\apps\accounts\models\proxy_user_social_auth.py:9
-#: .\apps\accounts\templates\accounts\profile.html:53 .\config\settings.py:389
+#: .\apps\accounts\templates\accounts\profile.html:53 .\config\settings.py:430
 msgid "Social accounts"
 msgstr "Социальные аккаунты"
 
@@ -349,7 +349,7 @@ msgstr "Привязать аккаунт Google"
 #: .\apps\accounts\templates\accounts\profile.html:103
 #: .\apps\core\admins\admin_dashboard.py:294
 #: .\apps\core\admins\admin_dashboard.py:305 .\apps\orders\apps.py:9
-#: .\config\settings.py:407
+#: .\config\settings.py:448
 msgid "Orders"
 msgstr "Заказы"
 
@@ -398,7 +398,7 @@ msgstr "Вернуться в каталог"
 #: .\apps\accounts\templates\accounts\signin.html:42
 #: .\apps\accounts\templates\emails\password_reset_complete.html:17
 #: .\apps\accounts\templates\emails\password_reset_complete.txt:11
-#: .\templates\includes\_header.html:51 .\templates\includes\_header.html:119
+#: .\templates\includes\_header.html:51 .\templates\includes\_header.html:133
 msgid "Sign in"
 msgstr "Войти"
 
@@ -679,7 +679,7 @@ msgstr "Общее количество"
 msgid "Search by cart or product name"
 msgstr "Поиск по электронной почте или названию продукта"
 
-#: .\apps\carts\apps.py:9 .\config\settings.py:419
+#: .\apps\carts\apps.py:9 .\config\settings.py:460
 msgid "Carts"
 msgstr "Корзины"
 
@@ -766,7 +766,7 @@ msgstr "У пользователя может быть только одна а
 #: .\apps\carts\templates\carts\cart_detail.html:10
 #: .\apps\carts\views\cart_detail_view.py:22
 #: .\apps\orders\views\checkout_view.py:32 .\templates\includes\_footer.html:23
-#: .\templates\includes\_header.html:38 .\templates\includes\_header.html:106
+#: .\templates\includes\_header.html:38 .\templates\includes\_header.html:120
 msgid "Cart"
 msgstr "Корзина"
 
@@ -833,7 +833,7 @@ msgstr "Итого"
 #: .\apps\carts\templates\carts\includes\_cart_summary_oob.html:19
 #: .\apps\orders\templates\orders\checkout.html:126
 #: .\apps\orders\templates\orders\order_detail.html:112
-#: .\config\settings.py:350
+#: .\config\settings.py:391
 msgid "Products"
 msgstr "Продукты"
 
@@ -1030,9 +1030,9 @@ msgstr "Поиск по названию продукта"
 #: .\apps\catalog\views\category_list_view.py:17
 #: .\apps\catalog\views\product_detail_view.py:27
 #: .\apps\catalog\views\product_list_view.py:54
-#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:346
+#: .\apps\catalog\views\product_search_list_view.py:40 .\config\settings.py:387
 #: .\templates\includes\_footer.html:18 .\templates\includes\_header.html:26
-#: .\templates\includes\_header.html:94
+#: .\templates\includes\_header.html:108
 msgid "Catalog"
 msgstr "Каталог"
 
@@ -1357,9 +1357,9 @@ msgstr "Поиск по электронной почте или названи�
 #: .\apps\favorites\apps.py:9
 #: .\apps\favorites\templates\favorites\favorite_list.html:4
 #: .\apps\favorites\templates\favorites\favorite_list.html:11
-#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:364
+#: .\apps\favorites\views\favorite_list_view.py:22 .\config\settings.py:405
 #: .\templates\includes\_footer.html:28 .\templates\includes\_header.html:44
-#: .\templates\includes\_header.html:112
+#: .\templates\includes\_header.html:126
 msgid "Favorites"
 msgstr "Избранное"
 
@@ -1923,7 +1923,7 @@ msgstr ""
 msgid "Promotions"
 msgstr "Акции"
 
-#: .\apps\reviews\apps.py:9 .\config\settings.py:371
+#: .\apps\reviews\apps.py:9 .\config\settings.py:412
 msgid "Reviews"
 msgstr "Отзывы"
 
@@ -1983,35 +1983,35 @@ msgstr "Оценить продукт могут только покупател
 msgid "An error occurred while saving the rating. Please try again."
 msgstr "Произошла ошибка при сохранении оценки. Попробуйте еще раз."
 
-#: .\config\settings.py:324
+#: .\config\settings.py:365
 msgid "Infrastructure"
 msgstr "Инфраструктура"
 
-#: .\config\settings.py:357
+#: .\config\settings.py:398
 msgid "Categories"
 msgstr "Категории"
 
-#: .\config\settings.py:380
+#: .\config\settings.py:421
 msgid "Users & Access"
 msgstr "Пользователи и доступ"
 
-#: .\config\settings.py:384
+#: .\config\settings.py:425
 msgid "Users"
 msgstr "Пользователи"
 
-#: .\config\settings.py:396
+#: .\config\settings.py:437
 msgid "Groups"
 msgstr "Группы"
 
-#: .\config\settings.py:403
+#: .\config\settings.py:444
 msgid "Orders & Carts"
 msgstr "Заказы и корзины"
 
-#: .\config\settings.py:412
+#: .\config\settings.py:453
 msgid "Order items"
 msgstr "Позиции заказов"
 
-#: .\config\settings.py:424
+#: .\config\settings.py:465
 msgid "Cart Items"
 msgstr "Элементы корзины"
 
@@ -2118,14 +2118,18 @@ msgstr "Скачайте приложение"
 msgid "Point your camera and download the app"
 msgstr "Наведите камеру и скачайте приложение"
 
-#: .\templates\includes\_header.html:14
+#: .\templates\includes\_header.html:14 .\templates\includes\_header.html:87
 msgid "Find a product, e.g. — bananas"
 msgstr "Найти продукт, например — бананы"
 
-#: .\templates\includes\_header.html:66 .\templates\includes\_header.html:134
+#: .\templates\includes\_header.html:66 .\templates\includes\_header.html:148
 msgid "Sign out"
 msgstr "Выйти"
 
-#: .\templates\includes\_header.html:82
+#: .\templates\includes\_header.html:75 .\templates\includes\_header.html:88
+msgid "Search"
+msgstr ""
+
+#: .\templates\includes\_header.html:78 .\templates\includes\_header.html:96
 msgid "Menu"
 msgstr "Меню"

@@ -1,8 +1,12 @@
-const searchInput = document.getElementById("search-input");
-const searchForm = searchInput.closest("form");
+document.querySelectorAll("[data-search-form]").forEach((searchForm) => {
+  const searchInput = searchForm.querySelector("[data-search-input]");
 
-searchForm.addEventListener("submit", (e) => {
-  if (!searchInput.value.trim().length) {
-    e.preventDefault();
-  }
+  if (!searchInput) return;
+
+  searchForm.addEventListener("submit", (e) => {
+    if (!searchInput.value.trim().length) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+  });
 });
